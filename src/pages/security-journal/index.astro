@@ -111,7 +111,7 @@ const seedEntries = journalSeedRows.map((row, index) => ({
   </section>
 
   <script id="journal-data-json" type="application/json" set:html={JSON.stringify({ seedEntries })}></script>
-  <script type="module">
+  <script>
     import '../../scripts/security-journal.js';
   </script>
 </Layout>

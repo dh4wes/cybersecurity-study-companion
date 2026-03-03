@@ -53,7 +53,7 @@ import { canonicalData, weeks, clientWeeksProgress, totalStudyDays, totalReviewD
   <ExportImportControls />
 
   <script id="progress-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeksProgress })}></script>
-  <script type="module">
+  <script>
     import '../../scripts/progress-page.js';
   </script>
 </Layout>
