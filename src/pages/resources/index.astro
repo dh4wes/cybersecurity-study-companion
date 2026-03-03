@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
 import { canonicalData } from '../../lib/site-data.js';
 
 const resources = canonicalData.resources;
@@ -7,11 +8,11 @@ const categories = [...new Set(resources.map((item) => item.category))];
 ---
 
 <Layout title={`${canonicalData.site.title} | Resources`} description="Resource hub grouped by category" currentPath={Astro.url.pathname}>
-  <section class="hero section">
-    <p class="kicker">Resource Hub</p>
-    <h1>Resources</h1>
-    <p>Curated references by category with use case, best weeks, URLs, and notes.</p>
-  </section>
+  <PageHero
+    kicker="Resource Hub"
+    title="Resources"
+    description="Curated references by category with use case, best weeks, URLs, and notes."
+  />
 
   <section class="section resources-grid">
     {categories.map((category) => (

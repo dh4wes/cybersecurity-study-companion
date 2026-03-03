@@ -78,7 +78,24 @@ const corePageBySlug = new Map(canonicalData.core_pages.map((page) => [page.slug
 const totalDays = weeks.reduce((sum, week) => sum + week.days.length, 0);
 const totalStudyDays = weeks.reduce((sum, week) => sum + week.days.filter((day) => day.session_type === 'Study').length, 0);
 const totalReviewDays = weeks.reduce((sum, week) => sum + week.days.filter((day) => day.session_type === 'Review').length, 0);
-const clientWeeks = weeks.map((week) => ({
+const clientWeeksLite = weeks.map((week) => ({
+  id: week.id,
+  week: week.week,
+  phase: week.phase,
+  slug: week.slug,
+  href: week.href,
+  weekly_focus: week.weekly_focus,
+  deliverable: week.deliverable,
+  checkpoint: week.checkpoint,
+  days: week.days.map((day) => ({
+    id: day.id,
+    label: day.label,
+    session_type: day.session_type,
+    laptop_needed: day.laptop_needed,
+    taskTagList: day.taskTagList
+  }))
+}));
+const clientWeeksProgress = weeks.map((week) => ({
   id: week.id,
   week: week.week,
   phase: week.phase,
@@ -118,7 +135,8 @@ export {
   totalDays,
   totalStudyDays,
   totalReviewDays,
-  clientWeeks,
+  clientWeeksLite,
+  clientWeeksProgress,
   withBase,
   toWeekId,
   toDayId

@@ -1,4 +1,5 @@
 import { getProgress } from './progress-storage.js';
+import { parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 const includesToken = (value, token) => {
   if (!token) return true;
@@ -38,10 +39,7 @@ const applyFilters = () => {
 };
 
 const updateWeekProgressLabels = () => {
-  const dataNode = document.getElementById('weeks-data-json');
-  if (!dataNode) return;
-
-  const data = JSON.parse(dataNode.textContent || '{}');
+  const data = parseJsonScript('weeks-data-json', { weeks: [] });
   const weeks = data.weeks || [];
   const progress = getProgress();
   const completeSet = new Set(progress.completedDays || []);
@@ -80,7 +78,7 @@ const boot = () => {
     });
   }
 
-  window.addEventListener('cyber-progress-changed', updateWeekProgressLabels);
+  window.addEventListener(PROGRESS_EVENT, updateWeekProgressLabels);
 
   updateWeekProgressLabels();
   applyFilters();

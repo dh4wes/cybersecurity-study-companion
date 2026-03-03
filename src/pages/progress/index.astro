@@ -2,15 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import ProgressSummary from '../../components/ProgressSummary.astro';
 import ExportImportControls from '../../components/ExportImportControls.astro';
-import { canonicalData, weeks, clientWeeks, totalStudyDays, totalReviewDays } from '../../lib/site-data.js';
+import PageHero from '../../components/PageHero.astro';
+import { canonicalData, weeks, clientWeeksProgress, totalStudyDays, totalReviewDays } from '../../lib/site-data.js';
 ---
 
 <Layout title={`${canonicalData.site.title} | Progress`} description="Progress dashboard" currentPath={Astro.url.pathname}>
-  <section class="hero section">
-    <p class="kicker">Progress Dashboard</p>
-    <h1>Progress</h1>
-    <p>Client-side progress tracking with localStorage, no login required.</p>
-  </section>
+  <PageHero
+    kicker="Progress Dashboard"
+    title="Progress"
+    description="Client-side progress tracking with localStorage, no login required."
+  />
 
   <section class="card section">
     <div class="section-header">
@@ -51,7 +52,7 @@ import { canonicalData, weeks, clientWeeks, totalStudyDays, totalReviewDays } fr
 
   <ExportImportControls />
 
-  <script id="progress-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script id="progress-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeksProgress })}></script>
   <script type="module">
     import '../../scripts/progress-page.js';
   </script>

@@ -1,17 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
 import { canonicalData, workloadRows } from '../../lib/site-data.js';
 ---
 
 <Layout title={`${canonicalData.site.title} | About`} description="About this cybersecurity journey" currentPath={Astro.url.pathname}>
-  <section class="hero section">
-    <p class="kicker">About This Journey</p>
-    <h1>Proof-of-Work Cybersecurity Portfolio</h1>
-    <p>
-      This site tracks a 32-week cybersecurity roadmap and publishes weekly outputs, reflections, and
-      deliverables as proof of learning.
-    </p>
-  </section>
+  <PageHero
+    kicker="About This Journey"
+    title="Proof-of-Work Cybersecurity Portfolio"
+    description="This site tracks a 32-week cybersecurity roadmap and publishes weekly outputs, reflections, and deliverables as proof of learning."
+  />
 
   <section class="two-col section">
     <article class="card">

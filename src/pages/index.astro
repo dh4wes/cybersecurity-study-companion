@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProgressSummary from '../components/ProgressSummary.astro';
+import PageHero from '../components/PageHero.astro';
 import {
   canonicalData,
   weeks,
-  clientWeeks,
+  clientWeeksLite,
   withBase,
   totalStudyDays,
   totalReviewDays
@@ -14,13 +15,11 @@ const firstWeek = weeks[0];
 ---
 
 <Layout title={`${canonicalData.site.title} | Home`} description={canonicalData.site.subtitle} currentPath={Astro.url.pathname}>
-  <section class="hero section">
-    <p class="kicker">Study Companion + Portfolio</p>
-    <h1>{canonicalData.site.title}</h1>
-    <p>
-      This site documents my 32-week cybersecurity learning roadmap. Each week includes a deliverable,
-      reflection, and linked study resources to produce visible proof of learning.
-    </p>
+  <PageHero
+    kicker="Study Companion + Portfolio"
+    title={canonicalData.site.title}
+    description="This site documents my 32-week cybersecurity learning roadmap. Each week includes a deliverable, reflection, and linked study resources to produce visible proof of learning."
+  >
     <div class="meta">
       <span class="badge neutral">Current phase: <strong class="js-current-phase">{firstWeek.phase}</strong></span>
       <span class="badge neutral">Current week: <strong class="js-current-week">Week 01</strong></span>
@@ -28,7 +27,7 @@ const firstWeek = weeks[0];
     <p class="small">
       Progress tracking is browser-based in v1 so the site can stay fully static.
     </p>
-  </section>
+  </PageHero>
 
   <section class="two-col section">
     <article class="card">
@@ -61,7 +60,7 @@ const firstWeek = weeks[0];
     <ProgressSummary totalStudyDays={totalStudyDays} totalReviewDays={totalReviewDays} totalWeeks={weeks.length} />
   </section>
 
-  <script id="home-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script id="home-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeksLite })}></script>
   <script type="module">
     import '../scripts/home-page.js';
   </script>

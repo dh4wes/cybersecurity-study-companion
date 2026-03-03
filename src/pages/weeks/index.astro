@@ -2,10 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import WeekCard from '../../components/WeekCard.astro';
+import PageHero from '../../components/PageHero.astro';
 import {
   canonicalData,
   weeks,
-  clientWeeks,
+  clientWeeksLite,
   uniquePhases,
   uniqueSessionTypes,
   uniqueLaptopNeeds,
@@ -14,14 +15,11 @@ import {
 ---
 
 <Layout title={`${canonicalData.site.title} | Weeks`} description="Week archive with filters" currentPath={Astro.url.pathname}>
-  <section class="hero section">
-    <p class="kicker">Week Archive</p>
-    <h1>All Week Pages</h1>
-    <p>
-      Filter by phase, week, session type, laptop needed, and task tags. Open each week for daily cards,
-      reflections, artifacts, and local notes.
-    </p>
-  </section>
+  <PageHero
+    kicker="Week Archive"
+    title="All Week Pages"
+    description="Filter by phase, week, session type, laptop needed, and task tags. Open each week for daily cards, reflections, artifacts, and local notes."
+  />
 
   <FilterBar
     phases={uniquePhases}
@@ -39,7 +37,7 @@ import {
     </div>
   </section>
 
-  <script id="weeks-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script id="weeks-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeksLite })}></script>
   <script type="module">
     import '../../scripts/weeks-page.js';
   </script>

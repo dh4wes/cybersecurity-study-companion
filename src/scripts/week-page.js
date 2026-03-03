@@ -9,10 +9,7 @@ import {
   setWeekArtifactLink,
   setWeekNote
 } from './progress-storage.js';
-
-const dispatchProgressChanged = () => {
-  window.dispatchEvent(new CustomEvent('cyber-progress-changed'));
-};
+import { dispatchProgressChanged, parseJsonScript } from './runtime/client-utils.js';
 
 const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-complete', isComplete);
@@ -122,9 +119,7 @@ const initDayCards = (weekId) => {
 };
 
 const boot = () => {
-  const dataNode = document.getElementById('week-data-json');
-  if (!dataNode) return;
-  const data = JSON.parse(dataNode.textContent || '{}');
+  const data = parseJsonScript('week-data-json', {});
   if (!data.weekId) return;
   initDayCards(data.weekId);
 };

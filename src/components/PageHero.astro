@@ -1,0 +1,15 @@
+---
+const {
+  kicker = '',
+  title = '',
+  description = '',
+  className = ''
+} = Astro.props;
+---
+
+<section class={`hero section animate-fade ${className}`.trim()}>
+  {kicker ? <p class="kicker">{kicker}</p> : null}
+  {title ? <h1>{title}</h1> : null}
+  {description ? <p>{description}</p> : null}
+  <slot />
+</section>

@@ -1,4 +1,5 @@
 import { getJournalDrafts, saveJournalDrafts } from './progress-storage.js';
+import { downloadJson, parseJsonScript } from './runtime/client-utils.js';
 
 const createEntryId = () => `journal-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
@@ -83,10 +84,7 @@ const applyTagFilter = () => {
 };
 
 const renderEntries = () => {
-  const dataNode = document.getElementById('journal-data-json');
-  if (!dataNode) return;
-  const data = JSON.parse(dataNode.textContent || '{}');
-
+  const data = parseJsonScript('journal-data-json', { seedEntries: [] });
   const seedEntries = data.seedEntries || [];
   const drafts = getJournalDrafts().entries || [];
 
@@ -141,10 +139,7 @@ const initTagFilter = () => {
 };
 
 const exportJournalEntries = () => {
-  const dataNode = document.getElementById('journal-data-json');
-  if (!dataNode) return;
-
-  const data = JSON.parse(dataNode.textContent || '{}');
+  const data = parseJsonScript('journal-data-json', { seedEntries: [] });
   const seedEntries = data.seedEntries || [];
   const draftEntries = getJournalDrafts().entries || [];
 
@@ -157,15 +152,7 @@ const exportJournalEntries = () => {
     seedEntries
   };
 
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `cyber-journal-entries-${new Date().toISOString().slice(0, 10)}.json`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
+  downloadJson('cyber-journal-entries', payload);
 };
 
 const initExportControl = () => {

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import JournalEntryCard from '../../components/JournalEntryCard.astro';
+import PageHero from '../../components/PageHero.astro';
 import { canonicalData, journalSeedRows, journalSuggestedTags } from '../../lib/site-data.js';
 
 const seedEntries = journalSeedRows.map((row, index) => ({
@@ -21,14 +22,11 @@ const seedEntries = journalSeedRows.map((row, index) => ({
   description="Security journal archive with local draft storage"
   currentPath={Astro.url.pathname}
 >
-  <section class="hero section">
-    <p class="kicker">Security Journal</p>
-    <h1>Security Journal Archive</h1>
-    <p>
-      Capture breach summaries, management-ready takeaways, and control recommendations. Drafts are saved
-      locally in your browser for v1.
-    </p>
-  </section>
+  <PageHero
+    kicker="Security Journal"
+    title="Security Journal Archive"
+    description="Capture breach summaries, management-ready takeaways, and control recommendations. Drafts are saved locally in your browser for v1."
+  />
 
   <section class="two-col section">
     <article class="card">

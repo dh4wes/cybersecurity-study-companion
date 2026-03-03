@@ -5,12 +5,15 @@ import {
   resetAllProgress
 } from './progress-storage.js';
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
+import {
+  PROGRESS_EVENT,
+  dispatchProgressChanged,
+  downloadJson,
+  parseJsonScript
+} from './runtime/client-utils.js';
 
 const render = () => {
-  const dataNode = document.getElementById('progress-data-json');
-  if (!dataNode) return;
-
-  const data = JSON.parse(dataNode.textContent || '{}');
+  const data = parseJsonScript('progress-data-json', { weeks: [] });
   const weeks = data.weeks || [];
 
   const progress = getProgress();
@@ -101,17 +104,7 @@ const initExportImportControls = () => {
   if (exportButton) {
     exportButton.addEventListener('click', () => {
       const bundle = exportProgressBundle();
-      const content = JSON.stringify(bundle, null, 2);
-      const blob = new Blob([content], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      const dateToken = new Date().toISOString().slice(0, 10);
-      a.href = url;
-      a.download = `cyber-study-progress-${dateToken}.json`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+      downloadJson('cyber-study-progress', bundle);
       if (stateNode) stateNode.textContent = 'Progress exported.';
     });
   }
@@ -127,7 +120,7 @@ const initExportImportControls = () => {
         const parsed = JSON.parse(text);
         importProgressBundle(parsed);
         if (stateNode) stateNode.textContent = 'Progress imported.';
-        window.dispatchEvent(new CustomEvent('cyber-progress-changed'));
+        dispatchProgressChanged();
       } catch (error) {
         if (stateNode) stateNode.textContent = `Import failed: ${error.message}`;
       } finally {
@@ -145,7 +138,7 @@ const initExportImportControls = () => {
       if (!confirmed) return;
       resetAllProgress();
       if (stateNode) stateNode.textContent = 'Progress reset.';
-      window.dispatchEvent(new CustomEvent('cyber-progress-changed'));
+      dispatchProgressChanged();
     });
   }
 };
@@ -153,7 +146,7 @@ const initExportImportControls = () => {
 const boot = () => {
   render();
   initExportImportControls();
-  window.addEventListener('cyber-progress-changed', render);
+  window.addEventListener(PROGRESS_EVENT, render);
 };
 
 if (document.readyState === 'loading') {

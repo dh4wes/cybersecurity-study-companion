@@ -1,19 +1,9 @@
 import { getProgress } from './progress-storage.js';
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
-
-const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
-const withBase = (path = '/') => {
-  if (!path) return baseUrl;
-  if (/^[a-z]+:\/\//i.test(path)) return path;
-  if (path.startsWith(baseUrl)) return path;
-  return `${baseUrl}${String(path).replace(/^\/+/, '')}`;
-};
+import { parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 const renderHome = () => {
-  const dataNode = document.getElementById('home-data-json');
-  if (!dataNode) return;
-
-  const data = JSON.parse(dataNode.textContent || '{}');
+  const data = parseJsonScript('home-data-json', { weeks: [] });
   const weeks = data.weeks || [];
   const progress = getProgress();
   const metrics = computeProgressMetrics(weeks, progress);
@@ -64,7 +54,7 @@ const renderHome = () => {
 
 const boot = () => {
   renderHome();
-  window.addEventListener('cyber-progress-changed', renderHome);
+  window.addEventListener(PROGRESS_EVENT, renderHome);
 };
 
 if (document.readyState === 'loading') {
