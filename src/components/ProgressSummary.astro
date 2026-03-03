@@ -1,0 +1,51 @@
+---
+const {
+  totalStudyDays = 0,
+  totalReviewDays = 0,
+  totalWeeks = 0,
+  idPrefix = 'summary'
+} = Astro.props;
+---
+
+<section class="grid summary-grid card" aria-label="Progress summary" data-progress-summary={idPrefix}>
+  <article>
+    <p class="kicker">Study days</p>
+    <h3><span class="js-completed-study">0</span> / {totalStudyDays}</h3>
+  </article>
+  <article>
+    <p class="kicker">Review days</p>
+    <h3><span class="js-completed-review">0</span> / {totalReviewDays}</h3>
+  </article>
+  <article>
+    <p class="kicker">Completed weeks</p>
+    <h3><span class="js-completed-weeks">0</span> / {totalWeeks}</h3>
+  </article>
+  <article>
+    <p class="kicker">Next task</p>
+    <p class="js-next-task">Week 01 Day 01</p>
+  </article>
+</section>
+
+<style>
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.8rem;
+  }
+
+  article {
+    border: 1px solid #d8e2ee;
+    border-radius: 12px;
+    padding: 0.75rem;
+    background: #fbfdff;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .js-next-task {
+    margin: 0;
+    color: #12263f;
+    font-weight: 600;
+  }
+</style>

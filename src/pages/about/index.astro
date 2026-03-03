@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { canonicalData, workloadRows } from '../../lib/site-data.js';
+---
+
+<Layout title={`${canonicalData.site.title} | About`} description="About this cybersecurity journey" currentPath={Astro.url.pathname}>
+  <section class="hero section">
+    <p class="kicker">About This Journey</p>
+    <h1>Proof-of-Work Cybersecurity Portfolio</h1>
+    <p>
+      This site tracks a 32-week cybersecurity roadmap and publishes weekly outputs, reflections, and
+      deliverables as proof of learning.
+    </p>
+  </section>
+
+  <section class="two-col section">
+    <article class="card">
+      <h2>Short Bio</h2>
+      <p>
+        Add your background summary here: where you are coming from, why cybersecurity, and what problem
+        domains interest you most.
+      </p>
+      <h3>Target Roles</h3>
+      <ul>
+        <li>SOC Analyst</li>
+        <li>Security Analyst</li>
+        <li>GRC / Risk Analyst</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>What The Roadmap Covers</h2>
+      <ul>
+        <li>Foundation: hardware, OS, Linux, and core IT support concepts</li>
+        <li>Networking: protocols, subnetting, packet analysis, and troubleshooting</li>
+        <li>Security: risk, controls, incidents, automation basics, and manager-ready communication</li>
+        <li>GRC / Application: governance, resilience, defensive workflows, and portfolio packaging</li>
+      </ul>
+      <p>
+        The purpose is not only to study cyber topics, but to generate visible weekly evidence and
+        reflections that employers can review.
+      </p>
+    </article>
+  </section>
+
+  <section class="section card">
+    <h2>Workbook Workload Model (Enrichment)</h2>
+    <p class="small">This table is pulled from the workbook workload model sheet for planning context.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Resource / Activity</th>
+            <th>Planned Hours</th>
+            <th>Source</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {workloadRows.map((row) => (
+            <tr>
+              <td>{row.phase}</td>
+              <td>{row.resource_activity}</td>
+              <td>{row.planned_content_hours}</td>
+              <td>
+                {row.source_url ? (
+                  <a href={row.source_url} target="_blank" rel="noreferrer">
+                    Link
+                  </a>
+                ) : (
+                  'n/a'
+                )}
+              </td>
+              <td>{row.notes}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  th,
+  td {
+    text-align: left;
+    border-bottom: 1px solid #dde5f0;
+    padding: 0.55rem;
+    vertical-align: top;
+  }
+
+  th {
+    color: #1f3c57;
+    background: #f4f8fc;
+  }
+</style>

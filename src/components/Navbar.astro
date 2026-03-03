@@ -1,0 +1,109 @@
+---
+const { currentPath = '/' } = Astro.props;
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/roadmap/', label: 'Roadmap' },
+  { href: '/weeks/', label: 'Weeks' },
+  { href: '/resources/', label: 'Resources' },
+  { href: '/security-journal/', label: 'Security Journal' },
+  { href: '/progress/', label: 'Progress' },
+  { href: '/about/', label: 'About' }
+];
+
+const isActive = (href) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath === href || currentPath.startsWith(href);
+};
+---
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="/">Cyber Study Companion</a>
+    <nav aria-label="Primary">
+      <ul>
+        {links.map((link) => (
+          <li>
+            <a class={isActive(link.href) ? 'active' : ''} href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, #f5f7fb 86%, transparent);
+    border-bottom: 1px solid #d3dce8;
+  }
+
+  .shell {
+    width: min(1160px, 95vw);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+  }
+
+  .brand {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #12263f;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li a {
+    color: #36516a;
+    font-size: 0.89rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.35rem 0.62rem;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  li a:hover,
+  li a:focus-visible {
+    background: #e6eef6;
+    text-decoration: none;
+  }
+
+  li a.active {
+    background: #d8e6f2;
+    color: #13395b;
+  }
+
+  @media (max-width: 900px) {
+    .shell {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      justify-content: flex-start;
+    }
+  }
+</style>

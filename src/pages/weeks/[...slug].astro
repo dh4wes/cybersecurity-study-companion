@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DayCard from '../../components/DayCard.astro';
+import WeeklyReflectionForm from '../../components/WeeklyReflectionForm.astro';
+import ArtifactLinkForm from '../../components/ArtifactLinkForm.astro';
+import { canonicalData, weeks } from '../../lib/site-data.js';
+
+export const getStaticPaths = () =>
+  weeks.map((week) => {
+    const slug = week.slugPath.replace(/^weeks\//, '');
+    return {
+      params: { slug },
+      props: { week }
+    };
+  });
+
+const { week } = Astro.props;
+const weekId = week.id;
+---
+
+<Layout
+  title={`${canonicalData.site.title} | Week ${String(week.week).padStart(2, '0')}`}
+  description={week.weekly_focus}
+  currentPath={Astro.url.pathname}
+>
+  <section class="hero section">
+    <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
+    <h1>{week.weekly_focus}</h1>
+    <p><strong>Deliverable:</strong> {week.deliverable}</p>
+    <p><strong>Checkpoint:</strong> {week.checkpoint}</p>
+    <label class="week-complete">
+      <input type="checkbox" class="js-week-complete" />
+      Mark week complete
+    </label>
+    <p class="small js-week-complete-state" aria-live="polite"></p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Daily Plan</h2>
+      <p class="small">7 day cards with required task metadata, resources, and progress controls.</p>
+    </div>
+    <div class="grid day-grid">
+      {week.days.map((day) => (
+        <DayCard
+          day={day}
+          weekId={weekId}
+          fallbackPrimaryResource={week.primary_resource}
+          fallbackPrimaryUrl={week.primary_url}
+          fallbackSupportResource={week.support_resource}
+          fallbackSupportUrl={week.support_url}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <article class="card">
+      <h2>Weekly Output / Portfolio</h2>
+      <p><strong>What to publish:</strong> {week.page?.what_to_publish}</p>
+      <p><strong>Suggested evidence:</strong> {week.page?.evidence_assets}</p>
+      <p><strong>Publish when:</strong> {week.page?.publish_when}</p>
+      <p><strong>Portfolio angle:</strong> {week.page?.portfolio_angle}</p>
+    </article>
+
+    <div class="grid">
+      <ArtifactLinkForm weekId={weekId} />
+      <WeeklyReflectionForm weekId={weekId} />
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2>Local Notes</h2>
+    <p class="small">Week-level notes saved in your browser.</p>
+    <div class="form-row">
+      <label for={`week-notes-${weekId}`}>Notes</label>
+      <textarea id={`week-notes-${weekId}`} class="js-week-notes-field" placeholder="Add planning notes, blockers, and follow-ups..."></textarea>
+    </div>
+    <div class="form-row inline">
+      <button type="button" class="secondary js-save-week-notes">Save notes</button>
+      <p class="small js-week-notes-state" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <script id="week-data-json" type="application/json" set:html={JSON.stringify({ weekId })}></script>
+  <script type="module">
+    import '../../scripts/week-page.js';
+  </script>
+</Layout>
+
+<style>
+  .day-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .week-complete {
+    margin-top: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 600;
+    color: #1f3c57;
+  }
+
+  .inline {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,299 @@
+{
+  "checkpoints_by_week": {
+    "week-01": "Can explain what each main computer component does and how a system boots.",
+    "week-02": "Can identify common devices, ports, and SOHO troubleshooting steps.",
+    "week-03": "Can compare major operating systems and explain basic installation choices.",
+    "week-04": "Can follow a support process and document incidents clearly.",
+    "week-05": "Can navigate Linux comfortably enough to start labs and tooling.",
+    "week-06": "Can describe how data moves through a simple network.",
+    "week-07": "Can explain when a switch is enough and when a router is required.",
+    "week-08": "Can read and plan IPv4 subnets for small environments.",
+    "week-09": "Can narrate the service path from 'join network' to 'page loads.'",
+    "week-10": "Can explain baseline protections for a small office or home network.",
+    "week-11": "Can use packet captures to support an explanation instead of guessing.",
+    "week-12": "Can explain internet plumbing clearly enough for a manager.",
+    "week-13": "Can define cybersecurity in business terms, not just technical terms.",
+    "week-14": "Can distinguish risk from vulnerability and link controls to business priorities.",
+    "week-15": "Can describe how network design choices affect security outcomes.",
+    "week-16": "Can navigate Linux and explain permissions without memorizing blindly.",
+    "week-17": "Can read and write basic SQL queries for security-relevant data.",
+    "week-18": "Can classify assets and explain why not all data deserves the same treatment.",
+    "week-19": "Can reason from asset to attacker to mitigation.",
+    "week-20": "Can outline the incident lifecycle and the evidence sources used along the way.",
+    "week-21": "Can explain how a SOC turns alerts into actions and communications.",
+    "week-22": "Can read and modify short Python scripts without freezing.",
+    "week-23": "Can connect automation ideas to real analyst workflows.",
+    "week-24": "Can talk about your work in evidence-based, employer-friendly language.",
+    "week-25": "Your online profile and job-search system are live and usable.",
+    "week-26": "Can explain core defensive principles clearly and consistently.",
+    "week-27": "Can translate technical incidents into management language.",
+    "week-28": "Can think about incidents in terms of preparation, roles, and business continuity.",
+    "week-29": "Can talk about cyber in governance and resilience terms, not just tools.",
+    "week-30": "Can describe a defensive workflow from alert to escalation.",
+    "week-31": "You have a usable portfolio and a credible next-step roadmap.",
+    "week-32": "Everything is either complete or deliberately parked with a next step."
+  },
+  "workload_model": [
+    {
+      "phase": "Foundation",
+      "resource_activity": "Professor Messer A+ Core 1",
+      "published_hours": "10.2",
+      "added_practice_output_hours": "8",
+      "planned_content_hours": "18.2",
+      "source_url": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/",
+      "notes": "Official runtime plus note-taking and deliverables"
+    },
+    {
+      "phase": "Foundation",
+      "resource_activity": "Professor Messer A+ Core 2",
+      "published_hours": "13.7",
+      "added_practice_output_hours": "8",
+      "planned_content_hours": "21.7",
+      "source_url": "https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/220-1202-training-course/",
+      "notes": "Official runtime plus playbooks and recap work"
+    },
+    {
+      "phase": "Foundation",
+      "resource_activity": "NDG Linux Unhatched",
+      "published_hours": "8",
+      "added_practice_output_hours": "3",
+      "planned_content_hours": "11",
+      "source_url": "https://www.netdevgroup.com/online/courses/open-source/linux-unhatched",
+      "notes": "Official course plus command notes"
+    },
+    {
+      "phase": "Foundation",
+      "resource_activity": "Ubuntu VM build and local terminal drills",
+      "published_hours": "0",
+      "added_practice_output_hours": "5",
+      "planned_content_hours": "5",
+      "source_url": "",
+      "notes": "Planner estimate tied to Week 5 deliverables"
+    },
+    {
+      "phase": "Networking",
+      "resource_activity": "Cisco networking block (CCST / Network Technician equivalent)",
+      "published_hours": "70",
+      "added_practice_output_hours": "0",
+      "planned_content_hours": "70",
+      "source_url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/courses/ccst-networking.html",
+      "notes": "Cisco networking workload anchor"
+    },
+    {
+      "phase": "Networking",
+      "resource_activity": "Wireshark install and packet-capture practice",
+      "published_hours": "0",
+      "added_practice_output_hours": "6",
+      "planned_content_hours": "6",
+      "source_url": "https://www.wireshark.org/download.html",
+      "notes": "Planner estimate for packet analysis practice"
+    },
+    {
+      "phase": "Networking",
+      "resource_activity": "TryHackMe Pre Security reinforcement",
+      "published_hours": "0",
+      "added_practice_output_hours": "12",
+      "planned_content_hours": "12",
+      "source_url": "https://tryhackme.com/path/outline/presecurity",
+      "notes": "Planner estimate for path work"
+    },
+    {
+      "phase": "Security",
+      "resource_activity": "Google Cybersecurity Professional Certificate",
+      "published_hours": "170",
+      "added_practice_output_hours": "0",
+      "planned_content_hours": "170",
+      "source_url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+      "notes": "Published program hours"
+    },
+    {
+      "phase": "Security",
+      "resource_activity": "Professor Messer Security+ reinforcement",
+      "published_hours": "15.2",
+      "added_practice_output_hours": "0",
+      "planned_content_hours": "15.2",
+      "source_url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/",
+      "notes": "Full runtime used as reinforcement across the security block"
+    },
+    {
+      "phase": "Security",
+      "resource_activity": "TryHackMe Cyber Security 101 (selected modules)",
+      "published_hours": "0",
+      "added_practice_output_hours": "10",
+      "planned_content_hours": "10",
+      "source_url": "https://tryhackme.com/path/outline/cybersecurity101",
+      "notes": "Planner estimate for overlap-friendly modules"
+    },
+    {
+      "phase": "Security",
+      "resource_activity": "Security Journal and management summaries",
+      "published_hours": "0",
+      "added_practice_output_hours": "8",
+      "planned_content_hours": "8",
+      "source_url": "",
+      "notes": "Planner estimate spread across news-story summaries"
+    },
+    {
+      "phase": "GRC / Application",
+      "resource_activity": "CISA selected training and reading",
+      "published_hours": "0",
+      "added_practice_output_hours": "10",
+      "planned_content_hours": "10",
+      "source_url": "https://www.cisa.gov/resources-tools/resources/cisa-learning",
+      "notes": "Planner estimate for selected CISA modules and guidance"
+    },
+    {
+      "phase": "GRC / Application",
+      "resource_activity": "TryHackMe Defensive Security",
+      "published_hours": "0",
+      "added_practice_output_hours": "10",
+      "planned_content_hours": "10",
+      "source_url": "https://tryhackme.com/module/defensive-security",
+      "notes": "Planner estimate for room completion and notes"
+    },
+    {
+      "phase": "GRC / Application",
+      "resource_activity": "Resume, LinkedIn, capstone packaging",
+      "published_hours": "0",
+      "added_practice_output_hours": "9",
+      "planned_content_hours": "9",
+      "source_url": "",
+      "notes": "Planner estimate for final application work"
+    },
+    {
+      "phase": "Completion math",
+      "resource_activity": "",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Published hours subtotal",
+      "resource_activity": "287.1",
+      "published_hours": "",
+      "added_practice_output_hours": "Why the schedule is longer than a simple 15h/week divide",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Planned content hours subtotal",
+      "resource_activity": "376.1",
+      "published_hours": "",
+      "added_practice_output_hours": "Core study timeline stays at 32 weeks if you use the review day for light website upkeep. If you treat the website as a separate project, budget about 1-2 extra weeks.",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "New-content hours per week",
+      "resource_activity": "12.5",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Review hours per week",
+      "resource_activity": "2.5",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Total scheduled hours per week",
+      "resource_activity": "15",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Core weeks to finish content",
+      "resource_activity": "31",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Recommended calendar weeks",
+      "resource_activity": "32",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    },
+    {
+      "phase": "Approximate months",
+      "resource_activity": "7.4",
+      "published_hours": "",
+      "added_practice_output_hours": "",
+      "planned_content_hours": "",
+      "source_url": "",
+      "notes": ""
+    }
+  ],
+  "journal_template": {
+    "headers": [
+      "Date",
+      "Source / breach name",
+      "Source URL",
+      "What happened",
+      "Root cause",
+      "Management summary",
+      "What control would I change?",
+      "Likelihood",
+      "Impact",
+      "Owner / stakeholder",
+      "Status"
+    ],
+    "seed_rows": [
+      {
+        "Date": "Sample",
+        "Source / breach name": "Example breach story",
+        "Source URL": "https://example.com",
+        "What happened": "Summarize the incident in 2-3 sentences.",
+        "Root cause": "Weak MFA, exposed service, poor patching, bad monitoring, etc.",
+        "Management summary": "Write a manager-ready summary of business impact and response.",
+        "What control would I change?": "Name the preventive or detective control you would strengthen.",
+        "Likelihood": "Low / Med / High",
+        "Impact": "Low / Med / High",
+        "Owner / stakeholder": "CISO, IT Ops, Vendor, HR, Legal...",
+        "Status": "Draft"
+      }
+    ],
+    "suggested_tags": [
+      "breach",
+      "iam",
+      "incident-response",
+      "governance",
+      "phishing",
+      "malware",
+      "cloud",
+      "vendor-risk"
+    ]
+  },
+  "overview_lines": [
+    "Cybersecurity Roadmap Study Plan (32-week core plan + portfolio companion)",
+    "Built for 2.5 hours per day, 5 study days per week, 1 review day, and 1 rest day. This version adds filterable task tags, a website companion map, and portfolio-aware study cues.",
+    "Pacing assumptions | Updated completion estimate",
+    "Study hours per active day | 2.5 | Planned content hours | 376.1",
+    "New-content days per week | 5 | Core weeks to finish content | 31",
+    "Review days per week | 1 | Recommended buffer weeks | 1",
+    "Rest days per week | 1 | Recommended total calendar weeks | 32",
+    "New-content hours per week | 12.5 | Approximate calendar months | 7.4",
+    "Total weekly scheduled hours | 15 | Completion note | 31 active content weeks + 1 buffer / catch-up week",
+    "Website companion assumption | Build once, then update lightly on review day",
+    "Separate website-only timeline | Add ~1-2 weeks if you do site work outside study hours",
+    "Phase map | Milestones"
+  ]
+}

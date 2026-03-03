@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProgressSummary from '../components/ProgressSummary.astro';
+import {
+  canonicalData,
+  weeks,
+  clientWeeks,
+  totalStudyDays,
+  totalReviewDays
+} from '../lib/site-data.js';
+
+const firstWeek = weeks[0];
+---
+
+<Layout title={`${canonicalData.site.title} | Home`} description={canonicalData.site.subtitle} currentPath={Astro.url.pathname}>
+  <section class="hero section">
+    <p class="kicker">Study Companion + Portfolio</p>
+    <h1>{canonicalData.site.title}</h1>
+    <p>
+      This site documents my 32-week cybersecurity learning roadmap. Each week includes a deliverable,
+      reflection, and linked study resources to produce visible proof of learning.
+    </p>
+    <div class="meta">
+      <span class="badge neutral">Current phase: <strong class="js-current-phase">{firstWeek.phase}</strong></span>
+      <span class="badge neutral">Current week: <strong class="js-current-week">Week 01</strong></span>
+    </div>
+    <p class="small">
+      Progress tracking is browser-based in v1 so the site can stay fully static.
+    </p>
+  </section>
+
+  <section class="two-col section">
+    <article class="card">
+      <div class="section-header">
+        <h2>Current Week Focus</h2>
+        <a class="btn secondary js-current-week-link" href={firstWeek.slug}>Open Week 01 page</a>
+      </div>
+      <p><strong>Focus:</strong> <span class="js-current-focus">{firstWeek.weekly_focus}</span></p>
+      <p><strong>Deliverable:</strong> <span class="js-current-deliverable">{firstWeek.deliverable}</span></p>
+      <p><strong>Checkpoint:</strong> <span class="js-current-checkpoint">{firstWeek.checkpoint}</span></p>
+    </article>
+
+    <article class="card">
+      <h2>Quick Links</h2>
+      <ul class="list-reset quick-links">
+        <li><a class="js-today-link" href={`${firstWeek.slug}#${firstWeek.days[0].id}`}>Today's study block: Week 01 Day 1</a></li>
+        <li><a href="/roadmap/">Roadmap timeline</a></li>
+        <li><a href="/resources/">Resource hub</a></li>
+        <li><a href="/security-journal/">Security journal</a></li>
+        <li><a href="/progress/">Progress dashboard</a></li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Progress Snapshot</h2>
+      <a href="/progress/">Open full dashboard</a>
+    </div>
+    <ProgressSummary totalStudyDays={totalStudyDays} totalReviewDays={totalReviewDays} totalWeeks={weeks.length} />
+  </section>
+
+  <script id="home-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script type="module">
+    import '../scripts/home-page.js';
+  </script>
+</Layout>
+
+<style>
+  .quick-links {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .quick-links a {
+    font-weight: 600;
+  }
+</style>

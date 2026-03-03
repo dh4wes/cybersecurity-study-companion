@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProgressSummary from '../../components/ProgressSummary.astro';
+import ExportImportControls from '../../components/ExportImportControls.astro';
+import { canonicalData, weeks, clientWeeks, totalStudyDays, totalReviewDays } from '../../lib/site-data.js';
+---
+
+<Layout title={`${canonicalData.site.title} | Progress`} description="Progress dashboard" currentPath={Astro.url.pathname}>
+  <section class="hero section">
+    <p class="kicker">Progress Dashboard</p>
+    <h1>Progress</h1>
+    <p>Client-side progress tracking with localStorage, no login required.</p>
+  </section>
+
+  <section class="card section">
+    <div class="section-header">
+      <h2>Total Percent Complete</h2>
+      <p class="big js-total-percent">0%</p>
+    </div>
+    <div class="track big-track" aria-hidden="true">
+      <span class="js-total-bar" style="width: 0%"></span>
+    </div>
+    <p class="small"><strong>Next unfinished task:</strong> <span class="js-next-task-global">Week 01 Day 01</span></p>
+    <p class="small"><strong>Next deliverable:</strong> <span class="js-next-deliverable">Week 01 deliverable</span></p>
+  </section>
+
+  <section class="section">
+    <ProgressSummary totalStudyDays={totalStudyDays} totalReviewDays={totalReviewDays} totalWeeks={weeks.length} />
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Progress By Phase</h2>
+    </div>
+    <div class="grid three-col js-phase-progress"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Progress By Week</h2>
+    </div>
+    <div class="grid js-week-progress-list"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Blocked Items</h2>
+    </div>
+    <ul class="card js-blocked-items"></ul>
+  </section>
+
+  <ExportImportControls />
+
+  <script id="progress-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script type="module">
+    import '../../scripts/progress-page.js';
+  </script>
+</Layout>
+
+<style>
+  .big {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .big-track {
+    height: 14px;
+    margin-bottom: 0.65rem;
+  }
+
+  .week-row {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .week-row p {
+    margin: 0;
+  }
+
+  .js-blocked-items {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  .phase-card .track,
+  .week-row .track {
+    height: 10px;
+    background: #e6edf5;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid #d4deea;
+  }
+
+  .phase-card .track span,
+  .week-row .track span,
+  .big-track span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #5a859f, #3c6f8d);
+  }
+</style>

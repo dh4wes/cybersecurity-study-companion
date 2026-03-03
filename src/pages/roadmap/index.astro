@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PhaseTimeline from '../../components/PhaseTimeline.astro';
+import { canonicalData, groupedWeeksByPhase } from '../../lib/site-data.js';
+---
+
+<Layout title={`${canonicalData.site.title} | Roadmap`} description="32-week timeline grouped by phase" currentPath={Astro.url.pathname}>
+  <section class="hero section">
+    <p class="kicker">32-Week Timeline</p>
+    <h1>Roadmap</h1>
+    <p>
+      Full 32-week timeline grouped by phase. Each week card includes focus, deliverable, checkpoint,
+      primary resource, and a link to the detailed week page.
+    </p>
+  </section>
+
+  <PhaseTimeline groupedWeeks={groupedWeeksByPhase} />
+</Layout>

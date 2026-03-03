@@ -1,0 +1,39 @@
+---
+import WeekCard from './WeekCard.astro';
+
+const { groupedWeeks } = Astro.props;
+---
+
+<section class="timeline section" aria-label="Roadmap by phase">
+  {groupedWeeks.map((group) => (
+    <div class="phase-block">
+      <div class="section-header">
+        <h2>{group.phase}</h2>
+        <p class="small">{group.weeks.length} weeks</p>
+      </div>
+      <div class="grid timeline-grid">
+        {group.weeks.map((week) => (
+          <WeekCard week={week} compact={true} />
+        ))}
+      </div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .timeline {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .phase-block {
+    border: 1px solid #d8e1ec;
+    border-radius: 16px;
+    background: #f8fbff;
+    padding: 0.95rem;
+  }
+
+  .timeline-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+</style>

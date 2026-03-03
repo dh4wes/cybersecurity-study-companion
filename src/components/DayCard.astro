@@ -1,0 +1,127 @@
+---
+import TaskBadges from './TaskBadges.astro';
+import ResourceLinkList from './ResourceLinkList.astro';
+
+const {
+  day,
+  weekId,
+  showProgressControls = true,
+  fallbackPrimaryResource = '',
+  fallbackPrimaryUrl = '',
+  fallbackSupportResource = '',
+  fallbackSupportUrl = ''
+} = Astro.props;
+const sessionClass = day.session_type === 'Review' ? 'accent' : day.session_type === 'Rest' ? 'neutral' : 'success';
+const primaryResource = day.primary_resource || fallbackPrimaryResource;
+const primaryUrl = day.primary_url || fallbackPrimaryUrl;
+const supportResource = day.support_resource || fallbackSupportResource;
+const supportUrl = day.support_url || fallbackSupportUrl;
+---
+
+<article
+  id={day.id}
+  class="card day-card js-day-card"
+  data-day-id={day.id}
+  data-week-id={weekId}
+  data-session-type={day.session_type}
+>
+  <header class="section-header">
+    <div>
+      <p class="kicker">{day.label}</p>
+      <h3>{day.session_type} Session</h3>
+    </div>
+    <div class="meta">
+      <span class={`badge ${sessionClass}`}>{day.session_type}</span>
+      <span class="badge neutral">{day.hours}h</span>
+    </div>
+  </header>
+
+  <TaskBadges day={day} />
+
+  <p><strong>Objective:</strong> {day.session_objective}</p>
+  <p><strong>Suggested split:</strong> {day.suggested_split}</p>
+  <p><strong>To-do:</strong> {day.todo}</p>
+  <p><strong>Deliverable / checkpoint:</strong> {day.deliverable_or_checkpoint}</p>
+
+  {day.taskTagList.length > 0 ? (
+    <p>
+      <strong>Task tags:</strong>{' '}
+      {day.taskTagList.map((tag) => (
+        <span class="badge neutral">{tag}</span>
+      ))}
+    </p>
+  ) : null}
+
+  <p class="small"><strong>Journal prompt:</strong> {day.journal_prompt}</p>
+
+  <ResourceLinkList
+    primaryResource={primaryResource}
+    primaryUrl={primaryUrl}
+    supportResource={supportResource}
+    supportUrl={supportUrl}
+  />
+
+  {showProgressControls ? (
+    <section class="progress-controls" aria-label={`Progress controls for ${day.id}`}>
+      <div class="toggles">
+        <label>
+          <input class="js-complete-toggle" type="checkbox" />
+          Complete
+        </label>
+        <button class="js-block-toggle ghost" type="button">Mark blocked</button>
+      </div>
+      <label class="small" for={`note-${day.id}`}>Local notes</label>
+      <textarea id={`note-${day.id}`} class="js-note-field" placeholder="Add notes for this study day..."></textarea>
+      <div class="note-actions">
+        <button class="js-note-save secondary" type="button">Save note</button>
+        <p class="small js-day-state" aria-live="polite"></p>
+      </div>
+    </section>
+  ) : null}
+</article>
+
+<style>
+  .day-card {
+    padding: 1rem;
+  }
+
+  .progress-controls {
+    margin-top: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.7rem;
+  }
+
+  .toggles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #233d5a;
+    font-weight: 500;
+  }
+
+  .note-actions {
+    margin-top: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .js-day-card.is-complete {
+    border-color: #b7d8c4;
+    background: linear-gradient(130deg, #f2fbf5 0%, #fff 52%);
+  }
+
+  .js-day-card.is-blocked {
+    border-color: #f0c8c1;
+    background: linear-gradient(130deg, #fdf4f2 0%, #fff 52%);
+  }
+</style>

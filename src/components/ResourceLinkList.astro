@@ -1,0 +1,40 @@
+---
+const { primaryResource, primaryUrl, supportResource, supportUrl } = Astro.props;
+const hasPrimary = Boolean(primaryResource && primaryUrl);
+const hasSupport = Boolean(supportResource && supportUrl);
+---
+
+<div class="resource-links">
+  <h4>Resources</h4>
+  {hasPrimary ? (
+    <p>
+      <strong>Primary:</strong> <a href={primaryUrl} target="_blank" rel="noreferrer">{primaryResource}</a>
+    </p>
+  ) : (
+    <p class="small">Primary: No required resource for this day.</p>
+  )}
+
+  {hasSupport ? (
+    <p>
+      <strong>Support:</strong> <a href={supportUrl} target="_blank" rel="noreferrer">{supportResource}</a>
+    </p>
+  ) : null}
+</div>
+
+<style>
+  .resource-links {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+  }
+
+  h4 {
+    margin-bottom: 0.3rem;
+    font-size: 0.92rem;
+  }
+
+  p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+</style>

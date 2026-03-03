@@ -1,0 +1,36 @@
+---
+const { label, value = 0, max = 100, hint = '' } = Astro.props;
+const safeMax = max > 0 ? max : 1;
+const pct = Math.max(0, Math.min(100, Math.round((value / safeMax) * 100)));
+---
+
+<div class="progress-row" role="group" aria-label={label}>
+  <div class="section-header">
+    <p><strong>{label}</strong></p>
+    <p class="small">{value} / {max} ({pct}%)</p>
+  </div>
+  <div class="track" aria-hidden="true">
+    <span style={`width:${pct}%`}></span>
+  </div>
+  {hint ? <p class="small">{hint}</p> : null}
+</div>
+
+<style>
+  .progress-row {
+    margin-bottom: 0.8rem;
+  }
+
+  .track {
+    height: 10px;
+    background: #e6edf5;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid #d4deea;
+  }
+
+  .track span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #5a859f, #3c6f8d);
+  }
+</style>

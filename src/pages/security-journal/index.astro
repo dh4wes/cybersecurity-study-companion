@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JournalEntryCard from '../../components/JournalEntryCard.astro';
+import { canonicalData, journalSeedRows, journalSuggestedTags } from '../../lib/site-data.js';
+
+const seedEntries = journalSeedRows.map((row, index) => ({
+  id: `seed-${index}`,
+  date: row['Date'] || 'Sample',
+  sourceName: row['Source / breach name'] || 'Example entry',
+  sourceUrl: row['Source URL'] || '',
+  summary: row['What happened'] || '',
+  rootCause: row['Root cause'] || '',
+  control: row['What control would I change?'] || '',
+  tags: [],
+  status: row['Status'] || 'Draft'
+}));
+---
+
+<Layout
+  title={`${canonicalData.site.title} | Security Journal`}
+  description="Security journal archive with local draft storage"
+  currentPath={Astro.url.pathname}
+>
+  <section class="hero section">
+    <p class="kicker">Security Journal</p>
+    <h1>Security Journal Archive</h1>
+    <p>
+      Capture breach summaries, management-ready takeaways, and control recommendations. Drafts are saved
+      locally in your browser for v1.
+    </p>
+  </section>
+
+  <section class="two-col section">
+    <article class="card">
+      <h2>New Draft Entry</h2>
+      <form class="js-journal-form">
+        <div class="form-row">
+          <label for="entry-date">Date</label>
+          <input id="entry-date" class="js-entry-date" type="date" />
+        </div>
+        <div class="form-row">
+          <label for="entry-source">Source / breach name</label>
+          <input id="entry-source" class="js-entry-source" type="text" placeholder="Vendor incident, phishing campaign, etc." />
+        </div>
+        <div class="form-row">
+          <label for="entry-source-url">Source URL</label>
+          <input id="entry-source-url" class="js-entry-source-url" type="url" placeholder="https://..." />
+        </div>
+        <div class="form-row">
+          <label for="entry-summary">What happened</label>
+          <textarea id="entry-summary" class="js-entry-summary" placeholder="2-3 sentence incident summary"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="entry-root-cause">Root cause</label>
+          <textarea id="entry-root-cause" class="js-entry-root-cause" placeholder="Weak MFA, exposed service, patching gap..."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="entry-control">Control change</label>
+          <textarea id="entry-control" class="js-entry-control" placeholder="What preventive/detective control should change?"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="entry-tags">Topic tags (comma-separated)</label>
+          <input
+            id="entry-tags"
+            class="js-entry-tags"
+            type="text"
+            placeholder={journalSuggestedTags.join(', ')}
+          />
+        </div>
+        <div class="form-row">
+          <label for="entry-status">Status</label>
+          <select id="entry-status" class="js-entry-status">
+            <option value="Draft">Draft</option>
+            <option value="Review">Review</option>
+            <option value="Published">Published</option>
+          </select>
+        </div>
+        <button type="submit">Save draft locally</button>
+        <p class="small js-journal-form-state" aria-live="polite"></p>
+      </form>
+    </article>
+
+    <article class="card">
+      <h2>Topic Filter</h2>
+      <div class="form-row">
+        <label for="journal-tag-filter">Filter by tag</label>
+        <select id="journal-tag-filter" class="js-journal-tag-filter">
+          <option value="">All tags</option>
+          {journalSuggestedTags.map((tag) => (
+            <option value={tag}>{tag}</option>
+          ))}
+        </select>
+      </div>
+      <p class="small js-journal-filter-state" aria-live="polite"></p>
+      <p class="small">Use this page as your incident-thinking archive and link each entry to a source URL.</p>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Archive</h2>
+      <p class="small">Local drafts appear first, followed by workbook seed entries.</p>
+    </div>
+    <div class="grid js-journal-entries">
+      {seedEntries.map((entry) => (
+        <JournalEntryCard entry={entry} />
+      ))}
+    </div>
+  </section>
+
+  <script id="journal-data-json" type="application/json" set:html={JSON.stringify({ seedEntries })}></script>
+  <script type="module">
+    import '../../scripts/security-journal.js';
+  </script>
+</Layout>

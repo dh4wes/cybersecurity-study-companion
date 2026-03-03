@@ -1,0 +1,37 @@
+<section class="card" aria-label="Progress import export controls">
+  <h2>Progress Data Controls</h2>
+  <p class="small">Export your local progress JSON, import an earlier export, or reset all local progress keys.</p>
+  <div class="actions">
+    <button class="js-export-progress" type="button">Export progress JSON</button>
+    <label class="btn secondary file-label" for="progress-import">Import progress JSON</label>
+    <input id="progress-import" class="js-import-progress" type="file" accept="application/json" />
+    <button class="danger js-reset-progress" type="button">Reset all progress</button>
+  </div>
+  <p class="small js-import-export-state" aria-live="polite"></p>
+</section>
+
+<style>
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.55rem;
+  }
+
+  #progress-import {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  .file-label {
+    cursor: pointer;
+  }
+
+  .js-import-export-state {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+const {
+  phases = [],
+  weeks = [],
+  sessionTypes = [],
+  laptopNeeds = [],
+  taskTags = []
+} = Astro.props;
+---
+
+<section class="card filter-bar" aria-label="Week filters">
+  <h2>Filters</h2>
+  <div class="filter-grid">
+    <label>
+      Phase
+      <select class="js-filter-phase">
+        <option value="">All phases</option>
+        {phases.map((phase) => <option value={phase}>{phase}</option>)}
+      </select>
+    </label>
+
+    <label>
+      Week
+      <select class="js-filter-week">
+        <option value="">All weeks</option>
+        {weeks.map((week) => <option value={week.week}>Week {String(week.week).padStart(2, '0')}</option>)}
+      </select>
+    </label>
+
+    <label>
+      Session type
+      <select class="js-filter-session">
+        <option value="">Any</option>
+        {sessionTypes.map((sessionType) => <option value={sessionType}>{sessionType}</option>)}
+      </select>
+    </label>
+
+    <label>
+      Laptop needed
+      <select class="js-filter-laptop">
+        <option value="">Any</option>
+        {laptopNeeds.map((need) => <option value={need}>{need === 'No' ? 'Not needed' : need}</option>)}
+      </select>
+    </label>
+
+    <label>
+      Task mode tag
+      <select class="js-filter-tag">
+        <option value="">Any</option>
+        {taskTags.map((tag) => <option value={tag}>{tag}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <div class="filter-actions">
+    <button class="secondary js-filter-reset" type="button">Reset filters</button>
+    <p class="small js-filter-results" aria-live="polite"></p>
+  </div>
+</section>
+
+<style>
+  .filter-bar h2 {
+    margin-bottom: 0.7rem;
+  }
+
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.7rem;
+  }
+
+  label {
+    display: grid;
+    gap: 0.25rem;
+    font-weight: 600;
+    color: #1f3c57;
+    font-size: 0.89rem;
+  }
+
+  .filter-actions {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .js-filter-results {
+    margin: 0;
+  }
+</style>

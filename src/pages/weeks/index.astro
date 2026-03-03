@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import WeekCard from '../../components/WeekCard.astro';
+import {
+  canonicalData,
+  weeks,
+  clientWeeks,
+  uniquePhases,
+  uniqueSessionTypes,
+  uniqueLaptopNeeds,
+  uniqueTaskTags
+} from '../../lib/site-data.js';
+---
+
+<Layout title={`${canonicalData.site.title} | Weeks`} description="Week archive with filters" currentPath={Astro.url.pathname}>
+  <section class="hero section">
+    <p class="kicker">Week Archive</p>
+    <h1>All Week Pages</h1>
+    <p>
+      Filter by phase, week, session type, laptop needed, and task tags. Open each week for daily cards,
+      reflections, artifacts, and local notes.
+    </p>
+  </section>
+
+  <FilterBar
+    phases={uniquePhases}
+    weeks={weeks}
+    sessionTypes={uniqueSessionTypes}
+    laptopNeeds={uniqueLaptopNeeds}
+    taskTags={uniqueTaskTags}
+  />
+
+  <section class="section">
+    <div class="grid week-grid">
+      {weeks.map((week) => (
+        <WeekCard week={week} showProgress={true} />
+      ))}
+    </div>
+  </section>
+
+  <script id="weeks-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeks })}></script>
+  <script type="module">
+    import '../../scripts/weeks-page.js';
+  </script>
+</Layout>
+
+<style>
+  .week-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+</style>

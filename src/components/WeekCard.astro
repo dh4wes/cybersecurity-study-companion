@@ -1,0 +1,62 @@
+---
+const { week, compact = false, showProgress = false } = Astro.props;
+const daySessionTypes = [...new Set(week.days.map((day) => day.session_type))];
+const dayLaptopValues = [...new Set(week.days.map((day) => day.laptop_needed))];
+const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
+---
+
+<article
+  class="card week-card js-week-card"
+  data-week={week.week}
+  data-phase={week.phase}
+  data-session-types={daySessionTypes.join('|')}
+  data-laptop-needs={dayLaptopValues.join('|')}
+  data-task-tags={dayTaskTags.join('|')}
+>
+  <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
+  <h3>{week.weekly_focus}</h3>
+  <p><strong>Deliverable:</strong> {week.deliverable}</p>
+  <p><strong>Checkpoint:</strong> {week.checkpoint}</p>
+  <p>
+    <strong>Primary resource:</strong>{' '}
+    {week.primary_url ? (
+      <a href={week.primary_url} target="_blank" rel="noreferrer">{week.primary_resource}</a>
+    ) : (
+      week.primary_resource
+    )}
+  </p>
+
+  {compact ? null : (
+    <div class="meta">
+      <span class="badge neutral">7 day plan</span>
+      <span class="badge accent">{week.days.filter((day) => day.session_type === 'Study').length} study days</span>
+      <span class="badge neutral">{week.days.filter((day) => day.session_type === 'Review').length} review day</span>
+      <span class="badge neutral">{week.days.filter((day) => day.session_type === 'Rest').length} rest day</span>
+    </div>
+  )}
+
+  {showProgress ? <p class="small js-week-progress" data-week-id={week.id}></p> : null}
+
+  <p class="cta-wrap">
+    <a class="btn secondary" href={week.slug}>Open week page</a>
+  </p>
+</article>
+
+<style>
+  .week-card {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .week-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .cta-wrap {
+    margin-top: 0.2rem;
+  }
+
+  .js-week-card[hidden] {
+    display: none;
+  }
+</style>

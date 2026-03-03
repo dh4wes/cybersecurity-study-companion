@@ -1,0 +1,31 @@
+---
+const { day } = Astro.props;
+const yesNo = (value) => String(value || '').toLowerCase() === 'yes';
+const taskFlags = [
+  { label: 'Video', value: yesNo(day.video) },
+  { label: 'Reading', value: yesNo(day.reading) },
+  { label: 'Hands-on', value: yesNo(day.hands_on) },
+  { label: 'Writing / Portfolio', value: yesNo(day.writing_portfolio) }
+];
+
+const laptop = String(day.laptop_needed || 'Recommended');
+const laptopClass = laptop === 'Required' ? 'warn' : laptop === 'No' ? 'neutral' : 'accent';
+---
+
+<div class="task-badges" aria-label="Task metadata badges">
+  {taskFlags.map((item) => (
+    <span class={`badge ${item.value ? 'accent' : 'neutral'}`}>
+      {item.label}: {item.value ? 'Yes' : 'No'}
+    </span>
+  ))}
+  <span class={`badge ${laptopClass}`}>Laptop: {laptop === 'No' ? 'Not needed' : laptop}</span>
+</div>
+
+<style>
+  .task-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+  }
+</style>

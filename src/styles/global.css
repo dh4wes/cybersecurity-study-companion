@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap');
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-soft: #f0f4fa;
+  --border: #ced6e1;
+  --ink: #12263f;
+  --ink-soft: #3d536f;
+  --accent: #3a6f8f;
+  --accent-soft: #dce8f1;
+  --success: #1f6f4a;
+  --danger: #8b2f3c;
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(16, 34, 58, 0.05);
+  --max: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at 12% 0%, #e8f0f6 0, rgba(232, 240, 246, 0) 45%),
+    radial-gradient(circle at 88% 100%, #e6edf3 0, rgba(230, 237, 243, 0) 35%),
+    var(--bg);
+}
+
+main {
+  width: min(var(--max), 92vw);
+  margin: 1.6rem auto 4rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.65rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+h1,
+h2 {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+p {
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  line-height: 1.56;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.22rem 0.66rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.badge.neutral {
+  background: var(--surface-soft);
+  border-color: #d4dce8;
+  color: #2f4866;
+}
+
+.badge.accent {
+  background: var(--accent-soft);
+  color: #1f4a64;
+  border-color: #c2d8e7;
+}
+
+.badge.success {
+  background: #e2f3e8;
+  color: var(--success);
+  border-color: #bcdcc8;
+}
+
+.badge.warn {
+  background: #f8ecea;
+  color: var(--danger);
+  border-color: #f1ccc6;
+}
+
+.section {
+  margin-bottom: 1.35rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+input[type='text'],
+input[type='url'],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.58rem 0.64rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button,
+.btn {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+button.secondary,
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+button.danger {
+  border-color: var(--danger);
+  background: var(--danger);
+}
+
+button.ghost {
+  border-color: var(--border);
+  color: var(--ink);
+  background: #fff;
+}
+
+.small {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.muted {
+  color: var(--ink-soft);
+}
+
+.hero {
+  padding: 1.3rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(115deg, #eef4fa 0%, #fefefe 62%);
+  box-shadow: var(--shadow);
+}
+
+.two-col {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.three-col {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .two-col {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    width: min(var(--max), 95vw);
+    margin-top: 1rem;
+  }
+
+  .hero,
+  .card {
+    padding: 0.9rem;
+  }
+}
