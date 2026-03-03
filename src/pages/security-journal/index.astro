@@ -91,6 +91,10 @@ const seedEntries = journalSeedRows.map((row, index) => ({
           ))}
         </select>
       </div>
+      <div class="form-row">
+        <button class="secondary js-export-journal" type="button">Export journal entries</button>
+        <p class="small js-journal-export-state" aria-live="polite"></p>
+      </div>
       <p class="small js-journal-filter-state" aria-live="polite"></p>
       <p class="small">Use this page as your incident-thinking archive and link each entry to a source URL.</p>
     </article>

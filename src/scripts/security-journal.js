@@ -140,10 +140,54 @@ const initTagFilter = () => {
   filter.addEventListener('change', applyTagFilter);
 };
 
+const exportJournalEntries = () => {
+  const dataNode = document.getElementById('journal-data-json');
+  if (!dataNode) return;
+
+  const data = JSON.parse(dataNode.textContent || '{}');
+  const seedEntries = data.seedEntries || [];
+  const draftEntries = getJournalDrafts().entries || [];
+
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    version: 'v1',
+    draftCount: draftEntries.length,
+    seedCount: seedEntries.length,
+    drafts: draftEntries,
+    seedEntries
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `cyber-journal-entries-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+};
+
+const initExportControl = () => {
+  const exportButton = document.querySelector('.js-export-journal');
+  const stateNode = document.querySelector('.js-journal-export-state');
+  if (!exportButton) return;
+
+  exportButton.addEventListener('click', () => {
+    try {
+      exportJournalEntries();
+      if (stateNode) stateNode.textContent = 'Journal entries exported as JSON.';
+    } catch (error) {
+      if (stateNode) stateNode.textContent = `Export failed: ${error.message}`;
+    }
+  });
+};
+
 const boot = () => {
   renderEntries();
   initForm();
   initTagFilter();
+  initExportControl();
 };
 
 if (document.readyState === 'loading') {
