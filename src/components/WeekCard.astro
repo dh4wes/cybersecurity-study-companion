@@ -46,6 +46,11 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   .week-card {
     display: grid;
     gap: 0.3rem;
+    transition: background 0.2s ease;
+  }
+
+  .week-card:hover {
+    background: #fff;
   }
 
   .week-card h3 {
@@ -53,7 +58,9 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   }
 
   .cta-wrap {
-    margin-top: 0.2rem;
+    margin-top: 0.35rem;
+    padding-top: 0.55rem;
+    border-top: 1px dashed var(--border);
   }
 
   .js-week-card[hidden] {

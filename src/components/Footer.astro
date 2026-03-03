@@ -11,24 +11,27 @@ const year = new Date().getFullYear();
 
 <style>
   .site-footer {
-    border-top: 1px solid #d3dce8;
+    border-top: 1px solid var(--border);
     margin-top: 2.2rem;
-    background: #f9fbfe;
+    background: var(--surface);
   }
 
   .shell {
     width: min(1160px, 95vw);
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 0.92rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0.6rem;
+    gap: 0.55rem;
   }
 
   p {
     margin: 0;
-    color: #3d536f;
-    font-size: 0.86rem;
+    color: var(--ink-soft);
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 </style>

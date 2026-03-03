@@ -87,7 +87,7 @@ const supportUrl = day.support_url || fallbackSupportUrl;
 
   .progress-controls {
     margin-top: 0.8rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px dashed var(--border);
     padding-top: 0.7rem;
   }
 
@@ -103,7 +103,7 @@ const supportUrl = day.support_url || fallbackSupportUrl;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    color: #233d5a;
+    color: var(--ink);
     font-weight: 500;
   }
 
@@ -116,12 +116,12 @@ const supportUrl = day.support_url || fallbackSupportUrl;
   }
 
   .js-day-card.is-complete {
-    border-color: #b7d8c4;
-    background: linear-gradient(130deg, #f2fbf5 0%, #fff 52%);
+    border-color: color-mix(in srgb, var(--success) 55%, var(--border));
+    background: color-mix(in srgb, var(--success) 12%, var(--surface));
   }
 
   .js-day-card.is-blocked {
-    border-color: #f0c8c1;
-    background: linear-gradient(130deg, #fdf4f2 0%, #fff 52%);
+    border-color: color-mix(in srgb, var(--danger) 55%, var(--border));
+    background: color-mix(in srgb, var(--danger) 11%, var(--surface));
   }
 </style>

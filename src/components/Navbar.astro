@@ -3,11 +3,11 @@ import { withBase } from '../lib/site-data.js';
 
 const { currentPath = '/' } = Astro.props;
 const links = [
-  { path: '/', label: 'Home' },
+  { path: '/', label: 'Dashboard' },
   { path: '/roadmap/', label: 'Roadmap' },
   { path: '/weeks/', label: 'Weeks' },
   { path: '/resources/', label: 'Resources' },
-  { path: '/security-journal/', label: 'Security Journal' },
+  { path: '/security-journal/', label: 'Journal' },
   { path: '/progress/', label: 'Progress' },
   { path: '/about/', label: 'About' }
 ];
@@ -17,99 +17,157 @@ const normalizedPath = normalize(currentPath);
 
 const isActive = (path) => {
   const href = normalize(withBase(path));
-  if (path === '/') {
-    return normalizedPath === href;
-  }
+  if (path === '/') return normalizedPath === href;
   return normalizedPath === href || normalizedPath.startsWith(href);
 };
 ---
 
 <header class="site-header">
-  <div class="shell">
-    <a class="brand" href={withBase('/')}>Cyber Study Companion</a>
-    <nav aria-label="Primary">
-      <ul>
-        {links.map((link) => (
-          <li>
-            <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+  <div class="masthead">
+    <div>
+      <p class="eyebrow">Study Companion v1.0</p>
+      <a class="brand" href={withBase('/')}>Cyber Security</a>
+    </div>
+    <p class="context">32-Week Cybersecurity Roadmap and Proof-of-Work Portfolio</p>
   </div>
+
+  <nav aria-label="Primary" class="site-nav">
+    <ul>
+      {links.map((link) => (
+        <li>
+          <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>
 
 <style>
   .site-header {
     position: sticky;
     top: 0;
-    z-index: 30;
-    backdrop-filter: blur(10px);
-    background: color-mix(in srgb, #f5f7fb 86%, transparent);
-    border-bottom: 1px solid #d3dce8;
+    z-index: 40;
+    background: color-mix(in srgb, var(--bg) 93%, #ffffff 7%);
+    border-bottom: 1px solid var(--border);
   }
 
-  .shell {
+  .masthead {
     width: min(1160px, 95vw);
     margin: 0 auto;
+    padding: 0.85rem 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: end;
     gap: 1rem;
-    padding: 0.65rem 0;
+  }
+
+  .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
   }
 
   .brand {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #12263f;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    font-size: 1.85rem;
+    color: var(--ink);
   }
 
-  ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.25rem;
+  .brand:hover,
+  .brand:focus-visible {
+    text-decoration: none;
+    color: var(--accent-dark);
+  }
+
+  .context {
     margin: 0;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    text-align: right;
+    max-width: 360px;
+    font-weight: 600;
+  }
+
+  .site-nav {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-nav ul {
+    width: min(1160px, 95vw);
+    margin: 0 auto;
     padding: 0;
     list-style: none;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
-  li a {
-    color: #36516a;
-    font-size: 0.89rem;
-    font-weight: 600;
-    border-radius: 999px;
-    padding: 0.35rem 0.62rem;
+  .site-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav li {
+    border-right: 1px solid var(--border);
+  }
+
+  .site-nav li:first-child {
+    border-left: 1px solid var(--border);
+  }
+
+  .site-nav a {
     display: inline-flex;
     align-items: center;
-    line-height: 1.2;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    min-height: 46px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
   }
 
-  li a:hover,
-  li a:focus-visible {
-    background: #e6eef6;
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    background: var(--surface-soft);
     text-decoration: none;
   }
 
-  li a.active {
-    background: #d8e6f2;
-    color: #13395b;
+  .site-nav a.active {
+    background: var(--accent);
+    color: #fff;
   }
 
   @media (max-width: 900px) {
-    .shell {
-      flex-direction: column;
+    .masthead {
       align-items: flex-start;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      flex-direction: column;
+      padding: 0.72rem 0;
     }
 
-    ul {
-      justify-content: flex-start;
+    .brand {
+      font-size: 1.45rem;
+    }
+
+    .context {
+      text-align: left;
+      max-width: none;
+    }
+
+    .site-nav a {
+      padding: 0.72rem 0.9rem;
     }
   }
 </style>
