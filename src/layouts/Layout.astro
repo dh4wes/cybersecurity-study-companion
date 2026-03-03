@@ -20,9 +20,10 @@ const {
     <script is:inline>
       (() => {
         const key = 'cyber-study-font-theme-v1';
+        const allowed = new Set(['default', 'pinkend']);
         try {
           const value = localStorage.getItem(key);
-          if (value && value !== 'default') {
+          if (allowed.has(value) && value !== 'default') {
             document.documentElement.dataset.fontTheme = value;
           }
         } catch {

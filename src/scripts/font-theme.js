@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'cyber-study-font-theme-v1';
-const THEMES = ['default', 'help-me', 'digitag', 'jo-wrote-a-lovesong', 'pinkend'];
+const THEMES = ['default', 'pinkend'];
 
 const normalizeTheme = (theme) => (THEMES.includes(theme) ? theme : 'default');
 

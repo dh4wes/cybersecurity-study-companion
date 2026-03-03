@@ -1,30 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'HelpMe';
-  src: url('../assets/fonts/help-me.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Digitag';
-  src: url('../assets/fonts/digitag.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'JoWroteALovesong';
-  src: url('../assets/fonts/jo-wrote-a-lovesong.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Pinkend';
   src: url('../assets/fonts/pinkend.ttf') format('truetype');
   font-weight: 400;
@@ -54,21 +30,6 @@
 
 * {
   box-sizing: border-box;
-}
-
-html[data-font-theme='help-me'] {
-  --font-display: 'HelpMe', 'Cinzel', serif;
-  --font-body: 'HelpMe', 'Manrope', sans-serif;
-}
-
-html[data-font-theme='digitag'] {
-  --font-display: 'Digitag', 'Cinzel', serif;
-  --font-body: 'Digitag', 'Manrope', sans-serif;
-}
-
-html[data-font-theme='jo-wrote-a-lovesong'] {
-  --font-display: 'JoWroteALovesong', 'Cinzel', serif;
-  --font-body: 'JoWroteALovesong', 'Manrope', sans-serif;
 }
 
 html[data-font-theme='pinkend'] {
