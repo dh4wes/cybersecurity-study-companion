@@ -28,7 +28,19 @@ const isActive = (path) => {
       <p class="eyebrow">Study Companion v1.0</p>
       <a class="brand" href={withBase('/')}>Cyber Security</a>
     </div>
-    <p class="context">32-Week Cybersecurity Roadmap and Proof-of-Work Portfolio</p>
+    <div class="context-wrap">
+      <p class="context">32-Week Cybersecurity Roadmap and Proof-of-Work Portfolio</p>
+      <label class="font-switcher">
+        <span>Font</span>
+        <select class="js-font-theme" aria-label="Select font theme">
+          <option value="default">Current</option>
+          <option value="help-me">Help Me</option>
+          <option value="digitag">Digitag</option>
+          <option value="jo-wrote-a-lovesong">Jo Wrote A Lovesong</option>
+          <option value="pinkend">Pinkend</option>
+        </select>
+      </label>
+    </div>
   </div>
 
   <nav aria-label="Primary" class="site-nav">
@@ -41,6 +53,10 @@ const isActive = (path) => {
     </ul>
   </nav>
 </header>
+
+<script type="module">
+  import '../scripts/font-theme.js';
+</script>
 
 <style>
   .site-header {
@@ -71,7 +87,7 @@ const isActive = (path) => {
   }
 
   .brand {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-display);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     line-height: 1;
@@ -94,6 +110,39 @@ const isActive = (path) => {
     text-align: right;
     max-width: 360px;
     font-weight: 600;
+  }
+
+  .context-wrap {
+    display: grid;
+    gap: 0.45rem;
+    justify-items: end;
+  }
+
+  .font-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    font-weight: 700;
+  }
+
+  .font-switcher span {
+    white-space: nowrap;
+  }
+
+  .font-switcher select {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.22rem 0.38rem;
+    border-radius: 0;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    min-width: 140px;
   }
 
   .site-nav {
@@ -164,6 +213,14 @@ const isActive = (path) => {
     .context {
       text-align: left;
       max-width: none;
+    }
+
+    .context-wrap {
+      justify-items: start;
+    }
+
+    .font-switcher select {
+      min-width: 132px;
     }
 
     .site-nav a {

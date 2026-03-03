@@ -17,6 +17,19 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <script is:inline>
+      (() => {
+        const key = 'cyber-study-font-theme-v1';
+        try {
+          const value = localStorage.getItem(key);
+          if (value && value !== 'default') {
+            document.documentElement.dataset.fontTheme = value;
+          }
+        } catch {
+          // Ignore localStorage errors.
+        }
+      })();
+    </script>
   </head>
   <body>
     <Navbar currentPath={currentPath} />
