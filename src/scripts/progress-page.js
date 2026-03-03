@@ -29,7 +29,7 @@ const render = () => {
   if (nextDeliverable) {
     if (metrics.nextDeliverableWeek) {
       const week = metrics.nextDeliverableWeek;
-      nextDeliverable.innerHTML = `<a href="${week.slug}">Week ${String(week.week).padStart(2, '0')}</a>: ${week.deliverable}`;
+      nextDeliverable.innerHTML = `<a href="${week.href || week.slug}">Week ${String(week.week).padStart(2, '0')}</a>: ${week.deliverable}`;
     } else {
       nextDeliverable.textContent = 'All week deliverables marked complete.';
     }

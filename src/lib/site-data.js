@@ -2,11 +2,19 @@ import canonicalData from '../../cybersecurity_study_companion_data.json';
 import workbookEnrichment from '../data/workbook-enrichment.json';
 
 const phaseOrder = ['Foundation', 'Networking', 'Security', 'GRC / Application', 'Buffer / Final Review'];
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 
 const toWeekId = (weekNumber) => `week-${String(weekNumber).padStart(2, '0')}`;
 const toDayId = (weekNumber, dayNumber) => `${toWeekId(weekNumber)}-day-${String(dayNumber).padStart(2, '0')}`;
 
 const cleanSlug = (slug) => slug.trim().replace(/(^\/|\/$)/g, '');
+const withBase = (path = '/') => {
+  if (!path) return baseUrl;
+  const value = String(path);
+  if (/^[a-z]+:\/\//i.test(value) || value.startsWith('#')) return value;
+  if (value.startsWith(baseUrl)) return value;
+  return `${baseUrl}${value.replace(/^\/+/, '')}`;
+};
 
 const weekPagesByWeek = new Map(canonicalData.week_pages.map((page) => [Number(page.week), page]));
 
@@ -19,6 +27,7 @@ const weeks = canonicalData.weeks.map((week) => {
     weekPage?.portfolio_angle ||
     week.days.find((day) => day.session_type === 'Review')?.deliverable_or_checkpoint ||
     '';
+  const slug = weekPage?.slug || `/weeks/${weekId}/`;
 
   return {
     ...week,
@@ -26,8 +35,9 @@ const weeks = canonicalData.weeks.map((week) => {
     id: weekId,
     checkpoint,
     page: weekPage,
-    slug: weekPage?.slug || `/weeks/${weekId}/`,
-    slugPath: cleanSlug(weekPage?.slug || `/weeks/${weekId}/`),
+    slug,
+    href: withBase(slug),
+    slugPath: cleanSlug(slug),
     days: week.days.map((day) => ({
       ...day,
       day: Number(day.day),
@@ -73,6 +83,7 @@ const clientWeeks = weeks.map((week) => ({
   week: week.week,
   phase: week.phase,
   slug: week.slug,
+  href: week.href,
   weekly_focus: week.weekly_focus,
   deliverable: week.deliverable,
   checkpoint: week.checkpoint,
@@ -108,6 +119,7 @@ export {
   totalStudyDays,
   totalReviewDays,
   clientWeeks,
+  withBase,
   toWeekId,
   toDayId
 };

@@ -31,7 +31,7 @@ export const computeProgressMetrics = (weeks, progress) => {
     .map(({ week, day }) => ({
       dayId: day.id,
       label: `Week ${String(week.week).padStart(2, '0')} ${day.label}`,
-      weekSlug: week.slug,
+      weekSlug: week.href || week.slug,
       objective: day.session_objective
     }));
 
@@ -57,7 +57,7 @@ export const computeProgressMetrics = (weeks, progress) => {
     return {
       week: week.week,
       id: week.id,
-      slug: week.slug,
+      slug: week.href || week.slug,
       total,
       completed,
       percent: total ? Math.round((completed / total) * 100) : 0,

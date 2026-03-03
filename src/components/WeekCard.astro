@@ -38,7 +38,7 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   {showProgress ? <p class="small js-week-progress" data-week-id={week.id}></p> : null}
 
   <p class="cta-wrap">
-    <a class="btn secondary" href={week.slug}>Open week page</a>
+    <a class="btn secondary" href={week.href || week.slug}>Open week page</a>
   </p>
 </article>
 

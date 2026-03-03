@@ -1,6 +1,14 @@
 import { getProgress } from './progress-storage.js';
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
 
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+const withBase = (path = '/') => {
+  if (!path) return baseUrl;
+  if (/^[a-z]+:\/\//i.test(path)) return path;
+  if (path.startsWith(baseUrl)) return path;
+  return `${baseUrl}${String(path).replace(/^\/+/, '')}`;
+};
+
 const renderHome = () => {
   const dataNode = document.getElementById('home-data-json');
   if (!dataNode) return;
@@ -30,7 +38,7 @@ const renderHome = () => {
 
   const currentWeekLink = document.querySelector('.js-current-week-link');
   if (currentWeekLink && currentWeek) {
-    currentWeekLink.setAttribute('href', currentWeek.slug);
+    currentWeekLink.setAttribute('href', currentWeek.href || withBase(currentWeek.slug));
     currentWeekLink.textContent = `Open Week ${String(currentWeek.week).padStart(2, '0')} page`;
   }
 
@@ -44,11 +52,11 @@ const renderHome = () => {
   const todayLink = document.querySelector('.js-today-link');
   if (todayLink) {
     if (metrics.nextTask) {
-      const href = `${metrics.nextTask.week.slug}#${metrics.nextTask.day.id}`;
+      const href = `${metrics.nextTask.week.href || withBase(metrics.nextTask.week.slug)}#${metrics.nextTask.day.id}`;
       todayLink.setAttribute('href', href);
       todayLink.textContent = `Today's study block: Week ${String(metrics.nextTask.week.week).padStart(2, '0')} ${metrics.nextTask.day.label}`;
     } else {
-      todayLink.setAttribute('href', '/progress/');
+      todayLink.setAttribute('href', withBase('/progress/'));
       todayLink.textContent = 'All tasks complete. Review progress';
     }
   }
