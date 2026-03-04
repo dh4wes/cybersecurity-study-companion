@@ -1,5 +1,6 @@
 import canonicalData from '../../cybersecurity_study_companion_data.json';
 import workbookEnrichment from '../data/workbook-enrichment.json';
+import daySourceLinks from '../data/day-source-links.json';
 
 const phaseOrder = ['Foundation', 'Networking', 'Security', 'GRC / Application', 'Buffer / Final Review'];
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
@@ -43,6 +44,7 @@ const weeks = canonicalData.weeks.map((week) => {
       day: Number(day.day),
       id: toDayId(weekNumber, Number(day.day)),
       phase: week.phase,
+      sourceLinks: daySourceLinks[toDayId(weekNumber, Number(day.day))] || [],
       taskTagList: String(day.task_mode_tags || '')
         .split('+')
         .map((tag) => tag.trim())

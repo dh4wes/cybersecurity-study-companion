@@ -67,6 +67,7 @@ Supported interactions:
 - `src/scripts/` localStorage, filters, week controls, journal, progress dashboard
 - `src/lib/site-data.js` normalized data access
 - `src/data/workbook-enrichment.json` workbook-derived enrichment
+- `src/data/day-source-links.json` curated day-level direct lesson links (lecture-level URLs where available)
 
 ## Notes
 - See `IMPLEMENTATION_NOTES.md` for assumptions, JSON/workbook mismatch findings, and recommended v2 enhancements.

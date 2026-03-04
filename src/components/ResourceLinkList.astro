@@ -1,7 +1,8 @@
 ---
-const { primaryResource, primaryUrl, supportResource, supportUrl } = Astro.props;
+const { primaryResource, primaryUrl, supportResource, supportUrl, sourceLinks = [] } = Astro.props;
 const hasPrimary = Boolean(primaryResource && primaryUrl);
 const hasSupport = Boolean(supportResource && supportUrl);
+const hasSourceLinks = Array.isArray(sourceLinks) && sourceLinks.length > 0;
 ---
 
 <div class="resource-links">
@@ -18,6 +19,19 @@ const hasSupport = Boolean(supportResource && supportUrl);
     <p>
       <strong>Support:</strong> <a href={supportUrl} target="_blank" rel="noreferrer">{supportResource}</a>
     </p>
+  ) : null}
+
+  {hasSourceLinks ? (
+    <div class="direct-sources">
+      <p><strong>Direct lesson links:</strong></p>
+      <ul>
+        {sourceLinks.map((link) => (
+          <li>
+            <a href={link.url} target="_blank" rel="noreferrer">{link.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
   ) : null}
 </div>
 
@@ -37,5 +51,18 @@ const hasSupport = Boolean(supportResource && supportUrl);
   p {
     margin-bottom: 0.25rem;
     font-size: 0.9rem;
+  }
+
+  .direct-sources {
+    margin-top: 0.4rem;
+  }
+
+  ul {
+    margin: 0.2rem 0 0;
+    padding-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.2rem;
   }
 </style>

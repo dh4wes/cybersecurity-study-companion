@@ -16,6 +16,7 @@ const primaryResource = day.primary_resource || fallbackPrimaryResource;
 const primaryUrl = day.primary_url || fallbackPrimaryUrl;
 const supportResource = day.support_resource || fallbackSupportResource;
 const supportUrl = day.support_url || fallbackSupportUrl;
+const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 ---
 
 <article
@@ -59,6 +60,7 @@ const supportUrl = day.support_url || fallbackSupportUrl;
     primaryUrl={primaryUrl}
     supportResource={supportResource}
     supportUrl={supportUrl}
+    sourceLinks={sourceLinks}
   />
 
   {showProgressControls ? (
