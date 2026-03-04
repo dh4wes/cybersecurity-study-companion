@@ -46,11 +46,12 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   .week-card {
     display: grid;
     gap: 0.3rem;
-    transition: background 0.2s ease;
+    transition: border-color 0.15s linear, background 0.15s linear;
   }
 
   .week-card:hover {
-    background: #fff;
+    background: linear-gradient(180deg, rgba(204, 255, 0, 0.08), rgba(204, 255, 0, 0.02));
+    border-color: var(--accent);
   }
 
   .week-card h3 {
