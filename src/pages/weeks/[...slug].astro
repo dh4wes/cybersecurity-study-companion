@@ -7,12 +7,24 @@ import NotesCtaPanel from '../../components/NotesCtaPanel.astro';
 import { canonicalData, weeks, glossaryById, flashcardById } from '../../lib/site-data.js';
 
 export const getStaticPaths = () =>
-  weeks.map((week) => {
-    const slug = week.slugPath.replace(/^weeks\//, '');
-    return {
-      params: { slug },
-      props: { week }
-    };
+  weeks.flatMap((week) => {
+    const cleanSlug = week.slugPath.replace(/^weeks\//, '');
+    const paths = [
+      {
+        params: { slug: cleanSlug },
+        props: { week }
+      }
+    ];
+
+    const legacySlug = week.legacySlugPath?.replace(/^weeks\//, '');
+    if (legacySlug && legacySlug !== cleanSlug) {
+      paths.push({
+        params: { slug: legacySlug },
+        props: { week }
+      });
+    }
+
+    return paths;
   });
 
 const { week } = Astro.props;

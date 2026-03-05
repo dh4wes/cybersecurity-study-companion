@@ -65,14 +65,21 @@ const weeks = canonicalData.weeks
     const weekId = week.id || toWeekId(weekNumber);
     const weekDays = (week.day_ids || []).map((dayId) => dayById.get(dayId)).filter(Boolean);
     const portfolio = portfolioOutputByWeek.get(weekNumber);
+    const legacySlug = String(week.slug || '').trim() || `/weeks/${weekId}/`;
+    const legacySlugPath = cleanSlug(legacySlug);
+    const slug = `/weeks/${weekId}/`;
+    const slugPath = cleanSlug(slug);
 
     return {
       ...week,
       id: weekId,
       week: weekNumber,
-      slug: week.slug,
-      href: withBase(week.slug),
-      slugPath: cleanSlug(week.slug),
+      slug,
+      href: withBase(slug),
+      slugPath,
+      legacySlug,
+      legacyHref: withBase(legacySlug),
+      legacySlugPath,
       page: portfolio,
       reviewDeck: reviewDeckByWeek.get(weekNumber),
       days: weekDays,
@@ -82,7 +89,15 @@ const weeks = canonicalData.weeks
   })
   .sort((a, b) => a.week - b.week);
 
-const weekBySlugPath = new Map(weeks.map((week) => [week.slugPath, week]));
+const weekBySlugPath = new Map(
+  weeks.flatMap((week) => {
+    const entries = [[week.slugPath, week]];
+    if (week.legacySlugPath && week.legacySlugPath !== week.slugPath) {
+      entries.push([week.legacySlugPath, week]);
+    }
+    return entries;
+  })
+);
 const weekByNumber = new Map(weeks.map((week) => [week.week, week]));
 const weekPagesByWeek = new Map(
   canonicalData.portfolio_outputs.map((output) => [Number(output.week), output])
