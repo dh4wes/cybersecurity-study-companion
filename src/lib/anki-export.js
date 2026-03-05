@@ -55,7 +55,7 @@ const resolveCardWeek = (card, forcedWeek) => {
 const resolveCardPhase = ({ card, forcedPhaseNumber, weekNumber, weekToPhaseNumber, phaseRefToNumber }) => {
   if (hasNumericValue(forcedPhaseNumber)) return Number(forcedPhaseNumber);
 
-  if (Number.isFinite(Number(weekNumber))) {
+  if (hasNumericValue(weekNumber)) {
     const mapped = Number(weekToPhaseNumber?.[weekNumber]);
     if (Number.isFinite(mapped) && mapped > 0) return mapped;
     return phaseFromWeek(Number(weekNumber));
@@ -73,7 +73,7 @@ const resolveDeckName = ({ deckBase, granularity, weekNumber, phaseNumber, force
 
   if (granularity === 'one') return deckBase;
 
-  if (granularity === 'phase' || !Number.isFinite(Number(weekNumber))) {
+  if (granularity === 'phase' || !hasNumericValue(weekNumber)) {
     return `${deckBase}::Phase ${phaseNumber}`;
   }
 
@@ -88,11 +88,11 @@ const resolveTags = ({ card, includeDayTags, weekNumber, phaseNumber }) => {
     if (sanitized) tagSet.add(sanitized);
   });
 
-  if (Number.isFinite(Number(phaseNumber))) {
+  if (hasNumericValue(phaseNumber)) {
     tagSet.add(`phase:${Number(phaseNumber)}`);
   }
 
-  if (Number.isFinite(Number(weekNumber))) {
+  if (hasNumericValue(weekNumber)) {
     tagSet.add(`week:${pad2(weekNumber)}`);
   }
 

@@ -142,12 +142,16 @@ Compatible with GitHub, Obsidian, and plain text editors.
 
 ## Project structure
 - `src/lib/site-data.js` normalized data access
+- `src/lib/anki-export.js` shared Anki TSV export logic
 - `src/pages/` routes for Layer A + Layer B
 - `src/components/` reusable UI components
+- `src/scripts/runtime/client-utils.js` shared client helpers (JSON parsing, token filters, date token, progress events)
 - `src/scripts/progress-*` progress logic
 - `src/scripts/notes-*` notes logic
 - `src/data/content/` canonical static content collections
 - `tools/generate-v2-content.mjs` migration/generation script
+- `docs/overview.md` implementation overview
+- `docs/code-audit.md` latest audit + refactor notes
 
 ## Local development
 ```bash

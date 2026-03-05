@@ -1,11 +1,4 @@
-const includesToken = (value, token) => {
-  if (!token) return true;
-  const hay = String(value || '')
-    .split('|')
-    .map((item) => item.trim())
-    .filter(Boolean);
-  return hay.includes(token);
-};
+import { includesToken } from './runtime/client-utils.js';
 
 const matchesCategory = (itemCategory, selectedCategory) => {
   if (!selectedCategory) return true;

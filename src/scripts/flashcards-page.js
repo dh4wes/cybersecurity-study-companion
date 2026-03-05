@@ -1,14 +1,5 @@
 import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
-import { parseJsonScript } from './runtime/client-utils.js';
-
-const includesToken = (value, token) => {
-  if (!token) return true;
-  const hay = String(value || '')
-    .split('|')
-    .map((item) => item.trim())
-    .filter(Boolean);
-  return hay.includes(token);
-};
+import { getDateToken, includesToken, parseJsonScript } from './runtime/client-utils.js';
 
 const applyFilters = () => {
   const search = (document.querySelector('.js-flashcards-search')?.value || '').trim().toLowerCase();
@@ -50,8 +41,6 @@ const applyFilters = () => {
   return visibleCount;
 };
 
-const toDateToken = () => new Date().toISOString().slice(0, 10);
-
 const getExportSettings = () => ({
   deckBase: document.querySelector('.js-anki-deck-base')?.value || 'CyberStudy',
   granularity: document.querySelector('.js-anki-granularity')?.value || 'week',
@@ -75,7 +64,7 @@ const exportCards = ({ cards, filenamePrefix, context, stateNode }) => {
   });
 
   downloadTextFile({
-    filename: `${filenamePrefix}-${toDateToken()}.tsv`,
+    filename: `${filenamePrefix}-${getDateToken()}.tsv`,
     content: tsv,
     mime: 'text/tab-separated-values;charset=utf-8'
   });

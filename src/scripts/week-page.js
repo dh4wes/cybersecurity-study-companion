@@ -7,7 +7,7 @@ import {
   setWeekArtifactLink
 } from './progress-storage.js';
 import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
-import { dispatchProgressChanged, parseJsonScript } from './runtime/client-utils.js';
+import { dispatchProgressChanged, getDateToken, parseJsonScript } from './runtime/client-utils.js';
 
 const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-complete', isComplete);
@@ -15,8 +15,6 @@ const applyDayVisualState = (card, isComplete, isBlocked) => {
 };
 
 const pad2 = (value) => String(Number(value) || 0).padStart(2, '0');
-
-const toDateToken = () => new Date().toISOString().slice(0, 10);
 
 const initDayCards = (weekId) => {
   const progress = getProgress();
@@ -130,7 +128,7 @@ const initWeekAnkiExport = (weekData) => {
       });
 
       downloadTextFile({
-        filename: `anki-week-${pad2(weekNumber)}-${toDateToken()}.tsv`,
+        filename: `anki-week-${pad2(weekNumber)}-${getDateToken()}.tsv`,
         content: tsv,
         mime: 'text/tab-separated-values;charset=utf-8'
       });
@@ -171,7 +169,7 @@ const initWeekAnkiExport = (weekData) => {
       });
 
       downloadTextFile({
-        filename: `anki-week-${pad2(weekNumber)}-day-${pad2(dayNumber)}-${toDateToken()}.tsv`,
+        filename: `anki-week-${pad2(weekNumber)}-day-${pad2(dayNumber)}-${getDateToken()}.tsv`,
         content: tsv,
         mime: 'text/tab-separated-values;charset=utf-8'
       });

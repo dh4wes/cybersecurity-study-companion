@@ -1,14 +1,5 @@
 import { getProgress } from './progress-storage.js';
-import { parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
-
-const includesToken = (value, token) => {
-  if (!token) return true;
-  const hay = String(value || '')
-    .split('|')
-    .map((item) => item.trim())
-    .filter(Boolean);
-  return hay.includes(token);
-};
+import { includesToken, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 const applyFilters = () => {
   const cards = [...document.querySelectorAll('.js-week-card')];

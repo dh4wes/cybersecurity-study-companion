@@ -61,6 +61,7 @@ For each week:
   - CTA to private notes tool
   - day complete / blocked controls
 - Weekly output framing + artifact link + reflection controls.
+- Includes week-level Anki export plus optional day-level flashcard export actions.
 
 ### Resources (`/resources/`)
 - Grouped by category.
@@ -79,6 +80,9 @@ For each week:
 - Canonical global flashcard set.
 - Filters: search, phase, week, day, card type, difficulty.
 - Card UI supports answer reveal via `<details>`.
+- Includes Anki TSV export controls for all cards or current filtered view.
+- Supports deck base naming, deck granularity (one/phase/week), and day-tag toggle.
+- Includes dedicated import help page at `/flashcards/export/`.
 
 ### Security Journal (`/security-journal/`)
 - Prompt-driven page with purpose, template, and weekly prompt archive.
@@ -158,12 +162,14 @@ Key script modules:
 - `src/scripts/week-page.js`: day/week completion + blocked state + reflections/artifacts.
 - `src/scripts/glossary-page.js`: glossary search/filter visibility.
 - `src/scripts/flashcards-page.js`: flashcard filtering.
+- `src/lib/anki-export.js`: shared TSV export builder, tag sanitizer, and text download helper for Anki exports.
 - `src/scripts/progress-page.js`: metrics rendering + import/export/reset controls.
 - `src/scripts/progress-metrics.js`: all computed progress aggregates.
 - `src/scripts/progress-storage.js`: progress persistence model.
 - `src/scripts/notes-page.js`: notes UI orchestration and export/import/reset.
 - `src/scripts/notes-storage.js`: notes persistence + markdown generation.
 - `src/scripts/font-theme.js`: font theme switching.
+- `src/scripts/runtime/client-utils.js`: shared browser helpers for base paths, JSON-script parsing, token matching, date token generation, and progress events.
 
 ## 8) Storage Boundaries (Strict Split)
 
@@ -217,3 +223,9 @@ It does not behave as:
 - a chatbot shell
 - a runtime AI content generator for glossary/flashcards
 - a notes-first public curriculum interface
+
+## 12) Recent Refactor Notes
+- Consolidated duplicated token-match filtering logic into shared runtime utilities used across glossary, flashcards, and weeks scripts.
+- Consolidated date-token generation into shared runtime utilities to reduce repeated helper code.
+- Hardened Anki export metadata handling to avoid invalid fallback tags/decks like `week:00` / `phase:0` in edge cases.
+- Kept refactors behavior-preserving for static output, GitHub Pages compatibility, and strict Layer A/Layer B boundaries.

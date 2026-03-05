@@ -22,12 +22,23 @@ export const parseJsonScript = (id, fallback = {}) => {
   }
 };
 
+export const includesToken = (value, token) => {
+  if (!token) return true;
+  const hay = String(value || '')
+    .split('|')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return hay.includes(token);
+};
+
+export const getDateToken = () => new Date().toISOString().slice(0, 10);
+
 export const downloadJson = (filenamePrefix, payload) => {
   const content = JSON.stringify(payload, null, 2);
   const blob = new Blob([content], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
-  const dateToken = new Date().toISOString().slice(0, 10);
+  const dateToken = getDateToken();
 
   link.href = url;
   link.download = `${filenamePrefix}-${dateToken}.json`;
