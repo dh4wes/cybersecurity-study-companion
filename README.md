@@ -71,6 +71,40 @@ Layer A:
 Layer B:
 - `/notes/` (isolated local notes tool)
 
+## Anki export (Layer A)
+Flashcards can be exported as Anki-importable TSV without any backend:
+- `/flashcards/`
+  - Export all cards (`.tsv`)
+  - Export current filtered view (`.tsv`)
+  - Deck controls: `One deck`, `By phase`, `By week` (default)
+  - Deck base input (default `CyberStudy`)
+  - Optional day-tag toggle
+- `/weeks/<week-slug>/`
+  - Export this week's flashcards to Anki (`.tsv`)
+  - Optional day-level export buttons on day cards
+- Import help page: `/flashcards/export/`
+
+TSV output includes Anki file headers:
+- `#separator:Tab`
+- `#html:true`
+- `#columns:Front<TAB>Back<TAB>Tags<TAB>Deck`
+- `#tags column:3`
+- `#deck column:4`
+
+### Anki import quick steps
+1. Export a TSV from the site.
+2. In Anki Desktop: `File -> Import`.
+3. Select the TSV and confirm tab separator.
+4. Keep HTML enabled so `<br>` line breaks render.
+5. Confirm column mapping (Front, Back, Tags, Deck), then import.
+
+### Tag/deck mapping assumptions
+- Phase numbers are derived from canonical week ordering (`weeks` in `site-data`) and mapped as `phase:<n>`.
+- Week tags are zero-padded (`week:01`, `week:02`, ...).
+- Day tags are numeric (`day:1`, `day:2`, ...), optionally included.
+- Exam tag is generated from dataset `exam_relevance` as `exam:<value>` (for this dataset, values are currently high/medium/low).
+- Existing flashcard tags are preserved and sanitized for Anki (`space -> _`, lowercase).
+
 ## Storage boundaries
 Layer A (progress only):
 - `cyber-study-progress-v1`

@@ -6,12 +6,17 @@ import {
   setWeekReflection,
   setWeekArtifactLink
 } from './progress-storage.js';
+import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
 import { dispatchProgressChanged, parseJsonScript } from './runtime/client-utils.js';
 
 const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-complete', isComplete);
   card.classList.toggle('is-blocked', isBlocked);
 };
+
+const pad2 = (value) => String(Number(value) || 0).padStart(2, '0');
+
+const toDateToken = () => new Date().toISOString().slice(0, 10);
 
 const initDayCards = (weekId) => {
   const progress = getProgress();
@@ -95,10 +100,94 @@ const initDayCards = (weekId) => {
 
 };
 
+const initWeekAnkiExport = (weekData) => {
+  const weekNumber = Number(weekData.weekNumber);
+  const phaseNumber = Number(weekData.phaseNumber) || Math.max(1, Math.ceil(weekNumber / 8));
+  const weekCards = Array.isArray(weekData.weekFlashcards) ? weekData.weekFlashcards : [];
+  const dayFlashcards = Array.isArray(weekData.dayFlashcards) ? weekData.dayFlashcards : [];
+  const dayMap = new Map(dayFlashcards.map((entry) => [entry.dayId, entry]));
+
+  const stateNode = document.querySelector('.js-week-anki-export-state');
+  const weekDeckName = `CyberStudy::Phase ${phaseNumber}::Week ${pad2(weekNumber)}`;
+
+  const exportWeekButton = document.querySelector('.js-export-week-anki');
+  if (exportWeekButton) {
+    exportWeekButton.disabled = weekCards.length === 0;
+    exportWeekButton.addEventListener('click', () => {
+      if (!weekCards.length) {
+        if (stateNode) stateNode.textContent = 'No week flashcards available.';
+        return;
+      }
+
+      const tsv = buildAnkiTsv({
+        cards: weekCards,
+        deckBase: 'CyberStudy',
+        granularity: 'week',
+        includeDayTags: true,
+        forceDeckName: weekDeckName,
+        forceWeek: weekNumber,
+        forcePhaseNumber: phaseNumber
+      });
+
+      downloadTextFile({
+        filename: `anki-week-${pad2(weekNumber)}-${toDateToken()}.tsv`,
+        content: tsv,
+        mime: 'text/tab-separated-values;charset=utf-8'
+      });
+
+      if (stateNode) {
+        stateNode.textContent = `Exported ${weekCards.length} week card${weekCards.length === 1 ? '' : 's'}.`;
+      }
+    });
+  }
+
+  document.querySelectorAll('.js-export-day-anki').forEach((button) => {
+    button.addEventListener('click', () => {
+      const dayId = button.dataset.dayId;
+      if (!dayId) return;
+
+      const dayEntry = dayMap.get(dayId);
+      const dayCards = Array.isArray(dayEntry?.cards) ? dayEntry.cards : [];
+
+      if (!dayCards.length) {
+        if (stateNode) stateNode.textContent = 'No day flashcards available.';
+        return;
+      }
+
+      const dayNumber =
+        Number(dayEntry?.dayNumber) ||
+        Number((/^week-\d+-day-(\d+)$/i.exec(dayId)?.[1] || '').trim()) ||
+        0;
+      const dayDeckName = `${weekDeckName}::Day ${pad2(dayNumber)}`;
+
+      const tsv = buildAnkiTsv({
+        cards: dayCards,
+        deckBase: 'CyberStudy',
+        granularity: 'week',
+        includeDayTags: true,
+        forceDeckName: dayDeckName,
+        forceWeek: weekNumber,
+        forcePhaseNumber: phaseNumber
+      });
+
+      downloadTextFile({
+        filename: `anki-week-${pad2(weekNumber)}-day-${pad2(dayNumber)}-${toDateToken()}.tsv`,
+        content: tsv,
+        mime: 'text/tab-separated-values;charset=utf-8'
+      });
+
+      if (stateNode) {
+        stateNode.textContent = `Exported ${dayCards.length} card${dayCards.length === 1 ? '' : 's'} for Day ${pad2(dayNumber)}.`;
+      }
+    });
+  });
+};
+
 const boot = () => {
   const data = parseJsonScript('week-data-json', {});
   if (!data.weekId) return;
   initDayCards(data.weekId);
+  initWeekAnkiExport(data);
 };
 
 if (document.readyState === 'loading') {

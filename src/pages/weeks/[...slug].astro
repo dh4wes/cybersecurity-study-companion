@@ -29,6 +29,27 @@ export const getStaticPaths = () =>
 
 const { week } = Astro.props;
 const weekId = week.id;
+const phaseOrder = [...new Set(weeks.map((entry) => entry.phase))];
+const phaseNumber = Math.max(1, phaseOrder.indexOf(week.phase) + 1);
+
+const weekFlashcards = [];
+const seenWeekFlashcards = new Set();
+week.days.forEach((day) => {
+  day.flashcard_ids.forEach((cardId) => {
+    if (seenWeekFlashcards.has(cardId)) return;
+    const card = flashcardById.get(cardId);
+    if (!card) return;
+    seenWeekFlashcards.add(cardId);
+    weekFlashcards.push(card);
+  });
+});
+
+const dayFlashcards = week.days.map((day) => ({
+  dayId: day.id,
+  dayNumber: day.day,
+  label: day.label,
+  cards: day.flashcard_ids.map((cardId) => flashcardById.get(cardId)).filter(Boolean)
+}));
 ---
 
 <Layout
@@ -41,6 +62,12 @@ const weekId = week.id;
     <h1>{week.weekly_focus}</h1>
     <p><strong>Deliverable:</strong> {week.deliverable}</p>
     <p><strong>Checkpoint:</strong> {week.checkpoint}</p>
+    <div class="inline export-wrap">
+      <button type="button" class="secondary js-export-week-anki">
+        Export this week&apos;s flashcards to Anki (.tsv)
+      </button>
+      <span class="small js-week-anki-export-state" aria-live="polite"></span>
+    </div>
     <label class="week-complete">
       <input type="checkbox" class="js-week-complete" />
       Mark week complete
@@ -91,7 +118,17 @@ const weekId = week.id;
     </div>
   </section>
 
-  <script id="week-data-json" type="application/json" set:html={JSON.stringify({ weekId })}></script>
+  <script
+    id="week-data-json"
+    type="application/json"
+    set:html={JSON.stringify({
+      weekId,
+      weekNumber: week.week,
+      phaseNumber,
+      weekFlashcards,
+      dayFlashcards
+    })}
+  ></script>
   <script>
     import '../../scripts/week-page.js';
   </script>
@@ -119,5 +156,9 @@ const weekId = week.id;
     align-items: center;
     gap: 0.6rem;
     flex-wrap: wrap;
+  }
+
+  .export-wrap {
+    margin-top: 0.5rem;
   }
 </style>

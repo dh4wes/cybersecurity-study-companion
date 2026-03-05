@@ -1,3 +1,6 @@
+import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
+import { parseJsonScript } from './runtime/client-utils.js';
+
 const includesToken = (value, token) => {
   if (!token) return true;
   const hay = String(value || '')
@@ -38,9 +41,61 @@ const applyFilters = () => {
   if (state) {
     state.textContent = `${visibleCount} card${visibleCount === 1 ? '' : 's'} shown.`;
   }
+
+  const visibleExport = document.querySelector('.js-export-anki-visible');
+  if (visibleExport) {
+    visibleExport.disabled = visibleCount === 0;
+  }
+
+  return visibleCount;
+};
+
+const toDateToken = () => new Date().toISOString().slice(0, 10);
+
+const getExportSettings = () => ({
+  deckBase: document.querySelector('.js-anki-deck-base')?.value || 'CyberStudy',
+  granularity: document.querySelector('.js-anki-granularity')?.value || 'week',
+  includeDayTags: document.querySelector('.js-anki-include-day-tags')?.checked ?? true
+});
+
+const exportCards = ({ cards, filenamePrefix, context, stateNode }) => {
+  if (!cards.length) {
+    if (stateNode) stateNode.textContent = 'No flashcards available for export.';
+    return;
+  }
+
+  const settings = getExportSettings();
+  const tsv = buildAnkiTsv({
+    cards,
+    deckBase: settings.deckBase,
+    granularity: settings.granularity,
+    includeDayTags: settings.includeDayTags,
+    weekToPhaseNumber: context.weekToPhaseNumber || {},
+    phaseRefToNumber: context.phaseRefToNumber || {}
+  });
+
+  downloadTextFile({
+    filename: `${filenamePrefix}-${toDateToken()}.tsv`,
+    content: tsv,
+    mime: 'text/tab-separated-values;charset=utf-8'
+  });
+
+  if (stateNode) {
+    stateNode.textContent = `Exported ${cards.length} card${cards.length === 1 ? '' : 's'} to TSV.`;
+  }
 };
 
 const boot = () => {
+  const data = parseJsonScript('flashcards-data-json', {
+    cards: [],
+    weekToPhaseNumber: {},
+    phaseRefToNumber: {}
+  });
+
+  const cards = Array.isArray(data.cards) ? data.cards : [];
+  const cardById = new Map(cards.map((card) => [card.id, card]));
+  const stateNode = document.querySelector('.js-anki-export-state');
+
   const controls = document.querySelectorAll(
     '.js-flashcards-search, .js-flashcards-phase, .js-flashcards-week, .js-flashcards-day, .js-flashcards-type, .js-flashcards-difficulty'
   );
@@ -57,6 +112,36 @@ const boot = () => {
         control.value = '';
       });
       applyFilters();
+    });
+  }
+
+  const exportAll = document.querySelector('.js-export-anki-all');
+  if (exportAll) {
+    exportAll.addEventListener('click', () => {
+      exportCards({
+        cards,
+        filenamePrefix: 'anki-export-all',
+        context: data,
+        stateNode
+      });
+    });
+  }
+
+  const exportVisible = document.querySelector('.js-export-anki-visible');
+  if (exportVisible) {
+    exportVisible.addEventListener('click', () => {
+      const visibleCardIds = [...document.querySelectorAll('.js-flashcard-item:not([hidden])')]
+        .map((node) => node.dataset.cardId)
+        .filter(Boolean);
+
+      const visibleCards = visibleCardIds.map((cardId) => cardById.get(cardId)).filter(Boolean);
+
+      exportCards({
+        cards: visibleCards,
+        filenamePrefix: 'anki-export-filtered',
+        context: data,
+        stateNode
+      });
     });
   }
 

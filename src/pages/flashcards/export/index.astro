@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import { canonicalData, withBase } from '../../../lib/site-data.js';
+---
+
+<Layout
+  title={`${canonicalData.site.title} | Flashcards Export`}
+  description="How to import the generated flashcard TSV into Anki"
+  currentPath={Astro.url.pathname}
+>
+  <PageHero
+    kicker="Anki Export Guide"
+    title="Import Flashcards Into Anki"
+    description="Use the built-in TSV export from this static site, then import into Anki Desktop with tab separator and HTML enabled."
+  />
+
+  <section class="card section">
+    <h2>Quick Steps</h2>
+    <ol>
+      <li>From <a href={withBase('/flashcards/')}>Flashcards</a>, export either all cards or your current filtered view.</li>
+      <li>Open Anki Desktop and choose <strong>File -> Import</strong>.</li>
+      <li>Select the downloaded <code>.tsv</code> file.</li>
+      <li>Confirm separator is <strong>Tab</strong> (the file header also sets this automatically).</li>
+      <li>Ensure HTML in fields is enabled so line breaks render from <code>&lt;br&gt;</code>.</li>
+      <li>Verify columns map as: Front, Back, Tags, Deck.</li>
+      <li>Import. Missing decks are created automatically from the deck column.</li>
+    </ol>
+  </section>
+
+  <section class="card section">
+    <h2>Included File Headers</h2>
+    <pre>
+#separator:Tab
+#html:true
+#columns:Front[tab]Back[tab]Tags[tab]Deck
+#tags column:3
+#deck column:4
+    </pre>
+    <p class="small">
+      Note: The real file uses literal tab characters in the columns header. Fields are always quoted and newlines are
+      converted to HTML line breaks for import reliability.
+    </p>
+  </section>
+
+  <section class="card section">
+    <h2>Deck + Tags Behavior</h2>
+    <ul>
+      <li>Deck base defaults to <code>CyberStudy</code> and can be customized on the export panel.</li>
+      <li>Granularity options: one deck, by phase, or by week (default).</li>
+      <li>Tags include original card tags plus computed metadata for phase/week/day/type/difficulty/exam.</li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  ol {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  pre {
+    padding: 0.8rem;
+    border: 1px dashed var(--border);
+    background: var(--surface-soft);
+    white-space: pre-wrap;
+  }
+</style>
+

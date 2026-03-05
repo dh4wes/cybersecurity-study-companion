@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import FlashcardItem from '../../components/FlashcardItem.astro';
 import {
   canonicalData,
+  weeks,
   flashcardEntries,
   flashcardPhaseOptions,
   flashcardWeekOptions,
@@ -23,6 +24,16 @@ const dayLabel = (dayId) => {
   if (!match) return dayId;
   return `Week ${match[1]} Day ${match[2]}`;
 };
+
+const phaseOrder = [...new Set(weeks.map((week) => week.phase))];
+const weekToPhaseNumber = Object.fromEntries(
+  weeks.map((week) => [week.week, phaseOrder.indexOf(week.phase) + 1])
+);
+const phaseRefToNumber = Object.fromEntries(
+  weeks
+    .filter((week) => week.phase_ref)
+    .map((week) => [week.phase_ref, phaseOrder.indexOf(week.phase) + 1])
+);
 ---
 
 <Layout
@@ -35,6 +46,40 @@ const dayLabel = (dayId) => {
     title="Flashcards"
     description="Precomputed flashcard deck mapped to week/day study sessions with filters for phase, type, and difficulty."
   />
+
+  <section class="card section">
+    <div class="section-header">
+      <h2>Export to Anki</h2>
+      <a href="./export/">How to import into Anki</a>
+    </div>
+
+    <div class="anki-export-grid">
+      <label>
+        Deck base name
+        <input class="js-anki-deck-base" type="text" value="CyberStudy" />
+      </label>
+
+      <label>
+        Deck granularity
+        <select class="js-anki-granularity">
+          <option value="week" selected>By week</option>
+          <option value="phase">By phase</option>
+          <option value="one">One deck</option>
+        </select>
+      </label>
+    </div>
+
+    <label class="inline-check">
+      <input class="js-anki-include-day-tags" type="checkbox" checked />
+      Include day tags
+    </label>
+
+    <div class="filter-actions">
+      <button type="button" class="js-export-anki-all">Export all cards (.tsv)</button>
+      <button type="button" class="secondary js-export-anki-visible">Export current view (.tsv)</button>
+      <p class="small js-anki-export-state" aria-live="polite"></p>
+    </div>
+  </section>
 
   <section class="card section">
     <h2>Filter Deck</h2>
@@ -100,6 +145,7 @@ const dayLabel = (dayId) => {
       {flashcardEntries.map((card) => (
         <div
           class="js-flashcard-item"
+          data-card-id={card.id}
           data-question={card.question}
           data-answer={card.answer}
           data-phase-refs={(card.phase_refs || []).join('|')}
@@ -114,6 +160,11 @@ const dayLabel = (dayId) => {
     </div>
   </section>
 
+  <script
+    id="flashcards-data-json"
+    type="application/json"
+    set:html={JSON.stringify({ cards: flashcardEntries, weekToPhaseNumber, phaseRefToNumber })}
+  ></script>
   <script>
     import '../../scripts/flashcards-page.js';
   </script>
@@ -140,5 +191,23 @@ const dayLabel = (dayId) => {
 
   .js-flashcard-item[hidden] {
     display: none;
+  }
+
+  .anki-export-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.7rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .inline-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-transform: none;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
   }
 </style>

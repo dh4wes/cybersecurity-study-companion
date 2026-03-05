@@ -93,7 +93,14 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
   <section class="section flashcard-section">
     <div class="section-header">
       <h4>Today's Flashcards</h4>
-      <span class="badge neutral">{flashcardEntries.length}</span>
+      <div class="meta">
+        <span class="badge neutral">{flashcardEntries.length}</span>
+        {flashcardEntries.length ? (
+          <button type="button" class="ghost export-day-btn js-export-day-anki" data-day-id={day.id}>
+            Export today&apos;s cards
+          </button>
+        ) : null}
+      </div>
     </div>
 
     {flashcardEntries.length ? (
@@ -153,6 +160,12 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 
   .checkpoint-box {
     padding: 0.85rem;
+  }
+
+  .export-day-btn {
+    font-size: 0.62rem;
+    padding: 0.28rem 0.52rem;
+    letter-spacing: 0.08em;
   }
 
   .progress-controls {
