@@ -18,7 +18,32 @@ const phaseLabel = (value) =>
     .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
     .join(' ');
 
-const grouped = glossaryEntries.reduce((acc, entry) => {
+const toDaySortKey = (dayRef) => {
+  const match = /^week-(\d+)-day-(\d+)$/i.exec(String(dayRef || '').trim());
+  if (!match) return Number.POSITIVE_INFINITY;
+  const week = Number(match[1]);
+  const day = Number(match[2]);
+  if (!Number.isFinite(week) || !Number.isFinite(day)) return Number.POSITIVE_INFINITY;
+  return week * 100 + day;
+};
+
+const entrySortKey = (entry) => {
+  const dayRefs = Array.isArray(entry.day_refs) ? entry.day_refs : [];
+  const dayKeys = dayRefs.map(toDaySortKey).filter((value) => Number.isFinite(value));
+  if (dayKeys.length) return Math.min(...dayKeys);
+
+  const weekRefs = Array.isArray(entry.week_refs) ? entry.week_refs : [];
+  const weekKeys = weekRefs.map((week) => Number(week) * 100).filter((value) => Number.isFinite(value));
+  if (weekKeys.length) return Math.min(...weekKeys);
+
+  return Number.POSITIVE_INFINITY;
+};
+
+const sortedGlossaryEntries = [...glossaryEntries].sort(
+  (a, b) => entrySortKey(a) - entrySortKey(b) || a.term.localeCompare(b.term)
+);
+
+const grouped = sortedGlossaryEntries.reduce((acc, entry) => {
   const category = entry.category || 'General Security Foundations';
   if (!acc.has(category)) {
     acc.set(category, []);
@@ -30,9 +55,10 @@ const grouped = glossaryEntries.reduce((acc, entry) => {
 const glossaryGroups = [...grouped.entries()]
   .map(([category, entries]) => ({
     category,
-    entries: entries.sort((a, b) => a.term.localeCompare(b.term))
+    daySort: Math.min(...entries.map((entry) => entrySortKey(entry))),
+    entries
   }))
-  .sort((a, b) => a.category.localeCompare(b.category));
+  .sort((a, b) => a.daySort - b.daySort || a.category.localeCompare(b.category));
 ---
 
 <Layout title={`${canonicalData.site.title} | Glossary`} description="Searchable cybersecurity glossary" currentPath={Astro.url.pathname}>
