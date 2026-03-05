@@ -1,0 +1,54 @@
+#boot-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #070707;
+  color: var(--c-acid);
+  font-family: monospace;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+#boot-intro.is-fading {
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+#boot-console {
+  margin: 0;
+  white-space: pre;
+  line-height: 1.4;
+}
+
+#skip-intro {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid var(--c-acid);
+  background: none;
+  color: var(--c-acid);
+  cursor: pointer;
+}
+
+#packet-pulse {
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--c-acid);
+  box-shadow: 0 0 10px var(--c-acid);
+  opacity: 0;
+}
+
+#packet-pulse.is-live {
+  animation: boot-pulse 1.2s linear;
+}
+
+@keyframes boot-pulse {
+  0% { transform: translateX(0); opacity: 0; }
+  12%, 88% { opacity: 1; }
+  100% { transform: translateX(calc(100vw + 2rem)); opacity: 0; }
+}

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import BootIntro from '../components/BootIntro.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
@@ -33,6 +34,7 @@ const {
     </script>
   </head>
   <body>
+    <BootIntro />
     <Navbar currentPath={currentPath} />
     <main>
       <slot />
