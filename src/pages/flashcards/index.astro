@@ -141,23 +141,23 @@ const phaseRefToNumber = Object.fromEntries(
   </section>
 
   <section class="section">
-    <div class="grid flashcards-grid">
-      {flashcardEntries.map((card) => (
-        <div
-          class="js-flashcard-item"
-          data-card-id={card.id}
-          data-question={card.question}
-          data-answer={card.answer}
-          data-phase-refs={(card.phase_refs || []).join('|')}
-          data-week-refs={(card.week_refs || []).join('|')}
-          data-day-refs={(card.day_refs || []).join('|')}
-          data-card-type={card.card_type}
-          data-difficulty={card.difficulty}
-        >
-          <FlashcardItem card={card} showWeekDay={true} />
-        </div>
-      ))}
-    </div>
+      <div class="grid flashcards-grid">
+        {flashcardEntries.map((card) => (
+          <div
+            class="js-flashcard-item"
+            data-card-id={card.id}
+            data-front={card.front}
+            data-back={card.back}
+            data-phase-refs={(card.phase_refs || []).join('|')}
+            data-week-refs={(card.week_refs || []).join('|')}
+            data-day-refs={(card.day_refs || []).join('|')}
+            data-card-type={card.type}
+            data-difficulty={card.difficulty}
+          >
+            <FlashcardItem card={card} showWeekDay={true} />
+          </div>
+        ))}
+      </div>
   </section>
 
   <script

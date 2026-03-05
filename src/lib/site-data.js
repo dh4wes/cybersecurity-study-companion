@@ -168,6 +168,28 @@ const glossaryUsageById = canonicalData.days.reduce((acc, day) => {
   return acc;
 }, new Map());
 
+const flashcardUsageById = canonicalData.days.reduce((acc, day) => {
+  const phase = day.phase || weekByNumber.get(Number(day.week))?.phase || '';
+  const week = Number(day.week);
+
+  for (const flashcardId of day.flashcard_ids || []) {
+    if (!acc.has(flashcardId)) {
+      acc.set(flashcardId, {
+        phase_refs: new Set(),
+        week_refs: new Set(),
+        day_refs: new Set()
+      });
+    }
+
+    const usage = acc.get(flashcardId);
+    if (phase) usage.phase_refs.add(phase);
+    if (Number.isFinite(week)) usage.week_refs.add(week);
+    if (day.id) usage.day_refs.add(day.id);
+  }
+
+  return acc;
+}, new Map());
+
 const clientWeeksLite = weeks.map((week) => ({
   id: week.id,
   week: week.week,
@@ -222,9 +244,24 @@ const glossaryEntries = glossaryData.map((entry) => {
 });
 
 const glossaryById = new Map(glossaryEntries.map((entry) => [entry.id, entry]));
-const flashcardById = new Map(flashcardsData.map((entry) => [entry.id, entry]));
 
-const flashcardEntries = flashcardsData;
+const flashcardEntries = flashcardsData.map((entry) => {
+  const usage = flashcardUsageById.get(entry.id);
+  const phase_refs = usage
+    ? [...usage.phase_refs].sort((a, b) => phaseOrder.indexOf(a) - phaseOrder.indexOf(b))
+    : [];
+  const week_refs = usage ? [...usage.week_refs].sort((a, b) => a - b) : [];
+  const day_refs = usage ? [...usage.day_refs].sort() : [];
+
+  return {
+    ...entry,
+    phase_refs,
+    week_refs,
+    day_refs
+  };
+});
+
+const flashcardById = new Map(flashcardEntries.map((entry) => [entry.id, entry]));
 
 const glossaryPhaseOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.phase_refs || []))].sort();
 const glossaryWeekOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.week_refs || []))].sort(
@@ -241,7 +278,7 @@ const flashcardWeekOptions = [...new Set(flashcardEntries.flatMap((card) => card
   (a, b) => a - b
 );
 const flashcardDayOptions = [...new Set(flashcardEntries.flatMap((card) => card.day_refs || []))].sort();
-const flashcardTypeOptions = [...new Set(flashcardEntries.map((card) => card.card_type || ''))]
+const flashcardTypeOptions = [...new Set(flashcardEntries.map((card) => card.type || ''))]
   .filter(Boolean)
   .sort();
 const flashcardDifficultyOptions = [...new Set(flashcardEntries.map((card) => card.difficulty || ''))]

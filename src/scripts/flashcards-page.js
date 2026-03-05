@@ -12,11 +12,11 @@ const applyFilters = () => {
   let visibleCount = 0;
 
   document.querySelectorAll('.js-flashcard-item').forEach((item) => {
-    const question = String(item.dataset.question || '').toLowerCase();
-    const answer = String(item.dataset.answer || '').toLowerCase();
+    const front = String(item.dataset.front || '').toLowerCase();
+    const back = String(item.dataset.back || '').toLowerCase();
 
     const matches =
-      (!search || question.includes(search) || answer.includes(search)) &&
+      (!search || front.includes(search) || back.includes(search)) &&
       includesToken(item.dataset.phaseRefs, phase) &&
       includesToken(item.dataset.weekRefs, week) &&
       includesToken(item.dataset.dayRefs, day) &&

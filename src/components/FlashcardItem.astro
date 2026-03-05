@@ -1,6 +1,6 @@
 ---
 const { card, showWeekDay = false } = Astro.props;
-const cardType = String(card.card_type || '').toLowerCase();
+const cardType = String(card.type || '').toLowerCase();
 const typeClass = cardType === 'definition' ? 'neutral' : cardType === 'application' ? 'accent' : 'warn';
 ---
 
@@ -8,15 +8,14 @@ const typeClass = cardType === 'definition' ? 'neutral' : cardType === 'applicat
   <div class="section-header">
     <p class="kicker">{card.id}</p>
     <div class="meta">
-      <span class={`badge ${typeClass}`}>{card.card_type}</span>
+      <span class={`badge ${typeClass}`}>{card.type}</span>
       <span class="badge neutral">{card.difficulty}</span>
-      <span class="badge neutral">Exam: {card.exam_relevance}</span>
     </div>
   </div>
-  <p><strong>Q:</strong> {card.question}</p>
+  <p><strong>Q:</strong> {card.front}</p>
   <details>
     <summary>Reveal answer</summary>
-    <p><strong>A:</strong> {card.answer}</p>
+    <p><strong>A:</strong> {card.back}</p>
   </details>
 
   {showWeekDay ? (

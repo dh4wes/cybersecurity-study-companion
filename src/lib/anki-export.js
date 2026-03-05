@@ -102,7 +102,7 @@ const resolveTags = ({ card, includeDayTags, weekNumber, phaseNumber }) => {
     });
   }
 
-  const cardType = sanitizeAnkiTag(card.card_type);
+  const cardType = sanitizeAnkiTag(card.type);
   if (cardType) tagSet.add(`type:${cardType}`);
 
   const difficulty = sanitizeAnkiTag(card.difficulty);
@@ -162,8 +162,8 @@ export const buildAnkiTsv = ({
     });
 
     return [
-      quoteTsvField(card.question || ''),
-      quoteTsvField(card.answer || ''),
+      quoteTsvField(card.front || ''),
+      quoteTsvField(card.back || ''),
       quoteTsvField(tags),
       quoteTsvField(deckName)
     ].join('\t');
