@@ -1,0 +1,6467 @@
+[
+  {
+    "id": "accounting",
+    "term": "Accounting (AAA)",
+    "definition": "Tracking and logging of identity actions for accountability.",
+    "why_it_matters": "Supports audits, investigations, and policy enforcement.",
+    "exam_relevance": "medium",
+    "tags": [
+      "iam"
+    ],
+    "related_terms": [
+      "identity",
+      "authentication",
+      "authorization",
+      "hashing",
+      "encryption"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "ai-assistant-guardrails",
+    "term": "AI Assistant Guardrails",
+    "definition": "Rules that keep AI-supported job-search outputs accurate and authentic.",
+    "why_it_matters": "Prevents low-quality or misleading application materials.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career",
+      "ai"
+    ],
+    "related_terms": [
+      "linkedin-profile",
+      "networking-outreach",
+      "job-tracker",
+      "keyword-optimization",
+      "application-funnel"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "alert-triage",
+    "term": "Alert Triage",
+    "definition": "Initial analysis process that validates and prioritizes alerts.",
+    "why_it_matters": "Triage quality determines response speed and analyst workload.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "operations"
+    ],
+    "related_terms": [
+      "false-positive",
+      "ioc",
+      "incident-severity",
+      "containment",
+      "eradication"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "api",
+    "term": "API",
+    "definition": "Application Programming Interface used to exchange data between systems.",
+    "why_it_matters": "Security workflows increasingly depend on API-driven tooling.",
+    "exam_relevance": "high",
+    "tags": [
+      "automation",
+      "integration"
+    ],
+    "related_terms": [
+      "http-method",
+      "automation-playbook",
+      "regex",
+      "file-parsing",
+      "version-control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "application-funnel",
+    "term": "Application Funnel",
+    "definition": "Measurement view of applications from submit to offer stages.",
+    "why_it_matters": "Funnel metrics reveal where to improve process effectiveness.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "linkedin-profile",
+      "networking-outreach",
+      "job-tracker",
+      "keyword-optimization",
+      "ai-assistant-guardrails"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "artifact-curation",
+    "term": "Artifact Curation",
+    "definition": "Selecting and organizing portfolio evidence for clear storytelling.",
+    "why_it_matters": "Improves employer evaluation of skills and consistency.",
+    "exam_relevance": "medium",
+    "tags": [
+      "portfolio"
+    ],
+    "related_terms": [
+      "executive-briefing",
+      "management-summary",
+      "roadmap-prioritization",
+      "capability-gap",
+      "continuous-improvement"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-05",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "asset-inventory",
+    "term": "Asset Inventory",
+    "definition": "Structured list of hardware, software, and data assets in scope.",
+    "why_it_matters": "You cannot defend assets you cannot identify.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "operations"
+    ],
+    "related_terms": [
+      "data-classification",
+      "threat-model",
+      "attack-vector",
+      "vulnerability-scan",
+      "cvss"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "attack-vector",
+    "term": "Attack Vector",
+    "definition": "Path or method used by an attacker to reach a target.",
+    "why_it_matters": "Understanding vectors helps prioritize defensive controls.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "threats"
+    ],
+    "related_terms": [
+      "asset-inventory",
+      "data-classification",
+      "threat-model",
+      "vulnerability-scan",
+      "cvss"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "authentication",
+    "term": "Authentication",
+    "definition": "Process of verifying claimed identity.",
+    "why_it_matters": "Strong authentication is foundational to account security.",
+    "exam_relevance": "high",
+    "tags": [
+      "iam"
+    ],
+    "related_terms": [
+      "identity",
+      "authorization",
+      "accounting",
+      "hashing",
+      "encryption"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "authorization",
+    "term": "Authorization",
+    "definition": "Process of granting permitted actions to an authenticated identity.",
+    "why_it_matters": "Authorization errors lead directly to over-privileged access.",
+    "exam_relevance": "high",
+    "tags": [
+      "iam"
+    ],
+    "related_terms": [
+      "identity",
+      "authentication",
+      "accounting",
+      "hashing",
+      "encryption"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-05",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "automation-playbook",
+    "term": "Automation Playbook",
+    "definition": "Defined sequence of automated actions for a repeatable security task.",
+    "why_it_matters": "Enables consistent execution and easier quality control.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "operations"
+    ],
+    "related_terms": [
+      "api",
+      "http-method",
+      "regex",
+      "file-parsing",
+      "version-control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-05",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "bios",
+    "term": "BIOS/UEFI Firmware",
+    "definition": "Low-level firmware that initializes hardware and starts the boot process.",
+    "why_it_matters": "Firmware settings and boot order problems appear often in exams and real support.",
+    "exam_relevance": "high",
+    "tags": [
+      "hardware",
+      "boot"
+    ],
+    "related_terms": [
+      "cpu",
+      "ram",
+      "storage-drive",
+      "motherboard",
+      "boot-process"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "boot-process",
+    "term": "Boot Process",
+    "definition": "Sequence that moves a system from power-on to a usable operating system session.",
+    "why_it_matters": "Boot-stage failures require precise troubleshooting and clear explanation.",
+    "exam_relevance": "high",
+    "tags": [
+      "boot",
+      "troubleshooting"
+    ],
+    "related_terms": [
+      "cpu",
+      "ram",
+      "storage-drive",
+      "motherboard",
+      "bios"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "business-impact-analysis",
+    "term": "Business Impact Analysis",
+    "definition": "Process for identifying operational effects of disruption over time.",
+    "why_it_matters": "Supports recovery priorities and resilience planning.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "resilience"
+    ],
+    "related_terms": [
+      "critical-infrastructure",
+      "governance",
+      "compliance",
+      "risk-assessment",
+      "vendor-risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "capability-gap",
+    "term": "Capability Gap",
+    "definition": "Difference between current skills/process maturity and target state.",
+    "why_it_matters": "Gap visibility informs practical upskilling plans.",
+    "exam_relevance": "medium",
+    "tags": [
+      "planning"
+    ],
+    "related_terms": [
+      "executive-briefing",
+      "management-summary",
+      "artifact-curation",
+      "roadmap-prioritization",
+      "continuous-improvement"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "career-story",
+    "term": "Career Story",
+    "definition": "Narrative linking background, skills, and target role trajectory.",
+    "why_it_matters": "Helps employers quickly understand fit and intent.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "resume-tailoring",
+      "star-method",
+      "elevator-pitch",
+      "portfolio-artifact",
+      "interview-question"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "case-management",
+    "term": "Case Management",
+    "definition": "Tracking and coordination of investigation tasks, evidence, and decisions.",
+    "why_it_matters": "Supports accountability and post-incident review.",
+    "exam_relevance": "medium",
+    "tags": [
+      "soc",
+      "operations"
+    ],
+    "related_terms": [
+      "recovery",
+      "playbook",
+      "escalation-path",
+      "timeline-analysis",
+      "post-incident-review"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "chain-of-custody",
+    "term": "Chain of Custody",
+    "definition": "Record of who handled evidence, when, and why.",
+    "why_it_matters": "Maintains evidence integrity for legal and audit scrutiny.",
+    "exam_relevance": "high",
+    "tags": [
+      "forensics"
+    ],
+    "related_terms": [
+      "soc-workflow",
+      "forensic-imaging",
+      "log-correlation",
+      "detection-rule",
+      "triage-queue"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-05",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "chmod",
+    "term": "chmod",
+    "definition": "Linux command used to modify file permission bits.",
+    "why_it_matters": "Needed for controlled access configuration and scripting.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-permissions",
+      "chown",
+      "process",
+      "systemctl",
+      "cron"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "chown",
+    "term": "chown",
+    "definition": "Linux command used to change file owner and group.",
+    "why_it_matters": "Ownership control is key to privilege boundaries.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-permissions",
+      "chmod",
+      "process",
+      "systemctl",
+      "cron"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-05",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "cia-triad",
+    "term": "CIA Triad",
+    "definition": "Confidentiality, Integrity, and Availability security objective model.",
+    "why_it_matters": "Provides common language for security decision trade-offs.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "foundations"
+    ],
+    "related_terms": [
+      "risk",
+      "threat",
+      "vulnerability",
+      "control",
+      "security-framework"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "cidr",
+    "term": "CIDR",
+    "definition": "Classless Inter-Domain Routing notation for subnet masks and prefixes.",
+    "why_it_matters": "CIDR drives efficient address allocation and route summarization.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "ipv4",
+      "subnet-mask",
+      "private-ip",
+      "public-ip",
+      "subnetting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "cloud-service-model",
+    "term": "Cloud Service Model",
+    "definition": "Service delivery layer such as IaaS, PaaS, or SaaS.",
+    "why_it_matters": "Shared-responsibility expectations differ by service model.",
+    "exam_relevance": "medium",
+    "tags": [
+      "cloud",
+      "security"
+    ],
+    "related_terms": [
+      "ssid",
+      "wpa3",
+      "soho-router",
+      "firewall",
+      "network-segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "command-line",
+    "term": "Command Line",
+    "definition": "Text-based interface for executing operating system commands.",
+    "why_it_matters": "Essential for efficient administration and scripted troubleshooting.",
+    "exam_relevance": "high",
+    "tags": [
+      "os",
+      "operations"
+    ],
+    "related_terms": [
+      "operating-system",
+      "filesystem",
+      "ntfs",
+      "powershell",
+      "service-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "communication-plan",
+    "term": "Communication Plan",
+    "definition": "Documented messaging protocol for stakeholders during security events.",
+    "why_it_matters": "Reduces confusion and protects trust during incidents.",
+    "exam_relevance": "high",
+    "tags": [
+      "response",
+      "governance"
+    ],
+    "related_terms": [
+      "incident-command",
+      "playbook",
+      "maturity-model",
+      "evidence-handling",
+      "tabletop-exercise"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "compensating-control",
+    "term": "Compensating Control",
+    "definition": "Alternative safeguard used when a primary control is not feasible.",
+    "why_it_matters": "Maintains risk reduction while constraints are resolved.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "controls"
+    ],
+    "related_terms": [
+      "mitigation",
+      "exploit",
+      "residual-risk",
+      "exposure",
+      "threat-intelligence"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-05",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "compliance",
+    "term": "Compliance",
+    "definition": "Conformance to laws, regulations, standards, or internal policies.",
+    "why_it_matters": "Noncompliance creates legal and financial risk.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc"
+    ],
+    "related_terms": [
+      "critical-infrastructure",
+      "business-impact-analysis",
+      "governance",
+      "risk-assessment",
+      "vendor-risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "conditional",
+    "term": "Conditional",
+    "definition": "Logic branch that executes code based on true/false evaluation.",
+    "why_it_matters": "Conditionals support decision-driven automation.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "python-script",
+      "variable",
+      "function",
+      "loop",
+      "error-handling"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "containment",
+    "term": "Containment",
+    "definition": "Response action that limits incident spread and immediate damage.",
+    "why_it_matters": "Rapid containment reduces business impact.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "alert-triage",
+      "false-positive",
+      "ioc",
+      "incident-severity",
+      "eradication"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "continuous-improvement",
+    "term": "Continuous Improvement",
+    "definition": "Ongoing cycle of measuring outcomes and refining process.",
+    "why_it_matters": "Critical for long-term security program effectiveness.",
+    "exam_relevance": "high",
+    "tags": [
+      "planning"
+    ],
+    "related_terms": [
+      "executive-briefing",
+      "management-summary",
+      "artifact-curation",
+      "roadmap-prioritization",
+      "capability-gap"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "control",
+    "term": "Control",
+    "definition": "Safeguard that prevents, detects, or corrects security issues.",
+    "why_it_matters": "Control design and effectiveness drive program maturity.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "controls"
+    ],
+    "related_terms": [
+      "cia-triad",
+      "risk",
+      "threat",
+      "vulnerability",
+      "security-framework"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "control-recommendation",
+    "term": "Control Recommendation",
+    "definition": "Actionable proposal to improve prevention, detection, or response capability.",
+    "why_it_matters": "Connects analysis work to business-facing improvement outcomes.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "controls"
+    ],
+    "related_terms": [
+      "reconnaissance",
+      "enumeration",
+      "privilege-escalation",
+      "defense-in-depth",
+      "incident-journal"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "cpu",
+    "term": "CPU",
+    "definition": "Central Processing Unit; executes instructions and coordinates processing tasks.",
+    "why_it_matters": "Helps explain hardware performance and troubleshooting trade-offs.",
+    "exam_relevance": "high",
+    "tags": [
+      "hardware",
+      "fundamentals"
+    ],
+    "related_terms": [
+      "ram",
+      "storage-drive",
+      "motherboard",
+      "bios",
+      "boot-process"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "critical-infrastructure",
+    "term": "Critical Infrastructure",
+    "definition": "Systems essential to societal and economic stability.",
+    "why_it_matters": "Security failures in critical sectors have outsized impact.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "business-impact-analysis",
+      "governance",
+      "compliance",
+      "risk-assessment",
+      "vendor-risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "cron",
+    "term": "cron",
+    "definition": "Linux scheduling system for recurring task automation.",
+    "why_it_matters": "Scheduled jobs are useful for both maintenance and security automation.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "automation"
+    ],
+    "related_terms": [
+      "linux-permissions",
+      "chmod",
+      "chown",
+      "process",
+      "systemctl"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "cvss",
+    "term": "CVSS",
+    "definition": "Common Vulnerability Scoring System for rating vulnerability severity.",
+    "why_it_matters": "Standardized scoring supports triage consistency.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "risk"
+    ],
+    "related_terms": [
+      "asset-inventory",
+      "data-classification",
+      "threat-model",
+      "attack-vector",
+      "vulnerability-scan"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "data-classification",
+    "term": "Data Classification",
+    "definition": "Labeling data by sensitivity and handling requirements.",
+    "why_it_matters": "Drives control selection, access policy, and retention rules.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "data"
+    ],
+    "related_terms": [
+      "asset-inventory",
+      "threat-model",
+      "attack-vector",
+      "vulnerability-scan",
+      "cvss"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "default-gateway",
+    "term": "Default Gateway",
+    "definition": "Router path used when a host sends traffic outside its local subnet.",
+    "why_it_matters": "Gateway misconfiguration is a frequent root cause of network outages.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "routing"
+    ],
+    "related_terms": [
+      "switch",
+      "vlan",
+      "stp",
+      "router",
+      "routing-table"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "defense-in-depth",
+    "term": "Defense in Depth",
+    "definition": "Layered control strategy so one failed safeguard does not cause total failure.",
+    "why_it_matters": "Improves resilience against diverse attack techniques.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "controls"
+    ],
+    "related_terms": [
+      "reconnaissance",
+      "enumeration",
+      "privilege-escalation",
+      "incident-journal",
+      "control-recommendation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "detection-rule",
+    "term": "Detection Rule",
+    "definition": "Logic used by monitoring systems to trigger alerts.",
+    "why_it_matters": "Rule quality drives true-positive rates and analyst efficiency.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "detection"
+    ],
+    "related_terms": [
+      "soc-workflow",
+      "forensic-imaging",
+      "chain-of-custody",
+      "log-correlation",
+      "triage-queue"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "dhcp",
+    "term": "DHCP",
+    "definition": "Dynamic Host Configuration Protocol; automatically assigns network settings to devices.",
+    "why_it_matters": "Misconfigured DHCP causes immediate connectivity failures.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "services"
+    ],
+    "related_terms": [
+      "mobile-device",
+      "wifi-standard",
+      "ip-address",
+      "virtual-machine",
+      "hypervisor"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "dns",
+    "term": "DNS",
+    "definition": "Domain Name System that resolves hostnames to IP addresses.",
+    "why_it_matters": "Many incidents begin as name-resolution failures.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "services"
+    ],
+    "related_terms": [
+      "tcp",
+      "udp",
+      "port-number",
+      "nat",
+      "three-way-handshake"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "dns-resolution",
+    "term": "DNS Resolution",
+    "definition": "Lookup process translating a hostname to one or more IP addresses.",
+    "why_it_matters": "Many web failures are resolution failures, not application bugs.",
+    "exam_relevance": "high",
+    "tags": [
+      "web",
+      "networking"
+    ],
+    "related_terms": [
+      "http-request",
+      "tls-handshake",
+      "web-server",
+      "reverse-proxy",
+      "session-token"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "elevator-pitch",
+    "term": "Elevator Pitch",
+    "definition": "Short professional summary of value, direction, and goals.",
+    "why_it_matters": "Useful in networking and screening conversations.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "resume-tailoring",
+      "star-method",
+      "portfolio-artifact",
+      "interview-question",
+      "career-story"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-05",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "encryption",
+    "term": "Encryption",
+    "definition": "Reversible transformation that protects confidentiality with keys.",
+    "why_it_matters": "Critical for data protection in transit and at rest.",
+    "exam_relevance": "high",
+    "tags": [
+      "crypto"
+    ],
+    "related_terms": [
+      "identity",
+      "authentication",
+      "authorization",
+      "accounting",
+      "hashing"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "enumeration",
+    "term": "Enumeration",
+    "definition": "Active discovery of services, accounts, or resources on a target.",
+    "why_it_matters": "Enumeration artifacts are key early-stage detection signals.",
+    "exam_relevance": "high",
+    "tags": [
+      "threats"
+    ],
+    "related_terms": [
+      "reconnaissance",
+      "privilege-escalation",
+      "defense-in-depth",
+      "incident-journal",
+      "control-recommendation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "eradication",
+    "term": "Eradication",
+    "definition": "Removal of attacker presence, malicious artifacts, and root causes.",
+    "why_it_matters": "Ensures incidents do not rapidly recur.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "alert-triage",
+      "false-positive",
+      "ioc",
+      "incident-severity",
+      "containment"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "error-handling",
+    "term": "Error Handling",
+    "definition": "Code pattern that captures and responds to runtime failures safely.",
+    "why_it_matters": "Reliable scripts must fail gracefully and report issues clearly.",
+    "exam_relevance": "high",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "python-script",
+      "variable",
+      "function",
+      "loop",
+      "conditional"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "error-log",
+    "term": "Error Log",
+    "definition": "Structured list of mistakes, misconceptions, and corrective notes.",
+    "why_it_matters": "Turns repeated errors into targeted improvement actions.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "spaced-repetition",
+      "retrieval-practice",
+      "mock-exam",
+      "knowledge-gap",
+      "study-system-reset"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "escalation-path",
+    "term": "Escalation Path",
+    "definition": "Defined process for raising incidents to appropriate teams and leadership.",
+    "why_it_matters": "Prevents delays when critical decisions are required.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "recovery",
+      "playbook",
+      "case-management",
+      "timeline-analysis",
+      "post-incident-review"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-05",
+      "week-21-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "ethernet-frame",
+    "term": "Ethernet Frame",
+    "definition": "Data-link encapsulation format used on Ethernet networks.",
+    "why_it_matters": "Frame-level understanding helps with switching and capture analysis.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "ethernet"
+    ],
+    "related_terms": [
+      "osi-model",
+      "tcp-ip-model",
+      "mac-address",
+      "switch",
+      "network-topology"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-05",
+      "week-06-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "evidence-handling",
+    "term": "Evidence Handling",
+    "definition": "Process for collecting and preserving evidence with integrity.",
+    "why_it_matters": "Poor handling can invalidate investigations and legal processes.",
+    "exam_relevance": "high",
+    "tags": [
+      "forensics"
+    ],
+    "related_terms": [
+      "incident-command",
+      "playbook",
+      "maturity-model",
+      "communication-plan",
+      "tabletop-exercise"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "executive-briefing",
+    "term": "Executive Briefing",
+    "definition": "Concise leadership-facing summary of risk, impact, and recommended action.",
+    "why_it_matters": "Translates technical detail into decision-ready language.",
+    "exam_relevance": "high",
+    "tags": [
+      "communication"
+    ],
+    "related_terms": [
+      "management-summary",
+      "artifact-curation",
+      "roadmap-prioritization",
+      "capability-gap",
+      "continuous-improvement"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "exploit",
+    "term": "Exploit",
+    "definition": "Code or technique that takes advantage of a vulnerability.",
+    "why_it_matters": "Exploitability informs urgency and response strategy.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "threats"
+    ],
+    "related_terms": [
+      "mitigation",
+      "compensating-control",
+      "residual-risk",
+      "exposure",
+      "threat-intelligence"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "exposure",
+    "term": "Exposure",
+    "definition": "Degree to which assets are reachable or vulnerable to threat activity.",
+    "why_it_matters": "Exposure analysis improves prioritization of remediation.",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "risk"
+    ],
+    "related_terms": [
+      "mitigation",
+      "exploit",
+      "compensating-control",
+      "residual-risk",
+      "threat-intelligence"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "false-positive",
+    "term": "False Positive",
+    "definition": "Alert that appears malicious but is benign after investigation.",
+    "why_it_matters": "Reducing false positives improves SOC efficiency and trust.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "operations"
+    ],
+    "related_terms": [
+      "alert-triage",
+      "ioc",
+      "incident-severity",
+      "containment",
+      "eradication"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "file-parsing",
+    "term": "File Parsing",
+    "definition": "Reading structured or semi-structured files into usable data.",
+    "why_it_matters": "Essential for automating log and report processing.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "analysis"
+    ],
+    "related_terms": [
+      "api",
+      "http-method",
+      "automation-playbook",
+      "regex",
+      "version-control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "filesystem",
+    "term": "Filesystem",
+    "definition": "Structure and rules used to organize and access files on storage media.",
+    "why_it_matters": "File recovery, permissions, and performance all depend on filesystem behavior.",
+    "exam_relevance": "high",
+    "tags": [
+      "os",
+      "storage"
+    ],
+    "related_terms": [
+      "operating-system",
+      "ntfs",
+      "command-line",
+      "powershell",
+      "service-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "firewall",
+    "term": "Firewall",
+    "definition": "Control that allows or blocks traffic based on policy rules.",
+    "why_it_matters": "Firewall logic is foundational for network defense.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "networking"
+    ],
+    "related_terms": [
+      "ssid",
+      "wpa3",
+      "soho-router",
+      "cloud-service-model",
+      "network-segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "forensic-imaging",
+    "term": "Forensic Imaging",
+    "definition": "Bit-level copy of media created for evidence analysis.",
+    "why_it_matters": "Preserves original evidence while enabling investigation.",
+    "exam_relevance": "high",
+    "tags": [
+      "forensics"
+    ],
+    "related_terms": [
+      "soc-workflow",
+      "chain-of-custody",
+      "log-correlation",
+      "detection-rule",
+      "triage-queue"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "function",
+    "term": "Function",
+    "definition": "Reusable block of code that performs a defined task.",
+    "why_it_matters": "Functions improve script structure and maintainability.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "python-script",
+      "variable",
+      "loop",
+      "conditional",
+      "error-handling"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-05",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "governance",
+    "term": "Governance",
+    "definition": "Decision framework defining accountability, policy, and oversight.",
+    "why_it_matters": "Strong governance aligns security with business goals.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc"
+    ],
+    "related_terms": [
+      "critical-infrastructure",
+      "business-impact-analysis",
+      "compliance",
+      "risk-assessment",
+      "vendor-risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-05",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "hardening",
+    "term": "Hardening",
+    "definition": "Process of reducing attack surface through secure configuration.",
+    "why_it_matters": "Hardening prevents common misconfiguration-driven incidents.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "operations"
+    ],
+    "related_terms": [
+      "intrusion-detection",
+      "intrusion-prevention",
+      "siem",
+      "log-source",
+      "network-baseline"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "hashing",
+    "term": "Hashing",
+    "definition": "One-way transformation of data into a fixed-length digest.",
+    "why_it_matters": "Used for integrity checks and secure credential storage workflows.",
+    "exam_relevance": "high",
+    "tags": [
+      "crypto"
+    ],
+    "related_terms": [
+      "identity",
+      "authentication",
+      "authorization",
+      "accounting",
+      "encryption"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "http-method",
+    "term": "HTTP Method",
+    "definition": "Action verb in HTTP such as GET, POST, PUT, or DELETE.",
+    "why_it_matters": "Method semantics matter for API security and troubleshooting.",
+    "exam_relevance": "medium",
+    "tags": [
+      "web",
+      "api"
+    ],
+    "related_terms": [
+      "api",
+      "automation-playbook",
+      "regex",
+      "file-parsing",
+      "version-control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "http-request",
+    "term": "HTTP Request",
+    "definition": "Client message sent to a web server for a resource or action.",
+    "why_it_matters": "Web troubleshooting requires understanding request flow and headers.",
+    "exam_relevance": "high",
+    "tags": [
+      "web",
+      "networking"
+    ],
+    "related_terms": [
+      "dns-resolution",
+      "tls-handshake",
+      "web-server",
+      "reverse-proxy",
+      "session-token"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "hypervisor",
+    "term": "Hypervisor",
+    "definition": "Layer that creates and manages virtual machines on host hardware.",
+    "why_it_matters": "Hypervisor choices impact lab reliability and resource planning.",
+    "exam_relevance": "medium",
+    "tags": [
+      "virtualization"
+    ],
+    "related_terms": [
+      "mobile-device",
+      "wifi-standard",
+      "ip-address",
+      "virtual-machine",
+      "dhcp"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "identity",
+    "term": "Identity",
+    "definition": "Digital representation of a user, service, or device in an access system.",
+    "why_it_matters": "Identity quality underpins all access control decisions.",
+    "exam_relevance": "high",
+    "tags": [
+      "iam"
+    ],
+    "related_terms": [
+      "authentication",
+      "authorization",
+      "accounting",
+      "hashing",
+      "encryption"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer Security+ (SY0-701)"
+    ]
+  },
+  {
+    "id": "impact",
+    "term": "Impact",
+    "definition": "Estimated consequence if a risk event occurs.",
+    "why_it_matters": "Impact helps justify budget and control investments.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "risk-register",
+      "likelihood",
+      "risk-treatment",
+      "qualitative-risk",
+      "quantitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-05",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "incident-command",
+    "term": "Incident Command",
+    "definition": "Leadership structure coordinating decisions and responsibilities during incidents.",
+    "why_it_matters": "Clarifies ownership and communication under pressure.",
+    "exam_relevance": "high",
+    "tags": [
+      "response",
+      "governance"
+    ],
+    "related_terms": [
+      "playbook",
+      "maturity-model",
+      "communication-plan",
+      "evidence-handling",
+      "tabletop-exercise"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "incident-journal",
+    "term": "Incident Journal",
+    "definition": "Structured notes capturing incident observations, decisions, and rationale.",
+    "why_it_matters": "Improves learning transfer and reporting quality.",
+    "exam_relevance": "medium",
+    "tags": [
+      "soc",
+      "documentation"
+    ],
+    "related_terms": [
+      "reconnaissance",
+      "enumeration",
+      "privilege-escalation",
+      "defense-in-depth",
+      "control-recommendation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "incident-severity",
+    "term": "Incident Severity",
+    "definition": "Impact-based classification used to prioritize incident response.",
+    "why_it_matters": "Severity ratings align communication and escalation expectations.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "alert-triage",
+      "false-positive",
+      "ioc",
+      "containment",
+      "eradication"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "ioc",
+    "term": "Indicator of Compromise",
+    "definition": "Observable evidence suggesting malicious activity occurred.",
+    "why_it_matters": "IOCs accelerate detection and scoping workflows.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "detection"
+    ],
+    "related_terms": [
+      "alert-triage",
+      "false-positive",
+      "incident-severity",
+      "containment",
+      "eradication"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-05",
+      "week-20-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "input-validation",
+    "term": "Input Validation",
+    "definition": "Process of checking user input for format, length, and allowed values.",
+    "why_it_matters": "Poor validation is a common entry point for attacks.",
+    "exam_relevance": "high",
+    "tags": [
+      "appsec"
+    ],
+    "related_terms": [
+      "sql-query",
+      "select-statement",
+      "where-clause",
+      "join",
+      "sql-injection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "interview-question",
+    "term": "Interview Question Drill",
+    "definition": "Structured practice of common technical and behavioral interview prompts.",
+    "why_it_matters": "Improves response clarity and confidence under pressure.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "resume-tailoring",
+      "star-method",
+      "elevator-pitch",
+      "portfolio-artifact",
+      "career-story"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "intrusion-detection",
+    "term": "Intrusion Detection",
+    "definition": "Monitoring approach that identifies suspicious or malicious activity.",
+    "why_it_matters": "Detection coverage impacts time-to-identify incidents.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "detection"
+    ],
+    "related_terms": [
+      "intrusion-prevention",
+      "siem",
+      "log-source",
+      "network-baseline",
+      "hardening"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "intrusion-prevention",
+    "term": "Intrusion Prevention",
+    "definition": "Inline security control that blocks malicious activity in real time.",
+    "why_it_matters": "Can reduce attack success when tuned correctly.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "detection"
+    ],
+    "related_terms": [
+      "intrusion-detection",
+      "siem",
+      "log-source",
+      "network-baseline",
+      "hardening"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "ip-address",
+    "term": "IP Address",
+    "definition": "Logical network address used to identify a host and route traffic.",
+    "why_it_matters": "Core concept for every network troubleshooting and security workflow.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "mobile-device",
+      "wifi-standard",
+      "virtual-machine",
+      "hypervisor",
+      "dhcp"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-05",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "ipv4",
+    "term": "IPv4",
+    "definition": "32-bit addressing protocol widely used for internet and private networks.",
+    "why_it_matters": "Address planning and subnetting are core exam domains.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "cidr",
+      "subnet-mask",
+      "private-ip",
+      "public-ip",
+      "subnetting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "job-tracker",
+    "term": "Job Tracker",
+    "definition": "System for managing applications, follow-ups, and interview stages.",
+    "why_it_matters": "Prevents dropped opportunities and supports iteration.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "linkedin-profile",
+      "networking-outreach",
+      "keyword-optimization",
+      "application-funnel",
+      "ai-assistant-guardrails"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-05",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "join",
+    "term": "JOIN",
+    "definition": "SQL operation that combines related rows across multiple tables.",
+    "why_it_matters": "Analysts use joins to correlate events across sources.",
+    "exam_relevance": "medium",
+    "tags": [
+      "data",
+      "sql"
+    ],
+    "related_terms": [
+      "sql-query",
+      "select-statement",
+      "where-clause",
+      "input-validation",
+      "sql-injection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "keyword-optimization",
+    "term": "Keyword Optimization",
+    "definition": "Aligning profile and resume terms with job descriptions and ATS logic.",
+    "why_it_matters": "Improves match rates in automated screening.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "linkedin-profile",
+      "networking-outreach",
+      "job-tracker",
+      "application-funnel",
+      "ai-assistant-guardrails"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "knowledge-gap",
+    "term": "Knowledge Gap",
+    "definition": "Specific topic where understanding is currently insufficient.",
+    "why_it_matters": "Gap tracking keeps review focused and measurable.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "spaced-repetition",
+      "retrieval-practice",
+      "mock-exam",
+      "error-log",
+      "study-system-reset"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "latency",
+    "term": "Latency",
+    "definition": "Time delay between request and response across a path.",
+    "why_it_matters": "High latency affects user experience and service quality.",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "performance"
+    ],
+    "related_terms": [
+      "wireshark",
+      "pcap",
+      "packet-filter",
+      "traceroute",
+      "ping"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "least-privilege",
+    "term": "Least Privilege",
+    "definition": "Security principle granting only the minimum permissions needed for a task.",
+    "why_it_matters": "Limits blast radius when accounts are abused or misused.",
+    "exam_relevance": "high",
+    "tags": [
+      "iam",
+      "controls"
+    ],
+    "related_terms": [
+      "malware",
+      "mfa",
+      "troubleshooting-method",
+      "patch-management",
+      "social-engineering"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-05",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "likelihood",
+    "term": "Likelihood",
+    "definition": "Estimated probability that a risk event will occur.",
+    "why_it_matters": "Likelihood drives prioritization and treatment urgency.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "risk-register",
+      "impact",
+      "risk-treatment",
+      "qualitative-risk",
+      "quantitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "linkedin-profile",
+    "term": "LinkedIn Profile",
+    "definition": "Professional public profile highlighting role alignment and proof-of-work.",
+    "why_it_matters": "Improves discoverability and recruiter engagement.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "networking-outreach",
+      "job-tracker",
+      "keyword-optimization",
+      "application-funnel",
+      "ai-assistant-guardrails"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "linux-kernel",
+    "term": "Linux Kernel",
+    "definition": "Core component of Linux that manages hardware access, processes, and memory.",
+    "why_it_matters": "Kernel understanding improves troubleshooting confidence in Linux labs.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "os"
+    ],
+    "related_terms": [
+      "shell",
+      "sudo",
+      "package-manager",
+      "virtualbox",
+      "ssh"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "linux-permissions",
+    "term": "Linux Permissions",
+    "definition": "Read/write/execute access model controlling file and directory operations.",
+    "why_it_matters": "Incorrect permissions are frequent security and stability issues.",
+    "exam_relevance": "high",
+    "tags": [
+      "linux",
+      "security"
+    ],
+    "related_terms": [
+      "chmod",
+      "chown",
+      "process",
+      "systemctl",
+      "cron"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "log-correlation",
+    "term": "Log Correlation",
+    "definition": "Linking events from multiple sources to reveal meaningful patterns.",
+    "why_it_matters": "Essential for incident scoping and root cause analysis.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "analysis"
+    ],
+    "related_terms": [
+      "soc-workflow",
+      "forensic-imaging",
+      "chain-of-custody",
+      "detection-rule",
+      "triage-queue"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "log-source",
+    "term": "Log Source",
+    "definition": "System or service that generates telemetry ingested for analysis.",
+    "why_it_matters": "Coverage gaps in log sources create blind spots.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "operations"
+    ],
+    "related_terms": [
+      "intrusion-detection",
+      "intrusion-prevention",
+      "siem",
+      "network-baseline",
+      "hardening"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "loop",
+    "term": "Loop",
+    "definition": "Programming control structure that repeats actions over data or conditions.",
+    "why_it_matters": "Loops enable scalable automation workflows.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "python-script",
+      "variable",
+      "function",
+      "conditional",
+      "error-handling"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "mac-address",
+    "term": "MAC Address",
+    "definition": "Hardware identifier used by network interfaces on local segments.",
+    "why_it_matters": "Used heavily in switching, ARP analysis, and access control.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "ethernet"
+    ],
+    "related_terms": [
+      "osi-model",
+      "tcp-ip-model",
+      "ethernet-frame",
+      "switch",
+      "network-topology"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "malware",
+    "term": "Malware",
+    "definition": "Malicious software designed to disrupt systems, steal data, or gain unauthorized control.",
+    "why_it_matters": "Threat recognition is central to detection and response readiness.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "threats"
+    ],
+    "related_terms": [
+      "mfa",
+      "least-privilege",
+      "troubleshooting-method",
+      "patch-management",
+      "social-engineering"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "management-summary",
+    "term": "Management Summary",
+    "definition": "Non-technical overview focused on business impact and decisions needed.",
+    "why_it_matters": "Improves alignment between technical teams and leadership.",
+    "exam_relevance": "high",
+    "tags": [
+      "communication"
+    ],
+    "related_terms": [
+      "executive-briefing",
+      "artifact-curation",
+      "roadmap-prioritization",
+      "capability-gap",
+      "continuous-improvement"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "maturity-model",
+    "term": "Maturity Model",
+    "definition": "Framework used to assess current capability level and improvement targets.",
+    "why_it_matters": "Guides staged security program growth.",
+    "exam_relevance": "medium",
+    "tags": [
+      "governance"
+    ],
+    "related_terms": [
+      "incident-command",
+      "playbook",
+      "communication-plan",
+      "evidence-handling",
+      "tabletop-exercise"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-05",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "mitigation",
+    "term": "Mitigation",
+    "definition": "Action that lowers likelihood or impact of a risk.",
+    "why_it_matters": "Risk reduction planning depends on practical mitigation options.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "exploit",
+      "compensating-control",
+      "residual-risk",
+      "exposure",
+      "threat-intelligence"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "mobile-device",
+    "term": "Mobile Device",
+    "definition": "Portable endpoint such as a laptop, tablet, or smartphone with dedicated management constraints.",
+    "why_it_matters": "Mobile security and support expectations differ from desktop workflows.",
+    "exam_relevance": "medium",
+    "tags": [
+      "mobile",
+      "endpoints"
+    ],
+    "related_terms": [
+      "wifi-standard",
+      "ip-address",
+      "virtual-machine",
+      "hypervisor",
+      "dhcp"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "mock-exam",
+    "term": "Mock Exam",
+    "definition": "Practice test used to simulate exam conditions and identify weak areas.",
+    "why_it_matters": "Guides final revision priorities.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "spaced-repetition",
+      "retrieval-practice",
+      "error-log",
+      "knowledge-gap",
+      "study-system-reset"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-05",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "motherboard",
+    "term": "Motherboard",
+    "definition": "Main circuit board that connects CPU, memory, storage, and expansion components.",
+    "why_it_matters": "Understanding board layout speeds hardware diagnostics and upgrades.",
+    "exam_relevance": "high",
+    "tags": [
+      "hardware"
+    ],
+    "related_terms": [
+      "cpu",
+      "ram",
+      "storage-drive",
+      "bios",
+      "boot-process"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "mfa",
+    "term": "Multi-Factor Authentication",
+    "definition": "Authentication method requiring two or more independent proof factors.",
+    "why_it_matters": "One of the highest-impact controls for account compromise reduction.",
+    "exam_relevance": "high",
+    "tags": [
+      "iam",
+      "controls"
+    ],
+    "related_terms": [
+      "malware",
+      "least-privilege",
+      "troubleshooting-method",
+      "patch-management",
+      "social-engineering"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "nat",
+    "term": "NAT",
+    "definition": "Network Address Translation that maps internal addresses to external addresses.",
+    "why_it_matters": "Important for internet connectivity and perimeter policy behavior.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "routing"
+    ],
+    "related_terms": [
+      "tcp",
+      "udp",
+      "port-number",
+      "dns",
+      "three-way-handshake"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "network-baseline",
+    "term": "Network Baseline",
+    "definition": "Documented normal traffic behavior used to identify anomalies.",
+    "why_it_matters": "Baselines reduce false positives and improve triage quality.",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "detection"
+    ],
+    "related_terms": [
+      "intrusion-detection",
+      "intrusion-prevention",
+      "siem",
+      "log-source",
+      "hardening"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "network-segmentation",
+    "term": "Network Segmentation",
+    "definition": "Separation of network zones to reduce lateral movement and contain impact.",
+    "why_it_matters": "A practical high-value control for breach prevention.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "networking"
+    ],
+    "related_terms": [
+      "ssid",
+      "wpa3",
+      "soho-router",
+      "cloud-service-model",
+      "firewall"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "network-topology",
+    "term": "Network Topology",
+    "definition": "Physical or logical arrangement of network devices and connections.",
+    "why_it_matters": "Topology affects resilience, fault domains, and troubleshooting speed.",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "design"
+    ],
+    "related_terms": [
+      "osi-model",
+      "tcp-ip-model",
+      "ethernet-frame",
+      "mac-address",
+      "switch"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "networking-outreach",
+    "term": "Networking Outreach",
+    "definition": "Intentional communication with peers, mentors, and hiring contacts.",
+    "why_it_matters": "Expands opportunities and practical feedback loops.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "linkedin-profile",
+      "job-tracker",
+      "keyword-optimization",
+      "application-funnel",
+      "ai-assistant-guardrails"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 9: Accelerate Your Job Search with AI"
+    ]
+  },
+  {
+    "id": "ntfs",
+    "term": "NTFS",
+    "definition": "New Technology File System used by modern Windows systems.",
+    "why_it_matters": "Important for permissions, encryption features, and recovery workflows.",
+    "exam_relevance": "high",
+    "tags": [
+      "windows",
+      "filesystem"
+    ],
+    "related_terms": [
+      "operating-system",
+      "filesystem",
+      "command-line",
+      "powershell",
+      "service-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-05",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "operating-system",
+    "term": "Operating System",
+    "definition": "Core software that manages hardware, files, processes, and user interaction.",
+    "why_it_matters": "Foundational for system administration, hardening, and troubleshooting.",
+    "exam_relevance": "high",
+    "tags": [
+      "os",
+      "fundamentals"
+    ],
+    "related_terms": [
+      "filesystem",
+      "ntfs",
+      "command-line",
+      "powershell",
+      "service-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "osi-model",
+    "term": "OSI Model",
+    "definition": "Seven-layer conceptual model describing how network communication functions.",
+    "why_it_matters": "Supports structured troubleshooting by layer and protocol.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "fundamentals"
+    ],
+    "related_terms": [
+      "tcp-ip-model",
+      "ethernet-frame",
+      "mac-address",
+      "switch",
+      "network-topology"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "package-manager",
+    "term": "Package Manager",
+    "definition": "Tool that installs, updates, and removes software packages with dependency handling.",
+    "why_it_matters": "Reliable package workflows reduce configuration drift and security gaps.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-kernel",
+      "shell",
+      "sudo",
+      "virtualbox",
+      "ssh"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "packet-filter",
+    "term": "Packet Filter",
+    "definition": "Query expression used to isolate relevant traffic in a capture.",
+    "why_it_matters": "Filtering is essential to find useful evidence quickly.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "analysis"
+    ],
+    "related_terms": [
+      "wireshark",
+      "pcap",
+      "traceroute",
+      "ping",
+      "latency"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-05",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "patch-management",
+    "term": "Patch Management",
+    "definition": "Process for testing, deploying, and verifying software updates.",
+    "why_it_matters": "Unpatched systems are a common source of compromise.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "operations"
+    ],
+    "related_terms": [
+      "malware",
+      "mfa",
+      "least-privilege",
+      "troubleshooting-method",
+      "social-engineering"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "pcap",
+    "term": "PCAP",
+    "definition": "Packet capture file format storing recorded network traffic.",
+    "why_it_matters": "PCAP review enables repeatable analysis and collaboration.",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "analysis"
+    ],
+    "related_terms": [
+      "wireshark",
+      "packet-filter",
+      "traceroute",
+      "ping",
+      "latency"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "ping",
+    "term": "Ping",
+    "definition": "ICMP-based connectivity test used for basic reachability checks.",
+    "why_it_matters": "Fast first-step test for network availability.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "troubleshooting"
+    ],
+    "related_terms": [
+      "wireshark",
+      "pcap",
+      "packet-filter",
+      "traceroute",
+      "latency"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "playbook",
+    "term": "Playbook",
+    "definition": "Documented response workflow for recurring security scenarios.",
+    "why_it_matters": "Playbooks improve consistency under pressure.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "recovery",
+      "escalation-path",
+      "case-management",
+      "timeline-analysis",
+      "post-incident-review",
+      "incident-command"
+    ],
+    "phase_refs": [
+      "grc-application",
+      "security"
+    ],
+    "week_refs": [
+      21,
+      28
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06",
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response",
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "port-number",
+    "term": "Port Number",
+    "definition": "Transport-layer identifier that maps traffic to a specific service.",
+    "why_it_matters": "Port mapping is central to firewall rules and service triage.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "services"
+    ],
+    "related_terms": [
+      "tcp",
+      "udp",
+      "dns",
+      "nat",
+      "three-way-handshake"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-05",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "portfolio-artifact",
+    "term": "Portfolio Artifact",
+    "definition": "Concrete evidence of work quality such as write-ups, diagrams, or labs.",
+    "why_it_matters": "Proof-of-work strengthens credibility beyond certificates.",
+    "exam_relevance": "high",
+    "tags": [
+      "career",
+      "portfolio"
+    ],
+    "related_terms": [
+      "resume-tailoring",
+      "star-method",
+      "elevator-pitch",
+      "interview-question",
+      "career-story"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "post-incident-review",
+    "term": "Post-Incident Review",
+    "definition": "Structured retrospective focused on lessons and control improvements.",
+    "why_it_matters": "Transforms incidents into measurable security improvement.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "improvement"
+    ],
+    "related_terms": [
+      "recovery",
+      "playbook",
+      "escalation-path",
+      "case-management",
+      "timeline-analysis"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "powershell",
+    "term": "PowerShell",
+    "definition": "Windows automation shell and scripting language for system administration.",
+    "why_it_matters": "Critical for repeatable administrative and security tasks in Windows environments.",
+    "exam_relevance": "high",
+    "tags": [
+      "windows",
+      "automation"
+    ],
+    "related_terms": [
+      "operating-system",
+      "filesystem",
+      "ntfs",
+      "command-line",
+      "service-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "private-ip",
+    "term": "Private IP",
+    "definition": "Non-routable address range intended for internal networks.",
+    "why_it_matters": "Essential for LAN design and NAT-based internet access.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "ipv4",
+      "cidr",
+      "subnet-mask",
+      "public-ip",
+      "subnetting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "privilege-escalation",
+    "term": "Privilege Escalation",
+    "definition": "Technique for gaining higher permissions than initially granted.",
+    "why_it_matters": "Major step in many successful attack chains.",
+    "exam_relevance": "high",
+    "tags": [
+      "threats"
+    ],
+    "related_terms": [
+      "reconnaissance",
+      "enumeration",
+      "defense-in-depth",
+      "incident-journal",
+      "control-recommendation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-05",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "process",
+    "term": "Process",
+    "definition": "Running program instance with its own state and resource usage.",
+    "why_it_matters": "Process analysis supports both operations and incident response.",
+    "exam_relevance": "high",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-permissions",
+      "chmod",
+      "chown",
+      "systemctl",
+      "cron"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "public-ip",
+    "term": "Public IP",
+    "definition": "Globally routable address visible on the internet.",
+    "why_it_matters": "Used in perimeter design, DNS, and exposure analysis.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "ipv4",
+      "cidr",
+      "subnet-mask",
+      "private-ip",
+      "subnetting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "python-script",
+    "term": "Python Script",
+    "definition": "Executable Python code used to automate repetitive tasks.",
+    "why_it_matters": "Automation saves analyst time and reduces manual errors.",
+    "exam_relevance": "high",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "variable",
+      "function",
+      "loop",
+      "conditional",
+      "error-handling"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "qualitative-risk",
+    "term": "Qualitative Risk Analysis",
+    "definition": "Risk assessment using categorical scales like low/medium/high.",
+    "why_it_matters": "Useful when exact numerical data is unavailable.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "risk-register",
+      "likelihood",
+      "impact",
+      "risk-treatment",
+      "quantitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "quantitative-risk",
+    "term": "Quantitative Risk Analysis",
+    "definition": "Risk assessment using numerical estimates such as expected loss values.",
+    "why_it_matters": "Supports cost-benefit comparisons and budget planning.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "risk-register",
+      "likelihood",
+      "impact",
+      "risk-treatment",
+      "qualitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "ram",
+    "term": "RAM",
+    "definition": "Volatile memory used for active processes and short-term data access.",
+    "why_it_matters": "Directly affects system responsiveness and multitasking behavior.",
+    "exam_relevance": "high",
+    "tags": [
+      "hardware",
+      "memory"
+    ],
+    "related_terms": [
+      "cpu",
+      "storage-drive",
+      "motherboard",
+      "bios",
+      "boot-process"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "reconnaissance",
+    "term": "Reconnaissance",
+    "definition": "Information-gathering phase used by attackers before exploitation.",
+    "why_it_matters": "Understanding recon helps defenders reduce exposed intelligence.",
+    "exam_relevance": "high",
+    "tags": [
+      "threats"
+    ],
+    "related_terms": [
+      "enumeration",
+      "privilege-escalation",
+      "defense-in-depth",
+      "incident-journal",
+      "control-recommendation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Cyber Security 101"
+    ]
+  },
+  {
+    "id": "recovery",
+    "term": "Recovery",
+    "definition": "Restoration of normal operations after incident containment and eradication.",
+    "why_it_matters": "Recovery planning protects service availability and trust.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "response"
+    ],
+    "related_terms": [
+      "playbook",
+      "escalation-path",
+      "case-management",
+      "timeline-analysis",
+      "post-incident-review"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "regex",
+    "term": "Regular Expression",
+    "definition": "Pattern syntax used to match and extract structured text.",
+    "why_it_matters": "Useful for parsing logs and enforcing data quality checks.",
+    "exam_relevance": "high",
+    "tags": [
+      "automation",
+      "analysis"
+    ],
+    "related_terms": [
+      "api",
+      "http-method",
+      "automation-playbook",
+      "file-parsing",
+      "version-control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "residual-risk",
+    "term": "Residual Risk",
+    "definition": "Risk that remains after controls are implemented.",
+    "why_it_matters": "Residual risk visibility supports informed acceptance decisions.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "mitigation",
+      "exploit",
+      "compensating-control",
+      "exposure",
+      "threat-intelligence"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "resume-tailoring",
+    "term": "Resume Tailoring",
+    "definition": "Adjusting resume content to align with a specific role.",
+    "why_it_matters": "Improves recruiter signal quality for targeted applications.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "star-method",
+      "elevator-pitch",
+      "portfolio-artifact",
+      "interview-question",
+      "career-story"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "retrieval-practice",
+    "term": "Retrieval Practice",
+    "definition": "Actively recalling information without notes to strengthen memory.",
+    "why_it_matters": "Builds durable understanding faster than passive rereading.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "spaced-repetition",
+      "mock-exam",
+      "error-log",
+      "knowledge-gap",
+      "study-system-reset"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "reverse-proxy",
+    "term": "Reverse Proxy",
+    "definition": "Service that receives client requests and forwards them to backend servers.",
+    "why_it_matters": "Improves security posture, routing flexibility, and observability.",
+    "exam_relevance": "medium",
+    "tags": [
+      "web",
+      "architecture"
+    ],
+    "related_terms": [
+      "http-request",
+      "dns-resolution",
+      "tls-handshake",
+      "web-server",
+      "session-token"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "risk",
+    "term": "Risk",
+    "definition": "Potential for loss when a threat exploits a vulnerability.",
+    "why_it_matters": "Risk framing is central to governance and prioritization.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "foundations"
+    ],
+    "related_terms": [
+      "cia-triad",
+      "threat",
+      "vulnerability",
+      "control",
+      "security-framework"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "risk-assessment",
+    "term": "Risk Assessment",
+    "definition": "Structured evaluation of risk likelihood, impact, and treatment options.",
+    "why_it_matters": "Core process for defensible prioritization.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "critical-infrastructure",
+      "business-impact-analysis",
+      "governance",
+      "compliance",
+      "vendor-risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "risk-register",
+    "term": "Risk Register",
+    "definition": "Documented inventory of identified risks, ratings, owners, and treatments.",
+    "why_it_matters": "Keeps risk decisions visible and accountable.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "likelihood",
+      "impact",
+      "risk-treatment",
+      "qualitative-risk",
+      "quantitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "risk-treatment",
+    "term": "Risk Treatment",
+    "definition": "Chosen approach to address risk: mitigate, transfer, avoid, or accept.",
+    "why_it_matters": "Formal treatment decisions support governance accountability.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "risk"
+    ],
+    "related_terms": [
+      "risk-register",
+      "likelihood",
+      "impact",
+      "qualitative-risk",
+      "quantitative-risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 2: Manage Security Risks"
+    ]
+  },
+  {
+    "id": "roadmap-prioritization",
+    "term": "Roadmap Prioritization",
+    "definition": "Choosing next learning or capability steps based on impact and constraints.",
+    "why_it_matters": "Prevents random effort and supports sustained progress.",
+    "exam_relevance": "medium",
+    "tags": [
+      "planning"
+    ],
+    "related_terms": [
+      "executive-briefing",
+      "management-summary",
+      "artifact-curation",
+      "capability-gap",
+      "continuous-improvement"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-06"
+    ],
+    "resource_refs": [
+      "Google job-prep materials and your portfolio artifacts"
+    ]
+  },
+  {
+    "id": "router",
+    "term": "Router",
+    "definition": "Layer 3 device that forwards packets between networks.",
+    "why_it_matters": "Routing behavior determines reachability and performance.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking"
+    ],
+    "related_terms": [
+      "switch",
+      "vlan",
+      "stp",
+      "default-gateway",
+      "routing-table"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "routing-table",
+    "term": "Routing Table",
+    "definition": "Lookup data used by hosts and routers to choose next-hop paths.",
+    "why_it_matters": "Reading routing entries is vital during troubleshooting.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "routing"
+    ],
+    "related_terms": [
+      "switch",
+      "vlan",
+      "stp",
+      "router",
+      "default-gateway"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "security-framework",
+    "term": "Security Framework",
+    "definition": "Structured reference model such as NIST CSF used to organize security practices.",
+    "why_it_matters": "Framework alignment improves consistency and communication.",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc",
+      "foundations"
+    ],
+    "related_terms": [
+      "cia-triad",
+      "risk",
+      "threat",
+      "vulnerability",
+      "control"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "select-statement",
+    "term": "SELECT Statement",
+    "definition": "SQL command used to retrieve data from one or more tables.",
+    "why_it_matters": "Core building block for evidence extraction.",
+    "exam_relevance": "medium",
+    "tags": [
+      "data",
+      "sql"
+    ],
+    "related_terms": [
+      "sql-query",
+      "where-clause",
+      "join",
+      "input-validation",
+      "sql-injection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "service-management",
+    "term": "Service Management",
+    "definition": "Practice of monitoring, starting, stopping, and configuring background services.",
+    "why_it_matters": "Service failures often explain application downtime or startup problems.",
+    "exam_relevance": "medium",
+    "tags": [
+      "os",
+      "troubleshooting"
+    ],
+    "related_terms": [
+      "operating-system",
+      "filesystem",
+      "ntfs",
+      "command-line",
+      "powershell"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "session-token",
+    "term": "Session Token",
+    "definition": "Identifier that binds a user to an authenticated session.",
+    "why_it_matters": "Token handling flaws can lead to account compromise.",
+    "exam_relevance": "high",
+    "tags": [
+      "web",
+      "security"
+    ],
+    "related_terms": [
+      "http-request",
+      "dns-resolution",
+      "tls-handshake",
+      "web-server",
+      "reverse-proxy"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "shell",
+    "term": "Shell",
+    "definition": "Command interpreter used to interact with the operating system.",
+    "why_it_matters": "Shell fluency is required for efficient Linux operations and automation.",
+    "exam_relevance": "high",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-kernel",
+      "sudo",
+      "package-manager",
+      "virtualbox",
+      "ssh"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "siem",
+    "term": "SIEM",
+    "definition": "Security Information and Event Management platform for log analysis and alerting.",
+    "why_it_matters": "Central to modern SOC workflows and incident visibility.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "operations"
+    ],
+    "related_terms": [
+      "intrusion-detection",
+      "intrusion-prevention",
+      "log-source",
+      "network-baseline",
+      "hardening"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-05",
+      "week-15-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 3: Networks and Network Security"
+    ]
+  },
+  {
+    "id": "soc-workflow",
+    "term": "SOC Workflow",
+    "definition": "End-to-end process from alert intake to closure and lessons learned.",
+    "why_it_matters": "Workflow clarity improves speed and consistency.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc"
+    ],
+    "related_terms": [
+      "forensic-imaging",
+      "chain-of-custody",
+      "log-correlation",
+      "detection-rule",
+      "triage-queue"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "social-engineering",
+    "term": "Social Engineering",
+    "definition": "Psychological manipulation used to trick users into unsafe actions.",
+    "why_it_matters": "People-targeted attacks bypass technical controls if awareness is weak.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "human-risk"
+    ],
+    "related_terms": [
+      "malware",
+      "mfa",
+      "least-privilege",
+      "troubleshooting-method",
+      "patch-management"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "soho-router",
+    "term": "SOHO Router",
+    "definition": "Integrated gateway device common in small office and home networks.",
+    "why_it_matters": "Common learning environment for routing, Wi-Fi, and firewall basics.",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "design"
+    ],
+    "related_terms": [
+      "ssid",
+      "wpa3",
+      "cloud-service-model",
+      "firewall",
+      "network-segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-05",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "spaced-repetition",
+    "term": "Spaced Repetition",
+    "definition": "Review technique that revisits material at increasing intervals.",
+    "why_it_matters": "Improves long-term retention for exam and operational recall.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "retrieval-practice",
+      "mock-exam",
+      "error-log",
+      "knowledge-gap",
+      "study-system-reset"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "stp",
+    "term": "Spanning Tree Protocol",
+    "definition": "Protocol that prevents switching loops by managing redundant paths.",
+    "why_it_matters": "Loop prevention is essential for stable Layer 2 operations.",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "switching"
+    ],
+    "related_terms": [
+      "switch",
+      "vlan",
+      "router",
+      "default-gateway",
+      "routing-table"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-05",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "sql-injection",
+    "term": "SQL Injection",
+    "definition": "Attack that manipulates SQL queries through untrusted input.",
+    "why_it_matters": "High-impact vulnerability category in web applications.",
+    "exam_relevance": "high",
+    "tags": [
+      "appsec",
+      "threats"
+    ],
+    "related_terms": [
+      "sql-query",
+      "select-statement",
+      "where-clause",
+      "join",
+      "input-validation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "sql-query",
+    "term": "SQL Query",
+    "definition": "Structured request to retrieve or manipulate data in a relational database.",
+    "why_it_matters": "Security analysts often query logs and event datasets with SQL.",
+    "exam_relevance": "high",
+    "tags": [
+      "data",
+      "security"
+    ],
+    "related_terms": [
+      "select-statement",
+      "where-clause",
+      "join",
+      "input-validation",
+      "sql-injection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "ssh",
+    "term": "SSH",
+    "definition": "Secure Shell protocol for encrypted remote administration.",
+    "why_it_matters": "Remote management and secure command execution are standard operations skills.",
+    "exam_relevance": "high",
+    "tags": [
+      "linux",
+      "networking",
+      "security"
+    ],
+    "related_terms": [
+      "linux-kernel",
+      "shell",
+      "sudo",
+      "package-manager",
+      "virtualbox"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "ssid",
+    "term": "SSID",
+    "definition": "Wireless network name advertised by an access point.",
+    "why_it_matters": "Useful for secure wireless configuration and troubleshooting.",
+    "exam_relevance": "medium",
+    "tags": [
+      "wireless"
+    ],
+    "related_terms": [
+      "wpa3",
+      "soho-router",
+      "cloud-service-model",
+      "firewall",
+      "network-segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "star-method",
+    "term": "STAR Method",
+    "definition": "Interview storytelling format: Situation, Task, Action, Result.",
+    "why_it_matters": "Helps communicate impact clearly during interviews.",
+    "exam_relevance": "medium",
+    "tags": [
+      "career"
+    ],
+    "related_terms": [
+      "resume-tailoring",
+      "elevator-pitch",
+      "portfolio-artifact",
+      "interview-question",
+      "career-story"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 8: Prepare for Cybersecurity Jobs"
+    ]
+  },
+  {
+    "id": "storage-drive",
+    "term": "Storage Drive",
+    "definition": "Persistent storage device such as HDD or SSD for operating system and files.",
+    "why_it_matters": "Storage failures and capacity bottlenecks are common support issues.",
+    "exam_relevance": "high",
+    "tags": [
+      "hardware",
+      "storage"
+    ],
+    "related_terms": [
+      "cpu",
+      "ram",
+      "motherboard",
+      "bios",
+      "boot-process"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-05",
+      "week-01-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "study-system-reset",
+    "term": "Study-System Reset",
+    "definition": "Planned refinement of schedule, methods, and tooling after review.",
+    "why_it_matters": "Helps sustain momentum beyond initial roadmap completion.",
+    "exam_relevance": "medium",
+    "tags": [
+      "study"
+    ],
+    "related_terms": [
+      "spaced-repetition",
+      "retrieval-practice",
+      "mock-exam",
+      "error-log",
+      "knowledge-gap"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ],
+    "resource_refs": [
+      "Your notes, workbook, and saved artifacts"
+    ]
+  },
+  {
+    "id": "subnet-mask",
+    "term": "Subnet Mask",
+    "definition": "Bitmask that separates network and host portions of an IP address.",
+    "why_it_matters": "Incorrect masks break host-to-host communication patterns.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "ipv4",
+      "cidr",
+      "private-ip",
+      "public-ip",
+      "subnetting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-05",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "subnetting",
+    "term": "Subnetting",
+    "definition": "Practice of dividing networks into smaller addressable segments.",
+    "why_it_matters": "Improves scalability, performance, and security segmentation.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "addressing"
+    ],
+    "related_terms": [
+      "ipv4",
+      "cidr",
+      "subnet-mask",
+      "private-ip",
+      "public-ip"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "sudo",
+    "term": "sudo",
+    "definition": "Command that allows approved users to run tasks with elevated privileges.",
+    "why_it_matters": "Critical for safe privilege escalation and admin accountability.",
+    "exam_relevance": "high",
+    "tags": [
+      "linux",
+      "iam"
+    ],
+    "related_terms": [
+      "linux-kernel",
+      "shell",
+      "package-manager",
+      "virtualbox",
+      "ssh"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-05",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "switch",
+    "term": "Switch",
+    "definition": "Layer 2 device that forwards frames based on MAC address tables.",
+    "why_it_matters": "Core infrastructure component in enterprise and home networks.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking"
+    ],
+    "related_terms": [
+      "osi-model",
+      "tcp-ip-model",
+      "ethernet-frame",
+      "mac-address",
+      "network-topology",
+      "vlan"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6,
+      7
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06",
+      "week-07-day-01",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "systemctl",
+    "term": "systemctl",
+    "definition": "Command-line utility for managing services in systemd-based Linux systems.",
+    "why_it_matters": "Service lifecycle control is essential for server operations.",
+    "exam_relevance": "medium",
+    "tags": [
+      "linux",
+      "operations"
+    ],
+    "related_terms": [
+      "linux-permissions",
+      "chmod",
+      "chown",
+      "process",
+      "cron"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "tabletop-exercise",
+    "term": "Tabletop Exercise",
+    "definition": "Scenario-based drill used to test readiness and coordination.",
+    "why_it_matters": "Reveals process gaps before real incidents occur.",
+    "exam_relevance": "high",
+    "tags": [
+      "response",
+      "training"
+    ],
+    "related_terms": [
+      "incident-command",
+      "playbook",
+      "maturity-model",
+      "communication-plan",
+      "evidence-handling"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ],
+    "resource_refs": [
+      "CISA Incident Response Training"
+    ]
+  },
+  {
+    "id": "tcp",
+    "term": "TCP",
+    "definition": "Connection-oriented transport protocol that prioritizes reliability and ordered delivery.",
+    "why_it_matters": "Service behavior and troubleshooting often depend on TCP state.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "transport"
+    ],
+    "related_terms": [
+      "udp",
+      "port-number",
+      "dns",
+      "nat",
+      "three-way-handshake"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "three-way-handshake",
+    "term": "TCP Three-Way Handshake",
+    "definition": "TCP setup sequence using SYN, SYN-ACK, and ACK.",
+    "why_it_matters": "Handshake state quickly indicates whether connectivity is actually established.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "transport"
+    ],
+    "related_terms": [
+      "tcp",
+      "udp",
+      "port-number",
+      "dns",
+      "nat"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "tcp-ip-model",
+    "term": "TCP/IP Model",
+    "definition": "Practical networking model used to map real internet protocol behavior.",
+    "why_it_matters": "Needed to relate theory to actual packet flow and services.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "fundamentals"
+    ],
+    "related_terms": [
+      "osi-model",
+      "ethernet-frame",
+      "mac-address",
+      "switch",
+      "network-topology"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "threat",
+    "term": "Threat",
+    "definition": "Potential cause of unwanted impact to an asset or process.",
+    "why_it_matters": "Threat context helps prioritize defensive controls.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "foundations"
+    ],
+    "related_terms": [
+      "cia-triad",
+      "risk",
+      "vulnerability",
+      "control",
+      "security-framework"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-05",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "threat-intelligence",
+    "term": "Threat Intelligence",
+    "definition": "Contextual information about threat actors, tactics, and indicators.",
+    "why_it_matters": "Improves detection tuning and proactive defense decisions.",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "detection"
+    ],
+    "related_terms": [
+      "mitigation",
+      "exploit",
+      "compensating-control",
+      "residual-risk",
+      "exposure"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "threat-model",
+    "term": "Threat Model",
+    "definition": "Structured analysis of potential attackers, paths, and control gaps.",
+    "why_it_matters": "Improves proactive risk reduction before incidents occur.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "analysis"
+    ],
+    "related_terms": [
+      "asset-inventory",
+      "data-classification",
+      "attack-vector",
+      "vulnerability-scan",
+      "cvss"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-05",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "timeline-analysis",
+    "term": "Timeline Analysis",
+    "definition": "Reconstruction of incident events in chronological order.",
+    "why_it_matters": "Clarifies scope, root cause, and control gaps.",
+    "exam_relevance": "high",
+    "tags": [
+      "soc",
+      "forensics"
+    ],
+    "related_terms": [
+      "recovery",
+      "playbook",
+      "escalation-path",
+      "case-management",
+      "post-incident-review"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 6: Detection and Response"
+    ]
+  },
+  {
+    "id": "tls-handshake",
+    "term": "TLS Handshake",
+    "definition": "Cryptographic negotiation that establishes secure session parameters.",
+    "why_it_matters": "Critical for secure web traffic and certificate validation.",
+    "exam_relevance": "high",
+    "tags": [
+      "web",
+      "crypto"
+    ],
+    "related_terms": [
+      "http-request",
+      "dns-resolution",
+      "web-server",
+      "reverse-proxy",
+      "session-token"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-05",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "traceroute",
+    "term": "Traceroute",
+    "definition": "Diagnostic command that reveals path hops to a destination.",
+    "why_it_matters": "Useful for isolating latency and routing path issues.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "troubleshooting"
+    ],
+    "related_terms": [
+      "wireshark",
+      "pcap",
+      "packet-filter",
+      "ping",
+      "latency"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "triage-queue",
+    "term": "Triage Queue",
+    "definition": "Ordered list of alerts or cases awaiting analyst review.",
+    "why_it_matters": "Queue discipline improves SLA performance and risk handling.",
+    "exam_relevance": "medium",
+    "tags": [
+      "soc",
+      "operations"
+    ],
+    "related_terms": [
+      "soc-workflow",
+      "forensic-imaging",
+      "chain-of-custody",
+      "log-correlation",
+      "detection-rule"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Defensive Security"
+    ]
+  },
+  {
+    "id": "troubleshooting-method",
+    "term": "Troubleshooting Methodology",
+    "definition": "Structured step-by-step process for diagnosing and resolving technical issues.",
+    "why_it_matters": "Prevents random guessing and produces defensible support decisions.",
+    "exam_relevance": "high",
+    "tags": [
+      "operations",
+      "troubleshooting"
+    ],
+    "related_terms": [
+      "malware",
+      "mfa",
+      "least-privilege",
+      "patch-management",
+      "social-engineering"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 2 (220-1202)"
+    ]
+  },
+  {
+    "id": "udp",
+    "term": "UDP",
+    "definition": "Connectionless transport protocol optimized for low overhead and speed.",
+    "why_it_matters": "Helps explain behavior of DNS, streaming, and real-time services.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "transport"
+    ],
+    "related_terms": [
+      "tcp",
+      "port-number",
+      "dns",
+      "nat",
+      "three-way-handshake"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "variable",
+    "term": "Variable",
+    "definition": "Named value container used in programming logic.",
+    "why_it_matters": "Core building block for reliable scripts.",
+    "exam_relevance": "medium",
+    "tags": [
+      "automation",
+      "python"
+    ],
+    "related_terms": [
+      "python-script",
+      "function",
+      "loop",
+      "conditional",
+      "error-handling"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "vendor-risk",
+    "term": "Vendor Risk",
+    "definition": "Risk introduced by third-party suppliers and service providers.",
+    "why_it_matters": "Third-party exposure is a common breach path.",
+    "exam_relevance": "high",
+    "tags": [
+      "grc",
+      "third-party"
+    ],
+    "related_terms": [
+      "critical-infrastructure",
+      "business-impact-analysis",
+      "governance",
+      "compliance",
+      "risk-assessment"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ],
+    "resource_refs": [
+      "CISA Critical Infrastructure Training"
+    ]
+  },
+  {
+    "id": "version-control",
+    "term": "Version Control",
+    "definition": "System for tracking code changes and collaboration history.",
+    "why_it_matters": "Protects script quality and supports rollback during failures.",
+    "exam_relevance": "high",
+    "tags": [
+      "automation",
+      "engineering"
+    ],
+    "related_terms": [
+      "api",
+      "http-method",
+      "automation-playbook",
+      "regex",
+      "file-parsing"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 7: Automate Cybersecurity Tasks with Python"
+    ]
+  },
+  {
+    "id": "virtual-machine",
+    "term": "Virtual Machine",
+    "definition": "Software-defined computer running an operating system inside a host system.",
+    "why_it_matters": "Supports safe labs, repeatable practice, and isolated testing.",
+    "exam_relevance": "high",
+    "tags": [
+      "virtualization",
+      "labs"
+    ],
+    "related_terms": [
+      "mobile-device",
+      "wifi-standard",
+      "ip-address",
+      "hypervisor",
+      "dhcp"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "virtualbox",
+    "term": "VirtualBox",
+    "definition": "Desktop virtualization platform for running lab virtual machines.",
+    "why_it_matters": "Provides repeatable lab environments for security practice.",
+    "exam_relevance": "medium",
+    "tags": [
+      "virtualization",
+      "labs"
+    ],
+    "related_terms": [
+      "linux-kernel",
+      "shell",
+      "sudo",
+      "package-manager",
+      "ssh"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ],
+    "resource_refs": [
+      "NDG Linux Unhatched"
+    ]
+  },
+  {
+    "id": "vlan",
+    "term": "VLAN",
+    "definition": "Virtual LAN used to segment broadcast domains on switched networks.",
+    "why_it_matters": "Segmentation improves security boundaries and traffic control.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "segmentation"
+    ],
+    "related_terms": [
+      "switch",
+      "stp",
+      "router",
+      "default-gateway",
+      "routing-table"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  },
+  {
+    "id": "vulnerability",
+    "term": "Vulnerability",
+    "definition": "Weakness that can be exploited to violate security objectives.",
+    "why_it_matters": "Identifying and reducing vulnerabilities lowers attack success probability.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "foundations"
+    ],
+    "related_terms": [
+      "cia-triad",
+      "risk",
+      "threat",
+      "control",
+      "security-framework"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 1: Foundations of Cybersecurity"
+    ]
+  },
+  {
+    "id": "vulnerability-scan",
+    "term": "Vulnerability Scan",
+    "definition": "Automated assessment for known weaknesses in systems and software.",
+    "why_it_matters": "Scanning provides repeatable visibility into technical exposure.",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "operations"
+    ],
+    "related_terms": [
+      "asset-inventory",
+      "data-classification",
+      "threat-model",
+      "attack-vector",
+      "cvss"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 5: Assets, Threats, and Vulnerabilities"
+    ]
+  },
+  {
+    "id": "web-server",
+    "term": "Web Server",
+    "definition": "Service that hosts and delivers web content over HTTP/HTTPS.",
+    "why_it_matters": "Core component in many attack paths and defensive controls.",
+    "exam_relevance": "high",
+    "tags": [
+      "web",
+      "infrastructure"
+    ],
+    "related_terms": [
+      "http-request",
+      "dns-resolution",
+      "tls-handshake",
+      "reverse-proxy",
+      "session-token"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-06"
+    ],
+    "resource_refs": [
+      "TryHackMe Pre Security"
+    ]
+  },
+  {
+    "id": "where-clause",
+    "term": "WHERE Clause",
+    "definition": "SQL condition that filters returned rows.",
+    "why_it_matters": "Filtering precision is critical for accurate analysis.",
+    "exam_relevance": "medium",
+    "tags": [
+      "data",
+      "sql"
+    ],
+    "related_terms": [
+      "sql-query",
+      "select-statement",
+      "join",
+      "input-validation",
+      "sql-injection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-05",
+      "week-17-day-06"
+    ],
+    "resource_refs": [
+      "Google Course 4: Linux and SQL"
+    ]
+  },
+  {
+    "id": "wifi-standard",
+    "term": "Wi-Fi Standard",
+    "definition": "Wireless networking specification such as 802.11n/ac/ax defining speed and capability.",
+    "why_it_matters": "Wireless expectations and compatibility issues depend on the standard in use.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "wireless"
+    ],
+    "related_terms": [
+      "mobile-device",
+      "ip-address",
+      "virtual-machine",
+      "hypervisor",
+      "dhcp"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ],
+    "resource_refs": [
+      "Professor Messer A+ Core 1 (220-1201)"
+    ]
+  },
+  {
+    "id": "wireshark",
+    "term": "Wireshark",
+    "definition": "Packet capture and analysis tool for network troubleshooting and investigations.",
+    "why_it_matters": "Evidence-based troubleshooting depends on packet visibility.",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "analysis"
+    ],
+    "related_terms": [
+      "pcap",
+      "packet-filter",
+      "traceroute",
+      "ping",
+      "latency"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ],
+    "resource_refs": [
+      "Wireshark"
+    ]
+  },
+  {
+    "id": "wpa3",
+    "term": "WPA3",
+    "definition": "Modern Wi-Fi security standard with stronger protections than earlier protocols.",
+    "why_it_matters": "Wireless security posture depends on encryption and auth method choice.",
+    "exam_relevance": "high",
+    "tags": [
+      "wireless",
+      "security"
+    ],
+    "related_terms": [
+      "ssid",
+      "soho-router",
+      "cloud-service-model",
+      "firewall",
+      "network-segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ],
+    "resource_refs": [
+      "Cisco CCST Networking / Network Technician path"
+    ]
+  }
+]

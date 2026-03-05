@@ -1,6 +1,9 @@
 ---
 const { day } = Astro.props;
-const yesNo = (value) => String(value || '').toLowerCase() === 'yes';
+const yesNo = (value) => {
+  if (typeof value === 'boolean') return value;
+  return String(value || '').toLowerCase() === 'yes';
+};
 const taskFlags = [
   { label: 'Video', value: yesNo(day.video) },
   { label: 'Reading', value: yesNo(day.reading) },
@@ -8,8 +11,10 @@ const taskFlags = [
   { label: 'Writing / Portfolio', value: yesNo(day.writing_portfolio) }
 ];
 
-const laptop = String(day.laptop_needed || 'Recommended');
-const laptopClass = laptop === 'Required' ? 'warn' : laptop === 'No' ? 'neutral' : 'accent';
+const laptopRaw = String(day.laptop_needed || 'recommended').toLowerCase();
+const laptopLabel =
+  laptopRaw === 'required' ? 'Required' : laptopRaw === 'no' ? 'Not needed' : 'Recommended';
+const laptopClass = laptopRaw === 'required' ? 'warn' : laptopRaw === 'no' ? 'neutral' : 'accent';
 ---
 
 <div class="task-badges" aria-label="Task metadata badges">
@@ -18,7 +23,7 @@ const laptopClass = laptop === 'Required' ? 'warn' : laptop === 'No' ? 'neutral'
       {item.label}: {item.value ? 'Yes' : 'No'}
     </span>
   ))}
-  <span class={`badge ${laptopClass}`}>Laptop: {laptop === 'No' ? 'Not needed' : laptop}</span>
+  <span class={`badge ${laptopClass}`}>Laptop: {laptopLabel}</span>
 </div>
 
 <style>

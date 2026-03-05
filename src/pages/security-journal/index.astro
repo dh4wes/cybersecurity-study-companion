@@ -1,117 +1,91 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import JournalEntryCard from '../../components/JournalEntryCard.astro';
 import PageHero from '../../components/PageHero.astro';
-import { canonicalData, journalSeedRows, journalSuggestedTags } from '../../lib/site-data.js';
-
-const seedEntries = journalSeedRows.map((row, index) => ({
-  id: `seed-${index}`,
-  date: row['Date'] || 'Sample',
-  sourceName: row['Source / breach name'] || 'Example entry',
-  sourceUrl: row['Source URL'] || '',
-  summary: row['What happened'] || '',
-  rootCause: row['Root cause'] || '',
-  control: row['What control would I change?'] || '',
-  tags: [],
-  status: row['Status'] || 'Draft'
-}));
+import NotesCtaPanel from '../../components/NotesCtaPanel.astro';
+import { canonicalData, securityJournalPrompts } from '../../lib/site-data.js';
 ---
 
 <Layout
   title={`${canonicalData.site.title} | Security Journal`}
-  description="Security journal archive with local draft storage"
+  description="Prompt-driven security journal guidance"
   currentPath={Astro.url.pathname}
 >
   <PageHero
     kicker="Security Journal"
-    title="Security Journal Archive"
-    description="Capture breach summaries, management-ready takeaways, and control recommendations. Drafts are saved locally in your browser for v1."
+    title="Prompt-Driven Journal"
+    description="Use these prompts and templates to practice incident thinking and management-ready communication. Write freeform entries in the separate local notes tool."
   />
 
   <section class="two-col section">
     <article class="card">
-      <h2>New Draft Entry</h2>
-      <form class="js-journal-form">
-        <div class="form-row">
-          <label for="entry-date">Date</label>
-          <input id="entry-date" class="js-entry-date" type="date" />
-        </div>
-        <div class="form-row">
-          <label for="entry-source">Source / breach name</label>
-          <input id="entry-source" class="js-entry-source" type="text" placeholder="Vendor incident, phishing campaign, etc." />
-        </div>
-        <div class="form-row">
-          <label for="entry-source-url">Source URL</label>
-          <input id="entry-source-url" class="js-entry-source-url" type="url" placeholder="https://..." />
-        </div>
-        <div class="form-row">
-          <label for="entry-summary">What happened</label>
-          <textarea id="entry-summary" class="js-entry-summary" placeholder="2-3 sentence incident summary"></textarea>
-        </div>
-        <div class="form-row">
-          <label for="entry-root-cause">Root cause</label>
-          <textarea id="entry-root-cause" class="js-entry-root-cause" placeholder="Weak MFA, exposed service, patching gap..."></textarea>
-        </div>
-        <div class="form-row">
-          <label for="entry-control">Control change</label>
-          <textarea id="entry-control" class="js-entry-control" placeholder="What preventive/detective control should change?"></textarea>
-        </div>
-        <div class="form-row">
-          <label for="entry-tags">Topic tags (comma-separated)</label>
-          <input
-            id="entry-tags"
-            class="js-entry-tags"
-            type="text"
-            placeholder={journalSuggestedTags.join(', ')}
-          />
-        </div>
-        <div class="form-row">
-          <label for="entry-status">Status</label>
-          <select id="entry-status" class="js-entry-status">
-            <option value="Draft">Draft</option>
-            <option value="Review">Review</option>
-            <option value="Published">Published</option>
-          </select>
-        </div>
-        <button type="submit">Save draft locally</button>
-        <p class="small js-journal-form-state" aria-live="polite"></p>
-      </form>
+      <h2>What This Journal Is For</h2>
+      <ul>
+        <li>Turn technical events into clear management summaries.</li>
+        <li>Practice linking incidents to preventive controls.</li>
+        <li>Capture evidence and follow-up actions as portfolio proof-of-work.</li>
+      </ul>
+      <p class="small">
+        The public route stays prompt-driven. All freeform drafting and personal notes live in the isolated Notes Tool.
+      </p>
+      <NotesCtaPanel
+        tab="journal"
+        title="Write Journal Entry"
+        body="Open the local notes tool and save your security journal entries privately in-browser."
+      />
     </article>
 
     <article class="card">
-      <h2>Topic Filter</h2>
-      <div class="form-row">
-        <label for="journal-tag-filter">Filter by tag</label>
-        <select id="journal-tag-filter" class="js-journal-tag-filter">
-          <option value="">All tags</option>
-          {journalSuggestedTags.map((tag) => (
-            <option value={tag}>{tag}</option>
-          ))}
-        </select>
-      </div>
-      <div class="form-row">
-        <button class="secondary js-export-journal" type="button">Export journal entries</button>
-        <p class="small js-journal-export-state" aria-live="polite"></p>
-      </div>
-      <p class="small js-journal-filter-state" aria-live="polite"></p>
-      <p class="small">Use this page as your incident-thinking archive and link each entry to a source URL.</p>
+      <h2>Entry Template</h2>
+      <pre>
+Source:
+Technical Summary:
+Management Summary:
+Prevention Ideas:
+Next Action:
+Evidence Link:
+      </pre>
+      <p class="small">Keep entries concise, evidence-based, and actionable.</p>
     </article>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>Archive</h2>
-      <p class="small">Local drafts appear first, followed by workbook seed entries.</p>
+      <h2>Weekly Prompt Archive</h2>
+      <p class="small">{securityJournalPrompts.length} prompts</p>
     </div>
-    <div class="grid js-journal-entries">
-      {seedEntries.map((entry) => (
-        <JournalEntryCard entry={entry} />
+
+    <div class="grid prompt-grid">
+      {securityJournalPrompts.map((prompt) => (
+        <article class="card prompt-card">
+          <p class="kicker">Week {String(prompt.week).padStart(2, '0')} • {prompt.phase}</p>
+          <h3>{prompt.title}</h3>
+          <p>{prompt.prompt}</p>
+          <p class="small">
+            <strong>Focus tags:</strong>{' '}
+            {(prompt.tags || []).map((tag) => (
+              <span class="badge neutral">{tag}</span>
+            ))}
+          </p>
+        </article>
       ))}
     </div>
   </section>
-
-  <script id="journal-data-json" type="application/json" set:html={JSON.stringify({ seedEntries })}></script>
-  <script>
-    import '../../scripts/security-journal.js';
-  </script>
 </Layout>
+
+<style>
+  pre {
+    padding: 0.8rem;
+    border: 1px dashed var(--border);
+    background: var(--surface-soft);
+    white-space: pre-wrap;
+  }
+
+  .prompt-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .prompt-card h3 {
+    font-size: 0.96rem;
+    margin-bottom: 0.45rem;
+  }
+</style>

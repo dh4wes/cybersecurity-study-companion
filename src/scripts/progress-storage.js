@@ -1,7 +1,5 @@
 export const STORAGE_KEYS = {
-  progress: 'cyber-study-progress-v1',
-  notes: 'cyber-study-notes-v1',
-  journalDrafts: 'cyber-study-journal-drafts-v1'
+  progress: 'cyber-study-progress-v1'
 };
 
 const nowIso = () => new Date().toISOString();
@@ -12,17 +10,6 @@ const defaultProgress = () => ({
   blockedDays: [],
   artifactLinks: {},
   weekReflections: {},
-  updatedAt: nowIso()
-});
-
-const defaultNotes = () => ({
-  dayNotes: {},
-  weekNotes: {},
-  updatedAt: nowIso()
-});
-
-const defaultJournal = () => ({
-  entries: [],
   updatedAt: nowIso()
 });
 
@@ -107,7 +94,11 @@ export const setWeekCompleted = (weekId, completed) => {
 
 export const setWeekReflection = (weekId, reflectionText) => {
   const progress = getProgress();
-  progress.weekReflections[weekId] = reflectionText;
+  if (reflectionText) {
+    progress.weekReflections[weekId] = reflectionText;
+  } else {
+    delete progress.weekReflections[weekId];
+  }
   return saveProgress(progress);
 };
 
@@ -121,78 +112,10 @@ export const setWeekArtifactLink = (weekId, artifactUrl) => {
   return saveProgress(progress);
 };
 
-export const getNotes = () => {
-  const raw = loadKey(STORAGE_KEYS.notes, defaultNotes);
-  return {
-    ...defaultNotes(),
-    ...raw,
-    dayNotes: { ...(raw.dayNotes || {}) },
-    weekNotes: { ...(raw.weekNotes || {}) }
-  };
-};
-
-export const saveNotes = (notes) => {
-  const normalized = {
-    ...defaultNotes(),
-    ...notes,
-    dayNotes: { ...(notes.dayNotes || {}) },
-    weekNotes: { ...(notes.weekNotes || {}) },
-    updatedAt: nowIso()
-  };
-  return persist(STORAGE_KEYS.notes, normalized);
-};
-
-export const setDayNote = (dayId, noteText) => {
-  const notes = getNotes();
-  if (noteText) notes.dayNotes[dayId] = noteText;
-  else delete notes.dayNotes[dayId];
-  return saveNotes(notes);
-};
-
-export const setWeekNote = (weekId, noteText) => {
-  const notes = getNotes();
-  if (noteText) notes.weekNotes[weekId] = noteText;
-  else delete notes.weekNotes[weekId];
-  return saveNotes(notes);
-};
-
-export const getJournalDrafts = () => {
-  const raw = loadKey(STORAGE_KEYS.journalDrafts, defaultJournal);
-  return {
-    ...defaultJournal(),
-    ...raw,
-    entries: Array.isArray(raw.entries) ? raw.entries : []
-  };
-};
-
-export const saveJournalDrafts = (drafts) => {
-  const normalized = {
-    ...defaultJournal(),
-    ...drafts,
-    entries: Array.isArray(drafts.entries) ? drafts.entries : [],
-    updatedAt: nowIso()
-  };
-  return persist(STORAGE_KEYS.journalDrafts, normalized);
-};
-
-export const addJournalEntry = (entry) => {
-  const drafts = getJournalDrafts();
-  drafts.entries = [entry, ...drafts.entries];
-  return saveJournalDrafts(drafts);
-};
-
-export const deleteJournalEntry = (entryId) => {
-  const drafts = getJournalDrafts();
-  drafts.entries = drafts.entries.filter((entry) => entry.id !== entryId);
-  return saveJournalDrafts(drafts);
-};
-
 export const exportProgressBundle = () => ({
   exportedAt: nowIso(),
-  version: 'v1',
-  progress: getProgress(),
-  notes: getNotes(),
-  journalDrafts: getJournalDrafts()
+  version: 'v1-progress-only',
+  progress: getProgress()
 });
 
 export const importProgressBundle = (bundle) => {
@@ -200,13 +123,28 @@ export const importProgressBundle = (bundle) => {
     throw new Error('Invalid JSON payload.');
   }
 
-  if (bundle.progress) saveProgress(bundle.progress);
-  if (bundle.notes) saveNotes(bundle.notes);
-  if (bundle.journalDrafts) saveJournalDrafts(bundle.journalDrafts);
+  if (bundle.progress) {
+    saveProgress(bundle.progress);
+    return;
+  }
+
+  // Accept legacy payloads where progress fields were at the root.
+  const maybeLegacyProgress = {
+    completedDays: bundle.completedDays,
+    completedWeeks: bundle.completedWeeks,
+    blockedDays: bundle.blockedDays,
+    artifactLinks: bundle.artifactLinks,
+    weekReflections: bundle.weekReflections
+  };
+
+  if (Array.isArray(bundle.completedDays) || Array.isArray(bundle.completedWeeks)) {
+    saveProgress(maybeLegacyProgress);
+    return;
+  }
+
+  throw new Error('Import payload did not include progress data.');
 };
 
 export const resetAllProgress = () => {
   localStorage.removeItem(STORAGE_KEYS.progress);
-  localStorage.removeItem(STORAGE_KEYS.notes);
-  localStorage.removeItem(STORAGE_KEYS.journalDrafts);
 };

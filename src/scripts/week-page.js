@@ -1,13 +1,10 @@
 import {
   getProgress,
-  getNotes,
   setDayCompleted,
   setDayBlocked,
-  setDayNote,
   setWeekCompleted,
   setWeekReflection,
-  setWeekArtifactLink,
-  setWeekNote
+  setWeekArtifactLink
 } from './progress-storage.js';
 import { dispatchProgressChanged, parseJsonScript } from './runtime/client-utils.js';
 
@@ -18,7 +15,6 @@ const applyDayVisualState = (card, isComplete, isBlocked) => {
 
 const initDayCards = (weekId) => {
   const progress = getProgress();
-  const notes = getNotes();
 
   const cards = document.querySelectorAll('.js-day-card');
 
@@ -28,17 +24,13 @@ const initDayCards = (weekId) => {
 
     const completeToggle = card.querySelector('.js-complete-toggle');
     const blockedToggle = card.querySelector('.js-block-toggle');
-    const noteField = card.querySelector('.js-note-field');
-    const noteSave = card.querySelector('.js-note-save');
     const stateText = card.querySelector('.js-day-state');
 
     const isComplete = progress.completedDays.includes(dayId);
     const isBlocked = progress.blockedDays.includes(dayId);
-    const savedNote = notes.dayNotes[dayId] || '';
 
     completeToggle.checked = isComplete;
     blockedToggle.textContent = isBlocked ? 'Unblock day' : 'Mark blocked';
-    noteField.value = savedNote;
 
     applyDayVisualState(card, isComplete, isBlocked);
 
@@ -61,11 +53,6 @@ const initDayCards = (weekId) => {
       applyDayVisualState(card, nowComplete, nowBlocked);
       stateText.textContent = nowBlocked ? 'Day marked blocked.' : 'Day unblocked.';
       dispatchProgressChanged();
-    });
-
-    noteSave.addEventListener('click', () => {
-      setDayNote(dayId, noteField.value.trim());
-      stateText.textContent = 'Day note saved.';
     });
   });
 
@@ -106,16 +93,6 @@ const initDayCards = (weekId) => {
     });
   }
 
-  const weekNotesField = document.querySelector('.js-week-notes-field');
-  const weekNotesSave = document.querySelector('.js-save-week-notes');
-  const weekNotesState = document.querySelector('.js-week-notes-state');
-  if (weekNotesField && weekNotesSave) {
-    weekNotesField.value = notes.weekNotes[weekId] || '';
-    weekNotesSave.addEventListener('click', () => {
-      setWeekNote(weekId, weekNotesField.value.trim());
-      weekNotesState.textContent = 'Week notes saved.';
-    });
-  }
 };
 
 const boot = () => {

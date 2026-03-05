@@ -1,0 +1,48 @@
+---
+const { card, showWeekDay = false } = Astro.props;
+const cardType = String(card.card_type || '').toLowerCase();
+const typeClass = cardType === 'definition' ? 'neutral' : cardType === 'application' ? 'accent' : 'warn';
+---
+
+<article class="flashcard-item card">
+  <div class="section-header">
+    <p class="kicker">{card.id}</p>
+    <div class="meta">
+      <span class={`badge ${typeClass}`}>{card.card_type}</span>
+      <span class="badge neutral">{card.difficulty}</span>
+      <span class="badge neutral">Exam: {card.exam_relevance}</span>
+    </div>
+  </div>
+  <p><strong>Q:</strong> {card.question}</p>
+  <details>
+    <summary>Reveal answer</summary>
+    <p><strong>A:</strong> {card.answer}</p>
+  </details>
+
+  {showWeekDay ? (
+    <p class="small">
+      <strong>Weeks:</strong> {(card.week_refs || []).join(', ')}
+    </p>
+  ) : null}
+</article>
+
+<style>
+  .flashcard-item {
+    padding: 0.85rem;
+  }
+
+  details {
+    margin-top: 0.35rem;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.82rem;
+  }
+
+  summary + p {
+    margin-top: 0.4rem;
+  }
+</style>

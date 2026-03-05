@@ -1,21 +1,26 @@
 ---
 import TaskBadges from './TaskBadges.astro';
 import ResourceLinkList from './ResourceLinkList.astro';
+import GlossaryTermCard from './GlossaryTermCard.astro';
+import FlashcardItem from './FlashcardItem.astro';
+import NotesCtaPanel from './NotesCtaPanel.astro';
 
 const {
   day,
   weekId,
+  weekNumber,
+  weeklyDeliverable = '',
   showProgressControls = true,
-  fallbackPrimaryResource = '',
-  fallbackPrimaryUrl = '',
-  fallbackSupportResource = '',
-  fallbackSupportUrl = ''
+  glossaryEntries = [],
+  flashcardEntries = []
 } = Astro.props;
+
 const sessionClass = day.session_type === 'Review' ? 'accent' : day.session_type === 'Rest' ? 'neutral' : 'success';
-const primaryResource = day.primary_resource || fallbackPrimaryResource;
-const primaryUrl = day.primary_url || fallbackPrimaryUrl;
-const supportResource = day.support_resource || fallbackSupportResource;
-const supportUrl = day.support_url || fallbackSupportUrl;
+const todoItems = Array.isArray(day.todoList)
+  ? day.todoList
+  : Array.isArray(day.todo)
+    ? day.todo
+    : [String(day.todo || '')].filter(Boolean);
 const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 ---
 
@@ -41,8 +46,15 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 
   <p><strong>Objective:</strong> {day.session_objective}</p>
   <p><strong>Suggested split:</strong> {day.suggested_split}</p>
-  <p><strong>To-do:</strong> {day.todo}</p>
-  <p><strong>Deliverable / checkpoint:</strong> {day.deliverable_or_checkpoint}</p>
+
+  <div>
+    <p><strong>Tasks:</strong></p>
+    <ul>
+      {todoItems.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
 
   {day.taskTagList.length > 0 ? (
     <p>
@@ -53,14 +65,60 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
     </p>
   ) : null}
 
-  <p class="small"><strong>Journal prompt:</strong> {day.journal_prompt}</p>
-
   <ResourceLinkList
-    primaryResource={primaryResource}
-    primaryUrl={primaryUrl}
-    supportResource={supportResource}
-    supportUrl={supportUrl}
+    primaryResource={day.primary_resource}
+    primaryUrl={day.primary_url}
+    supportResource={day.support_resource}
+    supportUrl={day.support_url}
     sourceLinks={sourceLinks}
+  />
+
+  <section class="section glossary-section">
+    <div class="section-header">
+      <h4>Today's Glossary Terms</h4>
+      <span class="badge neutral">{glossaryEntries.length}</span>
+    </div>
+
+    {glossaryEntries.length ? (
+      <div class="grid glossary-grid">
+        {glossaryEntries.map((entry) => (
+          <GlossaryTermCard entry={entry} />
+        ))}
+      </div>
+    ) : (
+      <p class="small">No required new glossary terms for this session. Optional: light weekly review.</p>
+    )}
+  </section>
+
+  <section class="section flashcard-section">
+    <div class="section-header">
+      <h4>Today's Flashcards</h4>
+      <span class="badge neutral">{flashcardEntries.length}</span>
+    </div>
+
+    {flashcardEntries.length ? (
+      <div class="grid flashcard-grid">
+        {flashcardEntries.map((card) => (
+          <FlashcardItem card={card} />
+        ))}
+      </div>
+    ) : (
+      <p class="small">No required new flashcards for this session. Optional: revisit the review deck.</p>
+    )}
+  </section>
+
+  <section class="card checkpoint-box">
+    <p><strong>Checkpoint:</strong> {day.checkpoint || day.deliverable_or_checkpoint}</p>
+    <p><strong>Weekly deliverable context:</strong> {weeklyDeliverable}</p>
+    <p class="small"><strong>Journal prompt:</strong> {day.journal_prompt}</p>
+  </section>
+
+  <NotesCtaPanel
+    week={weekNumber}
+    day={day.day}
+    tab="day"
+    title="Capture Private Notes"
+    body="Write your freeform day notes in the separate local notes tool."
   />
 
   {showProgressControls ? (
@@ -72,12 +130,7 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
         </label>
         <button class="js-block-toggle ghost" type="button">Mark blocked</button>
       </div>
-      <label class="small" for={`note-${day.id}`}>Local notes</label>
-      <textarea id={`note-${day.id}`} class="js-note-field" placeholder="Add notes for this study day..."></textarea>
-      <div class="note-actions">
-        <button class="js-note-save secondary" type="button">Save note</button>
-        <p class="small js-day-state" aria-live="polite"></p>
-      </div>
+      <p class="small js-day-state" aria-live="polite"></p>
     </section>
   ) : null}
 </article>
@@ -85,6 +138,21 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 <style>
   .day-card {
     padding: 1rem;
+  }
+
+  ul {
+    margin-top: 0.2rem;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+  }
+
+  .glossary-grid,
+  .flashcard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .checkpoint-box {
+    padding: 0.85rem;
   }
 
   .progress-controls {
@@ -107,14 +175,6 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
     gap: 0.35rem;
     color: var(--ink);
     font-weight: 500;
-  }
-
-  .note-actions {
-    margin-top: 0.35rem;
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
   }
 
   .js-day-card.is-complete {

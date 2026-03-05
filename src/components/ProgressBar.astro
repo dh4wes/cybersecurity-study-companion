@@ -23,21 +23,15 @@ const pct = Math.max(0, Math.min(100, Math.round((value / safeMax) * 100)));
   .track {
     height: 8px;
     background: var(--surface-soft);
-    border-radius: 0;
+    border-radius: 999px;
     overflow: hidden;
     border: 1px solid var(--border);
-    padding: 1px;
+    padding: 0;
   }
 
   .track span {
     display: block;
     height: 100%;
-    background: repeating-linear-gradient(
-      45deg,
-      var(--accent),
-      var(--accent) 4px,
-      #0a0b0c 4px,
-      #0a0b0c 7px
-    );
+    background: linear-gradient(90deg, var(--accent), #4f8ecf);
   }
 </style>

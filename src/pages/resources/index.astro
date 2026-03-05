@@ -27,7 +27,7 @@ const categories = [...new Set(resources.map((item) => item.category))];
             .map((item) => (
               <li class="resource-row">
                 <h3>{item.resource}</h3>
-                <p><strong>Use case:</strong> {item.use_it_for}</p>
+                <p><strong>Use case:</strong> {item.use_case}</p>
                 <p><strong>Best weeks:</strong> {item.best_weeks}</p>
                 <p>
                   <strong>URL:</strong>{' '}
