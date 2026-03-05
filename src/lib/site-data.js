@@ -193,6 +193,9 @@ const glossaryPhaseOptions = [...new Set(glossaryEntries.flatMap((entry) => entr
 const glossaryWeekOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.week_refs || []))].sort(
   (a, b) => a - b
 );
+const glossaryCategoryOptions = [...new Set(glossaryEntries.map((entry) => entry.category || ''))]
+  .filter(Boolean)
+  .sort();
 const glossaryTagOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.tags || []))].sort();
 const glossaryExamOptions = [...new Set(glossaryEntries.map((entry) => entry.exam_relevance || ''))]
   .filter(Boolean)
@@ -240,6 +243,7 @@ export {
   flashcardById,
   glossaryPhaseOptions,
   glossaryWeekOptions,
+  glossaryCategoryOptions,
   glossaryTagOptions,
   glossaryExamOptions,
   flashcardPhaseOptions,

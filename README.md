@@ -19,6 +19,12 @@ Canonical content is precomputed (no runtime AI dependency) in:
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
 
+Glossary entries are category-structured and include:
+- `category`
+- `what_it_is`
+- `how_it_functions`
+- `where_it_fits`
+
 Top-level model includes:
 - `site`
 - `core_pages`

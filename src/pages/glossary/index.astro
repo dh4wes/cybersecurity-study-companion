@@ -7,6 +7,7 @@ import {
   glossaryEntries,
   glossaryPhaseOptions,
   glossaryWeekOptions,
+  glossaryCategoryOptions,
   glossaryTagOptions,
   glossaryExamOptions
 } from '../../lib/site-data.js';
@@ -16,13 +17,29 @@ const phaseLabel = (value) =>
     .split('-')
     .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
     .join(' ');
+
+const grouped = glossaryEntries.reduce((acc, entry) => {
+  const category = entry.category || 'General Security Foundations';
+  if (!acc.has(category)) {
+    acc.set(category, []);
+  }
+  acc.get(category).push(entry);
+  return acc;
+}, new Map());
+
+const glossaryGroups = [...grouped.entries()]
+  .map(([category, entries]) => ({
+    category,
+    entries: entries.sort((a, b) => a.term.localeCompare(b.term))
+  }))
+  .sort((a, b) => a.category.localeCompare(b.category));
 ---
 
 <Layout title={`${canonicalData.site.title} | Glossary`} description="Searchable cybersecurity glossary" currentPath={Astro.url.pathname}>
   <PageHero
     kicker="Canonical Glossary"
     title="Glossary"
-    description="Global glossary dataset mapped to day-level study sessions. Filter by phase, week, tag, and exam relevance."
+    description="Glossary terms are organized by category and each item shows what it is, how it functions, and where it fits in the IT/security workflow."
   />
 
   <section class="card section">
@@ -31,6 +48,14 @@ const phaseLabel = (value) =>
       <label>
         Search term or definition
         <input class="js-glossary-search" type="text" placeholder="cpu, subnet, risk register..." />
+      </label>
+
+      <label>
+        Category
+        <select class="js-glossary-category-filter">
+          <option value="">All categories</option>
+          {glossaryCategoryOptions.map((category) => <option value={category}>{category}</option>)}
+        </select>
       </label>
 
       <label>
@@ -74,23 +99,32 @@ const phaseLabel = (value) =>
     </div>
   </section>
 
-  <section class="section">
-    <div class="grid glossary-grid">
-      {glossaryEntries.map((entry) => (
-        <div
-          class="js-glossary-item"
-          data-term-text={entry.term}
-          data-definition-text={entry.definition}
-          data-phase-refs={(entry.phase_refs || []).join('|')}
-          data-week-refs={(entry.week_refs || []).join('|')}
-          data-tags={(entry.tags || []).join('|')}
-          data-exam={entry.exam_relevance}
-        >
-          <GlossaryTermCard entry={entry} />
-        </div>
-      ))}
-    </div>
-  </section>
+  {glossaryGroups.map((group) => (
+    <section class="section js-glossary-category" data-category={group.category}>
+      <div class="section-header">
+        <h2>{group.category}</h2>
+        <span class="badge neutral js-glossary-category-count">{group.entries.length}</span>
+      </div>
+
+      <div class="grid glossary-grid">
+        {group.entries.map((entry) => (
+          <div
+            class="js-glossary-item"
+            data-category={entry.category}
+            data-term-text={entry.term}
+            data-definition-text={entry.definition}
+            data-phase-refs={(entry.phase_refs || []).join('|')}
+            data-week-refs={(entry.week_refs || []).join('|')}
+            data-tags={(entry.tags || []).join('|')}
+            data-exam={entry.exam_relevance}
+            data-search-text={[entry.term, entry.definition, entry.what_it_is, entry.how_it_functions, entry.where_it_fits].join(' ')}
+          >
+            <GlossaryTermCard entry={entry} />
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
 
   <script>
     import '../../scripts/glossary-page.js';
@@ -113,10 +147,11 @@ const phaseLabel = (value) =>
   }
 
   .glossary-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   }
 
-  .js-glossary-item[hidden] {
+  .js-glossary-item[hidden],
+  .js-glossary-category[hidden] {
     display: none;
   }
 </style>

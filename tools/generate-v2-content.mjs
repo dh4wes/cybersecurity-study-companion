@@ -310,6 +310,55 @@ const fallbackTerm = (id) => {
   };
 };
 
+const categoryRules = [
+  { category: 'Hardware & Endpoints', tags: ['hardware', 'memory', 'storage', 'boot', 'mobile', 'endpoints', 'infrastructure', 'architecture', 'foundations', 'fundamentals', 'virtualization'] },
+  { category: 'Operating Systems & Administration', tags: ['os', 'windows', 'linux', 'filesystem', 'services'] },
+  { category: 'Networking & Infrastructure', tags: ['networking', 'wireless', 'ethernet', 'routing', 'switching', 'addressing', 'transport', 'segmentation', 'performance'] },
+  { category: 'Web, Data & Cloud', tags: ['web', 'appsec', 'cloud', 'sql', 'api', 'data'] },
+  { category: 'Identity & Cryptography', tags: ['iam', 'crypto'] },
+  { category: 'Security Operations & Incident Response', tags: ['soc', 'detection', 'response', 'forensics', 'operations', 'analysis', 'troubleshooting', 'threats', 'documentation'] },
+  { category: 'Governance, Risk & Compliance', tags: ['grc', 'governance', 'risk', 'controls', 'third-party', 'resilience', 'communication', 'planning'] },
+  { category: 'Automation & Engineering', tags: ['automation', 'python', 'integration', 'engineering'] },
+  { category: 'Career & Portfolio', tags: ['career', 'portfolio', 'training', 'improvement', 'ai'] },
+  { category: 'Study Workflow', tags: ['study', 'labs'] }
+];
+
+const toPhaseLabel = (value) =>
+  String(value || '')
+    .split('-')
+    .filter(Boolean)
+    .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
+    .join(' ');
+
+const normalizeSentence = (value) => {
+  const text = String(value || '').trim().replace(/\s+/g, ' ');
+  if (!text) return '';
+  return text.endsWith('.') ? text : `${text}.`;
+};
+
+const formatWeekRefs = (weekRefs) => {
+  const weeks = [...new Set((weekRefs || []).map((week) => Number(week)).filter((week) => Number.isFinite(week)))].sort(
+    (a, b) => a - b
+  );
+
+  if (!weeks.length) return 'the roadmap baseline weeks';
+  if (weeks.length <= 4) return `weeks ${weeks.map((week) => String(week).padStart(2, '0')).join(', ')}`;
+  return `weeks ${weeks
+    .slice(0, 4)
+    .map((week) => String(week).padStart(2, '0'))
+    .join(', ')} and later review sessions`;
+};
+
+const pickGlossaryCategory = (tags = []) => {
+  const normalizedTags = tags.map((tag) => String(tag).trim().toLowerCase()).filter(Boolean);
+  for (const rule of categoryRules) {
+    if (rule.tags.some((tag) => normalizedTags.includes(tag))) {
+      return rule.category;
+    }
+  }
+  return 'General Security Foundations';
+};
+
 const allTermIds = [...new Set(Object.values(WEEK_TERM_IDS).flat())];
 const missingTermIds = allTermIds.filter((id) => !manualTerms.has(id));
 for (const id of missingTermIds) {
@@ -632,6 +681,17 @@ const glossary = allTermIds
   .map((termId) => {
     const base = manualTerms.get(termId);
     const refs = termRefs.get(termId);
+    const category = pickGlossaryCategory(base.tags || []);
+    const whatItIs = normalizeSentence(base.definition);
+    const whyItMatters = normalizeSentence(base.why_it_matters);
+    const howItFunctions = normalizeSentence(
+      `Operationally, this concept functions in practice around this need: ${whyItMatters.replace(/\.$/, '')}`
+    );
+    const whereItFits = normalizeSentence(
+      `This sits in the ${category} stage of the IT pipeline, with emphasis in ${
+        [...refs.phases].length ? [...refs.phases].map((phase) => toPhaseLabel(phase)).join(', ') : 'cross-phase study'
+      } across ${formatWeekRefs([...refs.weeks])}`
+    );
 
     return {
       id: termId,
@@ -640,6 +700,10 @@ const glossary = allTermIds
       why_it_matters: base.why_it_matters,
       exam_relevance: base.exam_relevance,
       tags: base.tags,
+      category,
+      what_it_is: whatItIs,
+      how_it_functions: howItFunctions,
+      where_it_fits: whereItFits,
       related_terms: [...refs.related].slice(0, 6),
       phase_refs: [...refs.phases].sort(),
       week_refs: [...refs.weeks].sort((a, b) => a - b),
