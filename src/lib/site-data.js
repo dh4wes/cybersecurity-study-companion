@@ -146,6 +146,28 @@ const totalReviewDays = weeks.reduce(
   0
 );
 
+const glossaryUsageById = canonicalData.days.reduce((acc, day) => {
+  const phase = day.phase || weekByNumber.get(Number(day.week))?.phase || '';
+  const week = Number(day.week);
+
+  for (const glossaryId of day.glossary_ids || []) {
+    if (!acc.has(glossaryId)) {
+      acc.set(glossaryId, {
+        phase_refs: new Set(),
+        week_refs: new Set(),
+        day_refs: new Set()
+      });
+    }
+
+    const usage = acc.get(glossaryId);
+    if (phase) usage.phase_refs.add(phase);
+    if (Number.isFinite(week)) usage.week_refs.add(week);
+    if (day.id) usage.day_refs.add(day.id);
+  }
+
+  return acc;
+}, new Map());
+
 const clientWeeksLite = weeks.map((week) => ({
   id: week.id,
   week: week.week,
@@ -183,10 +205,25 @@ const clientWeeksProgress = weeks.map((week) => ({
   }))
 }));
 
-const glossaryById = new Map(glossaryData.map((entry) => [entry.id, entry]));
+const glossaryEntries = glossaryData.map((entry) => {
+  const usage = glossaryUsageById.get(entry.id);
+  const phase_refs = usage
+    ? [...usage.phase_refs].sort((a, b) => phaseOrder.indexOf(a) - phaseOrder.indexOf(b))
+    : [];
+  const week_refs = usage ? [...usage.week_refs].sort((a, b) => a - b) : [];
+  const day_refs = usage ? [...usage.day_refs].sort() : [];
+
+  return {
+    ...entry,
+    phase_refs,
+    week_refs,
+    day_refs
+  };
+});
+
+const glossaryById = new Map(glossaryEntries.map((entry) => [entry.id, entry]));
 const flashcardById = new Map(flashcardsData.map((entry) => [entry.id, entry]));
 
-const glossaryEntries = glossaryData;
 const flashcardEntries = flashcardsData;
 
 const glossaryPhaseOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.phase_refs || []))].sort();
@@ -196,10 +233,8 @@ const glossaryWeekOptions = [...new Set(glossaryEntries.flatMap((entry) => entry
 const glossaryCategoryOptions = [...new Set(glossaryEntries.map((entry) => entry.category || ''))]
   .filter(Boolean)
   .sort();
-const glossaryTagOptions = [...new Set(glossaryEntries.flatMap((entry) => entry.tags || []))].sort();
-const glossaryExamOptions = [...new Set(glossaryEntries.map((entry) => entry.exam_relevance || ''))]
-  .filter(Boolean)
-  .sort();
+const glossaryTagOptions = [];
+const glossaryExamOptions = [];
 
 const flashcardPhaseOptions = [...new Set(flashcardEntries.flatMap((card) => card.phase_refs || []))].sort();
 const flashcardWeekOptions = [...new Set(flashcardEntries.flatMap((card) => card.week_refs || []))].sort(

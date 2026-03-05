@@ -10,23 +10,18 @@ const applyFilters = () => {
   const category = document.querySelector('.js-glossary-category-filter')?.value || '';
   const phase = document.querySelector('.js-glossary-phase')?.value || '';
   const week = document.querySelector('.js-glossary-week')?.value || '';
-  const tag = document.querySelector('.js-glossary-tag')?.value || '';
-  const exam = document.querySelector('.js-glossary-exam')?.value || '';
 
   let visibleCount = 0;
 
   document.querySelectorAll('.js-glossary-item').forEach((item) => {
     const termText = String(item.dataset.termText || '').toLowerCase();
-    const definitionText = String(item.dataset.definitionText || '').toLowerCase();
-    const searchText = String(item.dataset.searchText || `${termText} ${definitionText}`).toLowerCase();
+    const searchText = String(item.dataset.searchText || termText).toLowerCase();
 
     const matches =
-      (!search || searchText.includes(search) || termText.includes(search) || definitionText.includes(search)) &&
+      (!search || searchText.includes(search) || termText.includes(search)) &&
       matchesCategory(item.dataset.category, category) &&
       includesToken(item.dataset.phaseRefs, phase) &&
-      includesToken(item.dataset.weekRefs, week) &&
-      includesToken(item.dataset.tags, tag) &&
-      (!exam || String(item.dataset.exam || '').toLowerCase() === exam.toLowerCase());
+      includesToken(item.dataset.weekRefs, week);
 
     item.hidden = !matches;
     if (matches) visibleCount += 1;
@@ -55,7 +50,7 @@ const applyFilters = () => {
 
 const boot = () => {
   const controls = document.querySelectorAll(
-    '.js-glossary-search, .js-glossary-category-filter, .js-glossary-phase, .js-glossary-week, .js-glossary-tag, .js-glossary-exam'
+    '.js-glossary-search, .js-glossary-category-filter, .js-glossary-phase, .js-glossary-week'
   );
 
   controls.forEach((control) => {

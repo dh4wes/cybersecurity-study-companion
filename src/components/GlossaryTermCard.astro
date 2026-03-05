@@ -1,15 +1,6 @@
 ---
 const { entry } = Astro.props;
-const examClass =
-  String(entry.exam_relevance || '').toLowerCase() === 'high'
-    ? 'accent'
-    : String(entry.exam_relevance || '').toLowerCase() === 'medium'
-      ? 'neutral'
-      : 'warn';
-
-const whatItIs = entry.what_it_is || entry.definition || '';
-const howItFunctions = entry.how_it_functions || entry.why_it_matters || '';
-const whereItFits = entry.where_it_fits || '';
+const bullets = Array.isArray(entry.bullets) ? entry.bullets.filter(Boolean).slice(0, 3) : [];
 ---
 
 <article class="glossary-card card">
@@ -18,23 +9,11 @@ const whereItFits = entry.where_it_fits || '';
       <p class="kicker">{entry.category || 'General'}</p>
       <h4>{entry.term}</h4>
     </div>
-    <span class={`badge ${examClass}`}>Exam: {entry.exam_relevance}</span>
   </div>
 
   <ul class="glossary-bullets">
-    <li>{whatItIs}</li>
-    <li>{howItFunctions}</li>
-    <li>{whereItFits}</li>
+    {bullets.map((bullet) => <li>{bullet}</li>)}
   </ul>
-
-  {entry.related_terms?.length ? (
-    <p class="small">
-      <strong>Related:</strong>{' '}
-      {entry.related_terms.slice(0, 4).map((termId) => (
-        <span class="badge neutral">{termId}</span>
-      ))}
-    </p>
-  ) : null}
 </article>
 
 <style>

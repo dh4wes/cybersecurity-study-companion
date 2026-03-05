@@ -7,9 +7,7 @@ import {
   glossaryEntries,
   glossaryPhaseOptions,
   glossaryWeekOptions,
-  glossaryCategoryOptions,
-  glossaryTagOptions,
-  glossaryExamOptions
+  glossaryCategoryOptions
 } from '../../lib/site-data.js';
 
 const phaseLabel = (value) =>
@@ -72,7 +70,7 @@ const glossaryGroups = [...grouped.entries()]
     <h2>Filter Terms</h2>
     <div class="filter-grid">
       <label>
-        Search term or definition
+        Search term or bullet text
         <input class="js-glossary-search" type="text" placeholder="cpu, subnet, risk register..." />
       </label>
 
@@ -102,21 +100,6 @@ const glossaryGroups = [...grouped.entries()]
         </select>
       </label>
 
-      <label>
-        Tag
-        <select class="js-glossary-tag">
-          <option value="">All tags</option>
-          {glossaryTagOptions.map((tag) => <option value={tag}>{tag}</option>)}
-        </select>
-      </label>
-
-      <label>
-        Exam relevance
-        <select class="js-glossary-exam">
-          <option value="">All levels</option>
-          {glossaryExamOptions.map((level) => <option value={level}>{level}</option>)}
-        </select>
-      </label>
     </div>
 
     <div class="filter-actions">
@@ -138,12 +121,9 @@ const glossaryGroups = [...grouped.entries()]
             class="js-glossary-item"
             data-category={entry.category}
             data-term-text={entry.term}
-            data-definition-text={entry.definition}
             data-phase-refs={(entry.phase_refs || []).join('|')}
             data-week-refs={(entry.week_refs || []).join('|')}
-            data-tags={(entry.tags || []).join('|')}
-            data-exam={entry.exam_relevance}
-            data-search-text={[entry.term, entry.definition, entry.what_it_is, entry.how_it_functions, entry.where_it_fits].join(' ')}
+            data-search-text={[entry.term, ...(entry.bullets || [])].join(' ')}
           >
             <GlossaryTermCard entry={entry} />
           </div>
