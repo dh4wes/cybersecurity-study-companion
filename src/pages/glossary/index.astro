@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import GlossaryTermCard from '../../components/GlossaryTermCard.astro';
+import {
+  canonicalData,
+  glossaryEntries,
+  glossaryPhaseOptions,
+  glossaryWeekOptions,
+  glossaryTagOptions,
+  glossaryExamOptions
+} from '../../lib/site-data.js';
+
+const phaseLabel = (value) =>
+  String(value || '')
+    .split('-')
+    .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
+    .join(' ');
+---
+
+<Layout title={`${canonicalData.site.title} | Glossary`} description="Searchable cybersecurity glossary" currentPath={Astro.url.pathname}>
+  <PageHero
+    kicker="Canonical Glossary"
+    title="Glossary"
+    description="Global glossary dataset mapped to day-level study sessions. Filter by phase, week, tag, and exam relevance."
+  />
+
+  <section class="card section">
+    <h2>Filter Terms</h2>
+    <div class="filter-grid">
+      <label>
+        Search term or definition
+        <input class="js-glossary-search" type="text" placeholder="cpu, subnet, risk register..." />
+      </label>
+
+      <label>
+        Phase
+        <select class="js-glossary-phase">
+          <option value="">All phases</option>
+          {glossaryPhaseOptions.map((phase) => <option value={phase}>{phaseLabel(phase)}</option>)}
+        </select>
+      </label>
+
+      <label>
+        Week
+        <select class="js-glossary-week">
+          <option value="">All weeks</option>
+          {glossaryWeekOptions.map((week) => (
+            <option value={String(week)}>Week {String(week).padStart(2, '0')}</option>
+          ))}
+        </select>
+      </label>
+
+      <label>
+        Tag
+        <select class="js-glossary-tag">
+          <option value="">All tags</option>
+          {glossaryTagOptions.map((tag) => <option value={tag}>{tag}</option>)}
+        </select>
+      </label>
+
+      <label>
+        Exam relevance
+        <select class="js-glossary-exam">
+          <option value="">All levels</option>
+          {glossaryExamOptions.map((level) => <option value={level}>{level}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <div class="filter-actions">
+      <button type="button" class="secondary js-glossary-reset">Reset filters</button>
+      <p class="small js-glossary-filter-state" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid glossary-grid">
+      {glossaryEntries.map((entry) => (
+        <div
+          class="js-glossary-item"
+          data-term-text={entry.term}
+          data-definition-text={entry.definition}
+          data-phase-refs={(entry.phase_refs || []).join('|')}
+          data-week-refs={(entry.week_refs || []).join('|')}
+          data-tags={(entry.tags || []).join('|')}
+          data-exam={entry.exam_relevance}
+        >
+          <GlossaryTermCard entry={entry} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/glossary-page.js';
+  </script>
+</Layout>
+
+<style>
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.7rem;
+  }
+
+  .filter-actions {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .glossary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .js-glossary-item[hidden] {
+    display: none;
+  }
+</style>

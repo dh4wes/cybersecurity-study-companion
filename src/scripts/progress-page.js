@@ -73,7 +73,7 @@ const render = () => {
         (week) => `
           <article class="card week-row">
             <p class="kicker">Week ${String(week.week).padStart(2, '0')} • ${week.phase}</p>
-            <p><a href="${week.slug}">${week.deliverable}</a></p>
+            <p><a href="${week.href || week.slug}">${week.deliverable}</a></p>
             <p class="small">${week.completed}/${week.total} actionable days complete (${week.percent}%).</p>
             <div class="track" aria-hidden="true"><span style="width:${week.percent}%"></span></div>
           </article>
@@ -133,7 +133,7 @@ const initExportImportControls = () => {
   if (resetButton) {
     resetButton.addEventListener('click', () => {
       const confirmed = window.confirm(
-        'Reset all progress, notes, and journal drafts from this browser? This cannot be undone.'
+        'Reset all progress data from this browser? This cannot be undone.'
       );
       if (!confirmed) return;
       resetAllProgress();

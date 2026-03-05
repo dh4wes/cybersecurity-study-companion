@@ -1,27 +1,52 @@
-# Implementation Notes
+# Migration Notes
 
 ## Assumptions made
-- Week-level `checkpoint` is enriched from workbook (`Weekly Roadmap`) and exposed in UI.
-- Day-level `phase` is inferred from parent week (workbook has explicit per-day phase; JSON does not).
-- "Current week" and "today's study block" are computed from first unfinished actionable day.
-- Total completion percent is based on actionable days (`Study` + `Review`), excluding `Rest` days.
-- For days missing primary resource (e.g., rest day), week-level primary resource is used as fallback so every day card still shows a primary link.
-- Day-level direct lesson links are curated in `src/data/day-source-links.json` where stable, public lecture URLs exist (currently Professor Messer-focused weeks).
+- `*_week1_support_fixed.*` and `week1_support_revision_notes.md` were not present in this repository snapshot.
+- Week 1 support-resource correction was implemented directly from the provided prompt requirements.
+- Existing workbook enrichment (`src/data/workbook-enrichment.json`) remains the validation/enrichment source for checkpoints and workload/journal tables.
+- Rest days (Day 7) intentionally avoid required new glossary/flashcards.
 
-## JSON/workbook mismatch findings
-- No conflicting roadmap/resource/week-page values found across JSON vs workbook in validated fields.
-- Workbook includes additional fields/tables not present directly in JSON:
-  - `Checkpoint` (week level)
-  - `Daily Plan` phase column (derivable)
-  - `Workload Model` table
-  - `Security Journal` template rows/headers
-- These workbook-only fields were used as enrichment (not as canonical overrides).
-- Workbook and canonical JSON mostly provide course-level URLs rather than day-specific lecture URLs; direct lesson links were added as explicit enrichment for targeted days.
+## Schema changes introduced
+- Migrated from legacy model:
+  - `site`, `core_pages`, `resources`, `week_pages`, `weeks`
+- To v2 model:
+  - `site`
+  - `core_pages`
+  - `resources`
+  - `weeks`
+  - `days`
+  - `glossary` (canonical global dataset)
+  - `flashcards` (canonical global dataset)
+  - `security_journal_prompts`
+  - `portfolio_outputs`
+  - `review_decks`
 
-## Recommended v2 enhancements
-- Optional Supabase sync for cross-device progress and private notes.
-- Journal entry edit flow (not only add/delete drafts).
-- Rich artifact gallery per week (multiple links/screenshots).
-- Calendar/date-aware "today" scheduling tied to actual dates.
-- Lightweight analytics (self-hosted privacy-preserving) for portfolio visits.
-- Automated workbook->JSON enrichment script in Node for fully reproducible content pipeline.
+Generated files:
+- `src/data/content/study-companion-v2.json`
+- `src/data/content/glossary.json`
+- `src/data/content/flashcards.json`
+
+## Storage model split
+- Progress storage (Layer A only):
+  - `cyber-study-progress-v1`
+- Notes storage (Layer B only):
+  - `cyber-study-notes-v2`
+  - `cyber-study-note-export-meta-v1`
+
+Notes are no longer embedded in week/day cards on the public routes.
+
+## JSON/workbook mismatches observed
+- No blocking structural mismatch for roadmap sequencing (32 weeks, 7 days/week).
+- Workbook enrichment includes tables not fully represented in original JSON (`checkpoint`, workload model, journal template metadata).
+- Prompt-level Week 1 support correction conflicts with legacy JSON Week 1 repeated support item and has been applied as an override in migrated content.
+
+## Content areas still worth enriching later
+- Increase glossary depth for late-stage GRC/application topics with more compliance and legal terminology.
+- Add more scenario-specific flashcards for Week 28-31 (management communication + governance tradeoffs).
+- Expand resource references per glossary entry to include direct lesson links where available.
+
+## Recommended v2+ enhancements
+- Optional notes entry editing history/versioning.
+- Optional flashcard spaced-repetition scheduling in browser.
+- Optional CSV/Markdown import for bulk seed notes.
+- Optional automated workbook parser in-repo (instead of pre-extracted workbook JSON).

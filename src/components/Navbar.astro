@@ -3,12 +3,15 @@ import { withBase } from '../lib/site-data.js';
 
 const { currentPath = '/' } = Astro.props;
 const links = [
-  { path: '/', label: 'Dashboard' },
+  { path: '/', label: 'Home' },
   { path: '/roadmap/', label: 'Roadmap' },
   { path: '/weeks/', label: 'Weeks' },
   { path: '/resources/', label: 'Resources' },
+  { path: '/glossary/', label: 'Glossary' },
+  { path: '/flashcards/', label: 'Flashcards' },
   { path: '/security-journal/', label: 'Journal' },
   { path: '/progress/', label: 'Progress' },
+  { path: '/notes/', label: 'Notes' },
   { path: '/about/', label: 'About' }
 ];
 
@@ -25,15 +28,15 @@ const isActive = (path) => {
 <header class="site-header">
   <div class="masthead">
     <div>
-      <p class="eyebrow">Study Companion v1.0</p>
-      <a class="brand" href={withBase('/')}>Cyber Security</a>
+      <p class="eyebrow">Study Companion v2</p>
+      <a class="brand" href={withBase('/')}>Cybersecurity Study Companion</a>
     </div>
     <div class="context-wrap">
-      <p class="context">32-Week Cybersecurity Roadmap and Proof-of-Work Portfolio</p>
+      <p class="context">32-week roadmap, static portfolio, and private local notes tool</p>
       <label class="font-switcher">
-        <span>Font</span>
+        <span>Font Theme</span>
         <select class="js-font-theme" aria-label="Select font theme">
-          <option value="default">Current</option>
+          <option value="default">Default</option>
           <option value="pinkend">Pinkend</option>
         </select>
       </label>
@@ -60,31 +63,15 @@ const isActive = (path) => {
     position: sticky;
     top: 0;
     z-index: 40;
-    background: rgba(4, 5, 6, 0.97);
+    backdrop-filter: blur(8px);
+    background: rgba(244, 248, 255, 0.94);
     border-bottom: 1px solid var(--border);
-  }
-
-  .site-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: repeating-linear-gradient(
-      90deg,
-      var(--accent) 0,
-      var(--accent) 6px,
-      transparent 6px,
-      transparent 12px
-    );
-    pointer-events: none;
   }
 
   .masthead {
     width: min(1160px, 95vw);
     margin: 0 auto;
-    padding: 0.9rem 0 0.8rem;
+    padding: 0.85rem 0;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -92,39 +79,35 @@ const isActive = (path) => {
   }
 
   .eyebrow {
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.32rem;
     font-weight: 700;
   }
 
   .brand {
     font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.01em;
     line-height: 1;
-    font-size: 1.85rem;
-    color: var(--accent);
-    text-shadow: 0 0 10px rgba(204, 255, 0, 0.2);
+    font-size: 1.44rem;
+    color: var(--ink);
+    border-bottom-color: transparent;
   }
 
   .brand:hover,
   .brand:focus-visible {
-    text-decoration: none;
-    color: var(--c-white);
+    color: var(--accent-dark);
     border-bottom-color: transparent;
   }
 
   .context {
     margin: 0;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--ink-soft);
+    font-size: 0.72rem;
+    color: var(--ink-light);
     text-align: right;
-    max-width: 360px;
+    max-width: 380px;
     font-weight: 600;
   }
 
@@ -137,84 +120,66 @@ const isActive = (path) => {
   .font-switcher {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--ink-soft);
+    gap: 0.45rem;
+    font-size: 0.68rem;
+    color: var(--ink-light);
     font-weight: 700;
-  }
-
-  .font-switcher span {
-    white-space: nowrap;
   }
 
   .font-switcher select {
     border: 1px solid var(--border);
     background: var(--surface);
-    color: var(--accent);
-    padding: 0.22rem 0.38rem;
-    border-radius: 0;
-    font-size: 0.62rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    min-width: 140px;
+    color: var(--ink);
+    padding: 0.25rem 0.42rem;
+    border-radius: 8px;
+    font-size: 0.68rem;
+    min-width: 120px;
   }
 
   .site-nav {
     border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: rgba(8, 10, 12, 0.92);
+    background: rgba(255, 255, 255, 0.85);
   }
 
   .site-nav ul {
     width: min(1160px, 95vw);
     margin: 0 auto;
-    padding: 0;
+    padding: 0.2rem 0;
     list-style: none;
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .site-nav ul::-webkit-scrollbar {
-    display: none;
-  }
-
-  .site-nav li {
-    border-right: 1px solid var(--border);
-  }
-
-  .site-nav li:first-child {
-    border-left: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 
   .site-nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 1rem;
-    min-height: 46px;
-    font-size: 0.62rem;
+    padding: 0.45rem 0.62rem;
+    min-height: 36px;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: var(--ink-soft);
     white-space: nowrap;
-    transition: background 0.2s ease, color 0.2s ease;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 
   .site-nav a:hover,
   .site-nav a:focus-visible {
-    background: rgba(204, 255, 0, 0.08);
-    color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    border-color: #b6cae8;
     text-decoration: none;
   }
 
   .site-nav a.active {
     background: var(--accent);
-    color: #040506;
+    color: #fff;
+    border-color: var(--accent);
   }
 
   @media (max-width: 900px) {
@@ -225,7 +190,7 @@ const isActive = (path) => {
     }
 
     .brand {
-      font-size: 1.45rem;
+      font-size: 1.2rem;
     }
 
     .context {
@@ -237,12 +202,11 @@ const isActive = (path) => {
       justify-items: start;
     }
 
-    .font-switcher select {
-      min-width: 132px;
-    }
-
-    .site-nav a {
-      padding: 0.72rem 0.9rem;
+    .site-nav ul {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 0.36rem;
+      scrollbar-width: thin;
     }
   }
 </style>

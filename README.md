@@ -1,30 +1,113 @@
-# Cybersecurity Study Companion (Static Astro Site)
+# Cybersecurity Study Companion (Static Astro)
 
-Production-ready static site for a 32-week cybersecurity roadmap that works as both:
-- a study companion
-- a proof-of-work portfolio
+Static 32-week cybersecurity study system split into two layers:
+- Layer A: public study companion + portfolio site
+- Layer B: private local notes tool (`/notes/`)
 
-## Data sources and precedence
-- Product behavior and acceptance: `cybersecurity_study_companion_codex_ready.md`
-- Canonical structured content: `cybersecurity_study_companion_data.json`
-- Validation + enrichment: `cybersecurity_daily_study_plan_2026_portfolio_ready.xlsx`
-  - Extracted into `src/data/workbook-enrichment.json` for dependency-free static builds.
+## Source-of-truth and precedence
+1. Prompt requirements in this implementation pass
+2. `cybersecurity_study_companion_codex_ready.md`
+3. `cybersecurity_study_companion_data.json`
+4. `cybersecurity_daily_study_plan_2026_portfolio_ready.xlsx` (via `src/data/workbook-enrichment.json`)
+
+Note:
+- `*_week1_support_fixed.*` and `week1_support_revision_notes.md` were not present in this repo; Week 1 support-resource correction is applied directly from prompt requirements and documented in `IMPLEMENTATION_NOTES.md`.
+
+## Content model (v2)
+Canonical content is precomputed (no runtime AI dependency) in:
+- `src/data/content/study-companion-v2.json`
+- `src/data/content/glossary.json`
+- `src/data/content/flashcards.json`
+
+Top-level model includes:
+- `site`
+- `core_pages`
+- `resources`
+- `weeks`
+- `days`
+- `security_journal_prompts`
+- `portfolio_outputs`
+- `review_decks`
+
+### Day-level mapping
+Each day references:
+- `glossary_ids`
+- `flashcard_ids`
+
+Review day (Day 6) aggregates the weekly review deck.
+Rest day (Day 7) has no required new glossary/flashcards.
+
+## Week 1 support-resource correction
+Week 1 day support resources are corrected to:
+- Day 1: LearnFree Computers 101
+- Day 2: Professor Messer BIOS Settings
+- Day 3: Professor Messer Copper Connectors
+- Day 4: Microsoft `msinfo32.exe`
+- Day 5: Professor Messer Pop Quizzes Archive
+- Day 6: CompTIA A+ Core 1 objectives overview
+- Day 7: none
+
+Ubuntu Desktop remains associated with later VM work (not repeated across Week 1).
 
 ## Routes
+Layer A:
 - `/`
 - `/roadmap/`
 - `/weeks/`
+- `/weeks/<week-slug>/` (32 static week pages)
 - `/resources/`
-- `/security-journal/`
+- `/glossary/`
+- `/flashcards/`
+- `/security-journal/` (prompt/template archive)
 - `/progress/`
 - `/about/`
-- `/weeks/<week-slug>/` for all 32 week slugs from dataset
 
-## Stack
-- Astro (static output)
-- JSON content + workbook-enrichment JSON
-- Vanilla JS for filters, progress tracking, journal drafts, and dashboard widgets
-- GitHub Pages workflow included: `.github/workflows/deploy.yml`
+Layer B:
+- `/notes/` (isolated local notes tool)
+
+## Storage boundaries
+Layer A (progress only):
+- `cyber-study-progress-v1`
+
+Supports:
+- mark day complete/incomplete
+- mark day blocked/unblocked
+- mark week complete
+- save weekly reflection + artifact link
+- import/export progress JSON
+- reset progress
+
+Layer B (notes only):
+- `cyber-study-notes-v2`
+- `cyber-study-note-export-meta-v1`
+
+Supports:
+- per-day notes (status, tags, notes, questions, reflection)
+- per-week reflection + artifact link
+- security journal notes
+- export all notes to one Markdown file
+- JSON export/import
+- reset notes
+
+## Markdown export format
+Notes export produces one `.md` file with:
+- overview header
+- week/day note blocks
+- status and tags
+- notes/questions/reflection sections
+- week reflection blocks
+- security journal entries
+
+Compatible with GitHub, Obsidian, and plain text editors.
+
+## Project structure
+- `src/lib/site-data.js` normalized data access
+- `src/pages/` routes for Layer A + Layer B
+- `src/components/` reusable UI components
+- `src/scripts/progress-*` progress logic
+- `src/scripts/notes-*` notes logic
+- `src/data/content/` canonical static content collections
+- `tools/generate-v2-content.mjs` migration/generation script
 
 ## Local development
 ```bash
@@ -37,37 +120,11 @@ npm run dev
 npm run build
 ```
 
-## GitHub Pages deployment
-- Workflow deploys from `main` automatically.
-- Build uses:
-  - `SITE_URL=https://<owner>.github.io`
-  - `SITE_BASE=/<repo>/`
-- For user/organization pages (root domain), set `SITE_BASE=/`.
+## Regenerate migrated v2 content
+```bash
+node tools/generate-v2-content.mjs
+```
 
-## Progress persistence (v1 localStorage)
-- `cyber-study-progress-v1`
-- `cyber-study-notes-v1`
-- `cyber-study-journal-drafts-v1`
-
-Supported interactions:
-- mark day complete/incomplete
-- mark day blocked/unblocked
-- save per-day notes
-- mark week complete
-- save weekly reflection
-- save weekly artifact URL
-- save week-level local notes
-- export/import progress JSON
-- reset progress with confirmation
-
-## Project structure
-- `src/layouts/Layout.astro`
-- `src/components/` reusable UI components
-- `src/pages/` all required routes + dynamic week route
-- `src/scripts/` localStorage, filters, week controls, journal, progress dashboard
-- `src/lib/site-data.js` normalized data access
-- `src/data/workbook-enrichment.json` workbook-derived enrichment
-- `src/data/day-source-links.json` curated day-level direct lesson links (lecture-level URLs where available)
-
-## Notes
-- See `IMPLEMENTATION_NOTES.md` for assumptions, JSON/workbook mismatch findings, and recommended v2 enhancements.
+## GitHub Pages
+Static output is Astro-compatible for GitHub Pages deployment.
+Existing workflow in `.github/workflows/deploy.yml` can be used with correct `SITE_URL` and `SITE_BASE`.

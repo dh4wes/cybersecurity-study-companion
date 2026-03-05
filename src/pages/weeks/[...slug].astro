@@ -3,7 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import DayCard from '../../components/DayCard.astro';
 import WeeklyReflectionForm from '../../components/WeeklyReflectionForm.astro';
 import ArtifactLinkForm from '../../components/ArtifactLinkForm.astro';
-import { canonicalData, weeks } from '../../lib/site-data.js';
+import NotesCtaPanel from '../../components/NotesCtaPanel.astro';
+import { canonicalData, weeks, glossaryById, flashcardById } from '../../lib/site-data.js';
 
 export const getStaticPaths = () =>
   weeks.map((week) => {
@@ -38,17 +39,20 @@ const weekId = week.id;
   <section class="section">
     <div class="section-header">
       <h2>Daily Plan</h2>
-      <p class="small">7 day cards with required task metadata, resources, and progress controls.</p>
+      <p class="small">
+        7 day sections with tasks, resources, day-level glossary, day-level flashcards, checkpoint context, and
+        progress controls.
+      </p>
     </div>
     <div class="grid day-grid">
       {week.days.map((day) => (
         <DayCard
           day={day}
           weekId={weekId}
-          fallbackPrimaryResource={week.primary_resource}
-          fallbackPrimaryUrl={week.primary_url}
-          fallbackSupportResource={week.support_resource}
-          fallbackSupportUrl={week.support_url}
+          weekNumber={week.week}
+          weeklyDeliverable={week.deliverable}
+          glossaryEntries={day.glossary_ids.map((id) => glossaryById.get(id)).filter(Boolean)}
+          flashcardEntries={day.flashcard_ids.map((id) => flashcardById.get(id)).filter(Boolean)}
         />
       ))}
     </div>
@@ -57,28 +61,21 @@ const weekId = week.id;
   <section class="section two-col">
     <article class="card">
       <h2>Weekly Output / Portfolio</h2>
-      <p><strong>What to publish:</strong> {week.page?.what_to_publish}</p>
-      <p><strong>Suggested evidence:</strong> {week.page?.evidence_assets}</p>
-      <p><strong>Publish when:</strong> {week.page?.publish_when}</p>
-      <p><strong>Portfolio angle:</strong> {week.page?.portfolio_angle}</p>
+      <p><strong>What to publish:</strong> {week.page?.what_to_publish || week.deliverable}</p>
+      <p><strong>Suggested evidence:</strong> {week.page?.evidence_assets || 'Capture screenshots, notes, and links tied to the weekly checkpoint.'}</p>
+      <p><strong>Publish when:</strong> {week.page?.publish_when || 'By the end of the review day after your recap pass.'}</p>
+      <p><strong>Portfolio angle:</strong> {week.page?.portfolio_angle || week.checkpoint}</p>
+      <NotesCtaPanel
+        week={week.week}
+        tab="week"
+        title="Write Reflection in Notes Tool"
+        body="Keep freeform reflection and artifact planning in the separate local notes app."
+      />
     </article>
 
     <div class="grid">
       <ArtifactLinkForm weekId={weekId} />
       <WeeklyReflectionForm weekId={weekId} />
-    </div>
-  </section>
-
-  <section class="section card">
-    <h2>Local Notes</h2>
-    <p class="small">Week-level notes saved in your browser.</p>
-    <div class="form-row">
-      <label for={`week-notes-${weekId}`}>Notes</label>
-      <textarea id={`week-notes-${weekId}`} class="js-week-notes-field" placeholder="Add planning notes, blockers, and follow-ups..."></textarea>
-    </div>
-    <div class="form-row inline">
-      <button type="button" class="secondary js-save-week-notes">Save notes</button>
-      <p class="small js-week-notes-state" aria-live="polite"></p>
     </div>
   </section>
 

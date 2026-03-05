@@ -1,0 +1,7392 @@
+[
+  {
+    "id": "fc-week-01-01",
+    "question": "Define CPU and explain its role in Week 01.",
+    "answer": "CPU: Central Processing Unit; executes instructions and coordinates processing tasks.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "hardware",
+      "fundamentals"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-02",
+    "question": "Define RAM and explain its role in Week 01.",
+    "answer": "RAM: Volatile memory used for active processes and short-term data access.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "hardware",
+      "memory"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-04",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-03",
+    "question": "Define Storage Drive and explain its role in Week 01.",
+    "answer": "Storage Drive: Persistent storage device such as HDD or SSD for operating system and files.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "hardware",
+      "storage"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-04",
+    "question": "Define Motherboard and explain its role in Week 01.",
+    "answer": "Motherboard: Main circuit board that connects CPU, memory, storage, and expansion components.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "hardware"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-05",
+    "question": "Define BIOS/UEFI Firmware and explain its role in Week 01.",
+    "answer": "BIOS/UEFI Firmware: Low-level firmware that initializes hardware and starts the boot process.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "hardware",
+      "boot"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-06",
+    "question": "Define Boot Process and explain its role in Week 01.",
+    "answer": "Boot Process: Sequence that moves a system from power-on to a usable operating system session.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "boot",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-07",
+    "question": "How do CPU and RAM differ in practical troubleshooting or analysis?",
+    "answer": "CPU and RAM solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "comparison"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-02",
+      "week-01-day-04",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-08",
+    "question": "You are executing this week's focus: \"A+ Core 1: hardware, boot process, and internal components\". Which concept should you verify early, and why?",
+    "answer": "Start with Storage Drive. Storage failures and capacity bottlenecks are common support issues. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-01",
+      "application"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-01",
+      "week-01-day-03",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-01-09",
+    "question": "What is the expected outcome for Week 01?",
+    "answer": "Checkpoint: Can explain what each main computer component does and how a system boots.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-01",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      1
+    ],
+    "day_refs": [
+      "week-01-day-02",
+      "week-01-day-03",
+      "week-01-day-04",
+      "week-01-day-05",
+      "week-01-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-01",
+    "question": "Define Mobile Device and explain its role in Week 02.",
+    "answer": "Mobile Device: Portable endpoint such as a laptop, tablet, or smartphone with dedicated management constraints.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-02",
+      "mobile",
+      "endpoints"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-02",
+    "question": "Define Wi-Fi Standard and explain its role in Week 02.",
+    "answer": "Wi-Fi Standard: Wireless networking specification such as 802.11n/ac/ax defining speed and capability.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "networking",
+      "wireless"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-04",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-03",
+    "question": "Define IP Address and explain its role in Week 02.",
+    "answer": "IP Address: Logical network address used to identify a host and route traffic.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "networking",
+      "addressing"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-04",
+    "question": "Define Virtual Machine and explain its role in Week 02.",
+    "answer": "Virtual Machine: Software-defined computer running an operating system inside a host system.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "virtualization",
+      "labs"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-05",
+    "question": "Define Hypervisor and explain its role in Week 02.",
+    "answer": "Hypervisor: Layer that creates and manages virtual machines on host hardware.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-02",
+      "virtualization"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-06",
+    "question": "Define DHCP and explain its role in Week 02.",
+    "answer": "DHCP: Dynamic Host Configuration Protocol; automatically assigns network settings to devices.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "networking",
+      "services"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-07",
+    "question": "How do Mobile Device and Wi-Fi Standard differ in practical troubleshooting or analysis?",
+    "answer": "Mobile Device and Wi-Fi Standard solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "comparison"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-02",
+      "week-02-day-04",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-08",
+    "question": "You are executing this week's focus: \"A+ Core 1: mobile devices, networking basics, wireless, and virtualization\". Which concept should you verify early, and why?",
+    "answer": "Start with IP Address. Core concept for every network troubleshooting and security workflow. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-02",
+      "application"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-01",
+      "week-02-day-03",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-02-09",
+    "question": "What is the expected outcome for Week 02?",
+    "answer": "Checkpoint: Can identify common devices, ports, and SOHO troubleshooting steps.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-02",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      2
+    ],
+    "day_refs": [
+      "week-02-day-02",
+      "week-02-day-03",
+      "week-02-day-04",
+      "week-02-day-05",
+      "week-02-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-01",
+    "question": "Define Operating System and explain its role in Week 03.",
+    "answer": "Operating System: Core software that manages hardware, files, processes, and user interaction.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "os",
+      "fundamentals"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-02",
+    "question": "Define Filesystem and explain its role in Week 03.",
+    "answer": "Filesystem: Structure and rules used to organize and access files on storage media.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "os",
+      "storage"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-04",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-03",
+    "question": "Define NTFS and explain its role in Week 03.",
+    "answer": "NTFS: New Technology File System used by modern Windows systems.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "windows",
+      "filesystem"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-04",
+    "question": "Define Command Line and explain its role in Week 03.",
+    "answer": "Command Line: Text-based interface for executing operating system commands.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "os",
+      "operations"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-05",
+    "question": "Define PowerShell and explain its role in Week 03.",
+    "answer": "PowerShell: Windows automation shell and scripting language for system administration.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "windows",
+      "automation"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-06",
+    "question": "Define Service Management and explain its role in Week 03.",
+    "answer": "Service Management: Practice of monitoring, starting, stopping, and configuring background services.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-03",
+      "os",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-07",
+    "question": "How do Operating System and Filesystem differ in practical troubleshooting or analysis?",
+    "answer": "Operating System and Filesystem solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "comparison"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-02",
+      "week-03-day-04",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-08",
+    "question": "You are executing this week's focus: \"A+ Core 2: operating systems, installs, file systems, and admin basics\". Which concept should you verify early, and why?",
+    "answer": "Start with NTFS. Important for permissions, encryption features, and recovery workflows. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-03",
+      "application"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-01",
+      "week-03-day-03",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-03-09",
+    "question": "What is the expected outcome for Week 03?",
+    "answer": "Checkpoint: Can compare major operating systems and explain basic installation choices.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-03",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      3
+    ],
+    "day_refs": [
+      "week-03-day-02",
+      "week-03-day-03",
+      "week-03-day-04",
+      "week-03-day-05",
+      "week-03-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-01",
+    "question": "Define Malware and explain its role in Week 04.",
+    "answer": "Malware: Malicious software designed to disrupt systems, steal data, or gain unauthorized control.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "security",
+      "threats"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-02",
+    "question": "Define Multi-Factor Authentication and explain its role in Week 04.",
+    "answer": "Multi-Factor Authentication: Authentication method requiring two or more independent proof factors.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "iam",
+      "controls"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-04",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-03",
+    "question": "Define Least Privilege and explain its role in Week 04.",
+    "answer": "Least Privilege: Security principle granting only the minimum permissions needed for a task.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "iam",
+      "controls"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-04",
+    "question": "Define Troubleshooting Methodology and explain its role in Week 04.",
+    "answer": "Troubleshooting Methodology: Structured step-by-step process for diagnosing and resolving technical issues.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "operations",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-05",
+    "question": "Define Patch Management and explain its role in Week 04.",
+    "answer": "Patch Management: Process for testing, deploying, and verifying software updates.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "security",
+      "operations"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-06",
+    "question": "Define Social Engineering and explain its role in Week 04.",
+    "answer": "Social Engineering: Psychological manipulation used to trick users into unsafe actions.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "security",
+      "human-risk"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-07",
+    "question": "How do Malware and Multi-Factor Authentication differ in practical troubleshooting or analysis?",
+    "answer": "Malware and Multi-Factor Authentication solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "comparison"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-02",
+      "week-04-day-04",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-08",
+    "question": "You are executing this week's focus: \"A+ Core 2: security, support professionalism, and troubleshooting method\". Which concept should you verify early, and why?",
+    "answer": "Start with Least Privilege. Limits blast radius when accounts are abused or misused. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-04",
+      "application"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-01",
+      "week-04-day-03",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-04-09",
+    "question": "What is the expected outcome for Week 04?",
+    "answer": "Checkpoint: Can follow a support process and document incidents clearly.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-04",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      4
+    ],
+    "day_refs": [
+      "week-04-day-02",
+      "week-04-day-03",
+      "week-04-day-04",
+      "week-04-day-05",
+      "week-04-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-01",
+    "question": "Define Linux Kernel and explain its role in Week 05.",
+    "answer": "Linux Kernel: Core component of Linux that manages hardware access, processes, and memory.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-05",
+      "linux",
+      "os"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-02",
+    "question": "Define Shell and explain its role in Week 05.",
+    "answer": "Shell: Command interpreter used to interact with the operating system.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-05",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-04",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-03",
+    "question": "Define sudo and explain its role in Week 05.",
+    "answer": "sudo: Command that allows approved users to run tasks with elevated privileges.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-05",
+      "linux",
+      "iam"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-04",
+    "question": "Define Package Manager and explain its role in Week 05.",
+    "answer": "Package Manager: Tool that installs, updates, and removes software packages with dependency handling.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-05",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-05",
+    "question": "Define VirtualBox and explain its role in Week 05.",
+    "answer": "VirtualBox: Desktop virtualization platform for running lab virtual machines.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-05",
+      "virtualization",
+      "labs"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-06",
+    "question": "Define SSH and explain its role in Week 05.",
+    "answer": "SSH: Secure Shell protocol for encrypted remote administration.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-05",
+      "linux",
+      "networking",
+      "security"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-07",
+    "question": "How do Linux Kernel and Shell differ in practical troubleshooting or analysis?",
+    "answer": "Linux Kernel and Shell solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-05",
+      "comparison"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-02",
+      "week-05-day-04",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-08",
+    "question": "You are executing this week's focus: \"Linux ramp-up and first VM build\". Which concept should you verify early, and why?",
+    "answer": "Start with sudo. Critical for safe privilege escalation and admin accountability. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "foundation",
+      "week-05",
+      "application"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-01",
+      "week-05-day-03",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-05-09",
+    "question": "What is the expected outcome for Week 05?",
+    "answer": "Checkpoint: Can navigate Linux comfortably enough to start labs and tooling.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "foundation",
+      "week-05",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "foundation"
+    ],
+    "week_refs": [
+      5
+    ],
+    "day_refs": [
+      "week-05-day-02",
+      "week-05-day-03",
+      "week-05-day-04",
+      "week-05-day-05",
+      "week-05-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-01",
+    "question": "Define OSI Model and explain its role in Week 06.",
+    "answer": "OSI Model: Seven-layer conceptual model describing how network communication functions.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "fundamentals"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-02",
+    "question": "Define TCP/IP Model and explain its role in Week 06.",
+    "answer": "TCP/IP Model: Practical networking model used to map real internet protocol behavior.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "fundamentals"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-04",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-03",
+    "question": "Define Ethernet Frame and explain its role in Week 06.",
+    "answer": "Ethernet Frame: Data-link encapsulation format used on Ethernet networks.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "ethernet"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-04",
+    "question": "Define MAC Address and explain its role in Week 06.",
+    "answer": "MAC Address: Hardware identifier used by network interfaces on local segments.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "ethernet"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-05",
+    "question": "Define Switch and explain its role in Week 06.",
+    "answer": "Switch: Layer 2 device that forwards frames based on MAC address tables.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-06",
+    "question": "Define Network Topology and explain its role in Week 06.",
+    "answer": "Network Topology: Physical or logical arrangement of network devices and connections.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-06",
+      "design"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-07",
+    "question": "How do OSI Model and TCP/IP Model differ in practical troubleshooting or analysis?",
+    "answer": "OSI Model and TCP/IP Model solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-02",
+      "week-06-day-04",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-08",
+    "question": "You are executing this week's focus: \"Networking foundations: models, media, devices, and topologies\". Which concept should you verify early, and why?",
+    "answer": "Start with Ethernet Frame. Frame-level understanding helps with switching and capture analysis. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-06",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-01",
+      "week-06-day-03",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-06-09",
+    "question": "What is the expected outcome for Week 06?",
+    "answer": "Checkpoint: Can describe how data moves through a simple network.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-06",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      6
+    ],
+    "day_refs": [
+      "week-06-day-02",
+      "week-06-day-03",
+      "week-06-day-04",
+      "week-06-day-05",
+      "week-06-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-01",
+    "question": "Define Switch and explain its role in Week 07.",
+    "answer": "Switch: Layer 2 device that forwards frames based on MAC address tables.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-02",
+    "question": "Define VLAN and explain its role in Week 07.",
+    "answer": "VLAN: Virtual LAN used to segment broadcast domains on switched networks.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07",
+      "segmentation"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-04",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-03",
+    "question": "Define Spanning Tree Protocol and explain its role in Week 07.",
+    "answer": "Spanning Tree Protocol: Protocol that prevents switching loops by managing redundant paths.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-07",
+      "switching"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-04",
+    "question": "Define Router and explain its role in Week 07.",
+    "answer": "Router: Layer 3 device that forwards packets between networks.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-05",
+    "question": "Define Default Gateway and explain its role in Week 07.",
+    "answer": "Default Gateway: Router path used when a host sends traffic outside its local subnet.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07",
+      "routing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-06",
+    "question": "Define Routing Table and explain its role in Week 07.",
+    "answer": "Routing Table: Lookup data used by hosts and routers to choose next-hop paths.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07",
+      "routing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-07",
+    "question": "How do Switch and VLAN differ in practical troubleshooting or analysis?",
+    "answer": "Switch and VLAN solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-02",
+      "week-07-day-04",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-08",
+    "question": "You are executing this week's focus: \"Ethernet, switching, routing, and gateways\". Which concept should you verify early, and why?",
+    "answer": "Start with Spanning Tree Protocol. Loop prevention is essential for stable Layer 2 operations. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-07",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-01",
+      "week-07-day-03",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-07-09",
+    "question": "What is the expected outcome for Week 07?",
+    "answer": "Checkpoint: Can explain when a switch is enough and when a router is required.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-07",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      7
+    ],
+    "day_refs": [
+      "week-07-day-02",
+      "week-07-day-03",
+      "week-07-day-04",
+      "week-07-day-05",
+      "week-07-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-01",
+    "question": "Define IPv4 and explain its role in Week 08.",
+    "answer": "IPv4: 32-bit addressing protocol widely used for internet and private networks.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-02",
+    "question": "Define CIDR and explain its role in Week 08.",
+    "answer": "CIDR: Classless Inter-Domain Routing notation for subnet masks and prefixes.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-04",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-03",
+    "question": "Define Subnet Mask and explain its role in Week 08.",
+    "answer": "Subnet Mask: Bitmask that separates network and host portions of an IP address.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-04",
+    "question": "Define Private IP and explain its role in Week 08.",
+    "answer": "Private IP: Non-routable address range intended for internal networks.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-05",
+    "question": "Define Public IP and explain its role in Week 08.",
+    "answer": "Public IP: Globally routable address visible on the internet.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-06",
+    "question": "Define Subnetting and explain its role in Week 08.",
+    "answer": "Subnetting: Practice of dividing networks into smaller addressable segments.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "addressing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-07",
+    "question": "How do IPv4 and CIDR differ in practical troubleshooting or analysis?",
+    "answer": "IPv4 and CIDR solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-02",
+      "week-08-day-04",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-08",
+    "question": "You are executing this week's focus: \"IPv4 addressing, subnetting, and address planning\". Which concept should you verify early, and why?",
+    "answer": "Start with Subnet Mask. Incorrect masks break host-to-host communication patterns. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-08",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-01",
+      "week-08-day-03",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-08-09",
+    "question": "What is the expected outcome for Week 08?",
+    "answer": "Checkpoint: Can read and plan IPv4 subnets for small environments.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-08",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      8
+    ],
+    "day_refs": [
+      "week-08-day-02",
+      "week-08-day-03",
+      "week-08-day-04",
+      "week-08-day-05",
+      "week-08-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-01",
+    "question": "Define TCP and explain its role in Week 09.",
+    "answer": "TCP: Connection-oriented transport protocol that prioritizes reliability and ordered delivery.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "transport"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-02",
+    "question": "Define UDP and explain its role in Week 09.",
+    "answer": "UDP: Connectionless transport protocol optimized for low overhead and speed.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "transport"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-04",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-03",
+    "question": "Define Port Number and explain its role in Week 09.",
+    "answer": "Port Number: Transport-layer identifier that maps traffic to a specific service.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "services"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-04",
+    "question": "Define DNS and explain its role in Week 09.",
+    "answer": "DNS: Domain Name System that resolves hostnames to IP addresses.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "services"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-05",
+    "question": "Define NAT and explain its role in Week 09.",
+    "answer": "NAT: Network Address Translation that maps internal addresses to external addresses.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "routing"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-06",
+    "question": "Define TCP Three-Way Handshake and explain its role in Week 09.",
+    "answer": "TCP Three-Way Handshake: TCP setup sequence using SYN, SYN-ACK, and ACK.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "transport"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-07",
+    "question": "How do TCP and UDP differ in practical troubleshooting or analysis?",
+    "answer": "TCP and UDP solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-02",
+      "week-09-day-04",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-08",
+    "question": "You are executing this week's focus: \"TCP, UDP, ports, DNS, DHCP, NAT, and service flow\". Which concept should you verify early, and why?",
+    "answer": "Start with Port Number. Port mapping is central to firewall rules and service triage. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-09",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-01",
+      "week-09-day-03",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-09-09",
+    "question": "What is the expected outcome for Week 09?",
+    "answer": "Checkpoint: Can narrate the service path from 'join network' to 'page loads.'. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-09",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      9
+    ],
+    "day_refs": [
+      "week-09-day-02",
+      "week-09-day-03",
+      "week-09-day-04",
+      "week-09-day-05",
+      "week-09-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-01",
+    "question": "Define SSID and explain its role in Week 10.",
+    "answer": "SSID: Wireless network name advertised by an access point.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-10",
+      "wireless"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-02",
+    "question": "Define WPA3 and explain its role in Week 10.",
+    "answer": "WPA3: Modern Wi-Fi security standard with stronger protections than earlier protocols.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-10",
+      "wireless",
+      "security"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-04",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-03",
+    "question": "Define SOHO Router and explain its role in Week 10.",
+    "answer": "SOHO Router: Integrated gateway device common in small office and home networks.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-10",
+      "design"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-04",
+    "question": "Define Cloud Service Model and explain its role in Week 10.",
+    "answer": "Cloud Service Model: Service delivery layer such as IaaS, PaaS, or SaaS.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-10",
+      "cloud",
+      "security"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-05",
+    "question": "Define Firewall and explain its role in Week 10.",
+    "answer": "Firewall: Control that allows or blocks traffic based on policy rules.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-10",
+      "security"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-06",
+    "question": "Define Network Segmentation and explain its role in Week 10.",
+    "answer": "Network Segmentation: Separation of network zones to reduce lateral movement and contain impact.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-10",
+      "security"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-07",
+    "question": "How do SSID and WPA3 differ in practical troubleshooting or analysis?",
+    "answer": "SSID and WPA3 solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-10",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-02",
+      "week-10-day-04",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-08",
+    "question": "You are executing this week's focus: \"Wireless, SOHO design, cloud, and network security basics\". Which concept should you verify early, and why?",
+    "answer": "Start with SOHO Router. Common learning environment for routing, Wi-Fi, and firewall basics. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-10",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-01",
+      "week-10-day-03",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-10-09",
+    "question": "What is the expected outcome for Week 10?",
+    "answer": "Checkpoint: Can explain baseline protections for a small office or home network.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-10",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      10
+    ],
+    "day_refs": [
+      "week-10-day-02",
+      "week-10-day-03",
+      "week-10-day-04",
+      "week-10-day-05",
+      "week-10-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-01",
+    "question": "Define Wireshark and explain its role in Week 11.",
+    "answer": "Wireshark: Packet capture and analysis tool for network troubleshooting and investigations.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "analysis"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-02",
+    "question": "Define PCAP and explain its role in Week 11.",
+    "answer": "PCAP: Packet capture file format storing recorded network traffic.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-11",
+      "analysis"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-04",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-03",
+    "question": "Define Packet Filter and explain its role in Week 11.",
+    "answer": "Packet Filter: Query expression used to isolate relevant traffic in a capture.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "analysis"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-04",
+    "question": "Define Traceroute and explain its role in Week 11.",
+    "answer": "Traceroute: Diagnostic command that reveals path hops to a destination.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-05",
+    "question": "Define Ping and explain its role in Week 11.",
+    "answer": "Ping: ICMP-based connectivity test used for basic reachability checks.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-06",
+    "question": "Define Latency and explain its role in Week 11.",
+    "answer": "Latency: Time delay between request and response across a path.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-11",
+      "performance"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-07",
+    "question": "How do Wireshark and PCAP differ in practical troubleshooting or analysis?",
+    "answer": "Wireshark and PCAP solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-02",
+      "week-11-day-04",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-08",
+    "question": "You are executing this week's focus: \"Wireshark and troubleshooting with packet evidence\". Which concept should you verify early, and why?",
+    "answer": "Start with Packet Filter. Filtering is essential to find useful evidence quickly. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-11",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-01",
+      "week-11-day-03",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-11-09",
+    "question": "What is the expected outcome for Week 11?",
+    "answer": "Checkpoint: Can use packet captures to support an explanation instead of guessing.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-11",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      11
+    ],
+    "day_refs": [
+      "week-11-day-02",
+      "week-11-day-03",
+      "week-11-day-04",
+      "week-11-day-05",
+      "week-11-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-01",
+    "question": "Define HTTP Request and explain its role in Week 12.",
+    "answer": "HTTP Request: Client message sent to a web server for a resource or action.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "web"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-02",
+    "question": "Define DNS Resolution and explain its role in Week 12.",
+    "answer": "DNS Resolution: Lookup process translating a hostname to one or more IP addresses.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "web"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-04",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-03",
+    "question": "Define TLS Handshake and explain its role in Week 12.",
+    "answer": "TLS Handshake: Cryptographic negotiation that establishes secure session parameters.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "web",
+      "crypto"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-04",
+    "question": "Define Web Server and explain its role in Week 12.",
+    "answer": "Web Server: Service that hosts and delivers web content over HTTP/HTTPS.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "web",
+      "infrastructure"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-05",
+    "question": "Define Reverse Proxy and explain its role in Week 12.",
+    "answer": "Reverse Proxy: Service that receives client requests and forwards them to backend servers.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-12",
+      "web",
+      "architecture"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-06",
+    "question": "Define Session Token and explain its role in Week 12.",
+    "answer": "Session Token: Identifier that binds a user to an authenticated session.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "web",
+      "security"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-07",
+    "question": "How do HTTP Request and DNS Resolution differ in practical troubleshooting or analysis?",
+    "answer": "HTTP Request and DNS Resolution solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "comparison"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-02",
+      "week-12-day-04",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-08",
+    "question": "You are executing this week's focus: \"TryHackMe Pre Security and end-to-end web request capstone\". Which concept should you verify early, and why?",
+    "answer": "Start with TLS Handshake. Critical for secure web traffic and certificate validation. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "networking",
+      "week-12",
+      "application"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-01",
+      "week-12-day-03",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-12-09",
+    "question": "What is the expected outcome for Week 12?",
+    "answer": "Checkpoint: Can explain internet plumbing clearly enough for a manager.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "troubleshooting",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "networking",
+      "week-12",
+      "troubleshooting"
+    ],
+    "phase_refs": [
+      "networking"
+    ],
+    "week_refs": [
+      12
+    ],
+    "day_refs": [
+      "week-12-day-02",
+      "week-12-day-03",
+      "week-12-day-04",
+      "week-12-day-05",
+      "week-12-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-01",
+    "question": "Define CIA Triad and explain its role in Week 13.",
+    "answer": "CIA Triad: Confidentiality, Integrity, and Availability security objective model.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "foundations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-02",
+    "question": "Define Risk and explain its role in Week 13.",
+    "answer": "Risk: Potential for loss when a threat exploits a vulnerability.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "grc",
+      "foundations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-04",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-03",
+    "question": "Define Threat and explain its role in Week 13.",
+    "answer": "Threat: Potential cause of unwanted impact to an asset or process.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "foundations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-04",
+    "question": "Define Vulnerability and explain its role in Week 13.",
+    "answer": "Vulnerability: Weakness that can be exploited to violate security objectives.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "foundations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-05",
+    "question": "Define Control and explain its role in Week 13.",
+    "answer": "Control: Safeguard that prevents, detects, or corrects security issues.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "grc",
+      "controls"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-06",
+    "question": "Define Security Framework and explain its role in Week 13.",
+    "answer": "Security Framework: Structured reference model such as NIST CSF used to organize security practices.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-13",
+      "grc",
+      "foundations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-07",
+    "question": "How do CIA Triad and Risk differ in practical troubleshooting or analysis?",
+    "answer": "CIA Triad and Risk solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-02",
+      "week-13-day-04",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-08",
+    "question": "You are executing this week's focus: \"Google Course 1: Foundations of Cybersecurity\". Which concept should you verify early, and why?",
+    "answer": "Start with Threat. Threat context helps prioritize defensive controls. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-13",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-01",
+      "week-13-day-03",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-13-09",
+    "question": "What is the expected outcome for Week 13?",
+    "answer": "Checkpoint: Can define cybersecurity in business terms, not just technical terms.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-13",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      13
+    ],
+    "day_refs": [
+      "week-13-day-02",
+      "week-13-day-03",
+      "week-13-day-04",
+      "week-13-day-05",
+      "week-13-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-01",
+    "question": "Define Risk Register and explain its role in Week 14.",
+    "answer": "Risk Register: Documented inventory of identified risks, ratings, owners, and treatments.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-02",
+    "question": "Define Likelihood and explain its role in Week 14.",
+    "answer": "Likelihood: Estimated probability that a risk event will occur.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-04",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-03",
+    "question": "Define Impact and explain its role in Week 14.",
+    "answer": "Impact: Estimated consequence if a risk event occurs.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-04",
+    "question": "Define Risk Treatment and explain its role in Week 14.",
+    "answer": "Risk Treatment: Chosen approach to address risk: mitigate, transfer, avoid, or accept.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-05",
+    "question": "Define Qualitative Risk Analysis and explain its role in Week 14.",
+    "answer": "Qualitative Risk Analysis: Risk assessment using categorical scales like low/medium/high.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-06",
+    "question": "Define Quantitative Risk Analysis and explain its role in Week 14.",
+    "answer": "Quantitative Risk Analysis: Risk assessment using numerical estimates such as expected loss values.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-14",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-07",
+    "question": "How do Risk Register and Likelihood differ in practical troubleshooting or analysis?",
+    "answer": "Risk Register and Likelihood solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-14",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-02",
+      "week-14-day-04",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-08",
+    "question": "You are executing this week's focus: \"Google Course 2: Play It Safe - Manage Security Risks\". Which concept should you verify early, and why?",
+    "answer": "Start with Impact. Impact helps justify budget and control investments. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-14",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-01",
+      "week-14-day-03",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-14-09",
+    "question": "What is the expected outcome for Week 14?",
+    "answer": "Checkpoint: Can distinguish risk from vulnerability and link controls to business priorities.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-14",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      14
+    ],
+    "day_refs": [
+      "week-14-day-02",
+      "week-14-day-03",
+      "week-14-day-04",
+      "week-14-day-05",
+      "week-14-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-01",
+    "question": "Define Intrusion Detection and explain its role in Week 15.",
+    "answer": "Intrusion Detection: Monitoring approach that identifies suspicious or malicious activity.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "detection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-02",
+    "question": "Define Intrusion Prevention and explain its role in Week 15.",
+    "answer": "Intrusion Prevention: Inline security control that blocks malicious activity in real time.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "detection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-04",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-03",
+    "question": "Define SIEM and explain its role in Week 15.",
+    "answer": "SIEM: Security Information and Event Management platform for log analysis and alerting.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-04",
+    "question": "Define Log Source and explain its role in Week 15.",
+    "answer": "Log Source: System or service that generates telemetry ingested for analysis.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-05",
+    "question": "Define Network Baseline and explain its role in Week 15.",
+    "answer": "Network Baseline: Documented normal traffic behavior used to identify anomalies.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-15",
+      "detection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-06",
+    "question": "Define Hardening and explain its role in Week 15.",
+    "answer": "Hardening: Process of reducing attack surface through secure configuration.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-07",
+    "question": "How do Intrusion Detection and Intrusion Prevention differ in practical troubleshooting or analysis?",
+    "answer": "Intrusion Detection and Intrusion Prevention solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-02",
+      "week-15-day-04",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-08",
+    "question": "You are executing this week's focus: \"Google Course 3: Networks and Network Security\". Which concept should you verify early, and why?",
+    "answer": "Start with SIEM. Central to modern SOC workflows and incident visibility. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-15",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-01",
+      "week-15-day-03",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-15-09",
+    "question": "What is the expected outcome for Week 15?",
+    "answer": "Checkpoint: Can describe how network design choices affect security outcomes.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-15",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      15
+    ],
+    "day_refs": [
+      "week-15-day-02",
+      "week-15-day-03",
+      "week-15-day-04",
+      "week-15-day-05",
+      "week-15-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-01",
+    "question": "Define Linux Permissions and explain its role in Week 16.",
+    "answer": "Linux Permissions: Read/write/execute access model controlling file and directory operations.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-16",
+      "linux"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-02",
+    "question": "Define chmod and explain its role in Week 16.",
+    "answer": "chmod: Linux command used to modify file permission bits.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-16",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-04",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-03",
+    "question": "Define chown and explain its role in Week 16.",
+    "answer": "chown: Linux command used to change file owner and group.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-16",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-04",
+    "question": "Define Process and explain its role in Week 16.",
+    "answer": "Process: Running program instance with its own state and resource usage.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-16",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-05",
+    "question": "Define systemctl and explain its role in Week 16.",
+    "answer": "systemctl: Command-line utility for managing services in systemd-based Linux systems.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-16",
+      "linux",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-06",
+    "question": "Define cron and explain its role in Week 16.",
+    "answer": "cron: Linux scheduling system for recurring task automation.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-16",
+      "linux",
+      "automation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-07",
+    "question": "How do Linux Permissions and chmod differ in practical troubleshooting or analysis?",
+    "answer": "Linux Permissions and chmod solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-16",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-02",
+      "week-16-day-04",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-08",
+    "question": "You are executing this week's focus: \"Google Course 4: Linux and SQL (part 1 - Linux)\". Which concept should you verify early, and why?",
+    "answer": "Start with chown. Ownership control is key to privilege boundaries. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-16",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-01",
+      "week-16-day-03",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-16-09",
+    "question": "What is the expected outcome for Week 16?",
+    "answer": "Checkpoint: Can navigate Linux and explain permissions without memorizing blindly.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-16",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      16
+    ],
+    "day_refs": [
+      "week-16-day-02",
+      "week-16-day-03",
+      "week-16-day-04",
+      "week-16-day-05",
+      "week-16-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-01",
+    "question": "Define SQL Query and explain its role in Week 17.",
+    "answer": "SQL Query: Structured request to retrieve or manipulate data in a relational database.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-17",
+      "data"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-02",
+    "question": "Define SELECT Statement and explain its role in Week 17.",
+    "answer": "SELECT Statement: SQL command used to retrieve data from one or more tables.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-17",
+      "data",
+      "sql"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-04",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-03",
+    "question": "Define WHERE Clause and explain its role in Week 17.",
+    "answer": "WHERE Clause: SQL condition that filters returned rows.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-17",
+      "data",
+      "sql"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-04",
+    "question": "Define JOIN and explain its role in Week 17.",
+    "answer": "JOIN: SQL operation that combines related rows across multiple tables.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-17",
+      "data",
+      "sql"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-05",
+    "question": "Define Input Validation and explain its role in Week 17.",
+    "answer": "Input Validation: Process of checking user input for format, length, and allowed values.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-17",
+      "appsec"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-06",
+    "question": "Define SQL Injection and explain its role in Week 17.",
+    "answer": "SQL Injection: Attack that manipulates SQL queries through untrusted input.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-17",
+      "appsec",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-07",
+    "question": "How do SQL Query and SELECT Statement differ in practical troubleshooting or analysis?",
+    "answer": "SQL Query and SELECT Statement solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-17",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-02",
+      "week-17-day-04",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-08",
+    "question": "You are executing this week's focus: \"Google Course 4: Linux and SQL (part 2 - SQL)\". Which concept should you verify early, and why?",
+    "answer": "Start with WHERE Clause. Filtering precision is critical for accurate analysis. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-17",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-01",
+      "week-17-day-03",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-17-09",
+    "question": "What is the expected outcome for Week 17?",
+    "answer": "Checkpoint: Can read and write basic SQL queries for security-relevant data.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-17",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      17
+    ],
+    "day_refs": [
+      "week-17-day-02",
+      "week-17-day-03",
+      "week-17-day-04",
+      "week-17-day-05",
+      "week-17-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-01",
+    "question": "Define Asset Inventory and explain its role in Week 18.",
+    "answer": "Asset Inventory: Structured list of hardware, software, and data assets in scope.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "grc",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-02",
+    "question": "Define Data Classification and explain its role in Week 18.",
+    "answer": "Data Classification: Labeling data by sensitivity and handling requirements.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "grc",
+      "data"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-04",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-03",
+    "question": "Define Threat Model and explain its role in Week 18.",
+    "answer": "Threat Model: Structured analysis of potential attackers, paths, and control gaps.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "analysis"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-04",
+    "question": "Define Attack Vector and explain its role in Week 18.",
+    "answer": "Attack Vector: Path or method used by an attacker to reach a target.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-05",
+    "question": "Define Vulnerability Scan and explain its role in Week 18.",
+    "answer": "Vulnerability Scan: Automated assessment for known weaknesses in systems and software.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-06",
+    "question": "Define CVSS and explain its role in Week 18.",
+    "answer": "CVSS: Common Vulnerability Scoring System for rating vulnerability severity.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-07",
+    "question": "How do Asset Inventory and Data Classification differ in practical troubleshooting or analysis?",
+    "answer": "Asset Inventory and Data Classification solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-02",
+      "week-18-day-04",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-08",
+    "question": "You are executing this week's focus: \"Google Course 5: Assets, threats, and vulnerabilities (part 1)\". Which concept should you verify early, and why?",
+    "answer": "Start with Threat Model. Improves proactive risk reduction before incidents occur. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-18",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-01",
+      "week-18-day-03",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-18-09",
+    "question": "What is the expected outcome for Week 18?",
+    "answer": "Checkpoint: Can classify assets and explain why not all data deserves the same treatment.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-18",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      18
+    ],
+    "day_refs": [
+      "week-18-day-02",
+      "week-18-day-03",
+      "week-18-day-04",
+      "week-18-day-05",
+      "week-18-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-01",
+    "question": "Define Mitigation and explain its role in Week 19.",
+    "answer": "Mitigation: Action that lowers likelihood or impact of a risk.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-19",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-02",
+    "question": "Define Exploit and explain its role in Week 19.",
+    "answer": "Exploit: Code or technique that takes advantage of a vulnerability.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-19",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-04",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-03",
+    "question": "Define Compensating Control and explain its role in Week 19.",
+    "answer": "Compensating Control: Alternative safeguard used when a primary control is not feasible.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-19",
+      "grc",
+      "controls"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-04",
+    "question": "Define Residual Risk and explain its role in Week 19.",
+    "answer": "Residual Risk: Risk that remains after controls are implemented.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-19",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-05",
+    "question": "Define Exposure and explain its role in Week 19.",
+    "answer": "Exposure: Degree to which assets are reachable or vulnerable to threat activity.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-19",
+      "risk"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-06",
+    "question": "Define Threat Intelligence and explain its role in Week 19.",
+    "answer": "Threat Intelligence: Contextual information about threat actors, tactics, and indicators.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-19",
+      "detection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-07",
+    "question": "How do Mitigation and Exploit differ in practical troubleshooting or analysis?",
+    "answer": "Mitigation and Exploit solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-19",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-02",
+      "week-19-day-04",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-08",
+    "question": "You are executing this week's focus: \"Google Course 5: Assets, threats, and vulnerabilities (part 2)\". Which concept should you verify early, and why?",
+    "answer": "Start with Compensating Control. Maintains risk reduction while constraints are resolved. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-19",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-01",
+      "week-19-day-03",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-19-09",
+    "question": "What is the expected outcome for Week 19?",
+    "answer": "Checkpoint: Can reason from asset to attacker to mitigation.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-19",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      19
+    ],
+    "day_refs": [
+      "week-19-day-02",
+      "week-19-day-03",
+      "week-19-day-04",
+      "week-19-day-05",
+      "week-19-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-01",
+    "question": "Define Alert Triage and explain its role in Week 20.",
+    "answer": "Alert Triage: Initial analysis process that validates and prioritizes alerts.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-02",
+    "question": "Define False Positive and explain its role in Week 20.",
+    "answer": "False Positive: Alert that appears malicious but is benign after investigation.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-04",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-03",
+    "question": "Define Indicator of Compromise and explain its role in Week 20.",
+    "answer": "Indicator of Compromise: Observable evidence suggesting malicious activity occurred.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "detection"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-04",
+    "question": "Define Incident Severity and explain its role in Week 20.",
+    "answer": "Incident Severity: Impact-based classification used to prioritize incident response.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-05",
+    "question": "Define Containment and explain its role in Week 20.",
+    "answer": "Containment: Response action that limits incident spread and immediate damage.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-06",
+    "question": "Define Eradication and explain its role in Week 20.",
+    "answer": "Eradication: Removal of attacker presence, malicious artifacts, and root causes.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-07",
+    "question": "How do Alert Triage and False Positive differ in practical troubleshooting or analysis?",
+    "answer": "Alert Triage and False Positive solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-02",
+      "week-20-day-04",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-08",
+    "question": "You are executing this week's focus: \"Google Course 6: Detection and response (part 1)\". Which concept should you verify early, and why?",
+    "answer": "Start with Indicator of Compromise. IOCs accelerate detection and scoping workflows. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-20",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-01",
+      "week-20-day-03",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-20-09",
+    "question": "What is the expected outcome for Week 20?",
+    "answer": "Checkpoint: Can outline the incident lifecycle and the evidence sources used along the way.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-20",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      20
+    ],
+    "day_refs": [
+      "week-20-day-02",
+      "week-20-day-03",
+      "week-20-day-04",
+      "week-20-day-05",
+      "week-20-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-01",
+    "question": "Define Recovery and explain its role in Week 21.",
+    "answer": "Recovery: Restoration of normal operations after incident containment and eradication.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-02",
+    "question": "Define Playbook and explain its role in Week 21.",
+    "answer": "Playbook: Documented response workflow for recurring security scenarios.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-04",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-03",
+    "question": "Define Escalation Path and explain its role in Week 21.",
+    "answer": "Escalation Path: Defined process for raising incidents to appropriate teams and leadership.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-04",
+    "question": "Define Case Management and explain its role in Week 21.",
+    "answer": "Case Management: Tracking and coordination of investigation tasks, evidence, and decisions.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-05",
+    "question": "Define Timeline Analysis and explain its role in Week 21.",
+    "answer": "Timeline Analysis: Reconstruction of incident events in chronological order.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "forensics"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-06",
+    "question": "Define Post-Incident Review and explain its role in Week 21.",
+    "answer": "Post-Incident Review: Structured retrospective focused on lessons and control improvements.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "soc",
+      "improvement"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-07",
+    "question": "How do Recovery and Playbook differ in practical troubleshooting or analysis?",
+    "answer": "Recovery and Playbook solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-02",
+      "week-21-day-04",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-08",
+    "question": "You are executing this week's focus: \"Google Course 6: Detection and response (part 2)\". Which concept should you verify early, and why?",
+    "answer": "Start with Escalation Path. Prevents delays when critical decisions are required. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-21",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-01",
+      "week-21-day-03",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-21-09",
+    "question": "What is the expected outcome for Week 21?",
+    "answer": "Checkpoint: Can explain how a SOC turns alerts into actions and communications.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-21",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      21
+    ],
+    "day_refs": [
+      "week-21-day-02",
+      "week-21-day-03",
+      "week-21-day-04",
+      "week-21-day-05",
+      "week-21-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-01",
+    "question": "Define Python Script and explain its role in Week 22.",
+    "answer": "Python Script: Executable Python code used to automate repetitive tasks.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-02",
+    "question": "Define Variable and explain its role in Week 22.",
+    "answer": "Variable: Named value container used in programming logic.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-04",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-03",
+    "question": "Define Function and explain its role in Week 22.",
+    "answer": "Function: Reusable block of code that performs a defined task.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-04",
+    "question": "Define Loop and explain its role in Week 22.",
+    "answer": "Loop: Programming control structure that repeats actions over data or conditions.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-05",
+    "question": "Define Conditional and explain its role in Week 22.",
+    "answer": "Conditional: Logic branch that executes code based on true/false evaluation.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-06",
+    "question": "Define Error Handling and explain its role in Week 22.",
+    "answer": "Error Handling: Code pattern that captures and responds to runtime failures safely.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-22",
+      "automation",
+      "python"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-07",
+    "question": "How do Python Script and Variable differ in practical troubleshooting or analysis?",
+    "answer": "Python Script and Variable solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-22",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-02",
+      "week-22-day-04",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-08",
+    "question": "You are executing this week's focus: \"Google Course 7: Python automation (part 1)\". Which concept should you verify early, and why?",
+    "answer": "Start with Function. Functions improve script structure and maintainability. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-22",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-01",
+      "week-22-day-03",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-22-09",
+    "question": "What is the expected outcome for Week 22?",
+    "answer": "Checkpoint: Can read and modify short Python scripts without freezing.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-22",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      22
+    ],
+    "day_refs": [
+      "week-22-day-02",
+      "week-22-day-03",
+      "week-22-day-04",
+      "week-22-day-05",
+      "week-22-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-01",
+    "question": "Define API and explain its role in Week 23.",
+    "answer": "API: Application Programming Interface used to exchange data between systems.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-23",
+      "automation",
+      "integration"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-02",
+    "question": "Define HTTP Method and explain its role in Week 23.",
+    "answer": "HTTP Method: Action verb in HTTP such as GET, POST, PUT, or DELETE.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-23",
+      "web",
+      "api"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-04",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-03",
+    "question": "Define Automation Playbook and explain its role in Week 23.",
+    "answer": "Automation Playbook: Defined sequence of automated actions for a repeatable security task.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-23",
+      "automation",
+      "operations"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-04",
+    "question": "Define Regular Expression and explain its role in Week 23.",
+    "answer": "Regular Expression: Pattern syntax used to match and extract structured text.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-23",
+      "automation",
+      "analysis"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-05",
+    "question": "Define File Parsing and explain its role in Week 23.",
+    "answer": "File Parsing: Reading structured or semi-structured files into usable data.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-23",
+      "automation",
+      "analysis"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-06",
+    "question": "Define Version Control and explain its role in Week 23.",
+    "answer": "Version Control: System for tracking code changes and collaboration history.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-23",
+      "automation",
+      "engineering"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-07",
+    "question": "How do API and HTTP Method differ in practical troubleshooting or analysis?",
+    "answer": "API and HTTP Method solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-23",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-02",
+      "week-23-day-04",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-08",
+    "question": "You are executing this week's focus: \"Google Course 7: Python automation (part 2)\". Which concept should you verify early, and why?",
+    "answer": "Start with Automation Playbook. Enables consistent execution and easier quality control. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-23",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-01",
+      "week-23-day-03",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-23-09",
+    "question": "What is the expected outcome for Week 23?",
+    "answer": "Checkpoint: Can connect automation ideas to real analyst workflows.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-23",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      23
+    ],
+    "day_refs": [
+      "week-23-day-02",
+      "week-23-day-03",
+      "week-23-day-04",
+      "week-23-day-05",
+      "week-23-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-01",
+    "question": "Define Resume Tailoring and explain its role in Week 24.",
+    "answer": "Resume Tailoring: Adjusting resume content to align with a specific role.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-02",
+    "question": "Define STAR Method and explain its role in Week 24.",
+    "answer": "STAR Method: Interview storytelling format: Situation, Task, Action, Result.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-04",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-03",
+    "question": "Define Elevator Pitch and explain its role in Week 24.",
+    "answer": "Elevator Pitch: Short professional summary of value, direction, and goals.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-04",
+    "question": "Define Portfolio Artifact and explain its role in Week 24.",
+    "answer": "Portfolio Artifact: Concrete evidence of work quality such as write-ups, diagrams, or labs.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-24",
+      "career",
+      "portfolio"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-05",
+    "question": "Define Interview Question Drill and explain its role in Week 24.",
+    "answer": "Interview Question Drill: Structured practice of common technical and behavioral interview prompts.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-06",
+    "question": "Define Career Story and explain its role in Week 24.",
+    "answer": "Career Story: Narrative linking background, skills, and target role trajectory.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-07",
+    "question": "How do Resume Tailoring and STAR Method differ in practical troubleshooting or analysis?",
+    "answer": "Resume Tailoring and STAR Method solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-24",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-02",
+      "week-24-day-04",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-08",
+    "question": "You are executing this week's focus: \"Google Course 8: Prepare for cybersecurity jobs\". Which concept should you verify early, and why?",
+    "answer": "Start with Elevator Pitch. Useful in networking and screening conversations. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-24",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-01",
+      "week-24-day-03",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-24-09",
+    "question": "What is the expected outcome for Week 24?",
+    "answer": "Checkpoint: Can talk about your work in evidence-based, employer-friendly language.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-24",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      24
+    ],
+    "day_refs": [
+      "week-24-day-02",
+      "week-24-day-03",
+      "week-24-day-04",
+      "week-24-day-05",
+      "week-24-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-01",
+    "question": "Define LinkedIn Profile and explain its role in Week 25.",
+    "answer": "LinkedIn Profile: Professional public profile highlighting role alignment and proof-of-work.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-02",
+    "question": "Define Networking Outreach and explain its role in Week 25.",
+    "answer": "Networking Outreach: Intentional communication with peers, mentors, and hiring contacts.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-04",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-03",
+    "question": "Define Job Tracker and explain its role in Week 25.",
+    "answer": "Job Tracker: System for managing applications, follow-ups, and interview stages.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-04",
+    "question": "Define Keyword Optimization and explain its role in Week 25.",
+    "answer": "Keyword Optimization: Aligning profile and resume terms with job descriptions and ATS logic.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-05",
+    "question": "Define Application Funnel and explain its role in Week 25.",
+    "answer": "Application Funnel: Measurement view of applications from submit to offer stages.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-06",
+    "question": "Define AI Assistant Guardrails and explain its role in Week 25.",
+    "answer": "AI Assistant Guardrails: Rules that keep AI-supported job-search outputs accurate and authentic.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "career",
+      "ai"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-07",
+    "question": "How do LinkedIn Profile and Networking Outreach differ in practical troubleshooting or analysis?",
+    "answer": "LinkedIn Profile and Networking Outreach solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-25",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-02",
+      "week-25-day-04",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-08",
+    "question": "You are executing this week's focus: \"Google Course 9: Job search systems, AI support, and profile polish\". Which concept should you verify early, and why?",
+    "answer": "Start with Job Tracker. Prevents dropped opportunities and supports iteration. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-25",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-01",
+      "week-25-day-03",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-25-09",
+    "question": "What is the expected outcome for Week 25?",
+    "answer": "Checkpoint: Your online profile and job-search system are live and usable.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-25",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      25
+    ],
+    "day_refs": [
+      "week-25-day-02",
+      "week-25-day-03",
+      "week-25-day-04",
+      "week-25-day-05",
+      "week-25-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-01",
+    "question": "Define Identity and explain its role in Week 26.",
+    "answer": "Identity: Digital representation of a user, service, or device in an access system.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "iam"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-02",
+    "question": "Define Authentication and explain its role in Week 26.",
+    "answer": "Authentication: Process of verifying claimed identity.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "iam"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-04",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-03",
+    "question": "Define Authorization and explain its role in Week 26.",
+    "answer": "Authorization: Process of granting permitted actions to an authenticated identity.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "iam"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-04",
+    "question": "Define Accounting (AAA) and explain its role in Week 26.",
+    "answer": "Accounting (AAA): Tracking and logging of identity actions for accountability.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-26",
+      "iam"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-05",
+    "question": "Define Hashing and explain its role in Week 26.",
+    "answer": "Hashing: One-way transformation of data into a fixed-length digest.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "crypto"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-06",
+    "question": "Define Encryption and explain its role in Week 26.",
+    "answer": "Encryption: Reversible transformation that protects confidentiality with keys.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "crypto"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-07",
+    "question": "How do Identity and Authentication differ in practical troubleshooting or analysis?",
+    "answer": "Identity and Authentication solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-02",
+      "week-26-day-04",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-08",
+    "question": "You are executing this week's focus: \"Security+ reinforcement: IAM, crypto, and social engineering\". Which concept should you verify early, and why?",
+    "answer": "Start with Authorization. Authorization errors lead directly to over-privileged access. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-26",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-01",
+      "week-26-day-03",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-26-09",
+    "question": "What is the expected outcome for Week 26?",
+    "answer": "Checkpoint: Can explain core defensive principles clearly and consistently.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-26",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      26
+    ],
+    "day_refs": [
+      "week-26-day-02",
+      "week-26-day-03",
+      "week-26-day-04",
+      "week-26-day-05",
+      "week-26-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-01",
+    "question": "Define Reconnaissance and explain its role in Week 27.",
+    "answer": "Reconnaissance: Information-gathering phase used by attackers before exploitation.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-02",
+    "question": "Define Enumeration and explain its role in Week 27.",
+    "answer": "Enumeration: Active discovery of services, accounts, or resources on a target.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-04",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-03",
+    "question": "Define Privilege Escalation and explain its role in Week 27.",
+    "answer": "Privilege Escalation: Technique for gaining higher permissions than initially granted.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "threats"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-04",
+    "question": "Define Defense in Depth and explain its role in Week 27.",
+    "answer": "Defense in Depth: Layered control strategy so one failed safeguard does not cause total failure.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "controls"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-05",
+    "question": "Define Incident Journal and explain its role in Week 27.",
+    "answer": "Incident Journal: Structured notes capturing incident observations, decisions, and rationale.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-27",
+      "soc",
+      "documentation"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-06",
+    "question": "Define Control Recommendation and explain its role in Week 27.",
+    "answer": "Control Recommendation: Actionable proposal to improve prevention, detection, or response capability.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "grc",
+      "controls"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-07",
+    "question": "How do Reconnaissance and Enumeration differ in practical troubleshooting or analysis?",
+    "answer": "Reconnaissance and Enumeration solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "comparison"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-02",
+      "week-27-day-04",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-08",
+    "question": "You are executing this week's focus: \"TryHackMe Cyber Security 101 + breach journal capstone\". Which concept should you verify early, and why?",
+    "answer": "Start with Privilege Escalation. Major step in many successful attack chains. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "security",
+      "week-27",
+      "application"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-01",
+      "week-27-day-03",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-27-09",
+    "question": "What is the expected outcome for Week 27?",
+    "answer": "Checkpoint: Can translate technical incidents into management language.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "security",
+      "week-27",
+      "management"
+    ],
+    "phase_refs": [
+      "security"
+    ],
+    "week_refs": [
+      27
+    ],
+    "day_refs": [
+      "week-27-day-02",
+      "week-27-day-03",
+      "week-27-day-04",
+      "week-27-day-05",
+      "week-27-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-01",
+    "question": "Define Incident Command and explain its role in Week 28.",
+    "answer": "Incident Command: Leadership structure coordinating decisions and responsibilities during incidents.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "response",
+      "governance"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-02",
+    "question": "Define Playbook and explain its role in Week 28.",
+    "answer": "Playbook: Documented response workflow for recurring security scenarios.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "soc",
+      "response"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-04",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-03",
+    "question": "Define Maturity Model and explain its role in Week 28.",
+    "answer": "Maturity Model: Framework used to assess current capability level and improvement targets.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "governance"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-04",
+    "question": "Define Communication Plan and explain its role in Week 28.",
+    "answer": "Communication Plan: Documented messaging protocol for stakeholders during security events.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "response",
+      "governance"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-05",
+    "question": "Define Evidence Handling and explain its role in Week 28.",
+    "answer": "Evidence Handling: Process for collecting and preserving evidence with integrity.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "forensics"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-06",
+    "question": "Define Tabletop Exercise and explain its role in Week 28.",
+    "answer": "Tabletop Exercise: Scenario-based drill used to test readiness and coordination.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "response",
+      "training"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-07",
+    "question": "How do Incident Command and Playbook differ in practical troubleshooting or analysis?",
+    "answer": "Incident Command and Playbook solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "comparison"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-02",
+      "week-28-day-04",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-08",
+    "question": "You are executing this week's focus: \"CISA incident response materials and playbook thinking\". Which concept should you verify early, and why?",
+    "answer": "Start with Maturity Model. Guides staged security program growth. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "application"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-01",
+      "week-28-day-03",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-28-09",
+    "question": "What is the expected outcome for Week 28?",
+    "answer": "Checkpoint: Can think about incidents in terms of preparation, roles, and business continuity.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-28",
+      "management"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      28
+    ],
+    "day_refs": [
+      "week-28-day-02",
+      "week-28-day-03",
+      "week-28-day-04",
+      "week-28-day-05",
+      "week-28-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-01",
+    "question": "Define Critical Infrastructure and explain its role in Week 29.",
+    "answer": "Critical Infrastructure: Systems essential to societal and economic stability.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-02",
+    "question": "Define Business Impact Analysis and explain its role in Week 29.",
+    "answer": "Business Impact Analysis: Process for identifying operational effects of disruption over time.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc",
+      "resilience"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-04",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-03",
+    "question": "Define Governance and explain its role in Week 29.",
+    "answer": "Governance: Decision framework defining accountability, policy, and oversight.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-04",
+    "question": "Define Compliance and explain its role in Week 29.",
+    "answer": "Compliance: Conformance to laws, regulations, standards, or internal policies.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-05",
+    "question": "Define Risk Assessment and explain its role in Week 29.",
+    "answer": "Risk Assessment: Structured evaluation of risk likelihood, impact, and treatment options.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc",
+      "risk"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-06",
+    "question": "Define Vendor Risk and explain its role in Week 29.",
+    "answer": "Vendor Risk: Risk introduced by third-party suppliers and service providers.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "grc",
+      "third-party"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-07",
+    "question": "How do Critical Infrastructure and Business Impact Analysis differ in practical troubleshooting or analysis?",
+    "answer": "Critical Infrastructure and Business Impact Analysis solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "comparison"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-02",
+      "week-29-day-04",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-08",
+    "question": "You are executing this week's focus: \"Critical infrastructure, governance, risk, and assessment mindset\". Which concept should you verify early, and why?",
+    "answer": "Start with Governance. Strong governance aligns security with business goals. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "application"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-01",
+      "week-29-day-03",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-29-09",
+    "question": "What is the expected outcome for Week 29?",
+    "answer": "Checkpoint: Can talk about cyber in governance and resilience terms, not just tools.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-29",
+      "management"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      29
+    ],
+    "day_refs": [
+      "week-29-day-02",
+      "week-29-day-03",
+      "week-29-day-04",
+      "week-29-day-05",
+      "week-29-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-01",
+    "question": "Define SOC Workflow and explain its role in Week 30.",
+    "answer": "SOC Workflow: End-to-end process from alert intake to closure and lessons learned.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "soc"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-02",
+    "question": "Define Forensic Imaging and explain its role in Week 30.",
+    "answer": "Forensic Imaging: Bit-level copy of media created for evidence analysis.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "forensics"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-04",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-03",
+    "question": "Define Chain of Custody and explain its role in Week 30.",
+    "answer": "Chain of Custody: Record of who handled evidence, when, and why.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "forensics"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-04",
+    "question": "Define Log Correlation and explain its role in Week 30.",
+    "answer": "Log Correlation: Linking events from multiple sources to reveal meaningful patterns.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "soc",
+      "analysis"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-05",
+    "question": "Define Detection Rule and explain its role in Week 30.",
+    "answer": "Detection Rule: Logic used by monitoring systems to trigger alerts.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "soc",
+      "detection"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-06",
+    "question": "Define Triage Queue and explain its role in Week 30.",
+    "answer": "Triage Queue: Ordered list of alerts or cases awaiting analyst review.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "soc",
+      "operations"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-07",
+    "question": "How do SOC Workflow and Forensic Imaging differ in practical troubleshooting or analysis?",
+    "answer": "SOC Workflow and Forensic Imaging solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "comparison"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-02",
+      "week-30-day-04",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-08",
+    "question": "You are executing this week's focus: \"TryHackMe Defensive Security: SOC, forensics, IR, and logs\". Which concept should you verify early, and why?",
+    "answer": "Start with Chain of Custody. Maintains evidence integrity for legal and audit scrutiny. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "application"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-01",
+      "week-30-day-03",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-30-09",
+    "question": "What is the expected outcome for Week 30?",
+    "answer": "Checkpoint: Can describe a defensive workflow from alert to escalation.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-30",
+      "management"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      30
+    ],
+    "day_refs": [
+      "week-30-day-02",
+      "week-30-day-03",
+      "week-30-day-04",
+      "week-30-day-05",
+      "week-30-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-01",
+    "question": "Define Executive Briefing and explain its role in Week 31.",
+    "answer": "Executive Briefing: Concise leadership-facing summary of risk, impact, and recommended action.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "communication"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-02",
+    "question": "Define Management Summary and explain its role in Week 31.",
+    "answer": "Management Summary: Non-technical overview focused on business impact and decisions needed.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "communication"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-04",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-03",
+    "question": "Define Artifact Curation and explain its role in Week 31.",
+    "answer": "Artifact Curation: Selecting and organizing portfolio evidence for clear storytelling.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "portfolio"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-04",
+    "question": "Define Roadmap Prioritization and explain its role in Week 31.",
+    "answer": "Roadmap Prioritization: Choosing next learning or capability steps based on impact and constraints.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "planning"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-05",
+    "question": "Define Capability Gap and explain its role in Week 31.",
+    "answer": "Capability Gap: Difference between current skills/process maturity and target state.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "planning"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-06",
+    "question": "Define Continuous Improvement and explain its role in Week 31.",
+    "answer": "Continuous Improvement: Ongoing cycle of measuring outcomes and refining process.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "planning"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-07",
+    "question": "How do Executive Briefing and Management Summary differ in practical troubleshooting or analysis?",
+    "answer": "Executive Briefing and Management Summary solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "comparison"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-02",
+      "week-31-day-04",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-08",
+    "question": "You are executing this week's focus: \"Portfolio packaging, mock briefing, and next-step planning\". Which concept should you verify early, and why?",
+    "answer": "Start with Artifact Curation. Improves employer evaluation of skills and consistency. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "application"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-01",
+      "week-31-day-03",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-31-09",
+    "question": "What is the expected outcome for Week 31?",
+    "answer": "Checkpoint: You have a usable portfolio and a credible next-step roadmap.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "grc-application",
+      "week-31",
+      "management"
+    ],
+    "phase_refs": [
+      "grc-application"
+    ],
+    "week_refs": [
+      31
+    ],
+    "day_refs": [
+      "week-31-day-02",
+      "week-31-day-03",
+      "week-31-day-04",
+      "week-31-day-05",
+      "week-31-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-01",
+    "question": "Define Spaced Repetition and explain its role in Week 32.",
+    "answer": "Spaced Repetition: Review technique that revisits material at increasing intervals.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-02",
+    "question": "Define Retrieval Practice and explain its role in Week 32.",
+    "answer": "Retrieval Practice: Actively recalling information without notes to strengthen memory.",
+    "card_type": "definition",
+    "difficulty": "easy",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-04",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-03",
+    "question": "Define Mock Exam and explain its role in Week 32.",
+    "answer": "Mock Exam: Practice test used to simulate exam conditions and identify weak areas.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-04",
+    "question": "Define Error Log and explain its role in Week 32.",
+    "answer": "Error Log: Structured list of mistakes, misconceptions, and corrective notes.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-05",
+    "question": "Define Knowledge Gap and explain its role in Week 32.",
+    "answer": "Knowledge Gap: Specific topic where understanding is currently insufficient.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-06",
+    "question": "Define Study-System Reset and explain its role in Week 32.",
+    "answer": "Study-System Reset: Planned refinement of schedule, methods, and tooling after review.",
+    "card_type": "definition",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "study"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-07",
+    "question": "How do Spaced Repetition and Retrieval Practice differ in practical troubleshooting or analysis?",
+    "answer": "Spaced Repetition and Retrieval Practice solve different problems. Use each based on the specific failure point, and document why that distinction affects your next action.",
+    "card_type": "comparison",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "comparison"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-02",
+      "week-32-day-04",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-08",
+    "question": "You are executing this week's focus: \"Catch-up, comprehensive review, and study-system reset\". Which concept should you verify early, and why?",
+    "answer": "Start with Mock Exam. Guides final revision priorities. This keeps your workflow aligned with the weekly checkpoint.",
+    "card_type": "application",
+    "difficulty": "medium",
+    "exam_relevance": "high",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "application"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-01",
+      "week-32-day-03",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  },
+  {
+    "id": "fc-week-32-09",
+    "question": "What is the expected outcome for Week 32?",
+    "answer": "Checkpoint: Everything is either complete or deliberately parked with a next step.. Use your deliverable to prove the outcome and record one improvement for next week.",
+    "card_type": "management",
+    "difficulty": "medium",
+    "exam_relevance": "medium",
+    "tags": [
+      "buffer-final-review",
+      "week-32",
+      "management"
+    ],
+    "phase_refs": [
+      "buffer-final-review"
+    ],
+    "week_refs": [
+      32
+    ],
+    "day_refs": [
+      "week-32-day-02",
+      "week-32-day-03",
+      "week-32-day-04",
+      "week-32-day-05",
+      "week-32-day-06"
+    ]
+  }
+]

@@ -39,7 +39,13 @@ const {
       Laptop needed
       <select class="js-filter-laptop">
         <option value="">Any</option>
-        {laptopNeeds.map((need) => <option value={need}>{need === 'No' ? 'Not needed' : need}</option>)}
+        {laptopNeeds.map((need) => (
+          <option value={need}>
+            {need === 'no'
+              ? 'Not needed'
+              : need.charAt(0).toUpperCase() + need.slice(1)}
+          </option>
+        ))}
       </select>
     </label>
 

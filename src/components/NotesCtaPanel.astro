@@ -1,0 +1,39 @@
+---
+import { withBase } from '../lib/site-data.js';
+
+const {
+  title = 'Write in Local Notes Tool',
+  body = 'Use the private notes tool for freeform writing, reflections, and security journal drafts.',
+  week = null,
+  day = null,
+  tab = 'day'
+} = Astro.props;
+
+const query = new URLSearchParams();
+if (week) query.set('week', String(week));
+if (day) query.set('day', String(day));
+if (tab) query.set('tab', tab);
+const href = `${withBase('/notes/')}${query.toString() ? `?${query.toString()}` : ''}`;
+---
+
+<aside class="card notes-cta">
+  <h3>{title}</h3>
+  <p class="small">{body}</p>
+  <a class="btn secondary" href={href}>Open Notes Tool</a>
+</aside>
+
+<style>
+  .notes-cta {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FlashcardItem from '../../components/FlashcardItem.astro';
+import {
+  canonicalData,
+  flashcardEntries,
+  flashcardPhaseOptions,
+  flashcardWeekOptions,
+  flashcardDayOptions,
+  flashcardTypeOptions,
+  flashcardDifficultyOptions
+} from '../../lib/site-data.js';
+
+const phaseLabel = (value) =>
+  String(value || '')
+    .split('-')
+    .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
+    .join(' ');
+
+const dayLabel = (dayId) => {
+  const match = String(dayId || '').match(/week-(\d+)-day-(\d+)/);
+  if (!match) return dayId;
+  return `Week ${match[1]} Day ${match[2]}`;
+};
+---
+
+<Layout
+  title={`${canonicalData.site.title} | Flashcards`}
+  description="Study flashcards with day/week filters"
+  currentPath={Astro.url.pathname}
+>
+  <PageHero
+    kicker="Canonical Flashcards"
+    title="Flashcards"
+    description="Precomputed flashcard deck mapped to week/day study sessions with filters for phase, type, and difficulty."
+  />
+
+  <section class="card section">
+    <h2>Filter Deck</h2>
+    <div class="filter-grid">
+      <label>
+        Search question or answer
+        <input class="js-flashcards-search" type="text" placeholder="mfa, subnetting, incident response..." />
+      </label>
+
+      <label>
+        Phase
+        <select class="js-flashcards-phase">
+          <option value="">All phases</option>
+          {flashcardPhaseOptions.map((phase) => <option value={phase}>{phaseLabel(phase)}</option>)}
+        </select>
+      </label>
+
+      <label>
+        Week
+        <select class="js-flashcards-week">
+          <option value="">All weeks</option>
+          {flashcardWeekOptions.map((week) => (
+            <option value={String(week)}>Week {String(week).padStart(2, '0')}</option>
+          ))}
+        </select>
+      </label>
+
+      <label>
+        Day
+        <select class="js-flashcards-day">
+          <option value="">All days</option>
+          {flashcardDayOptions.map((dayId) => <option value={dayId}>{dayLabel(dayId)}</option>)}
+        </select>
+      </label>
+
+      <label>
+        Card type
+        <select class="js-flashcards-type">
+          <option value="">All types</option>
+          {flashcardTypeOptions.map((cardType) => <option value={cardType}>{cardType}</option>)}
+        </select>
+      </label>
+
+      <label>
+        Difficulty
+        <select class="js-flashcards-difficulty">
+          <option value="">All levels</option>
+          {flashcardDifficultyOptions.map((difficulty) => (
+            <option value={difficulty}>{difficulty}</option>
+          ))}
+        </select>
+      </label>
+    </div>
+
+    <div class="filter-actions">
+      <button type="button" class="secondary js-flashcards-reset">Reset filters</button>
+      <p class="small js-flashcards-filter-state" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid flashcards-grid">
+      {flashcardEntries.map((card) => (
+        <div
+          class="js-flashcard-item"
+          data-question={card.question}
+          data-answer={card.answer}
+          data-phase-refs={(card.phase_refs || []).join('|')}
+          data-week-refs={(card.week_refs || []).join('|')}
+          data-day-refs={(card.day_refs || []).join('|')}
+          data-card-type={card.card_type}
+          data-difficulty={card.difficulty}
+        >
+          <FlashcardItem card={card} showWeekDay={true} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/flashcards-page.js';
+  </script>
+</Layout>
+
+<style>
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.7rem;
+  }
+
+  .filter-actions {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .flashcards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .js-flashcard-item[hidden] {
+    display: none;
+  }
+</style>

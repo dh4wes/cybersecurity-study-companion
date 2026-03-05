@@ -1,0 +1,41 @@
+---
+const { entry } = Astro.props;
+const examClass =
+  String(entry.exam_relevance || '').toLowerCase() === 'high'
+    ? 'accent'
+    : String(entry.exam_relevance || '').toLowerCase() === 'medium'
+      ? 'neutral'
+      : 'warn';
+---
+
+<article class="glossary-card card">
+  <div class="section-header">
+    <h4>{entry.term}</h4>
+    <span class={`badge ${examClass}`}>Exam: {entry.exam_relevance}</span>
+  </div>
+  <p>{entry.definition}</p>
+  <p class="small"><strong>Why it matters:</strong> {entry.why_it_matters}</p>
+  {entry.related_terms?.length ? (
+    <p class="small">
+      <strong>Related:</strong>{' '}
+      {entry.related_terms.slice(0, 4).map((termId) => (
+        <span class="badge neutral">{termId}</span>
+      ))}
+    </p>
+  ) : null}
+</article>
+
+<style>
+  .glossary-card {
+    padding: 0.85rem;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 0.84rem;
+  }
+
+  p {
+    margin-bottom: 0.4rem;
+  }
+</style>

@@ -18,7 +18,7 @@ const firstWeek = weeks[0];
   <PageHero
     kicker="Study Companion + Portfolio"
     title={canonicalData.site.title}
-    description="This site documents my 32-week cybersecurity learning roadmap. Each week includes a deliverable, reflection, and linked study resources to produce visible proof of learning."
+    description="Static 32-week cybersecurity roadmap with day-level tasks, canonical glossary terms, flashcards, progress tracking, and a separate local notes tool."
   >
     <div class="meta">
       <span class="badge neutral">Current phase: <strong class="js-current-phase">{firstWeek.phase}</strong></span>
@@ -45,9 +45,13 @@ const firstWeek = weeks[0];
       <ul class="list-reset quick-links">
         <li><a class="js-today-link" href={`${firstWeek.href}#${firstWeek.days[0].id}`}>Today's study block: Week 01 Day 1</a></li>
         <li><a href={withBase('/roadmap/')}>Roadmap timeline</a></li>
+        <li><a href={withBase('/weeks/')}>Week archive</a></li>
         <li><a href={withBase('/resources/')}>Resource hub</a></li>
+        <li><a href={withBase('/glossary/')}>Glossary</a></li>
+        <li><a href={withBase('/flashcards/')}>Flashcards</a></li>
         <li><a href={withBase('/security-journal/')}>Security journal</a></li>
         <li><a href={withBase('/progress/')}>Progress dashboard</a></li>
+        <li><a href={withBase('/notes/')}>Local notes tool</a></li>
       </ul>
     </article>
   </section>

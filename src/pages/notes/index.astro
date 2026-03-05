@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { canonicalData, weeks } from '../../lib/site-data.js';
+
+const notesWeeks = weeks.map((week) => ({
+  id: week.id,
+  week: week.week,
+  phase: week.phase,
+  weekly_focus: week.weekly_focus,
+  days: week.days.map((day) => ({
+    id: day.id,
+    day: day.day,
+    label: day.label,
+    session_type: day.session_type
+  }))
+}));
+---
+
+<Layout title={`${canonicalData.site.title} | Notes`} description="Local private notes tool" currentPath={Astro.url.pathname}>
+  <PageHero
+    kicker="Layer B"
+    title="Local Notes Tool"
+    description="Private, browser-local note workspace separated from the public study companion. Supports day notes, week reflections, security journal notes, and Markdown export."
+  >
+    <p class="small">Storage keys: <code>cyber-study-notes-v2</code> and <code>cyber-study-note-export-meta-v1</code></p>
+  </PageHero>
+
+  <section class="card section">
+    <div class="tabs" role="tablist" aria-label="Notes sections">
+      <button type="button" class="js-notes-tab active" data-tab="day">Day Notes</button>
+      <button type="button" class="js-notes-tab" data-tab="week">Week Reflections</button>
+      <button type="button" class="js-notes-tab" data-tab="journal">Security Journal Notes</button>
+    </div>
+  </section>
+
+  <section class="section js-notes-panel" data-tab-panel="day">
+    <article class="card">
+      <h2>Per-Day Notes</h2>
+      <div class="grid two-col">
+        <div class="form-row">
+          <label for="day-week-select">Week</label>
+          <select id="day-week-select" class="js-day-week-select">
+            {notesWeeks.map((week) => (
+              <option value={week.id}>Week {String(week.week).padStart(2, '0')} - {week.phase}</option>
+            ))}
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="day-select">Day</label>
+          <select id="day-select" class="js-day-select"></select>
+        </div>
+      </div>
+
+      <div class="grid two-col">
+        <div class="form-row">
+          <label for="day-status">Status</label>
+          <select id="day-status" class="js-day-status">
+            <option value="Not started">Not started</option>
+            <option value="In progress">In progress</option>
+            <option value="Complete">Complete</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="day-tags">Tags (comma-separated)</label>
+          <input id="day-tags" type="text" class="js-day-tags" placeholder="hardware, fundamentals" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="day-notes">Notes</label>
+        <textarea id="day-notes" class="js-day-notes" placeholder="Key facts, commands, and observations..."></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="day-questions">Questions</label>
+        <textarea id="day-questions" class="js-day-questions" placeholder="What still feels unclear?"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="day-reflection">Reflection</label>
+        <textarea id="day-reflection" class="js-day-reflection" placeholder="What improved today? What is next?"></textarea>
+      </div>
+
+      <button type="button" class="js-save-day-note">Save Day Note</button>
+    </article>
+  </section>
+
+  <section class="section js-notes-panel" data-tab-panel="week" hidden>
+    <article class="card">
+      <h2>Per-Week Reflection + Artifact Link</h2>
+      <div class="form-row">
+        <label for="week-reflection-week">Week</label>
+        <select id="week-reflection-week" class="js-week-reflection-week">
+          {notesWeeks.map((week) => (
+            <option value={week.id}>Week {String(week.week).padStart(2, '0')} - {week.weekly_focus}</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="week-reflection">Reflection</label>
+        <textarea id="week-reflection" class="js-week-reflection-input" placeholder="What did you prove this week? What needs reinforcement?"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="week-artifact">Artifact Link (optional)</label>
+        <input id="week-artifact" class="js-week-artifact-input" type="url" placeholder="https://github.com/..." />
+      </div>
+
+      <button type="button" class="js-save-week-reflection">Save Week Reflection</button>
+    </article>
+  </section>
+
+  <section class="section js-notes-panel" data-tab-panel="journal" hidden>
+    <article class="card">
+      <h2>Security Journal Notes</h2>
+      <form class="js-journal-entry-form">
+        <div class="grid two-col">
+          <div class="form-row">
+            <label for="journal-title">Entry Title</label>
+            <input id="journal-title" class="js-journal-title" type="text" placeholder="Vendor breach summary" />
+          </div>
+          <div class="form-row">
+            <label for="journal-week">Week Context</label>
+            <select id="journal-week" class="js-journal-week">
+              <option value="">General</option>
+              {notesWeeks.map((week) => (
+                <option value={`Week ${String(week.week).padStart(2, '0')}`}>Week {String(week.week).padStart(2, '0')}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="journal-source">Source</label>
+          <input id="journal-source" class="js-journal-source" type="text" placeholder="Article URL, report name, or lab source" />
+        </div>
+
+        <div class="form-row">
+          <label for="journal-technical">Technical Summary</label>
+          <textarea id="journal-technical" class="js-journal-technical" placeholder="What happened technically?"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="journal-management">Management Summary</label>
+          <textarea id="journal-management" class="js-journal-management" placeholder="How would you brief a manager?"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="journal-prevention">Prevention Ideas</label>
+          <textarea id="journal-prevention" class="js-journal-prevention" placeholder="Which controls or process changes would reduce recurrence?"></textarea>
+        </div>
+
+        <button type="submit">Save Security Journal Note</button>
+      </form>
+    </article>
+
+    <article class="card">
+      <h2>Saved Journal Notes</h2>
+      <div class="grid js-journal-entry-list"></div>
+    </article>
+  </section>
+
+  <section class="card section">
+    <h2>Export / Import / Reset</h2>
+    <p class="small">Export all notes as one Markdown file or JSON backup. Import JSON to restore notes later.</p>
+
+    <div class="actions">
+      <button type="button" class="js-export-notes-md">Export Markdown</button>
+      <button type="button" class="secondary js-export-notes-json">Export JSON</button>
+      <label class="btn secondary file-label" for="notes-import">Import JSON</label>
+      <input id="notes-import" class="js-import-notes-json" type="file" accept="application/json" />
+      <button type="button" class="danger js-reset-notes">Reset Notes</button>
+    </div>
+
+    <p class="small js-export-meta" aria-live="polite"></p>
+    <p class="small js-notes-state" aria-live="polite"></p>
+  </section>
+
+  <script id="notes-data-json" type="application/json" set:html={JSON.stringify({ weeks: notesWeeks })}></script>
+  <script>
+    import '../../scripts/notes-page.js';
+  </script>
+</Layout>
+
+<style>
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tabs button.active {
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    border-color: var(--accent);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.55rem;
+  }
+
+  #notes-import {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .file-label {
+    cursor: pointer;
+  }
+
+  .journal-entry-row h3 {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .entry-actions {
+    margin-top: 0.55rem;
+  }
+</style>
