@@ -170,6 +170,155 @@ html[data-color-theme='jade-pebble-morning'] {
   --overlay-bg: #2d382a;
 }
 
+html[data-color-theme='cocoa-topaz-noonday'] {
+  --c-void: #5c3c2c;
+  --c-void-soft: #6a4836;
+  --c-void-panel: #742f14;
+  --c-line: #8e6f5c;
+  --c-line-strong: #c7ac9f;
+  --c-acid: #fc9c44;
+  --c-acid-dim: #c9772e;
+  --c-acid-wash: rgba(252, 156, 68, 0.16);
+  --c-white: #f7f0eb;
+  --c-muted: #d8c4b9;
+  --c-success: #8ab3da;
+  --c-danger: #ffb08c;
+
+  --grid-line: rgba(199, 172, 159, 0.16);
+  --field-bg: #53362a;
+  --field-bg-focus: #624036;
+  --header-bg: rgba(92, 60, 44, 0.97);
+  --nav-bg: rgba(108, 72, 54, 0.92);
+  --mobile-nav-bg: rgba(108, 72, 54, 0.98);
+  --footer-bg: rgba(78, 50, 38, 0.96);
+  --accent-contrast: #341a0a;
+  --accent-rgb: 252, 156, 68;
+  --hero-bg-start: #742f14;
+  --hero-bg-end: #5c3c2c;
+  --overlay-bg: #3f281e;
+}
+
+html[data-color-theme='sorbet'] {
+  --c-void: #b7c396;
+  --c-void-soft: #c0caab;
+  --c-void-panel: #e0e7d7;
+  --c-line: #cccccc;
+  --c-line-strong: #edecec;
+  --c-acid: #ba9a91;
+  --c-acid-dim: #9d7f76;
+  --c-acid-wash: rgba(186, 154, 145, 0.18);
+  --c-white: #fefefe;
+  --c-muted: #6b7065;
+  --c-success: #b7c396;
+  --c-danger: #b78980;
+  --ink: #2e2f2d;
+  --ink-soft: #5f635d;
+  --ink-light: #2e2f2d;
+
+  --grid-line: rgba(186, 154, 145, 0.14);
+  --scanline: rgba(46, 47, 45, 0.18);
+  --field-bg: #f5f5f2;
+  --field-bg-focus: #ffffff;
+  --header-bg: rgba(224, 231, 215, 0.97);
+  --nav-bg: rgba(237, 236, 236, 0.94);
+  --mobile-nav-bg: rgba(237, 236, 236, 0.98);
+  --footer-bg: rgba(224, 231, 215, 0.96);
+  --accent-contrast: #fffaf8;
+  --accent-rgb: 186, 154, 145;
+  --hero-bg-start: #fefefe;
+  --hero-bg-end: #e0e7d7;
+  --hero-radial: rgba(var(--accent-rgb), 0.14);
+  --overlay-bg: #ecebe6;
+}
+
+html[data-color-theme='pearl'] {
+  --c-void: #666161;
+  --c-void-soft: #746f6f;
+  --c-void-panel: #a5937b;
+  --c-line: #d5c5b4;
+  --c-line-strong: #e9e3de;
+  --c-acid: #af9ac9;
+  --c-acid-dim: #8878a2;
+  --c-acid-wash: rgba(175, 154, 201, 0.16);
+  --c-white: #f6f1ed;
+  --c-muted: #ead7bd;
+  --c-success: #d6c1ed;
+  --c-danger: #d79ea8;
+
+  --grid-line: rgba(175, 154, 201, 0.14);
+  --field-bg: #5b5555;
+  --field-bg-focus: #6a6464;
+  --header-bg: rgba(102, 97, 97, 0.97);
+  --nav-bg: rgba(126, 115, 107, 0.92);
+  --mobile-nav-bg: rgba(126, 115, 107, 0.98);
+  --footer-bg: rgba(94, 88, 88, 0.96);
+  --accent-contrast: #2d2434;
+  --accent-rgb: 175, 154, 201;
+  --hero-bg-start: #a5937b;
+  --hero-bg-end: #666161;
+  --overlay-bg: #4b4648;
+}
+
+html[data-color-theme='driftwood-pearl-morning'] {
+  --c-void: #5a322a;
+  --c-void-soft: #6a4036;
+  --c-void-panel: #bc7b6f;
+  --c-line: #c3c0b9;
+  --c-line-strong: #e4a499;
+  --c-acid: #718a9e;
+  --c-acid-dim: #577083;
+  --c-acid-wash: rgba(113, 138, 158, 0.16);
+  --c-white: #f4eeea;
+  --c-muted: #d7c7c0;
+  --c-success: #9ab1c1;
+  --c-danger: #f0b0a4;
+
+  --grid-line: rgba(188, 123, 111, 0.14);
+  --field-bg: #6f5048;
+  --field-bg-focus: #81605a;
+  --header-bg: rgba(90, 50, 42, 0.97);
+  --nav-bg: rgba(108, 70, 60, 0.92);
+  --mobile-nav-bg: rgba(108, 70, 60, 0.98);
+  --footer-bg: rgba(76, 43, 37, 0.96);
+  --accent-contrast: #102636;
+  --accent-rgb: 113, 138, 158;
+  --hero-bg-start: #bc7b6f;
+  --hero-bg-end: #5a322a;
+  --overlay-bg: #442720;
+}
+
+html[data-color-theme='graphite'] {
+  --c-void: #837d68;
+  --c-void-soft: #918a75;
+  --c-void-panel: #8a9db1;
+  --c-line: #c1c0c2;
+  --c-line-strong: #f5e9e7;
+  --c-acid: #ecc5c6;
+  --c-acid-dim: #c69ea0;
+  --c-acid-wash: rgba(236, 197, 198, 0.16);
+  --c-white: #fcf7f5;
+  --c-muted: #5f5b59;
+  --c-success: #cedae2;
+  --c-danger: #d18f92;
+  --ink: #302d2b;
+  --ink-soft: #5b5755;
+  --ink-light: #302d2b;
+
+  --grid-line: rgba(138, 157, 177, 0.14);
+  --scanline: rgba(48, 45, 43, 0.16);
+  --field-bg: #f0eceb;
+  --field-bg-focus: #f8f4f3;
+  --header-bg: rgba(131, 125, 104, 0.97);
+  --nav-bg: rgba(166, 160, 142, 0.92);
+  --mobile-nav-bg: rgba(166, 160, 142, 0.98);
+  --footer-bg: rgba(123, 118, 99, 0.96);
+  --accent-contrast: #4f3033;
+  --accent-rgb: 236, 197, 198;
+  --hero-bg-start: #8a9db1;
+  --hero-bg-end: #837d68;
+  --overlay-bg: #706a58;
+}
+
 * {
   box-sizing: border-box;
 }

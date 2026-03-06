@@ -1,5 +1,16 @@
 const STORAGE_KEY = 'cyber-study-color-theme-v1';
-const THEMES = ['default', 'inked', 'amethyst-mint-harmony', 'woodland', 'jade-pebble-morning'];
+const THEMES = [
+  'default',
+  'inked',
+  'amethyst-mint-harmony',
+  'woodland',
+  'jade-pebble-morning',
+  'cocoa-topaz-noonday',
+  'sorbet',
+  'pearl',
+  'driftwood-pearl-morning',
+  'graphite'
+];
 
 const normalizeTheme = (theme) => (THEMES.includes(theme) ? theme : 'default');
 

@@ -26,7 +26,18 @@ const {
       (() => {
         try {
           const colorKey = 'cyber-study-color-theme-v1';
-          const colorAllowed = new Set(['default', 'inked', 'amethyst-mint-harmony', 'woodland', 'jade-pebble-morning']);
+          const colorAllowed = new Set([
+            'default',
+            'inked',
+            'amethyst-mint-harmony',
+            'woodland',
+            'jade-pebble-morning',
+            'cocoa-topaz-noonday',
+            'sorbet',
+            'pearl',
+            'driftwood-pearl-morning',
+            'graphite'
+          ]);
           const colorValue = localStorage.getItem(colorKey);
           if (colorAllowed.has(colorValue) && colorValue !== 'default') {
             document.documentElement.dataset.colorTheme = colorValue;
