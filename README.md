@@ -199,6 +199,16 @@ npm run preview
 
 After the first successful load, the curriculum routes are cached for offline use and navigation falls back to `/offline/` when a route has not been cached yet.
 
+## Android Packaging
+Build the web assets for Capacitor with a root base path, then sync and open the Android project:
+```bash
+npm run build:cap
+npm run cap:sync
+npm run cap:open
+```
+
+Capacitor uses the same static `dist/` output as the web app. Service worker registration is skipped inside the native shell to avoid layering browser-style caching on top of bundled local assets.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs

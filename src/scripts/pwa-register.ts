@@ -1,7 +1,7 @@
 import { registerSW } from 'virtual:pwa-register';
 
-if (!globalThis.matchMedia?.('(display-mode: browser)').matches && 'Capacitor' in globalThis) {
-  // Leave service worker registration disabled inside native shells.
+if ('Capacitor' in globalThis) {
+  console.info('Capacitor runtime detected; skipping service worker registration.');
 } else {
   registerSW({
     immediate: true,

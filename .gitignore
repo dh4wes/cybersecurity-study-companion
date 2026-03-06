@@ -3,3 +3,8 @@ dist/
 .astro/
 .DS_Store
 npm-debug.log*
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
