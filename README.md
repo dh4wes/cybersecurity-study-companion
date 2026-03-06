@@ -95,9 +95,9 @@ Flashcards are generated deterministically from the glossary:
 ```json
 {
   "id": "tcp-mechanism",
-  "type": "mechanism",
+  "type": "understanding",
   "difficulty": "medium",
-  "front": "How does TCP work at a high level?",
+  "front": "What mechanism lets TCP establish a session, track sequence numbers, and retransmit missing data?",
   "back": "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
 }
 ```
@@ -106,6 +106,11 @@ Each glossary term maps to exactly three cards:
 - `<term-id>-definition`
 - `<term-id>-function`
 - `<term-id>-mechanism`
+
+Card purposes are:
+- `definition`: direct recall
+- `understanding`: mechanism / mental model
+- `application`: CompTIA-style scenario prompt
 
 ### Day-level mapping
 Each day references:
@@ -146,6 +151,30 @@ Available themes:
 
 Theme selection is stored in:
 - `cyber-study-color-theme-v1`
+
+## Typography themes
+
+Typography is switchable independently from color and uses only offline-safe system font stacks.
+
+Available typography themes:
+- `Default`
+- `Ops Console`
+- `Editor Clean`
+- `Mono Range`
+
+How to switch:
+- use the `Type` selector in the header
+- the choice persists across reloads
+- the saved theme is applied before the app renders to reduce FOUC
+
+Typography selection is stored in:
+- `cyber-study-typography-theme-v1`
+
+Implementation notes:
+- `Default` preserves the current repo typography unchanged
+- `Ops Console` keeps the cyber feel while improving body readability
+- `Editor Clean` favors long-form reading and slightly increases mobile body size
+- `Mono Range` uses a full monospace presentation with readable leading
 
 ## Boot intro
 

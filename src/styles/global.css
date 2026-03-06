@@ -29,8 +29,17 @@
   --shadow: none;
   --max: 1160px;
 
-  --font-body: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --font-display: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --type-body-font: var(--font-mono);
+  --type-heading-font: var(--font-mono);
+  --type-mono-font: var(--font-mono);
+  --type-body-size: 16px;
+  --type-body-leading: 1.5;
+  --type-kicker-tracking: 0.16em;
+  --type-mono-features: normal;
+  --font-body: var(--type-body-font);
+  --font-display: var(--type-heading-font);
 
   --grid-line: rgba(42, 54, 61, 0.35);
   --scanline: rgba(255, 255, 255, 0.9);
@@ -56,6 +65,33 @@
   --hero-radial: rgba(var(--accent-rgb), 0.2);
   --accent-shadow: rgba(var(--accent-rgb), 0.2);
   --overlay-bg: #070707;
+}
+
+html[data-font-theme='ops-console'] {
+  --type-body-font: var(--font-sans);
+  --type-heading-font: var(--font-mono);
+  --type-mono-font: var(--font-mono);
+  --type-body-leading: 1.7;
+  --type-kicker-tracking: 0.14em;
+  --type-mono-features: "tnum" 1, "zero" 1;
+}
+
+html[data-font-theme='editor-clean'] {
+  --type-body-font: var(--font-sans);
+  --type-heading-font: var(--font-sans);
+  --type-mono-font: var(--font-mono);
+  --type-body-leading: 1.72;
+  --type-kicker-tracking: 0.1em;
+  --type-mono-features: "tnum" 1;
+}
+
+html[data-font-theme='mono-range'] {
+  --type-body-font: var(--font-mono);
+  --type-heading-font: var(--font-mono);
+  --type-mono-font: var(--font-mono);
+  --type-body-leading: 1.66;
+  --type-kicker-tracking: 0.14em;
+  --type-mono-features: "tnum" 1, "zero" 1;
 }
 
 html[data-color-theme='inked'] {
@@ -139,7 +175,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--type-body-font);
   background-color: var(--bg);
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -152,6 +188,8 @@ body {
 body {
   min-height: 100vh;
   position: relative;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
 }
 
 body::before {
@@ -185,7 +223,7 @@ h4,
   margin: 0 0 0.65rem;
   color: var(--ink);
   line-height: 1.15;
-  font-family: var(--font-display);
+  font-family: var(--type-heading-font);
   text-transform: uppercase;
   letter-spacing: 0.055em;
   font-weight: 700;
@@ -205,7 +243,17 @@ p,
 li {
   margin: 0 0 0.72rem;
   color: var(--ink-soft);
-  line-height: 1.5;
+  line-height: var(--type-body-leading);
+}
+
+code,
+pre,
+.mono,
+.kpi,
+.metric {
+  font-family: var(--type-mono-font);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: var(--type-mono-features);
 }
 
 strong {
@@ -296,7 +344,7 @@ select {
 
 .kicker {
   font-size: 0.64rem;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--type-kicker-tracking);
   color: var(--accent);
   text-transform: uppercase;
   margin-bottom: 0.45rem;
@@ -310,7 +358,7 @@ select {
   border-radius: 0;
   padding: 0.2rem 0.62rem;
   font-size: 0.65rem;
-  letter-spacing: 0.08em;
+  letter-spacing: calc(var(--type-kicker-tracking) * 0.5);
   text-transform: uppercase;
   font-weight: 700;
   border: 1px solid currentColor;
@@ -363,7 +411,7 @@ select {
 label {
   color: var(--ink);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: calc(var(--type-kicker-tracking) * 0.5);
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -715,6 +763,13 @@ button.ghost:hover,
   .hero,
   .card {
     padding: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html[data-font-theme='editor-clean'] {
+    --type-body-size: 17px;
+    --type-kicker-tracking: 0.08em;
   }
 }
 

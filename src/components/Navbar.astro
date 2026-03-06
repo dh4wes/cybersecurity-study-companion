@@ -38,6 +38,15 @@ const isActive = (path) => {
       <p class="context">32-week roadmap, static portfolio, and private local notes tool</p>
       <div class="theme-controls">
         <label class="theme-switcher">
+          <span>Type</span>
+          <select class="js-font-theme" aria-label="Select typography theme">
+            <option value="default">Default</option>
+            <option value="ops-console">Ops Console</option>
+            <option value="editor-clean">Editor Clean</option>
+            <option value="mono-range">Mono Range</option>
+          </select>
+        </label>
+        <label class="theme-switcher">
           <span>Color</span>
           <select class="js-color-theme" aria-label="Select color theme">
             <option value="default">Current</option>
@@ -79,6 +88,7 @@ const isActive = (path) => {
 
 <script>
   import '../scripts/color-theme.js';
+  import '../scripts/font-theme.js';
 </script>
 
 <style>
@@ -119,7 +129,7 @@ const isActive = (path) => {
 
   .eyebrow {
     font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    letter-spacing: var(--type-kicker-tracking);
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 0.3rem;
@@ -127,7 +137,7 @@ const isActive = (path) => {
   }
 
   .brand {
-    font-family: var(--font-display);
+    font-family: var(--type-heading-font);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     line-height: 1;
@@ -147,7 +157,7 @@ const isActive = (path) => {
     margin: 0;
     font-size: 0.62rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: calc(var(--type-kicker-tracking) * 0.75);
     color: var(--ink-soft);
     text-align: right;
     max-width: 360px;
@@ -173,7 +183,7 @@ const isActive = (path) => {
     gap: 0.4rem;
     font-size: 0.62rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: calc(var(--type-kicker-tracking) * 0.75);
     color: var(--ink-soft);
     font-weight: 700;
   }
@@ -189,7 +199,7 @@ const isActive = (path) => {
     padding: 0.22rem 0.38rem;
     border-radius: 0;
     font-size: 0.62rem;
-    letter-spacing: 0.06em;
+    letter-spacing: calc(var(--type-kicker-tracking) * 0.4);
     text-transform: uppercase;
     min-width: 138px;
   }

@@ -25,6 +25,13 @@ const {
     <script is:inline>
       (() => {
         try {
+          const fontKey = 'cyber-study-typography-theme-v1';
+          const fontAllowed = new Set(['default', 'ops-console', 'editor-clean', 'mono-range']);
+          const fontValue = localStorage.getItem(fontKey);
+          if (fontAllowed.has(fontValue) && fontValue !== 'default') {
+            document.documentElement.dataset.fontTheme = fontValue;
+          }
+
           const colorKey = 'cyber-study-color-theme-v1';
           const colorAllowed = new Set([
             'default',
