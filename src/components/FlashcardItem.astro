@@ -32,6 +32,8 @@ const typeClass = cardType === 'definition' ? 'neutral' : cardType === 'applicat
 
   details {
     margin-top: 0.35rem;
+    border: 1px solid var(--border);
+    background: rgba(204, 255, 0, 0.03);
   }
 
   summary {
@@ -39,9 +41,14 @@ const typeClass = cardType === 'definition' ? 'neutral' : cardType === 'applicat
     font-weight: 700;
     color: var(--accent);
     font-size: 0.82rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0.85rem;
   }
 
-  summary + p {
-    margin-top: 0.4rem;
+  details p {
+    margin: 0;
+    padding: 0 0.85rem 0.85rem;
   }
 </style>

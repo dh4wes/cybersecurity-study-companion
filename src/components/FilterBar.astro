@@ -8,61 +8,64 @@ const {
 } = Astro.props;
 ---
 
-<section class="card filter-bar" aria-label="Week filters">
-  <h2>Filters</h2>
-  <div class="filter-grid">
-    <label>
-      Phase
-      <select class="js-filter-phase">
-        <option value="">All phases</option>
-        {phases.map((phase) => <option value={phase}>{phase}</option>)}
-      </select>
-    </label>
+<details class="card filter-bar mobile-filter-shell" aria-label="Week filters">
+  <summary>Filters</summary>
+  <div class="mobile-filter-content">
+    <h2>Filters</h2>
+    <div class="filter-grid mobile-filter-grid">
+      <label>
+        Phase
+        <select class="js-filter-phase">
+          <option value="">All phases</option>
+          {phases.map((phase) => <option value={phase}>{phase}</option>)}
+        </select>
+      </label>
 
-    <label>
-      Week
-      <select class="js-filter-week">
-        <option value="">All weeks</option>
-        {weeks.map((week) => <option value={week.week}>Week {String(week.week).padStart(2, '0')}</option>)}
-      </select>
-    </label>
+      <label>
+        Week
+        <select class="js-filter-week">
+          <option value="">All weeks</option>
+          {weeks.map((week) => <option value={week.week}>Week {String(week.week).padStart(2, '0')}</option>)}
+        </select>
+      </label>
 
-    <label>
-      Session type
-      <select class="js-filter-session">
-        <option value="">Any</option>
-        {sessionTypes.map((sessionType) => <option value={sessionType}>{sessionType}</option>)}
-      </select>
-    </label>
+      <label>
+        Session type
+        <select class="js-filter-session">
+          <option value="">Any</option>
+          {sessionTypes.map((sessionType) => <option value={sessionType}>{sessionType}</option>)}
+        </select>
+      </label>
 
-    <label>
-      Laptop needed
-      <select class="js-filter-laptop">
-        <option value="">Any</option>
-        {laptopNeeds.map((need) => (
-          <option value={need}>
-            {need === 'no'
-              ? 'Not needed'
-              : need.charAt(0).toUpperCase() + need.slice(1)}
-          </option>
-        ))}
-      </select>
-    </label>
+      <label>
+        Laptop needed
+        <select class="js-filter-laptop">
+          <option value="">Any</option>
+          {laptopNeeds.map((need) => (
+            <option value={need}>
+              {need === 'no'
+                ? 'Not needed'
+                : need.charAt(0).toUpperCase() + need.slice(1)}
+            </option>
+          ))}
+        </select>
+      </label>
 
-    <label>
-      Task mode tag
-      <select class="js-filter-tag">
-        <option value="">Any</option>
-        {taskTags.map((tag) => <option value={tag}>{tag}</option>)}
-      </select>
-    </label>
+      <label>
+        Task mode tag
+        <select class="js-filter-tag">
+          <option value="">Any</option>
+          {taskTags.map((tag) => <option value={tag}>{tag}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <div class="filter-actions">
+      <button class="secondary js-filter-reset" type="button">Clear filters</button>
+      <p class="small js-filter-results" aria-live="polite"></p>
+    </div>
   </div>
-
-  <div class="filter-actions">
-    <button class="secondary js-filter-reset" type="button">Reset filters</button>
-    <p class="small js-filter-results" aria-live="polite"></p>
-  </div>
-</section>
+</details>
 
 <style>
   .filter-bar h2 {

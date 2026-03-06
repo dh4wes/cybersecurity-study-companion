@@ -6,7 +6,7 @@
     "bullets": [
       "Tracking and logging of identity actions for accountability within authentication and access control security workflows.",
       "Records authentication events, authorization decisions, and administrative actions so investigators can reconstruct accountability across monitored systems.",
-      "Within identity and cryptography, Accounting belongs in the workflow because it records authentication events, authorization decisions, and administrative actions so investigators can reconstruct accountability across monitored systems."
+      "Accounting (AAA) complements Authentication and Authorization; it records authentication events, authorization decisions, and administrative actions."
     ]
   },
   {
@@ -16,7 +16,7 @@
     "bullets": [
       "Rules that keep AI-supported job-search outputs accurate and authentic within cybersecurity job-search and portfolio workflows.",
       "Define source boundaries, review checks, and approval rules before generated text is used in resumes or outreach.",
-      "Within career and portfolio work, AI Assistant Guardrails belongs in the workflow because it defines source boundaries, review checks, and approval rules before generated text is used in resumes or outreach."
+      "AI Assistant Guardrails complements Application Funnel and Artifact Curation; it defines source boundaries, review checks, and approval rules."
     ]
   },
   {
@@ -26,7 +26,7 @@
     "bullets": [
       "Initial analysis process that validates and prioritizes alerts within monitoring, investigation, and response workflows.",
       "Reviews alert context, validates indicators, and assigns priority so analysts address the most credible threats first.",
-      "Within security operations and incident response, Alert Triage belongs in the workflow because it reviews alert context, validates indicators, and assigns priority so analysts address the most credible threats first."
+      "Alert Triage complements Asset Inventory and Attack Vector; it reviews alert context, validates indicators, and sets priority."
     ]
   },
   {
@@ -36,7 +36,7 @@
     "bullets": [
       "Application Programming Interface used to exchange data between systems within scripting and systems automation workflows.",
       "Sends structured requests to defined endpoints and receives machine-readable responses for integration and automation tasks.",
-      "Within automation engineering, API belongs in the workflow because it sends structured requests to defined endpoints and receives machine-readable responses for integration and automation tasks."
+      "API complements Conditional and Error Handling; it sends structured requests to defined endpoints and returns machine-readable responses."
     ]
   },
   {
@@ -46,7 +46,7 @@
     "bullets": [
       "Measurement view of applications from submit to offer stages within cybersecurity job-search and portfolio workflows.",
       "Tracks counts, conversion rates, and delays between application stages to expose where the search process stalls.",
-      "Within career and portfolio work, Application Funnel belongs in the workflow because it tracks counts, conversion rates, and delays between application stages to expose where the search process stalls."
+      "Application Funnel complements AI Assistant Guardrails; it tracks counts, conversion rates, and delays between application stages to expose where the search process stalls."
     ]
   },
   {
@@ -56,7 +56,7 @@
     "bullets": [
       "Selecting and organizing portfolio evidence for clear storytelling within cybersecurity job-search and portfolio workflows.",
       "Selects representative evidence, standardizes presentation, and removes weak samples before publishing portfolio materials.",
-      "Within career and portfolio work, Artifact Curation belongs in the workflow because it selects representative evidence, standardizes presentation, and removes weak samples before publishing portfolio materials."
+      "Artifact Curation complements AI Assistant Guardrails and Application Funnel; it selects representative evidence, standardizes presentation, and removes weak samples."
     ]
   },
   {
@@ -66,7 +66,7 @@
     "bullets": [
       "Structured list of hardware, software, and data assets in scope within monitoring, investigation, and response workflows.",
       "Maps systems, software, owners, and data to known records so investigations and control scope stay accurate.",
-      "Within security operations and incident response, Asset Inventory belongs in the workflow because it maps systems, software, owners, and data to known records so investigations and control scope stay accurate."
+      "Asset Inventory complements Alert Triage and Attack Vector; it maps systems, software, owners, and data to known records."
     ]
   },
   {
@@ -76,7 +76,7 @@
     "bullets": [
       "Path or method used by an attacker to reach a target within monitoring, investigation, and response workflows.",
       "Describes the route used for initial access, such as phishing, exposed services, or vulnerable software.",
-      "Within security operations and incident response, Attack Vector belongs in the workflow because it describes the route used for initial access, such as phishing, exposed services, or vulnerable software."
+      "Attack Vector complements Alert Triage and Asset Inventory; it describes the route used for initial access, such as phishing, exposed services, or vulnerable software."
     ]
   },
   {
@@ -86,7 +86,7 @@
     "bullets": [
       "Process of verifying claimed identity within authentication and access control security workflows.",
       "Validates submitted credentials, tokens, certificates, or biometrics before issuing a session or allowing access requests.",
-      "Within identity and cryptography, Authentication belongs in the workflow because it validates submitted credentials, tokens, certificates, or biometrics before issuing a session or allowing access requests."
+      "Authentication complements Accounting (AAA) and Authorization; it validates submitted credentials, tokens, certificates, or biometrics."
     ]
   },
   {
@@ -96,7 +96,7 @@
     "bullets": [
       "Process of granting permitted actions to an authenticated identity within authentication and access control security workflows.",
       "Evaluates policy rules after authentication to determine which resources and actions an identity may use.",
-      "Within identity and cryptography, Authorization belongs in the workflow because it evaluates policy rules after authentication to determine which resources and actions an identity may use."
+      "Authorization complements Accounting (AAA) and Authentication; it evaluates policy rules after authentication to determine which resources and actions an identity may use."
     ]
   },
   {
@@ -106,7 +106,7 @@
     "bullets": [
       "Defined sequence of automated actions for a repeatable security task within monitoring, investigation, and response workflows.",
       "Executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently.",
-      "Within security operations and incident response, Automation Playbook belongs in the workflow because it executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently."
+      "Automation Playbook complements Alert Triage and Asset Inventory; it executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently."
     ]
   },
   {
@@ -116,7 +116,7 @@
     "bullets": [
       "Low-level firmware that initializes hardware and starts the boot process within endpoint hardware and platform operations.",
       "Initializes hardware, runs platform checks, and locates a bootable device before handing control to the loader.",
-      "Within hardware and endpoint systems, BIOS/UEFI Firmware belongs in the workflow because it initializes hardware, runs platform checks, and locates a bootable device before handing control to the loader."
+      "BIOS/UEFI Firmware complements Boot Process and CIA Triad; it initializes hardware, runs platform checks, and locates a bootable device."
     ]
   },
   {
@@ -126,7 +126,7 @@
     "bullets": [
       "Sequence that moves a system from power-on to a usable operating system session.",
       "Transitions from firmware execution to loader, kernel initialization, service startup, and interactive user access.",
-      "Within hardware and endpoint systems, Boot Process belongs in the workflow because it transitions from firmware execution to loader, kernel initialization, service startup, and interactive user access."
+      "Boot Process complements BIOS/UEFI Firmware and CIA Triad; it transitions from firmware execution to loader, kernel initialization, service startup, and interactive user access."
     ]
   },
   {
@@ -136,7 +136,7 @@
     "bullets": [
       "Process for identifying operational effects of disruption over time within governance, risk, and compliance workflows.",
       "Estimates process disruption effects, recovery priorities, and tolerable downtime for critical business functions.",
-      "Within governance, risk, and compliance, Business Impact Analysis belongs in the workflow because it estimates process disruption effects, recovery priorities, and tolerable downtime for critical business functions."
+      "Business Impact Analysis complements Capability Gap and Compensating Control; it estimates process disruption effects, recovery priorities, and tolerable downtime."
     ]
   },
   {
@@ -146,7 +146,7 @@
     "bullets": [
       "Difference between current skills/process maturity and target state within governance, risk, and compliance workflows.",
       "Compares current staffing, tooling, or process maturity against required outcomes to identify deficiencies.",
-      "Within governance, risk, and compliance, Capability Gap belongs in the workflow because it compares current staffing, tooling, or process maturity against required outcomes to identify deficiencies."
+      "Capability Gap complements Business Impact Analysis and Compensating Control; it compares current staffing, tooling, or process maturity against required outcomes to identify deficiencies."
     ]
   },
   {
@@ -156,7 +156,7 @@
     "bullets": [
       "Narrative linking background, skills, and target role trajectory within cybersecurity job-search and portfolio workflows.",
       "Combines prior experience, current skills, and target roles into a consistent narrative used across interviews and profiles.",
-      "Within career and portfolio work, Career Story belongs in the workflow because it combines prior experience, current skills, and target roles into a consistent narrative used across interviews and profiles."
+      "Career Story complements AI Assistant Guardrails; it combines prior experience, current skills, and target roles into a consistent narrative used across interviews and profiles."
     ]
   },
   {
@@ -166,7 +166,7 @@
     "bullets": [
       "Tracking and coordination of investigation tasks, evidence, and decisions within monitoring, investigation, and response workflows.",
       "Maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle.",
-      "Within security operations and incident response, Case Management belongs in the workflow because it maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle."
+      "Case Management complements Alert Triage and Asset Inventory; it maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle."
     ]
   },
   {
@@ -176,7 +176,7 @@
     "bullets": [
       "Record of who handled evidence, when, and why within monitoring, investigation, and response workflows.",
       "Documents each evidence transfer, handler, timestamp, and purpose to preserve admissibility and integrity.",
-      "Within security operations and incident response, Chain of Custody belongs in the workflow because it documents each evidence transfer, handler, timestamp, and purpose to preserve admissibility and integrity."
+      "Chain of Custody complements Alert Triage and Asset Inventory; it documents each evidence transfer, handler, timestamp, and purpose to preserve admissibility and integrity."
     ]
   },
   {
@@ -186,7 +186,7 @@
     "bullets": [
       "Linux command used to modify file permission bits within host administration and operating system workflows.",
       "Updates read, write, and execute permission bits for users, groups, or others on Linux files.",
-      "Within operating system administration, chmod belongs in the workflow because it updates read, write, and execute permission bits for users, groups, or others on Linux files."
+      "chmod complements chown and Command Line; it updates read, write, and execute permission bits for users, groups, or others on Linux files."
     ]
   },
   {
@@ -196,7 +196,7 @@
     "bullets": [
       "Linux command used to change file owner and group within host administration and operating system workflows.",
       "Reassigns file ownership metadata so access decisions follow the intended user and group account.",
-      "Within operating system administration, chown belongs in the workflow because it reassigns file ownership metadata so access decisions follow the intended user and group account."
+      "chown fits beside chmod and Command Line; it reassigns file ownership metadata."
     ]
   },
   {
@@ -206,7 +206,7 @@
     "bullets": [
       "Confidentiality, Integrity, and Availability security objective model within endpoint hardware and platform operations.",
       "Evaluates security objectives by balancing data secrecy, accuracy, and availability across system design decisions.",
-      "Within hardware and endpoint systems, CIA Triad belongs in the workflow because it evaluates security objectives by balancing data secrecy, accuracy, and availability across system design decisions."
+      "CIA Triad complements BIOS/UEFI Firmware and Boot Process; it evaluates security objectives by balancing data secrecy, accuracy, and availability across system design decisions."
     ]
   },
   {
@@ -216,7 +216,7 @@
     "bullets": [
       "Classless Inter-Domain Routing notation for subnet masks and prefixes within routed and switched network environments.",
       "Uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing.",
-      "Within network infrastructure, CIDR belongs in the workflow because it uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing."
+      "CIDR complements Default Gateway and DNS Resolution; it uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing."
     ]
   },
   {
@@ -226,7 +226,7 @@
     "bullets": [
       "Service delivery layer such as IaaS, PaaS, or SaaS within web, data, and cloud services.",
       "Defines whether the provider manages infrastructure, platform components, runtime services, or complete applications.",
-      "Within web, data, and cloud systems, Cloud Service Model belongs in the workflow because it defines whether the provider manages infrastructure, platform components, runtime services, or complete applications."
+      "Cloud Service Model complements Data Classification and HTTP Method; it defines whether the provider manages infrastructure, platform components, runtime services, or complete applications."
     ]
   },
   {
@@ -236,7 +236,7 @@
     "bullets": [
       "Text-based interface for executing operating system commands within host administration and operating system workflows.",
       "Accepts typed commands, arguments, and pipelines for direct interaction with operating system utilities.",
-      "Within operating system administration, Command Line belongs in the workflow because it accepts typed commands, arguments, and pipelines for direct interaction with operating system utilities."
+      "Command Line complements chmod and chown; it accepts typed commands, arguments, and pipelines for direct interaction with operating system utilities."
     ]
   },
   {
@@ -246,7 +246,7 @@
     "bullets": [
       "Documented messaging protocol for stakeholders during security events within monitoring, investigation, and response workflows.",
       "Defines notification paths, message timing, approval points, and audiences during an incident response process.",
-      "Within security operations and incident response, Communication Plan belongs in the workflow because it defines notification paths, message timing, approval points, and audiences during an incident response process."
+      "Communication Plan complements Alert Triage and Asset Inventory; it defines notification paths, message timing, approval points, and audiences."
     ]
   },
   {
@@ -256,7 +256,7 @@
     "bullets": [
       "Alternative safeguard used when a primary control is not feasible within governance, risk, and compliance workflows.",
       "Implements an alternate safeguard that reduces risk when the preferred primary control cannot be deployed.",
-      "Within governance, risk, and compliance, Compensating Control belongs in the workflow because it implements an alternate safeguard that reduces risk when the preferred primary control cannot be deployed."
+      "Compensating Control complements Business Impact Analysis and Capability Gap; it implements an alternate safeguard that reduces risk when the preferred primary control cannot be deployed."
     ]
   },
   {
@@ -266,7 +266,7 @@
     "bullets": [
       "Conformance to laws, regulations, standards, or internal policies within governance, risk, and compliance workflows.",
       "Measures implemented practices against external or internal requirements and documents conformity or deficiency.",
-      "Within governance, risk, and compliance, Compliance belongs in the workflow because it measures implemented practices against external or internal requirements and documents conformity or deficiency."
+      "Compliance complements Business Impact Analysis and Capability Gap; it measures implemented practices against external or internal requirements and documents conformity or deficiency."
     ]
   },
   {
@@ -276,7 +276,7 @@
     "bullets": [
       "Logic branch that executes code based on true/false evaluation within scripting and systems automation workflows.",
       "Evaluates an expression and executes different code paths depending on whether the result is true or false.",
-      "Within automation engineering, Conditional belongs in the workflow because it evaluates an expression and executes different code paths depending on whether the result is true or false."
+      "Conditional complements API and Error Handling; it evaluates an expression and executes different code paths depending on whether the result is true or false."
     ]
   },
   {
@@ -286,7 +286,7 @@
     "bullets": [
       "Response action that limits incident spread and immediate damage within monitoring, investigation, and response workflows.",
       "Applies isolation, account restrictions, or blocking actions to stop attacker movement while preserving evidence.",
-      "Within security operations and incident response, Containment belongs in the workflow because it applies isolation, account restrictions, or blocking actions to stop attacker movement while preserving evidence."
+      "Containment complements Alert Triage and Asset Inventory; it applies isolation, account restrictions, or blocking actions to stop attacker movement while preserving evidence."
     ]
   },
   {
@@ -296,7 +296,7 @@
     "bullets": [
       "Ongoing cycle of measuring outcomes and refining process within governance, risk, and compliance workflows.",
       "Uses metrics, lessons learned, and review cycles to refine controls, processes, and training over time.",
-      "Within governance, risk, and compliance, Continuous Improvement belongs in the workflow because it uses metrics, lessons learned, and review cycles to refine controls, processes, and training over time."
+      "Continuous Improvement complements Business Impact Analysis and Capability Gap; it uses metrics, lessons learned, and review cycles to refine controls, processes, and training over time."
     ]
   },
   {
@@ -306,7 +306,7 @@
     "bullets": [
       "Safeguard that prevents, detects, or corrects security issues within governance, risk, and compliance workflows.",
       "Implements preventive, detective, or corrective measures that reduce likelihood, impact, or exposure.",
-      "Within governance, risk, and compliance, Control belongs in the workflow because it implements preventive, detective, or corrective measures that reduce likelihood, impact, or exposure."
+      "Control complements Business Impact Analysis and Capability Gap; it implements preventive, detective, or corrective measures that reduce likelihood, impact, or exposure."
     ]
   },
   {
@@ -316,7 +316,7 @@
     "bullets": [
       "Actionable proposal to improve prevention, detection, or response capability within governance, risk, and compliance workflows.",
       "Documents a proposed safeguard, rationale, owner, and priority for reducing identified risk.",
-      "Within governance, risk, and compliance, Control Recommendation belongs in the workflow because it documents a proposed safeguard, rationale, owner, and priority for reducing identified risk."
+      "Control Recommendation complements Business Impact Analysis and Capability Gap; it documents a proposed safeguard, rationale, owner, and priority for reducing identified risk."
     ]
   },
   {
@@ -326,7 +326,7 @@
     "bullets": [
       "Central Processing Unit; executes instructions and coordinates processing tasks within endpoint hardware and platform operations.",
       "Fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system.",
-      "Within hardware and endpoint systems, CPU belongs in the workflow because it fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system."
+      "CPU complements BIOS/UEFI Firmware and Boot Process; it fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system."
     ]
   },
   {
@@ -336,7 +336,7 @@
     "bullets": [
       "Systems essential to societal and economic stability within governance, risk, and compliance workflows.",
       "Includes essential services whose disruption would significantly affect safety, economy, health, or national security.",
-      "Within governance, risk, and compliance, Critical Infrastructure belongs in the workflow because it includes essential services whose disruption would significantly affect safety, economy, health, or national security."
+      "Critical Infrastructure complements Business Impact Analysis and Capability Gap; it includes essential services whose disruption would significantly affect safety, economy, health, or national security."
     ]
   },
   {
@@ -346,7 +346,7 @@
     "bullets": [
       "Linux scheduling system for recurring task automation within host administration and operating system workflows.",
       "Launches scheduled commands at configured times using recurring entries defined in cron tables.",
-      "Within operating system administration, cron belongs in the workflow because it launches scheduled commands at configured times using recurring entries defined in cron tables."
+      "cron complements chmod and chown; it launches scheduled commands at configured times using recurring entries defined in cron tables."
     ]
   },
   {
@@ -356,7 +356,7 @@
     "bullets": [
       "Common Vulnerability Scoring System for rating vulnerability severity within governance, risk, and compliance workflows.",
       "Scores vulnerabilities using base metrics that estimate exploitability and technical impact in a standardized format.",
-      "Within governance, risk, and compliance, CVSS belongs in the workflow because it scores vulnerabilities using base metrics that estimate exploitability and technical impact in a standardized format."
+      "CVSS complements Business Impact Analysis and Capability Gap; it scores vulnerabilities using base metrics that estimate exploitability and technical impact in a standardized format."
     ]
   },
   {
@@ -366,7 +366,7 @@
     "bullets": [
       "Labeling data by sensitivity and handling requirements within web, data, and cloud services.",
       "Assigns sensitivity labels that determine storage, access, transmission, retention, and disposal controls.",
-      "Within web, data, and cloud systems, Data Classification belongs in the workflow because it assigns sensitivity labels that determine storage, access, transmission, retention, and disposal controls."
+      "Data Classification complements Cloud Service Model and HTTP Method; it assigns sensitivity labels that determine storage, access, transmission, retention, and disposal controls."
     ]
   },
   {
@@ -376,7 +376,7 @@
     "bullets": [
       "Router path used when a host sends traffic outside its local subnet.",
       "Sends off-subnet packets to a router interface that can reach remote networks.",
-      "Within network infrastructure, Default Gateway belongs in the workflow because it sends off-subnet packets to a router interface that can reach remote networks."
+      "Default Gateway complements CIDR and DNS Resolution; it sends off-subnet packets to a router interface that can reach remote networks."
     ]
   },
   {
@@ -386,7 +386,7 @@
     "bullets": [
       "Layered control strategy so one failed safeguard does not cause total failure.",
       "Applies multiple safeguards across layers so a single control failure does not expose the entire environment.",
-      "Within governance, risk, and compliance, Defense in Depth belongs in the workflow because it applies multiple safeguards across layers so a single control failure does not expose the entire environment."
+      "Defense in Depth complements Business Impact Analysis and Capability Gap; it applies multiple safeguards across layers."
     ]
   },
   {
@@ -396,7 +396,7 @@
     "bullets": [
       "Logic used by monitoring systems to trigger alerts within monitoring, investigation, and response workflows.",
       "Evaluates log fields, thresholds, and patterns against conditions that generate actionable security alerts.",
-      "Within security operations and incident response, Detection Rule belongs in the workflow because it evaluates log fields, thresholds, and patterns against conditions that generate actionable security alerts."
+      "Detection Rule complements Alert Triage and Asset Inventory; it evaluates log fields, thresholds, and patterns against conditions that generate actionable security alerts."
     ]
   },
   {
@@ -406,7 +406,7 @@
     "bullets": [
       "Dynamic Host Configuration Protocol; automatically assigns network settings to devices within host administration and operating system workflows.",
       "Leases IP settings such as address, gateway, and DNS information to clients during network startup.",
-      "Within operating system administration, DHCP belongs in the workflow because it leases IP settings such as address, gateway, and DNS information to clients during network startup."
+      "DHCP complements chmod and chown; it leases IP settings such as address, gateway, and DNS information to clients."
     ]
   },
   {
@@ -416,7 +416,7 @@
     "bullets": [
       "Domain Name System that resolves hostnames to IP addresses within host administration and operating system workflows.",
       "Stores and serves resource records so resolvers can map names to addresses and services.",
-      "Within operating system administration, DNS belongs in the workflow because it stores and serves resource records so resolvers can map names to addresses and services."
+      "DNS fits beside chmod and chown; it stores and serves resource records."
     ]
   },
   {
@@ -426,7 +426,7 @@
     "bullets": [
       "Lookup process translating a hostname to one or more IP addresses within routed and switched network environments.",
       "Queries local caches and DNS servers iteratively or recursively until a matching address record is returned.",
-      "Within network infrastructure, DNS Resolution belongs in the workflow because it queries local caches and DNS servers iteratively or recursively until a matching address record is returned."
+      "DNS Resolution complements CIDR and Default Gateway; it queries local caches and DNS servers iteratively or recursively until a matching address record is returned."
     ]
   },
   {
@@ -436,7 +436,7 @@
     "bullets": [
       "Short professional summary of value, direction, and goals within cybersecurity job-search and portfolio workflows.",
       "Compresses role target, relevant evidence, and specialization into a brief introduction suitable for networking and screening calls.",
-      "Within career and portfolio work, Elevator Pitch belongs in the workflow because it compresses role target, relevant evidence, and specialization into a brief introduction suitable for networking and screening calls."
+      "Elevator Pitch complements AI Assistant Guardrails; it compresses role target, relevant evidence, and specialization into a brief introduction suitable for networking and screening calls."
     ]
   },
   {
@@ -446,7 +446,7 @@
     "bullets": [
       "Reversible transformation that protects confidentiality with keys within authentication and access control security workflows.",
       "Uses algorithms and keys to transform plaintext into ciphertext that authorized parties can later decrypt.",
-      "Within identity and cryptography, Encryption belongs in the workflow because it uses algorithms and keys to transform plaintext into ciphertext that authorized parties can later decrypt."
+      "Encryption complements Accounting (AAA) and Authentication; it uses algorithms and keys to transform plaintext into ciphertext that authorized parties can later decrypt."
     ]
   },
   {
@@ -456,7 +456,7 @@
     "bullets": [
       "Active discovery of services, accounts, or resources on a target within monitoring, investigation, and response workflows.",
       "Queries services, directories, or hosts to identify available accounts, ports, shares, and software details.",
-      "Within security operations and incident response, Enumeration belongs in the workflow because it queries services, directories, or hosts to identify available accounts, ports, shares, and software details."
+      "Enumeration complements Alert Triage and Asset Inventory; it queries services, directories, or hosts to identify available accounts, ports, shares, and software details."
     ]
   },
   {
@@ -466,7 +466,7 @@
     "bullets": [
       "Removal of attacker presence, malicious artifacts, and root causes within monitoring, investigation, and response workflows.",
       "Removes malware, closes exploited access paths, and fixes root causes before systems return to service.",
-      "Within security operations and incident response, Eradication belongs in the workflow because it removes malware, closes exploited access paths, and fixes root causes before systems return to service."
+      "Eradication complements Alert Triage and Asset Inventory; it removes malware, closes exploited access paths, and fixes root causes."
     ]
   },
   {
@@ -476,7 +476,7 @@
     "bullets": [
       "Code pattern that captures and responds to runtime failures safely within scripting and systems automation workflows.",
       "Detects exceptions or invalid states, then logs, retries, exits, or recovers without unsafe program behavior.",
-      "Within automation engineering, Error Handling belongs in the workflow because it detects exceptions or invalid states, then logs, retries, exits, or recovers without unsafe program behavior."
+      "Error Handling complements API and Conditional; it detects exceptions or invalid states, then logs, retries, exits, or recovers without unsafe program behavior."
     ]
   },
   {
@@ -486,7 +486,7 @@
     "bullets": [
       "Structured list of mistakes, misconceptions, and corrective notes within structured review and exam preparation.",
       "Records missed questions, wrong assumptions, and corrections so review targets recurring failure patterns.",
-      "Within study workflow, Error Log belongs in the workflow because it records missed questions, wrong assumptions, and corrections so review targets recurring failure patterns."
+      "Error Log complements Knowledge Gap and Mock Exam; it records missed questions, wrong assumptions, and corrections."
     ]
   },
   {
@@ -496,7 +496,7 @@
     "bullets": [
       "Defined process for raising incidents to appropriate teams and leadership within monitoring, investigation, and response workflows.",
       "Routes incidents to higher authority or specialist teams using predefined severity, impact, and responsibility criteria.",
-      "Within security operations and incident response, Escalation Path belongs in the workflow because it routes incidents to higher authority or specialist teams using predefined severity, impact, and responsibility criteria."
+      "Escalation Path complements Alert Triage and Asset Inventory; it routes incidents to higher authority or specialist teams using predefined severity, impact, and responsibility criteria."
     ]
   },
   {
@@ -506,7 +506,7 @@
     "bullets": [
       "Data-link encapsulation format used on Ethernet networks within routed and switched network environments.",
       "Encapsulates payload data with source, destination, type, and integrity fields for local network delivery.",
-      "Within network infrastructure, Ethernet Frame belongs in the workflow because it encapsulates payload data with source, destination, type, and integrity fields for local network delivery."
+      "Ethernet Frame complements CIDR and Default Gateway; it encapsulates payload data with source, destination, type, and integrity fields for local network delivery."
     ]
   },
   {
@@ -516,7 +516,7 @@
     "bullets": [
       "Process for collecting and preserving evidence with integrity within monitoring, investigation, and response workflows.",
       "Collects, labels, stores, and transfers artifacts using documented procedures that preserve reliability and traceability.",
-      "Within security operations and incident response, Evidence Handling belongs in the workflow because it collects, labels, stores, and transfers artifacts using documented procedures that preserve reliability and traceability."
+      "Evidence Handling complements Alert Triage and Asset Inventory; it collects, labels, stores, and transfers artifacts using documented procedures that preserve reliability and traceability."
     ]
   },
   {
@@ -526,7 +526,7 @@
     "bullets": [
       "Concise leadership-facing summary of risk, impact, and recommended action within governance, risk, and compliance workflows.",
       "Summarizes technical findings into business impact, options, and decisions needed by senior leadership.",
-      "Within governance, risk, and compliance, Executive Briefing belongs in the workflow because it summarizes technical findings into business impact, options, and decisions needed by senior leadership."
+      "Executive Briefing complements Business Impact Analysis and Capability Gap; it summarizes technical findings into business impact, options, and decisions needed by senior leadership."
     ]
   },
   {
@@ -536,7 +536,7 @@
     "bullets": [
       "Code or technique that takes advantage of a vulnerability within monitoring, investigation, and response workflows.",
       "Triggers vulnerable behavior through crafted input, code execution, or protocol abuse to gain unauthorized results.",
-      "Within security operations and incident response, Exploit belongs in the workflow because it triggers vulnerable behavior through crafted input, code execution, or protocol abuse to gain unauthorized results."
+      "Exploit complements Alert Triage and Asset Inventory; it triggers vulnerable behavior through crafted input, code execution, or protocol abuse to gain unauthorized results."
     ]
   },
   {
@@ -546,7 +546,7 @@
     "bullets": [
       "Degree to which assets are reachable or vulnerable to threat activity within governance, risk, and compliance workflows.",
       "Describes how accessible an asset or weakness is to threat activity under current controls and conditions.",
-      "Within governance, risk, and compliance, Exposure belongs in the workflow because it describes how accessible an asset or weakness is to threat activity under current controls and conditions."
+      "Exposure complements Business Impact Analysis and Capability Gap; it describes how accessible an asset or weakness is to threat activity under current controls and conditions."
     ]
   },
   {
@@ -556,7 +556,7 @@
     "bullets": [
       "Alert that appears malicious but is benign after investigation within monitoring, investigation, and response workflows.",
       "Occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort.",
-      "Within security operations and incident response, False Positive belongs in the workflow because it occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort."
+      "False Positive complements Alert Triage and Asset Inventory; it occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort."
     ]
   },
   {
@@ -566,7 +566,7 @@
     "bullets": [
       "Reading structured or semi-structured files into usable data within monitoring, investigation, and response workflows.",
       "Reads structured fields from logs or data files so automation and analysis can operate on extracted values.",
-      "Within security operations and incident response, File Parsing belongs in the workflow because it reads structured fields from logs or data files so automation and analysis can operate on extracted values."
+      "File Parsing complements Alert Triage and Asset Inventory; it reads structured fields from logs or data files."
     ]
   },
   {
@@ -576,7 +576,7 @@
     "bullets": [
       "Structure and rules used to organize and access files on storage media.",
       "Maps file names to directories, metadata, and storage blocks so the operating system can read or write data.",
-      "Within hardware and endpoint systems, Filesystem belongs in the workflow because it maps file names to directories, metadata, and storage blocks so the operating system can read or write data."
+      "Filesystem complements BIOS/UEFI Firmware and Boot Process; it maps file names to directories, metadata, and storage blocks."
     ]
   },
   {
@@ -586,7 +586,7 @@
     "bullets": [
       "Control that allows or blocks traffic based on policy rules within routed and switched network environments.",
       "Evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria.",
-      "Within network infrastructure, Firewall belongs in the workflow because it evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria."
+      "Firewall complements CIDR and Default Gateway; it evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria."
     ]
   },
   {
@@ -596,7 +596,7 @@
     "bullets": [
       "Bit-level copy of media created for evidence analysis within monitoring, investigation, and response workflows.",
       "Creates a sector-level duplicate of media while preserving source state for repeatable forensic examination.",
-      "Within security operations and incident response, Forensic Imaging belongs in the workflow because it creates a sector-level duplicate of media while preserving source state for repeatable forensic examination."
+      "Forensic Imaging complements Alert Triage and Asset Inventory; it creates a sector-level duplicate of media while preserving source state for repeatable forensic examination."
     ]
   },
   {
@@ -606,7 +606,7 @@
     "bullets": [
       "Reusable block of code that performs a defined task within scripting and systems automation workflows.",
       "Encapsulates reusable logic behind a named interface so code can be called with inputs and return results.",
-      "Within automation engineering, Function belongs in the workflow because it encapsulates reusable logic behind a named interface so code can be called with inputs and return results."
+      "Function complements API and Conditional; it encapsulates reusable logic behind a named interface."
     ]
   },
   {
@@ -616,7 +616,7 @@
     "bullets": [
       "Decision framework defining accountability, policy, and oversight within governance, risk, and compliance workflows.",
       "Assigns decision rights, policy direction, and oversight mechanisms for managing cybersecurity activities.",
-      "Within governance, risk, and compliance, Governance belongs in the workflow because it assigns decision rights, policy direction, and oversight mechanisms for managing cybersecurity activities."
+      "Governance complements Business Impact Analysis and Capability Gap; it assigns decision rights, policy direction, and oversight mechanisms for managing cybersecurity activities."
     ]
   },
   {
@@ -626,7 +626,7 @@
     "bullets": [
       "Process of reducing attack surface through secure configuration within monitoring, investigation, and response workflows.",
       "Disables unnecessary services, tightens configurations, and applies secure defaults to reduce exposed attack surface.",
-      "Within security operations and incident response, Hardening belongs in the workflow because it disables unnecessary services, tightens configurations, and applies secure defaults to reduce exposed attack surface."
+      "Hardening complements Alert Triage and Asset Inventory; it disables unnecessary services, tightens configurations, and applies secure defaults to reduce exposed attack surface."
     ]
   },
   {
@@ -636,7 +636,7 @@
     "bullets": [
       "One-way transformation of data into a fixed-length digest within authentication and access control security workflows.",
       "Processes input through a deterministic algorithm to produce a fixed digest for integrity checks and password verification.",
-      "Within identity and cryptography, Hashing belongs in the workflow because it processes input through a deterministic algorithm to produce a fixed digest for integrity checks and password verification."
+      "Hashing complements Accounting (AAA) and Authentication; it processes input through a deterministic algorithm to produce a fixed digest for integrity checks and password verification."
     ]
   },
   {
@@ -646,7 +646,7 @@
     "bullets": [
       "Action verb in HTTP such as GET, POST, PUT, or DELETE within web, data, and cloud services.",
       "Specifies the intended operation, such as reading, creating, updating, or deleting a resource.",
-      "Within web, data, and cloud systems, HTTP Method belongs in the workflow because it specifies the intended operation, such as reading, creating, updating, or deleting a resource."
+      "HTTP Method complements Cloud Service Model and Data Classification; it specifies the intended operation, such as reading, creating, updating, or deleting a resource."
     ]
   },
   {
@@ -656,7 +656,7 @@
     "bullets": [
       "Client message sent to a web server for a resource or action.",
       "Carries a method, target, headers, and optional body from a client to a server.",
-      "Within network infrastructure, HTTP Request belongs in the workflow because it carries a method, target, headers, and optional body from a client to a server."
+      "HTTP Request complements CIDR and Default Gateway; it carries a method, target, headers, and optional body from a client to a server."
     ]
   },
   {
@@ -666,7 +666,7 @@
     "bullets": [
       "Layer that creates and manages virtual machines on host hardware within endpoint hardware and platform operations.",
       "Abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host.",
-      "Within hardware and endpoint systems, Hypervisor belongs in the workflow because it abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host."
+      "Hypervisor complements BIOS/UEFI Firmware and Boot Process; it abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host."
     ]
   },
   {
@@ -676,7 +676,7 @@
     "bullets": [
       "Digital representation of a user, service, or device in an access system.",
       "Associates attributes, credentials, and permissions with a subject so systems can evaluate access requests consistently.",
-      "Within identity and cryptography, Identity belongs in the workflow because it associates attributes, credentials, and permissions with a subject so systems can evaluate access requests consistently."
+      "Identity complements Accounting (AAA) and Authentication; it associates attributes, credentials, and permissions with a subject."
     ]
   },
   {
@@ -686,7 +686,7 @@
     "bullets": [
       "Estimated consequence if a risk event occurs within governance, risk, and compliance workflows.",
       "Estimates operational, financial, legal, or reputational consequences if a threat event occurs.",
-      "Within governance, risk, and compliance, Impact belongs in the workflow because it estimates operational, financial, legal, or reputational consequences if a threat event occurs."
+      "Impact complements Business Impact Analysis and Capability Gap; it estimates operational, financial, legal, or reputational consequences if a threat event occurs."
     ]
   },
   {
@@ -696,7 +696,7 @@
     "bullets": [
       "Leadership structure coordinating decisions and responsibilities during incidents within monitoring, investigation, and response workflows.",
       "Assigns command roles, decision authority, and coordination channels so response teams act under a consistent structure.",
-      "Within security operations and incident response, Incident Command belongs in the workflow because it assigns command roles, decision authority, and coordination channels so response teams act under a consistent structure."
+      "Incident Command complements Alert Triage and Asset Inventory; it assigns command roles, decision authority, and coordination channels."
     ]
   },
   {
@@ -706,7 +706,7 @@
     "bullets": [
       "Structured notes capturing incident observations, decisions, and rationale within monitoring, investigation, and response workflows.",
       "Records timestamps, observations, hypotheses, and actions in sequence to support investigation continuity and review.",
-      "Within security operations and incident response, Incident Journal belongs in the workflow because it records timestamps, observations, hypotheses, and actions in sequence to support investigation continuity and review."
+      "Incident Journal complements Alert Triage and Asset Inventory; it records timestamps, observations, hypotheses, and actions in sequence to support investigation continuity and review."
     ]
   },
   {
@@ -716,7 +716,7 @@
     "bullets": [
       "Impact-based classification used to prioritize incident response within monitoring, investigation, and response workflows.",
       "Scores incidents using impact and urgency criteria to drive escalation, staffing, and response timelines.",
-      "Within security operations and incident response, Incident Severity belongs in the workflow because it scores incidents using impact and urgency criteria to drive escalation, staffing, and response timelines."
+      "Incident Severity complements Alert Triage and Asset Inventory; it scores incidents using impact and urgency criteria to drive escalation, staffing, and response timelines."
     ]
   },
   {
@@ -726,7 +726,7 @@
     "bullets": [
       "Observable evidence suggesting malicious activity occurred within monitoring, investigation, and response workflows.",
       "Captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity.",
-      "Within security operations and incident response, Indicator of Compromise belongs in the workflow because it captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity."
+      "Indicator of Compromise complements Alert Triage and Asset Inventory; it captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity."
     ]
   },
   {
@@ -736,7 +736,7 @@
     "bullets": [
       "Process of checking user input for format, length, and allowed values within web, data, and cloud services.",
       "Checks untrusted data against format, length, type, and allowlist rules before processing.",
-      "Within web, data, and cloud systems, Input Validation belongs in the workflow because it checks untrusted data against format, length, type, and allowlist rules before processing."
+      "Input Validation complements Cloud Service Model and Data Classification; it checks untrusted data against format, length, type, and allowlist rules."
     ]
   },
   {
@@ -746,7 +746,7 @@
     "bullets": [
       "Structured practice of common technical and behavioral interview prompts within cybersecurity job-search and portfolio workflows.",
       "Uses repeated prompt-response practice with timed answers to improve structure, precision, and confidence under interview conditions.",
-      "Within career and portfolio work, Interview Question Drill belongs in the workflow because it uses repeated prompt-response practice with timed answers to improve structure, precision, and confidence under interview conditions."
+      "Interview Question Drill complements AI Assistant Guardrails; it uses repeated prompt-response practice with timed answers to improve structure, precision, and confidence under interview conditions."
     ]
   },
   {
@@ -756,7 +756,7 @@
     "bullets": [
       "Monitoring approach that identifies suspicious or malicious activity within monitoring, investigation, and response workflows.",
       "Analyzes network or host events for suspicious patterns and generates alerts when monitored conditions match.",
-      "Within security operations and incident response, Intrusion Detection belongs in the workflow because it analyzes network or host events for suspicious patterns and generates alerts when monitored conditions match."
+      "Intrusion Detection complements Alert Triage and Asset Inventory; it analyzes network or host events for suspicious patterns and generates alerts when monitored conditions match."
     ]
   },
   {
@@ -766,7 +766,7 @@
     "bullets": [
       "Inline security control that blocks malicious activity in real time within monitoring, investigation, and response workflows.",
       "Inspects traffic inline and automatically blocks packets or sessions matching malicious signatures or policies.",
-      "Within security operations and incident response, Intrusion Prevention belongs in the workflow because it inspects traffic inline and automatically blocks packets or sessions matching malicious signatures or policies."
+      "Intrusion Prevention complements Alert Triage and Asset Inventory; it inspects traffic inline and automatically blocks packets or sessions matching malicious signatures or policies."
     ]
   },
   {
@@ -776,7 +776,7 @@
     "bullets": [
       "Logical network address used to identify a host and route traffic within routed and switched network environments.",
       "Assigns a logical source or destination identifier so packets can be routed between networks.",
-      "Within network infrastructure, IP Address belongs in the workflow because it assigns a logical source or destination identifier so packets can be routed between networks."
+      "IP Address complements CIDR and Default Gateway; it assigns a logical source or destination identifier."
     ]
   },
   {
@@ -786,7 +786,7 @@
     "bullets": [
       "32-bit addressing protocol widely used for internet and private networks within routed and switched network environments.",
       "Represents addresses in 32 bits and forwards packets using hierarchical network and host portions.",
-      "Within network infrastructure, IPv4 belongs in the workflow because it represents addresses in 32 bits and forwards packets using hierarchical network and host portions."
+      "IPv4 complements CIDR and Default Gateway; it represents addresses in 32 bits and forwards packets using hierarchical network and host portions."
     ]
   },
   {
@@ -796,7 +796,7 @@
     "bullets": [
       "System for managing applications, follow-ups, and interview stages within cybersecurity job-search and portfolio workflows.",
       "Stores application dates, contact details, follow-up tasks, and outcomes so outreach activity remains measurable and current.",
-      "Within career and portfolio work, Job Tracker belongs in the workflow because it stores application dates, contact details, follow-up tasks, and outcomes so outreach activity remains measurable and current."
+      "Job Tracker complements AI Assistant Guardrails and Application Funnel; it stores application dates, contact details, follow-up tasks, and outcomes."
     ]
   },
   {
@@ -806,7 +806,7 @@
     "bullets": [
       "SQL operation that combines related rows across multiple tables within web, data, and cloud services.",
       "Matches related rows across tables using keys so combined results can be queried together.",
-      "Within web, data, and cloud systems, JOIN belongs in the workflow because it matches related rows across tables using keys so combined results can be queried together."
+      "JOIN complements Cloud Service Model and Data Classification; it matches related rows across tables using keys."
     ]
   },
   {
@@ -816,7 +816,7 @@
     "bullets": [
       "Aligning profile and resume terms with job descriptions and ATS logic within cybersecurity job-search and portfolio workflows.",
       "Maps resume and profile language to recurring job-description terms so applicant tracking systems match relevant skills.",
-      "Within career and portfolio work, Keyword Optimization belongs in the workflow because it maps resume and profile language to recurring job-description terms so applicant tracking systems match relevant skills."
+      "Keyword Optimization complements AI Assistant Guardrails and Application Funnel; it maps resume and profile language to recurring job-description terms."
     ]
   },
   {
@@ -826,7 +826,7 @@
     "bullets": [
       "Specific topic where understanding is currently insufficient within structured review and exam preparation.",
       "Identifies a specific concept needing further study based on errors, uncertainty, or weak explanation.",
-      "Within study workflow, Knowledge Gap belongs in the workflow because it identifies a specific concept needing further study based on errors, uncertainty, or weak explanation."
+      "Knowledge Gap complements Error Log and Mock Exam; it identifies a specific concept needing further study based on errors, uncertainty, or weak explanation."
     ]
   },
   {
@@ -836,7 +836,7 @@
     "bullets": [
       "Time delay between request and response across a path within routed and switched network environments.",
       "Measures elapsed time introduced by transmission, processing, queuing, and distance across a network path.",
-      "Within network infrastructure, Latency belongs in the workflow because it measures elapsed time introduced by transmission, processing, queuing, and distance across a network path."
+      "Latency complements CIDR and Default Gateway; it measures elapsed time introduced by transmission, processing, queuing, and distance across a network path."
     ]
   },
   {
@@ -846,7 +846,7 @@
     "bullets": [
       "Security principle granting only the minimum permissions needed for a task within authentication and access control security workflows.",
       "Restricts roles and permissions to required actions, limiting misuse, accident scope, and privilege escalation opportunities.",
-      "Within identity and cryptography, Least Privilege belongs in the workflow because it restricts roles and permissions to required actions, limiting misuse, accident scope, and privilege escalation opportunities."
+      "Least Privilege complements Accounting (AAA) and Authentication; it restricts roles and permissions to required actions, limiting misuse, accident scope, and privilege escalation opportunities."
     ]
   },
   {
@@ -856,7 +856,7 @@
     "bullets": [
       "Estimated probability that a risk event will occur within governance, risk, and compliance workflows.",
       "Estimates how probable a threat event is based on exposure, capability, and control conditions.",
-      "Within governance, risk, and compliance, Likelihood belongs in the workflow because it estimates how probable a threat event is based on exposure, capability, and control conditions."
+      "Likelihood complements Business Impact Analysis and Capability Gap; it estimates how probable a threat event is based on exposure, capability, and control conditions."
     ]
   },
   {
@@ -866,7 +866,7 @@
     "bullets": [
       "Professional public profile highlighting role alignment and proof-of-work within cybersecurity job-search and portfolio workflows.",
       "Publishes a searchable professional summary, experience evidence, and network-facing activity aligned with target cybersecurity roles.",
-      "Within career and portfolio work, LinkedIn Profile belongs in the workflow because it publishes a searchable professional summary, experience evidence, and network-facing activity aligned with target cybersecurity roles."
+      "LinkedIn Profile complements AI Assistant Guardrails and Application Funnel; it publishes a searchable professional summary, experience evidence, and network-facing activity aligned with target cybersecurity roles."
     ]
   },
   {
@@ -876,7 +876,7 @@
     "bullets": [
       "Core component of Linux that manages hardware access, processes, and memory within host administration and operating system workflows.",
       "Handles scheduling, memory management, drivers, and system calls between software and hardware resources.",
-      "Within operating system administration, Linux Kernel belongs in the workflow because it handles scheduling, memory management, drivers, and system calls between software and hardware resources."
+      "Linux Kernel complements chmod and chown; it handles scheduling, memory management, drivers, and system calls between software and hardware resources."
     ]
   },
   {
@@ -886,7 +886,7 @@
     "bullets": [
       "Read/write/execute access model controlling file and directory operations within host administration and operating system workflows.",
       "Evaluates ownership and permission bits before allowing file or directory operations on Linux.",
-      "Within operating system administration, Linux Permissions belongs in the workflow because it evaluates ownership and permission bits before allowing file or directory operations on Linux."
+      "Linux Permissions complements chmod and chown; it evaluates ownership and permission bits."
     ]
   },
   {
@@ -896,7 +896,7 @@
     "bullets": [
       "Linking events from multiple sources to reveal meaningful patterns within monitoring, investigation, and response workflows.",
       "Combines events across sources by time, host, user, or indicator to reveal attack sequences.",
-      "Within security operations and incident response, Log Correlation belongs in the workflow because it combines events across sources by time, host, user, or indicator to reveal attack sequences."
+      "Log Correlation complements Alert Triage and Asset Inventory; it combines events across sources by time, host, user, or indicator to reveal attack sequences."
     ]
   },
   {
@@ -906,7 +906,7 @@
     "bullets": [
       "System or service that generates telemetry ingested for analysis within monitoring, investigation, and response workflows.",
       "Produces telemetry from systems, applications, and security tools that analysts ingest for monitoring and investigation.",
-      "Within security operations and incident response, Log Source belongs in the workflow because it produces telemetry from systems, applications, and security tools that analysts ingest for monitoring and investigation."
+      "Log Source complements Alert Triage and Asset Inventory; it produces telemetry from systems, applications, and security tools that analysts ingest for monitoring and investigation."
     ]
   },
   {
@@ -916,7 +916,7 @@
     "bullets": [
       "Programming control structure that repeats actions over data or conditions within scripting and systems automation workflows.",
       "Repeats statements over a sequence or condition until the dataset is exhausted or the condition changes.",
-      "Within automation engineering, Loop belongs in the workflow because it repeats statements over a sequence or condition until the dataset is exhausted or the condition changes."
+      "Loop complements API and Conditional; it repeats statements over a sequence or condition until the dataset is exhausted or the condition changes."
     ]
   },
   {
@@ -926,7 +926,7 @@
     "bullets": [
       "Hardware identifier used by network interfaces on local segments within routed and switched network environments.",
       "Identifies a local network interface at Layer 2 for switching and frame delivery decisions.",
-      "Within network infrastructure, MAC Address belongs in the workflow because it identifies a local network interface at Layer 2 for switching and frame delivery decisions."
+      "MAC Address complements CIDR and Default Gateway; it identifies a local network interface at Layer 2 for switching and frame delivery decisions."
     ]
   },
   {
@@ -936,7 +936,7 @@
     "bullets": [
       "Malicious software designed to disrupt systems, steal data, or gain unauthorized control.",
       "Executes malicious instructions that steal data, disrupt operations, establish persistence, or enable remote control.",
-      "Within security operations and incident response, Malware belongs in the workflow because it executes malicious instructions that steal data, disrupt operations, establish persistence, or enable remote control."
+      "Malware complements Alert Triage and Asset Inventory; it executes malicious instructions that steal data, disrupt operations, establish persistence, or enable remote control."
     ]
   },
   {
@@ -946,7 +946,7 @@
     "bullets": [
       "Non-technical overview focused on business impact and decisions needed within governance, risk, and compliance workflows.",
       "Condenses technical detail into concise statements about business effect, priority, and recommended actions.",
-      "Within governance, risk, and compliance, Management Summary belongs in the workflow because it condenses technical detail into concise statements about business effect, priority, and recommended actions."
+      "Management Summary complements Business Impact Analysis and Capability Gap; it condenses technical detail into concise statements about business effect, priority, and recommended actions."
     ]
   },
   {
@@ -956,7 +956,7 @@
     "bullets": [
       "Framework used to assess current capability level and improvement targets within governance, risk, and compliance workflows.",
       "Rates current process capability against defined levels to guide staged improvement planning.",
-      "Within governance, risk, and compliance, Maturity Model belongs in the workflow because it rates current process capability against defined levels to guide staged improvement planning."
+      "Maturity Model complements Business Impact Analysis and Capability Gap; it rates current process capability against defined levels to guide staged improvement planning."
     ]
   },
   {
@@ -966,7 +966,7 @@
     "bullets": [
       "Action that lowers likelihood or impact of a risk within governance, risk, and compliance workflows.",
       "Selects and implements actions that lower the chance or consequences of a risk event.",
-      "Within governance, risk, and compliance, Mitigation belongs in the workflow because it selects and implements actions that lower the chance or consequences of a risk event."
+      "Mitigation complements Business Impact Analysis and Capability Gap; it selects and implements actions that lower the chance or consequences of a risk event."
     ]
   },
   {
@@ -976,7 +976,7 @@
     "bullets": [
       "Portable endpoint such as a laptop, tablet, or smartphone with dedicated management constraints.",
       "Integrates compute components, radios, sensors, and power controls under mobile operating system management policies.",
-      "Within hardware and endpoint systems, Mobile Device belongs in the workflow because it integrates compute components, radios, sensors, and power controls under mobile operating system management policies."
+      "Mobile Device complements BIOS/UEFI Firmware and Boot Process; it integrates compute components, radios, sensors, and power controls under mobile operating system management policies."
     ]
   },
   {
@@ -986,7 +986,7 @@
     "bullets": [
       "Practice test used to simulate exam conditions and identify weak areas within structured review and exam preparation.",
       "Simulates exam timing, format, and pressure to measure readiness under realistic test conditions.",
-      "Within study workflow, Mock Exam belongs in the workflow because it simulates exam timing, format, and pressure to measure readiness under realistic test conditions."
+      "Mock Exam complements Error Log and Knowledge Gap; it simulates exam timing, format, and pressure to measure readiness under realistic test conditions."
     ]
   },
   {
@@ -996,7 +996,7 @@
     "bullets": [
       "Main circuit board that connects CPU, memory, storage, and expansion components within endpoint hardware and platform operations.",
       "Provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components.",
-      "Within hardware and endpoint systems, Motherboard belongs in the workflow because it provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components."
+      "Motherboard complements BIOS/UEFI Firmware and Boot Process; it provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components."
     ]
   },
   {
@@ -1006,7 +1006,7 @@
     "bullets": [
       "Authentication method requiring two or more independent proof factors within authentication and access control security workflows.",
       "Combines multiple factor types, such as passwords and tokens, before granting access to a protected system.",
-      "Within identity and cryptography, Multi-Factor Authentication belongs in the workflow because it combines multiple factor types, such as passwords and tokens, before granting access to a protected system."
+      "Multi-Factor Authentication complements Accounting (AAA) and Authentication; it combines multiple factor types, such as passwords and tokens,."
     ]
   },
   {
@@ -1016,7 +1016,7 @@
     "bullets": [
       "Network Address Translation that maps internal addresses to external addresses within routed and switched network environments.",
       "Rewrites source or destination addresses, and sometimes ports, as traffic crosses between network boundaries.",
-      "Within network infrastructure, NAT belongs in the workflow because it rewrites source or destination addresses, and sometimes ports, as traffic crosses between network boundaries."
+      "NAT complements CIDR and Default Gateway; it rewrites source or destination addresses, and sometimes ports, as traffic crosses between network boundaries."
     ]
   },
   {
@@ -1026,7 +1026,7 @@
     "bullets": [
       "Documented normal traffic behavior used to identify anomalies within monitoring, investigation, and response workflows.",
       "Measures normal traffic volume, protocols, hosts, and timing so anomalies can be recognized quickly.",
-      "Within security operations and incident response, Network Baseline belongs in the workflow because it measures normal traffic volume, protocols, hosts, and timing so anomalies can be recognized quickly."
+      "Network Baseline complements Alert Triage and Asset Inventory; it measures normal traffic volume, protocols, hosts, and timing."
     ]
   },
   {
@@ -1036,7 +1036,7 @@
     "bullets": [
       "Separation of network zones to reduce lateral movement and contain impact within routed and switched network environments.",
       "Divides systems into controlled zones using routing, VLANs, or firewalls to restrict lateral movement.",
-      "Within network infrastructure, Network Segmentation belongs in the workflow because it divides systems into controlled zones using routing, VLANs, or firewalls to restrict lateral movement."
+      "Network Segmentation complements CIDR and Default Gateway; it divides systems into controlled zones using routing, VLANs, or firewalls to restrict lateral movement."
     ]
   },
   {
@@ -1046,7 +1046,7 @@
     "bullets": [
       "Physical or logical arrangement of network devices and connections within routed and switched network environments.",
       "Describes how hosts, links, and network devices connect and communicate across an environment.",
-      "Within network infrastructure, Network Topology belongs in the workflow because it describes how hosts, links, and network devices connect and communicate across an environment."
+      "Network Topology complements CIDR and Default Gateway; it describes how hosts, links, and network devices connect and communicate across an environment."
     ]
   },
   {
@@ -1056,7 +1056,7 @@
     "bullets": [
       "Intentional communication with peers, mentors, and hiring contacts within cybersecurity job-search and portfolio workflows.",
       "Schedules targeted messages, follow-ups, and conversation notes to expand referral paths and market visibility.",
-      "Within career and portfolio work, Networking Outreach belongs in the workflow because it schedules targeted messages, follow-ups, and conversation notes to expand referral paths and market visibility."
+      "Networking Outreach complements AI Assistant Guardrails and Application Funnel; it schedules targeted messages, follow-ups, and conversation notes to expand referral paths and market visibility."
     ]
   },
   {
@@ -1066,7 +1066,7 @@
     "bullets": [
       "New Technology File System used by modern Windows systems within host administration and operating system workflows.",
       "Stores files with metadata, access controls, journaling, and recovery features on Windows volumes.",
-      "Within operating system administration, NTFS belongs in the workflow because it stores files with metadata, access controls, journaling, and recovery features on Windows volumes."
+      "NTFS complements chmod and chown; it stores files with metadata, access controls, journaling, and recovery features on Windows volumes."
     ]
   },
   {
@@ -1076,7 +1076,7 @@
     "bullets": [
       "Core software that manages hardware, files, processes, and user interaction within endpoint hardware and platform operations.",
       "Schedules processes, manages memory, controls devices, and exposes interfaces for users and applications.",
-      "Within hardware and endpoint systems, Operating System belongs in the workflow because it schedules processes, manages memory, controls devices, and exposes interfaces for users and applications."
+      "Operating System complements BIOS/UEFI Firmware and Boot Process; it schedules processes, manages memory, controls devices, and exposes interfaces for users and applications."
     ]
   },
   {
@@ -1086,7 +1086,7 @@
     "bullets": [
       "Seven-layer conceptual model describing how network communication functions within endpoint hardware and platform operations.",
       "Separates communication tasks into layers so protocols can be analyzed by function during design and troubleshooting.",
-      "Within hardware and endpoint systems, OSI Model belongs in the workflow because it separates communication tasks into layers so protocols can be analyzed by function during design and troubleshooting."
+      "OSI Model complements BIOS/UEFI Firmware and Boot Process; it separates communication tasks into layers."
     ]
   },
   {
@@ -1096,7 +1096,7 @@
     "bullets": [
       "Tool that installs, updates, and removes software packages with dependency handling within host administration and operating system workflows.",
       "Retrieves packages, resolves dependencies, verifies sources, and installs or updates software consistently.",
-      "Within operating system administration, Package Manager belongs in the workflow because it retrieves packages, resolves dependencies, verifies sources, and installs or updates software consistently."
+      "Package Manager complements chmod and chown; it retrieves packages, resolves dependencies, verifies sources, and installs or updates software consistently."
     ]
   },
   {
@@ -1106,7 +1106,7 @@
     "bullets": [
       "Query expression used to isolate relevant traffic in a capture within routed and switched network environments.",
       "Applies capture expressions to packet headers so only matching traffic is displayed or stored.",
-      "Within network infrastructure, Packet Filter belongs in the workflow because it applies capture expressions to packet headers so only matching traffic is displayed or stored."
+      "Packet Filter complements CIDR and Default Gateway; it applies capture expressions to packet headers."
     ]
   },
   {
@@ -1116,7 +1116,7 @@
     "bullets": [
       "Process for testing, deploying, and verifying software updates within monitoring, investigation, and response workflows.",
       "Identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets.",
-      "Within security operations and incident response, Patch Management belongs in the workflow because it identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets."
+      "Patch Management complements Alert Triage and Asset Inventory; it identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets."
     ]
   },
   {
@@ -1126,7 +1126,7 @@
     "bullets": [
       "Packet capture file format storing recorded network traffic within routed and switched network environments.",
       "Stores captured packets with timestamps and frame data for later analysis in supporting tools.",
-      "Within network infrastructure, PCAP belongs in the workflow because it stores captured packets with timestamps and frame data for later analysis in supporting tools."
+      "PCAP complements CIDR and Default Gateway; it stores captured packets with timestamps and frame data for later analysis in supporting tools."
     ]
   },
   {
@@ -1136,7 +1136,7 @@
     "bullets": [
       "ICMP-based connectivity test used for basic reachability checks within routed and switched network environments.",
       "Sends ICMP echo messages and measures replies to confirm basic reachability and delay.",
-      "Within network infrastructure, Ping belongs in the workflow because it sends ICMP echo messages and measures replies to confirm basic reachability and delay."
+      "Ping complements CIDR and Default Gateway; it sends ICMP echo messages and measures replies to confirm basic reachability and delay."
     ]
   },
   {
@@ -1146,7 +1146,7 @@
     "bullets": [
       "Documented response workflow for recurring security scenarios within monitoring, investigation, and response workflows.",
       "Documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario.",
-      "Within security operations and incident response, Playbook belongs in the workflow because it documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario."
+      "Playbook complements Alert Triage and Asset Inventory; it documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario."
     ]
   },
   {
@@ -1156,7 +1156,7 @@
     "bullets": [
       "Transport-layer identifier that maps traffic to a specific service within host administration and operating system workflows.",
       "Identifies the target service within a transport session so hosts deliver traffic to the correct process.",
-      "Within operating system administration, Port Number belongs in the workflow because it identifies the target service within a transport session so hosts deliver traffic to the correct process."
+      "Port Number complements chmod and chown; it identifies the target service within a transport session."
     ]
   },
   {
@@ -1166,7 +1166,7 @@
     "bullets": [
       "Concrete evidence of work quality such as write-ups, diagrams, or labs within cybersecurity job-search and portfolio workflows.",
       "Captures a completed deliverable with context, method, and outcome so reviewers can evaluate practical capability.",
-      "Within career and portfolio work, Portfolio Artifact belongs in the workflow because it captures a completed deliverable with context, method, and outcome so reviewers can evaluate practical capability."
+      "Portfolio Artifact complements AI Assistant Guardrails and Application Funnel; it captures a completed deliverable with context, method, and outcome."
     ]
   },
   {
@@ -1176,7 +1176,7 @@
     "bullets": [
       "Structured retrospective focused on lessons and control improvements within monitoring, investigation, and response workflows.",
       "Evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness.",
-      "Within security operations and incident response, Post-Incident Review belongs in the workflow because it evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness."
+      "Post-Incident Review complements Alert Triage and Asset Inventory; it evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness."
     ]
   },
   {
@@ -1186,7 +1186,7 @@
     "bullets": [
       "Windows automation shell and scripting language for system administration within host administration and operating system workflows.",
       "Runs cmdlets, pipelines, and scripts against Windows objects for administration and automation tasks.",
-      "Within operating system administration, PowerShell belongs in the workflow because it runs cmdlets, pipelines, and scripts against Windows objects for administration and automation tasks."
+      "PowerShell complements chmod and chown; it runs cmdlets, pipelines, and scripts against Windows objects for administration and automation tasks."
     ]
   },
   {
@@ -1196,7 +1196,7 @@
     "bullets": [
       "Non-routable address range intended for internal networks within routed and switched network environments.",
       "Uses reserved address ranges internally, requiring routing controls or translation before internet communication.",
-      "Within network infrastructure, Private IP belongs in the workflow because it uses reserved address ranges internally, requiring routing controls or translation before internet communication."
+      "Private IP complements CIDR and Default Gateway; it uses reserved address ranges internally, requiring routing controls or translation."
     ]
   },
   {
@@ -1206,7 +1206,7 @@
     "bullets": [
       "Technique for gaining higher permissions than initially granted within monitoring, investigation, and response workflows.",
       "Exploits misconfigurations or software flaws to obtain permissions beyond the initial security context.",
-      "Within security operations and incident response, Privilege Escalation belongs in the workflow because it exploits misconfigurations or software flaws to obtain permissions beyond the initial security context."
+      "Privilege Escalation complements Alert Triage and Asset Inventory; it exploits misconfigurations or software flaws to obtain permissions beyond the initial security context."
     ]
   },
   {
@@ -1216,7 +1216,7 @@
     "bullets": [
       "Running program instance with its own state and resource usage within host administration and operating system workflows.",
       "Uses an isolated execution context with memory, threads, and permissions while a program runs.",
-      "Within operating system administration, Process belongs in the workflow because it uses an isolated execution context with memory, threads, and permissions while a program runs."
+      "Process complements chmod and chown; it uses an isolated execution context with memory, threads, and permissions while a program runs."
     ]
   },
   {
@@ -1226,7 +1226,7 @@
     "bullets": [
       "Globally routable address visible on the internet within routed and switched network environments.",
       "Provides an internet-routable address reachable across external networks according to upstream routing.",
-      "Within network infrastructure, Public IP belongs in the workflow because it provides an internet-routable address reachable across external networks according to upstream routing."
+      "Public IP complements CIDR and Default Gateway; it provides an internet-routable address reachable across external networks according to upstream routing."
     ]
   },
   {
@@ -1236,7 +1236,7 @@
     "bullets": [
       "Executable Python code used to automate repetitive tasks within scripting and systems automation workflows.",
       "Executes Python instructions from a file to automate parsing, reporting, administration, or response tasks.",
-      "Within automation engineering, Python Script belongs in the workflow because it executes Python instructions from a file to automate parsing, reporting, administration, or response tasks."
+      "Python Script complements API and Conditional; it executes Python instructions from a file to automate parsing, reporting, administration, or response tasks."
     ]
   },
   {
@@ -1246,7 +1246,7 @@
     "bullets": [
       "Risk assessment using categorical scales like low/medium/high within governance, risk, and compliance workflows.",
       "Ranks risks using descriptive scales when precise financial or statistical data is unavailable.",
-      "Within governance, risk, and compliance, Qualitative Risk Analysis belongs in the workflow because it ranks risks using descriptive scales when precise financial or statistical data is unavailable."
+      "Qualitative Risk Analysis complements Business Impact Analysis and Capability Gap; it ranks risks using descriptive scales when precise financial or statistical data is unavailable."
     ]
   },
   {
@@ -1256,7 +1256,7 @@
     "bullets": [
       "Risk assessment using numerical estimates such as expected loss values within governance, risk, and compliance workflows.",
       "Uses numerical estimates, frequencies, and loss values to calculate expected risk exposure.",
-      "Within governance, risk, and compliance, Quantitative Risk Analysis belongs in the workflow because it uses numerical estimates, frequencies, and loss values to calculate expected risk exposure."
+      "Quantitative Risk Analysis complements Business Impact Analysis and Capability Gap; it uses numerical estimates, frequencies, and loss values to calculate expected risk exposure."
     ]
   },
   {
@@ -1266,7 +1266,7 @@
     "bullets": [
       "Volatile memory used for active processes and short-term data access within endpoint hardware and platform operations.",
       "Holds active instructions and data in fast volatile memory for immediate CPU access during execution.",
-      "Within hardware and endpoint systems, RAM belongs in the workflow because it holds active instructions and data in fast volatile memory for immediate CPU access during execution."
+      "RAM complements BIOS/UEFI Firmware and Boot Process; it holds active instructions and data in fast volatile memory for immediate CPU access."
     ]
   },
   {
@@ -1276,7 +1276,7 @@
     "bullets": [
       "Information-gathering phase used by attackers before exploitation within monitoring, investigation, and response workflows.",
       "Collects target information from public or direct sources before exploitation, phishing, or lateral movement attempts.",
-      "Within security operations and incident response, Reconnaissance belongs in the workflow because it collects target information from public or direct sources before exploitation, phishing, or lateral movement attempts."
+      "Reconnaissance complements Alert Triage and Asset Inventory; it collects target information from public or direct sources."
     ]
   },
   {
@@ -1286,7 +1286,7 @@
     "bullets": [
       "Restoration of normal operations after incident containment and eradication within monitoring, investigation, and response workflows.",
       "Restores validated systems, services, and business operations after threats are removed and controls are confirmed.",
-      "Within security operations and incident response, Recovery belongs in the workflow because it restores validated systems, services, and business operations after threats are removed and controls are confirmed."
+      "Recovery complements Alert Triage and Asset Inventory; it restores validated systems, services, and business operations after threats are removed and controls are confirmed."
     ]
   },
   {
@@ -1296,7 +1296,7 @@
     "bullets": [
       "Pattern syntax used to match and extract structured text within monitoring, investigation, and response workflows.",
       "Matches character patterns within text so scripts and tools can filter, extract, or transform data.",
-      "Within security operations and incident response, Regular Expression belongs in the workflow because it matches character patterns within text so scripts and tools can filter, extract, or transform data."
+      "Regular Expression complements Alert Triage and Asset Inventory; it matches character patterns within text."
     ]
   },
   {
@@ -1306,7 +1306,7 @@
     "bullets": [
       "Risk that remains after controls are implemented within governance, risk, and compliance workflows.",
       "Measures the remaining exposure after planned or implemented controls reduce the original risk.",
-      "Within governance, risk, and compliance, Residual Risk belongs in the workflow because it measures the remaining exposure after planned or implemented controls reduce the original risk."
+      "Residual Risk complements Business Impact Analysis and Capability Gap; it measures the remaining exposure after planned or implemented controls reduce the original risk."
     ]
   },
   {
@@ -1316,7 +1316,7 @@
     "bullets": [
       "Adjusting resume content to align with a specific role within cybersecurity job-search and portfolio workflows.",
       "Reorders content, rewrites bullets, and emphasizes relevant evidence for each specific role description.",
-      "Within career and portfolio work, Resume Tailoring belongs in the workflow because it reorders content, rewrites bullets, and emphasizes relevant evidence for each specific role description."
+      "Resume Tailoring complements AI Assistant Guardrails and Application Funnel; it reorders content, rewrites bullets, and emphasizes relevant evidence for each specific role description."
     ]
   },
   {
@@ -1326,7 +1326,7 @@
     "bullets": [
       "Actively recalling information without notes to strengthen memory within structured review and exam preparation.",
       "Forces recall from memory without prompts, strengthening retention and identifying weak recall paths.",
-      "Within study workflow, Retrieval Practice belongs in the workflow because it forces recall from memory without prompts, strengthening retention and identifying weak recall paths."
+      "Retrieval Practice complements Error Log and Knowledge Gap; it forces recall from memory without prompts, strengthening retention and identifying weak recall paths."
     ]
   },
   {
@@ -1336,7 +1336,7 @@
     "bullets": [
       "Service that receives client requests and forwards them to backend servers within endpoint hardware and platform operations.",
       "Accepts client connections, applies policies, and forwards approved requests to internal application servers.",
-      "Within hardware and endpoint systems, Reverse Proxy belongs in the workflow because it accepts client connections, applies policies, and forwards approved requests to internal application servers."
+      "Reverse Proxy complements BIOS/UEFI Firmware and Boot Process; it accepts client connections, applies policies, and forwards approved requests to internal application servers."
     ]
   },
   {
@@ -1346,7 +1346,7 @@
     "bullets": [
       "Potential for loss when a threat exploits a vulnerability within endpoint hardware and platform operations.",
       "Combines likelihood and impact to estimate potential loss from threats affecting vulnerable assets or processes.",
-      "Within hardware and endpoint systems, Risk belongs in the workflow because it combines likelihood and impact to estimate potential loss from threats affecting vulnerable assets or processes."
+      "Risk complements BIOS/UEFI Firmware and Boot Process; it combines likelihood and impact to estimate potential loss from threats affecting vulnerable assets or processes."
     ]
   },
   {
@@ -1356,7 +1356,7 @@
     "bullets": [
       "Structured evaluation of risk likelihood, impact, and treatment options within governance, risk, and compliance workflows.",
       "Identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions.",
-      "Within governance, risk, and compliance, Risk Assessment belongs in the workflow because it identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions."
+      "Risk Assessment complements Business Impact Analysis and Capability Gap; it identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions."
     ]
   },
   {
@@ -1366,7 +1366,7 @@
     "bullets": [
       "Documented inventory of identified risks, ratings, owners, and treatments within governance, risk, and compliance workflows.",
       "Maintains a living record of risks, scores, owners, response plans, and status updates.",
-      "Within governance, risk, and compliance, Risk Register belongs in the workflow because it maintains a living record of risks, scores, owners, response plans, and status updates."
+      "Risk Register complements Business Impact Analysis and Capability Gap; it maintains a living record of risks, scores, owners, response plans, and status updates."
     ]
   },
   {
@@ -1376,7 +1376,7 @@
     "bullets": [
       "Chosen approach to address risk: mitigate, transfer, avoid, or accept within governance, risk, and compliance workflows.",
       "Chooses whether to mitigate, transfer, avoid, or accept each risk based on context.",
-      "Within governance, risk, and compliance, Risk Treatment belongs in the workflow because it chooses whether to mitigate, transfer, avoid, or accept each risk based on context."
+      "Risk Treatment complements Business Impact Analysis and Capability Gap; it chooses whether to mitigate, transfer, avoid, or accept each risk based on context."
     ]
   },
   {
@@ -1386,7 +1386,7 @@
     "bullets": [
       "Choosing next learning or capability steps based on impact and constraints within governance, risk, and compliance workflows.",
       "Ranks planned improvements by impact, dependency, cost, and timing to sequence work realistically.",
-      "Within governance, risk, and compliance, Roadmap Prioritization belongs in the workflow because it ranks planned improvements by impact, dependency, cost, and timing to sequence work realistically."
+      "Roadmap Prioritization complements Business Impact Analysis and Capability Gap; it ranks planned improvements by impact, dependency, cost, and timing to sequence work realistically."
     ]
   },
   {
@@ -1396,7 +1396,7 @@
     "bullets": [
       "Layer 3 device that forwards packets between networks within routed and switched network environments.",
       "Examines destination networks and forwards packets toward the next hop using Layer 3 decisions.",
-      "Within network infrastructure, Router belongs in the workflow because it examines destination networks and forwards packets toward the next hop using Layer 3 decisions."
+      "Router complements CIDR and Default Gateway; it examines destination networks and forwards packets toward the next hop using Layer 3 decisions."
     ]
   },
   {
@@ -1406,7 +1406,7 @@
     "bullets": [
       "Lookup data used by hosts and routers to choose next-hop paths within routed and switched network environments.",
       "Lists known networks, next hops, interfaces, and metrics used to choose forwarding paths.",
-      "Within network infrastructure, Routing Table belongs in the workflow because it lists known networks, next hops, interfaces, and metrics used to choose forwarding paths."
+      "Routing Table complements CIDR and Default Gateway; it lists known networks, next hops, interfaces, and metrics used to choose forwarding paths."
     ]
   },
   {
@@ -1416,7 +1416,7 @@
     "bullets": [
       "Structured reference model such as NIST CSF used to organize security practices.",
       "Defines functions, domains, or control families that organizations map to policies and improvement plans.",
-      "Within hardware and endpoint systems, Security Framework belongs in the workflow because it defines functions, domains, or control families that organizations map to policies and improvement plans."
+      "Security Framework complements BIOS/UEFI Firmware and Boot Process; it defines functions, domains, or control families that organizations map to policies and improvement plans."
     ]
   },
   {
@@ -1426,7 +1426,7 @@
     "bullets": [
       "SQL command used to retrieve data from one or more tables within web, data, and cloud services.",
       "Requests specific columns and rows from database tables based on query conditions.",
-      "Within web, data, and cloud systems, SELECT Statement belongs in the workflow because it requests specific columns and rows from database tables based on query conditions."
+      "SELECT Statement complements Cloud Service Model and Data Classification; it requests specific columns and rows from database tables based on query conditions."
     ]
   },
   {
@@ -1436,7 +1436,7 @@
     "bullets": [
       "Practice of monitoring, starting, stopping, and configuring background services within host administration and operating system workflows.",
       "Starts, stops, enables, and monitors background services that provide persistent system functions.",
-      "Within operating system administration, Service Management belongs in the workflow because it starts, stops, enables, and monitors background services that provide persistent system functions."
+      "Service Management complements chmod and chown; it starts, stops, enables, and monitors background services that provide persistent system functions."
     ]
   },
   {
@@ -1446,7 +1446,7 @@
     "bullets": [
       "Identifier that binds a user to an authenticated session within web, data, and cloud services.",
       "Maintains authenticated state by presenting a server-issued identifier with subsequent client requests.",
-      "Within web, data, and cloud systems, Session Token belongs in the workflow because it maintains authenticated state by presenting a server-issued identifier with subsequent client requests."
+      "Session Token complements Cloud Service Model and Data Classification; it maintains authenticated state by presenting a server-issued identifier with subsequent client requests."
     ]
   },
   {
@@ -1456,7 +1456,7 @@
     "bullets": [
       "Command interpreter used to interact with the operating system within host administration and operating system workflows.",
       "Interprets user commands, expands syntax, and launches programs within the current operating system session.",
-      "Within operating system administration, Shell belongs in the workflow because it interprets user commands, expands syntax, and launches programs within the current operating system session."
+      "Shell complements chmod and chown; it interprets user commands, expands syntax, and launches programs within the current operating system session."
     ]
   },
   {
@@ -1466,7 +1466,7 @@
     "bullets": [
       "Security Information and Event Management platform for log analysis and alerting within monitoring, investigation, and response workflows.",
       "Aggregates logs, normalizes events, runs correlation rules, and presents alerts for centralized security monitoring.",
-      "Within security operations and incident response, SIEM belongs in the workflow because it aggregates logs, normalizes events, runs correlation rules, and presents alerts for centralized security monitoring."
+      "SIEM complements Alert Triage and Asset Inventory; it aggregates logs, normalizes events, runs correlation rules, and presents alerts."
     ]
   },
   {
@@ -1476,7 +1476,7 @@
     "bullets": [
       "End-to-end process from alert intake to closure and lessons learned within monitoring, investigation, and response workflows.",
       "Moves work from intake through triage, investigation, containment, and closure using defined operational procedures.",
-      "Within security operations and incident response, SOC Workflow belongs in the workflow because it moves work from intake through triage, investigation, containment, and closure using defined operational procedures."
+      "SOC Workflow complements Alert Triage and Asset Inventory; it moves work from intake through triage, investigation, containment, and closure using defined operational procedures."
     ]
   },
   {
@@ -1486,7 +1486,7 @@
     "bullets": [
       "Psychological manipulation used to trick users into unsafe actions within foundational user-focused security awareness contexts.",
       "Uses persuasion, urgency, trust, or deception to influence users into bypassing normal security behavior.",
-      "Within foundational security concepts, Social Engineering belongs in the workflow because it uses persuasion, urgency, trust, or deception to influence users into bypassing normal security behavior."
+      "Social Engineering fits this category because it uses persuasion, urgency, trust, or deception to influence users into bypassing normal security behavior."
     ]
   },
   {
@@ -1496,7 +1496,7 @@
     "bullets": [
       "Integrated gateway device common in small office and home networks within routed and switched network environments.",
       "Combines routing, switching, wireless access, NAT, and firewall features in a small-network gateway.",
-      "Within network infrastructure, SOHO Router belongs in the workflow because it combines routing, switching, wireless access, NAT, and firewall features in a small-network gateway."
+      "SOHO Router complements CIDR and Default Gateway; it combines routing, switching, wireless access, NAT, and firewall features in a small-network gateway."
     ]
   },
   {
@@ -1506,7 +1506,7 @@
     "bullets": [
       "Review technique that revisits material at increasing intervals within structured review and exam preparation.",
       "Schedules reviews at expanding intervals based on difficulty and prior recall performance.",
-      "Within study workflow, Spaced Repetition belongs in the workflow because it schedules reviews at expanding intervals based on difficulty and prior recall performance."
+      "Spaced Repetition complements Error Log and Knowledge Gap; it schedules reviews at expanding intervals based on difficulty and prior recall performance."
     ]
   },
   {
@@ -1516,7 +1516,7 @@
     "bullets": [
       "Protocol that prevents switching loops by managing redundant paths within routed and switched network environments.",
       "Elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms.",
-      "Within network infrastructure, Spanning Tree Protocol belongs in the workflow because it elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms."
+      "Spanning Tree Protocol complements CIDR and Default Gateway; it elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms."
     ]
   },
   {
@@ -1526,7 +1526,7 @@
     "bullets": [
       "Attack that manipulates SQL queries through untrusted input within web, data, and cloud services.",
       "Injects crafted input into unsafe queries so a database executes unintended commands or data access.",
-      "Within web, data, and cloud systems, SQL Injection belongs in the workflow because it injects crafted input into unsafe queries so a database executes unintended commands or data access."
+      "SQL Injection complements Cloud Service Model and Data Classification; it injects crafted input into unsafe queries."
     ]
   },
   {
@@ -1536,7 +1536,7 @@
     "bullets": [
       "Structured request to retrieve or manipulate data in a relational database within web, data, and cloud services.",
       "Uses SQL syntax to retrieve, insert, update, or delete structured relational data.",
-      "Within web, data, and cloud systems, SQL Query belongs in the workflow because it uses SQL syntax to retrieve, insert, update, or delete structured relational data."
+      "SQL Query complements Cloud Service Model and Data Classification; it uses SQL syntax to retrieve, insert, update, or delete structured relational data."
     ]
   },
   {
@@ -1546,7 +1546,7 @@
     "bullets": [
       "Secure Shell protocol for encrypted remote administration within host administration and operating system workflows.",
       "Creates an encrypted remote session for command execution, file transfer, and administrative access.",
-      "Within operating system administration, SSH belongs in the workflow because it creates an encrypted remote session for command execution, file transfer, and administrative access."
+      "SSH complements chmod and chown; it creates an encrypted remote session for command execution, file transfer, and administrative access."
     ]
   },
   {
@@ -1556,7 +1556,7 @@
     "bullets": [
       "Wireless network name advertised by an access point within routed and switched network environments.",
       "Advertises or identifies a wireless network name that clients use during association.",
-      "Within network infrastructure, SSID belongs in the workflow because it advertises or identifies a wireless network name that clients use during association."
+      "SSID complements CIDR and Default Gateway; it advertises or identifies a wireless network name that clients use."
     ]
   },
   {
@@ -1566,7 +1566,7 @@
     "bullets": [
       "Interview storytelling format: Situation, Task, Action, Result within cybersecurity job-search and portfolio workflows.",
       "Structures interview answers by sequencing context, responsibility, action taken, and measurable outcome in a concise format.",
-      "Within career and portfolio work, STAR Method belongs in the workflow because it structures interview answers by sequencing context, responsibility, action taken, and measurable outcome in a concise format."
+      "STAR Method complements AI Assistant Guardrails; it structures interview answers by sequencing context, responsibility, action taken, and measurable outcome in a concise format."
     ]
   },
   {
@@ -1576,7 +1576,7 @@
     "bullets": [
       "Persistent storage device such as HDD or SSD for operating system and files.",
       "Persists operating system files and user data by writing blocks to magnetic or solid-state media.",
-      "Within hardware and endpoint systems, Storage Drive belongs in the workflow because it persists operating system files and user data by writing blocks to magnetic or solid-state media."
+      "Storage Drive complements BIOS/UEFI Firmware and Boot Process; it persists operating system files and user data by writing blocks to magnetic or solid-state media."
     ]
   },
   {
@@ -1586,7 +1586,7 @@
     "bullets": [
       "Planned refinement of schedule, methods, and tooling after review within structured review and exam preparation.",
       "Adjusts schedule, review methods, and tooling after analyzing progress, workload, and missed objectives.",
-      "Within study workflow, Study-System Reset belongs in the workflow because it adjusts schedule, review methods, and tooling after analyzing progress, workload, and missed objectives."
+      "Study-System Reset complements Error Log and Knowledge Gap; it adjusts schedule, review methods, and tooling after analyzing progress, workload, and missed objectives."
     ]
   },
   {
@@ -1596,7 +1596,7 @@
     "bullets": [
       "Bitmask that separates network and host portions of an IP address within routed and switched network environments.",
       "Marks which IPv4 bits represent the network versus host portion of an address.",
-      "Within network infrastructure, Subnet Mask belongs in the workflow because it marks which IPv4 bits represent the network versus host portion of an address."
+      "Subnet Mask complements CIDR and Default Gateway; it marks which IPv4 bits represent the network versus host portion of an address."
     ]
   },
   {
@@ -1606,7 +1606,7 @@
     "bullets": [
       "Practice of dividing networks into smaller addressable segments within routed and switched network environments.",
       "Allocates smaller address blocks from a larger range to separate networks and conserve space.",
-      "Within network infrastructure, Subnetting belongs in the workflow because it allocates smaller address blocks from a larger range to separate networks and conserve space."
+      "Subnetting complements CIDR and Default Gateway; it allocates smaller address blocks from a larger range to separate networks and conserve space."
     ]
   },
   {
@@ -1616,7 +1616,7 @@
     "bullets": [
       "Command that allows approved users to run tasks with elevated privileges within host administration and operating system workflows.",
       "Temporarily runs a command with elevated privileges according to configured authorization policies.",
-      "Within operating system administration, sudo belongs in the workflow because it temporarily runs a command with elevated privileges according to configured authorization policies."
+      "sudo complements chmod and chown; it temporarily runs a command with elevated privileges according to configured authorization policies."
     ]
   },
   {
@@ -1626,7 +1626,7 @@
     "bullets": [
       "Layer 2 device that forwards frames based on MAC address tables within routed and switched network environments.",
       "Learns MAC addresses on ports and forwards frames only toward the correct destination segment.",
-      "Within network infrastructure, Switch belongs in the workflow because it learns MAC addresses on ports and forwards frames only toward the correct destination segment."
+      "Switch complements CIDR and Default Gateway; it learns MAC addresses on ports and forwards frames only toward the correct destination segment."
     ]
   },
   {
@@ -1636,7 +1636,7 @@
     "bullets": [
       "Command-line utility for managing services in systemd-based Linux systems within host administration and operating system workflows.",
       "Interacts with systemd units to start, stop, enable, inspect, or reload Linux services.",
-      "Within operating system administration, systemctl belongs in the workflow because it interacts with systemd units to start, stop, enable, inspect, or reload Linux services."
+      "systemctl complements chmod and chown; it interacts with systemd units to start, stop, enable, inspect, or reload Linux services."
     ]
   },
   {
@@ -1646,7 +1646,7 @@
     "bullets": [
       "Scenario-based drill used to test readiness and coordination within monitoring, investigation, and response workflows.",
       "Walks stakeholders through a scenario to test decisions, communications, and documented response procedures.",
-      "Within security operations and incident response, Tabletop Exercise belongs in the workflow because it walks stakeholders through a scenario to test decisions, communications, and documented response procedures."
+      "Tabletop Exercise complements Alert Triage and Asset Inventory; it walks stakeholders through a scenario to test decisions, communications, and documented response procedures."
     ]
   },
   {
@@ -1656,7 +1656,7 @@
     "bullets": [
       "Connection-oriented transport protocol that prioritizes reliability and ordered delivery within routed and switched network environments.",
       "Establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed.",
-      "Within network infrastructure, TCP belongs in the workflow because it establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
+      "TCP complements CIDR and Default Gateway; it establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
     ]
   },
   {
@@ -1666,7 +1666,7 @@
     "bullets": [
       "TCP setup sequence using SYN, SYN-ACK, and ACK within routed and switched network environments.",
       "Synchronizes TCP sequence numbers and confirms both endpoints are ready before data transfer begins.",
-      "Within network infrastructure, TCP Three-Way Handshake belongs in the workflow because it synchronizes TCP sequence numbers and confirms both endpoints are ready before data transfer begins."
+      "TCP Three-Way Handshake complements CIDR and Default Gateway; it synchronizes TCP sequence numbers and confirms both endpoints are ready."
     ]
   },
   {
@@ -1676,7 +1676,7 @@
     "bullets": [
       "Practical networking model used to map real internet protocol behavior within endpoint hardware and platform operations.",
       "Groups communication functions into practical layers used to implement and troubleshoot internet protocols.",
-      "Within hardware and endpoint systems, TCP/IP Model belongs in the workflow because it groups communication functions into practical layers used to implement and troubleshoot internet protocols."
+      "TCP/IP Model complements BIOS/UEFI Firmware and Boot Process; it groups communication functions into practical layers used to implement and troubleshoot internet protocols."
     ]
   },
   {
@@ -1686,7 +1686,7 @@
     "bullets": [
       "Potential cause of unwanted impact to an asset or process within endpoint hardware and platform operations.",
       "Represents an actor, event, or condition capable of causing harm to systems, data, or operations.",
-      "Within hardware and endpoint systems, Threat belongs in the workflow because it represents an actor, event, or condition capable of causing harm to systems, data, or operations."
+      "Threat complements BIOS/UEFI Firmware and Boot Process; it represents an actor, event, or condition capable of causing harm to systems, data, or operations."
     ]
   },
   {
@@ -1696,7 +1696,7 @@
     "bullets": [
       "Contextual information about threat actors, tactics, and indicators within monitoring, investigation, and response workflows.",
       "Collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior.",
-      "Within security operations and incident response, Threat Intelligence belongs in the workflow because it collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior."
+      "Threat Intelligence complements Alert Triage and Asset Inventory; it collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior."
     ]
   },
   {
@@ -1706,7 +1706,7 @@
     "bullets": [
       "Structured analysis of potential attackers, paths, and control gaps within monitoring, investigation, and response workflows.",
       "Identifies assets, attackers, attack paths, and control gaps before implementing or changing a system.",
-      "Within security operations and incident response, Threat Model belongs in the workflow because it identifies assets, attackers, attack paths, and control gaps before implementing or changing a system."
+      "Threat Model complements Alert Triage and Asset Inventory; it identifies assets, attackers, attack paths, and control gaps."
     ]
   },
   {
@@ -1716,7 +1716,7 @@
     "bullets": [
       "Reconstruction of incident events in chronological order within monitoring, investigation, and response workflows.",
       "Orders events by timestamp to reconstruct attacker actions, response steps, and system changes during an incident.",
-      "Within security operations and incident response, Timeline Analysis belongs in the workflow because it orders events by timestamp to reconstruct attacker actions, response steps, and system changes during an incident."
+      "Timeline Analysis complements Alert Triage and Asset Inventory; it orders events by timestamp to reconstruct attacker actions, response steps, and system changes."
     ]
   },
   {
@@ -1726,7 +1726,7 @@
     "bullets": [
       "Cryptographic negotiation that establishes secure session parameters within web, data, and cloud services.",
       "Negotiates protocol version, algorithms, keys, and certificates before protected application data flows.",
-      "Within web, data, and cloud systems, TLS Handshake belongs in the workflow because it negotiates protocol version, algorithms, keys, and certificates before protected application data flows."
+      "TLS Handshake complements Cloud Service Model and Data Classification; it negotiates protocol version, algorithms, keys, and certificates."
     ]
   },
   {
@@ -1736,7 +1736,7 @@
     "bullets": [
       "Diagnostic command that reveals path hops to a destination within routed and switched network environments.",
       "Sends probes with increasing hop limits to reveal intermediary routers along a path.",
-      "Within network infrastructure, Traceroute belongs in the workflow because it sends probes with increasing hop limits to reveal intermediary routers along a path."
+      "Traceroute complements CIDR and Default Gateway; it sends probes with increasing hop limits to reveal intermediary routers along a path."
     ]
   },
   {
@@ -1746,7 +1746,7 @@
     "bullets": [
       "Ordered list of alerts or cases awaiting analyst review within monitoring, investigation, and response workflows.",
       "Maintains pending alerts or cases in prioritized order so analysts work according to urgency and capacity.",
-      "Within security operations and incident response, Triage Queue belongs in the workflow because it maintains pending alerts or cases in prioritized order so analysts work according to urgency and capacity."
+      "Triage Queue complements Alert Triage and Asset Inventory; it maintains pending alerts or cases in prioritized order."
     ]
   },
   {
@@ -1756,7 +1756,7 @@
     "bullets": [
       "Structured step-by-step process for diagnosing and resolving technical issues within monitoring, investigation, and response workflows.",
       "Follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation.",
-      "Within security operations and incident response, Troubleshooting Methodology belongs in the workflow because it follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation."
+      "Troubleshooting Methodology complements Alert Triage and Asset Inventory; it follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation."
     ]
   },
   {
@@ -1766,7 +1766,7 @@
     "bullets": [
       "Connectionless transport protocol optimized for low overhead and speed within routed and switched network environments.",
       "Transmits datagrams without connection setup, acknowledgments, or retransmission to minimize protocol overhead.",
-      "Within network infrastructure, UDP belongs in the workflow because it transmits datagrams without connection setup, acknowledgments, or retransmission to minimize protocol overhead."
+      "UDP complements CIDR and Default Gateway; it transmits datagrams without connection setup, acknowledgments, or retransmission to minimize protocol overhead."
     ]
   },
   {
@@ -1776,7 +1776,7 @@
     "bullets": [
       "Named value container used in programming logic within scripting and systems automation workflows.",
       "Stores named data in memory so code can reference, update, and compare values during execution.",
-      "Within automation engineering, Variable belongs in the workflow because it stores named data in memory so code can reference, update, and compare values during execution."
+      "Variable fits beside API and Conditional; it stores named data in memory."
     ]
   },
   {
@@ -1786,7 +1786,7 @@
     "bullets": [
       "Risk introduced by third-party suppliers and service providers within governance, risk, and compliance workflows.",
       "Assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure.",
-      "Within governance, risk, and compliance, Vendor Risk belongs in the workflow because it assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure."
+      "Vendor Risk complements Business Impact Analysis and Capability Gap; it assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure."
     ]
   },
   {
@@ -1796,7 +1796,7 @@
     "bullets": [
       "System for tracking code changes and collaboration history within scripting and systems automation workflows.",
       "Records changes as commits, tracks history, and supports branching or collaboration on code and content.",
-      "Within automation engineering, Version Control belongs in the workflow because it records changes as commits, tracks history, and supports branching or collaboration on code and content."
+      "Version Control complements API and Conditional; it records changes as commits, tracks history, and supports branching or collaboration on code and content."
     ]
   },
   {
@@ -1806,7 +1806,7 @@
     "bullets": [
       "Software-defined computer running an operating system inside a host system within endpoint hardware and platform operations.",
       "Runs a guest operating system with emulated hardware isolated from the underlying host environment.",
-      "Within hardware and endpoint systems, Virtual Machine belongs in the workflow because it runs a guest operating system with emulated hardware isolated from the underlying host environment."
+      "Virtual Machine complements BIOS/UEFI Firmware and Boot Process; it runs a guest operating system with emulated hardware isolated from the underlying host environment."
     ]
   },
   {
@@ -1816,7 +1816,7 @@
     "bullets": [
       "Desktop virtualization platform for running lab virtual machines within endpoint hardware and platform operations.",
       "Creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments.",
-      "Within hardware and endpoint systems, VirtualBox belongs in the workflow because it creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments."
+      "VirtualBox complements BIOS/UEFI Firmware and Boot Process; it creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments."
     ]
   },
   {
@@ -1826,7 +1826,7 @@
     "bullets": [
       "Virtual LAN used to segment broadcast domains on switched networks within routed and switched network environments.",
       "Tags switch traffic to create separate logical broadcast domains across shared physical infrastructure.",
-      "Within network infrastructure, VLAN belongs in the workflow because it tags switch traffic to create separate logical broadcast domains across shared physical infrastructure."
+      "VLAN complements CIDR and Default Gateway; it tags switch traffic to create separate logical broadcast domains across shared physical infrastructure."
     ]
   },
   {
@@ -1836,7 +1836,7 @@
     "bullets": [
       "Weakness that can be exploited to violate security objectives within endpoint hardware and platform operations.",
       "Describes a weakness that can be discovered, reached, and abused to violate security objectives.",
-      "Within hardware and endpoint systems, Vulnerability belongs in the workflow because it describes a weakness that can be discovered, reached, and abused to violate security objectives."
+      "Vulnerability complements BIOS/UEFI Firmware and Boot Process; it describes a weakness that can be discovered, reached, and abused to violate security objectives."
     ]
   },
   {
@@ -1846,7 +1846,7 @@
     "bullets": [
       "Automated assessment for known weaknesses in systems and software within monitoring, investigation, and response workflows.",
       "Probes hosts, software, and configurations against known checks to identify missing patches and insecure settings.",
-      "Within security operations and incident response, Vulnerability Scan belongs in the workflow because it probes hosts, software, and configurations against known checks to identify missing patches and insecure settings."
+      "Vulnerability Scan complements Alert Triage and Asset Inventory; it probes hosts, software, and configurations against known checks to identify missing patches and insecure settings."
     ]
   },
   {
@@ -1856,7 +1856,7 @@
     "bullets": [
       "Service that hosts and delivers web content over HTTP/HTTPS within endpoint hardware and platform operations.",
       "Accepts HTTP or HTTPS requests, processes them, and returns web content or application responses.",
-      "Within hardware and endpoint systems, Web Server belongs in the workflow because it accepts HTTP or HTTPS requests, processes them, and returns web content or application responses."
+      "Web Server complements BIOS/UEFI Firmware and Boot Process; it accepts HTTP or HTTPS requests, processes them, and returns web content or application responses."
     ]
   },
   {
@@ -1866,7 +1866,7 @@
     "bullets": [
       "SQL condition that filters returned rows within web, data, and cloud services.",
       "Applies conditions to rows so only records matching the specified criteria are returned or modified.",
-      "Within web, data, and cloud systems, WHERE Clause belongs in the workflow because it applies conditions to rows so only records matching the specified criteria are returned or modified."
+      "WHERE Clause complements Cloud Service Model and Data Classification; it applies conditions to rows."
     ]
   },
   {
@@ -1876,7 +1876,7 @@
     "bullets": [
       "Wireless networking specification such as 802.11n/ac/ax defining speed and capability within routed and switched network environments.",
       "Defines modulation, channel use, throughput, and features for compatible wireless LAN communication.",
-      "Within network infrastructure, Wi-Fi Standard belongs in the workflow because it defines modulation, channel use, throughput, and features for compatible wireless LAN communication."
+      "Wi-Fi Standard complements CIDR and Default Gateway; it defines modulation, channel use, throughput, and features for compatible wireless LAN communication."
     ]
   },
   {
@@ -1886,7 +1886,7 @@
     "bullets": [
       "Packet capture and analysis tool for network troubleshooting and investigations within routed and switched network environments.",
       "Captures packets and decodes protocol details so analysts can inspect network conversations and anomalies.",
-      "Within network infrastructure, Wireshark belongs in the workflow because it captures packets and decodes protocol details so analysts can inspect network conversations and anomalies."
+      "Wireshark complements CIDR and Default Gateway; it captures packets and decodes protocol details."
     ]
   },
   {
@@ -1896,7 +1896,7 @@
     "bullets": [
       "Modern Wi-Fi security standard with stronger protections than earlier protocols within routed and switched network environments.",
       "Protects wireless access using stronger authentication and encryption mechanisms than prior Wi-Fi standards.",
-      "Within network infrastructure, WPA3 belongs in the workflow because it protects wireless access using stronger authentication and encryption mechanisms than prior Wi-Fi standards."
+      "WPA3 complements CIDR and Default Gateway; it protects wireless access using stronger authentication and encryption mechanisms than prior Wi-Fi standards."
     ]
   }
 ]

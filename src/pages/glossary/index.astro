@@ -66,9 +66,11 @@ const glossaryGroups = [...grouped.entries()]
     description="Glossary terms are organized by category and each item shows what it is, how it functions, and where it fits in the IT/security workflow."
   />
 
-  <section class="card section">
-    <h2>Filter Terms</h2>
-    <div class="filter-grid">
+  <details class="card section mobile-filter-shell">
+    <summary>Filters</summary>
+    <div class="mobile-filter-content">
+      <h2>Filter Terms</h2>
+      <div class="filter-grid mobile-filter-grid">
       <label>
         Search term or bullet text
         <input class="js-glossary-search" type="text" placeholder="cpu, subnet, risk register..." />
@@ -99,14 +101,14 @@ const glossaryGroups = [...grouped.entries()]
           ))}
         </select>
       </label>
-
     </div>
 
-    <div class="filter-actions">
-      <button type="button" class="secondary js-glossary-reset">Reset filters</button>
-      <p class="small js-glossary-filter-state" aria-live="polite"></p>
+      <div class="filter-actions">
+        <button type="button" class="secondary js-glossary-reset">Clear filters</button>
+        <p class="small js-glossary-filter-state" aria-live="polite"></p>
+      </div>
     </div>
-  </section>
+  </details>
 
   {glossaryGroups.map((group) => (
     <section class="section js-glossary-category" data-category={group.category}>

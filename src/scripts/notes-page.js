@@ -1,4 +1,5 @@
 import {
+  loadNotes,
   getNotesData,
   setDayNote,
   setWeekReflection,
@@ -11,7 +12,15 @@ import {
   getExportMeta,
   setExportMeta
 } from './notes-storage.js';
-import { parseJsonScript, downloadJson } from './runtime/client-utils.js';
+import {
+  appendChildren,
+  clearNode,
+  createElement,
+  downloadJson,
+  getErrorMessage,
+  initOnReady,
+  parseJsonScript
+} from './runtime/client-utils.js';
 
 const toWeekId = (weekNumber) => `week-${String(Number(weekNumber)).padStart(2, '0')}`;
 
@@ -54,12 +63,14 @@ const applyTab = (tab) => {
 
 const populateDaySelect = (week, select) => {
   const days = week?.days || [];
-  select.innerHTML = days
-    .map(
-      (day) =>
-        `<option value="${day.id}">Day ${String(day.day).padStart(2, '0')} - ${day.label || day.session_type}</option>`
-    )
-    .join('');
+  clearNode(select);
+  days.forEach((day) => {
+    const option = createElement('option', {
+      text: `Day ${String(day.day).padStart(2, '0')} - ${day.label || day.session_type}`,
+      attrs: { value: day.id }
+    });
+    select.appendChild(option);
+  });
 };
 
 const renderDayForm = (notes, dayId) => {
@@ -97,43 +108,71 @@ const renderWeekForm = (notes, weekId) => {
 const renderJournalEntries = (notes, stateNode) => {
   const list = document.querySelector('.js-journal-entry-list');
   if (!list) return;
+  clearNode(list);
 
   if (!notes.securityJournalEntries.length) {
-    list.innerHTML = '<p class="small">No journal notes yet.</p>';
+    list.appendChild(createElement('p', { className: 'small', text: 'No journal notes yet.' }));
     return;
   }
 
-  list.innerHTML = notes.securityJournalEntries
-    .map(
-      (entry) => `
-        <article class="card journal-entry-row" data-entry-id="${entry.id}">
-          <p class="kicker">${entry.week_ref || 'General'} • ${new Date(entry.createdAt).toISOString().slice(0, 10)}</p>
-          <h3>${entry.title || 'Untitled entry'}</h3>
-          <p><strong>Source:</strong> ${entry.source || 'n/a'}</p>
-          <p><strong>Management summary:</strong> ${entry.management_summary || 'n/a'}</p>
-          <p><strong>Prevention ideas:</strong> ${entry.prevention_ideas || 'n/a'}</p>
-          <div class="entry-actions">
-            <button class="danger js-delete-journal-entry" type="button" data-entry-id="${entry.id}">Delete</button>
-          </div>
-        </article>
-      `
-    )
-    .join('');
+  notes.securityJournalEntries.forEach((entry) => {
+    const article = createElement('article', {
+      className: 'card journal-entry-row',
+      dataset: { entryId: entry.id }
+    });
+    const source = createElement('p');
+    appendChildren(source, [
+      createElement('strong', { text: 'Source:' }),
+      document.createTextNode(` ${entry.source || 'n/a'}`)
+    ]);
+    const management = createElement('p');
+    appendChildren(management, [
+      createElement('strong', { text: 'Management summary:' }),
+      document.createTextNode(` ${entry.management_summary || 'n/a'}`)
+    ]);
+    const prevention = createElement('p');
+    appendChildren(prevention, [
+      createElement('strong', { text: 'Prevention ideas:' }),
+      document.createTextNode(` ${entry.prevention_ideas || 'n/a'}`)
+    ]);
+    const actionWrap = createElement('div', { className: 'entry-actions' });
+    const deleteButton = createElement('button', {
+      className: 'danger js-delete-journal-entry',
+      text: 'Delete',
+      attrs: { type: 'button' },
+      dataset: { entryId: entry.id }
+    });
+    actionWrap.appendChild(deleteButton);
+
+    appendChildren(article, [
+      createElement('p', {
+        className: 'kicker',
+        text: `${entry.week_ref || 'General'} • ${new Date(entry.createdAt).toISOString().slice(0, 10)}`
+      }),
+      createElement('h3', { text: entry.title || 'Untitled entry' }),
+      source,
+      management,
+      prevention,
+      actionWrap
+    ]);
+    list.appendChild(article);
+  });
 
   list.querySelectorAll('.js-delete-journal-entry').forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
       const entryId = button.dataset.entryId;
       if (!entryId) return;
       const confirmed = window.confirm('Delete this journal entry?');
       if (!confirmed) return;
-      deleteJournalEntry(entryId);
+      await deleteJournalEntry(entryId);
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'Journal entry deleted.';
     });
   });
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadNotes();
   const data = parseJsonScript('notes-data-json', { weeks: [] });
   const weeks = data.weeks || [];
   const dayMetaById = buildDayLookup(weeks);
@@ -214,11 +253,11 @@ const boot = () => {
 
   const saveDay = document.querySelector('.js-save-day-note');
   if (saveDay && daySelect) {
-    saveDay.addEventListener('click', () => {
+    saveDay.addEventListener('click', async () => {
       const dayId = daySelect.value;
       if (!dayId) return;
 
-      setDayNote(dayId, {
+      await setDayNote(dayId, {
         status: document.querySelector('.js-day-status')?.value || 'Not started',
         tags: document.querySelector('.js-day-tags')?.value || '',
         notes: document.querySelector('.js-day-notes')?.value || '',
@@ -239,9 +278,9 @@ const boot = () => {
 
   const saveWeekReflection = document.querySelector('.js-save-week-reflection');
   if (saveWeekReflection && weekReflectionWeek) {
-    saveWeekReflection.addEventListener('click', () => {
+    saveWeekReflection.addEventListener('click', async () => {
       const weekId = weekReflectionWeek.value;
-      setWeekReflection(weekId, {
+      await setWeekReflection(weekId, {
         reflection: document.querySelector('.js-week-reflection-input')?.value || '',
         artifact_link: document.querySelector('.js-week-artifact-input')?.value || ''
       });
@@ -252,7 +291,7 @@ const boot = () => {
 
   const journalForm = document.querySelector('.js-journal-entry-form');
   if (journalForm) {
-    journalForm.addEventListener('submit', (event) => {
+    journalForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const payload = {
@@ -269,7 +308,7 @@ const boot = () => {
         return;
       }
 
-      upsertJournalEntry(payload);
+      await upsertJournalEntry(payload);
       journalForm.reset();
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'Security journal note saved.';
@@ -280,20 +319,20 @@ const boot = () => {
 
   const exportMarkdown = document.querySelector('.js-export-notes-md');
   if (exportMarkdown) {
-    exportMarkdown.addEventListener('click', () => {
+    exportMarkdown.addEventListener('click', async () => {
       const markdown = exportNotesMarkdown({ weeks, dayMetaById });
       const dateToken = new Date().toISOString().slice(0, 10);
       downloadText(`cyber-study-notes-${dateToken}.md`, markdown, 'text/markdown');
-      setExportMeta({ lastMarkdownExportAt: new Date().toISOString() });
+      await setExportMeta({ lastMarkdownExportAt: new Date().toISOString() });
       if (stateNode) stateNode.textContent = 'Markdown export complete.';
     });
   }
 
   const exportJson = document.querySelector('.js-export-notes-json');
   if (exportJson) {
-    exportJson.addEventListener('click', () => {
+    exportJson.addEventListener('click', async () => {
       downloadJson('cyber-study-notes', exportNotesBundle());
-      setExportMeta({ lastJsonExportAt: new Date().toISOString() });
+      await setExportMeta({ lastJsonExportAt: new Date().toISOString() });
       if (stateNode) stateNode.textContent = 'JSON export complete.';
     });
   }
@@ -306,12 +345,12 @@ const boot = () => {
 
       try {
         const text = await file.text();
-        importNotesBundle(JSON.parse(text));
+        await importNotesBundle(JSON.parse(text));
         syncDayOptions();
         renderJournalEntries(getNotesData(), stateNode);
         if (stateNode) stateNode.textContent = 'Notes JSON imported.';
       } catch (error) {
-        if (stateNode) stateNode.textContent = `Import failed: ${error.message}`;
+        if (stateNode) stateNode.textContent = `Import failed: ${getErrorMessage(error)}`;
       } finally {
         importInput.value = '';
       }
@@ -320,10 +359,10 @@ const boot = () => {
 
   const resetButton = document.querySelector('.js-reset-notes');
   if (resetButton) {
-    resetButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', async () => {
       const confirmed = window.confirm('Reset all local notes data? This cannot be undone.');
       if (!confirmed) return;
-      resetNotesData();
+      await resetNotesData();
       syncDayOptions();
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'All notes reset.';
@@ -341,8 +380,4 @@ const boot = () => {
   }
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

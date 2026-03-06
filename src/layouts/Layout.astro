@@ -3,6 +3,9 @@ import '../styles/global.css';
 import BootIntro from '../components/BootIntro.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { pwaInfo } from 'virtual:pwa-info';
+import pwaRegisterScript from '../scripts/pwa-register.ts?url';
+import storageMigrateScript from '../scripts/storage-migrate.js?url';
 
 const {
   title = 'Cybersecurity Study Companion',
@@ -18,6 +21,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
     <script is:inline>
       (() => {
         const key = 'cyber-study-font-theme-v1';
@@ -32,6 +36,8 @@ const {
         }
       })();
     </script>
+    <script type="module" src={storageMigrateScript}></script>
+    <script type="module" src={pwaRegisterScript}></script>
   </head>
   <body>
     <BootIntro />

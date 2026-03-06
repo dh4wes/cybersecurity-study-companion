@@ -1,4 +1,4 @@
-import { includesToken } from './runtime/client-utils.js';
+import { includesToken, initOnReady } from './runtime/client-utils.js';
 
 const matchesCategory = (itemCategory, selectedCategory) => {
   if (!selectedCategory) return true;
@@ -71,8 +71,4 @@ const boot = () => {
   applyFilters();
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

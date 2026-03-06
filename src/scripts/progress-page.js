@@ -1,4 +1,5 @@
 import {
+  loadProgress,
   getProgress,
   exportProgressBundle,
   importProgressBundle,
@@ -7,14 +8,111 @@ import {
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
 import {
   PROGRESS_EVENT,
+  appendChildren,
+  clearNode,
+  createElement,
   dispatchProgressChanged,
   downloadJson,
+  getErrorMessage,
+  initOnReady,
   parseJsonScript
 } from './runtime/client-utils.js';
 
+let progressWeeks = [];
+
+const createTrack = (percent) => {
+  const track = createElement('div', { className: 'track', attrs: { 'aria-hidden': 'true' } });
+  const fill = createElement('span');
+  fill.style.width = `${percent}%`;
+  track.appendChild(fill);
+  return track;
+};
+
+const renderNextDeliverable = (target, metrics) => {
+  if (!target) return;
+  clearNode(target);
+
+  if (!metrics.nextDeliverableWeek) {
+    target.textContent = 'All week deliverables marked complete.';
+    return;
+  }
+
+  const week = metrics.nextDeliverableWeek;
+  const link = createElement('a', {
+    text: `Week ${String(week.week).padStart(2, '0')}`,
+    attrs: { href: week.href || week.slug }
+  });
+  target.appendChild(link);
+  target.append(`: ${week.deliverable}`);
+};
+
+const renderPhaseProgress = (container, metrics) => {
+  if (!container) return;
+  clearNode(container);
+
+  metrics.progressByPhase.forEach((phase) => {
+    const percent = phase.total ? Math.round((phase.completed / phase.total) * 100) : 0;
+    const card = createElement('article', { className: 'card phase-card' });
+    appendChildren(card, [
+      createElement('h3', { text: phase.phase }),
+      createElement('p', { text: `${phase.completed}/${phase.total} actionable days (${percent}%)` }),
+      createTrack(percent)
+    ]);
+    container.appendChild(card);
+  });
+};
+
+const renderWeekProgress = (container, metrics) => {
+  if (!container) return;
+  clearNode(container);
+
+  metrics.progressByWeek.forEach((week) => {
+    const card = createElement('article', { className: 'card week-row' });
+    const kicker = createElement('p', {
+      className: 'kicker',
+      text: `Week ${String(week.week).padStart(2, '0')} • ${week.phase}`
+    });
+    const deliverableRow = createElement('p');
+    deliverableRow.appendChild(
+      createElement('a', {
+        text: week.deliverable,
+        attrs: { href: week.href || week.slug }
+      })
+    );
+    const meta = createElement('p', {
+      className: 'small',
+      text: `${week.completed}/${week.total} actionable days complete (${week.percent}%).`
+    });
+
+    appendChildren(card, [kicker, deliverableRow, meta, createTrack(week.percent)]);
+    container.appendChild(card);
+  });
+};
+
+const renderBlockedItems = (container, metrics) => {
+  if (!container) return;
+  clearNode(container);
+
+  if (!metrics.blockedItems.length) {
+    container.appendChild(createElement('p', { className: 'small', text: 'No blocked items.' }));
+    return;
+  }
+
+  metrics.blockedItems.forEach((item) => {
+    const row = createElement('li');
+    row.appendChild(
+      createElement('a', {
+        text: item.label,
+        attrs: { href: `${item.weekSlug}#${item.dayId}` }
+      })
+    );
+    row.append(` - ${item.objective}`);
+    container.appendChild(row);
+  });
+};
+
 const render = () => {
-  const data = parseJsonScript('progress-data-json', { weeks: [] });
-  const weeks = data.weeks || [];
+  const weeks = progressWeeks;
 
   const progress = getProgress();
   const metrics = computeProgressMetrics(weeks, progress);
@@ -29,14 +127,7 @@ const render = () => {
   if (nextTaskTarget) nextTaskTarget.textContent = formatNextTask(metrics.nextTask);
 
   const nextDeliverable = document.querySelector('.js-next-deliverable');
-  if (nextDeliverable) {
-    if (metrics.nextDeliverableWeek) {
-      const week = metrics.nextDeliverableWeek;
-      nextDeliverable.innerHTML = `<a href="${week.href || week.slug}">Week ${String(week.week).padStart(2, '0')}</a>: ${week.deliverable}`;
-    } else {
-      nextDeliverable.textContent = 'All week deliverables marked complete.';
-    }
-  }
+  renderNextDeliverable(nextDeliverable, metrics);
 
   document.querySelectorAll('[data-progress-summary]').forEach((summary) => {
     const studyTarget = summary.querySelector('.js-completed-study');
@@ -50,51 +141,9 @@ const render = () => {
     if (nextTaskSummary) nextTaskSummary.textContent = formatNextTask(metrics.nextTask);
   });
 
-  const phaseContainer = document.querySelector('.js-phase-progress');
-  if (phaseContainer) {
-    phaseContainer.innerHTML = metrics.progressByPhase
-      .map((phase) => {
-        const percent = phase.total ? Math.round((phase.completed / phase.total) * 100) : 0;
-        return `
-          <article class="card phase-card">
-            <h3>${phase.phase}</h3>
-            <p>${phase.completed}/${phase.total} actionable days (${percent}%)</p>
-            <div class="track" aria-hidden="true"><span style="width:${percent}%"></span></div>
-          </article>
-        `;
-      })
-      .join('');
-  }
-
-  const weekContainer = document.querySelector('.js-week-progress-list');
-  if (weekContainer) {
-    weekContainer.innerHTML = metrics.progressByWeek
-      .map(
-        (week) => `
-          <article class="card week-row">
-            <p class="kicker">Week ${String(week.week).padStart(2, '0')} • ${week.phase}</p>
-            <p><a href="${week.href || week.slug}">${week.deliverable}</a></p>
-            <p class="small">${week.completed}/${week.total} actionable days complete (${week.percent}%).</p>
-            <div class="track" aria-hidden="true"><span style="width:${week.percent}%"></span></div>
-          </article>
-        `
-      )
-      .join('');
-  }
-
-  const blockedContainer = document.querySelector('.js-blocked-items');
-  if (blockedContainer) {
-    if (!metrics.blockedItems.length) {
-      blockedContainer.innerHTML = '<p class="small">No blocked items.</p>';
-    } else {
-      blockedContainer.innerHTML = metrics.blockedItems
-        .map(
-          (item) =>
-            `<li><a href="${item.weekSlug}#${item.dayId}">${item.label}</a> - ${item.objective}</li>`
-        )
-        .join('');
-    }
-  }
+  renderPhaseProgress(document.querySelector('.js-phase-progress'), metrics);
+  renderWeekProgress(document.querySelector('.js-week-progress-list'), metrics);
+  renderBlockedItems(document.querySelector('.js-blocked-items'), metrics);
 };
 
 const initExportImportControls = () => {
@@ -118,11 +167,11 @@ const initExportImportControls = () => {
       try {
         const text = await file.text();
         const parsed = JSON.parse(text);
-        importProgressBundle(parsed);
+        await importProgressBundle(parsed);
         if (stateNode) stateNode.textContent = 'Progress imported.';
         dispatchProgressChanged();
       } catch (error) {
-        if (stateNode) stateNode.textContent = `Import failed: ${error.message}`;
+        if (stateNode) stateNode.textContent = `Import failed: ${getErrorMessage(error)}`;
       } finally {
         importInput.value = '';
       }
@@ -131,26 +180,24 @@ const initExportImportControls = () => {
 
   const resetButton = document.querySelector('.js-reset-progress');
   if (resetButton) {
-    resetButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', async () => {
       const confirmed = window.confirm(
         'Reset all progress data from this browser? This cannot be undone.'
       );
       if (!confirmed) return;
-      resetAllProgress();
+      await resetAllProgress();
       if (stateNode) stateNode.textContent = 'Progress reset.';
       dispatchProgressChanged();
     });
   }
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadProgress();
+  progressWeeks = parseJsonScript('progress-data-json', { weeks: [] }).weeks || [];
   render();
   initExportImportControls();
   window.addEventListener(PROGRESS_EVENT, render);
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

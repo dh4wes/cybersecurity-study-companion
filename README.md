@@ -164,6 +164,51 @@ npm run dev
 npm run build
 ```
 
+## PWA
+Preview the installable build with:
+```bash
+npm run build
+npm run preview
+```
+
+To test installability, open the preview URL in Chrome, then confirm the manifest and service worker in DevTools -> Application.
+
+The current manifest uses SVG placeholder icons (`public/pwa-192x192.svg` and `public/pwa-512x512.svg`) to avoid adding binary assets during this pass.
+
+## LocalStorage To IndexedDB
+Progress and notes now persist in IndexedDB under the `cyber-study-db` database with a single `kv` object store.
+
+On first load after the upgrade, the app copies existing browser data from:
+- `cyber-study-progress-v1`
+- `cyber-study-notes-v2`
+- `cyber-study-note-export-meta-v1`
+
+The legacy localStorage entries are kept as a fallback backup for now. Use the existing reset controls in `/progress/` and `/notes/` to clear the active IndexedDB records.
+
+## Mobile UX
+Phone layouts now use a fixed bottom navigation bar for the main routes, collapsible filter panels on weeks/glossary/flashcards, and accordion-style day cards on week pages.
+
+Flashcard reveal panels and controls were expanded for touch targets while keeping the existing terminal theme and desktop layout intact.
+
+## Offline Mode
+Build and preview the production site, then use browser DevTools to verify the service worker and caches:
+```bash
+npm run build
+npm run preview
+```
+
+After the first successful load, the curriculum routes are cached for offline use and navigation falls back to `/offline/` when a route has not been cached yet.
+
+## Android Packaging
+Build the web assets for Capacitor with a root base path, then sync and open the Android project:
+```bash
+npm run build:cap
+npm run cap:sync
+npm run cap:open
+```
+
+Capacitor uses the same static `dist/` output as the web app. Service worker registration is skipped inside the native shell to avoid layering browser-style caching on top of bundled local assets.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs

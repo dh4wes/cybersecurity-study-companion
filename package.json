@@ -6,9 +6,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "build:cap": "SITE_BASE=/ SITE_URL=http://localhost astro build",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android"
   },
   "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^7.6.0",
+    "@capacitor/core": "^8.2.0",
     "astro": "^5.1.0"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^1.2.0"
   }
 }

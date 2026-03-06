@@ -3,6 +3,9 @@ export const NOTES_STORAGE_KEYS = {
   exportMeta: 'cyber-study-note-export-meta-v1'
 };
 
+import { canUseIdb, delKV, getKV, setKV } from './idb-kv.js';
+import { migrationReady } from './storage-migrate.js';
+
 const nowIso = () => new Date().toISOString();
 
 const defaultNotes = () => ({
@@ -28,12 +31,6 @@ const safeParse = (value, fallback) => {
     // Ignore malformed values and return fallback.
   }
   return fallback;
-};
-
-const loadKey = (key, fallbackFactory) => safeParse(localStorage.getItem(key), fallbackFactory());
-const persist = (key, value) => {
-  localStorage.setItem(key, JSON.stringify(value));
-  return value;
 };
 
 const normalizeDayNote = (value = {}) => ({
@@ -68,34 +65,73 @@ const normalizeJournalEntry = (entry = {}) => ({
   createdAt: entry.createdAt || nowIso()
 });
 
-export const getNotesData = () => {
-  const raw = loadKey(NOTES_STORAGE_KEYS.notes, defaultNotes);
+const normalizeNotes = (raw = {}) => {
+  const noteSource = raw && typeof raw === 'object' ? raw : {};
 
   const dayNotes = {};
-  Object.entries(raw.dayNotes || {}).forEach(([key, value]) => {
+  Object.entries(noteSource.dayNotes || {}).forEach(([key, value]) => {
     dayNotes[key] = normalizeDayNote(value);
   });
 
   const weekReflections = {};
-  Object.entries(raw.weekReflections || {}).forEach(([key, value]) => {
+  Object.entries(noteSource.weekReflections || {}).forEach(([key, value]) => {
     weekReflections[key] = normalizeWeekReflection(value);
   });
 
-  const securityJournalEntries = Array.isArray(raw.securityJournalEntries)
-    ? raw.securityJournalEntries.map((entry) => normalizeJournalEntry(entry))
+  const securityJournalEntries = Array.isArray(noteSource.securityJournalEntries)
+    ? noteSource.securityJournalEntries.map((entry) => normalizeJournalEntry(entry))
     : [];
 
   return {
     ...defaultNotes(),
-    ...raw,
+    ...noteSource,
     dayNotes,
     weekReflections,
     securityJournalEntries
   };
 };
 
-export const saveNotesData = (value) => {
-  const normalized = {
+const normalizeExportMeta = (raw = {}) => ({
+  ...defaultExportMeta(),
+  ...(raw && typeof raw === 'object' ? raw : {})
+});
+
+let notesState = defaultNotes();
+let exportMetaState = defaultExportMeta();
+let loadPromise;
+let persistPromise = Promise.resolve();
+
+const persistNotes = async () => {
+  if (canUseIdb()) {
+    await Promise.all([setKV('notes', notesState), setKV('noteExportMeta', exportMetaState)]);
+  } else {
+    localStorage.setItem(NOTES_STORAGE_KEYS.notes, JSON.stringify(notesState));
+    localStorage.setItem(NOTES_STORAGE_KEYS.exportMeta, JSON.stringify(exportMetaState));
+  }
+};
+
+export const loadNotes = async () => {
+  if (!loadPromise) {
+    loadPromise = (async () => {
+      await migrationReady.catch(() => false);
+      const [rawNotes, rawMeta] = canUseIdb()
+        ? await Promise.all([getKV('notes'), getKV('noteExportMeta')])
+        : [
+            safeParse(localStorage.getItem(NOTES_STORAGE_KEYS.notes), defaultNotes()),
+            safeParse(localStorage.getItem(NOTES_STORAGE_KEYS.exportMeta), defaultExportMeta())
+          ];
+      notesState = normalizeNotes(rawNotes || defaultNotes());
+      exportMetaState = normalizeExportMeta(rawMeta || defaultExportMeta());
+      return notesState;
+    })();
+  }
+  return loadPromise;
+};
+
+export const getNotesData = () => notesState;
+
+export const saveNotesData = async (value) => {
+  notesState = {
     ...defaultNotes(),
     ...value,
     dayNotes: {},
@@ -105,23 +141,25 @@ export const saveNotesData = (value) => {
   };
 
   Object.entries(value.dayNotes || {}).forEach(([key, dayNote]) => {
-    normalized.dayNotes[key] = normalizeDayNote(dayNote);
+    notesState.dayNotes[key] = normalizeDayNote(dayNote);
   });
 
   Object.entries(value.weekReflections || {}).forEach(([key, weekReflection]) => {
-    normalized.weekReflections[key] = normalizeWeekReflection(weekReflection);
+    notesState.weekReflections[key] = normalizeWeekReflection(weekReflection);
   });
 
-  normalized.securityJournalEntries = Array.isArray(value.securityJournalEntries)
+  notesState.securityJournalEntries = Array.isArray(value.securityJournalEntries)
     ? value.securityJournalEntries.map((entry) => normalizeJournalEntry(entry))
     : [];
 
-  normalized.securityJournalEntries.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  notesState.securityJournalEntries.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 
-  return persist(NOTES_STORAGE_KEYS.notes, normalized);
+  persistPromise = persistPromise.then(persistNotes, persistNotes);
+  await persistPromise;
+  return notesState;
 };
 
-export const setDayNote = (dayId, payload) => {
+export const setDayNote = async (dayId, payload) => {
   const notes = getNotesData();
   const normalized = normalizeDayNote(payload);
 
@@ -137,7 +175,7 @@ export const setDayNote = (dayId, payload) => {
   return saveNotesData(notes);
 };
 
-export const setWeekReflection = (weekId, payload) => {
+export const setWeekReflection = async (weekId, payload) => {
   const notes = getNotesData();
   const normalized = normalizeWeekReflection(payload);
 
@@ -150,7 +188,7 @@ export const setWeekReflection = (weekId, payload) => {
   return saveNotesData(notes);
 };
 
-export const upsertJournalEntry = (payload) => {
+export const upsertJournalEntry = async (payload) => {
   const notes = getNotesData();
   const normalized = normalizeJournalEntry(payload);
 
@@ -160,7 +198,7 @@ export const upsertJournalEntry = (payload) => {
   return saveNotesData(notes);
 };
 
-export const deleteJournalEntry = (entryId) => {
+export const deleteJournalEntry = async (entryId) => {
   const notes = getNotesData();
   notes.securityJournalEntries = notes.securityJournalEntries.filter((entry) => entry.id !== entryId);
   return saveNotesData(notes);
@@ -172,39 +210,35 @@ export const exportNotesBundle = () => ({
   notes: getNotesData()
 });
 
-export const importNotesBundle = (bundle) => {
+export const importNotesBundle = async (bundle) => {
   if (!bundle || typeof bundle !== 'object') {
     throw new Error('Invalid JSON payload.');
   }
 
   if (bundle.notes) {
-    saveNotesData(bundle.notes);
+    await saveNotesData(bundle.notes);
     return;
   }
 
   if (bundle.dayNotes || bundle.weekReflections || bundle.securityJournalEntries) {
-    saveNotesData(bundle);
+    await saveNotesData(bundle);
     return;
   }
 
   throw new Error('Import payload did not include notes data.');
 };
 
-export const getExportMeta = () => {
-  const raw = loadKey(NOTES_STORAGE_KEYS.exportMeta, defaultExportMeta);
-  return {
-    ...defaultExportMeta(),
-    ...raw
-  };
-};
+export const getExportMeta = () => exportMetaState;
 
-export const setExportMeta = (nextValue) => {
-  const merged = {
+export const setExportMeta = async (nextValue) => {
+  exportMetaState = {
     ...getExportMeta(),
     ...nextValue,
     updatedAt: nowIso()
   };
-  return persist(NOTES_STORAGE_KEYS.exportMeta, merged);
+  persistPromise = persistPromise.then(persistNotes, persistNotes);
+  await persistPromise;
+  return exportMetaState;
 };
 
 const markdownEscape = (value) => String(value || '').replace(/\r/g, '');
@@ -306,7 +340,13 @@ export const exportNotesMarkdown = ({ weeks = [], dayMetaById = {} } = {}) => {
   return lines.join('\n').trimEnd() + '\n';
 };
 
-export const resetNotesData = () => {
+export const resetNotesData = async () => {
+  notesState = defaultNotes();
+  exportMetaState = defaultExportMeta();
+  loadPromise = Promise.resolve(notesState);
+  if (canUseIdb()) {
+    await Promise.all([delKV('notes'), delKV('noteExportMeta')]);
+  }
   localStorage.removeItem(NOTES_STORAGE_KEYS.notes);
   localStorage.removeItem(NOTES_STORAGE_KEYS.exportMeta);
 };
