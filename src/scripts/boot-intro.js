@@ -17,6 +17,8 @@ const bootIntro = () => {
     '32 week roadmap detected',
     'launching interface'
   ];
+  const lineDelay = 560;
+  const finalPause = 1400;
   const out = document.getElementById('boot-console');
   const pulse = document.getElementById('packet-pulse');
   const timers = [];
@@ -30,8 +32,8 @@ const bootIntro = () => {
   lines.forEach((line, i) => timers.push(setTimeout(() => {
     out.textContent += `${line}\n`;
     if (i === 1) pulse?.classList.add('is-live');
-  }, i * 80)));
-  timers.push(setTimeout(done, lines.length * 80 + 300));
+  }, i * lineDelay)));
+  timers.push(setTimeout(done, lines.length * lineDelay + finalPause));
 };
 
 if (document.readyState === 'loading') {
