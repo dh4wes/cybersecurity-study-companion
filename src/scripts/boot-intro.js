@@ -1,8 +1,17 @@
 const bootIntro = () => {
   const root = document.getElementById('boot-intro');
   if (!root) return;
+  const sessionKey = 'cyber-study-boot-intro-session-v1';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return root.remove();
+  try {
+    if (sessionStorage.getItem(sessionKey) === 'true') {
+      root.remove();
+      return;
+    }
+  } catch {
+    // Ignore storage errors and continue showing the intro.
+  }
   const lines = [
     'initializing cyber training environment',
     'loading modules...',
@@ -22,6 +31,11 @@ const bootIntro = () => {
   const timers = [];
   const done = () => {
     timers.forEach(clearTimeout);
+    try {
+      sessionStorage.setItem(sessionKey, 'true');
+    } catch {
+      // Ignore storage errors.
+    }
     root.classList.add('is-fading');
     setTimeout(() => root.remove(), 220);
   };

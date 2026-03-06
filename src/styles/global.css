@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Pinkend';
-  src: url('../assets/fonts/pinkend.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --c-void: #040506;
   --c-void-soft: #080a0c;
@@ -180,11 +172,6 @@ html[data-color-theme='jade-pebble-morning'] {
 
 * {
   box-sizing: border-box;
-}
-
-html[data-font-theme='pinkend'] {
-  --font-display: 'Pinkend', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Courier New', monospace;
-  --font-body: 'Pinkend', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 html,
