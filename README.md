@@ -185,6 +185,11 @@ On first load after the upgrade, the app copies existing browser data from:
 
 The legacy localStorage entries are kept as a fallback backup for now. Use the existing reset controls in `/progress/` and `/notes/` to clear the active IndexedDB records.
 
+## Mobile UX
+Phone layouts now use a fixed bottom navigation bar for the main routes, collapsible filter panels on weeks/glossary/flashcards, and accordion-style day cards on week pages.
+
+Flashcard reveal panels and controls were expanded for touch targets while keeping the existing terminal theme and desktop layout intact.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs

@@ -81,9 +81,11 @@ const phaseRefToNumber = Object.fromEntries(
     </div>
   </section>
 
-  <section class="card section">
-    <h2>Filter Deck</h2>
-    <div class="filter-grid">
+  <details class="card section mobile-filter-shell">
+    <summary>Filters</summary>
+    <div class="mobile-filter-content">
+      <h2>Filter Deck</h2>
+      <div class="filter-grid mobile-filter-grid">
       <label>
         Search question or answer
         <input class="js-flashcards-search" type="text" placeholder="mfa, subnetting, incident response..." />
@@ -132,13 +134,15 @@ const phaseRefToNumber = Object.fromEntries(
           ))}
         </select>
       </label>
-    </div>
 
-    <div class="filter-actions">
-      <button type="button" class="secondary js-flashcards-reset">Reset filters</button>
-      <p class="small js-flashcards-filter-state" aria-live="polite"></p>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="secondary js-flashcards-reset">Clear filters</button>
+        <p class="small js-flashcards-filter-state" aria-live="polite"></p>
+      </div>
     </div>
-  </section>
+  </details>
 
   <section class="section">
       <div class="grid flashcards-grid">

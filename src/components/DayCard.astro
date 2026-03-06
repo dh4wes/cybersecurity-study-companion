@@ -24,127 +24,155 @@ const todoItems = Array.isArray(day.todoList)
 const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 ---
 
-<article
+<details
   id={day.id}
   class="card day-card js-day-card"
   data-day-id={day.id}
   data-week-id={weekId}
   data-session-type={day.session_type}
 >
-  <header class="section-header">
+  <summary class="day-card-summary">
     <div>
-      <p class="kicker">{day.label}</p>
+      <p class="kicker">Day {String(day.day).padStart(2, '0')} • {day.label}</p>
       <h3>{day.session_type} Session</h3>
+      <p class="summary-objective">{day.session_objective}</p>
     </div>
     <div class="meta">
       <span class={`badge ${sessionClass}`}>{day.session_type}</span>
       <span class="badge neutral">{day.hours}h</span>
     </div>
-  </header>
+  </summary>
 
-  <TaskBadges day={day} />
+  <div class="day-card-body">
+    <TaskBadges day={day} />
 
-  <p><strong>Objective:</strong> {day.session_objective}</p>
-  <p><strong>Suggested split:</strong> {day.suggested_split}</p>
+    <p><strong>Objective:</strong> {day.session_objective}</p>
+    <p><strong>Suggested split:</strong> {day.suggested_split}</p>
 
-  <div>
-    <p><strong>Tasks:</strong></p>
-    <ul>
-      {todoItems.map((item) => (
-        <li>{item}</li>
-      ))}
-    </ul>
-  </div>
-
-  {day.taskTagList.length > 0 ? (
-    <p>
-      <strong>Task tags:</strong>{' '}
-      {day.taskTagList.map((tag) => (
-        <span class="badge neutral">{tag}</span>
-      ))}
-    </p>
-  ) : null}
-
-  <ResourceLinkList
-    primaryResource={day.primary_resource}
-    primaryUrl={day.primary_url}
-    supportResource={day.support_resource}
-    supportUrl={day.support_url}
-    sourceLinks={sourceLinks}
-  />
-
-  <section class="section glossary-section">
-    <div class="section-header">
-      <h4>Today's Glossary Terms</h4>
-      <span class="badge neutral">{glossaryEntries.length}</span>
+    <div>
+      <p><strong>Tasks:</strong></p>
+      <ul>
+        {todoItems.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
 
-    {glossaryEntries.length ? (
-      <div class="grid glossary-grid">
-        {glossaryEntries.map((entry) => (
-          <GlossaryTermCard entry={entry} />
+    {day.taskTagList.length > 0 ? (
+      <p>
+        <strong>Task tags:</strong>{' '}
+        {day.taskTagList.map((tag) => (
+          <span class="badge neutral">{tag}</span>
         ))}
+      </p>
+    ) : null}
+
+    <ResourceLinkList
+      primaryResource={day.primary_resource}
+      primaryUrl={day.primary_url}
+      supportResource={day.support_resource}
+      supportUrl={day.support_url}
+      sourceLinks={sourceLinks}
+    />
+
+    <section class="section glossary-section">
+      <div class="section-header">
+        <h4>Today's Glossary Terms</h4>
+        <span class="badge neutral">{glossaryEntries.length}</span>
       </div>
-    ) : (
-      <p class="small">No required new glossary terms for this session. Optional: light weekly review.</p>
-    )}
-  </section>
 
-  <section class="section flashcard-section">
-    <div class="section-header">
-      <h4>Today's Flashcards</h4>
-      <div class="meta">
-        <span class="badge neutral">{flashcardEntries.length}</span>
-        {flashcardEntries.length ? (
-          <button type="button" class="ghost export-day-btn js-export-day-anki" data-day-id={day.id}>
-            Export today&apos;s cards
-          </button>
-        ) : null}
-      </div>
-    </div>
-
-    {flashcardEntries.length ? (
-      <div class="grid flashcard-grid">
-        {flashcardEntries.map((card) => (
-          <FlashcardItem card={card} />
-        ))}
-      </div>
-    ) : (
-      <p class="small">No required new flashcards for this session. Optional: revisit the review deck.</p>
-    )}
-  </section>
-
-  <section class="card checkpoint-box">
-    <p><strong>Checkpoint:</strong> {day.checkpoint || day.deliverable_or_checkpoint}</p>
-    <p><strong>Weekly deliverable context:</strong> {weeklyDeliverable}</p>
-    <p class="small"><strong>Journal prompt:</strong> {day.journal_prompt}</p>
-  </section>
-
-  <NotesCtaPanel
-    week={weekNumber}
-    day={day.day}
-    tab="day"
-    title="Capture Private Notes"
-    body="Write your freeform day notes in the separate local notes tool."
-  />
-
-  {showProgressControls ? (
-    <section class="progress-controls" aria-label={`Progress controls for ${day.id}`}>
-      <div class="toggles">
-        <label>
-          <input class="js-complete-toggle" type="checkbox" />
-          Complete
-        </label>
-        <button class="js-block-toggle ghost" type="button">Mark blocked</button>
-      </div>
-      <p class="small js-day-state" aria-live="polite"></p>
+      {glossaryEntries.length ? (
+        <div class="grid glossary-grid">
+          {glossaryEntries.map((entry) => (
+            <GlossaryTermCard entry={entry} />
+          ))}
+        </div>
+      ) : (
+        <p class="small">No required new glossary terms for this session. Optional: light weekly review.</p>
+      )}
     </section>
-  ) : null}
-</article>
+
+    <section class="section flashcard-section">
+      <div class="section-header">
+        <h4>Today's Flashcards</h4>
+        <div class="meta">
+          <span class="badge neutral">{flashcardEntries.length}</span>
+          {flashcardEntries.length ? (
+            <button type="button" class="ghost export-day-btn js-export-day-anki" data-day-id={day.id}>
+              Export today&apos;s cards
+            </button>
+          ) : null}
+        </div>
+      </div>
+
+      {flashcardEntries.length ? (
+        <div class="grid flashcard-grid">
+          {flashcardEntries.map((card) => (
+            <FlashcardItem card={card} />
+          ))}
+        </div>
+      ) : (
+        <p class="small">No required new flashcards for this session. Optional: revisit the review deck.</p>
+      )}
+    </section>
+
+    <section class="card checkpoint-box">
+      <p><strong>Checkpoint:</strong> {day.checkpoint || day.deliverable_or_checkpoint}</p>
+      <p><strong>Weekly deliverable context:</strong> {weeklyDeliverable}</p>
+      <p class="small"><strong>Journal prompt:</strong> {day.journal_prompt}</p>
+    </section>
+
+    <NotesCtaPanel
+      week={weekNumber}
+      day={day.day}
+      tab="day"
+      title="Capture Private Notes"
+      body="Write your freeform day notes in the separate local notes tool."
+    />
+
+    {showProgressControls ? (
+      <section class="progress-controls" aria-label={`Progress controls for ${day.id}`}>
+        <div class="toggles">
+          <label>
+            <input class="js-complete-toggle" type="checkbox" />
+            Complete
+          </label>
+          <button class="js-block-toggle ghost" type="button">Mark blocked</button>
+        </div>
+        <p class="small js-day-state" aria-live="polite"></p>
+      </section>
+    ) : null}
+  </div>
+</details>
 
 <style>
   .day-card {
     padding: 1rem;
+  }
+
+  .day-card-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .day-card-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .day-card-summary::marker {
+    content: '';
+  }
+
+  .summary-objective {
+    margin-bottom: 0;
+  }
+
+  .day-card-body {
+    margin-top: 0.8rem;
   }
 
   ul {
@@ -198,5 +226,32 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
   .js-day-card.is-blocked {
     border-color: color-mix(in srgb, var(--danger) 55%, var(--border));
     background: color-mix(in srgb, var(--danger) 11%, var(--surface));
+  }
+
+  @media (min-width: 901px) {
+    .day-card > .day-card-body {
+      display: block !important;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .day-card:not([open]) > .day-card-body {
+      display: none;
+    }
+
+    .day-card-summary {
+      min-height: 48px;
+    }
+
+    .day-card-summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .day-card[open] .day-card-summary::after {
+      content: '-';
+    }
   }
 </style>
