@@ -17,8 +17,13 @@ export const openDb = () => {
           db.createObjectStore(STORE_NAME);
         }
       };
-      request.onsuccess = () => resolve(request.result);
+      request.onsuccess = () => {
+        const db = request.result;
+        db.onversionchange = () => db.close();
+        resolve(db);
+      };
       request.onerror = () => reject(request.error);
+      request.onblocked = () => reject(request.error || new Error('IndexedDB open request was blocked.'));
     }).catch((error) => {
       console.warn('IndexedDB unavailable, falling back to localStorage.', error);
       dbPromise = Promise.resolve(null);

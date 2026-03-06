@@ -1,6 +1,11 @@
 import { registerSW } from 'virtual:pwa-register';
 
-if ('Capacitor' in globalThis) {
+const isCapacitorRuntime =
+  typeof globalThis !== 'undefined' &&
+  typeof globalThis.Capacitor === 'object' &&
+  globalThis.Capacitor !== null;
+
+if (isCapacitorRuntime) {
   console.info('Capacitor runtime detected; skipping service worker registration.');
 } else {
   registerSW({

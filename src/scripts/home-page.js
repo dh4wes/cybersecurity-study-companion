@@ -1,10 +1,11 @@
 import { getProgress, loadProgress } from './progress-storage.js';
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
-import { parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
+import { initOnReady, parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
+
+let homeWeeks = [];
 
 const renderHome = () => {
-  const data = parseJsonScript('home-data-json', { weeks: [] });
-  const weeks = data.weeks || [];
+  const weeks = homeWeeks;
   const progress = getProgress();
   const metrics = computeProgressMetrics(weeks, progress);
 
@@ -54,12 +55,9 @@ const renderHome = () => {
 
 const boot = async () => {
   await loadProgress();
+  homeWeeks = parseJsonScript('home-data-json', { weeks: [] }).weeks || [];
   renderHome();
   window.addEventListener(PROGRESS_EVENT, renderHome);
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

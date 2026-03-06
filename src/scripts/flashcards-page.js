@@ -1,5 +1,5 @@
 import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
-import { getDateToken, includesToken, parseJsonScript } from './runtime/client-utils.js';
+import { getDateToken, includesToken, initOnReady, parseJsonScript } from './runtime/client-utils.js';
 
 const applyFilters = () => {
   const search = (document.querySelector('.js-flashcards-search')?.value || '').trim().toLowerCase();
@@ -137,8 +137,4 @@ const boot = () => {
   applyFilters();
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

@@ -1,5 +1,7 @@
 import { getProgress, loadProgress } from './progress-storage.js';
-import { includesToken, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
+import { includesToken, initOnReady, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
+
+let weeksData = [];
 
 const applyFilters = () => {
   const cards = [...document.querySelectorAll('.js-week-card')];
@@ -30,8 +32,7 @@ const applyFilters = () => {
 };
 
 const updateWeekProgressLabels = () => {
-  const data = parseJsonScript('weeks-data-json', { weeks: [] });
-  const weeks = data.weeks || [];
+  const weeks = weeksData;
   const progress = getProgress();
   const completeSet = new Set(progress.completedDays || []);
 
@@ -52,6 +53,7 @@ const updateWeekProgressLabels = () => {
 
 const boot = async () => {
   await loadProgress();
+  weeksData = parseJsonScript('weeks-data-json', { weeks: [] }).weeks || [];
   const inputs = document.querySelectorAll(
     '.js-filter-phase, .js-filter-week, .js-filter-session, .js-filter-laptop, .js-filter-tag'
   );
@@ -76,8 +78,4 @@ const boot = async () => {
   applyFilters();
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

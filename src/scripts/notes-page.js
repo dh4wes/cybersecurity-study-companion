@@ -12,7 +12,15 @@ import {
   getExportMeta,
   setExportMeta
 } from './notes-storage.js';
-import { parseJsonScript, downloadJson } from './runtime/client-utils.js';
+import {
+  appendChildren,
+  clearNode,
+  createElement,
+  downloadJson,
+  getErrorMessage,
+  initOnReady,
+  parseJsonScript
+} from './runtime/client-utils.js';
 
 const toWeekId = (weekNumber) => `week-${String(Number(weekNumber)).padStart(2, '0')}`;
 
@@ -55,12 +63,14 @@ const applyTab = (tab) => {
 
 const populateDaySelect = (week, select) => {
   const days = week?.days || [];
-  select.innerHTML = days
-    .map(
-      (day) =>
-        `<option value="${day.id}">Day ${String(day.day).padStart(2, '0')} - ${day.label || day.session_type}</option>`
-    )
-    .join('');
+  clearNode(select);
+  days.forEach((day) => {
+    const option = createElement('option', {
+      text: `Day ${String(day.day).padStart(2, '0')} - ${day.label || day.session_type}`,
+      attrs: { value: day.id }
+    });
+    select.appendChild(option);
+  });
 };
 
 const renderDayForm = (notes, dayId) => {
@@ -98,28 +108,55 @@ const renderWeekForm = (notes, weekId) => {
 const renderJournalEntries = (notes, stateNode) => {
   const list = document.querySelector('.js-journal-entry-list');
   if (!list) return;
+  clearNode(list);
 
   if (!notes.securityJournalEntries.length) {
-    list.innerHTML = '<p class="small">No journal notes yet.</p>';
+    list.appendChild(createElement('p', { className: 'small', text: 'No journal notes yet.' }));
     return;
   }
 
-  list.innerHTML = notes.securityJournalEntries
-    .map(
-      (entry) => `
-        <article class="card journal-entry-row" data-entry-id="${entry.id}">
-          <p class="kicker">${entry.week_ref || 'General'} • ${new Date(entry.createdAt).toISOString().slice(0, 10)}</p>
-          <h3>${entry.title || 'Untitled entry'}</h3>
-          <p><strong>Source:</strong> ${entry.source || 'n/a'}</p>
-          <p><strong>Management summary:</strong> ${entry.management_summary || 'n/a'}</p>
-          <p><strong>Prevention ideas:</strong> ${entry.prevention_ideas || 'n/a'}</p>
-          <div class="entry-actions">
-            <button class="danger js-delete-journal-entry" type="button" data-entry-id="${entry.id}">Delete</button>
-          </div>
-        </article>
-      `
-    )
-    .join('');
+  notes.securityJournalEntries.forEach((entry) => {
+    const article = createElement('article', {
+      className: 'card journal-entry-row',
+      dataset: { entryId: entry.id }
+    });
+    const source = createElement('p');
+    appendChildren(source, [
+      createElement('strong', { text: 'Source:' }),
+      document.createTextNode(` ${entry.source || 'n/a'}`)
+    ]);
+    const management = createElement('p');
+    appendChildren(management, [
+      createElement('strong', { text: 'Management summary:' }),
+      document.createTextNode(` ${entry.management_summary || 'n/a'}`)
+    ]);
+    const prevention = createElement('p');
+    appendChildren(prevention, [
+      createElement('strong', { text: 'Prevention ideas:' }),
+      document.createTextNode(` ${entry.prevention_ideas || 'n/a'}`)
+    ]);
+    const actionWrap = createElement('div', { className: 'entry-actions' });
+    const deleteButton = createElement('button', {
+      className: 'danger js-delete-journal-entry',
+      text: 'Delete',
+      attrs: { type: 'button' },
+      dataset: { entryId: entry.id }
+    });
+    actionWrap.appendChild(deleteButton);
+
+    appendChildren(article, [
+      createElement('p', {
+        className: 'kicker',
+        text: `${entry.week_ref || 'General'} • ${new Date(entry.createdAt).toISOString().slice(0, 10)}`
+      }),
+      createElement('h3', { text: entry.title || 'Untitled entry' }),
+      source,
+      management,
+      prevention,
+      actionWrap
+    ]);
+    list.appendChild(article);
+  });
 
   list.querySelectorAll('.js-delete-journal-entry').forEach((button) => {
     button.addEventListener('click', async () => {
@@ -313,7 +350,7 @@ const boot = async () => {
         renderJournalEntries(getNotesData(), stateNode);
         if (stateNode) stateNode.textContent = 'Notes JSON imported.';
       } catch (error) {
-        if (stateNode) stateNode.textContent = `Import failed: ${error.message}`;
+        if (stateNode) stateNode.textContent = `Import failed: ${getErrorMessage(error)}`;
       } finally {
         importInput.value = '';
       }
@@ -343,8 +380,4 @@ const boot = async () => {
   }
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

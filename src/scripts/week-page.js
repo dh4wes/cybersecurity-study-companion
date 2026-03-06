@@ -8,7 +8,7 @@ import {
   setWeekArtifactLink
 } from './progress-storage.js';
 import { buildAnkiTsv, downloadTextFile } from '../lib/anki-export.js';
-import { dispatchProgressChanged, getDateToken, parseJsonScript } from './runtime/client-utils.js';
+import { dispatchProgressChanged, getDateToken, initOnReady, parseJsonScript } from './runtime/client-utils.js';
 
 const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-complete', isComplete);
@@ -190,8 +190,4 @@ const boot = async () => {
   initWeekAnkiExport(data);
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
-} else {
-  boot();
-}
+initOnReady(boot);

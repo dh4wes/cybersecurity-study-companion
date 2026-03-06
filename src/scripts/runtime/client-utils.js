@@ -22,6 +22,51 @@ export const parseJsonScript = (id, fallback = {}) => {
   }
 };
 
+export const initOnReady = (callback) => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', callback, { once: true });
+  } else {
+    callback();
+  }
+};
+
+export const clearNode = (node) => {
+  if (!node) return;
+  while (node.firstChild) {
+    node.removeChild(node.firstChild);
+  }
+};
+
+export const createElement = (tagName, options = {}) => {
+  const {
+    className = '',
+    text = '',
+    attrs = {},
+    dataset = {}
+  } = options;
+
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text) element.textContent = text;
+
+  Object.entries(attrs).forEach(([key, value]) => {
+    if (value == null) return;
+    element.setAttribute(key, String(value));
+  });
+
+  Object.entries(dataset).forEach(([key, value]) => {
+    if (value == null) return;
+    element.dataset[key] = String(value);
+  });
+
+  return element;
+};
+
+export const appendChildren = (parent, children = []) => {
+  children.filter(Boolean).forEach((child) => parent.appendChild(child));
+  return parent;
+};
+
 export const includesToken = (value, token) => {
   if (!token) return true;
   const hay = String(value || '')
@@ -51,3 +96,6 @@ export const downloadJson = (filenamePrefix, payload) => {
 export const dispatchProgressChanged = () => {
   window.dispatchEvent(new CustomEvent(PROGRESS_EVENT));
 };
+
+export const getErrorMessage = (error, fallback = 'Unexpected error.') =>
+  error instanceof Error ? error.message : fallback;

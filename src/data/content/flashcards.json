@@ -18,7 +18,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Accounting (AAA) fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Identity and Authentication when enforcing trust and access decisions."
+    "back": "Accounting (AAA) complements Authentication and Authorization; it records authentication events, authorization decisions, and administrative actions."
   },
   {
     "id": "ai-assistant-guardrails-definition",
@@ -39,7 +39,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does AI Assistant Guardrails fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements LinkedIn Profile and Networking Outreach when presenting evidence and targeting roles."
+    "back": "AI Assistant Guardrails complements Application Funnel and Artifact Curation; it defines source boundaries, review checks, and approval rules."
   },
   {
     "id": "alert-triage-definition",
@@ -60,7 +60,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Alert Triage fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements False Positive and Indicator of Compromise during detection, investigation, and remediation workflows."
+    "back": "Alert Triage complements Asset Inventory and Attack Vector; it reviews alert context, validates indicators, and sets priority."
   },
   {
     "id": "api-definition",
@@ -81,7 +81,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does API fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements HTTP Method and Automation Playbook when building repeatable scripts and integrations."
+    "back": "API complements Conditional and Error Handling; it sends structured requests to defined endpoints and returns machine-readable responses."
   },
   {
     "id": "application-funnel-definition",
@@ -102,7 +102,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Application Funnel fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements LinkedIn Profile and Networking Outreach when presenting evidence and targeting roles."
+    "back": "Application Funnel complements AI Assistant Guardrails; it tracks counts, conversion rates, and delays between application stages to expose where the search process stalls."
   },
   {
     "id": "artifact-curation-definition",
@@ -123,7 +123,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Artifact Curation fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Executive Briefing and Management Summary when presenting evidence and targeting roles."
+    "back": "Artifact Curation complements AI Assistant Guardrails and Application Funnel; it selects representative evidence, standardizes presentation, and removes weak samples."
   },
   {
     "id": "asset-inventory-definition",
@@ -144,7 +144,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Asset Inventory fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Data Classification and Threat Model during detection, investigation, and remediation workflows."
+    "back": "Asset Inventory complements Alert Triage and Attack Vector; it maps systems, software, owners, and data to known records."
   },
   {
     "id": "attack-vector-definition",
@@ -165,7 +165,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Attack Vector fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Asset Inventory and Data Classification during detection, investigation, and remediation workflows."
+    "back": "Attack Vector complements Alert Triage and Asset Inventory; it describes the route used for initial access, such as phishing, exposed services, or vulnerable software."
   },
   {
     "id": "authentication-definition",
@@ -186,7 +186,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Authentication fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Identity and Authorization when enforcing trust and access decisions."
+    "back": "Authentication complements Accounting (AAA) and Authorization; it validates submitted credentials, tokens, certificates, or biometrics."
   },
   {
     "id": "authorization-definition",
@@ -207,7 +207,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Authorization fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Identity and Authentication when enforcing trust and access decisions."
+    "back": "Authorization complements Accounting (AAA) and Authentication; it evaluates policy rules after authentication to determine which resources and actions an identity may use."
   },
   {
     "id": "automation-playbook-definition",
@@ -228,7 +228,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Automation Playbook fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements API and HTTP Method during detection, investigation, and remediation workflows."
+    "back": "Automation Playbook complements Alert Triage and Asset Inventory; it executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently."
   },
   {
     "id": "bios-definition",
@@ -249,7 +249,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does BIOS/UEFI Firmware fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CPU and RAM during deployment, configuration, and troubleshooting."
+    "back": "BIOS/UEFI Firmware complements Boot Process and CIA Triad; it initializes hardware, runs platform checks, and locates a bootable device."
   },
   {
     "id": "boot-process-definition",
@@ -270,7 +270,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Boot Process fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CPU and RAM during deployment, configuration, and troubleshooting."
+    "back": "Boot Process complements BIOS/UEFI Firmware and CIA Triad; it transitions from firmware execution to loader, kernel initialization, service startup, and interactive user access."
   },
   {
     "id": "business-impact-analysis-definition",
@@ -291,7 +291,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Business Impact Analysis fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Critical Infrastructure and Governance when evaluating priorities and treatment decisions."
+    "back": "Business Impact Analysis complements Capability Gap and Compensating Control; it estimates process disruption effects, recovery priorities, and tolerable downtime."
   },
   {
     "id": "capability-gap-definition",
@@ -312,7 +312,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Capability Gap fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Executive Briefing and Management Summary when evaluating priorities and treatment decisions."
+    "back": "Capability Gap complements Business Impact Analysis and Compensating Control; it compares current staffing, tooling, or process maturity against required outcomes to identify deficiencies."
   },
   {
     "id": "career-story-definition",
@@ -333,7 +333,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Career Story fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Resume Tailoring and STAR Method when presenting evidence and targeting roles."
+    "back": "Career Story complements AI Assistant Guardrails; it combines prior experience, current skills, and target roles into a consistent narrative used across interviews and profiles."
   },
   {
     "id": "case-management-definition",
@@ -354,7 +354,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Case Management fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Recovery and Playbook during detection, investigation, and remediation workflows."
+    "back": "Case Management complements Alert Triage and Asset Inventory; it maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle."
   },
   {
     "id": "chain-of-custody-definition",
@@ -375,7 +375,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Chain of Custody fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements SOC Workflow and Forensic Imaging during detection, investigation, and remediation workflows."
+    "back": "Chain of Custody complements Alert Triage and Asset Inventory; it documents each evidence transfer, handler, timestamp, and purpose to preserve admissibility and integrity."
   },
   {
     "id": "chmod-definition",
@@ -396,7 +396,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does chmod fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Permissions and chown when configuring hosts and controlling access."
+    "back": "chmod complements chown and Command Line; it updates read, write, and execute permission bits for users, groups, or others on Linux files."
   },
   {
     "id": "chown-definition",
@@ -417,7 +417,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does chown fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Permissions and chmod when configuring hosts and controlling access."
+    "back": "chown fits beside chmod and Command Line; it reassigns file ownership metadata."
   },
   {
     "id": "cia-triad-definition",
@@ -438,7 +438,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does CIA Triad fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Risk and Threat during deployment, configuration, and troubleshooting."
+    "back": "CIA Triad complements BIOS/UEFI Firmware and Boot Process; it evaluates security objectives by balancing data secrecy, accuracy, and availability across system design decisions."
   },
   {
     "id": "cidr-definition",
@@ -459,7 +459,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does CIDR fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements IPv4 and Subnet Mask during addressing, forwarding, and traffic analysis."
+    "back": "CIDR complements Default Gateway and DNS Resolution; it uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing."
   },
   {
     "id": "cloud-service-model-definition",
@@ -480,7 +480,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Cloud Service Model fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SSID and WPA3 during application and data handling."
+    "back": "Cloud Service Model complements Data Classification and HTTP Method; it defines whether the provider manages infrastructure, platform components, runtime services, or complete applications."
   },
   {
     "id": "command-line-definition",
@@ -501,7 +501,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Command Line fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Operating System and Filesystem when configuring hosts and controlling access."
+    "back": "Command Line complements chmod and chown; it accepts typed commands, arguments, and pipelines for direct interaction with operating system utilities."
   },
   {
     "id": "communication-plan-definition",
@@ -522,7 +522,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Communication Plan fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Incident Command and Playbook during detection, investigation, and remediation workflows."
+    "back": "Communication Plan complements Alert Triage and Asset Inventory; it defines notification paths, message timing, approval points, and audiences."
   },
   {
     "id": "compensating-control-definition",
@@ -543,7 +543,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Compensating Control fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Mitigation and Exploit when evaluating priorities and treatment decisions."
+    "back": "Compensating Control complements Business Impact Analysis and Capability Gap; it implements an alternate safeguard that reduces risk when the preferred primary control cannot be deployed."
   },
   {
     "id": "compliance-definition",
@@ -564,7 +564,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Compliance fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Critical Infrastructure and Business Impact Analysis when evaluating priorities and treatment decisions."
+    "back": "Compliance complements Business Impact Analysis and Capability Gap; it measures implemented practices against external or internal requirements and documents conformity or deficiency."
   },
   {
     "id": "conditional-definition",
@@ -585,7 +585,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Conditional fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Python Script and Variable when building repeatable scripts and integrations."
+    "back": "Conditional complements API and Error Handling; it evaluates an expression and executes different code paths depending on whether the result is true or false."
   },
   {
     "id": "containment-definition",
@@ -606,7 +606,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Containment fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Alert Triage and False Positive during detection, investigation, and remediation workflows."
+    "back": "Containment complements Alert Triage and Asset Inventory; it applies isolation, account restrictions, or blocking actions to stop attacker movement while preserving evidence."
   },
   {
     "id": "continuous-improvement-definition",
@@ -627,7 +627,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Continuous Improvement fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Executive Briefing and Management Summary when evaluating priorities and treatment decisions."
+    "back": "Continuous Improvement complements Business Impact Analysis and Capability Gap; it uses metrics, lessons learned, and review cycles to refine controls, processes, and training over time."
   },
   {
     "id": "control-definition",
@@ -662,14 +662,14 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Control Recommendation fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Reconnaissance and Enumeration when evaluating priorities and treatment decisions."
+    "back": "Control Recommendation complements Business Impact Analysis and Capability Gap; it documents a proposed safeguard, rationale, owner, and priority for reducing identified risk."
   },
   {
     "id": "control-relation",
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Control fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements CIA Triad and Risk when evaluating priorities and treatment decisions."
+    "back": "Control complements Business Impact Analysis and Capability Gap; it implements preventive, detective, or corrective measures that reduce likelihood, impact, or exposure."
   },
   {
     "id": "cpu-definition",
@@ -690,7 +690,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does CPU fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements RAM and Storage Drive during deployment, configuration, and troubleshooting."
+    "back": "CPU complements BIOS/UEFI Firmware and Boot Process; it fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system."
   },
   {
     "id": "critical-infrastructure-definition",
@@ -711,7 +711,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Critical Infrastructure fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Business Impact Analysis and Governance when evaluating priorities and treatment decisions."
+    "back": "Critical Infrastructure complements Business Impact Analysis and Capability Gap; it includes essential services whose disruption would significantly affect safety, economy, health, or national security."
   },
   {
     "id": "cron-definition",
@@ -732,7 +732,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does cron fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Permissions and chmod when configuring hosts and controlling access."
+    "back": "cron complements chmod and chown; it launches scheduled commands at configured times using recurring entries defined in cron tables."
   },
   {
     "id": "cvss-definition",
@@ -753,7 +753,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does CVSS fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Asset Inventory and Data Classification when evaluating priorities and treatment decisions."
+    "back": "CVSS complements Business Impact Analysis and Capability Gap; it scores vulnerabilities using base metrics that estimate exploitability and technical impact in a standardized format."
   },
   {
     "id": "data-classification-definition",
@@ -774,7 +774,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Data Classification fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements Asset Inventory and Threat Model during application and data handling."
+    "back": "Data Classification complements Cloud Service Model and HTTP Method; it assigns sensitivity labels that determine storage, access, transmission, retention, and disposal controls."
   },
   {
     "id": "default-gateway-definition",
@@ -795,7 +795,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Default Gateway fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Switch and VLAN during addressing, forwarding, and traffic analysis."
+    "back": "Default Gateway complements CIDR and DNS Resolution; it sends off-subnet packets to a router interface that can reach remote networks."
   },
   {
     "id": "defense-in-depth-definition",
@@ -816,7 +816,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Defense in Depth fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Reconnaissance and Enumeration when evaluating priorities and treatment decisions."
+    "back": "Defense in Depth complements Business Impact Analysis and Capability Gap; it applies multiple safeguards across layers."
   },
   {
     "id": "detection-rule-definition",
@@ -837,7 +837,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Detection Rule fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements SOC Workflow and Forensic Imaging during detection, investigation, and remediation workflows."
+    "back": "Detection Rule complements Alert Triage and Asset Inventory; it evaluates log fields, thresholds, and patterns against conditions that generate actionable security alerts."
   },
   {
     "id": "dhcp-definition",
@@ -858,7 +858,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does DHCP fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Mobile Device and Wi-Fi Standard when configuring hosts and controlling access."
+    "back": "DHCP complements chmod and chown; it leases IP settings such as address, gateway, and DNS information to clients."
   },
   {
     "id": "dns-definition",
@@ -879,7 +879,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does DNS fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements TCP and UDP when configuring hosts and controlling access."
+    "back": "DNS fits beside chmod and chown; it stores and serves resource records."
   },
   {
     "id": "dns-resolution-definition",
@@ -900,7 +900,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does DNS Resolution fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements HTTP Request and TLS Handshake during addressing, forwarding, and traffic analysis."
+    "back": "DNS Resolution complements CIDR and Default Gateway; it queries local caches and DNS servers iteratively or recursively until a matching address record is returned."
   },
   {
     "id": "elevator-pitch-definition",
@@ -921,7 +921,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Elevator Pitch fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Resume Tailoring and STAR Method when presenting evidence and targeting roles."
+    "back": "Elevator Pitch complements AI Assistant Guardrails; it compresses role target, relevant evidence, and specialization into a brief introduction suitable for networking and screening calls."
   },
   {
     "id": "encryption-definition",
@@ -942,7 +942,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Encryption fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Identity and Authentication when enforcing trust and access decisions."
+    "back": "Encryption complements Accounting (AAA) and Authentication; it uses algorithms and keys to transform plaintext into ciphertext that authorized parties can later decrypt."
   },
   {
     "id": "enumeration-definition",
@@ -963,7 +963,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Enumeration fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Reconnaissance and Privilege Escalation during detection, investigation, and remediation workflows."
+    "back": "Enumeration complements Alert Triage and Asset Inventory; it queries services, directories, or hosts to identify available accounts, ports, shares, and software details."
   },
   {
     "id": "eradication-definition",
@@ -984,7 +984,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Eradication fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Alert Triage and False Positive during detection, investigation, and remediation workflows."
+    "back": "Eradication complements Alert Triage and Asset Inventory; it removes malware, closes exploited access paths, and fixes root causes."
   },
   {
     "id": "error-handling-definition",
@@ -1005,7 +1005,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Error Handling fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Python Script and Variable when building repeatable scripts and integrations."
+    "back": "Error Handling complements API and Conditional; it detects exceptions or invalid states, then logs, retries, exits, or recovers without unsafe program behavior."
   },
   {
     "id": "error-log-definition",
@@ -1026,7 +1026,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Error Log fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Spaced Repetition and Retrieval Practice when planning review and measuring retention."
+    "back": "Error Log complements Knowledge Gap and Mock Exam; it records missed questions, wrong assumptions, and corrections."
   },
   {
     "id": "escalation-path-definition",
@@ -1047,7 +1047,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Escalation Path fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Recovery and Playbook during detection, investigation, and remediation workflows."
+    "back": "Escalation Path complements Alert Triage and Asset Inventory; it routes incidents to higher authority or specialist teams using predefined severity, impact, and responsibility criteria."
   },
   {
     "id": "ethernet-frame-definition",
@@ -1068,7 +1068,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Ethernet Frame fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements OSI Model and TCP/IP Model during addressing, forwarding, and traffic analysis."
+    "back": "Ethernet Frame complements CIDR and Default Gateway; it encapsulates payload data with source, destination, type, and integrity fields for local network delivery."
   },
   {
     "id": "evidence-handling-definition",
@@ -1089,7 +1089,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Evidence Handling fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Incident Command and Playbook during detection, investigation, and remediation workflows."
+    "back": "Evidence Handling complements Alert Triage and Asset Inventory; it collects, labels, stores, and transfers artifacts using documented procedures that preserve reliability and traceability."
   },
   {
     "id": "executive-briefing-definition",
@@ -1110,7 +1110,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Executive Briefing fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Management Summary and Artifact Curation when evaluating priorities and treatment decisions."
+    "back": "Executive Briefing complements Business Impact Analysis and Capability Gap; it summarizes technical findings into business impact, options, and decisions needed by senior leadership."
   },
   {
     "id": "exploit-definition",
@@ -1131,7 +1131,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Exploit fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Mitigation and Compensating Control during detection, investigation, and remediation workflows."
+    "back": "Exploit complements Alert Triage and Asset Inventory; it triggers vulnerable behavior through crafted input, code execution, or protocol abuse to gain unauthorized results."
   },
   {
     "id": "exposure-definition",
@@ -1152,7 +1152,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Exposure fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Mitigation and Exploit when evaluating priorities and treatment decisions."
+    "back": "Exposure complements Business Impact Analysis and Capability Gap; it describes how accessible an asset or weakness is to threat activity under current controls and conditions."
   },
   {
     "id": "false-positive-definition",
@@ -1173,7 +1173,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does False Positive fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Alert Triage and Indicator of Compromise during detection, investigation, and remediation workflows."
+    "back": "False Positive complements Alert Triage and Asset Inventory; it occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort."
   },
   {
     "id": "file-parsing-definition",
@@ -1194,7 +1194,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does File Parsing fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements API and HTTP Method during detection, investigation, and remediation workflows."
+    "back": "File Parsing complements Alert Triage and Asset Inventory; it reads structured fields from logs or data files."
   },
   {
     "id": "filesystem-definition",
@@ -1215,7 +1215,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Filesystem fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Operating System and NTFS during deployment, configuration, and troubleshooting."
+    "back": "Filesystem complements BIOS/UEFI Firmware and Boot Process; it maps file names to directories, metadata, and storage blocks."
   },
   {
     "id": "firewall-definition",
@@ -1236,7 +1236,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Firewall fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements SSID and WPA3 during addressing, forwarding, and traffic analysis."
+    "back": "Firewall complements CIDR and Default Gateway; it evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria."
   },
   {
     "id": "forensic-imaging-definition",
@@ -1257,7 +1257,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Forensic Imaging fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements SOC Workflow and Chain of Custody during detection, investigation, and remediation workflows."
+    "back": "Forensic Imaging complements Alert Triage and Asset Inventory; it creates a sector-level duplicate of media while preserving source state for repeatable forensic examination."
   },
   {
     "id": "function-definition",
@@ -1278,7 +1278,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Function fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Python Script and Variable when building repeatable scripts and integrations."
+    "back": "Function complements API and Conditional; it encapsulates reusable logic behind a named interface."
   },
   {
     "id": "governance-definition",
@@ -1299,7 +1299,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Governance fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Critical Infrastructure and Business Impact Analysis when evaluating priorities and treatment decisions."
+    "back": "Governance complements Business Impact Analysis and Capability Gap; it assigns decision rights, policy direction, and oversight mechanisms for managing cybersecurity activities."
   },
   {
     "id": "hardening-definition",
@@ -1320,7 +1320,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Hardening fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Detection and Intrusion Prevention during detection, investigation, and remediation workflows."
+    "back": "Hardening complements Alert Triage and Asset Inventory; it disables unnecessary services, tightens configurations, and applies secure defaults to reduce exposed attack surface."
   },
   {
     "id": "hashing-definition",
@@ -1341,7 +1341,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Hashing fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Identity and Authentication when enforcing trust and access decisions."
+    "back": "Hashing complements Accounting (AAA) and Authentication; it processes input through a deterministic algorithm to produce a fixed digest for integrity checks and password verification."
   },
   {
     "id": "http-method-definition",
@@ -1362,7 +1362,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does HTTP Method fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements API and Automation Playbook during application and data handling."
+    "back": "HTTP Method complements Cloud Service Model and Data Classification; it specifies the intended operation, such as reading, creating, updating, or deleting a resource."
   },
   {
     "id": "http-request-definition",
@@ -1383,7 +1383,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does HTTP Request fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements DNS Resolution and TLS Handshake during addressing, forwarding, and traffic analysis."
+    "back": "HTTP Request complements CIDR and Default Gateway; it carries a method, target, headers, and optional body from a client to a server."
   },
   {
     "id": "hypervisor-definition",
@@ -1404,7 +1404,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Hypervisor fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Mobile Device and Wi-Fi Standard during deployment, configuration, and troubleshooting."
+    "back": "Hypervisor complements BIOS/UEFI Firmware and Boot Process; it abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host."
   },
   {
     "id": "identity-definition",
@@ -1425,7 +1425,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Identity fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Authentication and Authorization when enforcing trust and access decisions."
+    "back": "Identity complements Accounting (AAA) and Authentication; it associates attributes, credentials, and permissions with a subject."
   },
   {
     "id": "impact-definition",
@@ -1446,7 +1446,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Impact fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Risk Register and Likelihood when evaluating priorities and treatment decisions."
+    "back": "Impact complements Business Impact Analysis and Capability Gap; it estimates operational, financial, legal, or reputational consequences if a threat event occurs."
   },
   {
     "id": "incident-command-definition",
@@ -1467,7 +1467,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Incident Command fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Playbook and Maturity Model during detection, investigation, and remediation workflows."
+    "back": "Incident Command complements Alert Triage and Asset Inventory; it assigns command roles, decision authority, and coordination channels."
   },
   {
     "id": "incident-journal-definition",
@@ -1488,7 +1488,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Incident Journal fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Reconnaissance and Enumeration during detection, investigation, and remediation workflows."
+    "back": "Incident Journal complements Alert Triage and Asset Inventory; it records timestamps, observations, hypotheses, and actions in sequence to support investigation continuity and review."
   },
   {
     "id": "incident-severity-definition",
@@ -1509,7 +1509,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Incident Severity fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Alert Triage and False Positive during detection, investigation, and remediation workflows."
+    "back": "Incident Severity complements Alert Triage and Asset Inventory; it scores incidents using impact and urgency criteria to drive escalation, staffing, and response timelines."
   },
   {
     "id": "input-validation-definition",
@@ -1530,7 +1530,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Input Validation fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SQL Query and SELECT Statement during application and data handling."
+    "back": "Input Validation complements Cloud Service Model and Data Classification; it checks untrusted data against format, length, type, and allowlist rules."
   },
   {
     "id": "interview-question-definition",
@@ -1551,7 +1551,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Interview Question Drill fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Resume Tailoring and STAR Method when presenting evidence and targeting roles."
+    "back": "Interview Question Drill complements AI Assistant Guardrails; it uses repeated prompt-response practice with timed answers to improve structure, precision, and confidence under interview conditions."
   },
   {
     "id": "intrusion-detection-definition",
@@ -1572,7 +1572,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Intrusion Detection fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Prevention and SIEM during detection, investigation, and remediation workflows."
+    "back": "Intrusion Detection complements Alert Triage and Asset Inventory; it analyzes network or host events for suspicious patterns and generates alerts when monitored conditions match."
   },
   {
     "id": "intrusion-prevention-definition",
@@ -1593,7 +1593,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Intrusion Prevention fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Detection and SIEM during detection, investigation, and remediation workflows."
+    "back": "Intrusion Prevention complements Alert Triage and Asset Inventory; it inspects traffic inline and automatically blocks packets or sessions matching malicious signatures or policies."
   },
   {
     "id": "ioc-definition",
@@ -1614,7 +1614,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Indicator of Compromise fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Alert Triage and False Positive during detection, investigation, and remediation workflows."
+    "back": "Indicator of Compromise complements Alert Triage and Asset Inventory; it captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity."
   },
   {
     "id": "ip-address-definition",
@@ -1635,7 +1635,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does IP Address fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Mobile Device and Wi-Fi Standard during addressing, forwarding, and traffic analysis."
+    "back": "IP Address complements CIDR and Default Gateway; it assigns a logical source or destination identifier."
   },
   {
     "id": "ipv4-definition",
@@ -1656,7 +1656,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does IPv4 fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements CIDR and Subnet Mask during addressing, forwarding, and traffic analysis."
+    "back": "IPv4 complements CIDR and Default Gateway; it represents addresses in 32 bits and forwards packets using hierarchical network and host portions."
   },
   {
     "id": "job-tracker-definition",
@@ -1677,7 +1677,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Job Tracker fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements LinkedIn Profile and Networking Outreach when presenting evidence and targeting roles."
+    "back": "Job Tracker complements AI Assistant Guardrails and Application Funnel; it stores application dates, contact details, follow-up tasks, and outcomes."
   },
   {
     "id": "join-definition",
@@ -1698,7 +1698,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does JOIN fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SQL Query and SELECT Statement during application and data handling."
+    "back": "JOIN complements Cloud Service Model and Data Classification; it matches related rows across tables using keys."
   },
   {
     "id": "keyword-optimization-definition",
@@ -1719,7 +1719,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Keyword Optimization fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements LinkedIn Profile and Networking Outreach when presenting evidence and targeting roles."
+    "back": "Keyword Optimization complements AI Assistant Guardrails and Application Funnel; it maps resume and profile language to recurring job-description terms."
   },
   {
     "id": "knowledge-gap-definition",
@@ -1740,7 +1740,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Knowledge Gap fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Spaced Repetition and Retrieval Practice when planning review and measuring retention."
+    "back": "Knowledge Gap complements Error Log and Mock Exam; it identifies a specific concept needing further study based on errors, uncertainty, or weak explanation."
   },
   {
     "id": "latency-definition",
@@ -1761,7 +1761,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Latency fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Wireshark and PCAP during addressing, forwarding, and traffic analysis."
+    "back": "Latency complements CIDR and Default Gateway; it measures elapsed time introduced by transmission, processing, queuing, and distance across a network path."
   },
   {
     "id": "least-privilege-definition",
@@ -1782,7 +1782,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Least Privilege fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Malware and Multi-Factor Authentication when enforcing trust and access decisions."
+    "back": "Least Privilege complements Accounting (AAA) and Authentication; it restricts roles and permissions to required actions, limiting misuse, accident scope, and privilege escalation opportunities."
   },
   {
     "id": "likelihood-definition",
@@ -1803,7 +1803,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Likelihood fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Risk Register and Impact when evaluating priorities and treatment decisions."
+    "back": "Likelihood complements Business Impact Analysis and Capability Gap; it estimates how probable a threat event is based on exposure, capability, and control conditions."
   },
   {
     "id": "linkedin-profile-definition",
@@ -1824,7 +1824,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does LinkedIn Profile fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Networking Outreach and Job Tracker when presenting evidence and targeting roles."
+    "back": "LinkedIn Profile complements AI Assistant Guardrails and Application Funnel; it publishes a searchable professional summary, experience evidence, and network-facing activity aligned with target cybersecurity roles."
   },
   {
     "id": "linux-kernel-definition",
@@ -1845,7 +1845,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Linux Kernel fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Shell and sudo when configuring hosts and controlling access."
+    "back": "Linux Kernel complements chmod and chown; it handles scheduling, memory management, drivers, and system calls between software and hardware resources."
   },
   {
     "id": "linux-permissions-definition",
@@ -1866,7 +1866,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Linux Permissions fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements chmod and chown when configuring hosts and controlling access."
+    "back": "Linux Permissions complements chmod and chown; it evaluates ownership and permission bits."
   },
   {
     "id": "log-correlation-definition",
@@ -1887,7 +1887,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Log Correlation fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements SOC Workflow and Forensic Imaging during detection, investigation, and remediation workflows."
+    "back": "Log Correlation complements Alert Triage and Asset Inventory; it combines events across sources by time, host, user, or indicator to reveal attack sequences."
   },
   {
     "id": "log-source-definition",
@@ -1908,7 +1908,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Log Source fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Detection and Intrusion Prevention during detection, investigation, and remediation workflows."
+    "back": "Log Source complements Alert Triage and Asset Inventory; it produces telemetry from systems, applications, and security tools that analysts ingest for monitoring and investigation."
   },
   {
     "id": "loop-definition",
@@ -1929,7 +1929,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Loop fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Python Script and Variable when building repeatable scripts and integrations."
+    "back": "Loop complements API and Conditional; it repeats statements over a sequence or condition until the dataset is exhausted or the condition changes."
   },
   {
     "id": "mac-address-definition",
@@ -1950,7 +1950,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does MAC Address fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements OSI Model and TCP/IP Model during addressing, forwarding, and traffic analysis."
+    "back": "MAC Address complements CIDR and Default Gateway; it identifies a local network interface at Layer 2 for switching and frame delivery decisions."
   },
   {
     "id": "malware-definition",
@@ -1971,7 +1971,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Malware fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Multi-Factor Authentication and Least Privilege during detection, investigation, and remediation workflows."
+    "back": "Malware complements Alert Triage and Asset Inventory; it executes malicious instructions that steal data, disrupt operations, establish persistence, or enable remote control."
   },
   {
     "id": "management-summary-definition",
@@ -1992,7 +1992,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Management Summary fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Executive Briefing and Artifact Curation when evaluating priorities and treatment decisions."
+    "back": "Management Summary complements Business Impact Analysis and Capability Gap; it condenses technical detail into concise statements about business effect, priority, and recommended actions."
   },
   {
     "id": "maturity-model-definition",
@@ -2013,7 +2013,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Maturity Model fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Incident Command and Playbook when evaluating priorities and treatment decisions."
+    "back": "Maturity Model complements Business Impact Analysis and Capability Gap; it rates current process capability against defined levels to guide staged improvement planning."
   },
   {
     "id": "mfa-definition",
@@ -2034,7 +2034,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Multi-Factor Authentication fit within the Identity & Cryptography system?",
-    "back": "Within identity and cryptography, it complements Malware and Least Privilege when enforcing trust and access decisions."
+    "back": "Multi-Factor Authentication complements Accounting (AAA) and Authentication; it combines multiple factor types, such as passwords and tokens,."
   },
   {
     "id": "mitigation-definition",
@@ -2055,7 +2055,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Mitigation fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Exploit and Compensating Control when evaluating priorities and treatment decisions."
+    "back": "Mitigation complements Business Impact Analysis and Capability Gap; it selects and implements actions that lower the chance or consequences of a risk event."
   },
   {
     "id": "mobile-device-definition",
@@ -2076,7 +2076,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Mobile Device fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Wi-Fi Standard and IP Address during deployment, configuration, and troubleshooting."
+    "back": "Mobile Device complements BIOS/UEFI Firmware and Boot Process; it integrates compute components, radios, sensors, and power controls under mobile operating system management policies."
   },
   {
     "id": "mock-exam-definition",
@@ -2097,7 +2097,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Mock Exam fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Spaced Repetition and Retrieval Practice when planning review and measuring retention."
+    "back": "Mock Exam complements Error Log and Knowledge Gap; it simulates exam timing, format, and pressure to measure readiness under realistic test conditions."
   },
   {
     "id": "motherboard-definition",
@@ -2118,7 +2118,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Motherboard fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CPU and RAM during deployment, configuration, and troubleshooting."
+    "back": "Motherboard complements BIOS/UEFI Firmware and Boot Process; it provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components."
   },
   {
     "id": "nat-definition",
@@ -2139,7 +2139,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does NAT fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements TCP and UDP during addressing, forwarding, and traffic analysis."
+    "back": "NAT complements CIDR and Default Gateway; it rewrites source or destination addresses, and sometimes ports, as traffic crosses between network boundaries."
   },
   {
     "id": "network-baseline-definition",
@@ -2160,7 +2160,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Network Baseline fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Detection and Intrusion Prevention during detection, investigation, and remediation workflows."
+    "back": "Network Baseline complements Alert Triage and Asset Inventory; it measures normal traffic volume, protocols, hosts, and timing."
   },
   {
     "id": "network-segmentation-definition",
@@ -2181,7 +2181,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Network Segmentation fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements SSID and WPA3 during addressing, forwarding, and traffic analysis."
+    "back": "Network Segmentation complements CIDR and Default Gateway; it divides systems into controlled zones using routing, VLANs, or firewalls to restrict lateral movement."
   },
   {
     "id": "network-topology-definition",
@@ -2202,7 +2202,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Network Topology fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements OSI Model and TCP/IP Model during addressing, forwarding, and traffic analysis."
+    "back": "Network Topology complements CIDR and Default Gateway; it describes how hosts, links, and network devices connect and communicate across an environment."
   },
   {
     "id": "networking-outreach-definition",
@@ -2223,7 +2223,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Networking Outreach fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements LinkedIn Profile and Job Tracker when presenting evidence and targeting roles."
+    "back": "Networking Outreach complements AI Assistant Guardrails and Application Funnel; it schedules targeted messages, follow-ups, and conversation notes to expand referral paths and market visibility."
   },
   {
     "id": "ntfs-definition",
@@ -2244,7 +2244,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does NTFS fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Operating System and Filesystem when configuring hosts and controlling access."
+    "back": "NTFS complements chmod and chown; it stores files with metadata, access controls, journaling, and recovery features on Windows volumes."
   },
   {
     "id": "operating-system-definition",
@@ -2265,7 +2265,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Operating System fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Filesystem and NTFS during deployment, configuration, and troubleshooting."
+    "back": "Operating System complements BIOS/UEFI Firmware and Boot Process; it schedules processes, manages memory, controls devices, and exposes interfaces for users and applications."
   },
   {
     "id": "osi-model-definition",
@@ -2286,7 +2286,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does OSI Model fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements TCP/IP Model and Ethernet Frame during deployment, configuration, and troubleshooting."
+    "back": "OSI Model complements BIOS/UEFI Firmware and Boot Process; it separates communication tasks into layers."
   },
   {
     "id": "package-manager-definition",
@@ -2307,7 +2307,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Package Manager fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Kernel and Shell when configuring hosts and controlling access."
+    "back": "Package Manager complements chmod and chown; it retrieves packages, resolves dependencies, verifies sources, and installs or updates software consistently."
   },
   {
     "id": "packet-filter-definition",
@@ -2328,7 +2328,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Packet Filter fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Wireshark and PCAP during addressing, forwarding, and traffic analysis."
+    "back": "Packet Filter complements CIDR and Default Gateway; it applies capture expressions to packet headers."
   },
   {
     "id": "patch-management-definition",
@@ -2349,7 +2349,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Patch Management fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Malware and Multi-Factor Authentication during detection, investigation, and remediation workflows."
+    "back": "Patch Management complements Alert Triage and Asset Inventory; it identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets."
   },
   {
     "id": "pcap-definition",
@@ -2370,7 +2370,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does PCAP fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Wireshark and Packet Filter during addressing, forwarding, and traffic analysis."
+    "back": "PCAP complements CIDR and Default Gateway; it stores captured packets with timestamps and frame data for later analysis in supporting tools."
   },
   {
     "id": "ping-definition",
@@ -2391,7 +2391,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Ping fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Wireshark and PCAP during addressing, forwarding, and traffic analysis."
+    "back": "Ping complements CIDR and Default Gateway; it sends ICMP echo messages and measures replies to confirm basic reachability and delay."
   },
   {
     "id": "playbook-definition",
@@ -2412,7 +2412,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Playbook fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Recovery and Escalation Path during detection, investigation, and remediation workflows."
+    "back": "Playbook complements Alert Triage and Asset Inventory; it documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario."
   },
   {
     "id": "port-number-definition",
@@ -2433,7 +2433,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Port Number fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements TCP and UDP when configuring hosts and controlling access."
+    "back": "Port Number complements chmod and chown; it identifies the target service within a transport session."
   },
   {
     "id": "portfolio-artifact-definition",
@@ -2454,7 +2454,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Portfolio Artifact fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Resume Tailoring and STAR Method when presenting evidence and targeting roles."
+    "back": "Portfolio Artifact complements AI Assistant Guardrails and Application Funnel; it captures a completed deliverable with context, method, and outcome."
   },
   {
     "id": "post-incident-review-definition",
@@ -2475,7 +2475,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Post-Incident Review fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Recovery and Playbook during detection, investigation, and remediation workflows."
+    "back": "Post-Incident Review complements Alert Triage and Asset Inventory; it evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness."
   },
   {
     "id": "powershell-definition",
@@ -2496,7 +2496,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does PowerShell fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Operating System and Filesystem when configuring hosts and controlling access."
+    "back": "PowerShell complements chmod and chown; it runs cmdlets, pipelines, and scripts against Windows objects for administration and automation tasks."
   },
   {
     "id": "private-ip-definition",
@@ -2517,7 +2517,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Private IP fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements IPv4 and CIDR during addressing, forwarding, and traffic analysis."
+    "back": "Private IP complements CIDR and Default Gateway; it uses reserved address ranges internally, requiring routing controls or translation."
   },
   {
     "id": "privilege-escalation-definition",
@@ -2538,7 +2538,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Privilege Escalation fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Reconnaissance and Enumeration during detection, investigation, and remediation workflows."
+    "back": "Privilege Escalation complements Alert Triage and Asset Inventory; it exploits misconfigurations or software flaws to obtain permissions beyond the initial security context."
   },
   {
     "id": "process-definition",
@@ -2559,7 +2559,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Process fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Permissions and chmod when configuring hosts and controlling access."
+    "back": "Process complements chmod and chown; it uses an isolated execution context with memory, threads, and permissions while a program runs."
   },
   {
     "id": "public-ip-definition",
@@ -2580,7 +2580,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Public IP fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements IPv4 and CIDR during addressing, forwarding, and traffic analysis."
+    "back": "Public IP complements CIDR and Default Gateway; it provides an internet-routable address reachable across external networks according to upstream routing."
   },
   {
     "id": "python-script-definition",
@@ -2601,7 +2601,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Python Script fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Variable and Function when building repeatable scripts and integrations."
+    "back": "Python Script complements API and Conditional; it executes Python instructions from a file to automate parsing, reporting, administration, or response tasks."
   },
   {
     "id": "qualitative-risk-definition",
@@ -2622,7 +2622,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Qualitative Risk Analysis fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Risk Register and Likelihood when evaluating priorities and treatment decisions."
+    "back": "Qualitative Risk Analysis complements Business Impact Analysis and Capability Gap; it ranks risks using descriptive scales when precise financial or statistical data is unavailable."
   },
   {
     "id": "quantitative-risk-definition",
@@ -2643,7 +2643,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Quantitative Risk Analysis fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Risk Register and Likelihood when evaluating priorities and treatment decisions."
+    "back": "Quantitative Risk Analysis complements Business Impact Analysis and Capability Gap; it uses numerical estimates, frequencies, and loss values to calculate expected risk exposure."
   },
   {
     "id": "ram-definition",
@@ -2664,7 +2664,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does RAM fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CPU and Storage Drive during deployment, configuration, and troubleshooting."
+    "back": "RAM complements BIOS/UEFI Firmware and Boot Process; it holds active instructions and data in fast volatile memory for immediate CPU access."
   },
   {
     "id": "reconnaissance-definition",
@@ -2685,7 +2685,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Reconnaissance fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Enumeration and Privilege Escalation during detection, investigation, and remediation workflows."
+    "back": "Reconnaissance complements Alert Triage and Asset Inventory; it collects target information from public or direct sources."
   },
   {
     "id": "recovery-definition",
@@ -2706,7 +2706,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Recovery fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Playbook and Escalation Path during detection, investigation, and remediation workflows."
+    "back": "Recovery complements Alert Triage and Asset Inventory; it restores validated systems, services, and business operations after threats are removed and controls are confirmed."
   },
   {
     "id": "regex-definition",
@@ -2727,7 +2727,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Regular Expression fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements API and HTTP Method during detection, investigation, and remediation workflows."
+    "back": "Regular Expression complements Alert Triage and Asset Inventory; it matches character patterns within text."
   },
   {
     "id": "residual-risk-definition",
@@ -2748,7 +2748,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Residual Risk fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Mitigation and Exploit when evaluating priorities and treatment decisions."
+    "back": "Residual Risk complements Business Impact Analysis and Capability Gap; it measures the remaining exposure after planned or implemented controls reduce the original risk."
   },
   {
     "id": "resume-tailoring-definition",
@@ -2769,7 +2769,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Resume Tailoring fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements STAR Method and Elevator Pitch when presenting evidence and targeting roles."
+    "back": "Resume Tailoring complements AI Assistant Guardrails and Application Funnel; it reorders content, rewrites bullets, and emphasizes relevant evidence for each specific role description."
   },
   {
     "id": "retrieval-practice-definition",
@@ -2790,7 +2790,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Retrieval Practice fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Spaced Repetition and Mock Exam when planning review and measuring retention."
+    "back": "Retrieval Practice complements Error Log and Knowledge Gap; it forces recall from memory without prompts, strengthening retention and identifying weak recall paths."
   },
   {
     "id": "reverse-proxy-definition",
@@ -2811,7 +2811,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Reverse Proxy fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements HTTP Request and DNS Resolution during deployment, configuration, and troubleshooting."
+    "back": "Reverse Proxy complements BIOS/UEFI Firmware and Boot Process; it accepts client connections, applies policies, and forwards approved requests to internal application servers."
   },
   {
     "id": "risk-assessment-definition",
@@ -2832,7 +2832,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Risk Assessment fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Critical Infrastructure and Business Impact Analysis when evaluating priorities and treatment decisions."
+    "back": "Risk Assessment complements Business Impact Analysis and Capability Gap; it identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions."
   },
   {
     "id": "risk-definition",
@@ -2867,14 +2867,14 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Risk Register fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Likelihood and Impact when evaluating priorities and treatment decisions."
+    "back": "Risk Register complements Business Impact Analysis and Capability Gap; it maintains a living record of risks, scores, owners, response plans, and status updates."
   },
   {
     "id": "risk-relation",
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Risk fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CIA Triad and Threat during deployment, configuration, and troubleshooting."
+    "back": "Risk complements BIOS/UEFI Firmware and Boot Process; it combines likelihood and impact to estimate potential loss from threats affecting vulnerable assets or processes."
   },
   {
     "id": "risk-treatment-definition",
@@ -2895,7 +2895,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Risk Treatment fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Risk Register and Likelihood when evaluating priorities and treatment decisions."
+    "back": "Risk Treatment complements Business Impact Analysis and Capability Gap; it chooses whether to mitigate, transfer, avoid, or accept each risk based on context."
   },
   {
     "id": "roadmap-prioritization-definition",
@@ -2916,7 +2916,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Roadmap Prioritization fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Executive Briefing and Management Summary when evaluating priorities and treatment decisions."
+    "back": "Roadmap Prioritization complements Business Impact Analysis and Capability Gap; it ranks planned improvements by impact, dependency, cost, and timing to sequence work realistically."
   },
   {
     "id": "router-definition",
@@ -2937,7 +2937,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Router fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Switch and VLAN during addressing, forwarding, and traffic analysis."
+    "back": "Router complements CIDR and Default Gateway; it examines destination networks and forwards packets toward the next hop using Layer 3 decisions."
   },
   {
     "id": "routing-table-definition",
@@ -2958,7 +2958,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Routing Table fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Switch and VLAN during addressing, forwarding, and traffic analysis."
+    "back": "Routing Table complements CIDR and Default Gateway; it lists known networks, next hops, interfaces, and metrics used to choose forwarding paths."
   },
   {
     "id": "security-framework-definition",
@@ -2979,7 +2979,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Security Framework fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CIA Triad and Risk during deployment, configuration, and troubleshooting."
+    "back": "Security Framework complements BIOS/UEFI Firmware and Boot Process; it defines functions, domains, or control families that organizations map to policies and improvement plans."
   },
   {
     "id": "select-statement-definition",
@@ -3000,7 +3000,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SELECT Statement fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SQL Query and WHERE Clause during application and data handling."
+    "back": "SELECT Statement complements Cloud Service Model and Data Classification; it requests specific columns and rows from database tables based on query conditions."
   },
   {
     "id": "service-management-definition",
@@ -3021,7 +3021,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Service Management fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Operating System and Filesystem when configuring hosts and controlling access."
+    "back": "Service Management complements chmod and chown; it starts, stops, enables, and monitors background services that provide persistent system functions."
   },
   {
     "id": "session-token-definition",
@@ -3042,7 +3042,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Session Token fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements HTTP Request and DNS Resolution during application and data handling."
+    "back": "Session Token complements Cloud Service Model and Data Classification; it maintains authenticated state by presenting a server-issued identifier with subsequent client requests."
   },
   {
     "id": "shell-definition",
@@ -3063,7 +3063,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Shell fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Kernel and sudo when configuring hosts and controlling access."
+    "back": "Shell complements chmod and chown; it interprets user commands, expands syntax, and launches programs within the current operating system session."
   },
   {
     "id": "siem-definition",
@@ -3084,7 +3084,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SIEM fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Intrusion Detection and Intrusion Prevention during detection, investigation, and remediation workflows."
+    "back": "SIEM complements Alert Triage and Asset Inventory; it aggregates logs, normalizes events, runs correlation rules, and presents alerts."
   },
   {
     "id": "soc-workflow-definition",
@@ -3105,7 +3105,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SOC Workflow fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Forensic Imaging and Chain of Custody during detection, investigation, and remediation workflows."
+    "back": "SOC Workflow complements Alert Triage and Asset Inventory; it moves work from intake through triage, investigation, containment, and closure using defined operational procedures."
   },
   {
     "id": "social-engineering-definition",
@@ -3126,7 +3126,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Social Engineering fit within the General Security Foundations system?",
-    "back": "Within foundational security concepts, it complements Malware and Multi-Factor Authentication when analyzing human-focused attack risk."
+    "back": "Social Engineering fits this category because it uses persuasion, urgency, trust, or deception to influence users into bypassing normal security behavior."
   },
   {
     "id": "soho-router-definition",
@@ -3147,7 +3147,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SOHO Router fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements SSID and WPA3 during addressing, forwarding, and traffic analysis."
+    "back": "SOHO Router complements CIDR and Default Gateway; it combines routing, switching, wireless access, NAT, and firewall features in a small-network gateway."
   },
   {
     "id": "spaced-repetition-definition",
@@ -3168,7 +3168,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Spaced Repetition fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Retrieval Practice and Mock Exam when planning review and measuring retention."
+    "back": "Spaced Repetition complements Error Log and Knowledge Gap; it schedules reviews at expanding intervals based on difficulty and prior recall performance."
   },
   {
     "id": "sql-injection-definition",
@@ -3189,7 +3189,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SQL Injection fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SQL Query and SELECT Statement during application and data handling."
+    "back": "SQL Injection complements Cloud Service Model and Data Classification; it injects crafted input into unsafe queries."
   },
   {
     "id": "sql-query-definition",
@@ -3210,7 +3210,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SQL Query fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SELECT Statement and WHERE Clause during application and data handling."
+    "back": "SQL Query complements Cloud Service Model and Data Classification; it uses SQL syntax to retrieve, insert, update, or delete structured relational data."
   },
   {
     "id": "ssh-definition",
@@ -3231,7 +3231,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SSH fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Kernel and Shell when configuring hosts and controlling access."
+    "back": "SSH complements chmod and chown; it creates an encrypted remote session for command execution, file transfer, and administrative access."
   },
   {
     "id": "ssid-definition",
@@ -3252,7 +3252,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does SSID fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements WPA3 and SOHO Router during addressing, forwarding, and traffic analysis."
+    "back": "SSID complements CIDR and Default Gateway; it advertises or identifies a wireless network name that clients use."
   },
   {
     "id": "star-method-definition",
@@ -3273,7 +3273,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does STAR Method fit within the Career & Portfolio system?",
-    "back": "Within career and portfolio work, it complements Resume Tailoring and Elevator Pitch when presenting evidence and targeting roles."
+    "back": "STAR Method complements AI Assistant Guardrails; it structures interview answers by sequencing context, responsibility, action taken, and measurable outcome in a concise format."
   },
   {
     "id": "storage-drive-definition",
@@ -3294,7 +3294,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Storage Drive fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CPU and RAM during deployment, configuration, and troubleshooting."
+    "back": "Storage Drive complements BIOS/UEFI Firmware and Boot Process; it persists operating system files and user data by writing blocks to magnetic or solid-state media."
   },
   {
     "id": "stp-definition",
@@ -3315,7 +3315,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Spanning Tree Protocol fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Switch and VLAN during addressing, forwarding, and traffic analysis."
+    "back": "Spanning Tree Protocol complements CIDR and Default Gateway; it elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms."
   },
   {
     "id": "study-system-reset-definition",
@@ -3336,7 +3336,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Study-System Reset fit within the Study Workflow system?",
-    "back": "Within study workflow, it complements Spaced Repetition and Retrieval Practice when planning review and measuring retention."
+    "back": "Study-System Reset complements Error Log and Knowledge Gap; it adjusts schedule, review methods, and tooling after analyzing progress, workload, and missed objectives."
   },
   {
     "id": "subnet-mask-definition",
@@ -3357,7 +3357,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Subnet Mask fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements IPv4 and CIDR during addressing, forwarding, and traffic analysis."
+    "back": "Subnet Mask complements CIDR and Default Gateway; it marks which IPv4 bits represent the network versus host portion of an address."
   },
   {
     "id": "subnetting-definition",
@@ -3378,7 +3378,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Subnetting fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements IPv4 and CIDR during addressing, forwarding, and traffic analysis."
+    "back": "Subnetting complements CIDR and Default Gateway; it allocates smaller address blocks from a larger range to separate networks and conserve space."
   },
   {
     "id": "sudo-definition",
@@ -3399,7 +3399,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does sudo fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Kernel and Shell when configuring hosts and controlling access."
+    "back": "sudo complements chmod and chown; it temporarily runs a command with elevated privileges according to configured authorization policies."
   },
   {
     "id": "switch-definition",
@@ -3420,7 +3420,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Switch fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements OSI Model and TCP/IP Model during addressing, forwarding, and traffic analysis."
+    "back": "Switch complements CIDR and Default Gateway; it learns MAC addresses on ports and forwards frames only toward the correct destination segment."
   },
   {
     "id": "systemctl-definition",
@@ -3441,7 +3441,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does systemctl fit within the Operating Systems & Administration system?",
-    "back": "Within system administration, it complements Linux Permissions and chmod when configuring hosts and controlling access."
+    "back": "systemctl complements chmod and chown; it interacts with systemd units to start, stop, enable, inspect, or reload Linux services."
   },
   {
     "id": "tabletop-exercise-definition",
@@ -3462,7 +3462,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Tabletop Exercise fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Incident Command and Playbook during detection, investigation, and remediation workflows."
+    "back": "Tabletop Exercise complements Alert Triage and Asset Inventory; it walks stakeholders through a scenario to test decisions, communications, and documented response procedures."
   },
   {
     "id": "tcp-definition",
@@ -3497,14 +3497,14 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does TCP/IP Model fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements OSI Model and Ethernet Frame during deployment, configuration, and troubleshooting."
+    "back": "TCP/IP Model complements BIOS/UEFI Firmware and Boot Process; it groups communication functions into practical layers used to implement and troubleshoot internet protocols."
   },
   {
     "id": "tcp-relation",
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does TCP fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements UDP and Port Number during addressing, forwarding, and traffic analysis."
+    "back": "TCP complements CIDR and Default Gateway; it establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
   },
   {
     "id": "threat-definition",
@@ -3539,7 +3539,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Threat Intelligence fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Mitigation and Exploit during detection, investigation, and remediation workflows."
+    "back": "Threat Intelligence complements Alert Triage and Asset Inventory; it collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior."
   },
   {
     "id": "threat-model-definition",
@@ -3560,14 +3560,14 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Threat Model fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Asset Inventory and Data Classification during detection, investigation, and remediation workflows."
+    "back": "Threat Model complements Alert Triage and Asset Inventory; it identifies assets, attackers, attack paths, and control gaps."
   },
   {
     "id": "threat-relation",
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Threat fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CIA Triad and Risk during deployment, configuration, and troubleshooting."
+    "back": "Threat complements BIOS/UEFI Firmware and Boot Process; it represents an actor, event, or condition capable of causing harm to systems, data, or operations."
   },
   {
     "id": "three-way-handshake-definition",
@@ -3588,7 +3588,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does TCP Three-Way Handshake fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements TCP and UDP during addressing, forwarding, and traffic analysis."
+    "back": "TCP Three-Way Handshake complements CIDR and Default Gateway; it synchronizes TCP sequence numbers and confirms both endpoints are ready."
   },
   {
     "id": "timeline-analysis-definition",
@@ -3609,7 +3609,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Timeline Analysis fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Recovery and Playbook during detection, investigation, and remediation workflows."
+    "back": "Timeline Analysis complements Alert Triage and Asset Inventory; it orders events by timestamp to reconstruct attacker actions, response steps, and system changes."
   },
   {
     "id": "tls-handshake-definition",
@@ -3630,7 +3630,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does TLS Handshake fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements HTTP Request and DNS Resolution during application and data handling."
+    "back": "TLS Handshake complements Cloud Service Model and Data Classification; it negotiates protocol version, algorithms, keys, and certificates."
   },
   {
     "id": "traceroute-definition",
@@ -3651,7 +3651,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Traceroute fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Wireshark and PCAP during addressing, forwarding, and traffic analysis."
+    "back": "Traceroute complements CIDR and Default Gateway; it sends probes with increasing hop limits to reveal intermediary routers along a path."
   },
   {
     "id": "triage-queue-definition",
@@ -3672,7 +3672,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Triage Queue fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements SOC Workflow and Forensic Imaging during detection, investigation, and remediation workflows."
+    "back": "Triage Queue complements Alert Triage and Asset Inventory; it maintains pending alerts or cases in prioritized order."
   },
   {
     "id": "troubleshooting-method-definition",
@@ -3693,7 +3693,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Troubleshooting Methodology fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Malware and Multi-Factor Authentication during detection, investigation, and remediation workflows."
+    "back": "Troubleshooting Methodology complements Alert Triage and Asset Inventory; it follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation."
   },
   {
     "id": "udp-definition",
@@ -3714,7 +3714,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does UDP fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements TCP and Port Number during addressing, forwarding, and traffic analysis."
+    "back": "UDP complements CIDR and Default Gateway; it transmits datagrams without connection setup, acknowledgments, or retransmission to minimize protocol overhead."
   },
   {
     "id": "variable-definition",
@@ -3735,7 +3735,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Variable fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements Python Script and Function when building repeatable scripts and integrations."
+    "back": "Variable fits beside API and Conditional; it stores named data in memory."
   },
   {
     "id": "vendor-risk-definition",
@@ -3756,7 +3756,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Vendor Risk fit within the Governance, Risk & Compliance system?",
-    "back": "Within governance, risk, and compliance, it complements Critical Infrastructure and Business Impact Analysis when evaluating priorities and treatment decisions."
+    "back": "Vendor Risk complements Business Impact Analysis and Capability Gap; it assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure."
   },
   {
     "id": "version-control-definition",
@@ -3777,7 +3777,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Version Control fit within the Automation & Engineering system?",
-    "back": "Within automation engineering, it complements API and HTTP Method when building repeatable scripts and integrations."
+    "back": "Version Control complements API and Conditional; it records changes as commits, tracks history, and supports branching or collaboration on code and content."
   },
   {
     "id": "virtual-machine-definition",
@@ -3798,7 +3798,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Virtual Machine fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Mobile Device and Wi-Fi Standard during deployment, configuration, and troubleshooting."
+    "back": "Virtual Machine complements BIOS/UEFI Firmware and Boot Process; it runs a guest operating system with emulated hardware isolated from the underlying host environment."
   },
   {
     "id": "virtualbox-definition",
@@ -3819,7 +3819,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does VirtualBox fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements Linux Kernel and Shell during deployment, configuration, and troubleshooting."
+    "back": "VirtualBox complements BIOS/UEFI Firmware and Boot Process; it creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments."
   },
   {
     "id": "vlan-definition",
@@ -3840,7 +3840,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does VLAN fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Switch and Spanning Tree Protocol during addressing, forwarding, and traffic analysis."
+    "back": "VLAN complements CIDR and Default Gateway; it tags switch traffic to create separate logical broadcast domains across shared physical infrastructure."
   },
   {
     "id": "vulnerability-definition",
@@ -3861,7 +3861,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Vulnerability fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements CIA Triad and Risk during deployment, configuration, and troubleshooting."
+    "back": "Vulnerability complements BIOS/UEFI Firmware and Boot Process; it describes a weakness that can be discovered, reached, and abused to violate security objectives."
   },
   {
     "id": "vulnerability-scan-definition",
@@ -3882,7 +3882,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Vulnerability Scan fit within the Security Operations & Incident Response system?",
-    "back": "Within security operations, it complements Asset Inventory and Data Classification during detection, investigation, and remediation workflows."
+    "back": "Vulnerability Scan complements Alert Triage and Asset Inventory; it probes hosts, software, and configurations against known checks to identify missing patches and insecure settings."
   },
   {
     "id": "web-server-definition",
@@ -3903,7 +3903,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Web Server fit within the Hardware & Endpoints system?",
-    "back": "Within hardware and endpoint systems, it complements HTTP Request and DNS Resolution during deployment, configuration, and troubleshooting."
+    "back": "Web Server complements BIOS/UEFI Firmware and Boot Process; it accepts HTTP or HTTPS requests, processes them, and returns web content or application responses."
   },
   {
     "id": "where-clause-definition",
@@ -3924,7 +3924,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does WHERE Clause fit within the Web, Data & Cloud system?",
-    "back": "Within web, data, and cloud services, it complements SQL Query and SELECT Statement during application and data handling."
+    "back": "WHERE Clause complements Cloud Service Model and Data Classification; it applies conditions to rows."
   },
   {
     "id": "wifi-standard-definition",
@@ -3945,7 +3945,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Wi-Fi Standard fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements Mobile Device and IP Address during addressing, forwarding, and traffic analysis."
+    "back": "Wi-Fi Standard complements CIDR and Default Gateway; it defines modulation, channel use, throughput, and features for compatible wireless LAN communication."
   },
   {
     "id": "wireshark-definition",
@@ -3966,7 +3966,7 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does Wireshark fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements PCAP and Packet Filter during addressing, forwarding, and traffic analysis."
+    "back": "Wireshark complements CIDR and Default Gateway; it captures packets and decodes protocol details."
   },
   {
     "id": "wpa3-definition",
@@ -3987,6 +3987,6 @@
     "type": "relation",
     "difficulty": "hard",
     "front": "Where does WPA3 fit within the Networking & Infrastructure system?",
-    "back": "Within network infrastructure, it complements SSID and SOHO Router during addressing, forwarding, and traffic analysis."
+    "back": "WPA3 complements CIDR and Default Gateway; it protects wireless access using stronger authentication and encryption mechanisms than prior Wi-Fi standards."
   }
 ]
