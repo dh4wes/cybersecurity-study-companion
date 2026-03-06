@@ -175,6 +175,16 @@ To test installability, open the preview URL in Chrome, then confirm the manifes
 
 The current manifest uses SVG placeholder icons (`public/pwa-192x192.svg` and `public/pwa-512x512.svg`) to avoid adding binary assets during this pass.
 
+## LocalStorage To IndexedDB
+Progress and notes now persist in IndexedDB under the `cyber-study-db` database with a single `kv` object store.
+
+On first load after the upgrade, the app copies existing browser data from:
+- `cyber-study-progress-v1`
+- `cyber-study-notes-v2`
+- `cyber-study-note-export-meta-v1`
+
+The legacy localStorage entries are kept as a fallback backup for now. Use the existing reset controls in `/progress/` and `/notes/` to clear the active IndexedDB records.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs

@@ -1,4 +1,4 @@
-import { getProgress } from './progress-storage.js';
+import { getProgress, loadProgress } from './progress-storage.js';
 import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
 import { parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
 
@@ -52,7 +52,8 @@ const renderHome = () => {
   }
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadProgress();
   renderHome();
   window.addEventListener(PROGRESS_EVENT, renderHome);
 };

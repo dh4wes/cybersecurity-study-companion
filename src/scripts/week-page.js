@@ -1,4 +1,5 @@
 import {
+  loadProgress,
   getProgress,
   setDayCompleted,
   setDayBlocked,
@@ -37,8 +38,8 @@ const initDayCards = (weekId) => {
 
     applyDayVisualState(card, isComplete, isBlocked);
 
-    completeToggle.addEventListener('change', () => {
-      const next = setDayCompleted(dayId, completeToggle.checked);
+    completeToggle.addEventListener('change', async () => {
+      const next = await setDayCompleted(dayId, completeToggle.checked);
       const currentlyBlocked = next.blockedDays.includes(dayId);
       blockedToggle.textContent = currentlyBlocked ? 'Unblock day' : 'Mark blocked';
       applyDayVisualState(card, completeToggle.checked, currentlyBlocked);
@@ -46,9 +47,9 @@ const initDayCards = (weekId) => {
       dispatchProgressChanged();
     });
 
-    blockedToggle.addEventListener('click', () => {
+    blockedToggle.addEventListener('click', async () => {
       const shouldBlock = !getProgress().blockedDays.includes(dayId);
-      const next = setDayBlocked(dayId, shouldBlock);
+      const next = await setDayBlocked(dayId, shouldBlock);
       const nowBlocked = next.blockedDays.includes(dayId);
       const nowComplete = next.completedDays.includes(dayId);
       completeToggle.checked = nowComplete;
@@ -62,8 +63,8 @@ const initDayCards = (weekId) => {
   const weekCompleteToggle = document.querySelector('.js-week-complete');
   if (weekCompleteToggle) {
     weekCompleteToggle.checked = progress.completedWeeks.includes(weekId);
-    weekCompleteToggle.addEventListener('change', () => {
-      setWeekCompleted(weekId, weekCompleteToggle.checked);
+    weekCompleteToggle.addEventListener('change', async () => {
+      await setWeekCompleted(weekId, weekCompleteToggle.checked);
       const status = document.querySelector('.js-week-complete-state');
       if (status) {
         status.textContent = weekCompleteToggle.checked ? 'Week marked complete.' : 'Week marked incomplete.';
@@ -77,8 +78,8 @@ const initDayCards = (weekId) => {
   const reflectionState = document.querySelector('.js-reflection-state');
   if (reflection && saveReflection) {
     reflection.value = progress.weekReflections[weekId] || '';
-    saveReflection.addEventListener('click', () => {
-      setWeekReflection(weekId, reflection.value.trim());
+    saveReflection.addEventListener('click', async () => {
+      await setWeekReflection(weekId, reflection.value.trim());
       reflectionState.textContent = 'Reflection saved.';
       dispatchProgressChanged();
     });
@@ -89,8 +90,8 @@ const initDayCards = (weekId) => {
   const artifactState = document.querySelector('.js-artifact-state');
   if (artifact && saveArtifact) {
     artifact.value = progress.artifactLinks[weekId] || '';
-    saveArtifact.addEventListener('click', () => {
-      setWeekArtifactLink(weekId, artifact.value.trim());
+    saveArtifact.addEventListener('click', async () => {
+      await setWeekArtifactLink(weekId, artifact.value.trim());
       artifactState.textContent = 'Artifact link saved.';
       dispatchProgressChanged();
     });
@@ -181,7 +182,8 @@ const initWeekAnkiExport = (weekData) => {
   });
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadProgress();
   const data = parseJsonScript('week-data-json', {});
   if (!data.weekId) return;
   initDayCards(data.weekId);

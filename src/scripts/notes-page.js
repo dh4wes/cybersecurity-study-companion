@@ -1,4 +1,5 @@
 import {
+  loadNotes,
   getNotesData,
   setDayNote,
   setWeekReflection,
@@ -121,19 +122,20 @@ const renderJournalEntries = (notes, stateNode) => {
     .join('');
 
   list.querySelectorAll('.js-delete-journal-entry').forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
       const entryId = button.dataset.entryId;
       if (!entryId) return;
       const confirmed = window.confirm('Delete this journal entry?');
       if (!confirmed) return;
-      deleteJournalEntry(entryId);
+      await deleteJournalEntry(entryId);
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'Journal entry deleted.';
     });
   });
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadNotes();
   const data = parseJsonScript('notes-data-json', { weeks: [] });
   const weeks = data.weeks || [];
   const dayMetaById = buildDayLookup(weeks);
@@ -214,11 +216,11 @@ const boot = () => {
 
   const saveDay = document.querySelector('.js-save-day-note');
   if (saveDay && daySelect) {
-    saveDay.addEventListener('click', () => {
+    saveDay.addEventListener('click', async () => {
       const dayId = daySelect.value;
       if (!dayId) return;
 
-      setDayNote(dayId, {
+      await setDayNote(dayId, {
         status: document.querySelector('.js-day-status')?.value || 'Not started',
         tags: document.querySelector('.js-day-tags')?.value || '',
         notes: document.querySelector('.js-day-notes')?.value || '',
@@ -239,9 +241,9 @@ const boot = () => {
 
   const saveWeekReflection = document.querySelector('.js-save-week-reflection');
   if (saveWeekReflection && weekReflectionWeek) {
-    saveWeekReflection.addEventListener('click', () => {
+    saveWeekReflection.addEventListener('click', async () => {
       const weekId = weekReflectionWeek.value;
-      setWeekReflection(weekId, {
+      await setWeekReflection(weekId, {
         reflection: document.querySelector('.js-week-reflection-input')?.value || '',
         artifact_link: document.querySelector('.js-week-artifact-input')?.value || ''
       });
@@ -252,7 +254,7 @@ const boot = () => {
 
   const journalForm = document.querySelector('.js-journal-entry-form');
   if (journalForm) {
-    journalForm.addEventListener('submit', (event) => {
+    journalForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const payload = {
@@ -269,7 +271,7 @@ const boot = () => {
         return;
       }
 
-      upsertJournalEntry(payload);
+      await upsertJournalEntry(payload);
       journalForm.reset();
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'Security journal note saved.';
@@ -280,20 +282,20 @@ const boot = () => {
 
   const exportMarkdown = document.querySelector('.js-export-notes-md');
   if (exportMarkdown) {
-    exportMarkdown.addEventListener('click', () => {
+    exportMarkdown.addEventListener('click', async () => {
       const markdown = exportNotesMarkdown({ weeks, dayMetaById });
       const dateToken = new Date().toISOString().slice(0, 10);
       downloadText(`cyber-study-notes-${dateToken}.md`, markdown, 'text/markdown');
-      setExportMeta({ lastMarkdownExportAt: new Date().toISOString() });
+      await setExportMeta({ lastMarkdownExportAt: new Date().toISOString() });
       if (stateNode) stateNode.textContent = 'Markdown export complete.';
     });
   }
 
   const exportJson = document.querySelector('.js-export-notes-json');
   if (exportJson) {
-    exportJson.addEventListener('click', () => {
+    exportJson.addEventListener('click', async () => {
       downloadJson('cyber-study-notes', exportNotesBundle());
-      setExportMeta({ lastJsonExportAt: new Date().toISOString() });
+      await setExportMeta({ lastJsonExportAt: new Date().toISOString() });
       if (stateNode) stateNode.textContent = 'JSON export complete.';
     });
   }
@@ -306,7 +308,7 @@ const boot = () => {
 
       try {
         const text = await file.text();
-        importNotesBundle(JSON.parse(text));
+        await importNotesBundle(JSON.parse(text));
         syncDayOptions();
         renderJournalEntries(getNotesData(), stateNode);
         if (stateNode) stateNode.textContent = 'Notes JSON imported.';
@@ -320,10 +322,10 @@ const boot = () => {
 
   const resetButton = document.querySelector('.js-reset-notes');
   if (resetButton) {
-    resetButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', async () => {
       const confirmed = window.confirm('Reset all local notes data? This cannot be undone.');
       if (!confirmed) return;
-      resetNotesData();
+      await resetNotesData();
       syncDayOptions();
       renderJournalEntries(getNotesData(), stateNode);
       if (stateNode) stateNode.textContent = 'All notes reset.';

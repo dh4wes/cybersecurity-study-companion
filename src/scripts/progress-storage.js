@@ -2,6 +2,9 @@ export const STORAGE_KEYS = {
   progress: 'cyber-study-progress-v1'
 };
 
+import { canUseIdb, delKV, getKV, setKV } from './idb-kv.js';
+import { migrationReady } from './storage-migrate.js';
+
 const nowIso = () => new Date().toISOString();
 
 const defaultProgress = () => ({
@@ -24,30 +27,51 @@ const safeParse = (value, fallback) => {
   return fallback;
 };
 
-const loadKey = (key, fallbackFactory) => safeParse(localStorage.getItem(key), fallbackFactory());
-
-const persist = (key, value) => {
-  localStorage.setItem(key, JSON.stringify(value));
-  return value;
-};
-
 const uniqueArray = (items) => [...new Set((items || []).filter(Boolean))];
 
-export const getProgress = () => {
-  const raw = loadKey(STORAGE_KEYS.progress, defaultProgress);
-  return {
-    ...defaultProgress(),
-    ...raw,
-    completedDays: uniqueArray(raw.completedDays),
-    completedWeeks: uniqueArray(raw.completedWeeks),
-    blockedDays: uniqueArray(raw.blockedDays),
-    artifactLinks: { ...(raw.artifactLinks || {}) },
-    weekReflections: { ...(raw.weekReflections || {}) }
-  };
+const normalizeProgress = (raw = {}) => ({
+  ...defaultProgress(),
+  ...raw,
+  completedDays: uniqueArray(raw.completedDays),
+  completedWeeks: uniqueArray(raw.completedWeeks),
+  blockedDays: uniqueArray(raw.blockedDays),
+  artifactLinks: { ...(raw.artifactLinks || {}) },
+  weekReflections: { ...(raw.weekReflections || {}) },
+  updatedAt: raw.updatedAt || nowIso()
+});
+
+let progressState = defaultProgress();
+let loadPromise;
+let persistPromise = Promise.resolve();
+
+const persistState = async () => {
+  if (canUseIdb()) {
+    await setKV('progress', progressState);
+  } else {
+    localStorage.setItem(STORAGE_KEYS.progress, JSON.stringify(progressState));
+  }
+  return progressState;
 };
 
-export const saveProgress = (nextProgress) => {
-  const normalized = {
+export const loadProgress = async () => {
+  if (!loadPromise) {
+    loadPromise = (async () => {
+      await migrationReady.catch(() => false);
+      const raw = canUseIdb()
+        ? await getKV('progress')
+        : safeParse(localStorage.getItem(STORAGE_KEYS.progress), defaultProgress());
+      progressState = normalizeProgress(raw || defaultProgress());
+      return progressState;
+    })();
+  }
+  return loadPromise;
+};
+
+export const getProgressState = () => progressState;
+export const getProgress = () => getProgressState();
+
+export const saveProgress = async (nextProgress) => {
+  progressState = {
     ...defaultProgress(),
     ...nextProgress,
     completedDays: uniqueArray(nextProgress.completedDays),
@@ -58,7 +82,9 @@ export const saveProgress = (nextProgress) => {
     updatedAt: nowIso()
   };
 
-  return persist(STORAGE_KEYS.progress, normalized);
+  persistPromise = persistPromise.then(persistState, persistState);
+  await persistPromise;
+  return progressState;
 };
 
 export const toggleArrayValue = (arr, value, shouldInclude) => {
@@ -68,7 +94,7 @@ export const toggleArrayValue = (arr, value, shouldInclude) => {
   return [...set];
 };
 
-export const setDayCompleted = (dayId, completed) => {
+export const setDayCompleted = async (dayId, completed) => {
   const progress = getProgress();
   progress.completedDays = toggleArrayValue(progress.completedDays, dayId, completed);
   if (completed) {
@@ -77,7 +103,7 @@ export const setDayCompleted = (dayId, completed) => {
   return saveProgress(progress);
 };
 
-export const setDayBlocked = (dayId, blocked) => {
+export const setDayBlocked = async (dayId, blocked) => {
   const progress = getProgress();
   progress.blockedDays = toggleArrayValue(progress.blockedDays, dayId, blocked);
   if (blocked) {
@@ -86,13 +112,13 @@ export const setDayBlocked = (dayId, blocked) => {
   return saveProgress(progress);
 };
 
-export const setWeekCompleted = (weekId, completed) => {
+export const setWeekCompleted = async (weekId, completed) => {
   const progress = getProgress();
   progress.completedWeeks = toggleArrayValue(progress.completedWeeks, weekId, completed);
   return saveProgress(progress);
 };
 
-export const setWeekReflection = (weekId, reflectionText) => {
+export const setWeekReflection = async (weekId, reflectionText) => {
   const progress = getProgress();
   if (reflectionText) {
     progress.weekReflections[weekId] = reflectionText;
@@ -102,7 +128,7 @@ export const setWeekReflection = (weekId, reflectionText) => {
   return saveProgress(progress);
 };
 
-export const setWeekArtifactLink = (weekId, artifactUrl) => {
+export const setWeekArtifactLink = async (weekId, artifactUrl) => {
   const progress = getProgress();
   if (artifactUrl) {
     progress.artifactLinks[weekId] = artifactUrl;
@@ -118,13 +144,13 @@ export const exportProgressBundle = () => ({
   progress: getProgress()
 });
 
-export const importProgressBundle = (bundle) => {
+export const importProgressBundle = async (bundle) => {
   if (!bundle || typeof bundle !== 'object') {
     throw new Error('Invalid JSON payload.');
   }
 
   if (bundle.progress) {
-    saveProgress(bundle.progress);
+    await saveProgress(bundle.progress);
     return;
   }
 
@@ -138,13 +164,18 @@ export const importProgressBundle = (bundle) => {
   };
 
   if (Array.isArray(bundle.completedDays) || Array.isArray(bundle.completedWeeks)) {
-    saveProgress(maybeLegacyProgress);
+    await saveProgress(maybeLegacyProgress);
     return;
   }
 
   throw new Error('Import payload did not include progress data.');
 };
 
-export const resetAllProgress = () => {
+export const resetAllProgress = async () => {
+  progressState = defaultProgress();
+  loadPromise = Promise.resolve(progressState);
+  if (canUseIdb()) {
+    await delKV('progress');
+  }
   localStorage.removeItem(STORAGE_KEYS.progress);
 };

@@ -1,4 +1,4 @@
-import { getProgress } from './progress-storage.js';
+import { getProgress, loadProgress } from './progress-storage.js';
 import { includesToken, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 const applyFilters = () => {
@@ -50,7 +50,8 @@ const updateWeekProgressLabels = () => {
   });
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadProgress();
   const inputs = document.querySelectorAll(
     '.js-filter-phase, .js-filter-week, .js-filter-session, .js-filter-laptop, .js-filter-tag'
   );

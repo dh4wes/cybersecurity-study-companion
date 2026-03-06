@@ -1,4 +1,5 @@
 import {
+  loadProgress,
   getProgress,
   exportProgressBundle,
   importProgressBundle,
@@ -118,7 +119,7 @@ const initExportImportControls = () => {
       try {
         const text = await file.text();
         const parsed = JSON.parse(text);
-        importProgressBundle(parsed);
+        await importProgressBundle(parsed);
         if (stateNode) stateNode.textContent = 'Progress imported.';
         dispatchProgressChanged();
       } catch (error) {
@@ -131,19 +132,20 @@ const initExportImportControls = () => {
 
   const resetButton = document.querySelector('.js-reset-progress');
   if (resetButton) {
-    resetButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', async () => {
       const confirmed = window.confirm(
         'Reset all progress data from this browser? This cannot be undone.'
       );
       if (!confirmed) return;
-      resetAllProgress();
+      await resetAllProgress();
       if (stateNode) stateNode.textContent = 'Progress reset.';
       dispatchProgressChanged();
     });
   }
 };
 
-const boot = () => {
+const boot = async () => {
+  await loadProgress();
   render();
   initExportImportControls();
   window.addEventListener(PROGRESS_EVENT, render);
