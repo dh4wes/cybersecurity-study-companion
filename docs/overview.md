@@ -1,141 +1,59 @@
-# Cybersecurity Study Companion: Static Site Overview
+# Cybersecurity Study Companion Overview
 
-## 1) Product Summary
-This project is a static Astro-based cybersecurity study system built as a 32-week portfolio and companion.
+## Product summary
 
-It is intentionally split into two layers:
-- Layer A: public-facing static study companion (roadmap, week/day study execution, resources, glossary, flashcards, security journal prompts, progress dashboard, portfolio framing).
-- Layer B: private local notes tool (`/notes/`) with browser-only storage and full Markdown export.
+This repository contains a static Astro application that presents a 32-week cybersecurity learning roadmap as both:
+- a public proof-of-work portfolio
+- a private local-first study tool
 
-The implementation prioritizes precomputed content (no runtime AI generation for glossary/flashcards), deterministic behavior, and GitHub Pages compatibility.
+The application is deliberately split into two layers:
+- Layer A: public study companion and portfolio routes
+- Layer B: local notes workspace at `/notes/`
 
-## 2) Core Architecture
-- Framework: Astro (`output: 'static'`).
-- Data approach: prebuilt JSON content collections in `src/data/content/`.
-- Runtime model: mostly server-rendered static pages with small vanilla JS modules for client interactivity (filters, local persistence, exports, toggles).
-- Deployment target: GitHub Pages via workflow (`.github/workflows/deploy.yml`).
+The app is now installable as a PWA, uses IndexedDB for persistence, supports offline study after first load, and can be packaged for Android with Capacitor.
 
-## 3) Route and Information Architecture
+## Architectural constraints
+- Static output only
+- GitHub Pages compatible
+- No backend
+- No authentication
+- Browser-local persistence only
+- Terminal/cyber visual system retained
+- Curriculum content stays canonical and precomputed
 
-### Layer A (Public Study Companion)
-- `/` Home dashboard
-- `/roadmap/` 32-week phase-grouped timeline
-- `/weeks/` week archive with filters
-- `/weeks/<slug>/` static detail page for each week (including legacy slug compatibility)
-- `/resources/` categorized resource hub
+## Information architecture
+
+### Layer A: public study companion
+- `/` home dashboard
+- `/roadmap/` full timeline by phase
+- `/weeks/` week archive and filters
+- `/weeks/<slug>/` week detail pages
+- `/resources/` curated resource catalog
 - `/glossary/` canonical glossary explorer
-- `/flashcards/` canonical flashcard study page
-- `/security-journal/` prompt/template archive (not freeform editor)
-- `/progress/` progress dashboard with import/export/reset
-- `/about/` portfolio positioning and scope
+- `/flashcards/` canonical flashcard study interface
+- `/flashcards/export/` Anki import help
+- `/security-journal/` prompt and template archive
+- `/progress/` progress dashboard
+- `/about/` concise portfolio framing
+- `/offline/` offline fallback
 
-### Layer B (Private Notes Tool)
-- `/notes/` isolated local notes workspace (day notes, week reflections, journal notes, exports/imports, reset)
+### Layer B: private local notes tool
+- `/notes/` day notes, week reflections, structured journal notes, import/export, reset
 
-## 4) Page-by-Page Functional Behavior
+## Data architecture
 
-### Home (`/`)
-- Shows site identity, current phase/week, and quick navigation.
-- Displays progress snapshot and next actionable task.
-- Links directly to today’s next unfinished day anchor.
+The app uses static JSON collections and derives runtime view models through `src/lib/site-data.js`.
 
-### Roadmap (`/roadmap/`)
-- Displays full 32-week progression grouped by phase.
-- Week cards expose focus, deliverable, checkpoint, and link to week detail.
-
-### Weeks Archive (`/weeks/`)
-- Filter controls: phase, week, session type, laptop requirement, task tags.
-- Week cards include progress status tied to local progress state.
-
-### Week Detail (`/weeks/<slug>/`)
-For each week:
-- Hero with week metadata (phase, focus, deliverable, checkpoint).
-- Week-complete toggle.
-- Seven day cards with:
-  - objective and suggested split
-  - task list and task badges
-  - primary/support resources and source links
-  - day-level glossary subset
-  - day-level flashcard subset
-  - checkpoint and weekly deliverable context
-  - CTA to private notes tool
-  - day complete / blocked controls
-- Weekly output framing + artifact link + reflection controls.
-- Includes week-level Anki export plus optional day-level flashcard export actions.
-
-### Resources (`/resources/`)
-- Grouped by category.
-- Each item presents use case, best weeks, URL, notes.
-
-### Glossary (`/glossary/`)
-- Canonical global glossary grouped by category.
-- Term card structure is three bullets only (no explicit bullet headers in card body):
-  - conceptual description
-  - functional behavior
-  - functional/procedural placement in the IT/security pipeline
-- Filter controls: search, category, phase, week, tag, exam relevance.
-- Default ordering is by earliest lesson-day reference (then term name).
-
-### Flashcards (`/flashcards/`)
-- Canonical global flashcard set.
-- Filters: search, phase, week, day, card type, difficulty.
-- Card UI supports answer reveal via `<details>`.
-- Includes Anki TSV export controls for all cards or current filtered view.
-- Supports deck base naming, deck granularity (one/phase/week), and day-tag toggle.
-- Includes dedicated import help page at `/flashcards/export/`.
-
-### Security Journal (`/security-journal/`)
-- Prompt-driven page with purpose, template, and weekly prompt archive.
-- Explicitly routes freeform writing to `/notes/`.
-
-### Progress (`/progress/`)
-- Overall completion percentage and progress bar.
-- Next unfinished task and next deliverable.
-- Progress by phase and by week.
-- Blocked items list with links back to affected day cards.
-- JSON export/import and reset actions.
-
-### About (`/about/`)
-- Portfolio narrative, target roles, roadmap scope, and proof-of-work framing.
-- Includes workbook-derived workload planning table.
-
-### Notes Tool (`/notes/`)
-- Tabbed workflow:
-  - Day Notes (status/tags/notes/questions/reflection)
-  - Week Reflections (+ artifact link)
-  - Security Journal Notes (structured entries)
-- Exports:
-  - consolidated Markdown (`.md`) covering all note types
-  - JSON backup
-- Imports:
-  - JSON note bundle
-- Reset:
-  - full local note reset with confirmation
-
-## 5) Design System and Visual Identity
-The current UI is a restored terminal-inspired cyber theme (not generic default styling):
-- Dark grid background with scanline overlay.
-- Neon acid accent (`--c-acid`) and monochrome panel contrast.
-- High-contrast badges, bordered cards, and dense dashboard framing.
-- Sticky top navigation with active tab highlighting.
-- Monospace-first typography for tactical readability.
-- Optional custom font theme switch (`default` / `pinkend`) persisted in localStorage.
-
-Primary style system is centralized in `src/styles/global.css` using CSS variables for:
-- color tokens
-- typography
-- card/border treatments
-- controls, badges, tracks, and layout primitives
-
-## 6) Data and Content Model
-Canonical content is normalized through `src/lib/site-data.js` and sourced from:
+### Canonical datasets
 - `src/data/content/study-companion-v2.json`
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
+
+### Enrichment/support datasets
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
 
-Top-level model includes:
+### Top-level content structure
 - `site`
 - `core_pages`
 - `resources`
@@ -145,87 +63,213 @@ Top-level model includes:
 - `portfolio_outputs`
 - `review_decks`
 
-### Day-Level Mapping
-Each day references:
-- `glossary_ids` (subset from canonical glossary)
-- `flashcard_ids` (subset from canonical flashcards)
+### Glossary model
+Glossary is canonical and global. Days reference glossary IDs rather than embedding glossary content directly.
 
-This allows day-level rendering without duplicating full datasets per day.
+Current glossary entry shape:
 
-### Week 1 Support-Resource Correction
-Week 1 support resources are explicitly corrected in generated v2 content and reflected in UI rendering. The old repeated Ubuntu support item is not used across Week 1 days.
+```json
+{
+  "id": "tcp",
+  "term": "TCP",
+  "category": "Networking",
+  "bullets": [
+    "Transport-layer protocol providing reliable ordered delivery of network data.",
+    "Uses sequence numbers acknowledgments and retransmissions to ensure packets arrive correctly.",
+    "Works with IP addressing ports and application protocols to deliver stateful client-server sessions."
+  ]
+}
+```
 
-## 7) Client-Side Interaction Modules
-Key script modules:
-- `src/scripts/home-page.js`: home stats and “today” task link.
-- `src/scripts/weeks-page.js`: week archive filters and progress labels.
-- `src/scripts/week-page.js`: day/week completion + blocked state + reflections/artifacts.
-- `src/scripts/glossary-page.js`: glossary search/filter visibility.
-- `src/scripts/flashcards-page.js`: flashcard filtering.
-- `src/lib/anki-export.js`: shared TSV export builder, tag sanitizer, and text download helper for Anki exports.
-- `src/scripts/progress-page.js`: metrics rendering + import/export/reset controls.
-- `src/scripts/progress-metrics.js`: all computed progress aggregates.
-- `src/scripts/progress-storage.js`: progress persistence model.
-- `src/scripts/notes-page.js`: notes UI orchestration and export/import/reset.
-- `src/scripts/notes-storage.js`: notes persistence + markdown generation.
-- `src/scripts/font-theme.js`: font theme switching.
-- `src/scripts/runtime/client-utils.js`: shared browser helpers for base paths, JSON-script parsing, token matching, date token generation, and progress events.
+The third bullet is expected to provide specific placement among related technologies, not a generic category sentence.
 
-## 8) Storage Boundaries (Strict Split)
+### Flashcard model
+Flashcards are generated from glossary bullets.
 
-### Progress Storage (Layer A)
-- Key: `cyber-study-progress-v1`
-- Stores: completed days, completed weeks, blocked days, week reflections, artifact links, timestamps.
+Current flashcard shape:
 
-### Notes Storage (Layer B)
-- Keys:
-  - `cyber-study-notes-v2`
-  - `cyber-study-note-export-meta-v1`
-- Stores: day notes, week reflections, journal entries, export metadata.
+```json
+{
+  "id": "tcp-relation",
+  "type": "relation",
+  "difficulty": "hard",
+  "front": "Where does TCP fit within the Networking system?",
+  "back": "Works with IP addressing ports and application protocols to deliver stateful client-server sessions."
+}
+```
 
-No backend/auth is used. Persistence is browser-local only.
+Every glossary term maps to exactly three cards:
+- definition
+- function
+- relation
 
-## 9) Static Build and Deployment
+### Day mapping
+Each instructional day references:
+- `glossary_ids`
+- `flashcard_ids`
 
-### Local Development
+This allows the UI to render a day-specific subset while keeping the glossary and flashcards canonical.
+
+## Key route behavior
+
+### Home
+- current phase and week
+- quick links
+- progress summary
+- next unfinished task
+
+### Weeks archive
+- filters for phase, week, session type, laptop requirement, and task tags
+- progress-aware week cards
+
+### Week detail pages
+- week hero with focus, deliverable, checkpoint
+- seven day cards
+- day objectives, tasks, resources, glossary, flashcards, checkpoint
+- progress controls
+- notes CTA rather than embedded notes editor
+
+### Glossary
+- search and filterable canonical glossary
+- category, phase, week, tag, and exam relevance filtering
+
+### Flashcards
+- search and filterable canonical flashcards
+- phase, week, day, type, and difficulty filtering
+- answer reveal UI
+- Anki TSV export support
+
+### Progress
+- completion totals
+- phase and week progress
+- blocked items
+- next deliverable
+- import/export/reset
+
+### Notes
+- isolated local note-taking workflow
+- Markdown export
+- JSON backup/restore
+- structured security journal entries
+
+## Client-side modules
+
+### Shared
+- `src/scripts/runtime/client-utils.js`
+- `src/lib/site-data.js`
+- `src/lib/anki-export.js`
+
+### Page scripts
+- `src/scripts/home-page.js`
+- `src/scripts/weeks-page.js`
+- `src/scripts/week-page.js`
+- `src/scripts/glossary-page.js`
+- `src/scripts/flashcards-page.js`
+- `src/scripts/progress-page.js`
+- `src/scripts/notes-page.js`
+
+### Persistence and migration
+- `src/scripts/idb-kv.js`
+- `src/scripts/progress-storage.js`
+- `src/scripts/notes-storage.js`
+- `src/scripts/storage-migrate.js`
+
+### PWA/runtime
+- `src/scripts/pwa-register.ts`
+
+## Persistence model
+
+The active storage backend is IndexedDB using the `cyber-study-db` database.
+
+### Progress keys
+- `cyber-study-progress-v1`
+
+### Notes keys
+- `cyber-study-notes-v2`
+- `cyber-study-note-export-meta-v1`
+
+### Migration behavior
+On first upgraded load, the app copies any existing localStorage values into IndexedDB. Legacy localStorage values are preserved as fallback backup data.
+
+## PWA and offline model
+
+The app uses `@vite-pwa/astro` to generate:
+- manifest
+- service worker
+- offline cache integration
+
+### Offline behavior
+- after initial online load, the main curriculum shell and assets are cached
+- visited routes remain available offline
+- uncached navigation falls back to `/offline/`
+
+### Native shell behavior
+When running inside Capacitor, service worker registration is skipped.
+
+## Android packaging
+
+Capacitor configuration is included in:
+- `capacitor.config.ts`
+- `android/`
+
+Typical workflow:
+
+```bash
+npm run build:cap
+npm run cap:sync
+npm run cap:open
+```
+
+## Design system
+
+The UI keeps the repo's terminal/cyber identity:
+- dark background
+- acid accent
+- monospace-first presentation
+- bordered panels and dense tactical cards
+- mobile bottom navigation and touch-safe controls
+
+Theme tokens remain centralized in `src/styles/global.css`.
+
+## Content corrections and migration notes
+
+### Week 1 support correction
+The Week 1 support-resource override is preserved in the data and UI:
+- Day 1: LearnFree Computers 101
+- Day 2: Professor Messer BIOS Settings
+- Day 3: Professor Messer Copper Connectors
+- Day 4: Microsoft `msinfo32.exe`
+- Day 5: Professor Messer Pop Quizzes Archive
+- Day 6: CompTIA A+ Core 1 overview/objectives
+- Day 7: none
+
+### Glossary/flashcard quality
+Relation bullets and relation flashcards were revised to use term-specific contextual placement rather than repeating a generic category sentence.
+
+## Build and deployment
+
+### Development
 ```bash
 npm install
 npm run dev
 ```
 
-### Production Build
+### Production build
 ```bash
 npm run build
+npm run preview
 ```
 
-### GitHub Pages
-- Workflow builds static output to `dist/`.
-- `SITE_URL` and `SITE_BASE` are set in CI for repo-based Pages paths.
-- Astro config (`astro.config.mjs`) remains static-output compatible.
+### Capacitor build
+```bash
+npm run build:cap
+npm run cap:sync
+npm run cap:open
+```
 
-## 10) Repository Structure (High-Level)
-- `src/pages/` route entrypoints.
-- `src/components/` reusable UI and section components.
-- `src/layouts/Layout.astro` global shell.
-- `src/styles/global.css` theme and tokens.
-- `src/scripts/` client interactivity modules.
-- `src/lib/site-data.js` normalized data access layer.
-- `src/data/content/` canonical generated datasets.
-- `tools/generate-v2-content.mjs` content generation/migration script.
-
-## 11) Current Product Positioning
-This implementation behaves as:
-- a serious roadmap portfolio
-- a curated static study companion
-- a private notes utility separated from public portfolio IA
-
-It does not behave as:
-- a chatbot shell
-- a runtime AI content generator for glossary/flashcards
-- a notes-first public curriculum interface
-
-## 12) Recent Refactor Notes
-- Consolidated duplicated token-match filtering logic into shared runtime utilities used across glossary, flashcards, and weeks scripts.
-- Consolidated date-token generation into shared runtime utilities to reduce repeated helper code.
-- Hardened Anki export metadata handling to avoid invalid fallback tags/decks like `week:00` / `phase:0` in edge cases.
-- Kept refactors behavior-preserving for static output, GitHub Pages compatibility, and strict Layer A/Layer B boundaries.
+## Current quality posture
+- static build passes
+- core routes smoke-tested in preview
+- client code uses DOM APIs rather than `innerHTML` for current rendering paths
+- persistence boundaries between progress and notes are preserved
+- remaining dependency audit issues are transitive build-tool issues, tracked separately in `docs/code-audit.md`

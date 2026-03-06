@@ -1,31 +1,67 @@
-# Cybersecurity Study Companion (Static Astro)
+# Cybersecurity Study Companion
 
-Static 32-week cybersecurity study system split into two layers:
-- Layer A: public study companion + portfolio site
-- Layer B: private local notes tool (`/notes/`)
+Static Astro study system for a 32-week cybersecurity roadmap.
 
-## Source-of-truth and precedence
-1. Prompt requirements in this implementation pass
-2. `cybersecurity_study_companion_codex_ready.md`
-3. `cybersecurity_study_companion_data.json`
-4. `cybersecurity_daily_study_plan_2026_portfolio_ready.xlsx` (via `src/data/workbook-enrichment.json`)
+The product is intentionally split into two layers:
+- Layer A: a public study companion and portfolio site
+- Layer B: a private local notes tool at `/notes/`
 
-Note:
-- `*_week1_support_fixed.*` and `week1_support_revision_notes.md` were not present in this repo; Week 1 support-resource correction is applied directly from prompt requirements and documented in `IMPLEMENTATION_NOTES.md`.
+The current app is also installable as a PWA, works offline after first load, and can be packaged for Android with Capacitor.
 
-## Content model (v2)
-Canonical content is precomputed (no runtime AI dependency) in:
+## What the app does
+- Publishes the full 32-week roadmap with week pages and day-level study execution
+- Renders canonical glossary and flashcard datasets with per-day mappings
+- Tracks progress locally without a backend
+- Stores notes locally in IndexedDB with import/export support
+- Exports flashcards as Anki-compatible TSV
+- Supports offline curriculum access after the initial cached load
+
+## Core principles
+- Static output only: Astro `output: 'static'`
+- GitHub Pages compatible
+- No backend
+- No authentication
+- No runtime AI dependency for glossary or flashcards
+- Strict separation between public curriculum UX and private notes UX
+
+## Routes
+
+### Public study companion
+- `/`
+- `/roadmap/`
+- `/weeks/`
+- `/weeks/<slug>/`
+- `/resources/`
+- `/glossary/`
+- `/flashcards/`
+- `/flashcards/export/`
+- `/security-journal/`
+- `/progress/`
+- `/about/`
+- `/offline/`
+
+### Private notes tool
+- `/notes/`
+
+## Tech stack
+- Astro
+- Vanilla JavaScript for client interactivity
+- IndexedDB for local persistence
+- `@vite-pwa/astro` for manifest + service worker generation
+- Capacitor for optional Android packaging
+
+## Data model
+
+Canonical content lives in:
 - `src/data/content/study-companion-v2.json`
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
 
-Glossary entries are category-structured and include:
-- `category`
-- `what_it_is`
-- `how_it_functions`
-- `where_it_fits`
+Workbook enrichment and supporting extracted data live in:
+- `src/data/workbook-enrichment.json`
+- `src/data/day-source-links.json`
 
-Top-level model includes:
+### Top-level content collections
 - `site`
 - `core_pages`
 - `resources`
@@ -35,185 +71,187 @@ Top-level model includes:
 - `portfolio_outputs`
 - `review_decks`
 
-### Day-level mapping
-Each day references:
+### Glossary schema
+Glossary entries are canonical global records and currently use this shape:
+
+```json
+{
+  "id": "tcp",
+  "term": "TCP",
+  "category": "Networking",
+  "bullets": [
+    "Transport-layer protocol providing reliable ordered delivery of network data.",
+    "Uses sequence numbers acknowledgments and retransmissions to ensure packets arrive correctly.",
+    "Works with IP addressing ports and application protocols to deliver stateful client-server sessions."
+  ]
+}
+```
+
+The third bullet is intended to explain the term's specific place among neighboring concepts, not repeat a generic category statement.
+
+### Flashcard schema
+Flashcards are derived from the glossary and use this shape:
+
+```json
+{
+  "id": "tcp-definition",
+  "type": "definition",
+  "difficulty": "easy",
+  "front": "What is TCP?",
+  "back": "Transport-layer protocol providing reliable ordered delivery of network data."
+}
+```
+
+Each glossary term maps to exactly three flashcards:
+- `<term-id>-definition`
+- `<term-id>-function`
+- `<term-id>-relation`
+
+### Day-level content mapping
+Each day in `study-companion-v2.json` references:
 - `glossary_ids`
 - `flashcard_ids`
 
-Review day (Day 6) aggregates the weekly review deck.
-Rest day (Day 7) has no required new glossary/flashcards.
+Review days aggregate weekly review material. Rest days avoid heavy new content.
 
-## Week 1 support-resource correction
-Week 1 day support resources are corrected to:
-- Day 1: LearnFree Computers 101
-- Day 2: Professor Messer BIOS Settings
-- Day 3: Professor Messer Copper Connectors
-- Day 4: Microsoft `msinfo32.exe`
-- Day 5: Professor Messer Pop Quizzes Archive
-- Day 6: CompTIA A+ Core 1 objectives overview
-- Day 7: none
+## Storage model
 
-Ubuntu Desktop remains associated with later VM work (not repeated across Week 1).
+The app persists locally in IndexedDB under the `cyber-study-db` database.
 
-## Routes
-Layer A:
-- `/`
-- `/roadmap/`
-- `/weeks/`
-- `/weeks/<week-slug>/` (32 static week pages)
-- `/resources/`
-- `/glossary/`
-- `/flashcards/`
-- `/security-journal/` (prompt/template archive)
-- `/progress/`
-- `/about/`
-
-Layer B:
-- `/notes/` (isolated local notes tool)
-
-## Anki export (Layer A)
-Flashcards can be exported as Anki-importable TSV without any backend:
-- `/flashcards/`
-  - Export all cards (`.tsv`)
-  - Export current filtered view (`.tsv`)
-  - Deck controls: `One deck`, `By phase`, `By week` (default)
-  - Deck base input (default `CyberStudy`)
-  - Optional day-tag toggle
-- `/weeks/<week-slug>/`
-  - Export this week's flashcards to Anki (`.tsv`)
-  - Optional day-level export buttons on day cards
-- Import help page: `/flashcards/export/`
-
-TSV output includes Anki file headers:
-- `#separator:Tab`
-- `#html:true`
-- `#columns:Front<TAB>Back<TAB>Tags<TAB>Deck`
-- `#tags column:3`
-- `#deck column:4`
-
-### Anki import quick steps
-1. Export a TSV from the site.
-2. In Anki Desktop: `File -> Import`.
-3. Select the TSV and confirm tab separator.
-4. Keep HTML enabled so `<br>` line breaks render.
-5. Confirm column mapping (Front, Back, Tags, Deck), then import.
-
-### Tag/deck mapping assumptions
-- Phase numbers are derived from canonical week ordering (`weeks` in `site-data`) and mapped as `phase:<n>`.
-- Week tags are zero-padded (`week:01`, `week:02`, ...).
-- Day tags are numeric (`day:1`, `day:2`, ...), optionally included.
-- Exam tag is generated from dataset `exam_relevance` as `exam:<value>` (for this dataset, values are currently high/medium/low).
-- Existing flashcard tags are preserved and sanitized for Anki (`space -> _`, lowercase).
-
-## Storage boundaries
-Layer A (progress only):
-- `cyber-study-progress-v1`
-
-Supports:
-- mark day complete/incomplete
-- mark day blocked/unblocked
-- mark week complete
-- save weekly reflection + artifact link
-- import/export progress JSON
-- reset progress
-
-Layer B (notes only):
-- `cyber-study-notes-v2`
-- `cyber-study-note-export-meta-v1`
-
-Supports:
-- per-day notes (status, tags, notes, questions, reflection)
-- per-week reflection + artifact link
-- security journal notes
-- export all notes to one Markdown file
-- JSON export/import
-- reset notes
-
-## Markdown export format
-Notes export produces one `.md` file with:
-- overview header
-- week/day note blocks
-- status and tags
-- notes/questions/reflection sections
-- week reflection blocks
-- security journal entries
-
-Compatible with GitHub, Obsidian, and plain text editors.
-
-## Project structure
-- `src/lib/site-data.js` normalized data access
-- `src/lib/anki-export.js` shared Anki TSV export logic
-- `src/pages/` routes for Layer A + Layer B
-- `src/components/` reusable UI components
-- `src/scripts/runtime/client-utils.js` shared client helpers (JSON parsing, token filters, date token, progress events)
-- `src/scripts/progress-*` progress logic
-- `src/scripts/notes-*` notes logic
-- `src/data/content/` canonical static content collections
-- `tools/generate-v2-content.mjs` migration/generation script
-- `docs/overview.md` implementation overview
-- `docs/code-audit.md` latest audit + refactor notes
-
-## Local development
-```bash
-npm install
-npm run dev
-```
-
-## Build
-```bash
-npm run build
-```
-
-## PWA
-Preview the installable build with:
-```bash
-npm run build
-npm run preview
-```
-
-To test installability, open the preview URL in Chrome, then confirm the manifest and service worker in DevTools -> Application.
-
-The current manifest uses SVG placeholder icons (`public/pwa-192x192.svg` and `public/pwa-512x512.svg`) to avoid adding binary assets during this pass.
-
-## LocalStorage To IndexedDB
-Progress and notes now persist in IndexedDB under the `cyber-study-db` database with a single `kv` object store.
-
-On first load after the upgrade, the app copies existing browser data from:
+### Active IndexedDB records
 - `cyber-study-progress-v1`
 - `cyber-study-notes-v2`
 - `cyber-study-note-export-meta-v1`
 
-The legacy localStorage entries are kept as a fallback backup for now. Use the existing reset controls in `/progress/` and `/notes/` to clear the active IndexedDB records.
+### Safe migration from localStorage
+On first load after the storage upgrade, the app migrates any existing values from the legacy localStorage keys into IndexedDB. The old localStorage values are preserved as fallback backup data.
 
-## Mobile UX
-Phone layouts now use a fixed bottom navigation bar for the main routes, collapsible filter panels on weeks/glossary/flashcards, and accordion-style day cards on week pages.
+### Storage separation
+- Progress data is used only by Layer A
+- Notes data is used only by Layer B
 
-Flashcard reveal panels and controls were expanded for touch targets while keeping the existing terminal theme and desktop layout intact.
+The public routes do not embed the notes editor.
 
-## Offline Mode
-Build and preview the production site, then use browser DevTools to verify the service worker and caches:
-```bash
-npm run build
-npm run preview
-```
+## PWA and offline behavior
 
-After the first successful load, the curriculum routes are cached for offline use and navigation falls back to `/offline/` when a route has not been cached yet.
+The app includes:
+- a web app manifest
+- generated service worker
+- install prompt support in Chromium browsers
+- offline fallback page at `/offline/`
 
-## Android Packaging
-Build the web assets for Capacitor with a root base path, then sync and open the Android project:
+After the first successful online load, the curriculum routes and assets are cached for offline reuse.
+
+Inside the Capacitor native shell, service worker registration is skipped to avoid layering browser caching over bundled assets.
+
+## Android packaging
+
+The repo includes Capacitor Android scaffolding in `android/`.
+
+Typical flow:
+
 ```bash
 npm run build:cap
 npm run cap:sync
 npm run cap:open
 ```
 
-Capacitor uses the same static `dist/` output as the web app. Service worker registration is skipped inside the native shell to avoid layering browser-style caching on top of bundled local assets.
+This opens the native Android project in Android Studio when available.
 
-## Regenerate migrated v2 content
+## Repository structure
+- `src/pages/` route entrypoints
+- `src/components/` reusable UI components
+- `src/layouts/` global page shell
+- `src/styles/global.css` design tokens and terminal/cyber theme
+- `src/scripts/` browser modules for filtering, storage, exports, and UI behavior
+- `src/scripts/runtime/client-utils.js` shared browser helpers
+- `src/lib/site-data.js` normalized content access layer
+- `src/lib/anki-export.js` TSV export builder
+- `src/data/content/` canonical study datasets
+- `tools/generate-v2-content.mjs` content generation/migration script
+- `docs/overview.md` detailed architecture and behavior reference
+- `docs/code-audit.md` latest security/style audit notes
+- `IMPLEMENTATION_NOTES.md` migration assumptions and follow-up notes
+- `APP/` upgrade prompt set used for the app modernization pass
+
+## Development
+
+Install dependencies:
+
 ```bash
-node tools/generate-v2-content.mjs
+npm install
 ```
 
-## GitHub Pages
-Static output is Astro-compatible for GitHub Pages deployment.
-Existing workflow in `.github/workflows/deploy.yml` can be used with correct `SITE_URL` and `SITE_BASE`.
+Run the local dev server:
+
+```bash
+npm run dev
+```
+
+## Production build
+
+Build the static site:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Testing checklist
+
+### Core route smoke test
+Verify:
+- `/`
+- `/weeks/`
+- `/weeks/week-01/`
+- `/glossary/`
+- `/flashcards/`
+- `/progress/`
+- `/notes/`
+
+### Persistence
+In `/progress/` and `/notes/`:
+- create sample data
+- reload the page
+- confirm the data persists
+
+### PWA
+In Chrome DevTools:
+- confirm `Manifest` is present
+- confirm `Service Worker` is registered
+- confirm `IndexedDB` contains `cyber-study-db`
+- confirm `Cache Storage` contains generated caches
+
+### Offline
+1. Load the production preview once while online
+2. Visit the main curriculum routes
+3. Switch DevTools network to offline
+4. Confirm cached routes still render
+
+## Week 1 support correction
+
+Week 1 support resources intentionally override the older repeated Ubuntu support item:
+- Day 1: LearnFree Computers 101
+- Day 2: Professor Messer BIOS Settings
+- Day 3: Professor Messer Copper Connectors
+- Day 4: Microsoft `msinfo32.exe`
+- Day 5: Professor Messer Pop Quizzes Archive
+- Day 6: CompTIA A+ Core 1 overview/objectives
+- Day 7: none
+
+Ubuntu Desktop remains associated with later VM work.
+
+## Documentation map
+- [overview](/Users/danyel-ii/DACS_/docs/overview.md)
+- [code-audit](/Users/danyel-ii/DACS_/docs/code-audit.md)
+- [implementation-notes](/Users/danyel-ii/DACS_/IMPLEMENTATION_NOTES.md)
+
+## Known limitations
+- Notes and progress are local-only by design
+- The native Android shell requires Android Studio for local packaging workflows
+- `npm audit` still reports high-severity issues in transitive build tooling; see `docs/code-audit.md` for the current status and rationale
