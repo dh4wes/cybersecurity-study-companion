@@ -164,6 +164,17 @@ npm run dev
 npm run build
 ```
 
+## PWA
+Preview the installable build with:
+```bash
+npm run build
+npm run preview
+```
+
+To test installability, open the preview URL in Chrome, then confirm the manifest and service worker in DevTools -> Application.
+
+The current manifest uses SVG placeholder icons (`public/pwa-192x192.svg` and `public/pwa-512x512.svg`) to avoid adding binary assets during this pass.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs
