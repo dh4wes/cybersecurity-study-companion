@@ -13,6 +13,12 @@ import { dispatchProgressChanged, getDateToken, initOnReady, parseJsonScript } f
 const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-complete', isComplete);
   card.classList.toggle('is-blocked', isBlocked);
+  card.classList.toggle('is-condensed', isComplete && !isBlocked);
+  if (isComplete && !isBlocked) {
+    card.open = false;
+  } else {
+    card.open = true;
+  }
 };
 
 const pad2 = (value) => String(Number(value) || 0).padStart(2, '0');

@@ -32,14 +32,24 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
   data-session-type={day.session_type}
 >
   <summary class="day-card-summary">
-    <div>
+    <div class="summary-copy">
       <p class="kicker">Day {String(day.day).padStart(2, '0')} • {day.label}</p>
       <h3>{day.session_type} Session</h3>
       <p class="summary-objective">{day.session_objective}</p>
     </div>
-    <div class="meta">
-      <span class={`badge ${sessionClass}`}>{day.session_type}</span>
-      <span class="badge neutral">{day.hours}h</span>
+    <div class="summary-side">
+      <div class="meta">
+        <span class={`badge ${sessionClass}`}>{day.session_type}</span>
+        <span class="badge neutral">{day.hours}h</span>
+      </div>
+      <div class="complete-mini" aria-hidden="true">
+        <p class="complete-mini-label">session archived</p>
+        <div class="ascii-wrap">
+          <pre class="ascii-frame frame-a">[SYS] scan: [====     ]</pre>
+          <pre class="ascii-frame frame-b">[SYS] scan: [=======  ]</pre>
+          <pre class="ascii-frame frame-c">[SYS] scan: [=========]</pre>
+        </div>
+      </div>
     </div>
   </summary>
 
@@ -171,6 +181,60 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
     margin-bottom: 0;
   }
 
+  .summary-copy {
+    min-width: 0;
+  }
+
+  .summary-side {
+    display: grid;
+    justify-items: end;
+    gap: 0.45rem;
+    flex-shrink: 0;
+  }
+
+  .complete-mini {
+    display: none;
+    min-width: 230px;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid color-mix(in srgb, var(--success) 45%, var(--border));
+    background: color-mix(in srgb, var(--success) 10%, var(--surface));
+  }
+
+  .complete-mini-label {
+    margin: 0 0 0.25rem;
+    color: var(--success);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .ascii-wrap {
+    position: relative;
+    height: 1.1rem;
+    min-width: 190px;
+  }
+
+  .ascii-frame {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    color: var(--success);
+    font-size: 0.66rem;
+    line-height: 1.1;
+    white-space: pre;
+    animation: ascii-cycle 1.35s steps(1) infinite;
+  }
+
+  .frame-b {
+    animation-delay: 0.45s;
+  }
+
+  .frame-c {
+    animation-delay: 0.9s;
+  }
+
   .day-card-body {
     margin-top: 0.8rem;
   }
@@ -223,15 +287,29 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
     background: color-mix(in srgb, var(--success) 12%, var(--surface));
   }
 
+  .js-day-card.is-condensed {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .js-day-card.is-condensed .complete-mini {
+    display: block;
+  }
+
+  .js-day-card.is-condensed:not([open]) .summary-objective {
+    display: none;
+  }
+
+  .js-day-card.is-condensed:not([open]) .day-card-body {
+    display: none;
+  }
+
+  .js-day-card.is-condensed:not([open]) .day-card-summary {
+    align-items: center;
+  }
+
   .js-day-card.is-blocked {
     border-color: color-mix(in srgb, var(--danger) 55%, var(--border));
     background: color-mix(in srgb, var(--danger) 11%, var(--surface));
-  }
-
-  @media (min-width: 901px) {
-    .day-card > .day-card-body {
-      display: block !important;
-    }
   }
 
   @media (max-width: 900px) {
@@ -252,6 +330,26 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 
     .day-card[open] .day-card-summary::after {
       content: '-';
+    }
+
+    .summary-side,
+    .complete-mini {
+      width: 100%;
+    }
+
+    .day-card-summary {
+      flex-direction: column;
+    }
+  }
+
+  @keyframes ascii-cycle {
+    0%,
+    33% {
+      opacity: 1;
+    }
+    34%,
+    100% {
+      opacity: 0;
     }
   }
 </style>
