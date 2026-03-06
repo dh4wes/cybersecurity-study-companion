@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #070707;
+  background: var(--overlay-bg);
   color: var(--c-acid);
   font-family: monospace;
   padding: 3rem;

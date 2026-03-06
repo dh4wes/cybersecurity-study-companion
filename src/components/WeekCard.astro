@@ -50,7 +50,7 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   }
 
   .week-card:hover {
-    background: linear-gradient(180deg, rgba(204, 255, 0, 0.08), rgba(204, 255, 0, 0.02));
+    background: linear-gradient(180deg, var(--surface-hover-start), var(--surface-hover-end));
     border-color: var(--accent);
   }
 

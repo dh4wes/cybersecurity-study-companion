@@ -24,12 +24,19 @@ const {
     {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
     <script is:inline>
       (() => {
-        const key = 'cyber-study-font-theme-v1';
-        const allowed = new Set(['default', 'pinkend']);
         try {
-          const value = localStorage.getItem(key);
-          if (allowed.has(value) && value !== 'default') {
-            document.documentElement.dataset.fontTheme = value;
+          const fontKey = 'cyber-study-font-theme-v1';
+          const fontAllowed = new Set(['default', 'pinkend']);
+          const fontValue = localStorage.getItem(fontKey);
+          if (fontAllowed.has(fontValue) && fontValue !== 'default') {
+            document.documentElement.dataset.fontTheme = fontValue;
+          }
+
+          const colorKey = 'cyber-study-color-theme-v1';
+          const colorAllowed = new Set(['default', 'inked', 'amethyst-mint-harmony', 'woodland', 'jade-pebble-morning']);
+          const colorValue = localStorage.getItem(colorKey);
+          if (colorAllowed.has(colorValue) && colorValue !== 'default') {
+            document.documentElement.dataset.colorTheme = colorValue;
           }
         } catch {
           // Ignore localStorage errors.

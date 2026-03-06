@@ -1,10 +1,8 @@
 const bootIntro = () => {
   const root = document.getElementById('boot-intro');
   if (!root) return;
-  const key = 'bootIntroSeen-v2';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const seen = localStorage.getItem(key) === 'true';
-  if (reduce || seen) return root.remove();
+  if (reduce) return root.remove();
   const lines = [
     'initializing cyber training environment',
     'loading modules...',
@@ -24,7 +22,6 @@ const bootIntro = () => {
   const timers = [];
   const done = () => {
     timers.forEach(clearTimeout);
-    localStorage.setItem(key, 'true');
     root.classList.add('is-fading');
     setTimeout(() => root.remove(), 220);
   };
