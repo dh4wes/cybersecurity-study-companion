@@ -3,11 +3,48 @@ import AstroPWA from '@vite-pwa/astro';
 
 const site = process.env.SITE_URL || 'https://example.github.io';
 const base = process.env.SITE_BASE || '/';
+const offlineFallback = `${base.replace(/\/?$/, '/') }offline/`;
 
 export default defineConfig({
   integrations: [
     AstroPWA({
       registerType: 'autoUpdate',
+      experimental: {
+        directoryAndTrailingSlashHandler: true
+      },
+      workbox: {
+        navigateFallback: offlineFallback,
+        globPatterns: ['**/*.{html,js,css,json,webmanifest,svg,png,ico,woff2,txt}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'pages',
+              networkTimeoutSeconds: 3
+            }
+          },
+          {
+            urlPattern: ({ request }) =>
+              request.destination === 'script' || request.destination === 'style',
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'assets'
+            }
+          },
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images',
+              expiration: {
+                maxEntries: 64,
+                maxAgeSeconds: 60 * 60 * 24 * 30
+              }
+            }
+          }
+        ]
+      },
       manifest: {
         name: 'Cybersecurity Study Companion',
         short_name: 'CyberStudy',

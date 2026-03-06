@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { withBase } from '../lib/site-data.js';
+---
+
+<Layout title="Offline | Cybersecurity Study Companion" description="Offline fallback page" currentPath={Astro.url.pathname}>
+  <PageHero
+    kicker="Offline Mode"
+    title="You Are Offline"
+    description="Previously visited curriculum pages remain available from the local cache. If this is the first visit for a route, reconnect once to store it."
+  />
+
+  <section class="card section">
+    <h2>Available Offline</h2>
+    <p>After the first successful load, the study companion caches week pages, glossary, flashcards, resources, progress, and notes for offline use.</p>
+    <div class="actions">
+      <a class="btn" href={withBase('/')}>Home</a>
+      <a class="btn secondary" href={withBase('/weeks/')}>Weeks</a>
+      <a class="btn secondary" href={withBase('/glossary/')}>Glossary</a>
+      <a class="btn secondary" href={withBase('/flashcards/')}>Flashcards</a>
+    </div>
+  </section>
+</Layout>

@@ -190,6 +190,15 @@ Phone layouts now use a fixed bottom navigation bar for the main routes, collaps
 
 Flashcard reveal panels and controls were expanded for touch targets while keeping the existing terminal theme and desktop layout intact.
 
+## Offline Mode
+Build and preview the production site, then use browser DevTools to verify the service worker and caches:
+```bash
+npm run build
+npm run preview
+```
+
+After the first successful load, the curriculum routes are cached for offline use and navigation falls back to `/offline/` when a route has not been cached yet.
+
 ## Regenerate migrated v2 content
 ```bash
 node tools/generate-v2-content.mjs
