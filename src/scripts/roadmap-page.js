@@ -42,6 +42,11 @@ const updateRoadmapCards = () => {
     if (openLink) {
       openLink.setAttribute('aria-disabled', String(!isUnlocked));
       openLink.setAttribute('tabindex', isUnlocked ? '0' : '-1');
+      if (isUnlocked) {
+        openLink.setAttribute('href', week.href || week.slug);
+      } else {
+        openLink.removeAttribute('href');
+      }
     }
 
     const lockCopy = card.querySelector('.js-week-lock-copy');
