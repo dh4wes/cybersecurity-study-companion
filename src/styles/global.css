@@ -765,6 +765,9 @@ button.ghost:hover,
     --glass-blur: 20px;
     --glass-highlight: rgba(255, 244, 221, 0.16);
     --glass-shadow: 0 20px 36px rgba(9, 7, 6, 0.18);
+    --mobile-glass-panel:
+      linear-gradient(180deg, rgba(244, 234, 212, 0.08), rgba(36, 29, 23, 0.14)),
+      var(--theme-bg-image);
   }
 
   body {
@@ -822,9 +825,7 @@ button.ghost:hover,
 
   .card,
   .hero {
-    background:
-      linear-gradient(180deg, rgba(244, 234, 212, 0.08), rgba(36, 29, 23, 0.14)),
-      var(--theme-bg-image);
+    background: var(--mobile-glass-panel);
     background-size: auto, cover;
     background-position: center, center top;
     border-color: color-mix(in srgb, var(--border) 62%, var(--glass-highlight));
@@ -838,6 +839,22 @@ button.ghost:hover,
   .track,
   .grid-lines > * {
     background: rgba(244, 234, 212, 0.02);
+  }
+
+  .summary-grid > article,
+  .grid-lines > *,
+  .track,
+  th,
+  .complete-mini,
+  .checkpoint-box,
+  .week-card:hover,
+  .week-card.is-complete,
+  .week-card.is-complete:hover,
+  .js-day-card.is-complete,
+  .js-day-card.is-blocked {
+    background: var(--mobile-glass-panel) !important;
+    background-size: auto, cover !important;
+    background-position: center, center top !important;
   }
 
   button,
