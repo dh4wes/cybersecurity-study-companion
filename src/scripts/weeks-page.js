@@ -1,5 +1,5 @@
-import { getProgress, loadProgress } from './progress-storage.js';
-import { includesToken, initOnReady, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
+import { getProgress, loadProgress, setWeekCompleted } from './progress-storage.js';
+import { dispatchProgressChanged, includesToken, initOnReady, parseJsonScript, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 let weeksData = [];
 
@@ -35,6 +35,7 @@ const updateWeekProgressLabels = () => {
   const weeks = weeksData;
   const progress = getProgress();
   const completeSet = new Set(progress.completedDays || []);
+  const completedWeeks = new Set(progress.completedWeeks || []);
 
   const weekMap = new Map(weeks.map((week) => [week.id, week]));
 
@@ -48,6 +49,28 @@ const updateWeekProgressLabels = () => {
     const percent = actionable.length ? Math.round((completed / actionable.length) * 100) : 0;
 
     target.textContent = `Progress: ${completed}/${actionable.length} actionable days (${percent}%).`;
+  });
+
+  document.querySelectorAll('.js-week-card').forEach((card) => {
+    const weekId = card.dataset.weekId;
+    const isComplete = completedWeeks.has(weekId);
+    card.classList.toggle('is-complete', isComplete);
+
+    const toggle = card.querySelector('.js-week-complete-toggle');
+    if (toggle) {
+      toggle.checked = isComplete;
+    }
+  });
+};
+
+const initWeekCompletionToggles = () => {
+  document.querySelectorAll('.js-week-complete-toggle').forEach((toggle) => {
+    toggle.addEventListener('change', async () => {
+      const weekId = toggle.dataset.weekId;
+      if (!weekId) return;
+      await setWeekCompleted(weekId, toggle.checked);
+      dispatchProgressChanged();
+    });
   });
 };
 
@@ -74,6 +97,7 @@ const boot = async () => {
 
   window.addEventListener(PROGRESS_EVENT, updateWeekProgressLabels);
 
+  initWeekCompletionToggles();
   updateWeekProgressLabels();
   applyFilters();
 };

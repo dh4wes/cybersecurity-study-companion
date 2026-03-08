@@ -7,13 +7,22 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
 
 <article
   class="card week-card js-week-card"
+  data-week-id={week.id}
   data-week={week.week}
   data-phase={week.phase}
   data-session-types={daySessionTypes.join('|')}
   data-laptop-needs={dayLaptopValues.join('|')}
   data-task-tags={dayTaskTags.join('|')}
 >
-  <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
+  <div class="card-top">
+    <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
+    {showProgress ? (
+      <label class="week-toggle">
+        <input class="js-week-complete-toggle" type="checkbox" data-week-id={week.id} />
+        <span>Completed</span>
+      </label>
+    ) : null}
+  </div>
   <h3>{week.weekly_focus}</h3>
   <p><strong>Deliverable:</strong> {week.deliverable}</p>
   <p><strong>Checkpoint:</strong> {week.checkpoint}</p>
@@ -46,12 +55,56 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   .week-card {
     display: grid;
     gap: 0.3rem;
-    transition: border-color 0.15s linear, background 0.15s linear;
+    transition: border-color 0.15s linear, background 0.15s linear, color 0.15s linear, opacity 0.15s linear;
   }
 
   .week-card:hover {
     background: linear-gradient(180deg, var(--surface-hover-start), var(--surface-hover-end));
     border-color: var(--accent);
+  }
+
+  .week-card.is-complete {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface) 70%, #000 30%), color-mix(in srgb, var(--surface) 55%, #000 45%));
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  }
+
+  .week-card.is-complete:hover {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface) 65%, #000 35%), color-mix(in srgb, var(--surface) 50%, #000 50%));
+    border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  }
+
+  .week-card.is-complete h3,
+  .week-card.is-complete p,
+  .week-card.is-complete strong,
+  .week-card.is-complete a,
+  .week-card.is-complete label,
+  .week-card.is-complete span {
+    color: color-mix(in srgb, var(--ink) 85%, white 15%);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .week-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    white-space: nowrap;
+  }
+
+  .week-toggle input {
+    margin: 0;
   }
 
   .week-card h3 {
