@@ -5,7 +5,6 @@ const { currentPath = '/' } = Astro.props;
 const links = [
   { path: '/', label: 'Home' },
   { path: '/roadmap/', label: 'Roadmap' },
-  { path: '/weeks/', label: 'Weeks' },
   { path: '/resources/', label: 'Resources' },
   { path: '/glossary/', label: 'Glossary' },
   { path: '/flashcards/', label: 'Flashcards' },
@@ -15,7 +14,7 @@ const links = [
   { path: '/about/', label: 'About' }
 ];
 const mobileLinks = links.filter((link) =>
-  ['/', '/weeks/', '/flashcards/', '/progress/', '/notes/'].includes(link.path)
+  ['/', '/roadmap/', '/flashcards/', '/progress/', '/notes/'].includes(link.path)
 );
 
 const normalize = (value) => String(value || '/').replace(/\/?$/, '/');

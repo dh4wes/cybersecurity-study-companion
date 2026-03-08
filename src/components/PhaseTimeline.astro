@@ -13,7 +13,7 @@ const { groupedWeeks } = Astro.props;
       </div>
       <div class="grid timeline-grid">
         {group.weeks.map((week) => (
-          <WeekCard week={week} compact={true} />
+          <WeekCard week={week} compact={true} showProgress={true} />
         ))}
       </div>
     </div>

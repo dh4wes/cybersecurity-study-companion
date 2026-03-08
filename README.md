@@ -49,7 +49,6 @@ Public routes:
 
 - `/`
 - `/roadmap/`
-- `/weeks/`
 - `/weeks/<slug>/`
 - `/resources/`
 - `/glossary/`
@@ -200,11 +199,14 @@ Boot intro behavior:
 ## Documentation Map
 
 - `README.md`: repo orientation and operating guide
-- `docs/overview.md`: architecture and route behavior reference
-- `docs/code-audit.md`: current engineering posture and verification
-- `docs/flashcard_info.md`: flashcard generation summary and full inventory
-- `docs/glossary_flashcard_overhaul_report.md`: historical pre-change audit that justified the glossary overhaul
-- `IMPLEMENTATION_NOTES.md`: persistent product and data decisions
+- `docs/master.md`: full app architecture, behavior, UX, data, persistence, and verification reference
+- `docs/content.md`: in-depth review of the curriculum basis, source mix, coverage, and study level
+
+## Current Navigation Model
+
+- `/roadmap/` is the single overview surface for all weeks
+- `/weeks/<slug>/` remains the detailed per-week route
+- there is no separate `/weeks/` archive route
 
 ## Verification
 

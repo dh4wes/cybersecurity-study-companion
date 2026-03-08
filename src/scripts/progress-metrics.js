@@ -35,12 +35,6 @@ export const computeProgressMetrics = (weeks, progress) => {
       objective: day.session_objective
     }));
 
-  const nextTask = indexedWeeks
-    .flatMap((week) => week.actionableDays.map((day) => ({ week, day })))
-    .find(({ day }) => !isSet(completedSet, day.id));
-
-  const nextDeliverableWeek = indexedWeeks.find((week) => !completedWeekSet.has(week.id));
-
   const progressByPhase = indexedWeeks.reduce((acc, week) => {
     const phase = week.phase;
     if (!acc[phase]) {
@@ -54,12 +48,14 @@ export const computeProgressMetrics = (weeks, progress) => {
   const progressByWeek = indexedWeeks.map((week) => {
     const total = week.actionableDays.length;
     const completed = week.actionableDays.filter((day) => isSet(completedSet, day.id)).length;
+    const isCompleted = completedWeekSet.has(week.id) || (total > 0 && completed === total);
     return {
       week: week.week,
       id: week.id,
       slug: week.href || week.slug,
       total,
       completed,
+      isCompleted,
       percent: total ? Math.round((completed / total) * 100) : 0,
       deliverable: week.deliverable,
       checkpoint: week.checkpoint,
@@ -67,11 +63,17 @@ export const computeProgressMetrics = (weeks, progress) => {
     };
   });
 
+  const nextTask = indexedWeeks
+    .flatMap((week) => week.actionableDays.map((day) => ({ week, day })))
+    .find(({ day }) => !isSet(completedSet, day.id));
+
+  const nextDeliverableWeek = progressByWeek.find((week) => !week.isCompleted);
+
   return {
     totalPercent,
     completedStudyDays,
     completedReviewDays,
-    completedWeeks: [...completedWeekSet].length,
+    completedWeeks: progressByWeek.filter((week) => week.isCompleted).length,
     blockedItems,
     nextTask,
     nextDeliverableWeek,
