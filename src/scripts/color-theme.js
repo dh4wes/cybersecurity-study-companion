@@ -2,17 +2,23 @@ const STORAGE_KEY = 'cyber-study-color-theme-v1';
 const THEMES = [
   'default',
   'inked',
-  'amethyst-mint-harmony',
   'woodland',
   'jade-pebble-morning',
   'cocoa-topaz-noonday',
-  'sorbet',
   'pearl',
-  'driftwood-pearl-morning',
   'graphite'
 ];
 
-const normalizeTheme = (theme) => (THEMES.includes(theme) ? theme : 'default');
+const LEGACY_THEME_MAP = {
+  'amethyst-mint-harmony': 'graphite',
+  sorbet: 'woodland',
+  'driftwood-pearl-morning': 'inked'
+};
+
+const normalizeTheme = (theme) => {
+  const next = LEGACY_THEME_MAP[theme] || theme;
+  return THEMES.includes(next) ? next : 'default';
+};
 
 const applyTheme = (theme) => {
   const next = normalizeTheme(theme);

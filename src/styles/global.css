@@ -108,68 +108,44 @@ html[data-color-theme='inked'] {
   --accent-rgb: 69, 66, 65;
 }
 
-html[data-color-theme='amethyst-mint-harmony'] {
-  --c-acid: #696665;
-  --c-acid-dim: #4b4847;
-  --c-acid-wash: rgba(105, 102, 101, 0.16);
-  --accent-contrast: #f7ecda;
-  --accent-rgb: 105, 102, 101;
-}
-
 html[data-color-theme='woodland'] {
-  --c-acid: #8f8675;
-  --c-acid-dim: #726958;
-  --c-acid-wash: rgba(143, 134, 117, 0.16);
-  --accent-contrast: #16120f;
-  --accent-rgb: 143, 134, 117;
+  --c-acid: #b34a3f;
+  --c-acid-dim: #8a352c;
+  --c-acid-wash: rgba(179, 74, 63, 0.18);
+  --accent-contrast: #f7ecda;
+  --accent-rgb: 179, 74, 63;
 }
 
 html[data-color-theme='jade-pebble-morning'] {
-  --c-acid: #c6bda9;
-  --c-acid-dim: #a29883;
-  --c-acid-wash: rgba(198, 189, 169, 0.18);
-  --accent-contrast: #16120f;
-  --accent-rgb: 198, 189, 169;
+  --c-acid: #314e68;
+  --c-acid-dim: #23384a;
+  --c-acid-wash: rgba(49, 78, 104, 0.18);
+  --accent-contrast: #f7ecda;
+  --accent-rgb: 49, 78, 104;
 }
 
 html[data-color-theme='cocoa-topaz-noonday'] {
-  --c-acid: #998c7a;
-  --c-acid-dim: #7b6f5f;
-  --c-acid-wash: rgba(153, 140, 122, 0.18);
+  --c-acid: #b78c3a;
+  --c-acid-dim: #8f6a26;
+  --c-acid-wash: rgba(183, 140, 58, 0.18);
   --accent-contrast: #16120f;
-  --accent-rgb: 153, 140, 122;
-}
-
-html[data-color-theme='sorbet'] {
-  --c-acid: #776b58;
-  --c-acid-dim: #5d5242;
-  --c-acid-wash: rgba(119, 107, 88, 0.18);
-  --accent-contrast: #f7ecda;
-  --accent-rgb: 119, 107, 88;
+  --accent-rgb: 183, 140, 58;
 }
 
 html[data-color-theme='pearl'] {
-  --c-acid: #b0a08a;
-  --c-acid-dim: #8f806c;
-  --c-acid-wash: rgba(176, 160, 138, 0.18);
+  --c-acid: #d8c8aa;
+  --c-acid-dim: #b6a688;
+  --c-acid-wash: rgba(216, 200, 170, 0.2);
   --accent-contrast: #16120f;
-  --accent-rgb: 176, 160, 138;
-}
-
-html[data-color-theme='driftwood-pearl-morning'] {
-  --c-acid: #605b52;
-  --c-acid-dim: #47433b;
-  --c-acid-wash: rgba(96, 91, 82, 0.16);
-  --accent-contrast: #f7ecda;
-  --accent-rgb: 96, 91, 82;
+  --accent-rgb: 216, 200, 170;
 }
 
 html[data-color-theme='graphite'] {
-  --c-acid: #b7ae9a;
-  --c-acid-dim: #938b78;
-  --c-acid-wash: rgba(183, 174, 154, 0.18);
+  --c-acid: #f1e7d1;
+  --c-acid-dim: #cfc2a7;
+  --c-acid-wash: rgba(241, 231, 209, 0.22);
   --accent-contrast: #16120f;
-  --accent-rgb: 183, 174, 154;
+  --accent-rgb: 241, 231, 209;
 }
 
 * {
