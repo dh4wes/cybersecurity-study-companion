@@ -58,6 +58,13 @@ Supporting extracted data lives in:
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
 
+Current content totals:
+- 32 weeks
+- 224 day records
+- 190 glossary terms
+- 570 unique flashcards
+- 32 weekly review decks
+
 ### Top-level collections
 - `site`
 - `core_pages`
@@ -216,7 +223,15 @@ The Android project lives in `android/`.
 - `src/data/content/` canonical content datasets
 - `docs/overview.md` architecture reference
 - `docs/code-audit.md` audit and hardening notes
+- `docs/flashcard_info.md` executive summary and full flashcard inventory by week
 - `IMPLEMENTATION_NOTES.md` assumptions and implementation notes
+
+## Documentation
+- `README.md`: repo summary, routes, data model, and deployment notes
+- `docs/overview.md`: architecture, route behavior, storage model, and content structure
+- `docs/flashcard_info.md`: how flashcards are created, how they map to each study week, and the complete card listing
+- `docs/code-audit.md`: audit findings, current security posture, and documentation maintenance notes
+- `IMPLEMENTATION_NOTES.md`: assumptions, constraints, and product decisions that still matter
 
 ## Development
 

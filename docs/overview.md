@@ -17,6 +17,13 @@ The current app supports:
 - offline curriculum access after first load
 - optional Capacitor Android packaging
 
+Current content totals:
+- 32 weeks
+- 224 day records
+- 190 canonical glossary entries
+- 570 unique flashcards
+- 32 weekly review decks
+
 ## Architectural constraints
 - static output only
 - GitHub Pages compatible
@@ -95,6 +102,10 @@ Types:
 - `mechanism`
 
 Each glossary term maps to exactly three cards.
+The current repository contains 570 unique flashcards derived from 190 glossary entries.
+Week-level study plans reference 576 flashcard slots because two glossary terms are intentionally reused across weeks:
+- `switch` in Weeks 06 and 07
+- `playbook` in Weeks 21 and 28
 
 ### Day mapping
 Each instructional day references:
@@ -222,6 +233,13 @@ npm run cap:open
 - `src/lib/anki-export.js`
 - `src/data/content/`
 - `docs/`
+
+## Documentation map
+- `README.md`: quick orientation and operating assumptions
+- `docs/overview.md`: architecture and product behavior reference
+- `docs/flashcard_info.md`: executive summary of flashcard generation plus the full week-by-week flashcard inventory
+- `docs/code-audit.md`: audit findings and maintenance posture
+- `IMPLEMENTATION_NOTES.md`: migration assumptions and persistent implementation choices
 
 ## Content corrections
 

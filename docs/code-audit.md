@@ -107,7 +107,14 @@ Recommended follow-up:
 ### Documentation
 - `README.md` matches the current app state
 - `docs/overview.md` reflects the live architecture and route model
+- `docs/flashcard_info.md` documents flashcard generation, week/topic alignment, and the full card inventory
 - `IMPLEMENTATION_NOTES.md` captures assumptions and constraints that still matter
+
+Documentation content counts currently align with the canonical datasets:
+- 32 weeks
+- 224 day records
+- 190 glossary terms
+- 570 unique flashcards
 
 ### Organization
 - canonical data is kept in `src/data/content/`

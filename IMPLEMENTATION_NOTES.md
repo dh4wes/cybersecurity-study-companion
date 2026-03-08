@@ -58,6 +58,16 @@ Types:
 - `mechanism`
 
 Each glossary term maps to exactly three flashcards.
+The current dataset contains 190 glossary terms and 570 unique flashcards.
+Week plans reference 576 flashcard slots because `switch` is reused in Weeks 06 and 07, and `playbook` is reused in Weeks 21 and 28.
+
+### Flashcard documentation
+`docs/flashcard_info.md` is the maintained reference for:
+- the executive summary of how cards are created from glossary entries
+- the relationship between weekly topics and their assigned card sets
+- the full flashcard inventory grouped by study week
+
+If canonical content changes in `src/data/content/`, the flashcard documentation must be regenerated so wording and counts stay synchronized.
 
 ## Storage model
 
