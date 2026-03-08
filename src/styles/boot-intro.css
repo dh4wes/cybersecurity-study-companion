@@ -33,6 +33,11 @@
   opacity: 0;
 }
 
+#boot-intro.is-curtain-only #boot-panel {
+  opacity: 0;
+  pointer-events: none;
+}
+
 #boot-console {
   margin: 0;
   width: min(44rem, 100%);

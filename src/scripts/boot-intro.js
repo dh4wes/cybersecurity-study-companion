@@ -50,8 +50,9 @@ const bootIntro = () => {
     return;
   }
 
+  let hasSeenInitialBoot = false;
   try {
-    const hasSeenInitialBoot = sessionStorage.getItem(sessionKey) === 'true';
+    hasSeenInitialBoot = sessionStorage.getItem(sessionKey) === 'true';
     root.classList.toggle('has-curtain-background', !hasSeenInitialBoot);
     if (!hasSeenInitialBoot) {
       sessionStorage.setItem(sessionKey, 'true');
@@ -96,6 +97,12 @@ const bootIntro = () => {
       root.remove();
     }, CURTAIN_TOTAL_CLEAR_MS));
   };
+
+  if (hasSeenInitialBoot) {
+    root.classList.add('is-curtain-only');
+    clearIntro();
+    return;
+  }
 
   lines.forEach((line, index) => timers.push(setTimeout(() => {
     out.textContent += `${line}\n`;
