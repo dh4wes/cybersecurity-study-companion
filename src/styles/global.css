@@ -814,6 +814,19 @@ button.ghost:hover,
     width: min(var(--max), calc(100vw - 1rem));
     margin-top: 0.95rem;
     margin-bottom: calc(5.8rem + env(safe-area-inset-bottom));
+    isolation: isolate;
+  }
+
+  main::before {
+    content: '';
+    position: absolute;
+    inset: -0.35rem;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(22, 18, 15, 0.12), rgba(22, 18, 15, 0.08));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .section-header {
@@ -835,6 +848,19 @@ button.ghost:hover,
   .track,
   .grid-lines > * {
     background: rgba(244, 234, 212, 0.02);
+  }
+
+  h1,
+  h2,
+  h3,
+  .kicker {
+    text-shadow: 0 1px 8px rgba(12, 10, 8, 0.34);
+  }
+
+  p,
+  li,
+  .small {
+    text-shadow: 0 1px 4px rgba(12, 10, 8, 0.24);
   }
 
   .summary-grid > article,
