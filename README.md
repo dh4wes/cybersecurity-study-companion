@@ -106,10 +106,10 @@ Legacy progress and notes values are migrated forward into IndexedDB. Theme pref
 
 Color themes:
 
+- `Shield Blue` (default)
 - `Banner`
 - `Charcoal`
 - `Red Acrylic`
-- `Shield Blue`
 - `Ochre`
 - `Parchment`
 - `Bone`
@@ -124,8 +124,9 @@ Typography themes:
 Layout behavior:
 
 - desktop uses a compact top header plus roadmap-style nav
-- mobile lets the banner scroll away while the nav sticks at the top
+- mobile shows the banner first, then pins the nav to the top once it reaches it
 - mobile theme controls live in the footer
+- current shared banner asset: `public/images/site-banner-optimized.jpg`
 
 ## Repo Layout
 
@@ -138,6 +139,7 @@ Layout behavior:
 - `src/lib/theme-options.js`: shared theme metadata
 - `src/lib/anki-export.js`: flashcard TSV export logic
 - `src/data/content/`: canonical study datasets
+- `public/images/`: banner and background artwork used by the shell themes
 - `scripts/audit_flashcards.mjs`: content regression audit
 
 ## Docs

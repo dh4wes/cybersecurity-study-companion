@@ -152,8 +152,9 @@ There is no standalone `/weeks/` archive route. `/roadmap/` is the single overvi
 - desktop uses a compact header plus top navigation
 - desktop does not show the large banner in the header
 - mobile shows the banner as a scrollable top section
-- mobile navigation is sticky at the top once reached
+- mobile navigation sits below the banner on load, then becomes sticky at the top once reached
 - mobile theme controls live in the footer
+- the shared banner art is served from `public/images/site-banner-optimized.jpg`
 
 ### Home
 
@@ -190,10 +191,10 @@ Typography themes:
 
 Color themes:
 
+- `Shield Blue` (default)
 - `Banner`
 - `Charcoal`
 - `Red Acrylic`
-- `Shield Blue`
 - `Ochre`
 - `Parchment`
 - `Bone`
@@ -296,6 +297,7 @@ npm run cap:open
 - `src/lib/theme-options.js`: shared theme metadata
 - `src/lib/anki-export.js`: TSV export builder
 - `src/data/content/`: canonical study data
+- `public/images/`: shared banner and background artwork
 - `docs/master.md`: this document
 - `docs/content.md`: curriculum/source review
 
