@@ -3,9 +3,11 @@ import '../styles/boot-intro.css';
 ---
 
 <div id="boot-intro">
-  <pre id="boot-console"></pre>
-  <div id="packet-pulse"></div>
-  <button id="skip-intro" type="button">skip</button>
+  <div id="boot-panel">
+    <pre id="boot-console"></pre>
+    <div id="packet-pulse"></div>
+  </div>
+  <div id="binary-curtain" aria-hidden="true"></div>
 </div>
 
 <script>

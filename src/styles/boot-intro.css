@@ -5,14 +5,29 @@
   background: var(--overlay-bg);
   color: var(--c-acid);
   font-family: monospace;
-  padding: 3rem;
   overflow: hidden;
 }
 
-#boot-intro.is-fading {
+#boot-intro.is-clearing {
+  background: transparent;
+}
+
+#boot-intro.is-removing {
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 220ms ease;
   pointer-events: none;
+}
+
+#boot-panel {
+  position: absolute;
+  inset: 0;
+  padding: 3rem;
+  background: var(--overlay-bg);
+  transition: opacity 220ms ease;
+}
+
+#boot-intro.is-clearing #boot-panel {
+  opacity: 0;
 }
 
 #boot-console {
@@ -21,14 +36,49 @@
   line-height: 1.4;
 }
 
-#skip-intro {
+#binary-curtain {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  border: 1px solid var(--c-acid);
-  background: none;
-  color: var(--c-acid);
-  cursor: pointer;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--binary-columns, 20), minmax(0, 1fr));
+  gap: 0.55rem;
+  padding: 1rem 0.75rem;
+  background:
+    linear-gradient(180deg, rgba(8, 12, 16, 0.9), rgba(8, 12, 16, 0.62)),
+    radial-gradient(circle at top, rgba(49, 78, 104, 0.28), transparent 48%);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: opacity 160ms ease;
+}
+
+#boot-intro.is-clearing #binary-curtain {
+  opacity: 1;
+}
+
+#boot-intro.is-dropping #binary-curtain {
+  animation: binary-drop 950ms cubic-bezier(0.2, 0.76, 0.18, 1) forwards;
+}
+
+.binary-column {
+  color: rgba(220, 237, 246, 0.82);
+  font-size: clamp(0.78rem, 1.45vw, 1.1rem);
+  line-height: 0.82;
+  white-space: pre;
+  text-align: center;
+  text-shadow:
+    0 0 6px rgba(110, 168, 211, 0.45),
+    0 0 18px rgba(49, 78, 104, 0.32);
+  opacity: 0.92;
+  filter: saturate(1.08);
+}
+
+.binary-column:nth-child(odd) {
+  color: rgba(188, 221, 243, 0.68);
+}
+
+.binary-column:nth-child(3n) {
+  color: rgba(146, 201, 239, 0.6);
 }
 
 #packet-pulse {
@@ -51,4 +101,26 @@
   0% { transform: translateX(0); opacity: 0; }
   12%, 88% { opacity: 1; }
   100% { transform: translateX(calc(100vw + 2rem)); opacity: 0; }
+}
+
+@keyframes binary-drop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110vh);
+  }
+}
+
+@media (max-width: 640px) {
+  #boot-panel {
+    padding: 1.4rem 1rem;
+  }
+
+  #binary-curtain {
+    gap: 0.25rem;
+    padding: 0.6rem 0.25rem;
+  }
 }

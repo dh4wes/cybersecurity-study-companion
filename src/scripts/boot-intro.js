@@ -1,9 +1,38 @@
+const buildBinaryCurtain = (root) => {
+  const curtain = document.getElementById('binary-curtain');
+  if (!curtain) return;
+
+  const width = Math.max(window.innerWidth || 0, 320);
+  const columns = Math.max(12, Math.min(34, Math.round(width / 44)));
+  root.style.setProperty('--binary-columns', String(columns));
+  curtain.textContent = '';
+
+  for (let index = 0; index < columns; index += 1) {
+    const column = document.createElement('div');
+    const rows = Math.max(20, Math.min(42, Math.round((window.innerHeight || 720) / 22)));
+    let text = '';
+
+    for (let row = 0; row < rows; row += 1) {
+      text += `${Math.random() > 0.5 ? '1' : '0'}\n`;
+    }
+
+    column.className = 'binary-column';
+    column.textContent = text.trimEnd();
+    curtain.append(column);
+  }
+};
+
 const bootIntro = () => {
   const root = document.getElementById('boot-intro');
   if (!root) return;
+
   const sessionKey = 'cyber-study-boot-intro-session-v1';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return root.remove();
+  if (reduce) {
+    root.remove();
+    return;
+  }
+
   try {
     if (sessionStorage.getItem(sessionKey) === 'true') {
       root.remove();
@@ -12,6 +41,9 @@ const bootIntro = () => {
   } catch {
     // Ignore storage errors and continue showing the intro.
   }
+
+  buildBinaryCurtain(root);
+
   const lines = [
     'initializing cyber training environment',
     'loading modules...',
@@ -25,26 +57,38 @@ const bootIntro = () => {
     'launching interface'
   ];
   const lineDelay = 560;
-  const finalPause = 1400;
+  const revealPause = 260;
+  const dropDelay = 180;
+  const dropDuration = 950;
   const out = document.getElementById('boot-console');
   const pulse = document.getElementById('packet-pulse');
   const timers = [];
-  const done = () => {
+
+  const clearIntro = () => {
     timers.forEach(clearTimeout);
     try {
       sessionStorage.setItem(sessionKey, 'true');
     } catch {
       // Ignore storage errors.
     }
-    root.classList.add('is-fading');
-    setTimeout(() => root.remove(), 220);
+    root.classList.add('is-clearing');
+    timers.push(setTimeout(() => {
+      root.classList.add('is-dropping');
+    }, dropDelay));
+    timers.push(setTimeout(() => {
+      root.classList.add('is-removing');
+    }, dropDelay + dropDuration - 140));
+    timers.push(setTimeout(() => {
+      root.remove();
+    }, dropDelay + dropDuration + 120));
   };
-  document.getElementById('skip-intro')?.addEventListener('click', done, { once: true });
-  lines.forEach((line, i) => timers.push(setTimeout(() => {
+
+  lines.forEach((line, index) => timers.push(setTimeout(() => {
     out.textContent += `${line}\n`;
-    if (i === 1) pulse?.classList.add('is-live');
-  }, i * lineDelay)));
-  timers.push(setTimeout(done, lines.length * lineDelay + finalPause));
+    if (index === 1) pulse?.classList.add('is-live');
+  }, index * lineDelay)));
+
+  timers.push(setTimeout(clearIntro, lines.length * lineDelay + revealPause));
 };
 
 if (document.readyState === 'loading') {
