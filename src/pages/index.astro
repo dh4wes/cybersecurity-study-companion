@@ -29,7 +29,7 @@ const firstWeek = weeks[0];
     </p>
   </PageHero>
 
-  <section class="two-col section">
+  <section class="section">
     <article class="card">
       <div class="section-header">
         <h2>Current Week Focus</h2>
@@ -38,20 +38,6 @@ const firstWeek = weeks[0];
       <p><strong>Focus:</strong> <span class="js-current-focus">{firstWeek.weekly_focus}</span></p>
       <p><strong>Deliverable:</strong> <span class="js-current-deliverable">{firstWeek.deliverable}</span></p>
       <p><strong>Checkpoint:</strong> <span class="js-current-checkpoint">{firstWeek.checkpoint}</span></p>
-    </article>
-
-    <article class="card">
-      <h2>Quick Links</h2>
-      <ul class="list-reset quick-links">
-        <li><a class="js-today-link" href={`${firstWeek.href}#${firstWeek.days[0].id}`}>Today's study block: Week 01 Day 1</a></li>
-        <li><a href={withBase('/roadmap/')}>Roadmap timeline</a></li>
-        <li><a href={withBase('/resources/')}>Resource hub</a></li>
-        <li><a href={withBase('/glossary/')}>Glossary</a></li>
-        <li><a href={withBase('/flashcards/')}>Flashcards</a></li>
-        <li><a href={withBase('/security-journal/')}>Security journal</a></li>
-        <li><a href={withBase('/progress/')}>Progress dashboard</a></li>
-        <li><a href={withBase('/notes/')}>Local notes tool</a></li>
-      </ul>
     </article>
   </section>
 
@@ -68,14 +54,3 @@ const firstWeek = weeks[0];
     import '../scripts/home-page.js';
   </script>
 </Layout>
-
-<style>
-  .quick-links {
-    display: grid;
-    gap: 0.4rem;
-  }
-
-  .quick-links a {
-    font-weight: 600;
-  }
-</style>
