@@ -16,10 +16,8 @@ const lockImage = withBase('/images/lock.jpg');
   data-session-types={daySessionTypes.join('|')}
   data-laptop-needs={dayLaptopValues.join('|')}
   data-task-tags={dayTaskTags.join('|')}
+  style={`--week-lock-image: url('${lockImage}');`}
 >
-  <div class="week-card-media" aria-hidden="true">
-    <img class="week-card-lock-image" src={lockImage} alt="" loading="lazy" />
-  </div>
   <div class="card-top">
     <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
     {showProgress ? (
@@ -67,25 +65,6 @@ const lockImage = withBase('/images/lock.jpg');
     transition: border-color 0.15s linear, background 0.15s linear, color 0.15s linear, opacity 0.15s linear;
   }
 
-  .week-card-media {
-    display: none;
-    margin: -1rem -1rem 0.4rem;
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-    min-height: 148px;
-    background:
-      linear-gradient(180deg, rgba(22, 18, 15, 0.08), rgba(22, 18, 15, 0.34)),
-      color-mix(in srgb, var(--surface-soft) 78%, rgba(244, 234, 212, 0.08));
-  }
-
-  .week-card-lock-image {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    filter: saturate(0.7) contrast(0.92) brightness(0.78);
-  }
-
   .week-card:hover {
     background: linear-gradient(180deg, var(--surface-hover-start), var(--surface-hover-end));
     border-color: var(--accent);
@@ -93,23 +72,33 @@ const lockImage = withBase('/images/lock.jpg');
 
   .week-card.is-locked {
     background:
-      linear-gradient(180deg, color-mix(in srgb, var(--surface) 84%, rgba(244, 234, 212, 0.08)), color-mix(in srgb, var(--surface-soft) 88%, rgba(22, 18, 15, 0.12)));
+      linear-gradient(180deg, rgba(22, 18, 15, 0.72), rgba(22, 18, 15, 0.84)),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.06), rgba(var(--accent-rgb), 0.08)),
+      var(--week-lock-image) center / cover no-repeat;
     border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
   }
 
   .week-card.is-locked:hover {
     background:
-      linear-gradient(180deg, color-mix(in srgb, var(--surface) 84%, rgba(244, 234, 212, 0.08)), color-mix(in srgb, var(--surface-soft) 88%, rgba(22, 18, 15, 0.12)));
+      linear-gradient(180deg, rgba(22, 18, 15, 0.68), rgba(22, 18, 15, 0.8)),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.08), rgba(var(--accent-rgb), 0.1)),
+      var(--week-lock-image) center / cover no-repeat;
     border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
-  }
-
-  .week-card.is-locked .week-card-media {
-    display: block;
   }
 
   .week-card.is-locked .week-toggle {
     opacity: 0.45;
     pointer-events: none;
+  }
+
+  .week-card.is-locked::before,
+  .week-card.is-locked::after {
+    z-index: 1;
+  }
+
+  .week-card.is-locked > * {
+    position: relative;
+    z-index: 2;
   }
 
   .week-card.is-locked .week-lock-copy {
