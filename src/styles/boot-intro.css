@@ -63,7 +63,7 @@
 }
 
 #boot-intro.is-dropping #binary-curtain {
-  animation: binary-drop 950ms cubic-bezier(0.2, 0.76, 0.18, 1) forwards;
+  opacity: 1;
 }
 
 .binary-column {
@@ -77,6 +77,7 @@
     0 0 18px rgba(49, 78, 104, 0.32);
   opacity: 0.92;
   filter: saturate(1.08);
+  transform: translateY(0);
 }
 
 .binary-column:nth-child(odd) {
@@ -85,6 +86,14 @@
 
 .binary-column:nth-child(3n) {
   color: rgba(146, 201, 239, 0.6);
+}
+
+#boot-intro.is-dropping .binary-column {
+  animation-name: binary-column-drop;
+  animation-duration: var(--drop-duration, 5s);
+  animation-delay: var(--drop-delay, 0s);
+  animation-timing-function: cubic-bezier(0.16, 0.72, 0.2, 1);
+  animation-fill-mode: forwards;
 }
 
 #packet-pulse {
@@ -109,14 +118,14 @@
   100% { transform: translateX(calc(100vw + 2rem)); opacity: 0; }
 }
 
-@keyframes binary-drop {
+@keyframes binary-column-drop {
   0% {
     opacity: 1;
     transform: translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(110vh);
+    transform: translateY(calc(100vh + var(--drop-distance, 18vh)));
   }
 }
 

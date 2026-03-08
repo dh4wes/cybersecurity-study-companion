@@ -18,6 +18,9 @@ const buildBinaryCurtain = (root) => {
 
     column.className = 'binary-column';
     column.textContent = text.trimEnd();
+    column.style.setProperty('--drop-duration', `${4.2 + Math.random() * 1.8}s`);
+    column.style.setProperty('--drop-delay', `${Math.random() * 0.9}s`);
+    column.style.setProperty('--drop-distance', `${14 + Math.random() * 18}vh`);
     curtain.append(column);
   }
 };
@@ -59,7 +62,7 @@ const bootIntro = () => {
   const lineDelay = 560;
   const revealPause = 260;
   const dropDelay = 180;
-  const dropDuration = 950;
+  const dropDuration = 5900;
   const out = document.getElementById('boot-console');
   const pulse = document.getElementById('packet-pulse');
   const timers = [];
@@ -77,7 +80,7 @@ const bootIntro = () => {
     }, dropDelay));
     timers.push(setTimeout(() => {
       root.classList.add('is-removing');
-    }, dropDelay + dropDuration - 140));
+    }, dropDelay + dropDuration - 220));
     timers.push(setTimeout(() => {
       root.remove();
     }, dropDelay + dropDuration + 120));
