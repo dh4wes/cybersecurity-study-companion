@@ -19,6 +19,8 @@ const {
   description = '32-week cybersecurity roadmap portfolio and study companion',
   currentPath = '/'
 } = Astro.props;
+const appIcon192 = withBase('/pwa-192x192.svg');
+const appIcon512 = withBase('/pwa-512x512.svg');
 ---
 
 <!doctype html>
@@ -28,6 +30,17 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#070707" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={appIcon512} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={appIcon512} />
+    <link rel="icon" href={appIcon192} />
+    <link rel="apple-touch-icon" href={appIcon192} />
     {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
     <script is:inline>
       (() => {
