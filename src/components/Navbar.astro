@@ -28,6 +28,43 @@ const isActive = (path) => {
 ---
 
 <header class="site-header">
+  <div class="desktop-header-row">
+    <div class="desktop-header-shell">
+      <div>
+        <p class="eyebrow">Study Companion v2</p>
+        <a class="brand" href={withBase('/')}>Cybersecurity Study Companion</a>
+      </div>
+      <div class="context-wrap">
+        <div class="theme-controls">
+          <label class="theme-switcher">
+            <span>Type</span>
+            <select class="js-font-theme" aria-label="Select typography theme">
+              <option value="default">Default</option>
+              <option value="ops-console">Ops Console</option>
+              <option value="editor-clean">Editor Clean</option>
+              <option value="mono-range">Mono Range</option>
+            </select>
+          </label>
+          <label class="theme-switcher">
+            <span>Color</span>
+            <select class="js-color-theme" aria-label="Select color theme">
+              <option value="default">Banner</option>
+              <option value="inked">Inked</option>
+              <option value="amethyst-mint-harmony">Amethyst Mint</option>
+              <option value="woodland">Woodland</option>
+              <option value="jade-pebble-morning">Jade Pebble</option>
+              <option value="cocoa-topaz-noonday">Cocoa Topaz</option>
+              <option value="sorbet">Sorbet</option>
+              <option value="pearl">Pearl</option>
+              <option value="driftwood-pearl-morning">Driftwood Pearl</option>
+              <option value="graphite">Graphite</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="banner-shell">
     <img
       class="banner-image banner-image-fill"
@@ -112,6 +149,23 @@ const isActive = (path) => {
     background: color-mix(in srgb, var(--header-bg) 88%, transparent);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  }
+
+  .desktop-header-row {
+    display: block;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    background: color-mix(in srgb, var(--header-bg) 78%, transparent);
+    backdrop-filter: blur(10px);
+  }
+
+  .desktop-header-shell {
+    width: min(1160px, 95vw);
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .banner-shell {
@@ -256,7 +310,7 @@ const isActive = (path) => {
   }
 
   .site-nav {
-    margin-top: calc(clamp(240px, 34vw, 520px) * -0.17);
+    margin-top: 0;
     position: relative;
     z-index: 3;
     border-top: 1px solid rgba(255, 244, 221, 0.15);
@@ -353,6 +407,10 @@ const isActive = (path) => {
   }
 
   @media (max-width: 900px) {
+    .desktop-header-row {
+      display: none;
+    }
+
     .masthead {
       align-items: flex-start;
       justify-content: space-between;
@@ -381,6 +439,12 @@ const isActive = (path) => {
 
   @media (max-width: 900px) {
     .theme-controls {
+      display: none;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .banner-shell {
       display: none;
     }
   }
