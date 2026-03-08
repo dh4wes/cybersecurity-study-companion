@@ -15,6 +15,9 @@
   --bg: var(--c-void);
   --surface: rgba(22, 18, 15, 0.82);
   --surface-soft: rgba(22, 18, 15, 0.9);
+  --card-surface-base:
+    linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
+    linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
   --border: var(--c-line);
   --border-strong: var(--c-line-strong);
   --ink: var(--c-white);
@@ -345,9 +348,7 @@ select {
 }
 
 .card {
-  background:
-    linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
-    linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
+  background: var(--card-surface-base);
   border: 1px solid color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.08));
   border-radius: var(--radius);
   box-shadow: 0 10px 24px rgba(9, 7, 6, 0.18);

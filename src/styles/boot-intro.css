@@ -6,6 +6,15 @@
   color: var(--c-acid);
   font-family: monospace;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#boot-intro.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 #boot-intro.is-clearing {

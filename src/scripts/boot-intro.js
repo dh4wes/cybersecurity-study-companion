@@ -1,3 +1,4 @@
+const BOOT_PHASE_DURATION_MS = 5500;
 const CURTAIN_PHASE_DURATION_MS = 1000;
 const CURTAIN_FADE_DURATION_MS = 1000;
 const CURTAIN_FINISH_BUFFER_MS = 100;
@@ -42,6 +43,7 @@ const bootIntro = () => {
   const root = document.getElementById('boot-intro');
   if (!root) return;
 
+  const sessionKey = 'cyber-study-boot-intro-session-v1';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) {
     root.remove();
@@ -49,8 +51,71 @@ const bootIntro = () => {
   }
 
   const navigationEntry = performance.getEntriesByType('navigation')?.[0];
-  const isReloadNavigation = navigationEntry?.type === 'reload'
+  const navigationType = navigationEntry?.type
+    || (performance.navigation && performance.navigation.type === 1 ? 'reload' : 'navigate');
+  const isReloadNavigation = navigationType === 'reload'
     || (performance.navigation && performance.navigation.type === 1);
+  let hasSeenInitialBoot = false;
+
+  try {
+    hasSeenInitialBoot = sessionStorage.getItem(sessionKey) === 'true';
+  } catch {
+    hasSeenInitialBoot = false;
+  }
+
+  if (!hasSeenInitialBoot && navigationType === 'navigate') {
+    try {
+      sessionStorage.setItem(sessionKey, 'true');
+    } catch {
+      // Ignore storage errors and continue.
+    }
+
+    buildBinaryCurtain(root);
+    root.classList.add('is-active');
+    const out = document.getElementById('boot-console');
+    const pulse = document.getElementById('packet-pulse');
+    const timers = [];
+
+    const clearIntro = () => {
+      timers.forEach(clearTimeout);
+      root.classList.add('is-clearing');
+      timers.push(setTimeout(() => {
+        root.classList.add('is-dropping');
+      }, 40));
+      timers.push(setTimeout(() => {
+        root.classList.add('is-removing');
+      }, CURTAIN_PHASE_DURATION_MS));
+      timers.push(setTimeout(() => {
+        root.remove();
+      }, CURTAIN_TOTAL_CLEAR_MS));
+    };
+
+    const lines = [
+      'initializing cyber training environment',
+      'loading modules...',
+      '',
+      '✓ hardware',
+      '✓ networking',
+      '✓ security',
+      '✓ governance',
+      '',
+      '32 week roadmap detected',
+      'launching interface'
+    ];
+    const finalPause = 580;
+    const lineDelay = Math.max(
+      220,
+      Math.floor((BOOT_PHASE_DURATION_MS - finalPause) / (lines.length - 1))
+    );
+
+    lines.forEach((line, index) => timers.push(setTimeout(() => {
+      out.textContent += `${line}\n`;
+      if (index === 1) pulse?.classList.add('is-live');
+    }, index * lineDelay)));
+
+    timers.push(setTimeout(clearIntro, BOOT_PHASE_DURATION_MS));
+    return;
+  }
 
   if (!isReloadNavigation) {
     root.remove();
@@ -74,6 +139,7 @@ const bootIntro = () => {
     }, CURTAIN_TOTAL_CLEAR_MS));
   };
 
+  root.classList.add('is-active');
   root.classList.add('is-curtain-only');
   clearIntro();
 };
