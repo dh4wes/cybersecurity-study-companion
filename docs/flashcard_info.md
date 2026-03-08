@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document is derived from the canonical content files in `src/data/content/` and covers all 699 unique flashcards used by the 32-week study companion.
+This document is derived from the canonical content files in `src/data/content/` and covers all 756 unique flashcards used by the 32-week study companion.
 
 Flashcard creation model:
 - Glossary terms are the source of truth.
@@ -15,49 +15,33 @@ Flashcard creation model:
 Deck totals:
 - 32 weeks
 - 224 day records
-- 233 unique glossary terms
-- 699 unique flashcards
+- 252 unique glossary terms
+- 756 unique flashcards
 - 825 week-level flashcard slots across the roadmap
 - 32 review decks that point back to each week's full card set
 
 Repeated glossary entries across multiple weeks:
-- `access-point` (Access Point) appears in weeks 02, 06, 10.
 - `alert-triage` (Alert Triage) appears in weeks 20, 30.
-- `attack-surface` (Attack Surface) appears in weeks 13, 27.
-- `authentication` (Authentication) appears in weeks 04, 26.
 - `capability-gap` (Capability Gap) appears in weeks 14, 31.
 - `certificate` (Certificate) appears in weeks 12, 26.
 - `chain-of-custody` (Chain of Custody) appears in weeks 28, 30.
-- `cloud-service-model` (Cloud Service Model) appears in weeks 02, 10.
 - `command-line` (Command Line) appears in weeks 03, 05.
 - `communication-plan` (Communication Plan) appears in weeks 21, 28.
-- `control` (Control) appears in weeks 13, 29.
 - `control-recommendation` (Control Recommendation) appears in weeks 14, 27.
 - `detection-rule` (Detection Rule) appears in weeks 20, 30.
-- `dhcp` (DHCP) appears in weeks 02, 09.
 - `dns-resolution` (DNS Resolution) appears in weeks 09, 12.
-- `ethernet-frame` (Ethernet Frame) appears in weeks 06, 07.
 - `evidence-handling` (Evidence Handling) appears in weeks 21, 28.
 - `exposure` (Exposure) appears in weeks 18, 19.
-- `firewall` (Firewall) appears in weeks 06, 10, 15.
+- `firewall` (Firewall) appears in weeks 10, 15.
 - `ioc` (Indicator of Compromise) appears in weeks 20, 30.
 - `job-tracker` (Job Tracker) appears in weeks 24, 25.
-- `least-privilege` (Least Privilege) appears in weeks 04, 26.
 - `linux-permissions` (Linux Permissions) appears in weeks 05, 16.
-- `mac-address` (MAC Address) appears in weeks 06, 07.
-- `mfa` (Multi-Factor Authentication) appears in weeks 04, 26.
 - `network-segmentation` (Network Segmentation) appears in weeks 10, 15.
 - `package-manager` (Package Manager) appears in weeks 03, 05, 16.
-- `playbook` (Playbook) appears in weeks 04, 21, 28.
+- `playbook` (Playbook) appears in weeks 21, 28.
 - `portfolio-artifact` (Portfolio Artifact) appears in weeks 24, 25, 31.
 - `process` (Process) appears in weeks 05, 16.
-- `router` (Router) appears in weeks 06, 07.
 - `shell` (Shell) appears in weeks 05, 16.
-- `social-engineering` (Social Engineering) appears in weeks 04, 26.
-- `switch` (Switch) appears in weeks 06, 07.
-- `virtual-machine` (Virtual Machine) appears in weeks 02, 05.
-- `virtualbox` (VirtualBox) appears in weeks 02, 05.
-- `wifi-standard` (Wi-Fi Standard) appears in weeks 02, 10.
 
 Phase breakdown:
 - Foundation: 5 weeks
@@ -275,14 +259,14 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `modem-scenario` [application, medium] Front: Scenario: A home network needs the device that translates the provider link into local Ethernet for the gateway. Which component or concept best fits?
   Back: Modem — Provides the handoff between the provider network technology and the customer router or gateway.
 
-### Access Point (`access-point`)
+### Bluetooth (`bluetooth`)
 
-- `access-point-definition` [definition, easy] Front: What is Access Point?
-  Back: Network device that bridges wireless clients onto a wired LAN.
-- `access-point-mechanism` [understanding, medium] Front: How does Access Point bridge wireless clients onto the wired network?
-  Back: Advertises a network name, authenticates clients, and forwards their traffic between radio channels and the wired switch path.
-- `access-point-scenario` [application, medium] Front: Scenario: Wireless clients need to join the same local network as wired devices. Which component or concept best fits?
-  Back: Access Point — Provides Wi-Fi coverage so wireless devices can join the local network.
+- `bluetooth-definition` [definition, easy] Front: What is Bluetooth?
+  Back: Short-range wireless standard used to connect nearby devices such as headsets, keyboards, and phones.
+- `bluetooth-mechanism` [understanding, medium] Front: How does Bluetooth pair devices and exchange data over a short-range link?
+  Back: Pairs nearby radios, negotiates capabilities, and then exchanges data over a short-range wireless link.
+- `bluetooth-scenario` [application, medium] Front: Scenario: A laptop needs to connect wirelessly to nearby peripherals without joining the local Wi-Fi network. Which component or concept best fits?
+  Back: Bluetooth — Provides low-power local connectivity for peripherals and quick device-to-device data exchange.
 
 ### IP Address (`ip-address`)
 
@@ -293,15 +277,6 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `ip-address-scenario` [application, medium] Front: Scenario: Traffic must be sent toward the correct host or network instead of staying only on the local segment. Which component or concept best fits?
   Back: IP Address — Lets packets be sent toward the correct network and endpoint instead of staying on one local segment.
 
-### Wi-Fi Standard (`wifi-standard`)
-
-- `wifi-standard-definition` [definition, easy] Front: What is Wi-Fi Standard?
-  Back: Wireless LAN specification that defines how clients and access points communicate over radio.
-- `wifi-standard-mechanism` [understanding, medium] Front: How does Wi-Fi Standard coordinate channel use and client compatibility?
-  Back: Defines channel use, modulation, frame handling, and negotiated features so compatible devices can associate and exchange traffic.
-- `wifi-standard-scenario` [application, medium] Front: Scenario: A wireless deployment needs the specification that determines channel behavior, compatibility, and features. Which component or concept best fits?
-  Back: Wi-Fi Standard — Sets compatibility, throughput, channel behavior, and security capabilities for wireless networking.
-
 ### Printer (`printer`)
 
 - `printer-definition` [definition, easy] Front: What is Printer?
@@ -311,14 +286,14 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `printer-scenario` [application, medium] Front: Scenario: An office needs the peripheral that turns digital documents into physical pages. Which component or concept best fits?
   Back: Printer — Turns electronic information into physical pages for sharing, records, or daily work.
 
-### Virtual Machine (`virtual-machine`)
+### Virtualization (`virtualization`)
 
-- `virtual-machine-definition` [definition, easy] Front: What is Virtual Machine?
-  Back: Software-defined computer running an operating system inside a host system.
-- `virtual-machine-mechanism` [understanding, medium] Front: How does Virtual Machine run a guest system on virtualized hardware?
-  Back: Runs a guest OS on virtualized hardware abstractions so workloads remain isolated from the host and from each other.
-- `virtual-machine-scenario` [application, medium] Front: Scenario: A lab needs an isolated guest operating system running inside a host computer. Which component or concept best fits?
-  Back: Virtual Machine — Runs a guest operating system with emulated hardware isolated from the underlying host environment.
+- `virtualization-definition` [definition, easy] Front: What is Virtualization?
+  Back: Technique that abstracts physical hardware so multiple logical systems can share the same host resources.
+- `virtualization-mechanism` [understanding, medium] Front: How does Virtualization present shared hardware as separate logical systems?
+  Back: Presents virtual CPU, memory, storage, and network resources so guest systems operate as if they had their own hardware.
+- `virtualization-scenario` [application, medium] Front: Scenario: A student wants one host computer to run several isolated lab environments without buying extra hardware. Which component or concept best fits?
+  Back: Virtualization — Improves isolation, flexibility, and lab efficiency by letting one machine run several workloads separately.
 
 ### Hypervisor (`hypervisor`)
 
@@ -329,32 +304,41 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `hypervisor-scenario` [application, medium] Front: Scenario: Several guest systems must share one physical host without seeing each other directly. Which component or concept best fits?
   Back: Hypervisor — Abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host.
 
-### VirtualBox (`virtualbox`)
+### Mobile Hotspot (`mobile-hotspot`)
 
-- `virtualbox-definition` [definition, easy] Front: What is VirtualBox?
-  Back: Desktop virtualization platform for running lab virtual machines.
-- `virtualbox-mechanism` [understanding, medium] Front: How does VirtualBox work step by step?
-  Back: Uses a host hypervisor, virtual hardware profiles, and disk images to start and manage guest operating systems.
-- `virtualbox-scenario` [application, medium] Front: Scenario: A student needs the desktop tool used to create and run guest machines on a personal computer. Which component or concept best fits?
-  Back: VirtualBox — Creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments.
+- `mobile-hotspot-definition` [definition, easy] Front: What is Mobile Hotspot?
+  Back: Feature that lets a phone or similar device share its internet connection with other local clients.
+- `mobile-hotspot-mechanism` [understanding, medium] Front: How does Mobile Hotspot share one cellular connection with nearby clients?
+  Back: Uses the mobile network for upstream access, creates a local wireless network, and routes client traffic through the device.
+- `mobile-hotspot-scenario` [application, medium] Front: Scenario: A tablet has internet access over the carrier network and needs to share that connectivity with a nearby laptop. Which component or concept best fits?
+  Back: Mobile Hotspot — Provides temporary internet access for nearby devices when fixed wireless or wired service is unavailable.
 
-### DHCP (`dhcp`)
+### Cellular Network (`cellular-network`)
 
-- `dhcp-definition` [definition, easy] Front: What is DHCP?
-  Back: Protocol that automatically assigns IP settings to clients when they join a network.
-- `dhcp-mechanism` [understanding, medium] Front: How does DHCP lease settings to a new client during startup?
-  Back: Clients broadcast discovery messages, servers offer leases, the client requests one, and the server acknowledges the assigned settings.
-- `dhcp-scenario` [application, medium] Front: Scenario: A new client joins the network but still needs an address, gateway, and DNS settings automatically. Which component or concept best fits?
-  Back: DHCP — Provides addresses, gateway, DNS, and lease timing without manual configuration on every device.
+- `cellular-network-definition` [definition, easy] Front: What is Cellular Network?
+  Back: Wide-area radio network that connects mobile devices through carrier-operated towers and core infrastructure.
+- `cellular-network-mechanism` [understanding, medium] Front: How does Cellular Network attach a device and carry its traffic through the carrier?
+  Back: A device attaches to a nearby tower, authenticates with the carrier, and then sends traffic through the provider network.
+- `cellular-network-scenario` [application, medium] Front: Scenario: A phone needs mobile data service while moving between locations where no local Wi-Fi exists. Which component or concept best fits?
+  Back: Cellular Network — Provides mobile voice and data connectivity beyond the range of a local Wi-Fi network.
 
-### Cloud Service Model (`cloud-service-model`)
+### Network Protocol (`network-protocol`)
 
-- `cloud-service-model-definition` [definition, easy] Front: What is Cloud Service Model?
-  Back: Service delivery model such as IaaS, PaaS, or SaaS that defines what the provider manages.
-- `cloud-service-model-mechanism` [understanding, medium] Front: How does Cloud Service Model shift management duties up or down the stack?
-  Back: Moves responsibility up or down the stack by deciding whether the provider manages infrastructure, platform components, or the full application.
-- `cloud-service-model-scenario` [application, medium] Front: Scenario: A team is deciding whether the provider manages only infrastructure, the platform, or the full application. Which component or concept best fits?
-  Back: Cloud Service Model — Clarifies which parts of the stack the customer controls versus what the provider operates for them.
+- `network-protocol-definition` [definition, easy] Front: What is Network Protocol?
+  Back: Defined set of rules that controls how devices format, send, receive, and interpret network traffic.
+- `network-protocol-mechanism` [understanding, medium] Front: How does Network Protocol keep both ends of a connection using the same rules?
+  Back: Specifies message formats, timing, and expected responses so both ends process traffic in the same way.
+- `network-protocol-scenario` [application, medium] Front: Scenario: Two systems can exchange data only if they agree on message format, timing, and expected responses. Which component or concept best fits?
+  Back: Network Protocol — Lets different systems communicate predictably by agreeing on message structure and behavior.
+
+### Cloud Computing (`cloud-computing`)
+
+- `cloud-computing-definition` [definition, easy] Front: What is Cloud Computing?
+  Back: On-demand delivery of computing resources over a network instead of relying only on local hardware.
+- `cloud-computing-mechanism` [understanding, medium] Front: How does Cloud Computing allocate shared resources on demand?
+  Back: Users request shared compute or application resources from a provider, and the provider allocates capacity from pooled infrastructure.
+- `cloud-computing-scenario` [application, medium] Front: Scenario: A team wants to consume compute resources from a provider instead of buying and maintaining every server locally. Which component or concept best fits?
+  Back: Cloud Computing — Lets organizations scale services and consume shared infrastructure without building every system themselves.
 
 
 ## Week 03 - A+ Core 2: operating systems, installs, file systems, and admin basics
@@ -471,32 +455,23 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Checkpoint: Can follow a support process and document incidents clearly.
 - Study-week relationship: The ordered glossary terms for Week 04 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
 
-### Authentication (`authentication`)
+### Password Policy (`password-policy`)
 
-- `authentication-definition` [definition, easy] Front: What is Authentication?
-  Back: Process of verifying claimed identity within authentication and access control security workflows.
-- `authentication-mechanism` [understanding, medium] Front: How does Authentication verify submitted proof before creating a session?
-  Back: Checks submitted credentials against a stored factor, then establishes identity context only when the proof matches expected values.
-- `authentication-scenario` [application, medium] Front: Scenario: A system is checking proof of identity before creating a session. Which component or concept best fits?
-  Back: Authentication — Validates submitted credentials, tokens, certificates, or biometrics before issuing a session or allowing access requests.
+- `password-policy-definition` [definition, easy] Front: What is Password Policy?
+  Back: Set of rules that governs how passwords are created, changed, and managed across an environment.
+- `password-policy-mechanism` [understanding, medium] Front: How does Password Policy enforce consistent credential rules across accounts?
+  Back: Applies requirements for password creation and lifecycle events, then enforces those rules when users set or change credentials.
+- `password-policy-scenario` [application, medium] Front: Scenario: An organization wants clear rules for how users create and update their credentials. Which component or concept best fits?
+  Back: Password Policy — Reduces weak credential choices and creates a consistent baseline for account security.
 
-### Multi-Factor Authentication (`mfa`)
+### Account Lockout (`account-lockout`)
 
-- `mfa-definition` [definition, easy] Front: What is Multi-Factor Authentication?
-  Back: Authentication method requiring two or more independent proof factors within authentication and access control security workflows.
-- `mfa-mechanism` [understanding, medium] Front: How does Multi-Factor Authentication combine independent factors before granting access?
-  Back: Requires independent factors such as password plus token, so compromise of one factor does not satisfy the full check.
-- `mfa-scenario` [application, medium] Front: Scenario: A login should require more than one independent proof factor before access is granted. Which component or concept best fits?
-  Back: Multi-Factor Authentication — Combines multiple factor types, such as passwords and tokens, before granting access to a protected system.
-
-### Least Privilege (`least-privilege`)
-
-- `least-privilege-definition` [definition, easy] Front: What is Least Privilege?
-  Back: Security principle granting only the minimum permissions needed for a task within authentication and access control security workflows.
-- `least-privilege-mechanism` [understanding, medium] Front: How does Least Privilege start from minimal rights and grant only what is needed?
-  Back: Starts from minimal rights, then grants narrowly scoped permissions by role, task, or time so excess access stays unavailable.
-- `least-privilege-scenario` [application, medium] Front: Scenario: An account should receive only the access required for the current task and nothing broader. Which component or concept best fits?
-  Back: Least Privilege — Restricts roles and permissions to required actions, limiting misuse, accident scope, and privilege escalation opportunities.
+- `account-lockout-definition` [definition, easy] Front: What is Account Lockout?
+  Back: Protective control that temporarily blocks sign-in attempts after repeated authentication failures.
+- `account-lockout-mechanism` [understanding, medium] Front: How does Account Lockout stop repeated failed sign-in attempts?
+  Back: Counts failed sign-in attempts, crosses a configured threshold, and then denies further logins until the timer or reset condition is met.
+- `account-lockout-scenario` [application, medium] Front: Scenario: A system must temporarily block further logins after too many bad password attempts. Which component or concept best fits?
+  Back: Account Lockout — Slows brute-force guessing and alerts teams to suspicious login activity.
 
 ### Malware (`malware`)
 
@@ -516,14 +491,14 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `patch-management-scenario` [application, medium] Front: Scenario: A team needs the process that finds, tests, deploys, and verifies security updates. Which component or concept best fits?
   Back: Patch Management — Identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets.
 
-### Social Engineering (`social-engineering`)
+### Security Awareness (`security-awareness`)
 
-- `social-engineering-definition` [definition, easy] Front: What is Social Engineering?
-  Back: Psychological manipulation used to trick users into unsafe actions within foundational user-focused security awareness contexts.
-- `social-engineering-mechanism` [understanding, medium] Front: How does Social Engineering exploit trust or urgency to trigger unsafe actions?
-  Back: Manipulates trust, urgency, or authority cues so people reveal information or perform unsafe actions.
-- `social-engineering-scenario` [application, medium] Front: Scenario: An attacker is using urgency, trust, or fear to trick a user into unsafe behavior. Which component or concept best fits?
-  Back: Social Engineering — Uses persuasion, urgency, trust, or deception to influence users into bypassing normal security behavior.
+- `security-awareness-definition` [definition, easy] Front: What is Security Awareness?
+  Back: Training and reinforcement that helps users recognize and avoid unsafe behavior.
+- `security-awareness-mechanism` [understanding, medium] Front: How does Security Awareness help users recognize risky behavior before acting?
+  Back: Uses examples, reminders, and repeated practice so users recognize warning signs before acting.
+- `security-awareness-scenario` [application, medium] Front: Scenario: A team wants users to notice suspicious messages and follow safer habits in daily work. Which component or concept best fits?
+  Back: Security Awareness — Reduces avoidable mistakes by teaching people how to spot risky requests and follow safe habits.
 
 ### Ticketing (`ticketing`)
 
@@ -561,14 +536,23 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `troubleshooting-method-scenario` [application, medium] Front: Scenario: A technician wants to test likely causes in order instead of making random changes. Which component or concept best fits?
   Back: Troubleshooting Methodology — Follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation.
 
-### Playbook (`playbook`)
+### Knowledge Base (`knowledge-base`)
 
-- `playbook-definition` [definition, easy] Front: What is Playbook?
-  Back: Documented response workflow for recurring security scenarios.
-- `playbook-mechanism` [understanding, medium] Front: How does Playbook turn a known situation into repeatable response steps?
-  Back: Defines trigger conditions, required steps, and decision points so analysts handle repeat scenarios the same way each time.
-- `playbook-scenario` [application, medium] Front: Scenario: A repeated problem should be handled through documented steps rather than memory alone. Which component or concept best fits?
-  Back: Playbook — Documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario.
+- `knowledge-base-definition` [definition, easy] Front: What is Knowledge Base?
+  Back: Shared collection of documented solutions, procedures, and reference notes for recurring issues.
+- `knowledge-base-mechanism` [understanding, medium] Front: How does Knowledge Base turn solved issues into reusable guidance?
+  Back: Stores structured articles and updates them over time so staff can search, follow, and improve known solutions.
+- `knowledge-base-scenario` [application, medium] Front: Scenario: A help desk wants documented fixes that staff can search and reuse instead of solving the same problem from scratch. Which component or concept best fits?
+  Back: Knowledge Base — Speeds support work by making proven fixes and guidance easy to reuse.
+
+### Backup Strategy (`backup-strategy`)
+
+- `backup-strategy-definition` [definition, easy] Front: What is Backup Strategy?
+  Back: Planned approach for copying and retaining data so it can be restored after loss or corruption.
+- `backup-strategy-mechanism` [understanding, medium] Front: How does Backup Strategy keep recovery practical after data loss?
+  Back: Chooses what to back up, where to store copies, and how often to test restoration so recovery remains practical.
+- `backup-strategy-scenario` [application, medium] Front: Scenario: A team needs a planned way to preserve important data and restore it after deletion or system failure. Which component or concept best fits?
+  Back: Backup Strategy — Protects business continuity by ensuring important data can be recovered after failure, deletion, or attack.
 
 
 ## Week 05 - Linux ramp-up and first VM build
@@ -730,59 +714,59 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `network-media-scenario` [application, medium] Front: Scenario: A link design depends on whether data travels over copper, fiber, or radio. Which component or concept best fits?
   Back: Network Media — Provides the path that network frames or bits travel across between interfaces.
 
-### Switch (`switch`)
+### Network Interface Card (`network-interface-card`)
 
-- `switch-definition` [definition, easy] Front: What is Switch?
-  Back: Layer 2 device that forwards frames based on MAC address tables.
-- `switch-mechanism` [understanding, medium] Front: How does Switch learn address-to-port mappings and forward traffic locally?
-  Back: Learns MAC-to-port mappings from incoming frames and forwards later traffic only toward the needed port.
-- `switch-scenario` [application, medium] Front: Scenario: Traffic should stay on the local network and be forwarded by learned interface mappings rather than routed between subnets. Which component or concept best fits?
-  Back: Switch — Learns MAC addresses on ports and forwards frames only toward the correct destination segment.
+- `network-interface-card-definition` [definition, easy] Front: What is Network Interface Card?
+  Back: Hardware adapter that gives a device a physical or wireless connection to a network.
+- `network-interface-card-mechanism` [understanding, medium] Front: How does Network Interface Card convert host data into local network traffic?
+  Back: Converts device data into network signaling on the local medium and receives incoming traffic for the host.
+- `network-interface-card-scenario` [application, medium] Front: Scenario: A computer needs the hardware adapter that actually connects it to Ethernet or wireless service. Which component or concept best fits?
+  Back: Network Interface Card — Provides the interface that sends and receives frames or signals on the chosen medium.
 
-### Router (`router`)
+### Copper Cabling (`copper-cabling`)
 
-- `router-definition` [definition, easy] Front: What is Router?
-  Back: Layer 3 device that forwards packets between networks.
-- `router-mechanism` [understanding, medium] Front: How does Router choose a next hop from destination networks?
-  Back: Reads destination networks, consults routes, and forwards packets out the next interface toward the destination.
-- `router-scenario` [application, medium] Front: Scenario: Traffic must leave one subnet and be forwarded toward another network. Which component or concept best fits?
-  Back: Router — Examines destination networks and forwards packets toward the next hop using Layer 3 decisions.
+- `copper-cabling-definition` [definition, easy] Front: What is Copper Cabling?
+  Back: Network cabling medium that carries data as electrical signals over metal conductors.
+- `copper-cabling-mechanism` [understanding, medium] Front: How does Copper Cabling carry encoded data between nearby network devices?
+  Back: Sends encoded electrical pulses across twisted conductors so connected interfaces can transmit and receive bits.
+- `copper-cabling-scenario` [application, medium] Front: Scenario: A local network needs the wired medium that carries data as electrical signals between ports. Which component or concept best fits?
+  Back: Copper Cabling — Provides common local connectivity for endpoints, switches, and other nearby network devices.
 
-### Access Point (`access-point`)
+### Fiber Optic (`fiber-optic`)
 
-- `access-point-definition` [definition, easy] Front: What is Access Point?
-  Back: Network device that bridges wireless clients onto a wired LAN.
-- `access-point-mechanism` [understanding, medium] Front: How does Access Point bridge wireless clients onto the wired network?
-  Back: Advertises a network name, authenticates clients, and forwards their traffic between radio channels and the wired switch path.
-- `access-point-scenario` [application, medium] Front: Scenario: Wireless clients need to join the same local network as wired devices. Which component or concept best fits?
-  Back: Access Point — Provides Wi-Fi coverage so wireless devices can join the local network.
+- `fiber-optic-definition` [definition, easy] Front: What is Fiber Optic?
+  Back: Network medium that carries data as pulses of light through glass or plastic strands.
+- `fiber-optic-mechanism` [understanding, medium] Front: How does Fiber Optic transmit data as light over longer distances?
+  Back: Transmits encoded light through the fiber core, and receivers convert the arriving light pulses back into data.
+- `fiber-optic-scenario` [application, medium] Front: Scenario: A link needs high bandwidth over distance while resisting electrical interference. Which component or concept best fits?
+  Back: Fiber Optic — Supports long distances and high bandwidth with low electrical interference.
 
-### Firewall (`firewall`)
+### Packet (`packet`)
 
-- `firewall-definition` [definition, easy] Front: What is Firewall?
-  Back: Control that allows or blocks traffic based on policy rules.
-- `firewall-mechanism` [understanding, medium] Front: How does Firewall apply ordered rules to allow or block traffic?
-  Back: Compares traffic against ordered rules and may track connection state to permit or deny packets.
-- `firewall-scenario` [application, medium] Front: Scenario: Traffic should be allowed or blocked according to ordered policy rules. Which component or concept best fits?
-  Back: Firewall — Evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria.
+- `packet-definition` [definition, easy] Front: What is Packet?
+  Back: Formatted unit of network data that carries addressing and payload information between systems.
+- `packet-mechanism` [understanding, medium] Front: How does Packet carry payload and forwarding data from hop to hop?
+  Back: Wraps payload data with header fields, travels hop by hop, and is examined at each stage for forwarding decisions.
+- `packet-scenario` [application, medium] Front: Scenario: A network explanation needs the basic unit that travels across routed paths with addressing information attached. Which component or concept best fits?
+  Back: Packet — Lets routers and hosts move traffic in manageable pieces across network paths.
 
-### Ethernet Frame (`ethernet-frame`)
+### Protocol (`protocol`)
 
-- `ethernet-frame-definition` [definition, easy] Front: What is Ethernet Frame?
-  Back: Data-link encapsulation format used on Ethernet networks.
-- `ethernet-frame-mechanism` [understanding, medium] Front: How does Ethernet Frame wrap payload data for local delivery?
-  Back: Wraps payload data with MAC addresses and control fields so switches and receivers can forward and validate it.
-- `ethernet-frame-scenario` [application, medium] Front: Scenario: Payload data must be wrapped for delivery on one local wired segment. Which component or concept best fits?
-  Back: Ethernet Frame — Encapsulates payload data with source, destination, type, and integrity fields for local network delivery.
+- `protocol-definition` [definition, easy] Front: What is Protocol?
+  Back: Agreed communication rule set that defines how systems exchange data for a specific purpose.
+- `protocol-mechanism` [understanding, medium] Front: How does Protocol give both sides a shared expectation for communication?
+  Back: Defines message structure and expected behavior so each side knows what to send, receive, and do next.
+- `protocol-scenario` [application, medium] Front: Scenario: Two systems need a common rule set for what to send, what to expect back, and what to do next. Which component or concept best fits?
+  Back: Protocol — Lets different products interoperate because both sides follow the same expectations for communication.
 
-### MAC Address (`mac-address`)
+### Bridge (`bridge`)
 
-- `mac-address-definition` [definition, easy] Front: What is MAC Address?
-  Back: Hardware identifier used by network interfaces on local segments.
-- `mac-address-mechanism` [understanding, medium] Front: How does MAC Address identify one interface on a local segment?
-  Back: Identifies a network interface at layer 2 so frames can be delivered on the local segment.
-- `mac-address-scenario` [application, medium] Front: Scenario: A switch must identify the correct local interface for a frame destination. Which component or concept best fits?
-  Back: MAC Address — Identifies a local network interface at Layer 2 for switching and frame delivery decisions.
+- `bridge-definition` [definition, easy] Front: What is Bridge?
+  Back: Layer 2 device that connects network segments and forwards local traffic between them.
+- `bridge-mechanism` [understanding, medium] Front: How does Bridge connect local segments without routing between subnets?
+  Back: Receives a frame on one segment, checks the link-layer destination, and forwards the traffic only to the needed segment.
+- `bridge-scenario` [application, medium] Front: Scenario: Two local network segments need to be linked at Layer 2 without using a router. Which component or concept best fits?
+  Back: Bridge — Extends local connectivity while still making forwarding decisions based on link-layer information.
 
 ### Network Topology (`network-topology`)
 
@@ -2473,14 +2457,14 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `control-recommendation-scenario` [application, medium] Front: Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?
   Back: Control Recommendation — Documents a proposed safeguard, rationale, owner, and priority for reducing identified risk.
 
-### Attack Surface (`attack-surface`)
+### Lateral Movement (`lateral-movement`)
 
-- `attack-surface-definition` [definition, easy] Front: What is Attack Surface?
-  Back: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
-- `attack-surface-mechanism` [understanding, medium] Front: How does Attack Surface work step by step?
-  Back: Every exposed service, account, or trust path adds a reachable point that defenders can remove, harden, or watch.
-- `attack-surface-scenario` [application, medium] Front: Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?
-  Back: Attack Surface — Shows where risk exists so exposure can be reduced or monitored.
+- `lateral-movement-definition` [definition, easy] Front: What is Lateral Movement?
+  Back: Post-compromise activity where an attacker moves from one system to other reachable systems.
+- `lateral-movement-mechanism` [understanding, medium] Front: How does Lateral Movement let an attacker pivot beyond the first compromised host?
+  Back: Uses stolen access, trust paths, or remote tools to pivot from the initial foothold into additional internal systems.
+- `lateral-movement-scenario` [application, medium] Front: Scenario: After one system is compromised, the attacker begins using trust relationships to reach additional internal machines. Which component or concept best fits?
+  Back: Lateral Movement — Expands attacker access and increases the damage that one compromised account or host can cause.
 
 
 ## Week 28 - CISA incident response materials and playbook thinking
@@ -2615,14 +2599,14 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - `vendor-risk-scenario` [application, medium] Front: Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?
   Back: Vendor Risk — Assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure.
 
-### Control (`control`)
+### Risk Owner (`risk-owner`)
 
-- `control-definition` [definition, easy] Front: What is Control?
-  Back: Safeguard that prevents, detects, or corrects a security problem.
-- `control-mechanism` [understanding, medium] Front: How does Control work step by step?
-  Back: Applies a policy, technical setting, or process step that blocks misuse, spots abnormal activity, or limits the resulting damage.
-- `control-scenario` [application, medium] Front: Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?
-  Back: Control — Reduces risk by changing how likely, visible, or damaging an unwanted event can become.
+- `risk-owner-definition` [definition, easy] Front: What is Risk Owner?
+  Back: Person or role accountable for deciding how a specific risk is handled.
+- `risk-owner-mechanism` [understanding, medium] Front: How does Risk Owner keep treatment decisions tied to an accountable role?
+  Back: Receives the risk details, chooses treatment or acceptance, and remains accountable for that decision over time.
+- `risk-owner-scenario` [application, medium] Front: Scenario: A risk register entry needs a named decision-maker who must approve treatment or acceptance. Which component or concept best fits?
+  Back: Risk Owner — Ensures each risk has a responsible decision-maker instead of being left unresolved.
 
 
 ## Week 30 - TryHackMe Defensive Security: SOC, forensics, IR, and logs

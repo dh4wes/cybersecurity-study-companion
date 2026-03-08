@@ -21,6 +21,27 @@
     "back": "Access Point — Provides Wi-Fi coverage so wireless devices can join the local network."
   },
   {
+    "id": "account-lockout-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Account Lockout?",
+    "back": "Protective control that temporarily blocks sign-in attempts after repeated authentication failures."
+  },
+  {
+    "id": "account-lockout-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Account Lockout stop repeated failed sign-in attempts?",
+    "back": "Counts failed sign-in attempts, crosses a configured threshold, and then denies further logins until the timer or reset condition is met."
+  },
+  {
+    "id": "account-lockout-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A system must temporarily block further logins after too many bad password attempts. Which component or concept best fits?",
+    "back": "Account Lockout — Slows brute-force guessing and alerts teams to suspicious login activity."
+  },
+  {
     "id": "accounting-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -196,20 +217,6 @@
     "back": "Any device, account, application, dataset, or service that has value to an organization."
   },
   {
-    "id": "asset-mechanism",
-    "type": "understanding",
-    "difficulty": "medium",
-    "front": "How does Asset work step by step?",
-    "back": "Security teams identify assets, assign ownership and value, and then use that inventory to guide control and response decisions."
-  },
-  {
-    "id": "asset-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
-    "back": "Asset — Defines what must be protected, tracked, or prioritized in security work."
-  },
-  {
     "id": "asset-inventory-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -229,6 +236,20 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Asset Inventory — Maps systems, software, owners, and data to known records so investigations and control scope stay accurate."
+  },
+  {
+    "id": "asset-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Asset work step by step?",
+    "back": "Security teams identify assets, assign ownership and value, and then use that inventory to guide control and response decisions."
+  },
+  {
+    "id": "asset-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
+    "back": "Asset — Defines what must be protected, tracked, or prioritized in security work."
   },
   {
     "id": "attack-surface-definition",
@@ -336,6 +357,27 @@
     "back": "Automation Playbook — Executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently."
   },
   {
+    "id": "backup-strategy-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Backup Strategy?",
+    "back": "Planned approach for copying and retaining data so it can be restored after loss or corruption."
+  },
+  {
+    "id": "backup-strategy-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Backup Strategy keep recovery practical after data loss?",
+    "back": "Chooses what to back up, where to store copies, and how often to test restoration so recovery remains practical."
+  },
+  {
+    "id": "backup-strategy-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A team needs a planned way to preserve important data and restore it after deletion or system failure. Which component or concept best fits?",
+    "back": "Backup Strategy — Protects business continuity by ensuring important data can be recovered after failure, deletion, or attack."
+  },
+  {
     "id": "bios-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -355,6 +397,27 @@
     "difficulty": "medium",
     "front": "Scenario: A technician must change startup settings before the operating system loads. Which component or concept best fits?",
     "back": "BIOS/UEFI Firmware — Initializes hardware, runs platform checks, and locates a bootable device before handing control to the loader."
+  },
+  {
+    "id": "bluetooth-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Bluetooth?",
+    "back": "Short-range wireless standard used to connect nearby devices such as headsets, keyboards, and phones."
+  },
+  {
+    "id": "bluetooth-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Bluetooth pair devices and exchange data over a short-range link?",
+    "back": "Pairs nearby radios, negotiates capabilities, and then exchanges data over a short-range wireless link."
+  },
+  {
+    "id": "bluetooth-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A laptop needs to connect wirelessly to nearby peripherals without joining the local Wi-Fi network. Which component or concept best fits?",
+    "back": "Bluetooth — Provides low-power local connectivity for peripherals and quick device-to-device data exchange."
   },
   {
     "id": "boot-media-definition",
@@ -418,6 +481,27 @@
     "difficulty": "medium",
     "front": "Scenario: Firmware found a bootable device, and now a small startup program must load the kernel. Which component or concept best fits?",
     "back": "Bootloader — Bridges firmware startup and operating system execution."
+  },
+  {
+    "id": "bridge-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Bridge?",
+    "back": "Layer 2 device that connects network segments and forwards local traffic between them."
+  },
+  {
+    "id": "bridge-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Bridge connect local segments without routing between subnets?",
+    "back": "Receives a frame on one segment, checks the link-layer destination, and forwards the traffic only to the needed segment."
+  },
+  {
+    "id": "bridge-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: Two local network segments need to be linked at Layer 2 without using a router. Which component or concept best fits?",
+    "back": "Bridge — Extends local connectivity while still making forwarding decisions based on link-layer information."
   },
   {
     "id": "broadcast-address-definition",
@@ -565,6 +649,27 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Case Management — Maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle."
+  },
+  {
+    "id": "cellular-network-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Cellular Network?",
+    "back": "Wide-area radio network that connects mobile devices through carrier-operated towers and core infrastructure."
+  },
+  {
+    "id": "cellular-network-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Cellular Network attach a device and carry its traffic through the carrier?",
+    "back": "A device attaches to a nearby tower, authenticates with the carrier, and then sends traffic through the provider network."
+  },
+  {
+    "id": "cellular-network-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A phone needs mobile data service while moving between locations where no local Wi-Fi exists. Which component or concept best fits?",
+    "back": "Cellular Network — Provides mobile voice and data connectivity beyond the range of a local Wi-Fi network."
   },
   {
     "id": "certificate-definition",
@@ -733,6 +838,27 @@
     "difficulty": "medium",
     "front": "Scenario: A subnet design needs the slash notation that states the prefix length directly. Which component or concept best fits?",
     "back": "CIDR — Uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing."
+  },
+  {
+    "id": "cloud-computing-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Cloud Computing?",
+    "back": "On-demand delivery of computing resources over a network instead of relying only on local hardware."
+  },
+  {
+    "id": "cloud-computing-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Cloud Computing allocate shared resources on demand?",
+    "back": "Users request shared compute or application resources from a provider, and the provider allocates capacity from pooled infrastructure."
+  },
+  {
+    "id": "cloud-computing-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A team wants to consume compute resources from a provider instead of buying and maintaining every server locally. Which component or concept best fits?",
+    "back": "Cloud Computing — Lets organizations scale services and consume shared infrastructure without building every system themselves."
   },
   {
     "id": "cloud-service-model-definition",
@@ -917,13 +1043,6 @@
     "back": "Applies a policy, technical setting, or process step that blocks misuse, spots abnormal activity, or limits the resulting damage."
   },
   {
-    "id": "control-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
-    "back": "Control — Reduces risk by changing how likely, visible, or damaging an unwanted event can become."
-  },
-  {
     "id": "control-recommendation-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -943,6 +1062,13 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Control Recommendation — Documents a proposed safeguard, rationale, owner, and priority for reducing identified risk."
+  },
+  {
+    "id": "control-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
+    "back": "Control — Reduces risk by changing how likely, visible, or damaging an unwanted event can become."
   },
   {
     "id": "conversation-view-definition",
@@ -987,25 +1113,25 @@
     "back": "Cooling / Thermal Management — Prevents overheating, instability, and thermal throttling during sustained workloads."
   },
   {
-    "id": "cpu-definition",
+    "id": "copper-cabling-definition",
     "type": "definition",
     "difficulty": "easy",
-    "front": "What is CPU?",
-    "back": "Central Processing Unit, executes instructions and coordinates processing tasks."
+    "front": "What is Copper Cabling?",
+    "back": "Network cabling medium that carries data as electrical signals over metal conductors."
   },
   {
-    "id": "cpu-mechanism",
+    "id": "copper-cabling-mechanism",
     "type": "understanding",
     "difficulty": "medium",
-    "front": "How does CPU fetch, decode, and execute instructions while using registers and cache?",
-    "back": "Fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores."
+    "front": "How does Copper Cabling carry encoded data between nearby network devices?",
+    "back": "Sends encoded electrical pulses across twisted conductors so connected interfaces can transmit and receive bits."
   },
   {
-    "id": "cpu-scenario",
+    "id": "copper-cabling-scenario",
     "type": "application",
     "difficulty": "medium",
-    "front": "Scenario: A desktop feels slow in every app even after storage health checks, and the system needs the part that executes instructions. Which component or concept best fits?",
-    "back": "CPU — Fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system."
+    "front": "Scenario: A local network needs the wired medium that carries data as electrical signals between ports. Which component or concept best fits?",
+    "back": "Copper Cabling — Provides common local connectivity for endpoints, switches, and other nearby network devices."
   },
   {
     "id": "cpu-cache-definition",
@@ -1027,6 +1153,27 @@
     "difficulty": "medium",
     "front": "Scenario: A processor needs very fast local memory so repeated data reads do not wait on system memory. Which component or concept best fits?",
     "back": "CPU Cache — Reduces average memory access time by serving repeated reads faster than system RAM can."
+  },
+  {
+    "id": "cpu-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is CPU?",
+    "back": "Central Processing Unit, executes instructions and coordinates processing tasks."
+  },
+  {
+    "id": "cpu-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does CPU fetch, decode, and execute instructions while using registers and cache?",
+    "back": "Fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores."
+  },
+  {
+    "id": "cpu-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A desktop feels slow in every app even after storage health checks, and the system needs the part that executes instructions. Which component or concept best fits?",
+    "back": "CPU — Fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system."
   },
   {
     "id": "critical-infrastructure-definition",
@@ -1211,13 +1358,6 @@
     "back": "A resolver checks cache first, then queries recursive or authoritative servers until the requested record is returned."
   },
   {
-    "id": "dns-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: A user can reach a site by IP address but not by name. Which component or concept best fits?",
-    "back": "DNS — Lets users and applications use human-readable names instead of memorizing numeric addresses."
-  },
-  {
     "id": "dns-resolution-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -1237,6 +1377,13 @@
     "difficulty": "medium",
     "front": "Scenario: A client needs the lookup process that turns a hostname into an address before the connection can continue. Which component or concept best fits?",
     "back": "DNS Resolution — Finds the address data needed before a client can contact the intended service."
+  },
+  {
+    "id": "dns-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A user can reach a site by IP address but not by name. Which component or concept best fits?",
+    "back": "DNS — Lets users and applications use human-readable names instead of memorizing numeric addresses."
   },
   {
     "id": "docking-station-definition",
@@ -1573,6 +1720,27 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "False Positive — Occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort."
+  },
+  {
+    "id": "fiber-optic-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Fiber Optic?",
+    "back": "Network medium that carries data as pulses of light through glass or plastic strands."
+  },
+  {
+    "id": "fiber-optic-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Fiber Optic transmit data as light over longer distances?",
+    "back": "Transmits encoded light through the fiber core, and receivers convert the arriving light pulses back into data."
+  },
+  {
+    "id": "fiber-optic-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A link needs high bandwidth over distance while resisting electrical interference. Which component or concept best fits?",
+    "back": "Fiber Optic — Supports long distances and high bandwidth with low electrical interference."
   },
   {
     "id": "file-parsing-definition",
@@ -2163,6 +2331,27 @@
     "back": "Keyword Optimization — Maps resume and profile language to recurring job-description terms so applicant tracking systems match relevant skills."
   },
   {
+    "id": "knowledge-base-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Knowledge Base?",
+    "back": "Shared collection of documented solutions, procedures, and reference notes for recurring issues."
+  },
+  {
+    "id": "knowledge-base-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Knowledge Base turn solved issues into reusable guidance?",
+    "back": "Stores structured articles and updates them over time so staff can search, follow, and improve known solutions."
+  },
+  {
+    "id": "knowledge-base-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A help desk wants documented fixes that staff can search and reuse instead of solving the same problem from scratch. Which component or concept best fits?",
+    "back": "Knowledge Base — Speeds support work by making proven fixes and guidance easy to reuse."
+  },
+  {
     "id": "knowledge-gap-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -2245,6 +2434,27 @@
     "difficulty": "medium",
     "front": "Scenario: A user reports that traffic arrives, but the round-trip delay still feels too slow. Which component or concept best fits?",
     "back": "Latency — Measures elapsed time introduced by transmission, processing, queuing, and distance across a network path."
+  },
+  {
+    "id": "lateral-movement-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Lateral Movement?",
+    "back": "Post-compromise activity where an attacker moves from one system to other reachable systems."
+  },
+  {
+    "id": "lateral-movement-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Lateral Movement let an attacker pivot beyond the first compromised host?",
+    "back": "Uses stolen access, trust paths, or remote tools to pivot from the initial foothold into additional internal systems."
+  },
+  {
+    "id": "lateral-movement-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: After one system is compromised, the attacker begins using trust relationships to reach additional internal machines. Which component or concept best fits?",
+    "back": "Lateral Movement — Expands attacker access and increases the damage that one compromised account or host can cause."
   },
   {
     "id": "least-privilege-definition",
@@ -2562,6 +2772,27 @@
     "back": "Mobile Device — Delivers computing, connectivity, and local apps in a form factor built for movement and short sessions."
   },
   {
+    "id": "mobile-hotspot-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Mobile Hotspot?",
+    "back": "Feature that lets a phone or similar device share its internet connection with other local clients."
+  },
+  {
+    "id": "mobile-hotspot-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Mobile Hotspot share one cellular connection with nearby clients?",
+    "back": "Uses the mobile network for upstream access, creates a local wireless network, and routes client traffic through the device."
+  },
+  {
+    "id": "mobile-hotspot-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A tablet has internet access over the carrier network and needs to share that connectivity with a nearby laptop. Which component or concept best fits?",
+    "back": "Mobile Hotspot — Provides temporary internet access for nearby devices when fixed wireless or wired service is unavailable."
+  },
+  {
     "id": "mock-exam-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -2709,6 +2940,27 @@
     "back": "Network ID — Helps devices and administrators distinguish one subnet from another."
   },
   {
+    "id": "network-interface-card-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Network Interface Card?",
+    "back": "Hardware adapter that gives a device a physical or wireless connection to a network."
+  },
+  {
+    "id": "network-interface-card-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Network Interface Card convert host data into local network traffic?",
+    "back": "Converts device data into network signaling on the local medium and receives incoming traffic for the host."
+  },
+  {
+    "id": "network-interface-card-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A computer needs the hardware adapter that actually connects it to Ethernet or wireless service. Which component or concept best fits?",
+    "back": "Network Interface Card — Provides the interface that sends and receives frames or signals on the chosen medium."
+  },
+  {
     "id": "network-media-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -2728,6 +2980,27 @@
     "difficulty": "medium",
     "front": "Scenario: A link design depends on whether data travels over copper, fiber, or radio. Which component or concept best fits?",
     "back": "Network Media — Provides the path that network frames or bits travel across between interfaces."
+  },
+  {
+    "id": "network-protocol-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Network Protocol?",
+    "back": "Defined set of rules that controls how devices format, send, receive, and interpret network traffic."
+  },
+  {
+    "id": "network-protocol-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Network Protocol keep both ends of a connection using the same rules?",
+    "back": "Specifies message formats, timing, and expected responses so both ends process traffic in the same way."
+  },
+  {
+    "id": "network-protocol-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: Two systems can exchange data only if they agree on message format, timing, and expected responses. Which component or concept best fits?",
+    "back": "Network Protocol — Lets different systems communicate predictably by agreeing on message structure and behavior."
   },
   {
     "id": "network-segmentation-definition",
@@ -2919,6 +3192,13 @@
     "back": "Packet Capture — Gives analysts evidence of what traffic was actually sent, received, or dropped."
   },
   {
+    "id": "packet-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Packet?",
+    "back": "Formatted unit of network data that carries addressing and payload information between systems."
+  },
+  {
     "id": "packet-filter-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -2938,6 +3218,20 @@
     "difficulty": "medium",
     "front": "Scenario: An analyst needs to isolate only the packets that match chosen addresses, ports, or protocols. Which component or concept best fits?",
     "back": "Packet Filter — Applies capture expressions to packet headers so only matching traffic is displayed or stored."
+  },
+  {
+    "id": "packet-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Packet carry payload and forwarding data from hop to hop?",
+    "back": "Wraps payload data with header fields, travels hop by hop, and is examined at each stage for forwarding decisions."
+  },
+  {
+    "id": "packet-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A network explanation needs the basic unit that travels across routed paths with addressing information attached. Which component or concept best fits?",
+    "back": "Packet — Lets routers and hosts move traffic in manageable pieces across network paths."
   },
   {
     "id": "page-rendering-definition",
@@ -2980,6 +3274,27 @@
     "difficulty": "medium",
     "front": "Scenario: One physical disk needs separate regions for the OS, data, or recovery tools. Which component or concept best fits?",
     "back": "Partition — Separates storage space for operating systems, data, recovery areas, or different filesystems."
+  },
+  {
+    "id": "password-policy-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Password Policy?",
+    "back": "Set of rules that governs how passwords are created, changed, and managed across an environment."
+  },
+  {
+    "id": "password-policy-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Password Policy enforce consistent credential rules across accounts?",
+    "back": "Applies requirements for password creation and lifecycle events, then enforces those rules when users set or change credentials."
+  },
+  {
+    "id": "password-policy-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: An organization wants clear rules for how users create and update their credentials. Which component or concept best fits?",
+    "back": "Password Policy — Reduces weak credential choices and creates a consistent baseline for account security."
   },
   {
     "id": "patch-management-definition",
@@ -3157,20 +3472,6 @@
     "back": "Power-On Self-Test routine that checks essential hardware before the operating system starts."
   },
   {
-    "id": "post-mechanism",
-    "type": "understanding",
-    "difficulty": "medium",
-    "front": "How does POST check core hardware before boot continues?",
-    "back": "Firmware powers major components, tests required devices, and then either reports a fault or continues toward boot selection."
-  },
-  {
-    "id": "post-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: A machine powers on and checks basic hardware before it tries to load the operating system. Which component or concept best fits?",
-    "back": "POST — Detects basic hardware faults early enough to stop booting or report an error condition."
-  },
-  {
     "id": "post-incident-review-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -3190,6 +3491,20 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Post-Incident Review — Evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness."
+  },
+  {
+    "id": "post-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does POST check core hardware before boot continues?",
+    "back": "Firmware powers major components, tests required devices, and then either reports a fault or continues toward boot selection."
+  },
+  {
+    "id": "post-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A machine powers on and checks basic hardware before it tries to load the operating system. Which component or concept best fits?",
+    "back": "POST — Detects basic hardware faults early enough to stop booting or report an error condition."
   },
   {
     "id": "powershell-definition",
@@ -3295,6 +3610,27 @@
     "difficulty": "medium",
     "front": "Scenario: An administrator needs the operating system unit that represents a running or scheduled program. Which component or concept best fits?",
     "back": "Process — Uses an isolated execution context with memory, threads, and permissions while a program runs."
+  },
+  {
+    "id": "protocol-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Protocol?",
+    "back": "Agreed communication rule set that defines how systems exchange data for a specific purpose."
+  },
+  {
+    "id": "protocol-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Protocol give both sides a shared expectation for communication?",
+    "back": "Defines message structure and expected behavior so each side knows what to send, receive, and do next."
+  },
+  {
+    "id": "protocol-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: Two systems need a common rule set for what to send, what to expect back, and what to do next. Which component or concept best fits?",
+    "back": "Protocol — Lets different products interoperate because both sides follow the same expectations for communication."
   },
   {
     "id": "psu-definition",
@@ -3570,27 +3906,6 @@
     "back": "Reverse Proxy — Accepts client connections, applies policies, and forwards approved requests to internal application servers."
   },
   {
-    "id": "risk-definition",
-    "type": "definition",
-    "difficulty": "easy",
-    "front": "What is Risk?",
-    "back": "Possibility that a threat will exploit a weakness and cause harm to an asset or process."
-  },
-  {
-    "id": "risk-mechanism",
-    "type": "understanding",
-    "difficulty": "medium",
-    "front": "How does Risk work step by step?",
-    "back": "Combines the chance of a harmful event with the likely impact so work can be ranked and resourced."
-  },
-  {
-    "id": "risk-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
-    "back": "Risk — Helps teams prioritize which security problems deserve treatment first."
-  },
-  {
     "id": "risk-assessment-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -3612,6 +3927,41 @@
     "back": "Risk Assessment — Identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions."
   },
   {
+    "id": "risk-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Risk?",
+    "back": "Possibility that a threat will exploit a weakness and cause harm to an asset or process."
+  },
+  {
+    "id": "risk-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Risk work step by step?",
+    "back": "Combines the chance of a harmful event with the likely impact so work can be ranked and resourced."
+  },
+  {
+    "id": "risk-owner-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Risk Owner?",
+    "back": "Person or role accountable for deciding how a specific risk is handled."
+  },
+  {
+    "id": "risk-owner-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Risk Owner keep treatment decisions tied to an accountable role?",
+    "back": "Receives the risk details, chooses treatment or acceptance, and remains accountable for that decision over time."
+  },
+  {
+    "id": "risk-owner-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A risk register entry needs a named decision-maker who must approve treatment or acceptance. Which component or concept best fits?",
+    "back": "Risk Owner — Ensures each risk has a responsible decision-maker instead of being left unresolved."
+  },
+  {
     "id": "risk-register-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -3631,6 +3981,13 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Risk Register — Maintains a living record of risks, scores, owners, response plans, and status updates."
+  },
+  {
+    "id": "risk-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
+    "back": "Risk — Helps teams prioritize which security problems deserve treatment first."
   },
   {
     "id": "risk-treatment-definition",
@@ -3715,6 +4072,27 @@
     "difficulty": "medium",
     "front": "Scenario: A device needs the data structure that lists destination prefixes and next hops. Which component or concept best fits?",
     "back": "Routing Table — Lists known networks, next hops, interfaces, and metrics used to choose forwarding paths."
+  },
+  {
+    "id": "security-awareness-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Security Awareness?",
+    "back": "Training and reinforcement that helps users recognize and avoid unsafe behavior."
+  },
+  {
+    "id": "security-awareness-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Security Awareness help users recognize risky behavior before acting?",
+    "back": "Uses examples, reminders, and repeated practice so users recognize warning signs before acting."
+  },
+  {
+    "id": "security-awareness-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A team wants users to notice suspicious messages and follow safer habits in daily work. Which component or concept best fits?",
+    "back": "Security Awareness — Reduces avoidable mistakes by teaching people how to spot risky requests and follow safe habits."
   },
   {
     "id": "security-framework-definition",
@@ -4270,20 +4648,6 @@
     "back": "Connection-oriented transport protocol that prioritizes reliability and ordered delivery."
   },
   {
-    "id": "tcp-mechanism",
-    "type": "understanding",
-    "difficulty": "medium",
-    "front": "How does TCP track order and recover from missing data?",
-    "back": "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
-  },
-  {
-    "id": "tcp-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: An application needs reliable, ordered delivery and retransmission instead of the lowest possible overhead. Which component or concept best fits?",
-    "back": "TCP — Establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
-  },
-  {
     "id": "tcp-ip-model-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -4305,25 +4669,25 @@
     "back": "TCP/IP Model — Groups real network behavior into layers that are easier to implement and troubleshoot."
   },
   {
+    "id": "tcp-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does TCP track order and recover from missing data?",
+    "back": "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
+  },
+  {
+    "id": "tcp-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: An application needs reliable, ordered delivery and retransmission instead of the lowest possible overhead. Which component or concept best fits?",
+    "back": "TCP — Establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
+  },
+  {
     "id": "threat-definition",
     "type": "definition",
     "difficulty": "easy",
     "front": "What is Threat?",
     "back": "Potential source of harm that could exploit a weakness or disrupt normal operations."
-  },
-  {
-    "id": "threat-mechanism",
-    "type": "understanding",
-    "difficulty": "medium",
-    "front": "How does Threat work step by step?",
-    "back": "Becomes actionable when a capable actor or condition meets an exposed weakness and a path to the target."
-  },
-  {
-    "id": "threat-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
-    "back": "Threat — Explains who or what might cause damage, theft, misuse, or outage."
   },
   {
     "id": "threat-intelligence-definition",
@@ -4347,6 +4711,13 @@
     "back": "Threat Intelligence — Collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior."
   },
   {
+    "id": "threat-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Threat work step by step?",
+    "back": "Becomes actionable when a capable actor or condition meets an exposed weakness and a path to the target."
+  },
+  {
     "id": "threat-model-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -4366,6 +4737,13 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Threat Model — Identifies assets, attackers, attack paths, and control gaps before implementing or changing a system."
+  },
+  {
+    "id": "threat-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
+    "back": "Threat — Explains who or what might cause damage, theft, misuse, or outage."
   },
   {
     "id": "three-way-handshake-definition",
@@ -4683,6 +5061,27 @@
     "back": "VirtualBox — Creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments."
   },
   {
+    "id": "virtualization-definition",
+    "type": "definition",
+    "difficulty": "easy",
+    "front": "What is Virtualization?",
+    "back": "Technique that abstracts physical hardware so multiple logical systems can share the same host resources."
+  },
+  {
+    "id": "virtualization-mechanism",
+    "type": "understanding",
+    "difficulty": "medium",
+    "front": "How does Virtualization present shared hardware as separate logical systems?",
+    "back": "Presents virtual CPU, memory, storage, and network resources so guest systems operate as if they had their own hardware."
+  },
+  {
+    "id": "virtualization-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: A student wants one host computer to run several isolated lab environments without buying extra hardware. Which component or concept best fits?",
+    "back": "Virtualization — Improves isolation, flexibility, and lab efficiency by letting one machine run several workloads separately."
+  },
+  {
     "id": "vlan-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -4739,13 +5138,6 @@
     "back": "Appears when a flaw or misconfiguration leaves a reachable gap that an attacker or failure condition can abuse."
   },
   {
-    "id": "vulnerability-scenario",
-    "type": "application",
-    "difficulty": "medium",
-    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
-    "back": "Vulnerability — Creates an opportunity for a threat to bypass protection or cause harm."
-  },
-  {
     "id": "vulnerability-scan-definition",
     "type": "definition",
     "difficulty": "easy",
@@ -4765,6 +5157,13 @@
     "difficulty": "medium",
     "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
     "back": "Vulnerability Scan — Probes hosts, software, and configurations against known checks to identify missing patches and insecure settings."
+  },
+  {
+    "id": "vulnerability-scenario",
+    "type": "application",
+    "difficulty": "medium",
+    "front": "Scenario: The team needs the concept that best matches the situation. Which component or concept best fits?",
+    "back": "Vulnerability — Creates an opportunity for a threat to bypass protection or cause harm."
   },
   {
     "id": "wan-definition",

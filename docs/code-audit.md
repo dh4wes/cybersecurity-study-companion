@@ -114,8 +114,8 @@ Recommended follow-up:
 Documentation content counts currently align with the canonical datasets:
 - 32 weeks
 - 224 day records
-- 233 glossary terms
-- 699 unique flashcards
+- 252 glossary terms
+- 756 unique flashcards
 
 ### Organization
 - canonical data is kept in `src/data/content/`

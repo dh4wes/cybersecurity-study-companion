@@ -20,8 +20,8 @@ The current app supports:
 Current content totals:
 - 32 weeks
 - 224 day records
-- 233 canonical glossary entries
-- 699 unique flashcards
+- 252 canonical glossary entries
+- 756 unique flashcards
 - 32 weekly review decks
 
 ## Architectural constraints
@@ -107,7 +107,7 @@ Card IDs use:
 - `<term-id>-mechanism`
 - `<term-id>-scenario`
 
-The current repository contains 699 unique flashcards derived from 233 glossary entries.
+The current repository contains 756 unique flashcards derived from 252 glossary entries.
 
 ### Day mapping
 Each instructional day references:

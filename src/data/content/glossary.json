@@ -10,6 +10,16 @@
     ]
   },
   {
+    "id": "account-lockout",
+    "term": "Account Lockout",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Protective control that temporarily blocks sign-in attempts after repeated authentication failures.",
+      "Slows brute-force guessing and alerts teams to suspicious login activity.",
+      "Counts failed sign-in attempts, crosses a configured threshold, and then denies further logins until the timer or reset condition is met."
+    ]
+  },
+  {
     "id": "accounting",
     "term": "Accounting (AAA)",
     "category": "Identity & Cryptography",
@@ -160,6 +170,16 @@
     ]
   },
   {
+    "id": "backup-strategy",
+    "term": "Backup Strategy",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Planned approach for copying and retaining data so it can be restored after loss or corruption.",
+      "Protects business continuity by ensuring important data can be recovered after failure, deletion, or attack.",
+      "Chooses what to back up, where to store copies, and how often to test restoration so recovery remains practical."
+    ]
+  },
+  {
     "id": "bios",
     "term": "BIOS/UEFI Firmware",
     "category": "Hardware & Endpoints",
@@ -167,6 +187,16 @@
       "Low-level firmware that initializes hardware and starts the boot process.",
       "Initializes hardware, runs platform checks, and locates a bootable device before handing control to the loader.",
       "Initializes hardware, selects a boot target, and hands execution to the bootloader after hardware checks pass."
+    ]
+  },
+  {
+    "id": "bluetooth",
+    "term": "Bluetooth",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Short-range wireless standard used to connect nearby devices such as headsets, keyboards, and phones.",
+      "Provides low-power local connectivity for peripherals and quick device-to-device data exchange.",
+      "Pairs nearby radios, negotiates capabilities, and then exchanges data over a short-range wireless link."
     ]
   },
   {
@@ -197,6 +227,16 @@
       "Small startup program that loads an operating system kernel after firmware finds a bootable device.",
       "Bridges firmware startup and operating system execution.",
       "Firmware starts the loader, the loader locates the kernel and startup options, and control passes into the operating system."
+    ]
+  },
+  {
+    "id": "bridge",
+    "term": "Bridge",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Layer 2 device that connects network segments and forwards local traffic between them.",
+      "Extends local connectivity while still making forwarding decisions based on link-layer information.",
+      "Receives a frame on one segment, checks the link-layer destination, and forwards the traffic only to the needed segment."
     ]
   },
   {
@@ -267,6 +307,16 @@
       "Tracking and coordination of investigation tasks, evidence, and decisions.",
       "Maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle.",
       "Keeps alerts, evidence, notes, and task status in one record so investigations remain coordinated across analysts."
+    ]
+  },
+  {
+    "id": "cellular-network",
+    "term": "Cellular Network",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Wide-area radio network that connects mobile devices through carrier-operated towers and core infrastructure.",
+      "Provides mobile voice and data connectivity beyond the range of a local Wi-Fi network.",
+      "A device attaches to a nearby tower, authenticates with the carrier, and then sends traffic through the provider network."
     ]
   },
   {
@@ -347,6 +397,16 @@
       "Classless Inter-Domain Routing notation for subnet masks and prefixes.",
       "Uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing.",
       "Expresses the network prefix length so devices can derive which address bits identify the network and which identify hosts."
+    ]
+  },
+  {
+    "id": "cloud-computing",
+    "term": "Cloud Computing",
+    "category": "Web, Data & Cloud",
+    "bullets": [
+      "On-demand delivery of computing resources over a network instead of relying only on local hardware.",
+      "Lets organizations scale services and consume shared infrastructure without building every system themselves.",
+      "Users request shared compute or application resources from a provider, and the provider allocates capacity from pooled infrastructure."
     ]
   },
   {
@@ -467,6 +527,16 @@
       "Hardware and airflow design used to move heat away from processors, chipsets, and other hot components.",
       "Prevents overheating, instability, and thermal throttling during sustained workloads.",
       "Transfers heat into a heatsink and then moves it away with airflow so component temperatures stay within safe limits."
+    ]
+  },
+  {
+    "id": "copper-cabling",
+    "term": "Copper Cabling",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Network cabling medium that carries data as electrical signals over metal conductors.",
+      "Provides common local connectivity for endpoints, switches, and other nearby network devices.",
+      "Sends encoded electrical pulses across twisted conductors so connected interfaces can transmit and receive bits."
     ]
   },
   {
@@ -750,6 +820,16 @@
     ]
   },
   {
+    "id": "fiber-optic",
+    "term": "Fiber Optic",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Network medium that carries data as pulses of light through glass or plastic strands.",
+      "Supports long distances and high bandwidth with low electrical interference.",
+      "Transmits encoded light through the fiber core, and receivers convert the arriving light pulses back into data."
+    ]
+  },
+  {
     "id": "file-parsing",
     "term": "File Parsing",
     "category": "Security Operations & Incident Response",
@@ -1030,6 +1110,16 @@
     ]
   },
   {
+    "id": "knowledge-base",
+    "term": "Knowledge Base",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Shared collection of documented solutions, procedures, and reference notes for recurring issues.",
+      "Speeds support work by making proven fixes and guidance easy to reuse.",
+      "Stores structured articles and updates them over time so staff can search, follow, and improve known solutions."
+    ]
+  },
+  {
     "id": "knowledge-gap",
     "term": "Knowledge Gap",
     "category": "Study Workflow",
@@ -1067,6 +1157,16 @@
       "Time delay between request and response across a path.",
       "Measures elapsed time introduced by transmission, processing, queuing, and distance across a network path.",
       "Accumulates delay from propagation, processing, queuing, and retransmission before data reaches the destination."
+    ]
+  },
+  {
+    "id": "lateral-movement",
+    "term": "Lateral Movement",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Post-compromise activity where an attacker moves from one system to other reachable systems.",
+      "Expands attacker access and increases the damage that one compromised account or host can cause.",
+      "Uses stolen access, trust paths, or remote tools to pivot from the initial foothold into additional internal systems."
     ]
   },
   {
@@ -1220,6 +1320,16 @@
     ]
   },
   {
+    "id": "mobile-hotspot",
+    "term": "Mobile Hotspot",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Feature that lets a phone or similar device share its internet connection with other local clients.",
+      "Provides temporary internet access for nearby devices when fixed wireless or wired service is unavailable.",
+      "Uses the mobile network for upstream access, creates a local wireless network, and routes client traffic through the device."
+    ]
+  },
+  {
     "id": "mock-exam",
     "term": "Mock Exam",
     "category": "Study Workflow",
@@ -1290,6 +1400,16 @@
     ]
   },
   {
+    "id": "network-interface-card",
+    "term": "Network Interface Card",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Hardware adapter that gives a device a physical or wireless connection to a network.",
+      "Provides the interface that sends and receives frames or signals on the chosen medium.",
+      "Converts device data into network signaling on the local medium and receives incoming traffic for the host."
+    ]
+  },
+  {
     "id": "network-media",
     "term": "Network Media",
     "category": "Networking & Infrastructure",
@@ -1297,6 +1417,16 @@
       "Physical transmission medium that carries network signals, such as copper, fiber, or radio.",
       "Provides the path that network frames or bits travel across between interfaces.",
       "Encodes data as electrical, light, or radio signals and carries that signal across a cable or wireless channel."
+    ]
+  },
+  {
+    "id": "network-protocol",
+    "term": "Network Protocol",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Defined set of rules that controls how devices format, send, receive, and interpret network traffic.",
+      "Lets different systems communicate predictably by agreeing on message structure and behavior.",
+      "Specifies message formats, timing, and expected responses so both ends process traffic in the same way."
     ]
   },
   {
@@ -1380,6 +1510,16 @@
     ]
   },
   {
+    "id": "packet",
+    "term": "Packet",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Formatted unit of network data that carries addressing and payload information between systems.",
+      "Lets routers and hosts move traffic in manageable pieces across network paths.",
+      "Wraps payload data with header fields, travels hop by hop, and is examined at each stage for forwarding decisions."
+    ]
+  },
+  {
     "id": "packet-capture",
     "term": "Packet Capture",
     "category": "Networking & Infrastructure",
@@ -1417,6 +1557,16 @@
       "Logical division of a physical disk that the operating system can format and manage separately.",
       "Separates storage space for operating systems, data, recovery areas, or different filesystems.",
       "Uses a partition table to mark disk regions, then the operating system formats and mounts each region for use."
+    ]
+  },
+  {
+    "id": "password-policy",
+    "term": "Password Policy",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Set of rules that governs how passwords are created, changed, and managed across an environment.",
+      "Reduces weak credential choices and creates a consistent baseline for account security.",
+      "Applies requirements for password creation and lifecycle events, then enforces those rules when users set or change credentials."
     ]
   },
   {
@@ -1570,6 +1720,16 @@
     ]
   },
   {
+    "id": "protocol",
+    "term": "Protocol",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Agreed communication rule set that defines how systems exchange data for a specific purpose.",
+      "Lets different products interoperate because both sides follow the same expectations for communication.",
+      "Defines message structure and expected behavior so each side knows what to send, receive, and do next."
+    ]
+  },
+  {
     "id": "psu",
     "term": "PSU (Power Supply Unit)",
     "category": "Hardware & Endpoints",
@@ -1720,6 +1880,16 @@
     ]
   },
   {
+    "id": "risk-owner",
+    "term": "Risk Owner",
+    "category": "Governance, Risk & Compliance",
+    "bullets": [
+      "Person or role accountable for deciding how a specific risk is handled.",
+      "Ensures each risk has a responsible decision-maker instead of being left unresolved.",
+      "Receives the risk details, chooses treatment or acceptance, and remains accountable for that decision over time."
+    ]
+  },
+  {
     "id": "risk-register",
     "term": "Risk Register",
     "category": "Governance, Risk & Compliance",
@@ -1767,6 +1937,16 @@
       "Lookup data used by hosts and routers to choose next-hop paths.",
       "Lists known networks, next hops, interfaces, and metrics used to choose forwarding paths.",
       "Stores destination prefixes and next hops so the device can choose the best route for each packet."
+    ]
+  },
+  {
+    "id": "security-awareness",
+    "term": "Security Awareness",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Training and reinforcement that helps users recognize and avoid unsafe behavior.",
+      "Reduces avoidable mistakes by teaching people how to spot risky requests and follow safe habits.",
+      "Uses examples, reminders, and repeated practice so users recognize warning signs before acting."
     ]
   },
   {
@@ -2227,6 +2407,16 @@
       "Desktop virtualization platform for running lab virtual machines.",
       "Creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments.",
       "Uses a host hypervisor, virtual hardware profiles, and disk images to start and manage guest operating systems."
+    ]
+  },
+  {
+    "id": "virtualization",
+    "term": "Virtualization",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Technique that abstracts physical hardware so multiple logical systems can share the same host resources.",
+      "Improves isolation, flexibility, and lab efficiency by letting one machine run several workloads separately.",
+      "Presents virtual CPU, memory, storage, and network resources so guest systems operate as if they had their own hardware."
     ]
   },
   {

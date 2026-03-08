@@ -61,8 +61,8 @@ Supporting extracted data lives in:
 Current content totals:
 - 32 weeks
 - 224 day records
-- 233 glossary terms
-- 699 unique flashcards
+- 252 glossary terms
+- 756 unique flashcards
 - 32 weekly review decks
 
 ### Top-level collections

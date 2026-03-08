@@ -63,7 +63,7 @@ Card IDs use:
 - `<term-id>-mechanism`
 - `<term-id>-scenario`
 
-The current dataset contains 233 glossary terms and 699 unique flashcards.
+The current dataset contains 252 glossary terms and 756 unique flashcards.
 
 ### Progressive day decks
 Study days no longer reuse one identical weekly flashcard set.
