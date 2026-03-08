@@ -5,7 +5,7 @@ const { week, compact = false, showProgress = false } = Astro.props;
 const daySessionTypes = [...new Set(week.days.map((day) => day.session_type))];
 const dayLaptopValues = [...new Set(week.days.map((day) => day.laptop_needed))];
 const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
-const lockImage = withBase('/images/lock.jpg');
+const lockImage = withBase('/images/lock_and_key.jpg');
 ---
 
 <article

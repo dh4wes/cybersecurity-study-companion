@@ -1,7 +1,11 @@
 const BOOT_PHASE_DURATION_MS = 5500;
 const CURTAIN_PHASE_DURATION_MS = 4000;
+const CURTAIN_LINGER_DURATION_MS = 1000;
+const CURTAIN_FADE_DURATION_MS = 1000;
 const CURTAIN_FINISH_BUFFER_MS = 260;
 const MAX_CURTAIN_DELAY_MS = 900;
+const CURTAIN_TOTAL_CLEAR_MS =
+  CURTAIN_PHASE_DURATION_MS + CURTAIN_LINGER_DURATION_MS + CURTAIN_FADE_DURATION_MS;
 
 const buildBinaryCurtain = (root) => {
   const curtain = document.getElementById('binary-curtain');
@@ -93,10 +97,10 @@ const bootIntro = () => {
     }, 40));
     timers.push(setTimeout(() => {
       root.classList.add('is-removing');
-    }, CURTAIN_PHASE_DURATION_MS - 220));
+    }, CURTAIN_PHASE_DURATION_MS + CURTAIN_LINGER_DURATION_MS));
     timers.push(setTimeout(() => {
       root.remove();
-    }, CURTAIN_PHASE_DURATION_MS));
+    }, CURTAIN_TOTAL_CLEAR_MS));
   };
 
   lines.forEach((line, index) => timers.push(setTimeout(() => {

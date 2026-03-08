@@ -1,8 +1,11 @@
 ---
+import { withBase } from '../lib/site-data.js';
 import '../styles/boot-intro.css';
+
+const curtainBackgroundImage = withBase('/images/lock_and_key.jpg');
 ---
 
-<div id="boot-intro">
+<div id="boot-intro" style={`--boot-curtain-image: url('${curtainBackgroundImage}');`}>
   <div id="boot-panel">
     <pre id="boot-console"></pre>
     <div id="packet-pulse"></div>
