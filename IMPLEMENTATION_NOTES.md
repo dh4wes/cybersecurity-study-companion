@@ -1,148 +1,165 @@
 # Implementation Notes
 
-## Current state
+## Current State
 
-The repository currently represents a completed static-to-local-first study companion:
-- static Astro app
-- PWA installability
-- IndexedDB persistence for notes and progress
-- offline support
-- mobile-oriented UI adjustments
+The repository is a static Astro study companion with:
+
+- public curriculum routes
+- a separate local notes tool
+- IndexedDB-backed progress and note persistence
+- offline support after first load
 - optional Capacitor Android packaging
 
-## Key assumptions that still matter
+## Durable Product Decisions
 
-### Week 1 support correction
-The repository snapshot used during the migration did not include the named `*_week1_support_fixed.*` files, so the Week 1 support-resource correction was applied directly from the written requirements and preserved in the data/UI.
+### Product Split
 
-### Workbook enrichment
-Workbook-derived supporting data continues to flow through:
+Layer A remains public and portfolio-facing:
+
+- roadmap
+- weeks
+- resources
+- glossary
+- flashcards
+- security journal
+- progress
+- about
+
+Layer B remains private and local-only:
+
+- `/notes/`
+- day notes
+- week reflections
+- security journal notes
+- Markdown export
+- JSON import/export
+
+### Static-Only Constraint
+
+- no backend
+- no authentication
+- no server-side user state
+- app logic must keep working as static output
+
+### Canonical Content Boundary
+
+Canonical curriculum content lives in:
+
+- `src/data/content/study-companion-v2.json`
+- `src/data/content/glossary.json`
+- `src/data/content/flashcards.json`
+
+Supporting enrichment lives in:
+
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
 
-### Rest days
-Day 7 remains intentionally light:
-- no required new glossary
-- no required new flashcards
-- optional review or recovery only
+Page components should consume normalized data through `src/lib/site-data.js` rather than re-embedding content assumptions locally.
 
-## Content model decisions
+## Data Decisions
 
 ### Glossary
-The glossary is global and canonical.
 
-Current shape:
+Glossary is the source of truth.
+
+Current schema:
+
 - `id`
 - `term`
 - `category`
 - `bullets`
 
 Bullet roles:
+
 1. what it is
 2. what it does
-3. how it works / mental model
+3. how it works
 
 ### Flashcards
+
 Flashcards are global, canonical, and glossary-derived.
 
-Current shape:
+Current schema:
+
 - `id`
 - `type`
 - `difficulty`
 - `front`
 - `back`
 
-Types:
+Current card set:
+
 - `definition`
 - `understanding`
 - `application`
 
-Each glossary term maps to exactly three flashcards.
-Card IDs use:
+ID convention:
+
 - `<term-id>-definition`
 - `<term-id>-mechanism`
 - `<term-id>-scenario`
 
-The current dataset contains 252 glossary terms and 756 unique flashcards.
+Current dataset totals:
 
-### Progressive day decks
-Study days no longer reuse one identical weekly flashcard set.
+- 252 glossary terms
+- 756 unique flashcards
 
-Current rule set:
-- Day 1-5 list only the newly introduced glossary terms for that day
+### Day Deck Behavior
+
+Study days no longer reuse a cumulative deck.
+
+Current rules:
+
+- Days 1-5 list only the newly introduced glossary terms for that day
+- Days 1-5 list only the newly introduced flashcards for that day
 - Day 6 uses the full weekly review deck
 - Day 7 keeps empty `glossary_ids` and `flashcard_ids`
 
-### Flashcard documentation
-`docs/flashcard_info.md` is the maintained reference for:
-- the executive summary of how cards are created from glossary entries
-- the relationship between weekly topics and their assigned card sets
-- the full flashcard inventory grouped by study week
+### Week Detail Interaction
 
-If canonical content changes in `src/data/content/`, the flashcard documentation must be regenerated so wording and counts stay synchronized.
+Daily sessions on week detail pages are rendered as collapsed cards by default and expand only when the user opens them.
 
-### Audit coverage
-`scripts/audit_flashcards.mjs` now checks:
-- day-deck progression across Days 1-5
-- week deck coverage by the union of Days 1-5
-- glossary reference integrity
-- exactly three primary cards per glossary term
-- banned prompt stems
-- scenario fronts that leak the answer term
-- front/back echo issues
+Completed sessions may auto-close when toggled complete, but incomplete sessions are not forced open on load.
 
-## Storage model
+## Persistence Decisions
 
-Primary backend:
+Primary persistence backend:
+
 - IndexedDB
 
 Database:
+
 - `cyber-study-db`
 
 Object store:
+
 - `kv`
 
-Keys:
+Primary keys:
+
 - `cyber-study-progress-v1`
 - `cyber-study-notes-v2`
 - `cyber-study-note-export-meta-v1`
 
-Legacy localStorage values are migrated into IndexedDB on first upgraded load and retained as fallback backup data.
+Theme keys:
 
-## Product split
+- `cyber-study-color-theme-v1`
+- `cyber-study-typography-theme-v1`
 
-### Layer A
-Public routes remain curriculum and portfolio focused:
-- roadmap
-- weeks
-- resources
-- glossary
-- flashcards
-- security journal prompts
-- progress
-- about
+Legacy localStorage values are migrated into IndexedDB on upgraded load and retained as fallback backup data.
 
-### Layer B
-`/notes/` remains separate in framing, storage usage, and workflow:
-- day notes
-- week reflections
-- structured journal notes
-- Markdown export
-- JSON import/export
+## UX Decisions
 
-## Boot intro decision
+### Notes Separation
 
-The boot intro now runs once per app session:
-- it appears when the app is opened in a fresh tab/session
-- it does not replay on normal route navigation in that session
-- it remains skippable
-- it remains disabled for reduced-motion users
+Notes stay outside the public curriculum pages. Week and day pages link into the notes tool rather than embedding a private editor directly into public study routes.
 
-## Theme decision
+### Theme System
 
-The app now uses one persisted color-theme selector with token-based palette swaps.
+Color themes remain token-driven and locally persisted.
 
-Current theme set:
+Current color-theme set:
+
 - `Current`
 - `Inked`
 - `Amethyst Mint`
@@ -154,24 +171,48 @@ Current theme set:
 - `Driftwood Pearl`
 - `Graphite`
 
-## Quality notes
+Current typography-theme set:
 
-### Glossary and flashcards
-- glossary Bullet 3 now explains mechanism rather than category placement
-- flashcards now mirror the glossary with deterministic `definition/function/mechanism` cards
+- `Default`
+- `Ops Console`
+- `Editor Clean`
+- `Mono Range`
 
-### Client rendering
-Current client rendering paths use DOM APIs instead of string-based HTML insertion.
+### Boot Intro
 
-## Remaining limitations
+The boot intro runs once per browser session, is skippable, and is disabled for reduced-motion users.
 
-### Dependency audit
-Transitive high-severity build-tool audit findings remain in the PWA/Astro toolchain and are being monitored rather than blindly force-fixed.
+## Audit Coverage
 
-### Native packaging
-Android packaging still depends on Android Studio being installed locally.
+`scripts/audit_flashcards.mjs` currently checks:
 
-## Recommended next enhancements
-1. Add integrity checks for glossary/flashcard consistency.
-2. Add linting and lightweight automated tests.
-3. Replace placeholder PWA icons with final branded assets.
+- Days 1-5 are not identical within a week
+- Days 1-5 do not repeat flashcards before Day 6
+- the union of Days 1-5 covers the week deck
+- glossary references resolve correctly
+- each glossary term has exactly three primary cards
+- banned stems do not appear in flashcard fronts
+- scenario fronts do not leak the answer term
+- front/back six-word echo issues are caught
+
+## Documentation Expectations
+
+When app behavior or canonical data changes, update these docs in the same pass:
+
+- `README.md`
+- `docs/overview.md`
+- `docs/code-audit.md`
+- `docs/flashcard_info.md` when counts, deck rules, or card-generation behavior change
+- `IMPLEMENTATION_NOTES.md`
+
+`docs/glossary_flashcard_overhaul_report.md` is historical justification for the glossary overhaul, not the live product spec.
+
+## Remaining Limits
+
+### Dependency Audit Noise
+
+Transitive build-tool audit findings may still appear in the Astro/PWA toolchain. Those should be upgraded deliberately and then retested rather than force-fixed blindly.
+
+### Native Packaging
+
+Android packaging still depends on Android Studio being available locally.

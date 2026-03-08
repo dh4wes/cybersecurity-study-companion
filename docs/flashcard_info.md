@@ -4,6 +4,8 @@
 
 This document is derived from the canonical content files in `src/data/content/` and covers all 756 unique flashcards used by the 32-week study companion.
 
+This is a live reference document. If glossary, flashcard, or day-deck behavior changes, this file should be updated in the same pass.
+
 Flashcard creation model:
 - Glossary terms are the source of truth.
 - Each glossary entry contains exactly three teaching bullets: what it is, what it does, and how it works.

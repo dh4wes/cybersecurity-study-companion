@@ -1,68 +1,134 @@
 # Cybersecurity Study Companion Overview
 
-## Product summary
+## Product Summary
 
-This repository contains a static Astro application that presents a 32-week cybersecurity roadmap as:
-- a public proof-of-work portfolio
-- a private local-first study tool
+This repository contains a static Astro app that presents a 32-week cybersecurity roadmap as:
 
-The application is split into two layers:
-- Layer A: public study companion and portfolio routes
-- Layer B: private notes workspace at `/notes/`
+- a public proof-of-work study companion
+- a private local-first notes workspace
 
-The current app supports:
-- static deployment
-- PWA installability
-- IndexedDB persistence
-- offline curriculum access after first load
-- optional Capacitor Android packaging
+The app is intentionally split into two layers:
+
+- Layer A: public curriculum, progress, glossary, flashcards, and portfolio context
+- Layer B: local-only notes at `/notes/`
 
 Current content totals:
+
 - 32 weeks
 - 224 day records
 - 252 canonical glossary entries
 - 756 unique flashcards
 - 32 weekly review decks
 
-## Architectural constraints
+## Architecture
+
+Key constraints:
+
 - static output only
 - GitHub Pages compatible
 - no backend
 - no authentication
 - local-only persistence
-- canonical precomputed glossary and flashcards
+- canonical content is precomputed in JSON
 
-## Route map
+High-level flow:
 
-### Layer A
-- `/`
-- `/roadmap/`
-- `/weeks/`
-- `/weeks/<slug>/`
-- `/resources/`
-- `/glossary/`
-- `/flashcards/`
-- `/flashcards/export/`
-- `/security-journal/`
-- `/progress/`
-- `/about/`
-- `/offline/`
+1. Canonical content is read from `src/data/content/`.
+2. `src/lib/site-data.js` normalizes weeks, days, glossary, flashcards, and review decks.
+3. Astro pages render server-side static HTML from that normalized data.
+4. Route-specific browser scripts add filters, persistence, export, and progress behavior.
+5. IndexedDB stores local progress, notes, export metadata, and theme preferences.
 
-### Layer B
-- `/notes/`
+## Route Behavior
 
-## Data architecture
+### Home
+
+- current phase and current week summary
+- quick links into the roadmap
+- progress snapshot
+- next-study navigation powered by client-side progress state
+
+### Weeks Archive
+
+- filterable week list
+- filters for phase, week, session type, laptop requirement, and task tags
+- progress-aware week cards
+
+### Week Detail Pages
+
+- week hero with focus, deliverable, and checkpoint
+- seven daily session cards
+- cards are collapsed by default and expand on click
+- study days show only new glossary terms and new flashcards for that day
+- Day 6 shows the full weekly review deck
+- Day 7 remains a rest/recovery session with no required new study deck
+- progress toggles, notes CTAs, and day-level Anki export
+
+### Glossary
+
+- canonical glossary explorer
+- search plus category, phase, and week filtering
+- entries display the three-bullet teaching structure directly
+
+### Flashcards
+
+- canonical flashcard explorer
+- filters for search, phase, week, day, card type, and difficulty
+- answer-reveal UI
+- TSV export for all cards or the filtered view
+
+### Progress
+
+- total completion metrics
+- phase progress
+- week progress
+- blocked-item tracking
+- next unfinished task and next deliverable
+- local export/import/reset controls
+
+### Notes
+
+- day notes
+- week reflections and artifact links
+- security journal notes
+- Markdown export
+- JSON backup import/export
+
+### Resources
+
+- category-grouped resource hub
+- use case, best weeks, link, and notes for each resource
+
+### Security Journal
+
+- prompt-oriented public reference page
+- separate from the private notes capture workflow
+
+### About
+
+- product framing
+- roadmap scope summary
+- workbook workload model reference table
+
+### Offline
+
+- offline fallback route for uncached navigation
+
+## Data Model
 
 Canonical datasets:
+
 - `src/data/content/study-companion-v2.json`
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
 
 Supporting datasets:
+
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
 
-### Top-level structure
+Top-level collections in `study-companion-v2.json`:
+
 - `site`
 - `core_pages`
 - `resources`
@@ -71,25 +137,31 @@ Supporting datasets:
 - `security_journal_prompts`
 - `portfolio_outputs`
 - `review_decks`
+- `metadata`
 
-### Glossary model
-Glossary is canonical and global. Days reference glossary IDs rather than embedding glossary content directly.
+### Glossary Model
+
+Glossary is canonical and global. Days and weeks reference glossary IDs instead of embedding glossary text.
 
 Shape:
+
 - `id`
 - `term`
 - `category`
 - `bullets`
 
 Bullet roles:
+
 1. what it is
 2. what it does
-3. how it works at a high level
+3. how it works
 
-### Flashcard model
-Flashcards are generated from glossary bullets.
+### Flashcard Model
+
+Flashcards are derived from glossary entries.
 
 Shape:
+
 - `id`
 - `type`
 - `difficulty`
@@ -97,88 +169,54 @@ Shape:
 - `back`
 
 Types:
+
 - `definition`
 - `understanding`
 - `application`
 
-Each glossary term maps to exactly three cards.
-Card IDs use:
+Each glossary term maps to exactly three primary flashcards:
+
 - `<term-id>-definition`
 - `<term-id>-mechanism`
 - `<term-id>-scenario`
 
-The current repository contains 756 unique flashcards derived from 252 glossary entries.
+### Day Mapping
 
-### Day mapping
-Each instructional day references:
+Each day references:
+
 - `glossary_ids`
 - `flashcard_ids`
 
-Day 1-5 decks list only the newly introduced glossary terms and flashcards for that day instead of repeating prior entries.
-Day 6 is the full weekly review deck.
-Day 7 is an empty rest-day deck.
+Behavior:
 
-## Storage model
+- Days 1-5 contain only that day’s new terms and cards
+- Day 6 aggregates the full weekly review deck
+- Day 7 keeps empty study decks by design
+
+## Persistence
 
 The app uses IndexedDB with:
+
 - database: `cyber-study-db`
 - object store: `kv`
 
-Keys:
+Primary keys:
+
 - `cyber-study-progress-v1`
 - `cyber-study-notes-v2`
 - `cyber-study-note-export-meta-v1`
 
-Legacy localStorage values are migrated into IndexedDB on first upgraded load.
+Theme preferences are also persisted locally through:
 
-## Page behavior
+- `cyber-study-color-theme-v1`
+- `cyber-study-typography-theme-v1`
 
-### Home
-- current phase and week
-- quick links
-- progress summary
-- next unfinished task
+Legacy localStorage values are migrated forward into IndexedDB on upgraded load.
 
-### Weeks archive
-- filters for phase, week, session type, laptop requirement, and task tags
-- progress-aware week cards
+## Theme And Motion System
 
-### Week detail pages
-- week hero with focus, deliverable, checkpoint
-- seven day cards
-- day objectives, tasks, resources, glossary, flashcards, checkpoint
-- progress controls
-- notes CTA without embedded note editor
+Color themes:
 
-### Glossary
-- canonical glossary explorer
-- search plus category, phase, week, tag, and exam-relevance filtering
-
-### Flashcards
-- canonical flashcard explorer
-- phase, week, day, type, and difficulty filtering
-- reveal-answer UI
-- Anki TSV export
-
-### Progress
-- overall completion
-- phase and week progress
-- blocked items
-- next deliverable
-- import/export/reset
-
-### Notes
-- day notes
-- week reflections
-- structured journal notes
-- Markdown export
-- JSON import/export
-
-## Theme system
-
-The visual system keeps the cyber-terminal layout and token structure while allowing color-palette swaps through a persisted selector.
-
-Available color themes:
 - `Current`
 - `Inked`
 - `Amethyst Mint`
@@ -190,37 +228,39 @@ Available color themes:
 - `Driftwood Pearl`
 - `Graphite`
 
-Theme state is stored in `cyber-study-color-theme-v1`.
+Typography themes:
 
-## Boot intro behavior
+- `Default`
+- `Ops Console`
+- `Editor Clean`
+- `Mono Range`
 
-The boot intro runs once per app session:
-- it appears when the app is opened in a fresh browser tab or session
-- it does not replay on normal internal navigation
-- it can be skipped immediately
-- it is disabled for reduced-motion users
+Boot intro behavior:
 
-## PWA and offline model
+- runs once per app session
+- is skippable
+- does not replay on normal internal navigation
+- is disabled for reduced-motion users
 
-The app uses `@vite-pwa/astro` to generate:
-- manifest
-- service worker
+## PWA And Native Packaging
+
+The app uses `@vite-pwa/astro` for:
+
+- manifest generation
+- service worker generation
 - offline support
 
 Offline behavior:
-- visited curriculum routes remain available after first successful online load
+
+- visited routes remain available after first successful load
 - uncached navigation falls back to `/offline/`
 
 Capacitor behavior:
+
+- Android packaging remains optional
 - service worker registration is skipped inside the native shell
 
-## Android packaging
-
-Key files:
-- `capacitor.config.ts`
-- `android/`
-
-Typical workflow:
+Typical Android workflow:
 
 ```bash
 npm run build:cap
@@ -228,62 +268,18 @@ npm run cap:sync
 npm run cap:open
 ```
 
-## Repo structure
-- `src/pages/`
-- `src/components/`
-- `src/layouts/`
-- `src/styles/global.css`
-- `src/scripts/`
-- `src/scripts/runtime/client-utils.js`
-- `src/lib/site-data.js`
-- `src/lib/anki-export.js`
-- `src/data/content/`
-- `docs/`
+## Maintenance Workflow
 
-## Documentation map
-- `README.md`: quick orientation and operating assumptions
-- `docs/overview.md`: architecture and product behavior reference
-- `docs/flashcard_info.md`: executive summary of flashcard generation plus the full week-by-week flashcard inventory
-- `docs/glossary_flashcard_overhaul_report.md`: pre-change coverage and quality audit for the glossary and flashcard overhaul
-- `docs/code-audit.md`: audit findings and maintenance posture
-- `IMPLEMENTATION_NOTES.md`: migration assumptions and persistent implementation choices
-
-## Content corrections
-
-### Week 1 support correction
-- Day 1: LearnFree Computers 101
-- Day 2: Professor Messer BIOS Settings
-- Day 3: Professor Messer Copper Connectors
-- Day 4: Microsoft `msinfo32.exe`
-- Day 5: Professor Messer Pop Quizzes Archive
-- Day 6: CompTIA A+ Core 1 overview/objectives
-- Day 7: none
-
-### Glossary and flashcards
-- glossary Bullet 3 now explains mechanism / mental model
-- flashcards now use `definition`, `understanding`, and `application` types
-- card IDs now use `-definition`, `-mechanism`, and `-scenario`
-- each flashcard back is copied from the corresponding glossary bullet or `TERM — purpose` pair
-
-## Build and verification
-
-Development:
+After changing glossary, flashcards, or syllabus data:
 
 ```bash
-npm install
-npm run dev
-```
-
-Production:
-
-```bash
+npm run audit:flashcards
 npm run build
-npm run preview
 ```
 
-Verification focus:
-- static build passes
-- core routes render
-- IndexedDB migration works
-- PWA manifest and service worker register
-- offline fallback works
+Reference docs:
+
+- `README.md` for repo-level orientation
+- `docs/code-audit.md` for current quality posture
+- `docs/flashcard_info.md` for flashcard inventory and generation summary
+- `IMPLEMENTATION_NOTES.md` for durable product decisions

@@ -4,6 +4,8 @@ Date: 2026-03-08
 
 This report captures the pre-change audit required before editing the canonical content data.
 
+It is retained as historical justification for the overhaul and should not be treated as the live product specification.
+
 ## A. Coverage Audit by Week
 
 Format:
