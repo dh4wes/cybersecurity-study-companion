@@ -344,10 +344,6 @@ const isActive = (path) => {
       height: clamp(180px, 48vw, 280px);
     }
 
-    .theme-switcher select {
-      min-width: 110px;
-    }
-
     .site-nav {
       display: none;
     }
@@ -360,14 +356,17 @@ const isActive = (path) => {
       bottom: 0;
       z-index: 45;
       border-top: 1px solid var(--border);
-      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 -8px 24px rgba(9, 7, 6, 0.22);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .theme-controls {
+      display: none;
     }
   }
 
   @media (max-width: 640px) {
-    .theme-controls {
-      display: none;
-    }
 
     .brand {
       font-size: 0.9rem;

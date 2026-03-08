@@ -7,6 +7,34 @@ const year = new Date().getFullYear();
     <p>Cybersecurity Study Companion. Static portfolio and curriculum layer.</p>
     <p class="small">Layer B notes stay local in-browser ({year})</p>
   </div>
+  <div class="mobile-theme-shell">
+    <div class="mobile-theme-panel">
+      <label class="theme-switcher">
+        <span>Type</span>
+        <select class="js-font-theme" aria-label="Select typography theme">
+          <option value="default">Default</option>
+          <option value="ops-console">Ops Console</option>
+          <option value="editor-clean">Editor Clean</option>
+          <option value="mono-range">Mono Range</option>
+        </select>
+      </label>
+      <label class="theme-switcher">
+        <span>Color</span>
+        <select class="js-color-theme" aria-label="Select color theme">
+          <option value="default">Banner</option>
+          <option value="inked">Inked</option>
+          <option value="amethyst-mint-harmony">Amethyst Mint</option>
+          <option value="woodland">Woodland</option>
+          <option value="jade-pebble-morning">Jade Pebble</option>
+          <option value="cocoa-topaz-noonday">Cocoa Topaz</option>
+          <option value="sorbet">Sorbet</option>
+          <option value="pearl">Pearl</option>
+          <option value="driftwood-pearl-morning">Driftwood Pearl</option>
+          <option value="graphite">Graphite</option>
+        </select>
+      </label>
+    </div>
+  </div>
 </footer>
 
 <style>
@@ -33,5 +61,54 @@ const year = new Date().getFullYear();
     letter-spacing: 0.11em;
     text-transform: uppercase;
     font-weight: 700;
+  }
+
+  .mobile-theme-shell {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .site-footer {
+      padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+    }
+
+    .mobile-theme-shell {
+      display: block;
+      width: min(1160px, 95vw);
+      margin: 0 auto;
+      padding: 0 0 1rem;
+    }
+
+    .mobile-theme-panel {
+      display: grid;
+      gap: 0.7rem;
+      padding: 0.9rem;
+      border: 1px solid color-mix(in srgb, var(--border) 72%, var(--glass-highlight));
+      background: linear-gradient(180deg, rgba(244, 234, 212, 0.12), rgba(36, 29, 23, 0.34));
+      box-shadow: var(--glass-shadow);
+      backdrop-filter: blur(calc(var(--glass-blur) * 1.1)) saturate(1.08);
+      -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 1.1)) saturate(1.08);
+    }
+
+    .theme-switcher {
+      display: grid;
+      gap: 0.35rem;
+      color: var(--ink);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: calc(var(--type-kicker-tracking) * 0.62);
+      font-weight: 700;
+    }
+
+    .theme-switcher select {
+      min-height: 46px;
+      border: 1px solid color-mix(in srgb, var(--border) 72%, var(--glass-highlight));
+      background: rgba(244, 234, 212, 0.12);
+      color: var(--ink);
+      padding: 0.55rem 0.65rem;
+      border-radius: 0;
+      backdrop-filter: blur(calc(var(--glass-blur) * 0.75));
+      -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.75));
+    }
   }
 </style>
