@@ -193,9 +193,10 @@ const notesWeeks = weeks.map((week) => ({
   }
 
   .tabs button.active {
-    background: var(--accent-soft);
+    background: color-mix(in srgb, var(--accent-soft) 60%, rgba(244, 234, 212, 0.4));
     color: var(--accent-dark);
     border-color: var(--accent);
+    box-shadow: inset 0 0 0 1px rgba(244, 234, 212, 0.12);
   }
 
   .actions {

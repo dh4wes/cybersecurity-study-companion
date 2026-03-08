@@ -21,6 +21,45 @@ const applyDayVisualState = (card, isComplete, isBlocked) => {
 
 const pad2 = (value) => String(Number(value) || 0).padStart(2, '0');
 
+const setWeekLockedState = (data, isUnlocked) => {
+  const lockBanner = document.querySelector('.js-week-lock-banner');
+  const lockMessage = document.querySelector('.js-week-lock-message');
+
+  if (lockBanner) {
+    lockBanner.hidden = isUnlocked;
+  }
+
+  if (lockMessage && !isUnlocked && data.previousWeekNumber) {
+    lockMessage.textContent = `Complete Week ${pad2(data.previousWeekNumber)} to unlock this content.`;
+  }
+
+  document.querySelectorAll('.js-day-card').forEach((card) => {
+    card.open = false;
+    card.toggleAttribute('hidden', !isUnlocked);
+  });
+
+  document.querySelectorAll('.js-lockable-week-section').forEach((section) => {
+    section.toggleAttribute('hidden', !isUnlocked);
+  });
+
+  [
+    '.js-week-complete',
+    '.js-export-week-anki',
+    '.js-save-reflection',
+    '.js-save-artifact',
+    '.js-artifact-url',
+    '.js-week-reflection'
+  ].forEach((selector) => {
+    document.querySelectorAll(selector).forEach((node) => {
+      node.disabled = !isUnlocked;
+    });
+  });
+
+  document.querySelectorAll('.js-export-day-anki, .js-complete-toggle, .js-block-toggle').forEach((node) => {
+    node.disabled = !isUnlocked;
+  });
+};
+
 const initDayCards = (weekId) => {
   const progress = getProgress();
 
@@ -190,6 +229,19 @@ const boot = async () => {
   await loadProgress();
   const data = parseJsonScript('week-data-json', {});
   if (!data.weekId) return;
+  const progress = getProgress();
+  const completedDaySet = new Set(progress.completedDays || []);
+  const previousWeekActionableDayIds = Array.isArray(data.previousWeekActionableDayIds)
+    ? data.previousWeekActionableDayIds
+    : [];
+  const previousWeekCompleted = !data.previousWeekId
+    || progress.completedWeeks.includes(data.previousWeekId)
+    || (
+      previousWeekActionableDayIds.length > 0
+      && previousWeekActionableDayIds.every((dayId) => completedDaySet.has(dayId))
+    );
+  setWeekLockedState(data, !data.previousWeekId || previousWeekCompleted);
+  if (data.previousWeekId && !previousWeekCompleted) return;
   initDayCards(data.weekId);
   initWeekAnkiExport(data);
 };

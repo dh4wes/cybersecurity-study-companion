@@ -1,5 +1,5 @@
 import { getProgress, loadProgress } from './progress-storage.js';
-import { computeProgressMetrics, formatNextTask } from './progress-metrics.js';
+import { buildSequentialWeekUnlocks, computeProgressMetrics, formatNextTask } from './progress-metrics.js';
 import { initOnReady, parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 let homeWeeks = [];
@@ -8,6 +8,7 @@ const renderHome = () => {
   const weeks = homeWeeks;
   const progress = getProgress();
   const metrics = computeProgressMetrics(weeks, progress);
+  const unlockByWeekId = buildSequentialWeekUnlocks(weeks, progress);
 
   document.querySelectorAll('[data-progress-summary]').forEach((summary) => {
     const studyTarget = summary.querySelector('.js-completed-study');
@@ -22,6 +23,7 @@ const renderHome = () => {
   });
 
   const currentWeek = metrics.nextDeliverableWeek || weeks[weeks.length - 1];
+  const currentWeekUnlocked = currentWeek ? (unlockByWeekId.get(currentWeek.id) ?? currentWeek.week === 1) : false;
   const currentPhaseEl = document.querySelector('.js-current-phase');
   const currentWeekEl = document.querySelector('.js-current-week');
   if (currentPhaseEl && currentWeek) currentPhaseEl.textContent = currentWeek.phase;
@@ -29,8 +31,11 @@ const renderHome = () => {
 
   const currentWeekLink = document.querySelector('.js-current-week-link');
   if (currentWeekLink && currentWeek) {
-    currentWeekLink.setAttribute('href', currentWeek.href || withBase(currentWeek.slug));
-    currentWeekLink.textContent = `Open Week ${String(currentWeek.week).padStart(2, '0')} page`;
+    currentWeekLink.setAttribute('href', currentWeekUnlocked ? (currentWeek.href || withBase(currentWeek.slug)) : withBase('/roadmap/'));
+    currentWeekLink.textContent = currentWeekUnlocked
+      ? `Open Week ${String(currentWeek.week).padStart(2, '0')} page`
+      : `Week ${String(currentWeek.week).padStart(2, '0')} is locked`;
+    currentWeekLink.setAttribute('aria-disabled', String(!currentWeekUnlocked));
   }
 
   const currentFocus = document.querySelector('.js-current-focus');

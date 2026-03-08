@@ -6,12 +6,40 @@ export const buildWeekDayIndex = (weeks) =>
     actionableDays: week.days.filter((day) => day.session_type !== 'Rest')
   }));
 
+export const isWeekComplete = (week, completedSet, completedWeekSet) => {
+  const actionableDays = week.actionableDays || week.days?.filter((day) => day.session_type !== 'Rest') || [];
+  const allActionableDaysComplete =
+    actionableDays.length > 0 && actionableDays.every((day) => isSet(completedSet, day.id));
+  return completedWeekSet.has(week.id) || allActionableDaysComplete;
+};
+
+export const buildSequentialWeekUnlocks = (weeks, progress) => {
+  const completedSet = new Set(progress.completedDays || []);
+  const completedWeekSet = new Set(progress.completedWeeks || []);
+  const indexedWeeks = buildWeekDayIndex(weeks).sort((a, b) => a.week - b.week);
+  const unlockByWeekId = new Map();
+
+  indexedWeeks.forEach((week, index) => {
+    if (index === 0) {
+      unlockByWeekId.set(week.id, true);
+      return;
+    }
+
+    const previousWeek = indexedWeeks[index - 1];
+    unlockByWeekId.set(previousWeek.id, unlockByWeekId.get(previousWeek.id) ?? true);
+    unlockByWeekId.set(week.id, isWeekComplete(previousWeek, completedSet, completedWeekSet));
+  });
+
+  return unlockByWeekId;
+};
+
 export const computeProgressMetrics = (weeks, progress) => {
   const completedSet = new Set(progress.completedDays || []);
   const blockedSet = new Set(progress.blockedDays || []);
   const completedWeekSet = new Set(progress.completedWeeks || []);
 
   const indexedWeeks = buildWeekDayIndex(weeks);
+  const unlockByWeekId = buildSequentialWeekUnlocks(weeks, progress);
 
   const actionableDays = indexedWeeks.flatMap((week) => week.actionableDays);
   const studyDays = actionableDays.filter((day) => day.session_type === 'Study');
@@ -48,7 +76,7 @@ export const computeProgressMetrics = (weeks, progress) => {
   const progressByWeek = indexedWeeks.map((week) => {
     const total = week.actionableDays.length;
     const completed = week.actionableDays.filter((day) => isSet(completedSet, day.id)).length;
-    const isCompleted = completedWeekSet.has(week.id) || (total > 0 && completed === total);
+    const isCompleted = isWeekComplete(week, completedSet, completedWeekSet);
     return {
       week: week.week,
       id: week.id,
@@ -56,6 +84,8 @@ export const computeProgressMetrics = (weeks, progress) => {
       total,
       completed,
       isCompleted,
+      isUnlocked: unlockByWeekId.get(week.id) ?? week.week === 1,
+      isLocked: !(unlockByWeekId.get(week.id) ?? week.week === 1),
       percent: total ? Math.round((completed / total) * 100) : 0,
       deliverable: week.deliverable,
       checkpoint: week.checkpoint,

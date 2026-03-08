@@ -67,21 +67,27 @@ const renderWeekProgress = (container, metrics) => {
   clearNode(container);
 
   metrics.progressByWeek.forEach((week) => {
-    const card = createElement('article', { className: 'card week-row' });
+    const card = createElement('article', { className: `card week-row${week.isLocked ? ' is-locked' : ''}` });
     const kicker = createElement('p', {
       className: 'kicker',
       text: `Week ${String(week.week).padStart(2, '0')} • ${week.phase}`
     });
     const deliverableRow = createElement('p');
-    deliverableRow.appendChild(
-      createElement('a', {
-        text: week.deliverable,
-        attrs: { href: week.href || week.slug }
-      })
-    );
+    if (week.isLocked) {
+      deliverableRow.textContent = `${week.deliverable} (locked)`;
+    } else {
+      deliverableRow.appendChild(
+        createElement('a', {
+          text: week.deliverable,
+          attrs: { href: week.href || week.slug }
+        })
+      );
+    }
     const meta = createElement('p', {
       className: 'small',
-      text: `${week.completed}/${week.total} actionable days complete (${week.percent}%).`
+      text: week.isLocked
+        ? 'Locked until the previous week is complete.'
+        : `${week.completed}/${week.total} actionable days complete (${week.percent}%).`
     });
 
     appendChildren(card, [kicker, deliverableRow, meta, createTrack(week.percent)]);

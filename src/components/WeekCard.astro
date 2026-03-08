@@ -1,8 +1,11 @@
 ---
+import { withBase } from '../lib/site-data.js';
+
 const { week, compact = false, showProgress = false } = Astro.props;
 const daySessionTypes = [...new Set(week.days.map((day) => day.session_type))];
 const dayLaptopValues = [...new Set(week.days.map((day) => day.laptop_needed))];
 const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
+const lockImage = withBase('/images/lock.jpg');
 ---
 
 <article
@@ -14,6 +17,9 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   data-laptop-needs={dayLaptopValues.join('|')}
   data-task-tags={dayTaskTags.join('|')}
 >
+  <div class="week-card-media" aria-hidden="true">
+    <img class="week-card-lock-image" src={lockImage} alt="" loading="lazy" />
+  </div>
   <div class="card-top">
     <p class="kicker">Week {String(week.week).padStart(2, '0')} • {week.phase}</p>
     {showProgress ? (
@@ -45,9 +51,12 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
   )}
 
   {showProgress ? <p class="small js-week-progress" data-week-id={week.id}></p> : null}
+  <p class="small week-lock-copy js-week-lock-copy" data-week-id={week.id} hidden>
+    Complete the previous week to unlock this one.
+  </p>
 
   <p class="cta-wrap">
-    <a class="btn secondary" href={week.href || week.slug}>Open week page</a>
+    <a class="btn secondary js-week-open-link" href={week.href || week.slug}>Open week page</a>
   </p>
 </article>
 
@@ -58,9 +67,61 @@ const dayTaskTags = [...new Set(week.days.flatMap((day) => day.taskTagList))];
     transition: border-color 0.15s linear, background 0.15s linear, color 0.15s linear, opacity 0.15s linear;
   }
 
+  .week-card-media {
+    display: none;
+    margin: -1rem -1rem 0.4rem;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    min-height: 148px;
+    background:
+      linear-gradient(180deg, rgba(22, 18, 15, 0.08), rgba(22, 18, 15, 0.34)),
+      color-mix(in srgb, var(--surface-soft) 78%, rgba(244, 234, 212, 0.08));
+  }
+
+  .week-card-lock-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: saturate(0.7) contrast(0.92) brightness(0.78);
+  }
+
   .week-card:hover {
     background: linear-gradient(180deg, var(--surface-hover-start), var(--surface-hover-end));
     border-color: var(--accent);
+  }
+
+  .week-card.is-locked {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface) 84%, rgba(244, 234, 212, 0.08)), color-mix(in srgb, var(--surface-soft) 88%, rgba(22, 18, 15, 0.12)));
+    border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
+  }
+
+  .week-card.is-locked:hover {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface) 84%, rgba(244, 234, 212, 0.08)), color-mix(in srgb, var(--surface-soft) 88%, rgba(22, 18, 15, 0.12)));
+    border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
+  }
+
+  .week-card.is-locked .week-card-media {
+    display: block;
+  }
+
+  .week-card.is-locked .week-toggle {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  .week-card.is-locked .week-lock-copy {
+    display: block;
+    color: color-mix(in srgb, var(--ink-soft) 88%, var(--c-white));
+  }
+
+  .week-card.is-locked .js-week-open-link {
+    pointer-events: none;
+    opacity: 0.55;
+    border-color: color-mix(in srgb, var(--border) 82%, rgba(244, 234, 212, 0.18));
+    color: var(--ink-soft);
   }
 
   .week-card.is-complete {

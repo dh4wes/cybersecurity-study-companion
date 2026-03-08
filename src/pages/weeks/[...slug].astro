@@ -29,6 +29,7 @@ export const getStaticPaths = () =>
 
 const { week } = Astro.props;
 const weekId = week.id;
+const previousWeek = weeks.find((entry) => entry.week === week.week - 1) || null;
 const phaseOrder = [...new Set(weeks.map((entry) => entry.phase))];
 const phaseNumber = Math.max(1, phaseOrder.indexOf(week.phase) + 1);
 
@@ -62,6 +63,10 @@ const dayFlashcards = week.days.map((day) => ({
     <h1>{week.weekly_focus}</h1>
     <p><strong>Deliverable:</strong> {week.deliverable}</p>
     <p><strong>Checkpoint:</strong> {week.checkpoint}</p>
+    <article class="card week-lock-banner js-week-lock-banner" hidden>
+      <h2>This week is locked</h2>
+      <p class="js-week-lock-message">Complete the previous week to unlock this content.</p>
+    </article>
     <div class="inline export-wrap">
       <button type="button" class="secondary js-export-week-anki">
         Export this week&apos;s flashcards to Anki (.tsv)
@@ -75,7 +80,7 @@ const dayFlashcards = week.days.map((day) => ({
     <p class="small js-week-complete-state" aria-live="polite"></p>
   </section>
 
-  <section class="section">
+  <section class="section js-lockable-week-section">
     <div class="section-header">
       <h2>Daily Plan</h2>
       <p class="small">
@@ -97,7 +102,7 @@ const dayFlashcards = week.days.map((day) => ({
     </div>
   </section>
 
-  <section class="section two-col">
+  <section class="section two-col js-lockable-week-section">
     <article class="card">
       <h2>Weekly Output / Portfolio</h2>
       <p><strong>What to publish:</strong> {week.page?.what_to_publish || week.deliverable}</p>
@@ -124,6 +129,12 @@ const dayFlashcards = week.days.map((day) => ({
     set:html={JSON.stringify({
       weekId,
       weekNumber: week.week,
+      previousWeekId: previousWeek?.id || null,
+      previousWeekNumber: previousWeek?.week || null,
+      previousWeekHref: previousWeek?.href || null,
+      previousWeekActionableDayIds: previousWeek
+        ? previousWeek.days.filter((day) => day.session_type !== 'Rest').map((day) => day.id)
+        : [],
       phaseNumber,
       weekFlashcards,
       dayFlashcards
@@ -160,5 +171,14 @@ const dayFlashcards = week.days.map((day) => ({
 
   .export-wrap {
     margin-top: 0.5rem;
+  }
+
+  .week-lock-banner {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 0.85rem;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface-soft) 74%, rgba(244, 234, 212, 0.14)), color-mix(in srgb, var(--surface) 86%, rgba(22, 18, 15, 0.12)));
+    border-color: color-mix(in srgb, var(--border) 78%, rgba(244, 234, 212, 0.18));
   }
 </style>
