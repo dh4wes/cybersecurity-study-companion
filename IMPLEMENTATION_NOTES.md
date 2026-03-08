@@ -69,7 +69,7 @@ The current dataset contains 252 glossary terms and 756 unique flashcards.
 Study days no longer reuse one identical weekly flashcard set.
 
 Current rule set:
-- Day 1-5 progressively introduce the week's ordered glossary terms
+- Day 1-5 list only the newly introduced glossary terms for that day
 - Day 6 uses the full weekly review deck
 - Day 7 keeps empty `glossary_ids` and `flashcard_ids`
 

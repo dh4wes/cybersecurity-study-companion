@@ -87,10 +87,22 @@ for (const week of study.weeks) {
     .filter(Boolean)
     .sort((a, b) => a.day - b.day);
   const studyDays = dayRecords.filter((day) => day.day >= 1 && day.day <= 5);
+  const priorCards = new Set();
 
   const seenDecks = new Set(studyDays.map((day) => JSON.stringify(day.flashcard_ids || [])));
   if (seenDecks.size !== studyDays.length) {
     errors.push(`Week ${week.week} has identical day decks across Days 1-5.`);
+  }
+
+  for (const day of studyDays) {
+    for (const cardId of day.flashcard_ids || []) {
+      if (priorCards.has(cardId)) {
+        errors.push(`Week ${week.week} repeats flashcard ${cardId} before Day 6 (found again on Day ${day.day}).`);
+      }
+    }
+    for (const cardId of day.flashcard_ids || []) {
+      priorCards.add(cardId);
+    }
   }
 
   const union = new Set(studyDays.flatMap((day) => day.flashcard_ids || []));

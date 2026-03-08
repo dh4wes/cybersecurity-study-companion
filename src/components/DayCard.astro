@@ -16,6 +16,8 @@ const {
 } = Astro.props;
 
 const sessionClass = day.session_type === 'Review' ? 'accent' : day.session_type === 'Rest' ? 'neutral' : 'success';
+const glossaryHeading = day.session_type === 'Review' ? 'Weekly Review Glossary' : "Today's New Glossary Terms";
+const flashcardHeading = day.session_type === 'Review' ? 'Weekly Review Flashcards' : "Today's New Flashcards";
 const todoItems = Array.isArray(day.todoList)
   ? day.todoList
   : Array.isArray(day.todo)
@@ -87,7 +89,7 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 
     <section class="section glossary-section">
       <div class="section-header">
-        <h4>Today's Glossary Terms</h4>
+        <h4>{glossaryHeading}</h4>
         <span class="badge neutral">{glossaryEntries.length}</span>
       </div>
 
@@ -104,12 +106,12 @@ const sourceLinks = Array.isArray(day.sourceLinks) ? day.sourceLinks : [];
 
     <section class="section flashcard-section">
       <div class="section-header">
-        <h4>Today's Flashcards</h4>
+        <h4>{flashcardHeading}</h4>
         <div class="meta">
           <span class="badge neutral">{flashcardEntries.length}</span>
           {flashcardEntries.length ? (
             <button type="button" class="ghost export-day-btn js-export-day-anki" data-day-id={day.id}>
-              Export today&apos;s cards
+              {day.session_type === 'Review' ? "Export review deck" : "Export new cards"}
             </button>
           ) : null}
         </div>

@@ -114,7 +114,7 @@ Each instructional day references:
 - `glossary_ids`
 - `flashcard_ids`
 
-Day 1-5 decks progressively accumulate the week's vocabulary instead of reusing one identical daily deck.
+Day 1-5 decks list only the newly introduced glossary terms and flashcards for that day instead of repeating prior entries.
 Day 6 is the full weekly review deck.
 Day 7 is an empty rest-day deck.
 

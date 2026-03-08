@@ -10,7 +10,7 @@ Flashcard creation model:
 - Each glossary entry is converted into exactly three flashcards with predictable IDs: `-definition`, `-mechanism`, and `-scenario`.
 - Definition cards use the glossary definition, mechanism cards use the mechanism bullet, and scenario cards use the purpose bullet in `TERM — purpose` format.
 - Week decks are built from ordered week glossary lists in `study-companion-v2.json`.
-- Day 1-5 decks progressively accumulate the week vocabulary, Day 6 is the full review deck, and Day 7 is empty by design.
+- Day 1-5 decks list only the new glossary terms and flashcards introduced that day, Day 6 is the full review deck, and Day 7 is empty by design.
 
 Deck totals:
 - 32 weeks
@@ -96,7 +96,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Foundation
 - Deliverable: Hardware glossary + power-on-to-login diagram
 - Checkpoint: Can explain what each main computer component does and how a system boots.
-- Study-week relationship: The ordered glossary terms for Week 01 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 01 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### CPU (`cpu`)
 
@@ -221,7 +221,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Foundation
 - Deliverable: Home-network map + ports and protocols sheet
 - Checkpoint: Can identify common devices, ports, and SOHO troubleshooting steps.
-- Study-week relationship: The ordered glossary terms for Week 02 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 02 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Mobile Device (`mobile-device`)
 
@@ -346,7 +346,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Foundation
 - Deliverable: OS comparison grid + install / upgrade checklist
 - Checkpoint: Can compare major operating systems and explain basic installation choices.
-- Study-week relationship: The ordered glossary terms for Week 03 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 03 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Operating System (`operating-system`)
 
@@ -453,7 +453,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Foundation
 - Deliverable: Three troubleshooting playbooks
 - Checkpoint: Can follow a support process and document incidents clearly.
-- Study-week relationship: The ordered glossary terms for Week 04 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 04 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Password Policy (`password-policy`)
 
@@ -560,7 +560,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Foundation
 - Deliverable: Ubuntu VM + Linux command cheat sheet
 - Checkpoint: Can navigate Linux comfortably enough to start labs and tooling.
-- Study-week relationship: The ordered glossary terms for Week 05 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 05 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Linux Kernel (`linux-kernel`)
 
@@ -667,7 +667,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: Packet-journey diagram
 - Checkpoint: Can describe how data moves through a simple network.
-- Study-week relationship: The ordered glossary terms for Week 06 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 06 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### LAN (`lan`)
 
@@ -783,7 +783,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: Layer 2 vs Layer 3 comparison sheet
 - Checkpoint: Can explain when a switch is enough and when a router is required.
-- Study-week relationship: The ordered glossary terms for Week 07 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 07 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Ethernet Frame (`ethernet-frame`)
 
@@ -890,7 +890,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: Subnet worksheet + address plan
 - Checkpoint: Can read and plan IPv4 subnets for small environments.
-- Study-week relationship: The ordered glossary terms for Week 08 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 08 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### IPv4 (`ipv4`)
 
@@ -988,7 +988,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: Ports / protocols sheet v2 + trace-route notes
 - Checkpoint: Can narrate the service path from 'join network' to 'page loads.'
-- Study-week relationship: The ordered glossary terms for Week 09 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 09 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### TCP (`tcp`)
 
@@ -1077,7 +1077,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: SOHO hardening checklist
 - Checkpoint: Can explain baseline protections for a small office or home network.
-- Study-week relationship: The ordered glossary terms for Week 10 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 10 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### SSID (`ssid`)
 
@@ -1175,7 +1175,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: Three annotated packet captures
 - Checkpoint: Can use packet captures to support an explanation instead of guessing.
-- Study-week relationship: The ordered glossary terms for Week 11 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 11 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Wireshark (`wireshark`)
 
@@ -1273,7 +1273,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Networking
 - Deliverable: End-to-end web request explainer
 - Checkpoint: Can explain internet plumbing clearly enough for a manager.
-- Study-week relationship: The ordered glossary terms for Week 12 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 12 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### HTTP Request (`http-request`)
 
@@ -1362,7 +1362,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Professional statement + CIA / framework notes
 - Checkpoint: Can define cybersecurity in business terms, not just technical terms.
-- Study-week relationship: The ordered glossary terms for Week 13 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 13 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### CIA Triad (`cia-triad`)
 
@@ -1442,7 +1442,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Starter risk register
 - Checkpoint: Can distinguish risk from vulnerability and link controls to business priorities.
-- Study-week relationship: The ordered glossary terms for Week 14 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 14 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Risk Register (`risk-register`)
 
@@ -1522,7 +1522,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Hardened network checklist
 - Checkpoint: Can describe how network design choices affect security outcomes.
-- Study-week relationship: The ordered glossary terms for Week 15 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 15 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Intrusion Detection (`intrusion-detection`)
 
@@ -1602,7 +1602,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Linux command notebook
 - Checkpoint: Can navigate Linux and explain permissions without memorizing blindly.
-- Study-week relationship: The ordered glossary terms for Week 16 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 16 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Linux Permissions (`linux-permissions`)
 
@@ -1682,7 +1682,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: SQL query notebook
 - Checkpoint: Can read and write basic SQL queries for security-relevant data.
-- Study-week relationship: The ordered glossary terms for Week 17 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 17 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### SQL Query (`sql-query`)
 
@@ -1744,7 +1744,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Asset inventory + data handling guide
 - Checkpoint: Can classify assets and explain why not all data deserves the same treatment.
-- Study-week relationship: The ordered glossary terms for Week 18 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 18 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Asset Inventory (`asset-inventory`)
 
@@ -1815,7 +1815,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Threat model + vulnerability notes
 - Checkpoint: Can reason from asset to attacker to mitigation.
-- Study-week relationship: The ordered glossary terms for Week 19 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 19 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Mitigation (`mitigation`)
 
@@ -1877,7 +1877,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: One-page IR playbook
 - Checkpoint: Can outline the incident lifecycle and the evidence sources used along the way.
-- Study-week relationship: The ordered glossary terms for Week 20 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 20 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Alert Triage (`alert-triage`)
 
@@ -1948,7 +1948,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Escalation matrix + incident summary
 - Checkpoint: Can explain how a SOC turns alerts into actions and communications.
-- Study-week relationship: The ordered glossary terms for Week 21 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 21 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Recovery (`recovery`)
 
@@ -2028,7 +2028,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Python basics notebook
 - Checkpoint: Can read and modify short Python scripts without freezing.
-- Study-week relationship: The ordered glossary terms for Week 22 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 22 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Python Script (`python-script`)
 
@@ -2090,7 +2090,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Automation script portfolio item
 - Checkpoint: Can connect automation ideas to real analyst workflows.
-- Study-week relationship: The ordered glossary terms for Week 23 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 23 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### API (`api`)
 
@@ -2161,7 +2161,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Resume bullets + five mock interview answers
 - Checkpoint: Can talk about your work in evidence-based, employer-friendly language.
-- Study-week relationship: The ordered glossary terms for Week 24 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 24 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Resume Tailoring (`resume-tailoring`)
 
@@ -2232,7 +2232,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: LinkedIn update + application tracker
 - Checkpoint: Your online profile and job-search system are live and usable.
-- Study-week relationship: The ordered glossary terms for Week 25 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 25 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### LinkedIn Profile (`linkedin-profile`)
 
@@ -2303,7 +2303,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: IAM / crypto / social-engineering brief
 - Checkpoint: Can explain core defensive principles clearly and consistently.
-- Study-week relationship: The ordered glossary terms for Week 26 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 26 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Identity (`identity`)
 
@@ -2401,7 +2401,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Security
 - Deliverable: Three breach summaries + management brief
 - Checkpoint: Can translate technical incidents into management language.
-- Study-week relationship: The ordered glossary terms for Week 27 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 27 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Reconnaissance (`reconnaissance`)
 
@@ -2472,7 +2472,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: GRC / Application
 - Deliverable: IR checklist + roles matrix
 - Checkpoint: Can think about incidents in terms of preparation, roles, and business continuity.
-- Study-week relationship: The ordered glossary terms for Week 28 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 28 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Incident Command (`incident-command`)
 
@@ -2543,7 +2543,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: GRC / Application
 - Deliverable: Risk register + control map
 - Checkpoint: Can talk about cyber in governance and resilience terms, not just tools.
-- Study-week relationship: The ordered glossary terms for Week 29 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 29 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Critical Infrastructure (`critical-infrastructure`)
 
@@ -2614,7 +2614,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: GRC / Application
 - Deliverable: SOC workflow + lab notes
 - Checkpoint: Can describe a defensive workflow from alert to escalation.
-- Study-week relationship: The ordered glossary terms for Week 30 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 30 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### SOC Workflow (`soc-workflow`)
 
@@ -2694,7 +2694,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: GRC / Application
 - Deliverable: Final portfolio pack + next-step plan
 - Checkpoint: You have a usable portfolio and a credible next-step roadmap.
-- Study-week relationship: The ordered glossary terms for Week 31 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 31 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Executive Briefing (`executive-briefing`)
 
@@ -2765,7 +2765,7 @@ Each week section explains the topic fit, then lists every flashcard attached to
 - Phase: Buffer / Final Review
 - Deliverable: Completion checklist + retrospective
 - Checkpoint: Everything is either complete or deliberately parked with a next step.
-- Study-week relationship: The ordered glossary terms for Week 32 match the syllabus focus for Days 1-5, accumulate into a full review deck on Day 6, and leave Day 7 empty for rest.
+- Study-week relationship: The ordered glossary terms for Week 32 match the syllabus focus for Days 1-5, appear on their first relevant day only, roll up into a full review deck on Day 6, and leave Day 7 empty for rest.
 
 ### Spaced Repetition (`spaced-repetition`)
 

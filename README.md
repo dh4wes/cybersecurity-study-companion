@@ -124,7 +124,7 @@ Each day references:
 - `glossary_ids`
 - `flashcard_ids`
 
-Day 1-5 progressively introduce each week's terms instead of reusing one identical daily deck.
+Day 1-5 each list only the new glossary terms and new flashcards introduced that day instead of repeating prior entries.
 Day 6 aggregates the full weekly review material.
 Day 7 intentionally avoids heavy new study content.
 

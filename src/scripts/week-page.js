@@ -16,8 +16,6 @@ const applyDayVisualState = (card, isComplete, isBlocked) => {
   card.classList.toggle('is-condensed', isComplete && !isBlocked);
   if (isComplete && !isBlocked) {
     card.open = false;
-  } else {
-    card.open = true;
   }
 };
 
