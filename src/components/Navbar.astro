@@ -110,10 +110,22 @@ const isActive = (path) => {
 
   .banner-shell {
     position: relative;
-    height: clamp(220px, 24vw, 340px);
+    height: clamp(240px, 34vw, 520px);
     overflow: hidden;
     border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
     background: #d8c8aa;
+  }
+
+  .banner-shell::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: clamp(56px, 9vw, 88px);
+    background: rgba(10, 11, 13, 0.84);
+    z-index: 1;
+    pointer-events: none;
   }
 
   .banner-shell::after {
@@ -129,7 +141,7 @@ const isActive = (path) => {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center top;
   }
 
@@ -225,9 +237,9 @@ const isActive = (path) => {
   }
 
   .site-nav {
-    margin-top: calc(clamp(220px, 24vw, 340px) * -0.23);
+    margin-top: calc(clamp(240px, 34vw, 520px) * -0.17);
     position: relative;
-    z-index: 2;
+    z-index: 3;
     border-top: 1px solid rgba(255, 244, 221, 0.15);
     border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
     background: rgba(10, 11, 13, 0.9);
@@ -329,7 +341,7 @@ const isActive = (path) => {
     }
 
     .banner-shell {
-      height: clamp(168px, 35vw, 230px);
+      height: clamp(180px, 48vw, 280px);
     }
 
     .theme-switcher select {
