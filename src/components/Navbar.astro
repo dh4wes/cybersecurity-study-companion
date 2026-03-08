@@ -401,6 +401,13 @@ const isActive = (path) => {
   }
 
   @media (max-width: 900px) {
+    .site-header {
+      position: static;
+      background: transparent;
+      backdrop-filter: none;
+      border-bottom: none;
+    }
+
     .desktop-header-row {
       display: none;
     }
@@ -428,13 +435,13 @@ const isActive = (path) => {
 
     .mobile-nav {
       display: block;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      position: sticky;
+      top: 0;
       z-index: 45;
       border-top: 1px solid var(--border);
-      box-shadow: 0 -8px 24px rgba(9, 7, 6, 0.22);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+      box-shadow: 0 8px 24px rgba(9, 7, 6, 0.18);
+      backdrop-filter: blur(14px) saturate(1.08);
     }
   }
 

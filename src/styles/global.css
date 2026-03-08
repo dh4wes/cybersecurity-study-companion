@@ -780,7 +780,7 @@ button.ghost:hover,
   main {
     width: min(var(--max), calc(100vw - 1rem));
     margin-top: 0.95rem;
-    margin-bottom: calc(5.8rem + env(safe-area-inset-bottom));
+    margin-bottom: 2.25rem;
     isolation: isolate;
   }
 
