@@ -1,15 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import PageHero from '../../components/PageHero.astro';
 import { canonicalData, workloadRows } from '../../lib/site-data.js';
+import { withBase } from '../../lib/site-data.js';
 ---
 
 <Layout title={`${canonicalData.site.title} | About`} description="About this cybersecurity journey" currentPath={Astro.url.pathname}>
-  <PageHero
-    kicker="About This Journey"
-    title="Proof-of-Work Cybersecurity Portfolio"
-    description="A 32-week cybersecurity roadmap presented as public proof-of-work, with private local notes kept separate."
-  />
+  <section class="section">
+    <article class="card about-banner-card">
+      <img src={withBase('/images/site-banner-optimized.jpg')} alt="Cybersecurity study guide banner art" />
+    </article>
+  </section>
 
   <section class="two-col section">
     <article class="card">
@@ -74,6 +74,20 @@ import { canonicalData, workloadRows } from '../../lib/site-data.js';
 </Layout>
 
 <style>
+  .about-banner-card {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .about-banner-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .table-wrap {
     overflow-x: auto;
   }
@@ -95,5 +109,11 @@ import { canonicalData, workloadRows } from '../../lib/site-data.js';
   th {
     color: var(--ink);
     background: var(--surface-soft);
+  }
+
+  @media (max-width: 900px) {
+    .about-banner-card img {
+      max-height: none;
+    }
   }
 </style>
