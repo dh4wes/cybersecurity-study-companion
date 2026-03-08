@@ -72,19 +72,17 @@ const lockImage = withBase('/images/lock.jpg');
     display: none;
     position: absolute;
     inset: 0;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 1;
+    pointer-events: auto;
+    z-index: 4;
     overflow: hidden;
   }
 
   .week-card-lock-image {
-    width: 76%;
-    max-width: 220px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     opacity: 0.8;
-    filter: saturate(0.72) contrast(0.9) brightness(0.92);
+    filter: saturate(0.72) contrast(0.9) brightness(0.88);
   }
 
   .week-card:hover {
@@ -94,15 +92,12 @@ const lockImage = withBase('/images/lock.jpg');
 
   .week-card.is-locked {
     background:
-      linear-gradient(180deg, rgba(22, 18, 15, 0.76), rgba(22, 18, 15, 0.88)),
-      linear-gradient(135deg, rgba(244, 234, 212, 0.05), rgba(var(--accent-rgb), 0.06));
+      linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
     border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
   }
 
   .week-card.is-locked:hover {
-    background:
-      linear-gradient(180deg, rgba(22, 18, 15, 0.76), rgba(22, 18, 15, 0.88)),
-      linear-gradient(135deg, rgba(244, 234, 212, 0.05), rgba(var(--accent-rgb), 0.06));
     border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
   }
 
@@ -112,17 +107,25 @@ const lockImage = withBase('/images/lock.jpg');
   }
 
   .week-card.is-locked .week-card-lock-foreground {
-    display: flex;
+    display: block;
   }
 
   .week-card.is-locked::before,
   .week-card.is-locked::after {
-    z-index: 3;
+    z-index: 5;
   }
 
   .week-card.is-locked > * {
     position: relative;
     z-index: 2;
+  }
+
+  .week-card.is-locked .card-top,
+  .week-card.is-locked h3,
+  .week-card.is-locked p,
+  .week-card.is-locked .meta,
+  .week-card.is-locked .cta-wrap {
+    pointer-events: none;
   }
 
   .week-card.is-locked .week-lock-copy {
