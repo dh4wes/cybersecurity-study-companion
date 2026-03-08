@@ -13,8 +13,8 @@
   --c-danger: #c26654;
 
   --bg: var(--c-void);
-  --surface: rgba(36, 29, 23, 0.54);
-  --surface-soft: rgba(45, 36, 29, 0.42);
+  --surface: rgba(22, 18, 15, 0.82);
+  --surface-soft: rgba(22, 18, 15, 0.9);
   --border: var(--c-line);
   --border-strong: var(--c-line-strong);
   --ink: var(--c-white);
