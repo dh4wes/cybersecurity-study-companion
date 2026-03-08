@@ -127,6 +127,7 @@ Layout behavior:
 - mobile shows the banner first, then pins the nav to the top once it reaches it
 - mobile theme controls live in the footer
 - current shared banner asset: `public/images/site-banner.png`
+- first-load session shows a non-skippable boot intro, then a binary curtain transition
 
 ## Repo Layout
 
@@ -134,7 +135,9 @@ Layout behavior:
 - `src/components/`: reusable UI
 - `src/layouts/`: document shell
 - `src/styles/global.css`: tokens, glass treatment, layout rules, theme styles
+- `src/styles/boot-intro.css`: boot intro and binary-curtain transition styles
 - `src/scripts/`: browser-side page logic and persistence
+- `src/scripts/boot-intro.js`: timed boot-sequence and curtain animation controller
 - `src/lib/site-data.js`: normalized study-content access layer
 - `src/lib/theme-options.js`: shared theme metadata
 - `src/lib/anki-export.js`: flashcard TSV export logic

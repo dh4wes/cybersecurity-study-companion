@@ -1,3 +1,8 @@
+const BOOT_PHASE_DURATION_MS = 5500;
+const CURTAIN_PHASE_DURATION_MS = 5500;
+const CURTAIN_FINISH_BUFFER_MS = 260;
+const MAX_CURTAIN_DELAY_MS = 900;
+
 const buildBinaryCurtain = (root) => {
   const curtain = document.getElementById('binary-curtain');
   if (!curtain) return;
@@ -18,8 +23,15 @@ const buildBinaryCurtain = (root) => {
 
     column.className = 'binary-column';
     column.textContent = text.trimEnd();
-    column.style.setProperty('--drop-duration', `${4.2 + Math.random() * 1.8}s`);
-    column.style.setProperty('--drop-delay', `${Math.random() * 0.9}s`);
+    const dropDelayMs = Math.round(Math.random() * MAX_CURTAIN_DELAY_MS);
+    const latestFinishMs = CURTAIN_PHASE_DURATION_MS - CURTAIN_FINISH_BUFFER_MS;
+    const maxDurationMs = Math.max(3200, latestFinishMs - dropDelayMs);
+    const minDurationMs = Math.min(4300, maxDurationMs);
+    const dropDurationMs =
+      minDurationMs + Math.round(Math.random() * Math.max(0, maxDurationMs - minDurationMs));
+
+    column.style.setProperty('--drop-duration', `${dropDurationMs}ms`);
+    column.style.setProperty('--drop-delay', `${dropDelayMs}ms`);
     column.style.setProperty('--drop-distance', `${14 + Math.random() * 18}vh`);
     curtain.append(column);
   }
@@ -59,10 +71,11 @@ const bootIntro = () => {
     '32 week roadmap detected',
     'launching interface'
   ];
-  const lineDelay = 560;
-  const revealPause = 260;
-  const dropDelay = 180;
-  const dropDuration = 5900;
+  const finalPause = 580;
+  const lineDelay = Math.max(
+    220,
+    Math.floor((BOOT_PHASE_DURATION_MS - finalPause) / (lines.length - 1))
+  );
   const out = document.getElementById('boot-console');
   const pulse = document.getElementById('packet-pulse');
   const timers = [];
@@ -77,13 +90,13 @@ const bootIntro = () => {
     root.classList.add('is-clearing');
     timers.push(setTimeout(() => {
       root.classList.add('is-dropping');
-    }, dropDelay));
+    }, 40));
     timers.push(setTimeout(() => {
       root.classList.add('is-removing');
-    }, dropDelay + dropDuration - 220));
+    }, CURTAIN_PHASE_DURATION_MS - 220));
     timers.push(setTimeout(() => {
       root.remove();
-    }, dropDelay + dropDuration + 120));
+    }, CURTAIN_PHASE_DURATION_MS));
   };
 
   lines.forEach((line, index) => timers.push(setTimeout(() => {
@@ -91,7 +104,7 @@ const bootIntro = () => {
     if (index === 1) pulse?.classList.add('is-live');
   }, index * lineDelay)));
 
-  timers.push(setTimeout(clearIntro, lines.length * lineDelay + revealPause));
+  timers.push(setTimeout(clearIntro, BOOT_PHASE_DURATION_MS));
 };
 
 if (document.readyState === 'loading') {

@@ -156,6 +156,14 @@ There is no standalone `/weeks/` archive route. `/roadmap/` is the single overvi
 - mobile theme controls live in the footer
 - the shared banner art is served from `public/images/site-banner.png`
 
+### Entry sequence
+
+- first page load in a session shows a non-skippable boot intro
+- the boot console phase runs for roughly 5.5 seconds
+- the app then reveals behind a binary `0/1` curtain
+- the curtain phase runs for roughly 5.5 seconds with staggered per-column fall timing
+- repeat page loads in the same session skip the intro
+
 ### Home
 
 - shows current phase/week
@@ -292,7 +300,9 @@ npm run cap:open
 - `src/components/`: reusable UI
 - `src/layouts/`: shell and document structure
 - `src/styles/global.css`: shared tokens, layout rules, and theme system
+- `src/styles/boot-intro.css`: boot intro and binary curtain styles
 - `src/scripts/`: client-side route logic and persistence
+- `src/scripts/boot-intro.js`: session boot-sequence controller
 - `src/lib/site-data.js`: normalized content access layer
 - `src/lib/theme-options.js`: shared theme metadata
 - `src/lib/anki-export.js`: TSV export builder
