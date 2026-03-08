@@ -1,11 +1,9 @@
 const BOOT_PHASE_DURATION_MS = 5500;
 const CURTAIN_PHASE_DURATION_MS = 4000;
-const CURTAIN_LINGER_DURATION_MS = 1000;
 const CURTAIN_FADE_DURATION_MS = 1000;
 const CURTAIN_FINISH_BUFFER_MS = 260;
 const MAX_CURTAIN_DELAY_MS = 900;
-const CURTAIN_TOTAL_CLEAR_MS =
-  CURTAIN_PHASE_DURATION_MS + CURTAIN_LINGER_DURATION_MS + CURTAIN_FADE_DURATION_MS;
+const CURTAIN_TOTAL_CLEAR_MS = CURTAIN_PHASE_DURATION_MS + CURTAIN_FADE_DURATION_MS;
 
 const buildBinaryCurtain = (root) => {
   const curtain = document.getElementById('binary-curtain');
@@ -53,12 +51,13 @@ const bootIntro = () => {
   }
 
   try {
-    if (sessionStorage.getItem(sessionKey) === 'true') {
-      root.remove();
-      return;
+    const hasSeenInitialBoot = sessionStorage.getItem(sessionKey) === 'true';
+    root.classList.toggle('has-curtain-background', !hasSeenInitialBoot);
+    if (!hasSeenInitialBoot) {
+      sessionStorage.setItem(sessionKey, 'true');
     }
   } catch {
-    // Ignore storage errors and continue showing the intro.
+    root.classList.add('has-curtain-background');
   }
 
   buildBinaryCurtain(root);
@@ -86,18 +85,13 @@ const bootIntro = () => {
 
   const clearIntro = () => {
     timers.forEach(clearTimeout);
-    try {
-      sessionStorage.setItem(sessionKey, 'true');
-    } catch {
-      // Ignore storage errors.
-    }
     root.classList.add('is-clearing');
     timers.push(setTimeout(() => {
       root.classList.add('is-dropping');
     }, 40));
     timers.push(setTimeout(() => {
       root.classList.add('is-removing');
-    }, CURTAIN_PHASE_DURATION_MS + CURTAIN_LINGER_DURATION_MS));
+    }, CURTAIN_PHASE_DURATION_MS));
     timers.push(setTimeout(() => {
       root.remove();
     }, CURTAIN_TOTAL_CLEAR_MS));
