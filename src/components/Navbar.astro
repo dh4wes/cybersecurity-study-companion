@@ -58,6 +58,16 @@ const isActive = (path) => {
     </div>
   </div>
 
+  <nav aria-label="Mobile" class="mobile-nav">
+    <ul>
+      {mobileLinks.map((link) => (
+        <li>
+          <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
   <div class="banner-shell">
     <img
       class="banner-image banner-image-fill"
@@ -103,16 +113,6 @@ const isActive = (path) => {
   <nav aria-label="Primary" class="site-nav">
     <ul>
       {links.map((link) => (
-        <li>
-          <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-
-  <nav aria-label="Mobile" class="mobile-nav">
-    <ul>
-      {mobileLinks.map((link) => (
         <li>
           <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
         </li>
