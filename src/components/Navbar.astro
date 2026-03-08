@@ -100,16 +100,6 @@ const isActive = (path) => {
     </div>
   </div>
 
-  <nav aria-label="Mobile" class="mobile-nav">
-    <ul>
-      {mobileLinks.map((link) => (
-        <li>
-          <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-
   <nav aria-label="Primary" class="site-nav">
     <ul>
       {links.map((link) => (
@@ -120,6 +110,16 @@ const isActive = (path) => {
     </ul>
   </nav>
 </header>
+
+<nav aria-label="Mobile" class="mobile-nav">
+  <ul>
+    {mobileLinks.map((link) => (
+      <li>
+        <a class={isActive(link.path) ? 'active' : ''} href={withBase(link.path)}>{link.label}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
 
 <script>
   import '../scripts/color-theme.js';

@@ -9,10 +9,10 @@ export const fontThemeOptions = [
 ];
 
 export const colorThemeOptions = [
-  { value: 'default', label: 'Banner' },
+  { value: 'default', label: 'Shield Blue' },
+  { value: 'banner', label: 'Banner' },
   { value: 'inked', label: 'Charcoal' },
   { value: 'woodland', label: 'Red Acrylic' },
-  { value: 'jade-pebble-morning', label: 'Shield Blue' },
   { value: 'cocoa-topaz-noonday', label: 'Ochre' },
   { value: 'pearl', label: 'Parchment' },
   { value: 'graphite', label: 'Bone' }
@@ -24,5 +24,6 @@ export const allowedColorThemes = colorThemeOptions.map((option) => option.value
 export const legacyColorThemeMap = {
   'amethyst-mint-harmony': 'graphite',
   sorbet: 'woodland',
-  'driftwood-pearl-morning': 'inked'
+  'driftwood-pearl-morning': 'inked',
+  'jade-pebble-morning': 'default'
 };
