@@ -63,13 +63,6 @@
   transition: opacity 160ms ease;
 }
 
-#boot-intro.has-curtain-background #binary-curtain {
-  background:
-    linear-gradient(180deg, rgba(8, 12, 16, 0.76), rgba(8, 12, 16, 0.58)),
-    radial-gradient(circle at top, rgba(49, 78, 104, 0.24), transparent 48%),
-    var(--boot-curtain-image) center / cover no-repeat;
-}
-
 #boot-intro.is-clearing #binary-curtain {
   opacity: 1;
 }

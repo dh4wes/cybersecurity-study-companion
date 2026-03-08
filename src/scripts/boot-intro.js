@@ -1,8 +1,7 @@
-const BOOT_PHASE_DURATION_MS = 5500;
-const CURTAIN_PHASE_DURATION_MS = 4000;
+const CURTAIN_PHASE_DURATION_MS = 1000;
 const CURTAIN_FADE_DURATION_MS = 1000;
-const CURTAIN_FINISH_BUFFER_MS = 260;
-const MAX_CURTAIN_DELAY_MS = 900;
+const CURTAIN_FINISH_BUFFER_MS = 100;
+const MAX_CURTAIN_DELAY_MS = 240;
 const CURTAIN_TOTAL_CLEAR_MS = CURTAIN_PHASE_DURATION_MS + CURTAIN_FADE_DURATION_MS;
 
 const buildBinaryCurtain = (root) => {
@@ -27,8 +26,8 @@ const buildBinaryCurtain = (root) => {
     column.textContent = text.trimEnd();
     const dropDelayMs = Math.round(Math.random() * MAX_CURTAIN_DELAY_MS);
     const latestFinishMs = CURTAIN_PHASE_DURATION_MS - CURTAIN_FINISH_BUFFER_MS;
-    const maxDurationMs = Math.max(3200, latestFinishMs - dropDelayMs);
-    const minDurationMs = Math.min(4300, maxDurationMs);
+    const maxDurationMs = Math.max(520, latestFinishMs - dropDelayMs);
+    const minDurationMs = Math.min(760, maxDurationMs);
     const dropDurationMs =
       minDurationMs + Math.round(Math.random() * Math.max(0, maxDurationMs - minDurationMs));
 
@@ -43,45 +42,22 @@ const bootIntro = () => {
   const root = document.getElementById('boot-intro');
   if (!root) return;
 
-  const sessionKey = 'cyber-study-boot-intro-session-v1';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) {
     root.remove();
     return;
   }
 
-  let hasSeenInitialBoot = false;
-  try {
-    hasSeenInitialBoot = sessionStorage.getItem(sessionKey) === 'true';
-    root.classList.toggle('has-curtain-background', !hasSeenInitialBoot);
-    if (!hasSeenInitialBoot) {
-      sessionStorage.setItem(sessionKey, 'true');
-    }
-  } catch {
-    root.classList.add('has-curtain-background');
+  const navigationEntry = performance.getEntriesByType('navigation')?.[0];
+  const isReloadNavigation = navigationEntry?.type === 'reload'
+    || (performance.navigation && performance.navigation.type === 1);
+
+  if (!isReloadNavigation) {
+    root.remove();
+    return;
   }
 
   buildBinaryCurtain(root);
-
-  const lines = [
-    'initializing cyber training environment',
-    'loading modules...',
-    '',
-    '✓ hardware',
-    '✓ networking',
-    '✓ security',
-    '✓ governance',
-    '',
-    '32 week roadmap detected',
-    'launching interface'
-  ];
-  const finalPause = 580;
-  const lineDelay = Math.max(
-    220,
-    Math.floor((BOOT_PHASE_DURATION_MS - finalPause) / (lines.length - 1))
-  );
-  const out = document.getElementById('boot-console');
-  const pulse = document.getElementById('packet-pulse');
   const timers = [];
 
   const clearIntro = () => {
@@ -98,18 +74,8 @@ const bootIntro = () => {
     }, CURTAIN_TOTAL_CLEAR_MS));
   };
 
-  if (hasSeenInitialBoot) {
-    root.classList.add('is-curtain-only');
-    clearIntro();
-    return;
-  }
-
-  lines.forEach((line, index) => timers.push(setTimeout(() => {
-    out.textContent += `${line}\n`;
-    if (index === 1) pulse?.classList.add('is-live');
-  }, index * lineDelay)));
-
-  timers.push(setTimeout(clearIntro, BOOT_PHASE_DURATION_MS));
+  root.classList.add('is-curtain-only');
+  clearIntro();
 };
 
 if (document.readyState === 'loading') {
