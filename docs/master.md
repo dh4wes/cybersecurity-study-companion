@@ -2,43 +2,34 @@
 
 ## Purpose
 
-This document is the primary technical and product reference for the app. It replaces the older split docs and is intended to stay synchronized with the shipped implementation.
+This is the canonical technical reference for the app. It should track the shipped implementation, not historical planning states.
 
-The application is a static Astro study companion for a 32-week cybersecurity roadmap. It combines:
+## Product Summary
 
-- a public curriculum and portfolio surface
+The app is a static Astro study companion for a 32-week cybersecurity roadmap. It combines:
+
+- public roadmap, glossary, flashcards, resources, and progress views
 - a private local-first notes workspace
-- precomputed glossary and flashcard data
+- canonical JSON-driven study content
 - browser-only persistence
-- offline-capable static delivery
+- offline-capable delivery
 
-## Product Boundaries
+It is intentionally:
 
-### What the app is
+- static
+- single-user
+- unauthenticated
+- serverless for core use
 
-- a static study companion
-- a portfolio-facing roadmap
-- a glossary and flashcard reference built from canonical content
-- a progress tracker stored locally in the browser
-- a private notes tool with export/import
+## Current Scope
 
-### What the app is not
-
-- not a SaaS product
-- not a multi-user app
-- not server-backed
-- not authenticated
-- not AI-generated at runtime
-
-## Current Live Scope
-
-Canonical dataset totals:
+Live content totals:
 
 - 32 weeks
 - 224 day records
 - 252 glossary entries
 - 756 unique flashcards
-- 32 review decks
+- 32 weekly review decks
 
 Phase structure:
 
@@ -50,7 +41,7 @@ Phase structure:
 
 ## Architecture
 
-### Stack
+Stack:
 
 - Astro
 - vanilla JavaScript
@@ -58,32 +49,23 @@ Phase structure:
 - `@vite-pwa/astro`
 - optional Capacitor Android packaging
 
-### Static-first design
+Flow:
 
-The app is designed to work as fully static output:
-
-- route HTML is generated at build time
-- canonical content is loaded from local JSON files
-- user state is stored only in the browser
-- no runtime API is required for core study functionality
-
-### Data flow
-
-1. Canonical content is stored in `src/data/content/`.
+1. Canonical content lives in `src/data/content/`.
 2. `src/lib/site-data.js` normalizes weeks, days, glossary, flashcards, review decks, and route metadata.
-3. Astro pages consume normalized data and render static pages.
-4. Page-specific scripts attach filtering, export, progress, and note behaviors.
-5. IndexedDB persists progress, notes, export metadata, and UX preferences.
+3. Astro routes render static HTML from normalized content.
+4. Page-specific client scripts add filtering, export, progress, theme, and notes behavior.
+5. IndexedDB stores user state and preference data.
 
-## Canonical Content Model
+## Canonical Data Model
 
-Primary data files:
+Primary files:
 
 - `src/data/content/study-companion-v2.json`
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
 
-Supporting data files:
+Supporting files:
 
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
@@ -102,9 +84,9 @@ Top-level collections in `study-companion-v2.json`:
 
 ### Glossary
 
-The glossary is the source of truth for study terminology.
+Glossary entries are the terminology source of truth.
 
-Schema:
+Shape:
 
 - `id`
 - `term`
@@ -119,42 +101,27 @@ Bullet contract:
 
 ### Flashcards
 
-Flashcards are glossary-derived canonical records.
+Flashcards are canonical records derived from glossary content.
 
-Schema:
-
-- `id`
-- `type`
-- `difficulty`
-- `front`
-- `back`
-
-Supported card types:
-
-- `definition`
-- `understanding`
-- `application`
-
-Primary card ID convention:
+Main card IDs:
 
 - `<term-id>-definition`
 - `<term-id>-mechanism`
 - `<term-id>-scenario`
 
-### Week and day decks
+Card types:
 
-Each instructional day references:
+- `definition`
+- `understanding`
+- `application`
 
-- `glossary_ids`
-- `flashcard_ids`
+### Day deck rules
 
-Current behavior:
-
-- Days 1-5 contain only that day’s newly introduced terms and flashcards
-- Day 6 contains the full weekly review deck
+- Days 1-5 contain only the newly introduced glossary terms and flashcards for that day
+- Day 6 is the full weekly review deck
 - Day 7 is intentionally empty for new glossary and flashcards
 
-This is a deliberate anti-repetition rule because spaced review is handled by the user’s study flow and review decks, not by re-listing prior cards every day.
+This prevents forced repetition inside the app while preserving weekly review.
 
 ## Route Inventory
 
@@ -172,117 +139,47 @@ Public routes:
 - `/about/`
 - `/offline/`
 
-Private local route:
+Local-only route:
 
 - `/notes/`
 
-## Page Behavior
+There is no standalone `/weeks/` archive route. `/roadmap/` is the single overview surface.
+
+## Current UX Behavior
+
+### Header and navigation
+
+- desktop uses a compact header plus top navigation
+- desktop does not show the large banner in the header
+- mobile shows the banner as a scrollable top section
+- mobile navigation is sticky at the top once reached
+- mobile theme controls live in the footer
 
 ### Home
 
-- current phase and week summary
-- direct links into roadmap, glossary, flashcards, progress, resources, and notes
-- progress snapshot driven by local browser state
+- shows current phase/week
+- summarizes the current week
+- shows a progress snapshot
 
 ### Roadmap
 
-- single overview surface for all 32 weeks
 - grouped by phase
-- week cards include focus, deliverable, checkpoint, primary resource, progress, and completion toggle
-- replaces the removed standalone week-archive route
+- week cards show focus, deliverable, checkpoint, resource, and completion state
 
-### Week detail pages
+### Week pages
 
-- focus, deliverable, and checkpoint summary
-- seven daily sessions
-- daily sessions render as small collapsed cards and expand on click
-- day-level glossary and flashcards reflect only that day’s assigned deck
-- progress controls and day-level Anki export remain on the page
-
-### Glossary
-
-- canonical glossary explorer
-- search plus category, phase, and week filtering
-
-### Flashcards
-
-- canonical flashcard explorer
-- filters for search, phase, week, day, type, and difficulty
-- answer reveal UI
-- TSV export for full or filtered sets
-
-### Progress
-
-- total completion
-- phase and week completion
-- blocked-item tracking
-- next unfinished task
-- next deliverable
-- import/export/reset of progress
-
-### Notes
-
-- day notes
-- week reflections
-- security journal notes
-- Markdown export
-- JSON import/export
-
-### Resources
-
-- grouped resource catalog
-- best-week mapping
-- use case and notes for each source
+- daily sessions render as collapsed cards
+- cards expand on click
+- day cards contain only that day’s assigned glossary and flashcards
+- progress controls are local-state driven
 
 ### About
 
-- product framing
-- study-roadmap explanation
-- workbook workload model summary table
-
-## Persistence Model
-
-Primary backend:
-
-- IndexedDB
-
-Database:
-
-- `cyber-study-db`
-
-Object store:
-
-- `kv`
-
-Primary keys:
-
-- `cyber-study-progress-v1`
-- `cyber-study-notes-v2`
-- `cyber-study-note-export-meta-v1`
-
-UX preference keys:
-
-- `cyber-study-color-theme-v1`
-- `cyber-study-typography-theme-v1`
-
-Legacy localStorage values are migrated forward on upgraded load.
-
-## UX System
+- top card uses the banner artwork
+- supporting cards explain site purpose and roadmap coverage
+- workload model table is pulled from workbook enrichment data
 
 ### Theme system
-
-Color themes:
-
-- `Current`
-- `Inked`
-- `Amethyst Mint`
-- `Woodland`
-- `Jade Pebble`
-- `Cocoa Topaz`
-- `Sorbet`
-- `Pearl`
-- `Driftwood Pearl`
-- `Graphite`
 
 Typography themes:
 
@@ -291,33 +188,76 @@ Typography themes:
 - `Editor Clean`
 - `Mono Range`
 
-### Motion and entry behavior
+Color themes:
 
-- boot intro runs once per browser session
-- boot intro is skippable
-- reduced-motion users do not get the animated intro
-- week-detail day cards do not auto-open on page load
+- `Banner`
+- `Charcoal`
+- `Red Acrylic`
+- `Shield Blue`
+- `Ochre`
+- `Parchment`
+- `Bone`
+
+Theme metadata is centralized in `src/lib/theme-options.js`.
+
+## Persistence
+
+Primary content-state backend:
+
+- IndexedDB
+
+Database:
+
+- `cyber-study-db`
+
+Store:
+
+- `kv`
+
+Content-state keys:
+
+- `progress`
+- `notes`
+- `noteExportMeta`
+
+Legacy localStorage keys still recognized for migration and fallback:
+
+- `cyber-study-progress-v1`
+- `cyber-study-notes-v2`
+- `cyber-study-note-export-meta-v1`
+
+Preference keys:
+
+- `cyber-study-color-theme-v1`
+- `cyber-study-typography-theme-v1`
+
+Behavior:
+
+- progress and notes load from IndexedDB when available
+- progress and notes fall back to localStorage when IndexedDB is unavailable
+- theme preferences are stored in localStorage
+- a storage migration script copies legacy progress and notes data into IndexedDB on load
 
 ## Quality Controls
 
-Primary regression audit:
+Primary audit:
 
 - `scripts/audit_flashcards.mjs`
 
-Current checks:
+Current checks include:
 
 - Days 1-5 are not identical
 - Days 1-5 do not repeat flashcards before review day
-- the union of Days 1-5 covers the full week deck
+- Day 1-5 unions cover the week deck
 - glossary references resolve
 - each glossary term has exactly three primary cards
 - banned flashcard stems are blocked
-- scenario cards do not contain the answer term
+- scenario fronts do not contain the answer term
 - front/back echo issues are caught
 
 ## Build and Deployment
 
-Daily development:
+Development:
 
 ```bash
 npm install
@@ -350,17 +290,17 @@ npm run cap:open
 - `src/pages/`: route entrypoints
 - `src/components/`: reusable UI
 - `src/layouts/`: shell and document structure
-- `src/styles/global.css`: tokens and theme styles
-- `src/scripts/`: route-specific browser logic
-- `src/scripts/runtime/client-utils.js`: shared client helpers
+- `src/styles/global.css`: shared tokens, layout rules, and theme system
+- `src/scripts/`: client-side route logic and persistence
 - `src/lib/site-data.js`: normalized content access layer
-- `src/lib/anki-export.js`: TSV export logic
+- `src/lib/theme-options.js`: shared theme metadata
+- `src/lib/anki-export.js`: TSV export builder
 - `src/data/content/`: canonical study data
 - `docs/master.md`: this document
-- `docs/content.md`: curriculum and source-basis review
+- `docs/content.md`: curriculum/source review
 
 ## Maintenance Rules
 
-- update this doc when app behavior, route inventory, storage keys, or architecture changes
-- update `docs/content.md` when the study basis, source mix, or coverage strategy changes
-- keep README concise and use these two docs as the durable deep references
+- update this document when routes, storage keys, theme systems, or major UX behavior change
+- keep `README.md` operational and short
+- keep `docs/content.md` focused on curriculum/source truth, not implementation detail

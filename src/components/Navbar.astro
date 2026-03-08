@@ -1,5 +1,6 @@
 ---
 import { withBase } from '../lib/site-data.js';
+import { colorThemeOptions, fontThemeOptions } from '../lib/theme-options.js';
 
 const { currentPath = '/' } = Astro.props;
 const links = [
@@ -39,22 +40,17 @@ const isActive = (path) => {
           <label class="theme-switcher">
             <span>Type</span>
             <select class="js-font-theme" aria-label="Select typography theme">
-              <option value="default">Default</option>
-              <option value="ops-console">Ops Console</option>
-              <option value="editor-clean">Editor Clean</option>
-              <option value="mono-range">Mono Range</option>
+              {fontThemeOptions.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
             </select>
           </label>
           <label class="theme-switcher">
             <span>Color</span>
             <select class="js-color-theme" aria-label="Select color theme">
-              <option value="default">Banner</option>
-              <option value="inked">Charcoal</option>
-              <option value="woodland">Red Acrylic</option>
-              <option value="jade-pebble-morning">Shield Blue</option>
-              <option value="cocoa-topaz-noonday">Ochre</option>
-              <option value="pearl">Parchment</option>
-              <option value="graphite">Bone</option>
+              {colorThemeOptions.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
             </select>
           </label>
         </div>
@@ -85,22 +81,17 @@ const isActive = (path) => {
             <label class="theme-switcher">
               <span>Type</span>
               <select class="js-font-theme" aria-label="Select typography theme">
-                <option value="default">Default</option>
-                <option value="ops-console">Ops Console</option>
-                <option value="editor-clean">Editor Clean</option>
-                <option value="mono-range">Mono Range</option>
+                {fontThemeOptions.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
               </select>
             </label>
             <label class="theme-switcher">
               <span>Color</span>
               <select class="js-color-theme" aria-label="Select color theme">
-                <option value="default">Banner</option>
-                <option value="inked">Charcoal</option>
-                <option value="woodland">Red Acrylic</option>
-                <option value="jade-pebble-morning">Shield Blue</option>
-                <option value="cocoa-topaz-noonday">Ochre</option>
-                <option value="pearl">Parchment</option>
-                <option value="graphite">Bone</option>
+                {colorThemeOptions.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
               </select>
             </label>
           </div>

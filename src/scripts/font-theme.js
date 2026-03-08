@@ -1,5 +1,7 @@
-const STORAGE_KEY = 'cyber-study-typography-theme-v1';
-const THEMES = ['default', 'ops-console', 'editor-clean', 'mono-range'];
+import {
+  FONT_THEME_STORAGE_KEY as STORAGE_KEY,
+  allowedFontThemes as THEMES
+} from '../lib/theme-options.js';
 
 const normalizeTheme = (theme) => (THEMES.includes(theme) ? theme : 'default');
 

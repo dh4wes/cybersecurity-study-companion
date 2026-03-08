@@ -4,6 +4,12 @@ import BootIntro from '../components/BootIntro.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { withBase } from '../lib/site-data.js';
+import {
+  COLOR_THEME_STORAGE_KEY,
+  FONT_THEME_STORAGE_KEY,
+  allowedColorThemes,
+  allowedFontThemes
+} from '../lib/theme-options.js';
 import { pwaInfo } from 'virtual:pwa-info';
 import pwaRegisterScript from '../scripts/pwa-register.ts?url';
 import storageMigrateScript from '../scripts/storage-migrate.js?url';
@@ -26,23 +32,15 @@ const {
     <script is:inline>
       (() => {
         try {
-          const fontKey = 'cyber-study-typography-theme-v1';
-          const fontAllowed = new Set(['default', 'ops-console', 'editor-clean', 'mono-range']);
+          const fontKey = {JSON.stringify(FONT_THEME_STORAGE_KEY)};
+          const fontAllowed = new Set({JSON.stringify(allowedFontThemes)});
           const fontValue = localStorage.getItem(fontKey);
           if (fontAllowed.has(fontValue) && fontValue !== 'default') {
             document.documentElement.dataset.fontTheme = fontValue;
           }
 
-          const colorKey = 'cyber-study-color-theme-v1';
-          const colorAllowed = new Set([
-            'default',
-            'inked',
-            'woodland',
-            'jade-pebble-morning',
-            'cocoa-topaz-noonday',
-            'pearl',
-            'graphite'
-          ]);
+          const colorKey = {JSON.stringify(COLOR_THEME_STORAGE_KEY)};
+          const colorAllowed = new Set({JSON.stringify(allowedColorThemes)});
           const colorValue = localStorage.getItem(colorKey);
           if (colorAllowed.has(colorValue) && colorValue !== 'default') {
             document.documentElement.dataset.colorTheme = colorValue;

@@ -1,16 +1,12 @@
 # Cybersecurity Study Companion
 
-Static Astro application for a 32-week cybersecurity roadmap with a public study companion and a separate private notes workspace.
+Static Astro app for a 32-week cybersecurity roadmap with:
 
-## What This Repo Ships
-
-- Layer A: public study companion and portfolio routes
-- Layer B: local-only notes tool at `/notes/`
-- static Astro output
-- GitHub Pages compatibility
-- PWA installability
-- offline-first browser persistence through IndexedDB
-- optional Android packaging through Capacitor
+- a public study companion and portfolio surface
+- a private local-first notes workspace
+- canonical glossary and flashcard data
+- browser-only progress tracking
+- offline-capable static delivery
 
 ## Quickstart
 
@@ -19,31 +15,23 @@ npm install
 npm run dev
 ```
 
-Useful commands:
+Core checks:
 
 ```bash
-npm run build
-npm run preview
 npm run audit:flashcards
+npm run build
 ```
 
-Android packaging:
+Other useful commands:
 
 ```bash
+npm run preview
 npm run build:cap
 npm run cap:sync
 npm run cap:open
 ```
 
-## Core Constraints
-
-- no backend
-- no authentication
-- no runtime AI dependency
-- canonical curriculum content lives in JSON, not in page components
-- public study UX stays separate from private notes UX
-
-## Routes
+## Current App Shape
 
 Public routes:
 
@@ -59,116 +47,72 @@ Public routes:
 - `/about/`
 - `/offline/`
 
-Private local route:
+Local-only route:
 
 - `/notes/`
 
-## Canonical Content
+Current data totals:
 
-Primary datasets:
+- 32 weeks
+- 224 day records
+- 252 glossary entries
+- 756 unique flashcards
+- 32 review decks
+
+## Canonical Data
+
+Primary files:
 
 - `src/data/content/study-companion-v2.json`
 - `src/data/content/glossary.json`
 - `src/data/content/flashcards.json`
 
-Supporting datasets:
+Supporting files:
 
 - `src/data/workbook-enrichment.json`
 - `src/data/day-source-links.json`
 
-Current totals:
+Key deck rules:
 
-- 32 weeks
-- 224 day records
-- 252 glossary terms
-- 756 unique flashcards
-- 32 weekly review decks
-
-Top-level collections in `study-companion-v2.json`:
-
-- `site`
-- `core_pages`
-- `resources`
-- `weeks`
-- `days`
-- `security_journal_prompts`
-- `portfolio_outputs`
-- `review_decks`
-- `metadata`
-
-## Glossary And Flashcards
-
-Glossary entries are canonical and use this shape:
-
-```json
-{
-  "id": "tcp",
-  "term": "TCP",
-  "category": "Networking & Infrastructure",
-  "bullets": [
-    "Transport-layer protocol providing reliable ordered delivery of network data.",
-    "Provides reliable in-order delivery between applications across an IP network.",
-    "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
-  ]
-}
-```
-
-Each glossary entry has exactly three bullets:
-
-1. what it is
-2. what it does
-3. how it works
-
-Flashcards are glossary-derived and use predictable IDs:
-
-- `<term-id>-definition`
-- `<term-id>-mechanism`
-- `<term-id>-scenario`
-
-Flashcard types:
-
-- `definition`
-- `understanding`
-- `application`
-
-## Day Deck Rules
-
-- Days 1-5 contain only the new glossary terms and flashcards introduced that day
-- Day 6 contains the full weekly review deck
-- Day 7 contains no required new glossary or flashcards
-- week detail pages render daily sessions as collapsed cards that expand on click
+- Days 1-5 list only newly introduced glossary terms and flashcards
+- Day 6 is the weekly review deck
+- Day 7 has no new glossary or flashcards
 
 ## Persistence
 
-The app stores local state in IndexedDB:
+User state is local only.
 
+Progress and notes:
+
+- primary backend: IndexedDB
 - database: `cyber-study-db`
-- object store: `kv`
+- store: `kv`
+- fallback: localStorage when IndexedDB is unavailable
 
-Primary keys:
+Content-state keys:
 
 - `cyber-study-progress-v1`
 - `cyber-study-notes-v2`
 - `cyber-study-note-export-meta-v1`
+
+Preference-state keys:
+
 - `cyber-study-color-theme-v1`
 - `cyber-study-typography-theme-v1`
 
-Legacy localStorage values are migrated into IndexedDB on upgraded load.
+Legacy progress and notes values are migrated forward into IndexedDB. Theme preferences remain localStorage-backed.
 
-## UX Systems
+## Theme System
 
 Color themes:
 
-- `Current`
-- `Inked`
-- `Amethyst Mint`
-- `Woodland`
-- `Jade Pebble`
-- `Cocoa Topaz`
-- `Sorbet`
-- `Pearl`
-- `Driftwood Pearl`
-- `Graphite`
+- `Banner`
+- `Charcoal`
+- `Red Acrylic`
+- `Shield Blue`
+- `Ochre`
+- `Parchment`
+- `Bone`
 
 Typography themes:
 
@@ -177,42 +121,28 @@ Typography themes:
 - `Editor Clean`
 - `Mono Range`
 
-Boot intro behavior:
+Layout behavior:
 
-- shown once per browser session
-- skippable immediately
-- disabled for reduced-motion users
+- desktop uses a compact top header plus roadmap-style nav
+- mobile lets the banner scroll away while the nav sticks at the top
+- mobile theme controls live in the footer
 
-## Repo Structure
+## Repo Layout
 
 - `src/pages/`: route entrypoints
 - `src/components/`: reusable UI
-- `src/layouts/`: shared shell
-- `src/styles/global.css`: design tokens and themes
-- `src/scripts/`: page-specific browser modules
-- `src/scripts/runtime/client-utils.js`: shared browser helpers
-- `src/lib/site-data.js`: normalized content access layer
-- `src/lib/anki-export.js`: TSV export builder
-- `src/data/content/`: canonical content datasets
-- `scripts/audit_flashcards.mjs`: glossary/flashcard regression audit
+- `src/layouts/`: document shell
+- `src/styles/global.css`: tokens, glass treatment, layout rules, theme styles
+- `src/scripts/`: browser-side page logic and persistence
+- `src/lib/site-data.js`: normalized study-content access layer
+- `src/lib/theme-options.js`: shared theme metadata
+- `src/lib/anki-export.js`: flashcard TSV export logic
+- `src/data/content/`: canonical study datasets
+- `scripts/audit_flashcards.mjs`: content regression audit
 
-## Documentation Map
+## Docs
 
-- `README.md`: repo orientation and operating guide
-- `docs/master.md`: full app architecture, behavior, UX, data, persistence, and verification reference
-- `docs/content.md`: in-depth review of the curriculum basis, source mix, coverage, and study level
+- `docs/master.md`: full technical and product reference
+- `docs/content.md`: curriculum basis, source mix, and coverage-depth review
 
-## Current Navigation Model
-
-- `/roadmap/` is the single overview surface for all weeks
-- `/weeks/<slug>/` remains the detailed per-week route
-- there is no separate `/weeks/` archive route
-
-## Verification
-
-Run these after changing app logic or content:
-
-```bash
-npm run audit:flashcards
-npm run build
-```
+The older split docs were retired. These two files are the maintained references.

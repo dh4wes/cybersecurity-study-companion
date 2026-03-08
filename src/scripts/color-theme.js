@@ -1,19 +1,8 @@
-const STORAGE_KEY = 'cyber-study-color-theme-v1';
-const THEMES = [
-  'default',
-  'inked',
-  'woodland',
-  'jade-pebble-morning',
-  'cocoa-topaz-noonday',
-  'pearl',
-  'graphite'
-];
-
-const LEGACY_THEME_MAP = {
-  'amethyst-mint-harmony': 'graphite',
-  sorbet: 'woodland',
-  'driftwood-pearl-morning': 'inked'
-};
+import {
+  COLOR_THEME_STORAGE_KEY as STORAGE_KEY,
+  allowedColorThemes as THEMES,
+  legacyColorThemeMap as LEGACY_THEME_MAP
+} from '../lib/theme-options.js';
 
 const normalizeTheme = (theme) => {
   const next = LEGACY_THEME_MAP[theme] || theme;
