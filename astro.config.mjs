@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import AstroPWA from '@vite-pwa/astro';
 
-const site = process.env.SITE_URL || 'https://example.github.io';
+const site = process.env.SITE_URL || 'https://dh4wes.github.io';
 const base = process.env.SITE_BASE || '/';
 const offlineFallback = `${base.replace(/\/?$/, '/') }offline/`;
 

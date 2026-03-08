@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Cybersecurity Study Companion",
-    "subtitle": "A 32-week cybersecurity roadmap and portfolio companion",
-    "description": "Static cybersecurity roadmap with day-level tasks, glossary, flashcards, progress tracking, and local notes tool.",
+    "subtitle": "A 32-week cybersecurity study roadmap and portfolio companion",
+    "description": "Static cybersecurity study roadmap with day-level tasks, glossary, flashcards, progress tracking, and local notes tool.",
     "version": "v2-static-content"
   },
   "core_pages": [

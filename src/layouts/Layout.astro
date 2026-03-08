@@ -16,11 +16,13 @@ import storageMigrateScript from '../scripts/storage-migrate.js?url';
 
 const {
   title = 'Cybersecurity Study Companion',
-  description = '32-week cybersecurity roadmap portfolio and study companion',
+  description = '32-week cybersecurity study roadmap portfolio and study companion',
   currentPath = '/'
 } = Astro.props;
-const appIcon192 = withBase('/pwa-192x192.svg');
-const appIcon512 = withBase('/pwa-512x512.svg');
+const fallbackSite = new URL('https://dh4wes.github.io');
+const appIcon192 = new URL(withBase('/app-icon-192.png'), Astro.site ?? fallbackSite).toString();
+const appIcon512 = new URL(withBase('/app-icon-512.png'), Astro.site ?? fallbackSite).toString();
+const canonicalUrl = new URL(currentPath || '/', Astro.site ?? fallbackSite).toString();
 ---
 
 <!doctype html>
@@ -34,8 +36,9 @@ const appIcon512 = withBase('/pwa-512x512.svg');
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={appIcon512} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={appIcon512} />
