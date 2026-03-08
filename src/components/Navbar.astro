@@ -123,7 +123,7 @@ const isActive = (path) => {
     right: 0;
     bottom: 0;
     height: clamp(56px, 9vw, 88px);
-    background: rgba(10, 11, 13, 0.84);
+    background: rgba(10, 11, 13, 0.42);
     z-index: 1;
     pointer-events: none;
   }
@@ -242,8 +242,8 @@ const isActive = (path) => {
     z-index: 3;
     border-top: 1px solid rgba(255, 244, 221, 0.15);
     border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
-    background: rgba(10, 11, 13, 0.9);
-    backdrop-filter: blur(8px);
+    background: rgba(10, 11, 13, 0.28);
+    backdrop-filter: blur(14px) saturate(1.08);
   }
 
   .site-nav ul {
@@ -286,7 +286,7 @@ const isActive = (path) => {
 
   .site-nav a:hover,
   .site-nav a:focus-visible {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
     color: #ffffff;
     text-decoration: none;
   }
