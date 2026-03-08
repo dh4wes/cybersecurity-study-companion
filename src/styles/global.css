@@ -41,8 +41,8 @@
   --font-body: var(--type-body-font);
   --font-display: var(--type-heading-font);
 
-  --grid-line: rgba(131, 121, 102, 0.28);
-  --scanline: rgba(255, 244, 221, 0.68);
+  --grid-line: rgba(131, 121, 102, 0.16);
+  --scanline: rgba(255, 244, 221, 0.4);
   --field-bg: rgba(22, 18, 15, 0.5);
   --field-bg-focus: rgba(29, 24, 20, 0.72);
   --header-bg: rgba(22, 18, 15, 0.54);
@@ -206,16 +206,14 @@ body {
   font-size: var(--type-body-size);
   line-height: var(--type-body-leading);
   background-image:
-    linear-gradient(rgba(22, 18, 15, 0.74), rgba(22, 18, 15, 0.74)),
-    var(--theme-bg-image),
-    radial-gradient(circle at 12% 14%, rgba(244, 234, 212, 0.08), transparent 22%),
-    radial-gradient(circle at 84% 22%, rgba(var(--accent-rgb), 0.14), transparent 24%),
-    radial-gradient(circle at 72% 78%, rgba(183, 174, 154, 0.08), transparent 18%),
+    linear-gradient(rgba(22, 18, 15, 0.32), rgba(22, 18, 15, 0.32)),
+    radial-gradient(circle at 12% 14%, rgba(244, 234, 212, 0.05), transparent 22%),
+    radial-gradient(circle at 84% 22%, rgba(var(--accent-rgb), 0.1), transparent 24%),
+    radial-gradient(circle at 72% 78%, rgba(183, 174, 154, 0.05), transparent 18%),
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size:
     auto,
-    var(--theme-bg-size),
     auto,
     auto,
     auto,
@@ -223,7 +221,6 @@ body {
     24px 24px;
   background-position:
     center,
-    var(--theme-bg-position),
     center,
     center,
     center,
@@ -231,7 +228,6 @@ body {
     0 0;
   background-attachment:
     scroll,
-    fixed,
     scroll,
     scroll,
     scroll,
@@ -244,7 +240,20 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.06;
+  opacity: 0.22;
+  background-image: var(--theme-bg-image);
+  background-size: var(--theme-bg-size);
+  background-position: var(--theme-bg-position);
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.028;
   background: repeating-linear-gradient(
     180deg,
     transparent 0,
@@ -255,14 +264,14 @@ body::before {
   z-index: 0;
 }
 
-body::after {
+html::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(244, 234, 212, 0.06), transparent 24%),
-    radial-gradient(circle at center, rgba(183, 174, 154, 0.05), transparent 58%);
+    linear-gradient(180deg, rgba(244, 234, 212, 0.035), transparent 24%),
+    radial-gradient(circle at center, rgba(183, 174, 154, 0.03), transparent 58%);
   z-index: 0;
 }
 
@@ -761,16 +770,14 @@ button.ghost:hover,
     background-color: #1c1713;
     background-size: 18px 18px;
     background-image:
-      linear-gradient(rgba(22, 18, 15, 0.56), rgba(22, 18, 15, 0.56)),
-      var(--theme-bg-image),
-      radial-gradient(circle at 14% 10%, rgba(244, 234, 212, 0.16), transparent 26%),
-      radial-gradient(circle at 82% 16%, rgba(var(--accent-rgb), 0.18), transparent 26%),
-      radial-gradient(circle at 60% 84%, rgba(183, 174, 154, 0.12), transparent 20%),
+      linear-gradient(rgba(22, 18, 15, 0.16), rgba(22, 18, 15, 0.16)),
+      radial-gradient(circle at 14% 10%, rgba(244, 234, 212, 0.08), transparent 26%),
+      radial-gradient(circle at 82% 16%, rgba(var(--accent-rgb), 0.12), transparent 26%),
+      radial-gradient(circle at 60% 84%, rgba(183, 174, 154, 0.07), transparent 20%),
       linear-gradient(var(--grid-line) 1px, transparent 1px),
       linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size:
       auto,
-      cover,
       auto,
       auto,
       auto,
@@ -778,7 +785,6 @@ button.ghost:hover,
       18px 18px;
     background-position:
       center,
-      center top,
       center,
       center,
       center,
@@ -790,12 +796,16 @@ button.ghost:hover,
       scroll,
       scroll,
       scroll,
-      scroll,
       scroll;
   }
 
   body::before {
-    opacity: 0.035;
+    opacity: 0.38;
+    background-position: center center;
+  }
+
+  body::after {
+    opacity: 0.018;
   }
 
   main {
