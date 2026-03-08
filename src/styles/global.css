@@ -765,9 +765,7 @@ button.ghost:hover,
     --glass-blur: 20px;
     --glass-highlight: rgba(255, 244, 221, 0.16);
     --glass-shadow: 0 20px 36px rgba(9, 7, 6, 0.18);
-    --mobile-glass-panel:
-      linear-gradient(180deg, rgba(244, 234, 212, 0.08), rgba(36, 29, 23, 0.14)),
-      var(--theme-bg-image);
+    --mobile-glass-panel: linear-gradient(180deg, rgba(244, 234, 212, 0.08), rgba(36, 29, 23, 0.14));
   }
 
   body {
@@ -826,8 +824,6 @@ button.ghost:hover,
   .card,
   .hero {
     background: var(--mobile-glass-panel);
-    background-size: auto, cover;
-    background-position: center, center top;
     border-color: color-mix(in srgb, var(--border) 62%, var(--glass-highlight));
     box-shadow:
       inset 0 1px 0 rgba(255, 244, 221, 0.05),
@@ -853,8 +849,6 @@ button.ghost:hover,
   .js-day-card.is-complete,
   .js-day-card.is-blocked {
     background: var(--mobile-glass-panel) !important;
-    background-size: auto, cover !important;
-    background-position: center, center top !important;
   }
 
   button,
