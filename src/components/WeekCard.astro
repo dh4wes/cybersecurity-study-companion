@@ -65,6 +65,10 @@ const lockImage = withBase('/images/lock.jpg');
     display: grid;
     gap: 0.3rem;
     overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
+    border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
     transition: border-color 0.15s linear, background 0.15s linear, color 0.15s linear, opacity 0.15s linear;
   }
 
@@ -73,7 +77,7 @@ const lockImage = withBase('/images/lock.jpg');
     position: absolute;
     inset: 0;
     pointer-events: auto;
-    z-index: 4;
+    z-index: 6;
     overflow: hidden;
   }
 
@@ -85,19 +89,21 @@ const lockImage = withBase('/images/lock.jpg');
     filter: saturate(0.72) contrast(0.9) brightness(0.88);
   }
 
-  .week-card:hover {
-    background: linear-gradient(180deg, var(--surface-hover-start), var(--surface-hover-end));
+  .week-card:not(.is-locked):hover {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, rgba(22, 18, 15, 0.82) 28%, rgba(244, 234, 212, 0.08)), color-mix(in srgb, rgba(22, 18, 15, 0.9) 48%, rgba(var(--accent-rgb), 0.1))),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.09), rgba(var(--accent-rgb), 0.12));
     border-color: var(--accent);
   }
 
   .week-card.is-locked {
-    background:
-      linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
-      linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
-    border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
+    cursor: default;
   }
 
   .week-card.is-locked:hover {
+    background:
+      linear-gradient(180deg, rgba(22, 18, 15, 0.82), rgba(22, 18, 15, 0.9)),
+      linear-gradient(135deg, rgba(244, 234, 212, 0.04), rgba(var(--accent-rgb), 0.05));
     border-color: color-mix(in srgb, var(--border) 88%, rgba(244, 234, 212, 0.16));
   }
 
@@ -115,7 +121,7 @@ const lockImage = withBase('/images/lock.jpg');
     z-index: 5;
   }
 
-  .week-card.is-locked > * {
+  .week-card.is-locked > :not(.week-card-lock-foreground) {
     position: relative;
     z-index: 2;
   }
@@ -124,7 +130,13 @@ const lockImage = withBase('/images/lock.jpg');
   .week-card.is-locked h3,
   .week-card.is-locked p,
   .week-card.is-locked .meta,
-  .week-card.is-locked .cta-wrap {
+  .week-card.is-locked .cta-wrap,
+  .week-card.is-locked a,
+  .week-card.is-locked button,
+  .week-card.is-locked input,
+  .week-card.is-locked label,
+  .week-card.is-locked span,
+  .week-card.is-locked strong {
     pointer-events: none;
   }
 
