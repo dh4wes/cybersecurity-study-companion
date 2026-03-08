@@ -154,7 +154,7 @@ There is no standalone `/weeks/` archive route. `/roadmap/` is the single overvi
 - mobile shows the banner as a scrollable top section
 - mobile navigation sits below the banner on load, then becomes sticky at the top once reached
 - mobile theme controls live in the footer
-- the shared banner art is served from `public/images/site-banner-optimized.jpg`
+- the shared banner art is served from `public/images/site-banner.png`
 
 ### Home
 

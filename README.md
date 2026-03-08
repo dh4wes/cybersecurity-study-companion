@@ -126,7 +126,7 @@ Layout behavior:
 - desktop uses a compact top header plus roadmap-style nav
 - mobile shows the banner first, then pins the nav to the top once it reaches it
 - mobile theme controls live in the footer
-- current shared banner asset: `public/images/site-banner-optimized.jpg`
+- current shared banner asset: `public/images/site-banner.png`
 
 ## Repo Layout
 
