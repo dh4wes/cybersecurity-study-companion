@@ -20,8 +20,8 @@ The current app supports:
 Current content totals:
 - 32 weeks
 - 224 day records
-- 190 canonical glossary entries
-- 570 unique flashcards
+- 233 canonical glossary entries
+- 699 unique flashcards
 - 32 weekly review decks
 
 ## Architectural constraints
@@ -98,19 +98,25 @@ Shape:
 
 Types:
 - `definition`
-- `function`
-- `mechanism`
+- `understanding`
+- `application`
 
 Each glossary term maps to exactly three cards.
-The current repository contains 570 unique flashcards derived from 190 glossary entries.
-Week-level study plans reference 576 flashcard slots because two glossary terms are intentionally reused across weeks:
-- `switch` in Weeks 06 and 07
-- `playbook` in Weeks 21 and 28
+Card IDs use:
+- `<term-id>-definition`
+- `<term-id>-mechanism`
+- `<term-id>-scenario`
+
+The current repository contains 699 unique flashcards derived from 233 glossary entries.
 
 ### Day mapping
 Each instructional day references:
 - `glossary_ids`
 - `flashcard_ids`
+
+Day 1-5 decks progressively accumulate the week's vocabulary instead of reusing one identical daily deck.
+Day 6 is the full weekly review deck.
+Day 7 is an empty rest-day deck.
 
 ## Storage model
 
@@ -238,6 +244,7 @@ npm run cap:open
 - `README.md`: quick orientation and operating assumptions
 - `docs/overview.md`: architecture and product behavior reference
 - `docs/flashcard_info.md`: executive summary of flashcard generation plus the full week-by-week flashcard inventory
+- `docs/glossary_flashcard_overhaul_report.md`: pre-change coverage and quality audit for the glossary and flashcard overhaul
 - `docs/code-audit.md`: audit findings and maintenance posture
 - `IMPLEMENTATION_NOTES.md`: migration assumptions and persistent implementation choices
 
@@ -254,8 +261,9 @@ npm run cap:open
 
 ### Glossary and flashcards
 - glossary Bullet 3 now explains mechanism / mental model
-- flashcards now use `definition`, `function`, and `mechanism` types
-- each flashcard back is copied directly from the corresponding glossary bullet
+- flashcards now use `definition`, `understanding`, and `application` types
+- card IDs now use `-definition`, `-mechanism`, and `-scenario`
+- each flashcard back is copied from the corresponding glossary bullet or `TERM — purpose` pair
 
 ## Build and verification
 

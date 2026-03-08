@@ -71,8 +71,8 @@ Status:
 - addressed
 
 Result:
-- flashcards now use `definition`, `function`, and `mechanism`
-- backs are copied exactly from glossary bullets
+- flashcards now use `definition`, `understanding`, and `application`
+- backs are copied from glossary bullets or `TERM — purpose` scenario answers
 
 ### 7. Repository clutter from procedural prompt files
 The repo still contained design and upgrade prompt artifacts that were useful during implementation but not part of the maintained product.
@@ -108,13 +108,14 @@ Recommended follow-up:
 - `README.md` matches the current app state
 - `docs/overview.md` reflects the live architecture and route model
 - `docs/flashcard_info.md` documents flashcard generation, week/topic alignment, and the full card inventory
+- `docs/glossary_flashcard_overhaul_report.md` captures the pre-change coverage and quality audit that justified the overhaul
 - `IMPLEMENTATION_NOTES.md` captures assumptions and constraints that still matter
 
 Documentation content counts currently align with the canonical datasets:
 - 32 weeks
 - 224 day records
-- 190 glossary terms
-- 570 unique flashcards
+- 233 glossary terms
+- 699 unique flashcards
 
 ### Organization
 - canonical data is kept in `src/data/content/`

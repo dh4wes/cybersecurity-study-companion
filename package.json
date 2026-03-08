@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "audit:flashcards": "node scripts/audit_flashcards.mjs",
     "build:cap": "SITE_BASE=/ SITE_URL=http://localhost astro build",
     "cap:sync": "npx cap sync android",
     "cap:open": "npx cap open android"

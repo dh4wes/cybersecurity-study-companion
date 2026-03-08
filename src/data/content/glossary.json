@@ -1,5 +1,15 @@
 [
   {
+    "id": "access-point",
+    "term": "Access Point",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Network device that bridges wireless clients onto a wired LAN.",
+      "Provides Wi-Fi coverage so wireless devices can join the local network.",
+      "Advertises a network name, authenticates clients, and forwards their traffic between radio channels and the wired switch path."
+    ]
+  },
+  {
     "id": "accounting",
     "term": "Accounting (AAA)",
     "category": "Identity & Cryptography",
@@ -7,6 +17,16 @@
       "Tracking and logging of identity actions for accountability within authentication and access control security workflows.",
       "Records authentication events, authorization decisions, and administrative actions so investigators can reconstruct accountability across monitored systems.",
       "Captures login attempts, privilege changes, and session activity in logs so actions can be tied back to specific identities."
+    ]
+  },
+  {
+    "id": "address-plan",
+    "term": "Address Plan",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Structured design that assigns subnets and address ranges to users, devices, and network zones.",
+      "Prevents overlap and leaves room for growth while keeping related systems grouped logically.",
+      "Divides the available space into named subnets, reserves ranges for roles, and documents gateways and usage for each segment."
     ]
   },
   {
@@ -24,7 +44,7 @@
     "term": "Alert Triage",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Initial analysis process that validates and prioritizes alerts within monitoring, investigation, and response workflows.",
+      "Initial analysis process that validates and prioritizes alerts.",
       "Reviews alert context, validates indicators, and assigns priority so analysts address the most credible threats first.",
       "Checks source fidelity, correlates nearby telemetry, and assigns severity so analysts queue real threats ahead of benign noise."
     ]
@@ -50,6 +70,16 @@
     ]
   },
   {
+    "id": "arp",
+    "term": "ARP",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Address Resolution Protocol that maps IPv4 addresses to local MAC addresses on a LAN.",
+      "Lets a host deliver a frame to the correct local interface when it only knows the IPv4 destination.",
+      "Broadcasts a question for an IPv4 address, receives the matching MAC reply, and caches the mapping for later frames."
+    ]
+  },
+  {
     "id": "artifact-curation",
     "term": "Artifact Curation",
     "category": "Career & Portfolio",
@@ -60,13 +90,33 @@
     ]
   },
   {
+    "id": "asset",
+    "term": "Asset",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Any device, account, application, dataset, or service that has value to an organization.",
+      "Defines what must be protected, tracked, or prioritized in security work.",
+      "Security teams identify assets, assign ownership and value, and then use that inventory to guide control and response decisions."
+    ]
+  },
+  {
     "id": "asset-inventory",
     "term": "Asset Inventory",
-    "category": "Security Operations & Incident Response",
+    "category": "General Security Foundations",
     "bullets": [
-      "Structured list of hardware, software, and data assets in scope within monitoring, investigation, and response workflows.",
+      "Structured list of hardware, software, and data assets in scope.",
       "Maps systems, software, owners, and data to known records so investigations and control scope stay accurate.",
       "Collects host attributes, ownership, software, and data scope into records that other controls use for targeting and scoping."
+    ]
+  },
+  {
+    "id": "attack-surface",
+    "term": "Attack Surface",
+    "category": "General Security Foundations",
+    "bullets": [
+      "Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.",
+      "Shows where risk exists so exposure can be reduced or monitored.",
+      "Every exposed service, account, or trust path adds a reachable point that defenders can remove, harden, or watch."
     ]
   },
   {
@@ -74,7 +124,7 @@
     "term": "Attack Vector",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Path or method used by an attacker to reach a target within monitoring, investigation, and response workflows.",
+      "Path or method used by an attacker to reach a target.",
       "Describes the route used for initial access, such as phishing, exposed services, or vulnerable software.",
       "Traces the initial path into the target by following entry point, exposed weakness, and reachable asset sequence."
     ]
@@ -104,7 +154,7 @@
     "term": "Automation Playbook",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Defined sequence of automated actions for a repeatable security task within monitoring, investigation, and response workflows.",
+      "Defined sequence of automated actions for a repeatable security task.",
       "Executes predefined steps, branching logic, and notifications to handle repetitive detection and response tasks consistently.",
       "Chains predefined steps, inputs, and decision branches so repetitive response actions run consistently with minimal manual handling."
     ]
@@ -114,9 +164,19 @@
     "term": "BIOS/UEFI Firmware",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Low-level firmware that initializes hardware and starts the boot process within endpoint hardware and platform operations.",
+      "Low-level firmware that initializes hardware and starts the boot process.",
       "Initializes hardware, runs platform checks, and locates a bootable device before handing control to the loader.",
       "Initializes hardware, selects a boot target, and hands execution to the bootloader after hardware checks pass."
+    ]
+  },
+  {
+    "id": "boot-media",
+    "term": "Boot Media",
+    "category": "Operating Systems & Administration",
+    "bullets": [
+      "Removable or attached storage prepared to start a system or launch an installer.",
+      "Lets a machine load setup tools or an operating system when the normal internal drive is unavailable or being replaced.",
+      "Firmware detects the bootable medium, loads its boot code, and starts the installer or recovery environment."
     ]
   },
   {
@@ -130,11 +190,51 @@
     ]
   },
   {
+    "id": "bootloader",
+    "term": "Bootloader",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Small startup program that loads an operating system kernel after firmware finds a bootable device.",
+      "Bridges firmware startup and operating system execution.",
+      "Firmware starts the loader, the loader locates the kernel and startup options, and control passes into the operating system."
+    ]
+  },
+  {
+    "id": "broadcast-address",
+    "term": "Broadcast Address",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Special IPv4 address that reaches every host on a local subnet.",
+      "Lets a sender deliver one message to all hosts in the same broadcast domain.",
+      "Sets every host bit to one for the subnet, and switches then flood the resulting frame across the local segment."
+    ]
+  },
+  {
+    "id": "broadcast-domain",
+    "term": "Broadcast Domain",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Set of interfaces that receive the same Layer 2 broadcast traffic.",
+      "Defines how far broadcasts travel before a router or other boundary stops them.",
+      "Switches flood broadcasts within the same VLAN or segment, but routers and segmentation boundaries prevent the traffic from crossing further."
+    ]
+  },
+  {
+    "id": "browser",
+    "term": "Browser",
+    "category": "Web, Data & Cloud",
+    "bullets": [
+      "Client application that requests, renders, and interacts with web content.",
+      "Lets users navigate websites, submit forms, and run web applications.",
+      "Requests resources from servers, processes returned HTML, CSS, and scripts, and then renders the resulting page."
+    ]
+  },
+  {
     "id": "business-impact-analysis",
     "term": "Business Impact Analysis",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Process for identifying operational effects of disruption over time within governance, risk, and compliance workflows.",
+      "Process for identifying operational effects of disruption over time.",
       "Estimates process disruption effects, recovery priorities, and tolerable downtime for critical business functions.",
       "Maps business processes to dependencies, outage tolerances, and recovery needs so disruption consequences can be measured."
     ]
@@ -144,7 +244,7 @@
     "term": "Capability Gap",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Difference between current skills/process maturity and target state within governance, risk, and compliance workflows.",
+      "Difference between current skills/process maturity and target state.",
       "Compares current staffing, tooling, or process maturity against required outcomes to identify deficiencies.",
       "Compares current people, process, and tooling against a target state to show what is missing."
     ]
@@ -164,9 +264,19 @@
     "term": "Case Management",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Tracking and coordination of investigation tasks, evidence, and decisions within monitoring, investigation, and response workflows.",
+      "Tracking and coordination of investigation tasks, evidence, and decisions.",
       "Maintains case status, assigned work, evidence references, and decisions throughout an investigation lifecycle.",
       "Keeps alerts, evidence, notes, and task status in one record so investigations remain coordinated across analysts."
+    ]
+  },
+  {
+    "id": "certificate",
+    "term": "Certificate",
+    "category": "Identity & Cryptography",
+    "bullets": [
+      "Digitally signed record that binds an identity to a public key.",
+      "Lets systems verify who a server or user claims to be before trusting that key.",
+      "A trusted issuer signs identity details and a public key, and the client validates that signature before accepting the key."
     ]
   },
   {
@@ -174,9 +284,29 @@
     "term": "Chain of Custody",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Record of who handled evidence, when, and why within monitoring, investigation, and response workflows.",
+      "Record of who handled evidence, when, and why.",
       "Documents each evidence transfer, handler, timestamp, and purpose to preserve admissibility and integrity.",
       "Documents who collected, transferred, stored, and examined evidence so handling remains traceable and defensible."
+    ]
+  },
+  {
+    "id": "change-management",
+    "term": "Change Management",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Controlled process for proposing, reviewing, approving, implementing, and validating a change.",
+      "Reduces unintended outages and security regressions when systems or settings are modified.",
+      "Records the request, evaluates risk and approval, applies the change in a planned window, and verifies the result afterward."
+    ]
+  },
+  {
+    "id": "chipset",
+    "term": "Chipset",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Controller logic on the motherboard that coordinates communication between the processor, storage, USB, and expansion interfaces.",
+      "Routes data and control signals between major subsystems that do not connect directly to the CPU.",
+      "Links processor lanes, storage controllers, USB paths, and peripheral buses so board components can exchange data predictably."
     ]
   },
   {
@@ -184,7 +314,7 @@
     "term": "chmod",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Linux command used to modify file permission bits within host administration and operating system workflows.",
+      "Linux command used to modify file permission bits.",
       "Updates read, write, and execute permission bits for users, groups, or others on Linux files.",
       "Changes permission bits on a file or directory by setting read, write, and execute flags for owner, group, or others."
     ]
@@ -194,7 +324,7 @@
     "term": "chown",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Linux command used to change file owner and group within host administration and operating system workflows.",
+      "Linux command used to change file owner and group.",
       "Reassigns file ownership metadata so access decisions follow the intended user and group account.",
       "Reassigns file ownership metadata so the kernel applies access checks against a different user or group."
     ]
@@ -202,11 +332,11 @@
   {
     "id": "cia-triad",
     "term": "CIA Triad",
-    "category": "Hardware & Endpoints",
+    "category": "General Security Foundations",
     "bullets": [
-      "Confidentiality, Integrity, and Availability security objective model within endpoint hardware and platform operations.",
-      "Evaluates security objectives by balancing data secrecy, accuracy, and availability across system design decisions.",
-      "Evaluates security goals by asking whether data stays readable to authorized users, unmodified, and available when needed."
+      "Security model built around confidentiality, integrity, and availability.",
+      "Provides a basic framework for judging what a control is protecting or what a failure affected.",
+      "Evaluates whether data stays secret, unaltered, and reachable, then uses those goals to choose and review controls."
     ]
   },
   {
@@ -214,7 +344,7 @@
     "term": "CIDR",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Classless Inter-Domain Routing notation for subnet masks and prefixes within routed and switched network environments.",
+      "Classless Inter-Domain Routing notation for subnet masks and prefixes.",
       "Uses prefix length notation to describe network size and route aggregation more efficiently than classful addressing.",
       "Expresses the network prefix length so devices can derive which address bits identify the network and which identify hosts."
     ]
@@ -224,9 +354,9 @@
     "term": "Cloud Service Model",
     "category": "Web, Data & Cloud",
     "bullets": [
-      "Service delivery layer such as IaaS, PaaS, or SaaS within web, data, and cloud services.",
-      "Defines whether the provider manages infrastructure, platform components, runtime services, or complete applications.",
-      "Splits responsibility between provider and customer by defining which party manages infrastructure, platform, or application layers."
+      "Service delivery model such as IaaS, PaaS, or SaaS that defines what the provider manages.",
+      "Clarifies which parts of the stack the customer controls versus what the provider operates for them.",
+      "Moves responsibility up or down the stack by deciding whether the provider manages infrastructure, platform components, or the full application."
     ]
   },
   {
@@ -234,7 +364,7 @@
     "term": "Command Line",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Text-based interface for executing operating system commands within host administration and operating system workflows.",
+      "Text-based interface for executing operating system commands.",
       "Accepts typed commands, arguments, and pipelines for direct interaction with operating system utilities.",
       "Reads typed commands, parses options and arguments, then executes programs within the current shell environment."
     ]
@@ -244,7 +374,7 @@
     "term": "Communication Plan",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Documented messaging protocol for stakeholders during security events within monitoring, investigation, and response workflows.",
+      "Documented messaging protocol for stakeholders during security events.",
       "Defines notification paths, message timing, approval points, and audiences during an incident response process.",
       "Defines audiences, triggers, channels, and message owners so incident updates move on schedule without conflicting reports."
     ]
@@ -254,7 +384,7 @@
     "term": "Compensating Control",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Alternative safeguard used when a primary control is not feasible within governance, risk, and compliance workflows.",
+      "Alternative safeguard used when a primary control is not feasible.",
       "Implements an alternate safeguard that reduces risk when the preferred primary control cannot be deployed.",
       "Applies an alternative safeguard that reduces the same risk when the preferred control cannot be implemented."
     ]
@@ -264,7 +394,7 @@
     "term": "Compliance",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Conformance to laws, regulations, standards, or internal policies within governance, risk, and compliance workflows.",
+      "Conformance to laws, regulations, standards, or internal policies.",
       "Measures implemented practices against external or internal requirements and documents conformity or deficiency.",
       "Compares actual practices and evidence against a required standard, then records where controls meet or miss expectations."
     ]
@@ -284,7 +414,7 @@
     "term": "Containment",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Response action that limits incident spread and immediate damage within monitoring, investigation, and response workflows.",
+      "Response action that limits incident spread and immediate damage.",
       "Applies isolation, account restrictions, or blocking actions to stop attacker movement while preserving evidence.",
       "Limits attacker movement by isolating affected assets, blocking malicious paths, and preserving enough access for investigation."
     ]
@@ -294,7 +424,7 @@
     "term": "Continuous Improvement",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Ongoing cycle of measuring outcomes and refining process within governance, risk, and compliance workflows.",
+      "Ongoing cycle of measuring outcomes and refining process.",
       "Uses metrics, lessons learned, and review cycles to refine controls, processes, and training over time.",
       "Uses review findings, metrics, and repeated adjustments to raise control effectiveness over successive cycles."
     ]
@@ -302,11 +432,11 @@
   {
     "id": "control",
     "term": "Control",
-    "category": "Governance, Risk & Compliance",
+    "category": "General Security Foundations",
     "bullets": [
-      "Safeguard that prevents, detects, or corrects security issues within governance, risk, and compliance workflows.",
-      "Implements preventive, detective, or corrective measures that reduce likelihood, impact, or exposure.",
-      "Imposes a rule, technical setting, or process step that prevents, detects, or limits unwanted outcomes."
+      "Safeguard that prevents, detects, or corrects a security problem.",
+      "Reduces risk by changing how likely, visible, or damaging an unwanted event can become.",
+      "Applies a policy, technical setting, or process step that blocks misuse, spots abnormal activity, or limits the resulting damage."
     ]
   },
   {
@@ -314,9 +444,29 @@
     "term": "Control Recommendation",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Actionable proposal to improve prevention, detection, or response capability within governance, risk, and compliance workflows.",
+      "Actionable proposal to improve prevention, detection, or response capability.",
       "Documents a proposed safeguard, rationale, owner, and priority for reducing identified risk.",
       "Links an identified gap to a specific safeguard, owner, and priority so remediation can be executed."
+    ]
+  },
+  {
+    "id": "conversation-view",
+    "term": "Conversation View",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Summary view that groups traffic by paired endpoints and session statistics.",
+      "Shows which hosts talked to each other and how much traffic each exchange produced.",
+      "Aggregates packets by source and destination pair, counts frames or bytes, and presents the grouped exchange as one record."
+    ]
+  },
+  {
+    "id": "cooling",
+    "term": "Cooling / Thermal Management",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Hardware and airflow design used to move heat away from processors, chipsets, and other hot components.",
+      "Prevents overheating, instability, and thermal throttling during sustained workloads.",
+      "Transfers heat into a heatsink and then moves it away with airflow so component temperatures stay within safe limits."
     ]
   },
   {
@@ -324,9 +474,19 @@
     "term": "CPU",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Central Processing Unit; executes instructions and coordinates processing tasks within endpoint hardware and platform operations.",
+      "Central Processing Unit, executes instructions and coordinates processing tasks.",
       "Fetches, decodes, and executes instructions while coordinating arithmetic, logic, and control operations across the system.",
       "Fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores."
+    ]
+  },
+  {
+    "id": "cpu-cache",
+    "term": "CPU Cache",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Small, high-speed memory on or near the processor that stores frequently used instructions and data.",
+      "Reduces average memory access time by serving repeated reads faster than system RAM can.",
+      "Keeps recently or frequently used data close to the core, so many requests finish before the CPU waits on RAM."
     ]
   },
   {
@@ -334,7 +494,7 @@
     "term": "Critical Infrastructure",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Systems essential to societal and economic stability within governance, risk, and compliance workflows.",
+      "Systems essential to societal and economic stability.",
       "Includes essential services whose disruption would significantly affect safety, economy, health, or national security.",
       "Depends on interlocking services, suppliers, and control systems, so failure in one area can cascade into others."
     ]
@@ -344,7 +504,7 @@
     "term": "cron",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Linux scheduling system for recurring task automation within host administration and operating system workflows.",
+      "Linux scheduling system for recurring task automation.",
       "Launches scheduled commands at configured times using recurring entries defined in cron tables.",
       "Matches the current time against scheduled expressions and launches configured commands when a schedule qualifies."
     ]
@@ -354,7 +514,7 @@
     "term": "CVSS",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Common Vulnerability Scoring System for rating vulnerability severity within governance, risk, and compliance workflows.",
+      "Common Vulnerability Scoring System for rating vulnerability severity.",
       "Scores vulnerabilities using base metrics that estimate exploitability and technical impact in a standardized format.",
       "Scores vulnerabilities by combining exploitability and impact metrics into a standardized severity value."
     ]
@@ -394,7 +554,7 @@
     "term": "Detection Rule",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Logic used by monitoring systems to trigger alerts within monitoring, investigation, and response workflows.",
+      "Logic used by monitoring systems to trigger alerts.",
       "Evaluates log fields, thresholds, and patterns against conditions that generate actionable security alerts.",
       "Evaluates events against defined conditions, thresholds, or sequences and generates alerts when matching activity appears."
     ]
@@ -402,21 +562,21 @@
   {
     "id": "dhcp",
     "term": "DHCP",
-    "category": "Operating Systems & Administration",
+    "category": "Networking & Infrastructure",
     "bullets": [
-      "Dynamic Host Configuration Protocol; automatically assigns network settings to devices within host administration and operating system workflows.",
-      "Leases IP settings such as address, gateway, and DNS information to clients during network startup.",
-      "Leases network settings by exchanging discover, offer, request, and acknowledgment messages between client and server."
+      "Protocol that automatically assigns IP settings to clients when they join a network.",
+      "Provides addresses, gateway, DNS, and lease timing without manual configuration on every device.",
+      "Clients broadcast discovery messages, servers offer leases, the client requests one, and the server acknowledges the assigned settings."
     ]
   },
   {
     "id": "dns",
     "term": "DNS",
-    "category": "Operating Systems & Administration",
+    "category": "Networking & Infrastructure",
     "bullets": [
-      "Domain Name System that resolves hostnames to IP addresses within host administration and operating system workflows.",
-      "Stores and serves resource records so resolvers can map names to addresses and services.",
-      "Queries a resolver, follows cached or delegated answers, and returns the record data needed for name lookup."
+      "Distributed naming system that maps domain names to IP addresses and other records.",
+      "Lets users and applications use human-readable names instead of memorizing numeric addresses.",
+      "A resolver checks cache first, then queries recursive or authoritative servers until the requested record is returned."
     ]
   },
   {
@@ -424,9 +584,29 @@
     "term": "DNS Resolution",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Lookup process translating a hostname to one or more IP addresses within routed and switched network environments.",
-      "Queries local caches and DNS servers iteratively or recursively until a matching address record is returned.",
-      "Checks local cache first, then queries resolvers iteratively or recursively until an answer or failure returns."
+      "Lookup process that turns a hostname into one or more usable IP addresses.",
+      "Finds the address data needed before a client can contact the intended service.",
+      "Checks local cache first, then queries resolvers and delegated servers until an answer or failure is returned."
+    ]
+  },
+  {
+    "id": "docking-station",
+    "term": "Docking Station",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Accessory that expands a portable computer with extra ports, displays, power, or peripherals through one connection.",
+      "Lets a mobile system switch quickly between portable and desk-based work setups.",
+      "Carries power, video, USB, and network traffic through one dock link so attached peripherals reconnect as a group."
+    ]
+  },
+  {
+    "id": "documentation",
+    "term": "Documentation",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Written record of configurations, procedures, findings, or changes that explains what was done and why.",
+      "Preserves knowledge so support and security work can be repeated, handed off, and audited.",
+      "Captures relevant facts, decisions, and steps in a shared record so future work starts from known context instead of memory."
     ]
   },
   {
@@ -450,11 +630,21 @@
     ]
   },
   {
+    "id": "endpoint-view",
+    "term": "Endpoint View",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Summary view that groups traffic by host or interface seen in a capture.",
+      "Helps identify which systems were most active in the observed traffic.",
+      "Aggregates packets by endpoint address and reports totals so busy or unusual hosts stand out quickly."
+    ]
+  },
+  {
     "id": "enumeration",
     "term": "Enumeration",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Active discovery of services, accounts, or resources on a target within monitoring, investigation, and response workflows.",
+      "Active discovery of services, accounts, or resources on a target.",
       "Queries services, directories, or hosts to identify available accounts, ports, shares, and software details.",
       "Queries exposed services, users, shares, or directories step by step to expand knowledge of a target environment."
     ]
@@ -464,7 +654,7 @@
     "term": "Eradication",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Removal of attacker presence, malicious artifacts, and root causes within monitoring, investigation, and response workflows.",
+      "Removal of attacker presence, malicious artifacts, and root causes.",
       "Removes malware, closes exploited access paths, and fixes root causes before systems return to service.",
       "Removes malicious artifacts, closes exploited weaknesses, and validates cleanup so the same foothold cannot immediately return."
     ]
@@ -494,7 +684,7 @@
     "term": "Escalation Path",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Defined process for raising incidents to appropriate teams and leadership within monitoring, investigation, and response workflows.",
+      "Defined process for raising incidents to appropriate teams and leadership.",
       "Routes incidents to higher authority or specialist teams using predefined severity, impact, and responsibility criteria.",
       "Routes an issue through defined responders and thresholds so decisions move quickly when severity or scope increases."
     ]
@@ -504,7 +694,7 @@
     "term": "Ethernet Frame",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Data-link encapsulation format used on Ethernet networks within routed and switched network environments.",
+      "Data-link encapsulation format used on Ethernet networks.",
       "Encapsulates payload data with source, destination, type, and integrity fields for local network delivery.",
       "Wraps payload data with MAC addresses and control fields so switches and receivers can forward and validate it."
     ]
@@ -514,7 +704,7 @@
     "term": "Evidence Handling",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Process for collecting and preserving evidence with integrity within monitoring, investigation, and response workflows.",
+      "Process for collecting and preserving evidence with integrity.",
       "Collects, labels, stores, and transfers artifacts using documented procedures that preserve reliability and traceability.",
       "Acquires, labels, stores, and transfers artifacts using repeatable procedures that preserve integrity and analyst context."
     ]
@@ -524,7 +714,7 @@
     "term": "Executive Briefing",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Concise leadership-facing summary of risk, impact, and recommended action within governance, risk, and compliance workflows.",
+      "Concise leadership-facing summary of risk, impact, and recommended action.",
       "Summarizes technical findings into business impact, options, and decisions needed by senior leadership.",
       "Condenses technical facts into business impact, decision needs, and recommended actions suited to leadership review."
     ]
@@ -534,7 +724,7 @@
     "term": "Exploit",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Code or technique that takes advantage of a vulnerability within monitoring, investigation, and response workflows.",
+      "Code or technique that takes advantage of a vulnerability.",
       "Triggers vulnerable behavior through crafted input, code execution, or protocol abuse to gain unauthorized results.",
       "Uses crafted input or sequence timing to trigger a weakness and execute behavior the system did not intend to allow."
     ]
@@ -544,7 +734,7 @@
     "term": "Exposure",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Degree to which assets are reachable or vulnerable to threat activity within governance, risk, and compliance workflows.",
+      "Degree to which assets are reachable or vulnerable to threat activity.",
       "Describes how accessible an asset or weakness is to threat activity under current controls and conditions.",
       "Reflects how reachable a weakness is, based on attacker access, asset placement, and existing control coverage."
     ]
@@ -554,7 +744,7 @@
     "term": "False Positive",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Alert that appears malicious but is benign after investigation within monitoring, investigation, and response workflows.",
+      "Alert that appears malicious but is benign after investigation.",
       "Occurs when detection logic matches benign activity, requiring tuning to reduce unnecessary analyst effort.",
       "Appears when a rule matches benign activity because indicators, thresholds, or context are too broad."
     ]
@@ -564,7 +754,7 @@
     "term": "File Parsing",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Reading structured or semi-structured files into usable data within monitoring, investigation, and response workflows.",
+      "Reading structured or semi-structured files into usable data.",
       "Reads structured fields from logs or data files so automation and analysis can operate on extracted values.",
       "Reads structured or semi-structured content, extracts needed fields, and normalizes the results for later analysis."
     ]
@@ -572,11 +762,11 @@
   {
     "id": "filesystem",
     "term": "Filesystem",
-    "category": "Hardware & Endpoints",
+    "category": "Operating Systems & Administration",
     "bullets": [
-      "Structure and rules used to organize and access files on storage media.",
-      "Maps file names to directories, metadata, and storage blocks so the operating system can read or write data.",
-      "Maps filenames to metadata and storage blocks so the OS can locate, read, write, and protect files."
+      "Structure and rules used to organize, name, store, and retrieve files on storage media.",
+      "Lets an operating system keep data in directories with metadata, permissions, and predictable paths.",
+      "Maps filenames to directories, metadata, and storage blocks so the system can locate, read, write, and protect data."
     ]
   },
   {
@@ -584,7 +774,7 @@
     "term": "Firewall",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Control that allows or blocks traffic based on policy rules within routed and switched network environments.",
+      "Control that allows or blocks traffic based on policy rules.",
       "Evaluates traffic against policy rules and permits, rejects, or logs connections based on criteria.",
       "Compares traffic against ordered rules and may track connection state to permit or deny packets."
     ]
@@ -594,7 +784,7 @@
     "term": "Forensic Imaging",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Bit-level copy of media created for evidence analysis within monitoring, investigation, and response workflows.",
+      "Bit-level copy of media created for evidence analysis.",
       "Creates a sector-level duplicate of media while preserving source state for repeatable forensic examination.",
       "Copies storage bit for bit, verifies the image with hashes, and preserves the original media from further change."
     ]
@@ -614,7 +804,7 @@
     "term": "Governance",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Decision framework defining accountability, policy, and oversight within governance, risk, and compliance workflows.",
+      "Decision framework defining accountability, policy, and oversight.",
       "Assigns decision rights, policy direction, and oversight mechanisms for managing cybersecurity activities.",
       "Assigns decision rights, accountability, and policy direction so security work aligns with organizational objectives."
     ]
@@ -624,7 +814,7 @@
     "term": "Hardening",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Process of reducing attack surface through secure configuration within monitoring, investigation, and response workflows.",
+      "Process of reducing attack surface through secure configuration.",
       "Disables unnecessary services, tightens configurations, and applies secure defaults to reduce exposed attack surface.",
       "Reduces attack surface by disabling unnecessary features, enforcing secure settings, and removing weak defaults before exposure."
     ]
@@ -637,6 +827,16 @@
       "One-way transformation of data into a fixed-length digest within authentication and access control security workflows.",
       "Processes input through a deterministic algorithm to produce a fixed digest for integrity checks and password verification.",
       "Runs input through a one-way algorithm that deterministically produces a fixed-length digest, exposing changes when inputs differ."
+    ]
+  },
+  {
+    "id": "host-range",
+    "term": "Host Range",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Set of usable host addresses inside a subnet, excluding reserved network and broadcast values.",
+      "Defines which addresses can be assigned to devices on that subnet.",
+      "Starts after the network address, ends before the broadcast address, and provides the usable values between those boundaries."
     ]
   },
   {
@@ -664,7 +864,7 @@
     "term": "Hypervisor",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Layer that creates and manages virtual machines on host hardware within endpoint hardware and platform operations.",
+      "Layer that creates and manages virtual machines on host hardware.",
       "Abstracts physical hardware, allocates virtual resources, and isolates guest systems running on the same host.",
       "Abstracts CPU, memory, storage, and network hardware so multiple guest operating systems can run in isolated virtual environments."
     ]
@@ -684,7 +884,7 @@
     "term": "Impact",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Estimated consequence if a risk event occurs within governance, risk, and compliance workflows.",
+      "Estimated consequence if a risk event occurs.",
       "Estimates operational, financial, legal, or reputational consequences if a threat event occurs.",
       "Measures consequence across operations, finances, legal exposure, or safety if the risk event occurs."
     ]
@@ -694,7 +894,7 @@
     "term": "Incident Command",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Leadership structure coordinating decisions and responsibilities during incidents within monitoring, investigation, and response workflows.",
+      "Leadership structure coordinating decisions and responsibilities during incidents.",
       "Assigns command roles, decision authority, and coordination channels so response teams act under a consistent structure.",
       "Assigns leadership, roles, and reporting lines so technical response and business decisions stay coordinated under pressure."
     ]
@@ -704,7 +904,7 @@
     "term": "Incident Journal",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Structured notes capturing incident observations, decisions, and rationale within monitoring, investigation, and response workflows.",
+      "Structured notes capturing incident observations, decisions, and rationale.",
       "Records timestamps, observations, hypotheses, and actions in sequence to support investigation continuity and review.",
       "Records timestamps, actions, findings, and decisions in order so the investigation can be reconstructed accurately later."
     ]
@@ -714,19 +914,9 @@
     "term": "Incident Severity",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Impact-based classification used to prioritize incident response within monitoring, investigation, and response workflows.",
+      "Impact-based classification used to prioritize incident response.",
       "Scores incidents using impact and urgency criteria to drive escalation, staffing, and response timelines.",
       "Combines impact, scope, and urgency into a rating that drives escalation, communication, and response effort."
-    ]
-  },
-  {
-    "id": "ioc",
-    "term": "Indicator of Compromise",
-    "category": "Security Operations & Incident Response",
-    "bullets": [
-      "Observable evidence suggesting malicious activity occurred within monitoring, investigation, and response workflows.",
-      "Captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity.",
-      "Uses observable artifacts such as hashes, domains, or registry changes to match activity against known malicious patterns."
     ]
   },
   {
@@ -754,7 +944,7 @@
     "term": "Intrusion Detection",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Monitoring approach that identifies suspicious or malicious activity within monitoring, investigation, and response workflows.",
+      "Monitoring approach that identifies suspicious or malicious activity.",
       "Analyzes network or host events for suspicious patterns and generates alerts when monitored conditions match.",
       "Monitors network or host activity, compares it to signatures or baselines, and raises alerts on suspicious matches."
     ]
@@ -764,9 +954,19 @@
     "term": "Intrusion Prevention",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Inline security control that blocks malicious activity in real time within monitoring, investigation, and response workflows.",
+      "Inline security control that blocks malicious activity in real time.",
       "Inspects traffic inline and automatically blocks packets or sessions matching malicious signatures or policies.",
       "Inspects traffic inline and drops or resets sessions when packets match blocked signatures or policy conditions."
+    ]
+  },
+  {
+    "id": "ioc",
+    "term": "Indicator of Compromise",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Observable evidence suggesting malicious activity occurred.",
+      "Captures observable artifacts such as hashes, domains, IPs, or processes associated with malicious activity.",
+      "Uses observable artifacts such as hashes, domains, or registry changes to match activity against known malicious patterns."
     ]
   },
   {
@@ -774,9 +974,9 @@
     "term": "IP Address",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Logical network address used to identify a host and route traffic within routed and switched network environments.",
-      "Assigns a logical source or destination identifier so packets can be routed between networks.",
-      "Combines network and host portions so packets can be routed to the correct interface and endpoint."
+      "Logical network address that identifies a source or destination host for routed traffic.",
+      "Lets packets be sent toward the correct network and endpoint instead of staying on one local segment.",
+      "Combines network and host portions so devices can tell whether traffic stays local or must be forwarded by a router."
     ]
   },
   {
@@ -784,7 +984,7 @@
     "term": "IPv4",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "32-bit addressing protocol widely used for internet and private networks within routed and switched network environments.",
+      "32-bit addressing protocol widely used for internet and private networks.",
       "Represents addresses in 32 bits and forwards packets using hierarchical network and host portions.",
       "Uses 32-bit addresses and header fields so routers can forward packets between networks."
     ]
@@ -810,6 +1010,16 @@
     ]
   },
   {
+    "id": "json",
+    "term": "JSON",
+    "category": "Web, Data & Cloud",
+    "bullets": [
+      "Structured text format that represents data as name-value pairs and nested arrays or objects.",
+      "Makes application data easy to exchange between APIs, scripts, and services.",
+      "Encodes values in a predictable syntax that parsers can read into objects and serialize back into text."
+    ]
+  },
+  {
     "id": "keyword-optimization",
     "term": "Keyword Optimization",
     "category": "Career & Portfolio",
@@ -830,11 +1040,31 @@
     ]
   },
   {
+    "id": "lan",
+    "term": "LAN",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Local area network that connects devices across a limited physical space such as a room, office, or campus.",
+      "Provides high-speed local communication among nearby systems and shared resources.",
+      "Uses local switching and addressing so devices exchange frames directly across a contained network segment."
+    ]
+  },
+  {
+    "id": "laptop",
+    "term": "Laptop",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Portable computer with an integrated display, keyboard, battery, and mobile-oriented internal components.",
+      "Provides a full personal computing platform that can run unplugged and travel easily.",
+      "Combines processor, memory, storage, battery, display, and wireless hardware in one chassis so the system operates as one endpoint."
+    ]
+  },
+  {
     "id": "latency",
     "term": "Latency",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Time delay between request and response across a path within routed and switched network environments.",
+      "Time delay between request and response across a path.",
       "Measures elapsed time introduced by transmission, processing, queuing, and distance across a network path.",
       "Accumulates delay from propagation, processing, queuing, and retransmission before data reaches the destination."
     ]
@@ -854,7 +1084,7 @@
     "term": "Likelihood",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Estimated probability that a risk event will occur within governance, risk, and compliance workflows.",
+      "Estimated probability that a risk event will occur.",
       "Estimates how probable a threat event is based on exposure, capability, and control conditions.",
       "Estimates how probable an event is by considering threat capability, opportunity, and control strength."
     ]
@@ -874,7 +1104,7 @@
     "term": "Linux Kernel",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Core component of Linux that manages hardware access, processes, and memory within host administration and operating system workflows.",
+      "Core component of Linux that manages hardware access, processes, and memory.",
       "Handles scheduling, memory management, drivers, and system calls between software and hardware resources.",
       "Handles process scheduling, memory management, device drivers, and system calls between hardware and user space."
     ]
@@ -884,7 +1114,7 @@
     "term": "Linux Permissions",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Read/write/execute access model controlling file and directory operations within host administration and operating system workflows.",
+      "Read/write/execute access model controlling file and directory operations.",
       "Evaluates ownership and permission bits before allowing file or directory operations on Linux.",
       "Apply owner, group, and other permission bits that the kernel checks before allowing file operations."
     ]
@@ -894,7 +1124,7 @@
     "term": "Log Correlation",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Linking events from multiple sources to reveal meaningful patterns within monitoring, investigation, and response workflows.",
+      "Linking events from multiple sources to reveal meaningful patterns.",
       "Combines events across sources by time, host, user, or indicator to reveal attack sequences.",
       "Joins events across sources by time, host, user, or session so one isolated signal becomes a complete narrative."
     ]
@@ -904,7 +1134,7 @@
     "term": "Log Source",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "System or service that generates telemetry ingested for analysis within monitoring, investigation, and response workflows.",
+      "System or service that generates telemetry ingested for analysis.",
       "Produces telemetry from systems, applications, and security tools that analysts ingest for monitoring and investigation.",
       "Generates timestamped records from systems, applications, or devices that downstream tools parse and correlate."
     ]
@@ -924,7 +1154,7 @@
     "term": "MAC Address",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Hardware identifier used by network interfaces on local segments within routed and switched network environments.",
+      "Hardware identifier used by network interfaces on local segments.",
       "Identifies a local network interface at Layer 2 for switching and frame delivery decisions.",
       "Identifies a network interface at layer 2 so frames can be delivered on the local segment."
     ]
@@ -944,7 +1174,7 @@
     "term": "Management Summary",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Non-technical overview focused on business impact and decisions needed within governance, risk, and compliance workflows.",
+      "Non-technical overview focused on business impact and decisions needed.",
       "Condenses technical detail into concise statements about business effect, priority, and recommended actions.",
       "Distills detailed analysis into risk, impact, and recommended action so managers can decide quickly."
     ]
@@ -954,49 +1184,9 @@
     "term": "Maturity Model",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Framework used to assess current capability level and improvement targets within governance, risk, and compliance workflows.",
+      "Framework used to assess current capability level and improvement targets.",
       "Rates current process capability against defined levels to guide staged improvement planning.",
       "Defines staged capability levels with observable practices so programs can judge progress against a target state."
-    ]
-  },
-  {
-    "id": "mitigation",
-    "term": "Mitigation",
-    "category": "Governance, Risk & Compliance",
-    "bullets": [
-      "Action that lowers likelihood or impact of a risk within governance, risk, and compliance workflows.",
-      "Selects and implements actions that lower the chance or consequences of a risk event.",
-      "Reduces either the chance or the consequence of a risk through selected safeguards and process changes."
-    ]
-  },
-  {
-    "id": "mobile-device",
-    "term": "Mobile Device",
-    "category": "Hardware & Endpoints",
-    "bullets": [
-      "Portable endpoint such as a laptop, tablet, or smartphone with dedicated management constraints.",
-      "Integrates compute components, radios, sensors, and power controls under mobile operating system management policies.",
-      "Combines radios, sensors, firmware, and an OS into a handheld platform that manages apps, identity, and data."
-    ]
-  },
-  {
-    "id": "mock-exam",
-    "term": "Mock Exam",
-    "category": "Study Workflow",
-    "bullets": [
-      "Practice test used to simulate exam conditions and identify weak areas within structured review and exam preparation.",
-      "Simulates exam timing, format, and pressure to measure readiness under realistic test conditions.",
-      "Simulates test conditions, measures performance under time limits, and reveals weak domains before the real exam."
-    ]
-  },
-  {
-    "id": "motherboard",
-    "term": "Motherboard",
-    "category": "Hardware & Endpoints",
-    "bullets": [
-      "Main circuit board that connects CPU, memory, storage, and expansion components within endpoint hardware and platform operations.",
-      "Provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components.",
-      "Connects CPU, memory, firmware, storage, and buses so components can exchange power, timing, and data signals."
     ]
   },
   {
@@ -1010,11 +1200,61 @@
     ]
   },
   {
+    "id": "mitigation",
+    "term": "Mitigation",
+    "category": "Governance, Risk & Compliance",
+    "bullets": [
+      "Action that lowers likelihood or impact of a risk.",
+      "Selects and implements actions that lower the chance or consequences of a risk event.",
+      "Reduces either the chance or the consequence of a risk through selected safeguards and process changes."
+    ]
+  },
+  {
+    "id": "mobile-device",
+    "term": "Mobile Device",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Portable endpoint such as a phone, tablet, or lightweight computer with integrated radios and battery power.",
+      "Delivers computing, connectivity, and local apps in a form factor built for movement and short sessions.",
+      "Combines processor, storage, battery, sensors, and wireless interfaces so one compact device can manage apps and data on the move."
+    ]
+  },
+  {
+    "id": "mock-exam",
+    "term": "Mock Exam",
+    "category": "Study Workflow",
+    "bullets": [
+      "Practice test used to simulate exam conditions and identify weak areas within structured review and exam preparation.",
+      "Simulates exam timing, format, and pressure to measure readiness under realistic test conditions.",
+      "Simulates test conditions, measures performance under time limits, and reveals weak domains before the real exam."
+    ]
+  },
+  {
+    "id": "modem",
+    "term": "Modem",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Device that connects a local network to an ISP service by converting signals between provider media and Ethernet.",
+      "Provides the handoff between the provider network technology and the customer router or gateway.",
+      "Receives the provider signal format, translates it into local data frames, and passes traffic between the ISP link and home equipment."
+    ]
+  },
+  {
+    "id": "motherboard",
+    "term": "Motherboard",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Main circuit board that connects CPU, memory, storage, and expansion components.",
+      "Provides power distribution, bus pathways, firmware interfaces, and sockets connecting the main system components.",
+      "Connects CPU, memory, firmware, storage, and buses so components can exchange power, timing, and data signals."
+    ]
+  },
+  {
     "id": "nat",
     "term": "NAT",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Network Address Translation that maps internal addresses to external addresses within routed and switched network environments.",
+      "Network Address Translation that maps internal addresses to external addresses.",
       "Rewrites source or destination addresses, and sometimes ports, as traffic crosses between network boundaries.",
       "Rewrites source or destination addresses and often ports while tracking mappings for return traffic."
     ]
@@ -1024,9 +1264,39 @@
     "term": "Network Baseline",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Documented normal traffic behavior used to identify anomalies within monitoring, investigation, and response workflows.",
+      "Documented normal traffic behavior used to identify anomalies.",
       "Measures normal traffic volume, protocols, hosts, and timing so anomalies can be recognized quickly.",
       "Learns normal volumes, peers, ports, and timing so unusual deviations can be flagged as suspicious."
+    ]
+  },
+  {
+    "id": "network-cli",
+    "term": "Network CLI",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Command-line interface used to view and change settings on network devices.",
+      "Lets administrators configure, verify, and troubleshoot routers and switches directly.",
+      "Accepts commands in configuration modes, applies them to the running configuration, and shows state or errors in text output."
+    ]
+  },
+  {
+    "id": "network-id",
+    "term": "Network ID",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "The network portion of an IPv4 subnet that identifies the subnet itself rather than an individual host.",
+      "Helps devices and administrators distinguish one subnet from another.",
+      "Applies the subnet mask to an address, keeps the network bits, and treats the result as the subnet identifier."
+    ]
+  },
+  {
+    "id": "network-media",
+    "term": "Network Media",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Physical transmission medium that carries network signals, such as copper, fiber, or radio.",
+      "Provides the path that network frames or bits travel across between interfaces.",
+      "Encodes data as electrical, light, or radio signals and carries that signal across a cable or wireless channel."
     ]
   },
   {
@@ -1034,7 +1304,7 @@
     "term": "Network Segmentation",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Separation of network zones to reduce lateral movement and contain impact within routed and switched network environments.",
+      "Separation of network zones to reduce lateral movement and contain impact.",
       "Divides systems into controlled zones using routing, VLANs, or firewalls to restrict lateral movement.",
       "Separates systems into controlled zones and restricts paths between them with routing or filtering policy."
     ]
@@ -1044,7 +1314,7 @@
     "term": "Network Topology",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Physical or logical arrangement of network devices and connections within routed and switched network environments.",
+      "Physical or logical arrangement of network devices and connections.",
       "Describes how hosts, links, and network devices connect and communicate across an environment.",
       "Describes how links and nodes connect, which determines traffic paths, redundancy, and failure impact."
     ]
@@ -1064,17 +1334,27 @@
     "term": "NTFS",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "New Technology File System used by modern Windows systems within host administration and operating system workflows.",
+      "New Technology File System used by modern Windows systems.",
       "Stores files with metadata, access controls, journaling, and recovery features on Windows volumes.",
       "Stores file metadata in master file table records and uses permissions and journaling to manage access and recovery."
     ]
   },
   {
+    "id": "ntp",
+    "term": "NTP",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Network Time Protocol service that synchronizes clocks across connected systems.",
+      "Keeps timestamps consistent so logs, authentication, and troubleshooting data line up correctly.",
+      "Clients compare their local time to trusted servers, calculate the offset, and adjust the clock toward a shared reference."
+    ]
+  },
+  {
     "id": "operating-system",
     "term": "Operating System",
-    "category": "Hardware & Endpoints",
+    "category": "Operating Systems & Administration",
     "bullets": [
-      "Core software that manages hardware, files, processes, and user interaction within endpoint hardware and platform operations.",
+      "Core software that manages hardware, files, processes, and user interaction.",
       "Schedules processes, manages memory, controls devices, and exposes interfaces for users and applications.",
       "Schedules processes, manages memory and devices, and exposes system calls so applications can use hardware safely."
     ]
@@ -1082,11 +1362,11 @@
   {
     "id": "osi-model",
     "term": "OSI Model",
-    "category": "Hardware & Endpoints",
+    "category": "Networking & Infrastructure",
     "bullets": [
-      "Seven-layer conceptual model describing how network communication functions within endpoint hardware and platform operations.",
-      "Separates communication tasks into layers so protocols can be analyzed by function during design and troubleshooting.",
-      "Separates communication into layers so addressing, transport, and application functions can be analyzed independently."
+      "Seven-layer reference model used to describe how network communication functions.",
+      "Helps learners and technicians separate networking tasks by layer during design and troubleshooting.",
+      "Breaks communication into layers so encapsulation, addressing, transport, and applications can be analyzed one function at a time."
     ]
   },
   {
@@ -1094,9 +1374,19 @@
     "term": "Package Manager",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Tool that installs, updates, and removes software packages with dependency handling within host administration and operating system workflows.",
+      "Tool that installs, updates, and removes software packages with dependency handling.",
       "Retrieves packages, resolves dependencies, verifies sources, and installs or updates software consistently.",
       "Resolves dependencies, verifies package sources, and installs or updates software using repository metadata."
+    ]
+  },
+  {
+    "id": "packet-capture",
+    "term": "Packet Capture",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Recorded packet data collected from a network interface for inspection or troubleshooting.",
+      "Gives analysts evidence of what traffic was actually sent, received, or dropped.",
+      "A capture tool copies packets from an interface, timestamps them, and stores the traffic for filtering and review."
     ]
   },
   {
@@ -1104,9 +1394,29 @@
     "term": "Packet Filter",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Query expression used to isolate relevant traffic in a capture within routed and switched network environments.",
+      "Query expression used to isolate relevant traffic in a capture.",
       "Applies capture expressions to packet headers so only matching traffic is displayed or stored.",
       "Inspects header fields such as address, port, and protocol and then applies matching allow or deny rules."
+    ]
+  },
+  {
+    "id": "page-rendering",
+    "term": "Page Rendering",
+    "category": "Web, Data & Cloud",
+    "bullets": [
+      "Process of turning fetched web resources into the visual page a user sees.",
+      "Transforms markup, styles, and scripts into a usable interface.",
+      "Parses HTML into a document tree, applies styles and scripts, then paints the final layout to the screen."
+    ]
+  },
+  {
+    "id": "partition",
+    "term": "Partition",
+    "category": "Operating Systems & Administration",
+    "bullets": [
+      "Logical division of a physical disk that the operating system can format and manage separately.",
+      "Separates storage space for operating systems, data, recovery areas, or different filesystems.",
+      "Uses a partition table to mark disk regions, then the operating system formats and mounts each region for use."
     ]
   },
   {
@@ -1114,7 +1424,7 @@
     "term": "Patch Management",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Process for testing, deploying, and verifying software updates within monitoring, investigation, and response workflows.",
+      "Process for testing, deploying, and verifying software updates.",
       "Identifies missing updates, tests fixes, schedules deployment, and verifies installation across managed assets.",
       "Identifies missing fixes, deploys approved updates, and verifies installation so known vulnerabilities are removed systematically."
     ]
@@ -1124,9 +1434,29 @@
     "term": "PCAP",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Packet capture file format storing recorded network traffic within routed and switched network environments.",
+      "Packet capture file format storing recorded network traffic.",
       "Stores captured packets with timestamps and frame data for later analysis in supporting tools.",
       "Stores captured packets with timestamps and headers so tools can replay, filter, or inspect traffic later."
+    ]
+  },
+  {
+    "id": "pcie",
+    "term": "PCIe / Expansion Bus",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "High-speed serial expansion interface used to connect add-in cards and some storage devices to a motherboard.",
+      "Provides a fast, scalable path for devices such as GPUs, NICs, and NVMe adapters.",
+      "Uses dedicated serial lanes between the motherboard and device so data moves quickly without sharing an older parallel bus."
+    ]
+  },
+  {
+    "id": "permissions",
+    "term": "Permissions",
+    "category": "Operating Systems & Administration",
+    "bullets": [
+      "Rules that determine which users or groups can read, write, execute, or change an object.",
+      "Limit actions on files and resources so access stays appropriate to the task and role.",
+      "The system compares the requesting identity against assigned rights and then allows or denies the requested action."
     ]
   },
   {
@@ -1134,7 +1464,7 @@
     "term": "Ping",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "ICMP-based connectivity test used for basic reachability checks within routed and switched network environments.",
+      "ICMP-based connectivity test used for basic reachability checks.",
       "Sends ICMP echo messages and measures replies to confirm basic reachability and delay.",
       "Sends ICMP echo requests and measures whether replies return and how long that round trip takes."
     ]
@@ -1144,7 +1474,7 @@
     "term": "Playbook",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Documented response workflow for recurring security scenarios within monitoring, investigation, and response workflows.",
+      "Documented response workflow for recurring security scenarios.",
       "Documents response steps, roles, decision points, and evidence requirements for a recurring incident scenario.",
       "Defines trigger conditions, required steps, and decision points so analysts handle repeat scenarios the same way each time."
     ]
@@ -1152,11 +1482,11 @@
   {
     "id": "port-number",
     "term": "Port Number",
-    "category": "Operating Systems & Administration",
+    "category": "Networking & Infrastructure",
     "bullets": [
-      "Transport-layer identifier that maps traffic to a specific service within host administration and operating system workflows.",
-      "Identifies the target service within a transport session so hosts deliver traffic to the correct process.",
-      "Labels transport endpoints so the OS can deliver incoming traffic to the correct listening process."
+      "Transport-layer identifier that maps traffic to a specific service or listening process.",
+      "Lets one host run many networked services without mixing their traffic together.",
+      "Labels each transport endpoint so the operating system can deliver incoming traffic to the correct socket or process."
     ]
   },
   {
@@ -1170,11 +1500,21 @@
     ]
   },
   {
+    "id": "post",
+    "term": "POST",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Power-On Self-Test routine that checks essential hardware before the operating system starts.",
+      "Detects basic hardware faults early enough to stop booting or report an error condition.",
+      "Firmware powers major components, tests required devices, and then either reports a fault or continues toward boot selection."
+    ]
+  },
+  {
     "id": "post-incident-review",
     "term": "Post-Incident Review",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Structured retrospective focused on lessons and control improvements within monitoring, investigation, and response workflows.",
+      "Structured retrospective focused on lessons and control improvements.",
       "Evaluates timeline, controls, decisions, and communication after closure to improve future response effectiveness.",
       "Reconstructs the event, compares actions to expected procedure, and converts gaps into specific follow-up improvements."
     ]
@@ -1184,9 +1524,19 @@
     "term": "PowerShell",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Windows automation shell and scripting language for system administration within host administration and operating system workflows.",
+      "Windows automation shell and scripting language for system administration.",
       "Runs cmdlets, pipelines, and scripts against Windows objects for administration and automation tasks.",
       "Pipelines structured objects between commands so output can be filtered, transformed, and reused without plain-text parsing."
+    ]
+  },
+  {
+    "id": "printer",
+    "term": "Printer",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Peripheral that produces hard-copy output from digital documents and images.",
+      "Turns electronic information into physical pages for sharing, records, or daily work.",
+      "Receives a print job, buffers and interprets it, then applies ink or toner to paper in the requested layout."
     ]
   },
   {
@@ -1194,7 +1544,7 @@
     "term": "Private IP",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Non-routable address range intended for internal networks within routed and switched network environments.",
+      "Non-routable address range intended for internal networks.",
       "Uses reserved address ranges internally, requiring routing controls or translation before internet communication.",
       "Uses non-routable ranges that stay inside local networks and usually reach the internet through NAT."
     ]
@@ -1204,7 +1554,7 @@
     "term": "Privilege Escalation",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Technique for gaining higher permissions than initially granted within monitoring, investigation, and response workflows.",
+      "Technique for gaining higher permissions than initially granted.",
       "Exploits misconfigurations or software flaws to obtain permissions beyond the initial security context.",
       "Abuses misconfigurations, weak permissions, or software flaws to gain rights beyond the attacker's starting level."
     ]
@@ -1214,9 +1564,19 @@
     "term": "Process",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Running program instance with its own state and resource usage within host administration and operating system workflows.",
+      "Running program instance with its own state and resource usage.",
       "Uses an isolated execution context with memory, threads, and permissions while a program runs.",
       "Allocates memory, execution state, and resources to a running program while the scheduler manages CPU time."
+    ]
+  },
+  {
+    "id": "psu",
+    "term": "PSU (Power Supply Unit)",
+    "category": "Hardware & Endpoints",
+    "bullets": [
+      "Power supply unit that converts incoming AC power into regulated DC outputs for computer components.",
+      "Delivers stable power rails to the motherboard, storage, fans, and expansion devices.",
+      "Converts wall power to DC, regulates voltage on several rails, and distributes the correct connectors to each component."
     ]
   },
   {
@@ -1224,7 +1584,7 @@
     "term": "Public IP",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Globally routable address visible on the internet within routed and switched network environments.",
+      "Globally routable address visible on the internet.",
       "Provides an internet-routable address reachable across external networks according to upstream routing.",
       "Uses globally routable addressing so internet systems can send packets directly toward the exposed endpoint."
     ]
@@ -1244,7 +1604,7 @@
     "term": "Qualitative Risk Analysis",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Risk assessment using categorical scales like low/medium/high within governance, risk, and compliance workflows.",
+      "Risk assessment using categorical scales like low/medium/high.",
       "Ranks risks using descriptive scales when precise financial or statistical data is unavailable.",
       "Uses ordinal scales and expert judgment to rank risks when precise numerical data is limited."
     ]
@@ -1254,7 +1614,7 @@
     "term": "Quantitative Risk Analysis",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Risk assessment using numerical estimates such as expected loss values within governance, risk, and compliance workflows.",
+      "Risk assessment using numerical estimates such as expected loss values.",
       "Uses numerical estimates, frequencies, and loss values to calculate expected risk exposure.",
       "Uses numeric frequencies, loss estimates, and ranges to model expected risk in measurable terms."
     ]
@@ -1264,7 +1624,7 @@
     "term": "RAM",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Volatile memory used for active processes and short-term data access within endpoint hardware and platform operations.",
+      "Volatile memory used for active processes and short-term data access.",
       "Holds active instructions and data in fast volatile memory for immediate CPU access during execution.",
       "Holds active instructions and data in fast volatile cells that the CPU can read or update quickly."
     ]
@@ -1274,7 +1634,7 @@
     "term": "Reconnaissance",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Information-gathering phase used by attackers before exploitation within monitoring, investigation, and response workflows.",
+      "Information-gathering phase used by attackers before exploitation.",
       "Collects target information from public or direct sources before exploitation, phishing, or lateral movement attempts.",
       "Collects public or reachable information first, then uses those findings to choose likely targets and attack paths."
     ]
@@ -1284,7 +1644,7 @@
     "term": "Recovery",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Restoration of normal operations after incident containment and eradication within monitoring, investigation, and response workflows.",
+      "Restoration of normal operations after incident containment and eradication.",
       "Restores validated systems, services, and business operations after threats are removed and controls are confirmed.",
       "Restores systems in stages, validates normal operation, and monitors for recurrence before returning to full service."
     ]
@@ -1294,7 +1654,7 @@
     "term": "Regular Expression",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Pattern syntax used to match and extract structured text within monitoring, investigation, and response workflows.",
+      "Pattern syntax used to match and extract structured text.",
       "Matches character patterns within text so scripts and tools can filter, extract, or transform data.",
       "Matches character patterns using tokens, grouping, and quantifiers so text can be searched or extracted precisely."
     ]
@@ -1304,7 +1664,7 @@
     "term": "Residual Risk",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Risk that remains after controls are implemented within governance, risk, and compliance workflows.",
+      "Risk that remains after controls are implemented.",
       "Measures the remaining exposure after planned or implemented controls reduce the original risk.",
       "Represents the risk that remains after controls are applied and their realistic effectiveness is considered."
     ]
@@ -1332,9 +1692,9 @@
   {
     "id": "reverse-proxy",
     "term": "Reverse Proxy",
-    "category": "Hardware & Endpoints",
+    "category": "Web, Data & Cloud",
     "bullets": [
-      "Service that receives client requests and forwards them to backend servers within endpoint hardware and platform operations.",
+      "Service that receives client requests and forwards them to backend servers.",
       "Accepts client connections, applies policies, and forwards approved requests to internal application servers.",
       "Accepts client requests first, then forwards them to internal servers while applying routing, TLS, or filtering decisions."
     ]
@@ -1342,11 +1702,11 @@
   {
     "id": "risk",
     "term": "Risk",
-    "category": "Hardware & Endpoints",
+    "category": "General Security Foundations",
     "bullets": [
-      "Potential for loss when a threat exploits a vulnerability within endpoint hardware and platform operations.",
-      "Combines likelihood and impact to estimate potential loss from threats affecting vulnerable assets or processes.",
-      "Combines likelihood and impact so exposure can be compared, prioritized, and treated according to business effect."
+      "Possibility that a threat will exploit a weakness and cause harm to an asset or process.",
+      "Helps teams prioritize which security problems deserve treatment first.",
+      "Combines the chance of a harmful event with the likely impact so work can be ranked and resourced."
     ]
   },
   {
@@ -1354,7 +1714,7 @@
     "term": "Risk Assessment",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Structured evaluation of risk likelihood, impact, and treatment options within governance, risk, and compliance workflows.",
+      "Structured evaluation of risk likelihood, impact, and treatment options.",
       "Identifies assets, threats, vulnerabilities, likelihood, and impact to support informed treatment decisions.",
       "Identifies assets, threats, vulnerabilities, likelihood, and impact, then combines them into prioritized risk statements."
     ]
@@ -1364,7 +1724,7 @@
     "term": "Risk Register",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Documented inventory of identified risks, ratings, owners, and treatments within governance, risk, and compliance workflows.",
+      "Documented inventory of identified risks, ratings, owners, and treatments.",
       "Maintains a living record of risks, scores, owners, response plans, and status updates.",
       "Stores each risk with owner, rating, treatment, and status so follow-up can be tracked over time."
     ]
@@ -1374,7 +1734,7 @@
     "term": "Risk Treatment",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Chosen approach to address risk: mitigate, transfer, avoid, or accept within governance, risk, and compliance workflows.",
+      "Chosen approach to address risk: mitigate, transfer, avoid, or accept.",
       "Chooses whether to mitigate, transfer, avoid, or accept each risk based on context.",
       "Chooses whether to mitigate, transfer, avoid, or accept each risk based on cost, benefit, and tolerance."
     ]
@@ -1384,7 +1744,7 @@
     "term": "Roadmap Prioritization",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Choosing next learning or capability steps based on impact and constraints within governance, risk, and compliance workflows.",
+      "Choosing next learning or capability steps based on impact and constraints.",
       "Ranks planned improvements by impact, dependency, cost, and timing to sequence work realistically.",
       "Ranks initiatives by risk reduction, effort, dependency, and timing so the backlog can be sequenced realistically."
     ]
@@ -1394,7 +1754,7 @@
     "term": "Router",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Layer 3 device that forwards packets between networks within routed and switched network environments.",
+      "Layer 3 device that forwards packets between networks.",
       "Examines destination networks and forwards packets toward the next hop using Layer 3 decisions.",
       "Reads destination networks, consults routes, and forwards packets out the next interface toward the destination."
     ]
@@ -1404,7 +1764,7 @@
     "term": "Routing Table",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Lookup data used by hosts and routers to choose next-hop paths within routed and switched network environments.",
+      "Lookup data used by hosts and routers to choose next-hop paths.",
       "Lists known networks, next hops, interfaces, and metrics used to choose forwarding paths.",
       "Stores destination prefixes and next hops so the device can choose the best route for each packet."
     ]
@@ -1412,11 +1772,11 @@
   {
     "id": "security-framework",
     "term": "Security Framework",
-    "category": "Hardware & Endpoints",
+    "category": "General Security Foundations",
     "bullets": [
-      "Structured reference model such as NIST CSF used to organize security practices.",
-      "Defines functions, domains, or control families that organizations map to policies and improvement plans.",
-      "Breaks security work into domains, control families, and maturity steps so programs can be organized consistently."
+      "Structured model that organizes security practices into repeatable domains, functions, or maturity steps.",
+      "Gives teams a common way to assess coverage, compare gaps, and plan improvement work.",
+      "Breaks security work into named areas and expected outcomes so organizations can measure current state and target changes."
     ]
   },
   {
@@ -1434,7 +1794,7 @@
     "term": "Service Management",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Practice of monitoring, starting, stopping, and configuring background services within host administration and operating system workflows.",
+      "Practice of monitoring, starting, stopping, and configuring background services.",
       "Starts, stops, enables, and monitors background services that provide persistent system functions.",
       "Starts, stops, enables, and monitors background services using a controller that tracks state and dependencies."
     ]
@@ -1444,9 +1804,19 @@
     "term": "Session Token",
     "category": "Web, Data & Cloud",
     "bullets": [
-      "Identifier that binds a user to an authenticated session within web, data, and cloud services.",
-      "Maintains authenticated state by presenting a server-issued identifier with subsequent client requests.",
-      "Binds a client to server-side session state, and the server checks the token on each subsequent request."
+      "Server-issued identifier that links a client request to an authenticated session.",
+      "Lets a web application remember that the user already proved identity after the initial sign-in.",
+      "The server issues a token after login, the client sends it on later requests, and the server checks it before serving protected actions."
+    ]
+  },
+  {
+    "id": "shared-responsibility",
+    "term": "Shared Responsibility",
+    "category": "Web, Data & Cloud",
+    "bullets": [
+      "Cloud operating model that splits security and maintenance duties between provider and customer.",
+      "Clarifies who secures the platform versus who secures data, identities, and configurations.",
+      "The provider secures the managed service layers, while the customer secures the resources and settings they still control."
     ]
   },
   {
@@ -1454,7 +1824,7 @@
     "term": "Shell",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Command interpreter used to interact with the operating system within host administration and operating system workflows.",
+      "Command interpreter used to interact with the operating system.",
       "Interprets user commands, expands syntax, and launches programs within the current operating system session.",
       "Interprets typed commands, expands variables or wildcards, and launches programs in the current session context."
     ]
@@ -1464,7 +1834,7 @@
     "term": "SIEM",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Security Information and Event Management platform for log analysis and alerting within monitoring, investigation, and response workflows.",
+      "Security Information and Event Management platform for log analysis and alerting.",
       "Aggregates logs, normalizes events, runs correlation rules, and presents alerts for centralized security monitoring.",
       "Ingests many log streams, normalizes fields, and applies searches or rules so correlated alerts and investigations are possible."
     ]
@@ -1474,7 +1844,7 @@
     "term": "SOC Workflow",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "End-to-end process from alert intake to closure and lessons learned within monitoring, investigation, and response workflows.",
+      "End-to-end process from alert intake to closure and lessons learned.",
       "Moves work from intake through triage, investigation, containment, and closure using defined operational procedures.",
       "Moves work from alert intake through investigation, escalation, and closure using defined roles, tooling, and handoff points."
     ]
@@ -1494,7 +1864,7 @@
     "term": "SOHO Router",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Integrated gateway device common in small office and home networks within routed and switched network environments.",
+      "Integrated gateway device common in small office and home networks.",
       "Combines routing, switching, wireless access, NAT, and firewall features in a small-network gateway.",
       "Combines routing, NAT, DHCP, switching, and wireless control into one device for small local networks."
     ]
@@ -1507,16 +1877,6 @@
       "Review technique that revisits material at increasing intervals within structured review and exam preparation.",
       "Schedules reviews at expanding intervals based on difficulty and prior recall performance.",
       "Schedules reviews at increasing intervals, bringing material back near the point it would otherwise be forgotten."
-    ]
-  },
-  {
-    "id": "stp",
-    "term": "Spanning Tree Protocol",
-    "category": "Networking & Infrastructure",
-    "bullets": [
-      "Protocol that prevents switching loops by managing redundant paths within routed and switched network environments.",
-      "Elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms.",
-      "Elects a root bridge and blocks redundant links so layer 2 loops do not form."
     ]
   },
   {
@@ -1544,7 +1904,7 @@
     "term": "SSH",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Secure Shell protocol for encrypted remote administration within host administration and operating system workflows.",
+      "Secure Shell protocol for encrypted remote administration.",
       "Creates an encrypted remote session for command execution, file transfer, and administrative access.",
       "Negotiates encryption and host identity, authenticates the user, then carries terminal or file traffic through the secure channel."
     ]
@@ -1554,7 +1914,7 @@
     "term": "SSID",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Wireless network name advertised by an access point within routed and switched network environments.",
+      "Wireless network name advertised by an access point.",
       "Advertises or identifies a wireless network name that clients use during association.",
       "Advertises the network name in beacon frames so clients can discover and join the correct wireless LAN."
     ]
@@ -1580,6 +1940,26 @@
     ]
   },
   {
+    "id": "stp",
+    "term": "Spanning Tree Protocol",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Protocol that prevents switching loops by managing redundant paths.",
+      "Elects a loop-free forwarding tree and blocks redundant switch paths to prevent broadcast storms.",
+      "Elects a root bridge and blocks redundant links so layer 2 loops do not form."
+    ]
+  },
+  {
+    "id": "stream-follow",
+    "term": "Stream Follow",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Analysis feature that reassembles related packets into one readable conversation flow.",
+      "Helps an analyst read an application exchange without manually stitching each packet together.",
+      "Groups packets from the same flow, orders them by sequence, and reconstructs the exchanged data as one stream."
+    ]
+  },
+  {
     "id": "study-system-reset",
     "term": "Study-System Reset",
     "category": "Study Workflow",
@@ -1594,7 +1974,7 @@
     "term": "Subnet Mask",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Bitmask that separates network and host portions of an IP address within routed and switched network environments.",
+      "Bitmask that separates network and host portions of an IP address.",
       "Marks which IPv4 bits represent the network versus host portion of an address.",
       "Marks which address bits are network bits so hosts can decide whether traffic is local or remote."
     ]
@@ -1604,7 +1984,7 @@
     "term": "Subnetting",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Practice of dividing networks into smaller addressable segments within routed and switched network environments.",
+      "Practice of dividing networks into smaller addressable segments.",
       "Allocates smaller address blocks from a larger range to separate networks and conserve space.",
       "Borrows host bits to create smaller networks, trading host capacity for more controlled address groups."
     ]
@@ -1614,7 +1994,7 @@
     "term": "sudo",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Command that allows approved users to run tasks with elevated privileges within host administration and operating system workflows.",
+      "Command that allows approved users to run tasks with elevated privileges.",
       "Temporarily runs a command with elevated privileges according to configured authorization policies.",
       "Checks policy, logs the request, and runs the command with elevated identity only if the user is authorized."
     ]
@@ -1624,7 +2004,7 @@
     "term": "Switch",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Layer 2 device that forwards frames based on MAC address tables within routed and switched network environments.",
+      "Layer 2 device that forwards frames based on MAC address tables.",
       "Learns MAC addresses on ports and forwards frames only toward the correct destination segment.",
       "Learns MAC-to-port mappings from incoming frames and forwards later traffic only toward the needed port."
     ]
@@ -1634,7 +2014,7 @@
     "term": "systemctl",
     "category": "Operating Systems & Administration",
     "bullets": [
-      "Command-line utility for managing services in systemd-based Linux systems within host administration and operating system workflows.",
+      "Command-line utility for managing services in systemd-based Linux systems.",
       "Interacts with systemd units to start, stop, enable, inspect, or reload Linux services.",
       "Sends management requests to systemd, which tracks units, dependencies, and current service state."
     ]
@@ -1644,7 +2024,7 @@
     "term": "Tabletop Exercise",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Scenario-based drill used to test readiness and coordination within monitoring, investigation, and response workflows.",
+      "Scenario-based drill used to test readiness and coordination.",
       "Walks stakeholders through a scenario to test decisions, communications, and documented response procedures.",
       "Walks participants through a scenario, pauses at decision points, and compares responses to expected actions and gaps."
     ]
@@ -1654,39 +2034,29 @@
     "term": "TCP",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Connection-oriented transport protocol that prioritizes reliability and ordered delivery within routed and switched network environments.",
+      "Connection-oriented transport protocol that prioritizes reliability and ordered delivery.",
       "Establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed.",
       "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
     ]
   },
   {
-    "id": "three-way-handshake",
-    "term": "TCP Three-Way Handshake",
-    "category": "Networking & Infrastructure",
-    "bullets": [
-      "TCP setup sequence using SYN, SYN-ACK, and ACK within routed and switched network environments.",
-      "Synchronizes TCP sequence numbers and confirms both endpoints are ready before data transfer begins.",
-      "Uses SYN, SYN-ACK, and ACK exchanges to synchronize sequence numbers before data transfer begins."
-    ]
-  },
-  {
     "id": "tcp-ip-model",
     "term": "TCP/IP Model",
-    "category": "Hardware & Endpoints",
+    "category": "Networking & Infrastructure",
     "bullets": [
-      "Practical networking model used to map real internet protocol behavior within endpoint hardware and platform operations.",
-      "Groups communication functions into practical layers used to implement and troubleshoot internet protocols.",
-      "Groups network functions into link, internet, transport, and application roles so packet behavior can be reasoned about systematically."
+      "Practical layered model used to describe how internet protocols work together.",
+      "Groups real network behavior into layers that are easier to implement and troubleshoot.",
+      "Organizes communication into link, internet, transport, and application roles so packet flow can be traced across the stack."
     ]
   },
   {
     "id": "threat",
     "term": "Threat",
-    "category": "Hardware & Endpoints",
+    "category": "General Security Foundations",
     "bullets": [
-      "Potential cause of unwanted impact to an asset or process within endpoint hardware and platform operations.",
-      "Represents an actor, event, or condition capable of causing harm to systems, data, or operations.",
-      "Describes a source of harm plus the action it could take against an asset or process."
+      "Potential source of harm that could exploit a weakness or disrupt normal operations.",
+      "Explains who or what might cause damage, theft, misuse, or outage.",
+      "Becomes actionable when a capable actor or condition meets an exposed weakness and a path to the target."
     ]
   },
   {
@@ -1694,7 +2064,7 @@
     "term": "Threat Intelligence",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Contextual information about threat actors, tactics, and indicators within monitoring, investigation, and response workflows.",
+      "Contextual information about threat actors, tactics, and indicators.",
       "Collects, analyzes, and disseminates information about adversaries, tactics, infrastructure, indicators, and likely targeting behavior.",
       "Collects external indicators and adversary context, then maps them to internal telemetry for detection and prioritization."
     ]
@@ -1704,9 +2074,29 @@
     "term": "Threat Model",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Structured analysis of potential attackers, paths, and control gaps within monitoring, investigation, and response workflows.",
+      "Structured analysis of potential attackers, paths, and control gaps.",
       "Identifies assets, attackers, attack paths, and control gaps before implementing or changing a system.",
       "Enumerates assets, trust boundaries, and attacker actions so defenses can be designed around likely abuse paths."
+    ]
+  },
+  {
+    "id": "three-way-handshake",
+    "term": "TCP Three-Way Handshake",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "TCP setup sequence using SYN, SYN-ACK, and ACK.",
+      "Synchronizes TCP sequence numbers and confirms both endpoints are ready before data transfer begins.",
+      "Uses SYN, SYN-ACK, and ACK exchanges to synchronize sequence numbers before data transfer begins."
+    ]
+  },
+  {
+    "id": "ticketing",
+    "term": "Ticketing",
+    "category": "Security Operations & Incident Response",
+    "bullets": [
+      "Systematic tracking of support work through numbered cases, status changes, and recorded actions.",
+      "Organizes requests so issues can be prioritized, handed off, and audited consistently.",
+      "Creates a case record, updates status as work progresses, and preserves notes so others can continue or review the work."
     ]
   },
   {
@@ -1714,7 +2104,7 @@
     "term": "Timeline Analysis",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Reconstruction of incident events in chronological order within monitoring, investigation, and response workflows.",
+      "Reconstruction of incident events in chronological order.",
       "Orders events by timestamp to reconstruct attacker actions, response steps, and system changes during an incident.",
       "Orders events by timestamp, reconciles clock differences, and fills gaps so cause and sequence become clear."
     ]
@@ -1734,7 +2124,7 @@
     "term": "Traceroute",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Diagnostic command that reveals path hops to a destination within routed and switched network environments.",
+      "Diagnostic command that reveals path hops to a destination.",
       "Sends probes with increasing hop limits to reveal intermediary routers along a path.",
       "Sends probes with increasing hop limits so each router that expires the packet reveals its position."
     ]
@@ -1744,7 +2134,7 @@
     "term": "Triage Queue",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Ordered list of alerts or cases awaiting analyst review within monitoring, investigation, and response workflows.",
+      "Ordered list of alerts or cases awaiting analyst review.",
       "Maintains pending alerts or cases in prioritized order so analysts work according to urgency and capacity.",
       "Ranks incoming work by severity, confidence, and business impact so limited analyst time goes to the riskiest items first."
     ]
@@ -1754,7 +2144,7 @@
     "term": "Troubleshooting Methodology",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Structured step-by-step process for diagnosing and resolving technical issues within monitoring, investigation, and response workflows.",
+      "Structured step-by-step process for diagnosing and resolving technical issues.",
       "Follows defined stages to identify symptoms, test causes, implement fixes, and verify normal operation.",
       "Defines a sequence of observe, hypothesize, test, and verify so problems are isolated without random changes."
     ]
@@ -1764,9 +2154,29 @@
     "term": "UDP",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Connectionless transport protocol optimized for low overhead and speed within routed and switched network environments.",
+      "Connectionless transport protocol optimized for low overhead and speed.",
       "Transmits datagrams without connection setup, acknowledgments, or retransmission to minimize protocol overhead.",
       "Wraps data with minimal transport headers and sends it without connection setup, ordering, or retransmission."
+    ]
+  },
+  {
+    "id": "upgrade-path",
+    "term": "Upgrade Path",
+    "category": "Operating Systems & Administration",
+    "bullets": [
+      "Supported route for moving a system from one version, edition, or platform state to another.",
+      "Reduces deployment risk by identifying which transitions can be performed without a full rebuild.",
+      "Checks the current state, validates supported transitions, and then applies the new version while preserving or migrating supported data."
+    ]
+  },
+  {
+    "id": "users-and-groups",
+    "term": "Users and Groups",
+    "category": "Operating Systems & Administration",
+    "bullets": [
+      "Account and membership structure used to assign ownership and permissions in multi-user systems.",
+      "Simplifies access administration by granting rights to groups instead of managing every user separately.",
+      "Each account carries a user identity and group memberships, and the system checks those identities when enforcing permissions."
     ]
   },
   {
@@ -1784,7 +2194,7 @@
     "term": "Vendor Risk",
     "category": "Governance, Risk & Compliance",
     "bullets": [
-      "Risk introduced by third-party suppliers and service providers within governance, risk, and compliance workflows.",
+      "Risk introduced by third-party suppliers and service providers.",
       "Assesses how third-party access, services, dependencies, or weaknesses affect organizational security exposure.",
       "Evaluates third-party access, handling practices, and dependency impact so supplier exposure is understood before onboarding."
     ]
@@ -1804,7 +2214,7 @@
     "term": "Virtual Machine",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Software-defined computer running an operating system inside a host system within endpoint hardware and platform operations.",
+      "Software-defined computer running an operating system inside a host system.",
       "Runs a guest operating system with emulated hardware isolated from the underlying host environment.",
       "Runs a guest OS on virtualized hardware abstractions so workloads remain isolated from the host and from each other."
     ]
@@ -1814,7 +2224,7 @@
     "term": "VirtualBox",
     "category": "Hardware & Endpoints",
     "bullets": [
-      "Desktop virtualization platform for running lab virtual machines within endpoint hardware and platform operations.",
+      "Desktop virtualization platform for running lab virtual machines.",
       "Creates virtual machines, attaches virtual hardware, and manages snapshots for desktop lab environments.",
       "Uses a host hypervisor, virtual hardware profiles, and disk images to start and manage guest operating systems."
     ]
@@ -1824,19 +2234,29 @@
     "term": "VLAN",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Virtual LAN used to segment broadcast domains on switched networks within routed and switched network environments.",
+      "Virtual LAN used to segment broadcast domains on switched networks.",
       "Tags switch traffic to create separate logical broadcast domains across shared physical infrastructure.",
       "Tags frames with a logical network ID so one switch fabric can carry multiple isolated broadcast domains."
     ]
   },
   {
+    "id": "vpn",
+    "term": "VPN",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Virtual private network that creates a protected tunnel across an untrusted network.",
+      "Provides secure remote access or site-to-site connectivity without exposing traffic in plaintext.",
+      "Authenticates endpoints, negotiates encryption, and encapsulates private traffic inside a protected tunnel over the public path."
+    ]
+  },
+  {
     "id": "vulnerability",
     "term": "Vulnerability",
-    "category": "Hardware & Endpoints",
+    "category": "General Security Foundations",
     "bullets": [
-      "Weakness that can be exploited to violate security objectives within endpoint hardware and platform operations.",
-      "Describes a weakness that can be discovered, reached, and abused to violate security objectives.",
-      "Creates exploitable conditions when a weakness can be reached by a threat through some attack path."
+      "Weakness in design, implementation, configuration, or process that can be exploited.",
+      "Creates an opportunity for a threat to bypass protection or cause harm.",
+      "Appears when a flaw or misconfiguration leaves a reachable gap that an attacker or failure condition can abuse."
     ]
   },
   {
@@ -1844,17 +2264,27 @@
     "term": "Vulnerability Scan",
     "category": "Security Operations & Incident Response",
     "bullets": [
-      "Automated assessment for known weaknesses in systems and software within monitoring, investigation, and response workflows.",
+      "Automated assessment for known weaknesses in systems and software.",
       "Probes hosts, software, and configurations against known checks to identify missing patches and insecure settings.",
       "Probes hosts or applications for known conditions, compares findings against signatures, and reports matched weaknesses."
     ]
   },
   {
+    "id": "wan",
+    "term": "WAN",
+    "category": "Networking & Infrastructure",
+    "bullets": [
+      "Wide area network that connects distant sites across provider infrastructure or large geographic areas.",
+      "Carries traffic between remote networks that cannot be joined by one local switching domain.",
+      "Uses routed links across carrier or internet paths so separate local networks can exchange traffic over distance."
+    ]
+  },
+  {
     "id": "web-server",
     "term": "Web Server",
-    "category": "Hardware & Endpoints",
+    "category": "Web, Data & Cloud",
     "bullets": [
-      "Service that hosts and delivers web content over HTTP/HTTPS within endpoint hardware and platform operations.",
+      "Service that hosts and delivers web content over HTTP/HTTPS.",
       "Accepts HTTP or HTTPS requests, processes them, and returns web content or application responses.",
       "Listens for HTTP requests, maps them to configured content or handlers, and returns responses over the network."
     ]
@@ -1874,9 +2304,9 @@
     "term": "Wi-Fi Standard",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Wireless networking specification such as 802.11n/ac/ax defining speed and capability within routed and switched network environments.",
-      "Defines modulation, channel use, throughput, and features for compatible wireless LAN communication.",
-      "Defines channel use, modulation, and protocol features so wireless clients and access points can communicate compatibly."
+      "Wireless LAN specification that defines how clients and access points communicate over radio.",
+      "Sets compatibility, throughput, channel behavior, and security capabilities for wireless networking.",
+      "Defines channel use, modulation, frame handling, and negotiated features so compatible devices can associate and exchange traffic."
     ]
   },
   {
@@ -1884,7 +2314,7 @@
     "term": "Wireshark",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Packet capture and analysis tool for network troubleshooting and investigations within routed and switched network environments.",
+      "Packet capture and analysis tool for network troubleshooting and investigations.",
       "Captures packets and decodes protocol details so analysts can inspect network conversations and anomalies.",
       "Decodes captured packets into protocol fields so analysts can filter traffic and inspect conversations in detail."
     ]
@@ -1894,7 +2324,7 @@
     "term": "WPA3",
     "category": "Networking & Infrastructure",
     "bullets": [
-      "Modern Wi-Fi security standard with stronger protections than earlier protocols within routed and switched network environments.",
+      "Modern Wi-Fi security standard with stronger protections than earlier protocols.",
       "Protects wireless access using stronger authentication and encryption mechanisms than prior Wi-Fi standards.",
       "Uses modern authentication and key establishment to protect wireless sessions against interception and offline guessing."
     ]

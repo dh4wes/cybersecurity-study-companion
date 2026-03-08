@@ -61,8 +61,8 @@ Supporting extracted data lives in:
 Current content totals:
 - 32 weeks
 - 224 day records
-- 190 glossary terms
-- 570 unique flashcards
+- 233 glossary terms
+- 699 unique flashcards
 - 32 weekly review decks
 
 ### Top-level collections
@@ -101,18 +101,18 @@ Flashcards are generated deterministically from the glossary:
 
 ```json
 {
-  "id": "tcp-mechanism",
-  "type": "understanding",
+  "id": "tcp-scenario",
+  "type": "application",
   "difficulty": "medium",
-  "front": "What mechanism lets TCP establish a session, track sequence numbers, and retransmit missing data?",
-  "back": "Establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams."
+  "front": "Scenario: An application needs reliable, ordered delivery and retransmission instead of the lowest possible overhead. Which component or concept best fits?",
+  "back": "TCP — Establishes sessions, tracks sequence numbers, acknowledges delivery, and retransmits lost segments when needed."
 }
 ```
 
 Each glossary term maps to exactly three cards:
 - `<term-id>-definition`
-- `<term-id>-function`
 - `<term-id>-mechanism`
+- `<term-id>-scenario`
 
 Card purposes are:
 - `definition`: direct recall
@@ -124,7 +124,9 @@ Each day references:
 - `glossary_ids`
 - `flashcard_ids`
 
-Review days aggregate weekly review material. Rest days intentionally avoid heavy new study content.
+Day 1-5 progressively introduce each week's terms instead of reusing one identical daily deck.
+Day 6 aggregates the full weekly review material.
+Day 7 intentionally avoids heavy new study content.
 
 ## Storage model
 
@@ -221,17 +223,28 @@ The Android project lives in `android/`.
 - `src/lib/site-data.js` normalized content access
 - `src/lib/anki-export.js` TSV export builder
 - `src/data/content/` canonical content datasets
+- `scripts/audit_flashcards.mjs` regression audit for glossary and flashcard integrity
 - `docs/overview.md` architecture reference
 - `docs/code-audit.md` audit and hardening notes
 - `docs/flashcard_info.md` executive summary and full flashcard inventory by week
+- `docs/glossary_flashcard_overhaul_report.md` pre-change coverage and quality audit
 - `IMPLEMENTATION_NOTES.md` assumptions and implementation notes
 
 ## Documentation
 - `README.md`: repo summary, routes, data model, and deployment notes
 - `docs/overview.md`: architecture, route behavior, storage model, and content structure
 - `docs/flashcard_info.md`: how flashcards are created, how they map to each study week, and the complete card listing
+- `docs/glossary_flashcard_overhaul_report.md`: coverage audit, quality audit, and exam-alignment rationale for the glossary overhaul
 - `docs/code-audit.md`: audit findings, current security posture, and documentation maintenance notes
 - `IMPLEMENTATION_NOTES.md`: assumptions, constraints, and product decisions that still matter
+
+## Audits
+
+Run the regression audit after changing syllabus, glossary, or flashcard data:
+
+```bash
+npm run audit:flashcards
+```
 
 ## Development
 

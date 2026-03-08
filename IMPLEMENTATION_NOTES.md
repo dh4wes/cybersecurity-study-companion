@@ -38,9 +38,9 @@ Current shape:
 - `bullets`
 
 Bullet roles:
-1. definition
-2. function
-3. mechanism / mental model
+1. what it is
+2. what it does
+3. how it works / mental model
 
 ### Flashcards
 Flashcards are global, canonical, and glossary-derived.
@@ -54,12 +54,24 @@ Current shape:
 
 Types:
 - `definition`
-- `function`
-- `mechanism`
+- `understanding`
+- `application`
 
 Each glossary term maps to exactly three flashcards.
-The current dataset contains 190 glossary terms and 570 unique flashcards.
-Week plans reference 576 flashcard slots because `switch` is reused in Weeks 06 and 07, and `playbook` is reused in Weeks 21 and 28.
+Card IDs use:
+- `<term-id>-definition`
+- `<term-id>-mechanism`
+- `<term-id>-scenario`
+
+The current dataset contains 233 glossary terms and 699 unique flashcards.
+
+### Progressive day decks
+Study days no longer reuse one identical weekly flashcard set.
+
+Current rule set:
+- Day 1-5 progressively introduce the week's ordered glossary terms
+- Day 6 uses the full weekly review deck
+- Day 7 keeps empty `glossary_ids` and `flashcard_ids`
 
 ### Flashcard documentation
 `docs/flashcard_info.md` is the maintained reference for:
@@ -68,6 +80,16 @@ Week plans reference 576 flashcard slots because `switch` is reused in Weeks 06 
 - the full flashcard inventory grouped by study week
 
 If canonical content changes in `src/data/content/`, the flashcard documentation must be regenerated so wording and counts stay synchronized.
+
+### Audit coverage
+`scripts/audit_flashcards.mjs` now checks:
+- day-deck progression across Days 1-5
+- week deck coverage by the union of Days 1-5
+- glossary reference integrity
+- exactly three primary cards per glossary term
+- banned prompt stems
+- scenario fronts that leak the answer term
+- front/back echo issues
 
 ## Storage model
 
