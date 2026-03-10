@@ -19,6 +19,7 @@ Core checks:
 
 ```bash
 npm run audit:flashcards
+npm run validate:glossary
 npm run build
 ```
 
@@ -151,3 +152,16 @@ Layout behavior:
 - `docs/content.md`: curriculum basis, source mix, and coverage-depth review
 
 The older split docs were retired. These two files are the maintained references.
+
+## Glossary concept model
+
+Glossary entries now support a richer concept-model structure:
+
+- `definition`, `purpose`, `mechanism`
+- `model` arrays for `components`, `process`, `contrasts_with`, `common_confusions`, and `exam_traps`
+- `bullets` remains for UI compatibility and must match the three strings above
+
+Migration and validation:
+
+- `npm run migrate:glossary` upgrades `src/data/content/glossary.json` in place and creates a timestamped backup
+- `npm run validate:glossary` enforces required fields, banned boilerplate, bullets alignment, and mechanism-verb presence

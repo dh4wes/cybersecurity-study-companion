@@ -24,6 +24,55 @@ const titleCase = (value) =>
     .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
     .join(' ');
 
+const REQUIRED_MODEL_KEYS = [
+  'components',
+  'process',
+  'contrasts_with',
+  'common_confusions',
+  'exam_traps'
+];
+
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function ensureModelShape(modelMaybe) {
+  const model = isPlainObject(modelMaybe) ? { ...modelMaybe } : {};
+  for (const key of REQUIRED_MODEL_KEYS) {
+    if (!Array.isArray(model[key])) model[key] = [];
+    model[key] = model[key].filter((value) => typeof value === 'string').map((value) => value.trim()).filter(Boolean);
+  }
+  return model;
+}
+
+export function normalizeGlossaryEntry(entry) {
+  if (!isPlainObject(entry)) return entry;
+
+  const bullets =
+    Array.isArray(entry.bullets) && entry.bullets.length === 3 && entry.bullets.every((bullet) => typeof bullet === 'string')
+      ? entry.bullets
+      : null;
+
+  let definition = typeof entry.definition === 'string' ? entry.definition : '';
+  let purpose = typeof entry.purpose === 'string' ? entry.purpose : '';
+  let mechanism = typeof entry.mechanism === 'string' ? entry.mechanism : '';
+
+  if (bullets) {
+    definition = bullets[0];
+    purpose = bullets[1];
+    mechanism = bullets[2];
+  }
+
+  return {
+    ...entry,
+    definition,
+    purpose,
+    mechanism,
+    model: ensureModelShape(entry.model),
+    bullets: [definition, purpose, mechanism]
+  };
+}
+
 const canonicalData = {
   site: contentModel.site,
   core_pages: contentModel.core_pages,
@@ -227,7 +276,8 @@ const clientWeeksProgress = weeks.map((week) => ({
   }))
 }));
 
-const glossaryEntries = glossaryData.map((entry) => {
+const glossaryEntries = glossaryData.map((rawEntry) => {
+  const entry = normalizeGlossaryEntry(rawEntry);
   const usage = glossaryUsageById.get(entry.id);
   const phase_refs = usage
     ? [...usage.phase_refs].sort((a, b) => phaseOrder.indexOf(a) - phaseOrder.indexOf(b))

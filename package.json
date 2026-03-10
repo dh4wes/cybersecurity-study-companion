@@ -8,6 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "audit:flashcards": "node scripts/audit_flashcards.mjs",
+    "migrate:glossary": "node tools/upgrade-glossary-to-concept-model.mjs",
+    "validate:glossary": "node scripts/validate_glossary_model.mjs",
+    "check": "npm run validate:glossary && npm run build",
     "build:cap": "SITE_BASE=/ SITE_URL=http://localhost astro build",
     "cap:sync": "npx cap sync android",
     "cap:open": "npx cap open android"
