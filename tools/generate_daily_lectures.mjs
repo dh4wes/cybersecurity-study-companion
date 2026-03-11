@@ -145,25 +145,19 @@ function deriveTitle(day, glossaryTerms, week) {
 function buildPlainLanguage(day, week, glossaryTerms) {
   const names = glossaryTerms.slice(0, 3).map((term) => term.term);
   if (day.session_type === 'Rest') {
-    return sentence(
-      `Today is a light consolidation day. The goal is to keep ${week.weekly_focus.toLowerCase()} mentally organized, not to force more new content into the week`
-    );
+    return sentence(`Today is a light consolidation day for ${week.weekly_focus.toLowerCase()}`);
   }
   if (day.session_type === 'Review') {
-    return sentence(
-      `Today is about turning this week's terms and tasks into one working mental picture so you can retrieve them under pressure instead of remembering isolated facts`
-    );
+    return sentence(`Today reviews the week's main concepts as one connected model`);
   }
   if (names.length > 0) {
-    return sentence(
-      `Today you are learning how ${names.join(', ')} fit into ${week.weekly_focus.toLowerCase()}, so the topic feels like a system instead of a vocabulary list`
-    );
+    return sentence(`Today covers ${joinNatural(names)} within ${week.weekly_focus.toLowerCase()}`);
   }
-  return sentence(`Today you are learning the logic behind ${week.weekly_focus.toLowerCase()} and how it supports the week's deliverable`);
+  return sentence(`Today covers another part of ${week.weekly_focus.toLowerCase()}`);
 }
 
 function termNarrative(term) {
-  return `${term.term} means ${lowerFirst(sentence(term.definition)).replace(/[.?!]$/, '')}. Its practical job is that it ${lowerFirst(sentence(term.purpose)).replace(/[.?!]$/, '')}. Mechanically, it ${lowerFirst(sentence(term.mechanism)).replace(/[.?!]$/, '')}.`;
+  return `${term.term} is ${lowerFirst(sentence(term.definition)).replace(/[.?!]$/, '')}. It ${lowerFirst(sentence(term.purpose)).replace(/[.?!]$/, '')}. Mechanically, it ${lowerFirst(sentence(term.mechanism)).replace(/[.?!]$/, '')}.`;
 }
 
 function joinNatural(items) {
@@ -175,10 +169,10 @@ function joinNatural(items) {
 
 function buildAppliedPracticeParagraph({ day, week, todoText }) {
   const variants = [
-    `The practical move today is to turn the task list into observable system behavior. ${todoText} As you work, do not stop at naming the concept. Say what input reaches it, what state it changes, and what a user, admin, or analyst would actually notice when it behaves correctly.`,
-    `Today's tasks matter because they force the concept out of the abstract. ${todoText} That gives you something more useful than a note page: it gives you a concrete check on whether you can connect terminology to evidence, output, and likely failure modes.`,
-    `Use the task list as a pressure test for understanding. ${todoText} If you cannot explain why the task proves the concept, the task is still just activity. The goal is to make each action reveal a mechanism, a dependency, or a decision point.`,
-    `Treat the day's tasks as a small lab, even when they look like reading or note work. ${todoText} The valuable question is always the same: what does this step let me see that I could not see before, and how would that help me choose the next action in a short scenario?`
+    `Today's tasks focus on direct observation and application. ${todoText}`,
+    `${todoText} This day is meant to show the topic in action rather than leave it at the definition level.`,
+    `The task list for today is practical by design. ${todoText}`,
+    `${todoText} The goal is to connect the concept to actual behavior, output, or system state.`
   ];
   return variants[(Number(day.week) + Number(day.day)) % variants.length];
 }
@@ -186,24 +180,24 @@ function buildAppliedPracticeParagraph({ day, week, todoText }) {
 function buildResourceUseParagraph({ day, week, exam, resourceLabels }) {
   const resourceText =
     resourceLabels.length > 0
-      ? `Resources such as ${joinNatural(resourceLabels)} are useful here because they show the same idea from slightly different angles.`
-      : 'The attached resources are useful here because they show the same idea from slightly different angles.';
+      ? `Resources such as ${joinNatural(resourceLabels)} provide concrete examples for this topic.`
+      : 'The attached resources provide concrete examples for this topic.';
 
   const variants = [
-    `${resourceText} Use them to check whether your mental model survives contact with examples: can you still identify the component, service, or control once the explanation becomes more concrete? That is the habit that transfers well into ${exam.label} style questions.`,
-    `${resourceText} The point is not to watch or read everything equally. The point is to notice what each source makes visible: a command, a packet field, a boot stage, a log event, a configuration choice, or a control boundary. That kind of selective attention is more useful than passive coverage.`,
-    `${resourceText} While you work through them, translate each example into a short operational sentence for this week: what enters the system, what processes it, what comes out, and where the explanation could break if one assumption were wrong. That makes the material sturdier for both exams and labs.`,
-    `${resourceText} Anchor each source back to the week's focus, ${week.weekly_focus}, so the examples do not drift into disconnected trivia. If a source shows a detail, ask whether it clarifies purpose, mechanism, evidence, or troubleshooting choice.`
+    `${resourceText} They show how the concept appears in real configurations, workflows, commands, or troubleshooting cases.`,
+    `${resourceText} In this week, ${week.weekly_focus} is easier to understand when the examples are tied to visible behavior and concrete outputs.`,
+    `${resourceText} They are most useful for seeing what data moves, what component handles it, and what result should appear next.`,
+    `${resourceText} For ${exam.label}, this matters because many questions turn on behavior in context rather than a standalone label.`
   ];
   return variants[(Number(day.day) + resourceLabels.length + Number(day.week)) % variants.length];
 }
 
 function buildDeliverableParagraph({ day, week, deliverable, checkpoint }) {
   const variants = [
-    `Keep the week's output in view while you study. ${deliverable} That deliverable is useful because it forces you to convert reading into explanation, and explanation is what the checkpoint is really measuring. ${checkpoint}`,
-    `The week is designed to end in something you can explain, not just something you can mark done. ${deliverable} If your notes and examples would not help another person understand the checkpoint, they still need one more pass. ${checkpoint}`,
-    `By the end of the week, the artifact should act like a compressed proof of understanding. ${deliverable} It should show that you can pick the right distinctions, explain the mechanism cleanly, and stay oriented toward the checkpoint rather than toward random detail collection. ${checkpoint}`,
-    `Let the deliverable shape how you read today. ${deliverable} A good deliverable keeps only the details that help you defend the checkpoint in plain language, so use it as a filter for what deserves emphasis and what does not. ${checkpoint}`
+    `This week's deliverable is ${deliverable} The checkpoint is ${checkpoint}`,
+    `The week builds toward ${deliverable} The expected checkpoint is ${checkpoint}`,
+    `The running output for this week is ${deliverable} By the checkpoint, ${lowerFirst(checkpoint)}`,
+    `${deliverable} is the main artifact for this week. The checkpoint is ${checkpoint}`
   ];
   return variants[(Number(day.week) + Number(day.day) + String(week.phase).length) % variants.length];
 }
@@ -211,20 +205,20 @@ function buildDeliverableParagraph({ day, week, deliverable, checkpoint }) {
 function buildScenarioLensParagraph({ day, exam, termNames }) {
   const scope = termNames.length > 0 ? joinNatural(termNames) : 'the current topic';
   const variants = [
-    `A good pressure test is to imagine a short scenario built around ${scope}. What symptom would appear first, what layer would you inspect next, and what answer choice would be tempting but wrong? Thinking that way trains the distinction between recognition and diagnosis.`,
-    `Another useful lens is to ask how ${scope} would surface under stress. Would the problem appear as missing output, bad performance, failed access, incorrect routing, weak evidence, or the wrong control response? The more precisely you can answer that, the less likely you are to drift toward vague exam reasoning.`,
-    `Scenario questions reward selective attention. With ${scope}, the hard part is often not the definition itself but noticing which clue actually points at it. Practice separating strong clues from background noise so you do not overread irrelevant details on ${exam.label}.`,
-    `Try turning ${scope} into one success case and one failure case, but keep both cases realistic. What would normal operation look like, and what would change first if the concept were missing, misconfigured, or misunderstood? That gives you a more usable memory than a single abstract sentence.`
+    `In a scenario, ${scope} usually matters through symptoms, sequence, or visible system behavior rather than through a direct definition prompt.`,
+    `On ${exam.label}, ${scope} is more likely to appear inside a short situation where you need to identify the correct layer, cause, or next step.`,
+    `A useful way to frame ${scope} is by asking what changes first when it is misconfigured, missing, or working normally.`,
+    `Most scenario questions on ${scope} hinge on clues such as output, access, performance, routing, logging, or startup behavior.`
   ];
   return variants[(Number(day.day) + termNames.length) % variants.length];
 }
 
 function buildWeekContextParagraph({ day, week }) {
   const variants = [
-    `This day also sits inside a sequence. Earlier days in the week usually establish vocabulary and core mechanism; later days ask you to synthesize, compare, and package the idea. Keep that progression visible so today's effort supports the rest of the week instead of standing alone.`,
-    `Do not treat this lecture as a standalone article. It is one step inside ${week.weekly_focus}, and its value increases when you connect it to what the earlier days introduced and what the review day will ask you to retrieve without help.`,
-    `The roadmap works best when each day changes the shape of the week in a visible way. Ask what yesterday made easier, what today clarifies, and what tomorrow should build on. That is how the study plan stays cumulative instead of becoming a pile of disconnected study sessions.`,
-    `Weekly pacing matters here. Day ${day.day} should either deepen, apply, or consolidate the idea introduced earlier in the block. If you can say how today's work changes the week-level understanding, you are studying the roadmap the way it was designed to be used.`
+    `Within the week, Day ${day.day} extends ${week.weekly_focus} with one more concrete piece of the model.`,
+    `This day fits into the larger sequence for ${week.weekly_focus}, adding another layer of mechanism, comparison, or application.`,
+    `In the weekly sequence, this day adds detail and context to ${week.weekly_focus} rather than standing alone.`,
+    `This point in the week is meant to deepen ${week.weekly_focus} with a more applied or comparative view of the topic.`
   ];
   return variants[(Number(day.week) + Number(day.day) + String(day.session_type).length) % variants.length];
 }
@@ -235,17 +229,13 @@ function buildStudyLecture({ day, week, glossaryTerms, resourceAnchors, exam }) 
   const termNames = primaryTerms.map((term) => term.term);
   const resourceLabels = resourceAnchors.slice(0, 3).map((entry) => entry.label);
   const todoText = (day.todo || []).map(sentence).join(' ');
-  const deliverable = sentence(week.deliverable);
-  const checkpoint = sentence(week.checkpoint);
-
   const paragraphs = [];
 
   paragraphs.push(
     [
       `The week focus is ${week.weekly_focus}, and today's objective is ${lowerFirst(sentence(day.session_objective)).replace(/[.?!]$/, '')}.`,
-      `That matters because entry-level certification questions rarely ask for a floating definition by itself; they usually ask whether you can place a concept inside a working system, support action, or troubleshooting sequence.`,
-      `The terms in scope today are ${joinNatural(termNames)}, and the point is to understand what each one does, what problem it solves, and how it interacts with the rest of the platform.`,
-      `If you can explain those relationships cleanly, the week's deliverable becomes more than homework: it becomes evidence that you understand the system well enough to describe it under exam pressure or in an operations conversation.`
+      `The main terms in scope are ${joinNatural(termNames)}.`,
+      `The focus is on what each one does, how it operates, and how it affects the rest of the system.`
     ].join(' ')
   );
 
@@ -253,8 +243,7 @@ function buildStudyLecture({ day, week, glossaryTerms, resourceAnchors, exam }) 
     paragraphs.push(
       [
         primaryTerms.map(termNarrative).join(' '),
-        `Notice the pattern: the exam target here is not memorizing isolated labels, but recognizing which part of the system is responsible for speed, persistence, coordination, communication, or control.`,
-        `When two concepts seem similar, ask three questions: where does the data live, who acts on it, and what changes if this part fails. That framing turns vocabulary into diagnosis.`
+        `Together, these terms describe where work happens, how state changes, and what the visible outcome looks like when the system is operating normally.`
       ].join(' ')
     );
   }
@@ -263,8 +252,7 @@ function buildStudyLecture({ day, week, glossaryTerms, resourceAnchors, exam }) 
     paragraphs.push(
       [
         secondaryTerms.map(termNarrative).join(' '),
-        `This second layer usually explains why a system behaves the way it does once the first layer is already in motion.`,
-        `That is the difference between surface familiarity and real operational understanding: you can trace the path from a component or protocol name to the effect it has on boot, throughput, access, visibility, or failure handling.`
+        `This second set of terms adds the next layer of behavior, dependency, or control around the main topic.`
       ].join(' ')
     );
   } else if (primaryTerms.length > 0) {
@@ -273,11 +261,7 @@ function buildStudyLecture({ day, week, glossaryTerms, resourceAnchors, exam }) 
 
   paragraphs.push(buildResourceUseParagraph({ day, week, exam, resourceLabels }));
 
-  paragraphs.push(buildDeliverableParagraph({ day, week, deliverable, checkpoint }));
-
   paragraphs.push(buildScenarioLensParagraph({ day, exam, termNames }));
-
-  paragraphs.push(buildWeekContextParagraph({ day, week }));
 
   return paragraphs.join('\n\n');
 }
@@ -292,45 +276,27 @@ function buildReviewLecture({ day, week, glossaryTerms, exam }) {
   const paragraphs = [];
   paragraphs.push(
     [
-      `This is a synthesis day, which means the goal is retrieval, connection, and cleanup rather than adding a fresh topic.`,
-      `The week's focus was ${week.weekly_focus}, and the real question now is whether the concepts from earlier study days fit together as one working model.`,
-      `You should be able to move from term names such as ${joinNatural(names.slice(0, 6))} to the underlying system behavior without rereading every resource from scratch.`
+      `This is the review day for ${week.weekly_focus}.`,
+      `The goal is to connect the week's main ideas into one working model rather than introduce a new topic.`,
+      `The core terms are ${joinNatural(names.slice(0, 6))}.`
     ].join(' ')
   );
   paragraphs.push(
     [
-      `Start by reconstructing the week from memory. Explain the week's deliverable, the checkpoint, and the sequence of ideas that led there.`,
-      `Then test whether you can connect mechanism to purpose: ${mechanismSnippets}`,
-      `If one term only makes sense in isolation, that is the weak spot to revisit. Review days are for rebuilding those bridges before they become exam traps.`
+      `Across the week, the key mechanisms were: ${mechanismSnippets}`,
+      `The value of the review is in seeing how these pieces connect across setup, operation, failure, and troubleshooting.`
     ].join(' ')
   );
   paragraphs.push(
     [
-      `For ${exam.label}, weak understanding usually shows up in one of four ways: mixing up two similar concepts, picking the wrong layer, skipping the evidence trail, or remembering the name of a control without knowing why it fits.`,
-      `Use today's review to correct those failure modes explicitly.`,
-      `Say out loud what symptom belongs to which component or service, what data should move where, and what you would check first if the expected outcome did not happen.`
+      `For ${exam.label}, this block is most useful when you can separate similar concepts, place them at the right layer, and connect them to symptoms or evidence.`,
+      `That usually means following a chain from cause to behavior to visible result.`
     ].join(' ')
   );
   paragraphs.push(
     [
-      `This is also the right time to prune notes. Keep the explanations that help you reason, keep one or two clean examples, and discard repetition.`,
-      `The point of a good review deck is not maximum volume; it is fast retrieval under realistic pressure.`,
-      `When the terms, mechanisms, and examples line up, the week becomes easier to carry into the next block of study.`
-    ].join(' ')
-  );
-  paragraphs.push(
-    [
-      `A strong review also checks whether the week's ideas connect vertically across layers.`,
-      `For example, a hardware topic should still map to a user-visible symptom, a networking topic should still map to packet movement and service behavior, and a security topic should still map to control choice, evidence, and response.`,
-      `If you can move up and down that stack without getting lost, you are much less likely to freeze when a question compresses several layers into a short scenario.`
-    ].join(' ')
-  );
-  paragraphs.push(
-    [
-      `Before you leave the week, make one final pass at the checkpoint in your own words.`,
-      `Do not repeat the checkpoint sentence exactly as written.`,
-      `Rewrite it as an explanation you could give to a teammate or instructor, then compare that explanation against the week's terms, resource examples, and deliverable.`,
-      `Any missing link you notice there is the right target for your next short review burst.`
+      `At this point, the week should read as one sequence rather than separate definitions.`,
+      `Each concept should connect to a role, a mechanism, and a likely scenario where it matters.`
     ].join(' ')
   );
   return paragraphs.join('\n\n');
@@ -338,12 +304,12 @@ function buildReviewLecture({ day, week, glossaryTerms, exam }) {
 
 function buildRestLecture({ week, nextWeek }) {
   const preview = nextWeek
-    ? `Next, the roadmap moves into ${nextWeek.weekly_focus.toLowerCase()}, so notice which questions from this week still feel unfinished before the next block starts.`
-    : `Use the pause to identify what from the roadmap still needs one more clean review pass and what is already stable enough to leave alone.`;
+    ? `Next, the roadmap moves into ${nextWeek.weekly_focus.toLowerCase()}.`
+    : `Use the pause to reset before the next study block.`;
   return [
-    `Today is intentionally light. Rest days are part of the study system because recall gets stronger when you stop forcing new material and give the week's concepts time to settle into a simpler mental model.`,
-    `If you want a short touchpoint, explain the week's checkpoint in your own words, glance at the glossary terms that still feel slippery, and then stop. ${preview}`,
-    `The goal is not to win an extra study session by stealth. The goal is to preserve clarity, protect motivation, and make sure the next week's material lands on top of an organized base instead of mental clutter.`
+    `Today is a rest day for ${week.weekly_focus}.`,
+    `Keep the week lightly in view, but do not turn the day into a full study session. ${preview}`,
+    `The main goal is to preserve continuity without adding another heavy block of material.`
   ].join('\n\n');
 }
 
@@ -403,9 +369,7 @@ function buildKeyDistinctions(glossaryTerms, flashcardsById) {
 
 function buildMentalModel(day, glossaryTerms) {
   if (day.session_type === 'Rest') {
-    return sentence(
-      `Picture the week as a small pipeline: concept name, mechanism, evidence, and decision. If one step is still fuzzy, that is the step to revisit next week`
-    );
+    return sentence(`Picture the week as a simple chain of concept, mechanism, evidence, and decision`);
   }
 
   const snippets = glossaryTerms
@@ -416,7 +380,7 @@ function buildMentalModel(day, glossaryTerms) {
   return [
     `Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst.`,
     snippets,
-    `If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.`
+    `That sequence is the main mental model for the topic.`
   ].join(' ');
 }
 
@@ -446,15 +410,15 @@ function buildSelfCheck(day, week, glossaryTerms) {
 function buildQuickRecap(day, week, glossaryTerms) {
   const names = glossaryTerms.slice(0, 3).map((term) => term.term);
   if (day.session_type === 'Rest') {
-    return sentence(`The win for today is consolidation: keep ${week.weekly_focus.toLowerCase()} organized, notice what still feels unstable, and preserve energy for the next study block`);
+    return sentence(`Today keeps ${week.weekly_focus.toLowerCase()} organized without adding more heavy content`);
   }
   if (day.session_type === 'Review') {
     return sentence(
-      `This review day turns ${names.length > 0 ? joinNatural(names) : 'the week'} into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward`
+      `This review day consolidates ${names.length > 0 ? joinNatural(names) : 'the week'} into one connected model`
     );
   }
   return sentence(
-    `Today was about understanding ${names.length > 0 ? joinNatural(names) : week.weekly_focus.toLowerCase()} as part of a working system, then linking that understanding to exam reasoning and the week's artifact`
+    `Today covered ${names.length > 0 ? joinNatural(names) : week.weekly_focus.toLowerCase()} in terms of role, mechanism, and system effect`
   );
 }
 
@@ -857,31 +821,31 @@ async function main() {
       if (day.session_type === 'Study') {
         lectureBody = ensureMinimumWords(
           lectureBody,
-          700,
+          300,
           [
-            `As a final pass, explain the day's system in your own words from input to outcome, then compare that explanation against the terms, tasks, and resource examples. The gap between those two versions is usually the exact concept that still needs work.`,
-            `If you still feel shaky, pick one term from today and explain how it changes the system's behavior when it is configured correctly versus when it fails. That contrast usually reveals whether the concept is actually clear.`,
-            `Before moving on, connect today's objective back to the week's checkpoint in one short explanation. If that bridge feels awkward, that is a useful sign that one mechanism or distinction still needs another pass.`
+            `Another useful angle is to note where the concept sits in the larger system, what it depends on, and what would change if it failed or were configured incorrectly.`,
+            `The practical value of the topic is usually clearest when you follow one path from input to processing to output and identify the point where the concept changes the result.`,
+            `In short scenarios, the important clues usually come from sequence, visible behavior, or the boundary between two layers of the system.`
           ]
         );
       }
       if (day.session_type === 'Review') {
         lectureBody = ensureMinimumWords(
           lectureBody,
-          500,
+          250,
           [
-            `Keep the review practical: retrieve the week from memory, link each term to evidence or behavior, and check whether you can still explain the checkpoint cleanly without opening the notes first.`,
-            `A good review pass also separates terms that sound familiar from terms you can actually use in a short scenario. Focus on the ones that still collapse when you try to explain them without help.`
+            `One useful review lens is to track how the week's concepts relate to symptoms, evidence, and next-step decisions in a short scenario.`,
+            `The main point of the review is to keep the concepts connected rather than treat them as isolated terms.`
           ]
         );
       }
       if (day.session_type === 'Rest') {
         lectureBody = ensureMinimumWords(
           lectureBody,
-          150,
+          80,
           [
-            `If you want one last low-stress prompt, name the concept from this week that would still slow you down in a short scenario and decide when you will revisit it. Then stop and let the rest day do its job.`,
-            `Another light check is to preview the next week and notice which current concept seems most likely to carry forward. That keeps continuity without turning the day back into heavy study.`
+            `A short preview of the next week is enough to keep continuity without turning the day back into a long session.`,
+            `The rest day exists to preserve momentum and clarity rather than add another dense topic.`
           ]
         );
       }

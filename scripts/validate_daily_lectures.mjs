@@ -166,13 +166,13 @@ async function main() {
     }
 
     const bodyWords = wordCount(data.mini_lecture_markdown);
-    if (day.session_type === 'Study' && (bodyWords < 700 || bodyWords > 1200)) {
+    if (day.session_type === 'Study' && (bodyWords < 300 || bodyWords > 750)) {
       errors.push(`${day.id}: study-day mini lecture out of range (${bodyWords} words)`);
     }
-    if (day.session_type === 'Review' && (bodyWords < 500 || bodyWords > 900)) {
+    if (day.session_type === 'Review' && (bodyWords < 250 || bodyWords > 600)) {
       errors.push(`${day.id}: review-day mini lecture out of range (${bodyWords} words)`);
     }
-    if (day.session_type === 'Rest' && (bodyWords < 150 || bodyWords > 300)) {
+    if (day.session_type === 'Rest' && (bodyWords < 80 || bodyWords > 180)) {
       errors.push(`${day.id}: rest-day mini lecture out of range (${bodyWords} words)`);
     }
 

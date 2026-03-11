@@ -18,20 +18,20 @@
   "resource_names": [
     "CISA Critical Infrastructure Training"
   ],
-  "estimated_read_minutes": 2,
-  "plain_language_intro": "Today is a light consolidation day. The goal is to keep critical infrastructure, governance, risk, and assessment mindset mentally organized, not to force more new content into the week.",
-  "mini_lecture_markdown": "Today is intentionally light. Rest days are part of the study system because recall gets stronger when you stop forcing new material and give the week's concepts time to settle into a simpler mental model.\n\nIf you want a short touchpoint, explain the week's checkpoint in your own words, glance at the glossary terms that still feel slippery, and then stop. Next, the roadmap moves into tryhackme defensive security: soc, forensics, ir, and logs, so notice which questions from this week still feel unfinished before the next block starts.\n\nThe goal is not to win an extra study session by stealth. The goal is to preserve clarity, protect motivation, and make sure the next week's material lands on top of an organized base instead of mental clutter.\n\nIf you want one last low-stress prompt, name the concept from this week that would still slow you down in a short scenario and decide when you will revisit it. Then stop and let the rest day do its job.",
+  "estimated_read_minutes": 1,
+  "plain_language_intro": "Today is a light consolidation day for critical infrastructure, governance, risk, and assessment mindset.",
+  "mini_lecture_markdown": "Today is a rest day for Critical infrastructure, governance, risk, and assessment mindset.\n\nKeep the week lightly in view, but do not turn the day into a full study session. Next, the roadmap moves into tryhackme defensive security: soc, forensics, ir, and logs.\n\nThe main goal is to preserve continuity without adding another heavy block of material.\n\nA short preview of the next week is enough to keep continuity without turning the day back into a long session.\n\nThe rest day exists to preserve momentum and clarity rather than add another dense topic.",
   "exam_relevance_markdown": "Rest days matter indirectly for CompTIA Security+ (SY0-701) because spaced retrieval and reduced overload help you keep earlier concepts available when scenario questions combine multiple topics.",
   "key_distinctions": [
     "Recognition vs diagnosis — knowing the term name is not enough; know what evidence would make you pick it in a scenario."
   ],
-  "mental_model_markdown": "Picture the week as a small pipeline: concept name, mechanism, evidence, and decision. If one step is still fuzzy, that is the step to revisit next week.",
+  "mental_model_markdown": "Picture the week as a simple chain of concept, mechanism, evidence, and decision.",
   "self_check_prompts": [
     "Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.",
     "Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?",
     "What idea from this week would still confuse you if it appeared inside a short scenario tomorrow?"
   ],
-  "quick_recap": "The win for today is consolidation: keep critical infrastructure, governance, risk, and assessment mindset organized, notice what still feels unstable, and preserve energy for the next study block.",
+  "quick_recap": "Today keeps critical infrastructure, governance, risk, and assessment mindset organized without adding more heavy content.",
   "resource_anchors": [
     {
       "label": "CISA Critical Infrastructure Training",

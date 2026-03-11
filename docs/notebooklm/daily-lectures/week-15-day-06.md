@@ -13,31 +13,29 @@ resource_names: ["Google Course 3: Networks and Network Security","Wireshark"]
 glossary_terms: ["Intrusion Detection","Intrusion Prevention","SIEM","Log Source","Network Baseline","Hardening","Firewall","Network Segmentation"]
 glossary_ids: ["intrusion-detection","intrusion-prevention","siem","log-source","network-baseline","hardening","firewall","network-segmentation"]
 flashcard_ids: ["intrusion-detection-definition","intrusion-detection-mechanism","intrusion-detection-scenario","intrusion-prevention-definition","intrusion-prevention-mechanism","intrusion-prevention-scenario","siem-definition","siem-mechanism","siem-scenario","log-source-definition","log-source-mechanism","log-source-scenario","network-baseline-definition","network-baseline-mechanism","network-baseline-scenario","hardening-definition","hardening-mechanism","hardening-scenario","firewall-definition","firewall-mechanism","firewall-scenario","network-segmentation-definition","network-segmentation-mechanism","network-segmentation-scenario"]
-estimated_read_minutes: 5
+estimated_read_minutes: 3
 ---
 
 # Weekly synthesis: Intrusion Detection, Intrusion Prevention, SIEM
 
 ## 1. Today’s concept in plain language
-Today is about turning this week's terms and tasks into one working mental picture so you can retrieve them under pressure instead of remembering isolated facts.
+Today reviews the week's main concepts as one connected model.
 
 ## 2. Mini lecture
-This is a synthesis day, which means the goal is retrieval, connection, and cleanup rather than adding a fresh topic. The week's focus was Google Course 3: Networks and Network Security, and the real question now is whether the concepts from earlier study days fit together as one working model. You should be able to move from term names such as Intrusion Detection, Intrusion Prevention, SIEM, Log Source, Network Baseline, and Hardening to the underlying system behavior without rereading every resource from scratch.
+This is the review day for Google Course 3: Networks and Network Security. The goal is to connect the week's main ideas into one working model rather than introduce a new topic. The core terms are Intrusion Detection, Intrusion Prevention, SIEM, Log Source, Network Baseline, and Hardening.
 
-Start by reconstructing the week from memory. Explain the week's deliverable, the checkpoint, and the sequence of ideas that led there. Then test whether you can connect mechanism to purpose: Intrusion Detection: monitors network or host activity, compares it to signatures or baselines, and raises alerts on suspicious matches Intrusion Prevention: inspects traffic inline and drops or resets sessions when packets match blocked signatures or policy conditions SIEM: ingests many log streams, normalizes fields, and applies searches or rules so correlated alerts and investigations are possible Log Source: generates timestamped records from systems, applications, or devices that downstream tools parse and correlate If one term only makes sense in isolation, that is the weak spot to revisit. Review days are for rebuilding those bridges before they become exam traps.
+Across the week, the key mechanisms were: Intrusion Detection: monitors network or host activity, compares it to signatures or baselines, and raises alerts on suspicious matches Intrusion Prevention: inspects traffic inline and drops or resets sessions when packets match blocked signatures or policy conditions SIEM: ingests many log streams, normalizes fields, and applies searches or rules so correlated alerts and investigations are possible Log Source: generates timestamped records from systems, applications, or devices that downstream tools parse and correlate The value of the review is in seeing how these pieces connect across setup, operation, failure, and troubleshooting.
 
-For Google Cybersecurity Professional Certificate, weak understanding usually shows up in one of four ways: mixing up two similar concepts, picking the wrong layer, skipping the evidence trail, or remembering the name of a control without knowing why it fits. Use today's review to correct those failure modes explicitly. Say out loud what symptom belongs to which component or service, what data should move where, and what you would check first if the expected outcome did not happen.
+For Google Cybersecurity Professional Certificate, this block is most useful when you can separate similar concepts, place them at the right layer, and connect them to symptoms or evidence. That usually means following a chain from cause to behavior to visible result.
 
-This is also the right time to prune notes. Keep the explanations that help you reason, keep one or two clean examples, and discard repetition. The point of a good review deck is not maximum volume; it is fast retrieval under realistic pressure. When the terms, mechanisms, and examples line up, the week becomes easier to carry into the next block of study.
+At this point, the week should read as one sequence rather than separate definitions. Each concept should connect to a role, a mechanism, and a likely scenario where it matters.
 
-A strong review also checks whether the week's ideas connect vertically across layers. For example, a hardware topic should still map to a user-visible symptom, a networking topic should still map to packet movement and service behavior, and a security topic should still map to control choice, evidence, and response. If you can move up and down that stack without getting lost, you are much less likely to freeze when a question compresses several layers into a short scenario.
+One useful review lens is to track how the week's concepts relate to symptoms, evidence, and next-step decisions in a short scenario.
 
-Before you leave the week, make one final pass at the checkpoint in your own words. Do not repeat the checkpoint sentence exactly as written. Rewrite it as an explanation you could give to a teammate or instructor, then compare that explanation against the week's terms, resource examples, and deliverable. Any missing link you notice there is the right target for your next short review burst.
-
-Keep the review practical: retrieve the week from memory, link each term to evidence or behavior, and check whether you can still explain the checkpoint cleanly without opening the notes first.
+The main point of the review is to keep the concepts connected rather than treat them as isolated terms.
 
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
 ## 4. Quick recap
-This review day turns Intrusion Detection, Intrusion Prevention, and SIEM into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
+This review day consolidates Intrusion Detection, Intrusion Prevention, and SIEM into one connected model.

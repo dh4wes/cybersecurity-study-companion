@@ -72,87 +72,6 @@ const renderLectureBody = (lecture) => {
   return section;
 };
 
-const renderExamPanel = (lecture, day) => {
-  const section = createElement('section', { className: 'lecture-section lecture-side-panel' });
-  const meta = createElement('div', { className: 'lecture-meta-stack' });
-  appendChildren(meta, [
-    createElement('p', { className: 'lecture-mini-kicker', text: 'Primary track' }),
-    createElement('p', { className: 'lecture-compact-strong', text: lecture.primary_exam }),
-    lecture.secondary_exam ? createElement('p', { className: 'lecture-mini-kicker', text: 'Secondary track' }) : null,
-    lecture.secondary_exam ? createElement('p', { text: lecture.secondary_exam }) : null,
-    createElement('p', { className: 'lecture-mini-kicker', text: 'Competency area' }),
-    createElement('p', { text: `${day.phase} • ${lecture.objective}` })
-  ]);
-
-  appendChildren(section, [
-    createElement('h2', { text: 'Exam relevance' }),
-    meta,
-    ...splitParagraphs(lecture.exam_relevance_markdown).map((paragraph) => createElement('p', { text: paragraph }))
-  ]);
-  return section;
-};
-
-const renderTerms = (lecture) => {
-  const section = createElement('section', { className: 'lecture-section' });
-  const grid = createElement('div', { className: 'lecture-terms-grid' });
-
-  appendChildren(
-    grid,
-    (lecture.glossary_ids || []).slice(0, 6).map((id) => {
-      const term = glossaryById[id];
-      if (!term) return null;
-      const card = createElement('article', { className: 'lecture-term-card' });
-      appendChildren(card, [
-        createElement('h3', { text: term.term }),
-        createElement('p', { text: term.definition || '' }),
-        term.mechanism ? createElement('p', { className: 'small', text: term.mechanism }) : null
-      ]);
-      return card;
-    })
-  );
-
-  appendChildren(section, [createElement('h2', { text: 'Key terms for today' }), grid]);
-  return section;
-};
-
-const renderFollowThrough = (lecture, day) => {
-  const section = createElement('section', { className: 'lecture-section' });
-  const list = createElement('ul', { className: 'lecture-list' });
-
-  appendChildren(
-    list,
-    (lecture.resource_anchors || []).slice(0, 4).map((resource) => {
-      const item = createElement('li');
-      const link = createElement('a', {
-        text: resource.label,
-        attrs: {
-          href: resource.url || '#',
-          target: resource.url ? '_blank' : null,
-          rel: resource.url ? 'noreferrer' : null
-        }
-      });
-      item.appendChild(link);
-      if (resource.type) {
-        item.append(` (${resource.type})`);
-      }
-      return item;
-    })
-  );
-
-  const nextSteps = [
-    `Finish the reading, then complete the day tasks tied to ${day.label}.`,
-    'Open the week page for the full daily plan, glossary subset, and flashcards.',
-    'Capture your own explanation or weak spots in the notes tool before you move on.'
-  ];
-
-  appendChildren(section, [
-    createElement('h2', { text: 'Recommended follow-through' }),
-    list,
-    createElement('p', { text: nextSteps.join(' ') })
-  ]);
-  return section;
-};
-
 const renderControls = ({ day, target }) => {
   const section = createElement('section', { className: 'lecture-section lecture-controls' });
   const actions = createElement('div', { className: 'lecture-control-row' });
@@ -285,14 +204,7 @@ async function renderCurrentLecture() {
       return;
     }
 
-    root.appendChild(renderTextSection('Why this matters', lecture.plain_language_intro || lecture.summary || ''));
     root.appendChild(renderLectureBody(lecture));
-    root.appendChild(renderExamPanel(lecture, day));
-    root.appendChild(renderTerms(lecture));
-    root.appendChild(renderFollowThrough(lecture, day));
-    root.appendChild(renderListSection('Key distinctions and common confusions', lecture.key_distinctions || []));
-    root.appendChild(renderTextSection('Concrete mental model', lecture.mental_model_markdown || ''));
-    root.appendChild(renderListSection('If you can explain this, you understand it', lecture.self_check_prompts || []));
     root.appendChild(renderTextSection('Quick recap', lecture.quick_recap || ''));
     root.appendChild(renderControls({ day, target }));
 
