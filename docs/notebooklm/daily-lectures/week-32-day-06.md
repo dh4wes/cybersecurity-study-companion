@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Spaced Repetition vs Retrieval Practice — Spaced Repetition: Review technique that revisits material at increasing intervals within structured review and exam preparation. Retrieval Practice: Actively recalling information without notes to strengthen memory within structured review and exam preparation.
-- Retrieval Practice vs Spaced Repetition — Retrieval Practice: Actively recalling information without notes to strengthen memory within structured review and exam preparation. Spaced Repetition: Review technique that revisits material at increasing intervals within structured review and exam preparation.
-- Mock Exam vs Retrieval Practice — Mock Exam: Practice test used to simulate exam conditions and identify weak areas within structured review and exam preparation. Retrieval Practice: Actively recalling information without notes to strengthen memory within structured review and exam preparation.
-- Error Log vs Documentation — Error Log: Structured list of mistakes, misconceptions, and corrective notes within structured review and exam preparation. Documentation: Written record of configurations, procedures, findings, or changes that explains what was done and why.
-- Knowledge Gap vs Mock Exam — Knowledge Gap: Specific topic where understanding is currently insufficient within structured review and exam preparation. Mock Exam: Practice test used to simulate exam conditions and identify weak areas within structured review and exam preparation.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Spaced Repetition: schedules reviews at increasing intervals, bringing material back near the point it would otherwise be forgotten Retrieval Practice: forces recall from memory first, then checks the answer so weak traces are strengthened through correction Mock Exam: simulates test conditions, measures performance under time limits, and reveals weak domains before the real exam Error Log: captures failed questions or mistakes, records why they happened, and turns them into targeted review items If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Spaced Repetition and Retrieval Practice without using the words "better" or "faster" as your whole answer.
-- Describe what Spaced Repetition does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Spaced Repetition, Retrieval Practice, and Mock Exam into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Your notes, workbook, and saved artifacts (resource)
-- Whichever course or lab still needs attention (lab)

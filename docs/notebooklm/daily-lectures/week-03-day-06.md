@@ -37,30 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Operating System vs Linux Kernel — Operating System: Core software that manages hardware, files, processes, and user interaction. Linux Kernel: Core component of Linux that manages hardware access, processes, and memory.
-- Filesystem vs Partition — Filesystem: Structure and rules used to organize, name, store, and retrieve files on storage media. Partition: Logical division of a physical disk that the operating system can format and manage separately.
-- NTFS vs Filesystem — NTFS: New Technology File System used by modern Windows systems. Filesystem: Structure and rules used to organize, name, store, and retrieve files on storage media.
-- Partition vs Filesystem — Partition: Logical division of a physical disk that the operating system can format and manage separately. Filesystem: Structure and rules used to organize, name, store, and retrieve files on storage media.
-- Boot Media vs Bootloader — Boot Media: Removable or attached storage prepared to start a system or launch an installer. Bootloader: Small startup program that loads an operating system kernel after firmware finds a bootable device.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Operating System: schedules processes, manages memory and devices, and exposes system calls so applications can use hardware safely Filesystem: maps filenames to directories, metadata, and storage blocks so the system can locate, read, write, and protect data NTFS: stores file metadata in master file table records and uses permissions and journaling to manage access and recovery Partition: uses a partition table to mark disk regions, then the operating system formats and mounts each region for use If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Operating System and Filesystem without using the words "better" or "faster" as your whole answer.
-- Describe what Operating System does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Operating System, Filesystem, and NTFS into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Professor Messer A+ Core 2 (220-1202) (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/220-1202-training-course/
-- Linux Unhatched (course) - https://www.netdevgroup.com/online/courses/open-source/linux-unhatched
-- File Systems (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/file-systems-220-1202/
-- Installing Operating Systems (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/installing-operating-systems-220-1202/
-- Windows Command Line Tools (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/windows-command-line-tools-220-1202/
-- Troubleshooting Windows (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/troubleshooting-windows-220-1202/

@@ -33,19 +33,5 @@ If you want one last low-stress prompt, name the concept from this week that wou
 ## 3. How this shows up on the exam
 Rest days matter indirectly for CompTIA Security+ (SY0-701) because spaced retrieval and reduced overload help you keep earlier concepts available when scenario questions combine multiple topics.
 
-## 4. Key distinctions and common confusions
-- Recognition vs diagnosis — knowing the term name is not enough; know what evidence would make you pick it in a scenario.
-
-## 5. Concrete mental model
-Picture the week as a small pipeline: concept name, mechanism, evidence, and decision. If one step is still fuzzy, that is the step to revisit next week.
-
-## 6. If you can explain this, you understand it
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- What idea from this week would still confuse you if it appeared inside a short scenario tomorrow?
-
-## 7. Quick recap
+## 4. Quick recap
 The win for today is consolidation: keep tryhackme cyber security 101 + breach journal capstone organized, notice what still feels unstable, and preserve energy for the next study block.
-
-## 8. Resource anchors
-- TryHackMe Cyber Security 101 (lab) - https://tryhackme.com/path/outline/cybersecurity101

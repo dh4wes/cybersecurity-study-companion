@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- SOC Workflow vs Playbook — SOC Workflow: End-to-end process from alert intake to closure and lessons learned. Playbook: Documented response workflow for recurring security scenarios.
-- Forensic Imaging vs PCAP — Forensic Imaging: Bit-level copy of media created for evidence analysis. PCAP: Packet capture file format storing recorded network traffic.
-- Chain of Custody vs Evidence Handling — Chain of Custody: Record of who handled evidence, when, and why. Evidence Handling: Process for collecting and preserving evidence with integrity.
-- Log Correlation vs Log Source — Log Correlation: Linking events from multiple sources to reveal meaningful patterns. Log Source: System or service that generates telemetry ingested for analysis.
-- Detection Rule vs Indicator of Compromise — Detection Rule: Logic used by monitoring systems to trigger alerts. Indicator of Compromise: Observable evidence suggesting malicious activity occurred.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. SOC Workflow: moves work from alert intake through investigation, escalation, and closure using defined roles, tooling, and handoff points Forensic Imaging: copies storage bit for bit, verifies the image with hashes, and preserves the original media from further change Chain of Custody: documents who collected, transferred, stored, and examined evidence so handling remains traceable and defensible Log Correlation: joins events across sources by time, host, user, or session so one isolated signal becomes a complete narrative If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between SOC Workflow and Forensic Imaging without using the words "better" or "faster" as your whole answer.
-- Describe what SOC Workflow does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns SOC Workflow, Forensic Imaging, and Chain of Custody into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- TryHackMe Defensive Security (lab) - https://tryhackme.com/module/defensive-security
-- CISA Incident Response Training (reference) - https://www.cisa.gov/resources-tools/programs/Incident-Response-Training

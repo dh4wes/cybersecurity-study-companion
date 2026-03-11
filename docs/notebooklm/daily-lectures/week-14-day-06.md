@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Risk Register vs Risk Assessment — Risk Register: Documented inventory of identified risks, ratings, owners, and treatments. Risk Assessment: Structured evaluation of risk likelihood, impact, and treatment options.
-- Likelihood vs Impact — Likelihood: Estimated probability that a risk event will occur. Impact: Estimated consequence if a risk event occurs.
-- Impact vs Likelihood — Impact: Estimated consequence if a risk event occurs. Likelihood: Estimated probability that a risk event will occur.
-- Risk Treatment vs Mitigation — Risk Treatment: Chosen approach to address risk: mitigate, transfer, avoid, or accept. Mitigation: Action that lowers likelihood or impact of a risk.
-- Qualitative Risk Analysis vs Quantitative Risk Analysis — Qualitative Risk Analysis: Risk assessment using categorical scales like low/medium/high. Quantitative Risk Analysis: Risk assessment using numerical estimates such as expected loss values.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Risk Register: stores each risk with owner, rating, treatment, and status so follow-up can be tracked over time Likelihood: estimates how probable an event is by considering threat capability, opportunity, and control strength Impact: measures consequence across operations, finances, legal exposure, or safety if the risk event occurs Risk Treatment: chooses whether to mitigate, transfer, avoid, or accept each risk based on cost, benefit, and tolerance If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Risk Register and Likelihood without using the words "better" or "faster" as your whole answer.
-- Describe what Risk Register does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Risk Register, Likelihood, and Impact into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 2: Manage Security Risks (course) - https://www.coursera.org/learn/manage-security-risks?specialization=google-cybersecurity
-- Security Journal sheet in this workbook (resource)

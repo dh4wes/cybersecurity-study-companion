@@ -37,30 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Password Policy vs Account Lockout — Password Policy: Set of rules that governs how passwords are created, changed, and managed across an environment. Account Lockout: Protective control that temporarily blocks sign-in attempts after repeated authentication failures.
-- Account Lockout vs Password Policy — Account Lockout: Protective control that temporarily blocks sign-in attempts after repeated authentication failures. Password Policy: Set of rules that governs how passwords are created, changed, and managed across an environment.
-- Malware vs Exploit — Malware: Malicious software designed to disrupt systems, steal data, or gain unauthorized control. Exploit: Code or technique that takes advantage of a vulnerability.
-- Patch Management vs Hardening — Patch Management: Process for testing, deploying, and verifying software updates. Hardening: Process of reducing attack surface through secure configuration.
-- Security Awareness vs Social Engineering — Security Awareness: Training and reinforcement that helps users recognize and avoid unsafe behavior. Social Engineering: Psychological manipulation used to trick users into unsafe actions within foundational user-focused security awareness contexts.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Password Policy: applies requirements for password creation and lifecycle events, then enforces those rules when users set or change credentials Account Lockout: counts failed sign-in attempts, crosses a configured threshold, and then denies further logins until the timer or reset condition is met Malware: executes code on a host, then persists, spreads, steals, encrypts, or manipulates data depending on its payload logic Patch Management: identifies missing fixes, deploys approved updates, and verifies installation so known vulnerabilities are removed systematically If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Password Policy and Account Lockout without using the words "better" or "faster" as your whole answer.
-- Describe what Password Policy does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Password Policy, Account Lockout, and Malware into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Professor Messer A+ Core 2 (220-1202) (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/220-1202-training-course/
-- Professor Messer Security+ (selected clips for security reinforcement) (course) - https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/
-- Security Best Practices (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/security-best-practices-220-1202/
-- Ticketing Systems (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/ticketing-systems-220-1202/
-- Change Management (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/change-management-220-1202/
-- Troubleshooting Windows (course) - https://www.professormesser.com/free-a-plus-training/220-1202/220-1202-video/troubleshooting-windows-220-1202/

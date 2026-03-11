@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Recovery vs Containment — Recovery: Restoration of normal operations after incident containment and eradication. Containment: Response action that limits incident spread and immediate damage.
-- Playbook vs Automation Playbook — Playbook: Documented response workflow for recurring security scenarios. Automation Playbook: Defined sequence of automated actions for a repeatable security task.
-- Escalation Path vs Incident Command — Escalation Path: Defined process for raising incidents to appropriate teams and leadership. Incident Command: Leadership structure coordinating decisions and responsibilities during incidents.
-- Case Management vs Ticketing — Case Management: Tracking and coordination of investigation tasks, evidence, and decisions. Ticketing: Systematic tracking of support work through numbered cases, status changes, and recorded actions.
-- Timeline Analysis vs Incident Journal — Timeline Analysis: Reconstruction of incident events in chronological order. Incident Journal: Structured notes capturing incident observations, decisions, and rationale.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Recovery: restores systems in stages, validates normal operation, and monitors for recurrence before returning to full service Playbook: defines trigger conditions, required steps, and decision points so analysts handle repeat scenarios the same way each time Escalation Path: routes an issue through defined responders and thresholds so decisions move quickly when severity or scope increases Case Management: keeps alerts, evidence, notes, and task status in one record so investigations remain coordinated across analysts If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Recovery and Playbook without using the words "better" or "faster" as your whole answer.
-- Describe what Recovery does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Recovery, Playbook, and Escalation Path into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 6: Detection and Response (course) - https://www.coursera.org/learn/detection-and-response?specialization=google-cybersecurity
-- TryHackMe Defensive Security (lab) - https://tryhackme.com/module/defensive-security

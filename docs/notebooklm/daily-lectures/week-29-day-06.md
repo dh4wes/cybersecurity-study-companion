@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Critical Infrastructure vs Asset — Critical Infrastructure: Systems essential to societal and economic stability. Asset: Any device, account, application, dataset, or service that has value to an organization.
-- Business Impact Analysis vs Impact — Business Impact Analysis: Process for identifying operational effects of disruption over time. Impact: Estimated consequence if a risk event occurs.
-- Governance vs Compliance — Governance: Decision framework defining accountability, policy, and oversight. Compliance: Conformance to laws, regulations, standards, or internal policies.
-- Compliance vs Governance — Compliance: Conformance to laws, regulations, standards, or internal policies. Governance: Decision framework defining accountability, policy, and oversight.
-- Risk Assessment vs Risk Register — Risk Assessment: Structured evaluation of risk likelihood, impact, and treatment options. Risk Register: Documented inventory of identified risks, ratings, owners, and treatments.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Critical Infrastructure: depends on interlocking services, suppliers, and control systems, so failure in one area can cascade into others Business Impact Analysis: maps business processes to dependencies, outage tolerances, and recovery needs so disruption consequences can be measured Governance: assigns decision rights, accountability, and policy direction so security work aligns with organizational objectives Compliance: compares actual practices and evidence against a required standard, then records where controls meet or miss expectations If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Critical Infrastructure and Business Impact Analysis without using the words "better" or "faster" as your whole answer.
-- Describe what Critical Infrastructure does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Critical Infrastructure, Business Impact Analysis, and Governance into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- CISA Critical Infrastructure Training (reference) - https://www.cisa.gov/critical-infrastructure-training
-- CSET fact sheet (reference) - https://www.cisa.gov/resources-tools/resources/cyber-security-evaluation-tool-cset-fact-sheet-public-safety

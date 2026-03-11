@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Asset Inventory vs Asset — Asset Inventory: Structured list of hardware, software, and data assets in scope. Asset: Any device, account, application, dataset, or service that has value to an organization.
-- Data Classification vs Compliance — Data Classification: Labeling data by sensitivity and handling requirements within web, data, and cloud services. Compliance: Conformance to laws, regulations, standards, or internal policies.
-- Threat Model vs Attack Surface — Threat Model: Structured analysis of potential attackers, paths, and control gaps. Attack Surface: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
-- Attack Vector vs Attack Surface — Attack Vector: Path or method used by an attacker to reach a target. Attack Surface: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
-- Vulnerability Scan vs Enumeration — Vulnerability Scan: Automated assessment for known weaknesses in systems and software. Enumeration: Active discovery of services, accounts, or resources on a target.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Asset Inventory: collects host attributes, ownership, software, and data scope into records that other controls use for targeting and scoping Data Classification: assigns labels by sensitivity and handling need so storage, sharing, and retention rules can be enforced Threat Model: enumerates assets, trust boundaries, and attacker actions so defenses can be designed around likely abuse paths Attack Vector: traces the initial path into the target by following entry point, exposed weakness, and reachable asset sequence If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Asset Inventory and Data Classification without using the words "better" or "faster" as your whole answer.
-- Describe what Asset Inventory does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Asset Inventory, Data Classification, and Threat Model into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 5: Assets, Threats, and Vulnerabilities (course) - https://www.coursera.org/learn/assets-threats-and-vulnerabilities?specialization=google-cybersecurity
-- Professor Messer Security+ (course) - https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/

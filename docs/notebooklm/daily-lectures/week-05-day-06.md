@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Linux Kernel vs Operating System — Linux Kernel: Core component of Linux that manages hardware access, processes, and memory. Operating System: Core software that manages hardware, files, processes, and user interaction.
-- Shell vs Command Line — Shell: Command interpreter used to interact with the operating system. Command Line: Text-based interface for executing operating system commands.
-- Command Line vs Shell — Command Line: Text-based interface for executing operating system commands. Shell: Command interpreter used to interact with the operating system.
-- Linux Permissions vs Permissions — Linux Permissions: Read/write/execute access model controlling file and directory operations. Permissions: Rules that determine which users or groups can read, write, execute, or change an object.
-- sudo vs Least Privilege — sudo: Command that allows approved users to run tasks with elevated privileges. Least Privilege: Security principle granting only the minimum permissions needed for a task within authentication and access control security workflows.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Linux Kernel: handles process scheduling, memory management, device drivers, and system calls between hardware and user space Shell: interprets typed commands, expands variables or wildcards, and launches programs in the current session context Command Line: reads typed commands, parses options and arguments, then executes programs within the current shell environment Linux Permissions: apply owner, group, and other permission bits that the kernel checks before allowing file operations If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Linux Kernel and Shell without using the words "better" or "faster" as your whole answer.
-- Describe what Linux Kernel does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Linux Kernel, Shell, and Command Line into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- NDG Linux Unhatched (course) - https://www.netdevgroup.com/online/courses/open-source/linux-unhatched
-- VirtualBox and Ubuntu Desktop (tool) - https://www.virtualbox.org/wiki/Downloads

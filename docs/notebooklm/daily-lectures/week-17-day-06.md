@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- SQL Query vs SELECT Statement — SQL Query: Structured request to retrieve or manipulate data in a relational database within web, data, and cloud services. SELECT Statement: SQL command used to retrieve data from one or more tables within web, data, and cloud services.
-- SELECT Statement vs WHERE Clause — SELECT Statement: SQL command used to retrieve data from one or more tables within web, data, and cloud services. WHERE Clause: SQL condition that filters returned rows within web, data, and cloud services.
-- WHERE Clause vs SELECT Statement — WHERE Clause: SQL condition that filters returned rows within web, data, and cloud services. SELECT Statement: SQL command used to retrieve data from one or more tables within web, data, and cloud services.
-- JOIN vs WHERE Clause — JOIN: SQL operation that combines related rows across multiple tables within web, data, and cloud services. WHERE Clause: SQL condition that filters returned rows within web, data, and cloud services.
-- Input Validation vs SQL Injection — Input Validation: Process of checking user input for format, length, and allowed values within web, data, and cloud services. SQL Injection: Attack that manipulates SQL queries through untrusted input within web, data, and cloud services.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. SQL Query: parses clauses, builds an execution plan, and retrieves or changes rows according to that plan SELECT Statement: specifies columns, tables, filters, and ordering so the database engine can assemble the requested result WHERE Clause: applies boolean conditions to candidate rows so only records that match the filter continue through the query JOIN: matches rows from multiple tables using related keys so combined records can be returned in one result set If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between SQL Query and SELECT Statement without using the words "better" or "faster" as your whole answer.
-- Describe what SQL Query does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns SQL Query, SELECT Statement, and WHERE Clause into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 4: Linux and SQL (course) - https://www.coursera.org/learn/linux-and-sql?specialization=google-cybersecurity
-- TryHackMe Cyber Security 101 (lab) - https://tryhackme.com/path/outline/cybersecurity101

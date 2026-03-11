@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Python Script vs API — Python Script: Executable Python code used to automate repetitive tasks within scripting and systems automation workflows. API: Application Programming Interface used to exchange data between systems within scripting and systems automation workflows.
-- Variable vs Function — Variable: Named value container used in programming logic within scripting and systems automation workflows. Function: Reusable block of code that performs a defined task within scripting and systems automation workflows.
-- Function vs Loop — Function: Reusable block of code that performs a defined task within scripting and systems automation workflows. Loop: Programming control structure that repeats actions over data or conditions within scripting and systems automation workflows.
-- Loop vs Conditional — Loop: Programming control structure that repeats actions over data or conditions within scripting and systems automation workflows. Conditional: Logic branch that executes code based on true/false evaluation within scripting and systems automation workflows.
-- Conditional vs Loop — Conditional: Logic branch that executes code based on true/false evaluation within scripting and systems automation workflows. Loop: Programming control structure that repeats actions over data or conditions within scripting and systems automation workflows.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Python Script: reads inputs, executes statements in sequence, and can call libraries or system resources to automate tasks Variable: stores a named value in memory so later operations can read, change, or compare that value Function: packages steps behind a named interface so inputs go in, logic runs, and outputs return predictably Loop: repeats a block over a range, collection, or condition until the termination rule is met If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Python Script and Variable without using the words "better" or "faster" as your whole answer.
-- Describe what Python Script does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Python Script, Variable, and Function into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 7: Automate Cybersecurity Tasks with Python (course) - https://www.coursera.org/learn/automate-cybersecurity-tasks-with-python?specialization=google-cybersecurity
-- Google Cybersecurity Certificate (course) - https://www.coursera.org/professional-certificates/google-cybersecurity

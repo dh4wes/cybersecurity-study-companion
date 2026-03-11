@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Mitigation vs Residual Risk — Mitigation: Action that lowers likelihood or impact of a risk. Residual Risk: Risk that remains after controls are implemented.
-- Exploit vs Vulnerability — Exploit: Code or technique that takes advantage of a vulnerability. Vulnerability: Weakness in design, implementation, configuration, or process that can be exploited.
-- Compensating Control vs Control — Compensating Control: Alternative safeguard used when a primary control is not feasible. Control: Safeguard that prevents, detects, or corrects a security problem.
-- Residual Risk vs Mitigation — Residual Risk: Risk that remains after controls are implemented. Mitigation: Action that lowers likelihood or impact of a risk.
-- Exposure vs Attack Surface — Exposure: Degree to which assets are reachable or vulnerable to threat activity. Attack Surface: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Mitigation: reduces either the chance or the consequence of a risk through selected safeguards and process changes Exploit: uses crafted input or sequence timing to trigger a weakness and execute behavior the system did not intend to allow Compensating Control: applies an alternative safeguard that reduces the same risk when the preferred control cannot be implemented Residual Risk: represents the risk that remains after controls are applied and their realistic effectiveness is considered If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Mitigation and Exploit without using the words "better" or "faster" as your whole answer.
-- Describe what Mitigation does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Mitigation, Exploit, and Compensating Control into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Google Course 5: Assets, Threats, and Vulnerabilities (course) - https://www.coursera.org/learn/assets-threats-and-vulnerabilities?specialization=google-cybersecurity
-- TryHackMe Cyber Security 101 (lab) - https://tryhackme.com/path/outline/cybersecurity101

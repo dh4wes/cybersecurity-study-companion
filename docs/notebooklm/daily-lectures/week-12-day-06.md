@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- HTTP Request vs API — HTTP Request: Client message sent to a web server for a resource or action. API: Application Programming Interface used to exchange data between systems within scripting and systems automation workflows.
-- DNS Resolution vs DNS — DNS Resolution: Lookup process that turns a hostname into one or more usable IP addresses. DNS: Distributed naming system that maps domain names to IP addresses and other records.
-- TLS Handshake vs TCP Three-Way Handshake — TLS Handshake: Cryptographic negotiation that establishes secure session parameters within web, data, and cloud services. TCP Three-Way Handshake: TCP setup sequence using SYN, SYN-ACK, and ACK.
-- Certificate vs Hashing — Certificate: Digitally signed record that binds an identity to a public key. Hashing: One-way transformation of data into a fixed-length digest within authentication and access control security workflows.
-- Web Server vs Reverse Proxy — Web Server: Service that hosts and delivers web content over HTTP/HTTPS. Reverse Proxy: Service that receives client requests and forwards them to backend servers.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. HTTP Request: sends a method, target, headers, and optional body so a server can decide how to process the request DNS Resolution: checks local cache first, then queries resolvers and delegated servers until an answer or failure is returned TLS Handshake: negotiates algorithms, validates certificates, and derives shared session keys before encrypted application data flows Certificate: a trusted issuer signs identity details and a public key, and the client validates that signature before accepting the key If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between HTTP Request and DNS Resolution without using the words "better" or "faster" as your whole answer.
-- Describe what HTTP Request does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns HTTP Request, DNS Resolution, and TLS Handshake into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- TryHackMe Pre Security (lab) - https://tryhackme.com/path/outline/presecurity
-- Professor Messer Network+ (concept refresh) (course) - https://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-training-course/

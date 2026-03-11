@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- TCP vs UDP — TCP: Connection-oriented transport protocol that prioritizes reliability and ordered delivery. UDP: Connectionless transport protocol optimized for low overhead and speed.
-- UDP vs TCP — UDP: Connectionless transport protocol optimized for low overhead and speed. TCP: Connection-oriented transport protocol that prioritizes reliability and ordered delivery.
-- Port Number vs IP Address — Port Number: Transport-layer identifier that maps traffic to a specific service or listening process. IP Address: Logical network address that identifies a source or destination host for routed traffic.
-- DNS vs ARP — DNS: Distributed naming system that maps domain names to IP addresses and other records. ARP: Address Resolution Protocol that maps IPv4 addresses to local MAC addresses on a LAN.
-- DNS Resolution vs DNS — DNS Resolution: Lookup process that turns a hostname into one or more usable IP addresses. DNS: Distributed naming system that maps domain names to IP addresses and other records.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. TCP: establishes a session, tracks sequence numbers, and retransmits missing data to deliver ordered reliable streams UDP: wraps data with minimal transport headers and sends it without connection setup, ordering, or retransmission Port Number: labels each transport endpoint so the operating system can deliver incoming traffic to the correct socket or process DNS: a resolver checks cache first, then queries recursive or authoritative servers until the requested record is returned If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between TCP and UDP without using the words "better" or "faster" as your whole answer.
-- Describe what TCP does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns TCP, UDP, and Port Number into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Cisco CCST Networking / Network Technician path (course) - https://www.cisco.com/site/us/en/learn/training-certifications/training/courses/ccst-networking.html
-- Cisco trace route lab (lab) - https://contenthub.netacad.com/courses/netess/_common/4.5.8-lab---trace-a-route.html

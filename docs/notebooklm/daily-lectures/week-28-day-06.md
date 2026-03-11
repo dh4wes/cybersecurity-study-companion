@@ -39,26 +39,5 @@ Keep the review practical: retrieve the week from memory, link each term to evid
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Incident Command vs Escalation Path — Incident Command: Leadership structure coordinating decisions and responsibilities during incidents. Escalation Path: Defined process for raising incidents to appropriate teams and leadership.
-- Playbook vs Automation Playbook — Playbook: Documented response workflow for recurring security scenarios. Automation Playbook: Defined sequence of automated actions for a repeatable security task.
-- Maturity Model vs Capability Gap — Maturity Model: Framework used to assess current capability level and improvement targets. Capability Gap: Difference between current skills/process maturity and target state.
-- Communication Plan vs Executive Briefing — Communication Plan: Documented messaging protocol for stakeholders during security events. Executive Briefing: Concise leadership-facing summary of risk, impact, and recommended action.
-- Evidence Handling vs Chain of Custody — Evidence Handling: Process for collecting and preserving evidence with integrity. Chain of Custody: Record of who handled evidence, when, and why.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Incident Command: assigns leadership, roles, and reporting lines so technical response and business decisions stay coordinated under pressure Playbook: defines trigger conditions, required steps, and decision points so analysts handle repeat scenarios the same way each time Maturity Model: defines staged capability levels with observable practices so programs can judge progress against a target state Communication Plan: defines audiences, triggers, channels, and message owners so incident updates move on schedule without conflicting reports If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Incident Command and Playbook without using the words "better" or "faster" as your whole answer.
-- Describe what Incident Command does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Incident Command, Playbook, and Maturity Model into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- CISA Incident Response Training (reference) - https://www.cisa.gov/resources-tools/programs/Incident-Response-Training
-- CISA Learning (reference) - https://www.cisa.gov/resources-tools/resources/cisa-learning

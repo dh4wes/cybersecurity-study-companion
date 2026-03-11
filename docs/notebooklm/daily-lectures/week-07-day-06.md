@@ -37,26 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Ethernet Frame vs Packet — Ethernet Frame: Data-link encapsulation format used on Ethernet networks. Packet: Formatted unit of network data that carries addressing and payload information between systems.
-- MAC Address vs IP Address — MAC Address: Hardware identifier used by network interfaces on local segments. IP Address: Logical network address that identifies a source or destination host for routed traffic.
-- ARP vs DNS — ARP: Address Resolution Protocol that maps IPv4 addresses to local MAC addresses on a LAN. DNS: Distributed naming system that maps domain names to IP addresses and other records.
-- Broadcast Domain vs VLAN — Broadcast Domain: Set of interfaces that receive the same Layer 2 broadcast traffic. VLAN: Virtual LAN used to segment broadcast domains on switched networks.
-- Switch vs Router — Switch: Layer 2 device that forwards frames based on MAC address tables. Router: Layer 3 device that forwards packets between networks.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Ethernet Frame: wraps payload data with MAC addresses and control fields so switches and receivers can forward and validate it MAC Address: identifies a network interface at layer 2 so frames can be delivered on the local segment ARP: broadcasts a question for an IPv4 address, receives the matching MAC reply, and caches the mapping for later frames Broadcast Domain: switches flood broadcasts within the same VLAN or segment, but routers and segmentation boundaries prevent the traffic from crossing further If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Ethernet Frame and MAC Address without using the words "better" or "faster" as your whole answer.
-- Describe what Ethernet Frame does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Ethernet Frame, MAC Address, and ARP into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Cisco CCST Networking / Network Technician path (course) - https://www.cisco.com/site/us/en/learn/training-certifications/training/courses/ccst-networking.html
-- Cisco basic switch configuration lab (lab) - https://contenthub.netacad.com/courses/srwe/_common/1.1.7-lab---basic-switch-configuration.pdf

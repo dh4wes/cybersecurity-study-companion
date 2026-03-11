@@ -37,30 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- Mobile Device vs Laptop — Mobile Device: Portable endpoint such as a phone, tablet, or lightweight computer with integrated radios and battery power. Laptop: Portable computer with an integrated display, keyboard, battery, and mobile-oriented internal components.
-- Laptop vs Mobile Device — Laptop: Portable computer with an integrated display, keyboard, battery, and mobile-oriented internal components. Mobile Device: Portable endpoint such as a phone, tablet, or lightweight computer with integrated radios and battery power.
-- Docking Station vs Laptop — Docking Station: Accessory that expands a portable computer with extra ports, displays, power, or peripherals through one connection. Laptop: Portable computer with an integrated display, keyboard, battery, and mobile-oriented internal components.
-- Modem vs Router — Modem: Device that connects a local network to an ISP service by converting signals between provider media and Ethernet. Router: Layer 3 device that forwards packets between networks.
-- Bluetooth vs Wi-Fi Standard — Bluetooth: Short-range wireless standard used to connect nearby devices such as headsets, keyboards, and phones. Wi-Fi Standard: Wireless LAN specification that defines how clients and access points communicate over radio.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Mobile Device: combines processor, storage, battery, sensors, and wireless interfaces so one compact device can manage apps and data on the move Laptop: combines processor, memory, storage, battery, display, and wireless hardware in one chassis so the system operates as one endpoint Docking Station: carries power, video, USB, and network traffic through one dock link so attached peripherals reconnect as a group Modem: receives the provider signal format, translates it into local data frames, and passes traffic between the ISP link and home equipment If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between Mobile Device and Laptop without using the words "better" or "faster" as your whole answer.
-- Describe what Mobile Device does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns Mobile Device, Laptop, and Docking Station into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Professor Messer A+ Core 1 (220-1201) (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/
-- VirtualBox (tool) - https://www.virtualbox.org/wiki/Downloads
-- VLANs and VPNs (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/vlans-and-vpns-220-1201/
-- Network Services (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/network-services-220-1201/
-- Virtualization Services (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/virtualization-services-220-1201/
-- Troubleshooting Mobile Devices (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-mobile-devices-220-1201/

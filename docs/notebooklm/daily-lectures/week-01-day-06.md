@@ -37,29 +37,5 @@ Before you leave the week, make one final pass at the checkpoint in your own wor
 ## 3. How this shows up on the exam
 Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.
 
-## 4. Key distinctions and common confusions
-- CPU vs RAM — CPU: Central Processing Unit, executes instructions and coordinates processing tasks. RAM: Volatile memory used for active processes and short-term data access.
-- RAM vs Storage Drive — RAM: Volatile memory used for active processes and short-term data access. Storage Drive: Persistent storage device such as HDD or SSD for operating system and files.
-- Storage Drive vs RAM — Storage Drive: Persistent storage device such as HDD or SSD for operating system and files. RAM: Volatile memory used for active processes and short-term data access.
-- Motherboard vs Chipset — Motherboard: Main circuit board that connects CPU, memory, storage, and expansion components. Chipset: Controller logic on the motherboard that coordinates communication between the processor, storage, USB, and expansion interfaces.
-- Chipset vs Motherboard — Chipset: Controller logic on the motherboard that coordinates communication between the processor, storage, USB, and expansion interfaces. Motherboard: Main circuit board that connects CPU, memory, storage, and expansion components.
-
-## 5. Concrete mental model
-Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. CPU: fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores RAM: holds active instructions and data in fast volatile cells that the CPU can read or update quickly Storage Drive: writes data into addressable sectors or cells, then retrieves it later through the controller and filesystem mapping Motherboard: connects CPU, memory, firmware, storage, and buses so components can exchange power, timing, and data signals If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
-
-## 6. If you can explain this, you understand it
-- Explain the difference between CPU and RAM without using the words "better" or "faster" as your whole answer.
-- Describe what CPU does, what input it works on, and what evidence would show that it is functioning correctly.
-- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
-- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
-- Rebuild the week from memory in under three minutes and note which transition between concepts is still weak.
-
-## 7. Quick recap
+## 4. Quick recap
 This review day turns CPU, RAM, and Storage Drive into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.
-
-## 8. Resource anchors
-- Professor Messer A+ Core 1 (220-1201) (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/
-- CompTIA A+ Core 1 V15 overview/objectives (reference) - https://www.comptia.org/certifications/a
-- Troubleshooting Hardware (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-hardware-220-1201/
-- Troubleshooting Storage Devices (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-storage-devices-220-1201/
-- Troubleshooting Display Issues (course) - https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-display-issues-220-1201/
