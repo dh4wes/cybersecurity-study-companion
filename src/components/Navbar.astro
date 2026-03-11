@@ -5,6 +5,7 @@ import { colorThemeOptions, fontThemeOptions } from '../lib/theme-options.js';
 const { currentPath = '/' } = Astro.props;
 const links = [
   { path: '/', label: 'Home' },
+  { path: '/todays-lecture/', label: "Today's Lecture" },
   { path: '/roadmap/', label: 'Roadmap' },
   { path: '/resources/', label: 'Resources' },
   { path: '/glossary/', label: 'Glossary' },
@@ -15,7 +16,7 @@ const links = [
   { path: '/about/', label: 'About' }
 ];
 const mobileLinks = links.filter((link) =>
-  ['/', '/roadmap/', '/flashcards/', '/progress/', '/notes/'].includes(link.path)
+  ['/', '/todays-lecture/', '/roadmap/', '/flashcards/', '/progress/', '/notes/'].includes(link.path)
 );
 
 const normalize = (value) => String(value || '/').replace(/\/?$/, '/');

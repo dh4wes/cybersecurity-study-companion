@@ -4,6 +4,10 @@ import flashcardsData from '../data/content/flashcards.json';
 import workbookEnrichment from '../data/workbook-enrichment.json';
 import daySourceLinks from '../data/day-source-links.json';
 
+const lectureModules = import.meta.glob('../data/content/daily-lectures/week-*-day-*.json', {
+  eager: true
+});
+
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 
 const toWeekId = (weekNumber) => `week-${String(weekNumber).padStart(2, '0')}`;
@@ -335,6 +339,43 @@ const flashcardDifficultyOptions = [...new Set(flashcardEntries.map((card) => ca
   .filter(Boolean)
   .sort();
 
+const lectureEntries = Object.values(lectureModules)
+  .map((module) => module?.default || module)
+  .filter((entry) => isPlainObject(entry) && typeof entry.id === 'string' && entry.id.trim())
+  .map((entry) => ({
+    ...entry,
+    dayId: entry.dayId || entry.id,
+    summary: entry.summary || entry.plain_language_intro || '',
+    readingMinutes: Number(entry.readingMinutes || entry.estimated_read_minutes || 0) || 0,
+    resource_anchors: Array.isArray(entry.resource_anchors) ? entry.resource_anchors : [],
+    glossary_ids: Array.isArray(entry.glossary_ids) ? entry.glossary_ids : [],
+    flashcard_ids: Array.isArray(entry.flashcard_ids) ? entry.flashcard_ids : [],
+    self_check_prompts: Array.isArray(entry.self_check_prompts) ? entry.self_check_prompts : [],
+    key_distinctions: Array.isArray(entry.key_distinctions) ? entry.key_distinctions : []
+  }))
+  .sort((a, b) => Number(a.week) - Number(b.week) || Number(a.day) - Number(b.day));
+
+const lecturesByDayId = Object.fromEntries(lectureEntries.map((entry) => [entry.dayId, entry]));
+const lectureDayIds = lectureEntries.map((entry) => entry.dayId);
+
+const clientLectureDays = weeks.flatMap((week) =>
+  week.days.map((day) => ({
+    id: day.id,
+    dayId: day.id,
+    weekId: week.id,
+    week: week.week,
+    day: day.day,
+    label: day.label,
+    phase: day.phase,
+    session_type: day.session_type,
+    session_objective: day.session_objective,
+    href: `${week.href || withBase(week.slug)}#${day.id}`,
+    weekHref: week.href || withBase(week.slug),
+    notesHref: withBase(`/notes/?week=${week.week}&day=${day.day}&tab=day`),
+    hasLecture: Boolean(lecturesByDayId[day.id])
+  }))
+);
+
 export {
   canonicalData,
   workbookEnrichment,
@@ -361,6 +402,10 @@ export {
   clientWeeksProgress,
   glossaryEntries,
   flashcardEntries,
+  lectureEntries,
+  lecturesByDayId,
+  lectureDayIds,
+  clientLectureDays,
   glossaryById,
   flashcardById,
   glossaryPhaseOptions,

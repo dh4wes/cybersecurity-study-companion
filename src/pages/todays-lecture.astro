@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {
+  canonicalData,
+  clientLectureDays,
+  lecturesByDayId,
+  glossaryById,
+  withBase
+} from '../lib/site-data.js';
+
+const glossaryLite = Object.fromEntries(
+  [...glossaryById.entries()].map(([id, entry]) => [
+    id,
+    {
+      id,
+      term: entry.term,
+      definition: entry.definition,
+      mechanism: entry.mechanism
+    }
+  ])
+);
+---
+
+<Layout
+  title={`${canonicalData.site.title} | Today's Lecture`}
+  description="Single-current-lecture reading view driven by local completion state."
+  currentPath={Astro.url.pathname}
+>
+  <section class="section lecture-shell">
+    <div class="lecture-page-intro card">
+      <p class="kicker">Focused Reading View</p>
+      <h1>Today's Lecture</h1>
+      <p class="lecture-page-lead">
+        Open the next lecture target from your local completion state, read in a calmer single-column layout, and
+        advance immediately as you mark days complete.
+      </p>
+    </div>
+
+    <article class="lecture-reading-panel card">
+      <div class="lecture-status-strip js-lecture-status" aria-live="polite">Loading your current lecture...</div>
+      <div class="lecture-loading-state js-lecture-loading">Loading your current lecture...</div>
+      <div class="js-lecture-root" hidden></div>
+    </article>
+  </section>
+
+  <script
+    id="todays-lecture-data-json"
+    type="application/json"
+    set:html={JSON.stringify({
+      days: clientLectureDays,
+      lecturesByDayId,
+      glossaryById: glossaryLite,
+      routes: {
+        notesBase: withBase('/notes/'),
+        roadmap: withBase('/roadmap/')
+      }
+    })}
+  ></script>
+  <script>
+    import '../scripts/todays-lecture-page.js';
+  </script>
+</Layout>

@@ -1,8 +1,11 @@
 import { getProgress, loadProgress } from './progress-storage.js';
 import { buildSequentialWeekUnlocks, computeProgressMetrics, formatNextTask } from './progress-metrics.js';
+import { getCurrentLecture } from '../lib/current-lecture.js';
 import { initOnReady, parseJsonScript, withBase, PROGRESS_EVENT } from './runtime/client-utils.js';
 
 let homeWeeks = [];
+let lectureDays = [];
+let lectureLookup = {};
 
 const renderHome = () => {
   const weeks = homeWeeks;
@@ -47,7 +50,18 @@ const renderHome = () => {
 
   const todayLink = document.querySelector('.js-today-link');
   if (todayLink) {
-    if (metrics.nextTask) {
+    const lectureTarget = getCurrentLecture({
+      days: lectureDays,
+      progressState: progress,
+      lecturesByDayId: lectureLookup
+    });
+
+    if (lectureTarget.currentDayId) {
+      todayLink.setAttribute('href', withBase('/todays-lecture/'));
+      todayLink.textContent = lectureTarget.isCourseComplete
+        ? 'You are fully caught up. Reopen the final lecture'
+        : `Today's lecture: Week ${String(lectureTarget.currentWeekNumber).padStart(2, '0')} Day ${String(lectureTarget.currentDayNumber).padStart(2, '0')}`;
+    } else if (metrics.nextTask) {
       const href = `${metrics.nextTask.week.href || withBase(metrics.nextTask.week.slug)}#${metrics.nextTask.day.id}`;
       todayLink.setAttribute('href', href);
       todayLink.textContent = `Today's study block: Week ${String(metrics.nextTask.week.week).padStart(2, '0')} ${metrics.nextTask.day.label}`;
@@ -60,7 +74,10 @@ const renderHome = () => {
 
 const boot = async () => {
   await loadProgress();
-  homeWeeks = parseJsonScript('home-data-json', { weeks: [] }).weeks || [];
+  const data = parseJsonScript('home-data-json', { weeks: [], lectureDays: [], lectureDayIds: [] });
+  homeWeeks = data.weeks || [];
+  lectureDays = data.lectureDays || [];
+  lectureLookup = Object.fromEntries((data.lectureDayIds || []).map((dayId) => [dayId, { dayId }]));
   renderHome();
   window.addEventListener(PROGRESS_EVENT, renderHome);
 };

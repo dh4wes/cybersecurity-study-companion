@@ -183,3 +183,11 @@ Generation and validation:
 NotebookLM workflow:
 
 - Ingest `docs/notebooklm/daily-lectures/` as a folder so NotebookLM can connect week overviews to individual day lectures through the stable naming scheme and metadata blocks
+
+## Today's Lecture
+
+The app includes a single-current-lecture reading route at `/todays-lecture/`.
+
+- It chooses the next lecture target from local completion state, using the first unfinished day in chronological order
+- Blocked days are still shown and are not skipped automatically
+- Marking the current lecture complete immediately advances the view to the next unfinished lecture

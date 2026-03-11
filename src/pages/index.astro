@@ -6,6 +6,8 @@ import {
   canonicalData,
   weeks,
   clientWeeksLite,
+  clientLectureDays,
+  lectureDayIds,
   withBase,
   totalStudyDays,
   totalReviewDays
@@ -40,6 +42,18 @@ const firstWeek = weeks[0];
   </section>
 
   <section class="section">
+    <article class="card">
+      <div class="section-header">
+        <h2>Today's Lecture</h2>
+        <a class="btn secondary js-today-link" href={withBase('/todays-lecture/')}>Open today&apos;s lecture</a>
+      </div>
+      <p class="small">
+        This view always opens the next lecture target based on your local completion state and advances as you mark days complete.
+      </p>
+    </article>
+  </section>
+
+  <section class="section">
     <div class="section-header">
       <h2>Progress Snapshot</h2>
       <a href={withBase('/progress/')}>Open full dashboard</a>
@@ -47,7 +61,15 @@ const firstWeek = weeks[0];
     <ProgressSummary totalStudyDays={totalStudyDays} totalReviewDays={totalReviewDays} totalWeeks={weeks.length} />
   </section>
 
-  <script id="home-data-json" type="application/json" set:html={JSON.stringify({ weeks: clientWeeksLite })}></script>
+  <script
+    id="home-data-json"
+    type="application/json"
+    set:html={JSON.stringify({
+      weeks: clientWeeksLite,
+      lectureDays: clientLectureDays,
+      lectureDayIds
+    })}
+  ></script>
   <script>
     import '../scripts/home-page.js';
   </script>
