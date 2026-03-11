@@ -5,11 +5,11 @@ import PageHero from '../../components/PageHero.astro';
 import { canonicalData, clientWeeksLite, groupedWeeksByPhase } from '../../lib/site-data.js';
 ---
 
-<Layout title={`${canonicalData.site.title} | Roadmap`} description="32-week timeline grouped by phase" currentPath={Astro.url.pathname}>
+<Layout title={`${canonicalData.site.title} | Roadmap`} description="29-week timeline grouped by phase" currentPath={Astro.url.pathname}>
   <PageHero
     kicker="32-Week Timeline"
     title="Roadmap"
-    description="Full 32-week timeline grouped by phase. Each week card includes focus, deliverable, checkpoint, primary resource, progress, and a link to the detailed week page."
+    description="Full 29-week timeline grouped by phase. Each week card includes focus, deliverable, checkpoint, primary resource, progress, and a link to the detailed week page."
   />
 
   <PhaseTimeline groupedWeeks={groupedWeeksByPhase} />

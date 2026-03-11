@@ -1,0 +1,2742 @@
+{
+  "generated_at": "2026-03-11T07:13:55.567Z",
+  "syllabus_summary": {
+    "active_weeks": 29,
+    "active_days": 203
+  },
+  "repo_mismatches": [
+    "Prompt referenced a 32-week / 224-day plan, but the current canonical syllabus contains 29 active weeks and 203 active day records.",
+    "Prompt referenced overview.md and flashcard_info.md, but those files are not present in the repo."
+  ],
+  "exams": {
+    "primary_ranges": [
+      {
+        "weeks": "01-02",
+        "exam": "CompTIA A+ Core 1 (220-1201)"
+      },
+      {
+        "weeks": "03-05",
+        "exam": "CompTIA A+ Core 2 (220-1202)",
+        "secondary": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)"
+      },
+      {
+        "weeks": "06-12",
+        "exam": "CompTIA Network+ (N10-009)"
+      },
+      {
+        "weeks": "13-23",
+        "exam": "Google Cybersecurity Professional Certificate",
+        "secondary": "CompTIA Security+ (SY0-701)"
+      },
+      {
+        "weeks": "26-30",
+        "exam": "CompTIA Security+ (SY0-701)"
+      },
+      {
+        "weeks": "32",
+        "exam": "Cross-certification review (A+ / Network+ / Security+)"
+      }
+    ]
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "id": "week-01",
+      "phase": "Foundation",
+      "focus": "A+ Core 1: hardware, boot process, and internal components",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-01-overview.md",
+      "day_ids": [
+        "week-01-day-01",
+        "week-01-day-02",
+        "week-01-day-03",
+        "week-01-day-04",
+        "week-01-day-05",
+        "week-01-day-06",
+        "week-01-day-07"
+      ]
+    },
+    {
+      "week": 2,
+      "id": "week-02",
+      "phase": "Foundation",
+      "focus": "A+ Core 1: mobile devices, networking basics, wireless, and virtualization",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-02-overview.md",
+      "day_ids": [
+        "week-02-day-01",
+        "week-02-day-02",
+        "week-02-day-03",
+        "week-02-day-04",
+        "week-02-day-05",
+        "week-02-day-06",
+        "week-02-day-07"
+      ]
+    },
+    {
+      "week": 3,
+      "id": "week-03",
+      "phase": "Foundation",
+      "focus": "A+ Core 2: operating systems, installs, file systems, and admin basics",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-03-overview.md",
+      "day_ids": [
+        "week-03-day-01",
+        "week-03-day-02",
+        "week-03-day-03",
+        "week-03-day-04",
+        "week-03-day-05",
+        "week-03-day-06",
+        "week-03-day-07"
+      ]
+    },
+    {
+      "week": 4,
+      "id": "week-04",
+      "phase": "Foundation",
+      "focus": "A+ Core 2: security, support professionalism, and troubleshooting method",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-04-overview.md",
+      "day_ids": [
+        "week-04-day-01",
+        "week-04-day-02",
+        "week-04-day-03",
+        "week-04-day-04",
+        "week-04-day-05",
+        "week-04-day-06",
+        "week-04-day-07"
+      ]
+    },
+    {
+      "week": 5,
+      "id": "week-05",
+      "phase": "Foundation",
+      "focus": "Linux ramp-up and first VM build",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-05-overview.md",
+      "day_ids": [
+        "week-05-day-01",
+        "week-05-day-02",
+        "week-05-day-03",
+        "week-05-day-04",
+        "week-05-day-05",
+        "week-05-day-06",
+        "week-05-day-07"
+      ]
+    },
+    {
+      "week": 6,
+      "id": "week-06",
+      "phase": "Networking",
+      "focus": "Networking foundations: models, media, devices, and topologies",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-06-overview.md",
+      "day_ids": [
+        "week-06-day-01",
+        "week-06-day-02",
+        "week-06-day-03",
+        "week-06-day-04",
+        "week-06-day-05",
+        "week-06-day-06",
+        "week-06-day-07"
+      ]
+    },
+    {
+      "week": 7,
+      "id": "week-07",
+      "phase": "Networking",
+      "focus": "Ethernet, switching, routing, and gateways",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-07-overview.md",
+      "day_ids": [
+        "week-07-day-01",
+        "week-07-day-02",
+        "week-07-day-03",
+        "week-07-day-04",
+        "week-07-day-05",
+        "week-07-day-06",
+        "week-07-day-07"
+      ]
+    },
+    {
+      "week": 8,
+      "id": "week-08",
+      "phase": "Networking",
+      "focus": "IPv4 addressing, subnetting, and address planning",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-08-overview.md",
+      "day_ids": [
+        "week-08-day-01",
+        "week-08-day-02",
+        "week-08-day-03",
+        "week-08-day-04",
+        "week-08-day-05",
+        "week-08-day-06",
+        "week-08-day-07"
+      ]
+    },
+    {
+      "week": 9,
+      "id": "week-09",
+      "phase": "Networking",
+      "focus": "TCP, UDP, ports, DNS, DHCP, NAT, and service flow",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-09-overview.md",
+      "day_ids": [
+        "week-09-day-01",
+        "week-09-day-02",
+        "week-09-day-03",
+        "week-09-day-04",
+        "week-09-day-05",
+        "week-09-day-06",
+        "week-09-day-07"
+      ]
+    },
+    {
+      "week": 10,
+      "id": "week-10",
+      "phase": "Networking",
+      "focus": "Wireless, SOHO design, cloud, and network security basics",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-10-overview.md",
+      "day_ids": [
+        "week-10-day-01",
+        "week-10-day-02",
+        "week-10-day-03",
+        "week-10-day-04",
+        "week-10-day-05",
+        "week-10-day-06",
+        "week-10-day-07"
+      ]
+    },
+    {
+      "week": 11,
+      "id": "week-11",
+      "phase": "Networking",
+      "focus": "Wireshark and troubleshooting with packet evidence",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-11-overview.md",
+      "day_ids": [
+        "week-11-day-01",
+        "week-11-day-02",
+        "week-11-day-03",
+        "week-11-day-04",
+        "week-11-day-05",
+        "week-11-day-06",
+        "week-11-day-07"
+      ]
+    },
+    {
+      "week": 12,
+      "id": "week-12",
+      "phase": "Networking",
+      "focus": "TryHackMe Pre Security and end-to-end web request capstone",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-12-overview.md",
+      "day_ids": [
+        "week-12-day-01",
+        "week-12-day-02",
+        "week-12-day-03",
+        "week-12-day-04",
+        "week-12-day-05",
+        "week-12-day-06",
+        "week-12-day-07"
+      ]
+    },
+    {
+      "week": 13,
+      "id": "week-13",
+      "phase": "Security",
+      "focus": "Google Course 1: Foundations of Cybersecurity",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-13-overview.md",
+      "day_ids": [
+        "week-13-day-01",
+        "week-13-day-02",
+        "week-13-day-03",
+        "week-13-day-04",
+        "week-13-day-05",
+        "week-13-day-06",
+        "week-13-day-07"
+      ]
+    },
+    {
+      "week": 14,
+      "id": "week-14",
+      "phase": "Security",
+      "focus": "Google Course 2: Play It Safe - Manage Security Risks",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-14-overview.md",
+      "day_ids": [
+        "week-14-day-01",
+        "week-14-day-02",
+        "week-14-day-03",
+        "week-14-day-04",
+        "week-14-day-05",
+        "week-14-day-06",
+        "week-14-day-07"
+      ]
+    },
+    {
+      "week": 15,
+      "id": "week-15",
+      "phase": "Security",
+      "focus": "Google Course 3: Networks and Network Security",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-15-overview.md",
+      "day_ids": [
+        "week-15-day-01",
+        "week-15-day-02",
+        "week-15-day-03",
+        "week-15-day-04",
+        "week-15-day-05",
+        "week-15-day-06",
+        "week-15-day-07"
+      ]
+    },
+    {
+      "week": 16,
+      "id": "week-16",
+      "phase": "Security",
+      "focus": "Google Course 4: Linux and SQL (part 1 - Linux)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-16-overview.md",
+      "day_ids": [
+        "week-16-day-01",
+        "week-16-day-02",
+        "week-16-day-03",
+        "week-16-day-04",
+        "week-16-day-05",
+        "week-16-day-06",
+        "week-16-day-07"
+      ]
+    },
+    {
+      "week": 17,
+      "id": "week-17",
+      "phase": "Security",
+      "focus": "Google Course 4: Linux and SQL (part 2 - SQL)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-17-overview.md",
+      "day_ids": [
+        "week-17-day-01",
+        "week-17-day-02",
+        "week-17-day-03",
+        "week-17-day-04",
+        "week-17-day-05",
+        "week-17-day-06",
+        "week-17-day-07"
+      ]
+    },
+    {
+      "week": 18,
+      "id": "week-18",
+      "phase": "Security",
+      "focus": "Google Course 5: Assets, threats, and vulnerabilities (part 1)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-18-overview.md",
+      "day_ids": [
+        "week-18-day-01",
+        "week-18-day-02",
+        "week-18-day-03",
+        "week-18-day-04",
+        "week-18-day-05",
+        "week-18-day-06",
+        "week-18-day-07"
+      ]
+    },
+    {
+      "week": 19,
+      "id": "week-19",
+      "phase": "Security",
+      "focus": "Google Course 5: Assets, threats, and vulnerabilities (part 2)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-19-overview.md",
+      "day_ids": [
+        "week-19-day-01",
+        "week-19-day-02",
+        "week-19-day-03",
+        "week-19-day-04",
+        "week-19-day-05",
+        "week-19-day-06",
+        "week-19-day-07"
+      ]
+    },
+    {
+      "week": 20,
+      "id": "week-20",
+      "phase": "Security",
+      "focus": "Google Course 6: Detection and response (part 1)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-20-overview.md",
+      "day_ids": [
+        "week-20-day-01",
+        "week-20-day-02",
+        "week-20-day-03",
+        "week-20-day-04",
+        "week-20-day-05",
+        "week-20-day-06",
+        "week-20-day-07"
+      ]
+    },
+    {
+      "week": 21,
+      "id": "week-21",
+      "phase": "Security",
+      "focus": "Google Course 6: Detection and response (part 2)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-21-overview.md",
+      "day_ids": [
+        "week-21-day-01",
+        "week-21-day-02",
+        "week-21-day-03",
+        "week-21-day-04",
+        "week-21-day-05",
+        "week-21-day-06",
+        "week-21-day-07"
+      ]
+    },
+    {
+      "week": 22,
+      "id": "week-22",
+      "phase": "Security",
+      "focus": "Google Course 7: Python automation (part 1)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-22-overview.md",
+      "day_ids": [
+        "week-22-day-01",
+        "week-22-day-02",
+        "week-22-day-03",
+        "week-22-day-04",
+        "week-22-day-05",
+        "week-22-day-06",
+        "week-22-day-07"
+      ]
+    },
+    {
+      "week": 23,
+      "id": "week-23",
+      "phase": "Security",
+      "focus": "Google Course 7: Python automation (part 2)",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-23-overview.md",
+      "day_ids": [
+        "week-23-day-01",
+        "week-23-day-02",
+        "week-23-day-03",
+        "week-23-day-04",
+        "week-23-day-05",
+        "week-23-day-06",
+        "week-23-day-07"
+      ]
+    },
+    {
+      "week": 26,
+      "id": "week-26",
+      "phase": "Security",
+      "focus": "Security+ reinforcement: IAM, crypto, and social engineering",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-26-overview.md",
+      "day_ids": [
+        "week-26-day-01",
+        "week-26-day-02",
+        "week-26-day-03",
+        "week-26-day-04",
+        "week-26-day-05",
+        "week-26-day-06",
+        "week-26-day-07"
+      ]
+    },
+    {
+      "week": 27,
+      "id": "week-27",
+      "phase": "Security",
+      "focus": "TryHackMe Cyber Security 101 + breach journal capstone",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-27-overview.md",
+      "day_ids": [
+        "week-27-day-01",
+        "week-27-day-02",
+        "week-27-day-03",
+        "week-27-day-04",
+        "week-27-day-05",
+        "week-27-day-06",
+        "week-27-day-07"
+      ]
+    },
+    {
+      "week": 28,
+      "id": "week-28",
+      "phase": "GRC / Application",
+      "focus": "CISA incident response materials and playbook thinking",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-28-overview.md",
+      "day_ids": [
+        "week-28-day-01",
+        "week-28-day-02",
+        "week-28-day-03",
+        "week-28-day-04",
+        "week-28-day-05",
+        "week-28-day-06",
+        "week-28-day-07"
+      ]
+    },
+    {
+      "week": 29,
+      "id": "week-29",
+      "phase": "GRC / Application",
+      "focus": "Critical infrastructure, governance, risk, and assessment mindset",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-29-overview.md",
+      "day_ids": [
+        "week-29-day-01",
+        "week-29-day-02",
+        "week-29-day-03",
+        "week-29-day-04",
+        "week-29-day-05",
+        "week-29-day-06",
+        "week-29-day-07"
+      ]
+    },
+    {
+      "week": 30,
+      "id": "week-30",
+      "phase": "GRC / Application",
+      "focus": "TryHackMe Defensive Security: SOC, forensics, IR, and logs",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-30-overview.md",
+      "day_ids": [
+        "week-30-day-01",
+        "week-30-day-02",
+        "week-30-day-03",
+        "week-30-day-04",
+        "week-30-day-05",
+        "week-30-day-06",
+        "week-30-day-07"
+      ]
+    },
+    {
+      "week": 32,
+      "id": "week-32",
+      "phase": "Buffer / Final Review",
+      "focus": "Catch-up, comprehensive review, and study-system reset",
+      "overview_markdown": "docs/notebooklm/daily-lectures/week-32-overview.md",
+      "day_ids": [
+        "week-32-day-01",
+        "week-32-day-02",
+        "week-32-day-03",
+        "week-32-day-04",
+        "week-32-day-05",
+        "week-32-day-06",
+        "week-32-day-07"
+      ]
+    }
+  ],
+  "lectures": [
+    {
+      "id": "week-01-day-01",
+      "week": 1,
+      "day": 1,
+      "session_type": "Study",
+      "title": "CPU, RAM, and Storage Drive in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-01.json"
+    },
+    {
+      "id": "week-01-day-02",
+      "week": 1,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Motherboard, Chipset, and PSU (Power Supply Unit) in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-02.json"
+    },
+    {
+      "id": "week-01-day-03",
+      "week": 1,
+      "day": 3,
+      "session_type": "Study",
+      "title": "BIOS/UEFI Firmware and POST in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-03.json"
+    },
+    {
+      "id": "week-01-day-04",
+      "week": 1,
+      "day": 4,
+      "session_type": "Study",
+      "title": "PCIe / Expansion Bus, Cooling / Thermal Management, and Bootloader in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-04.json"
+    },
+    {
+      "id": "week-01-day-05",
+      "week": 1,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Boot Process and CPU Cache in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-05.json"
+    },
+    {
+      "id": "week-01-day-06",
+      "week": 1,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: CPU, RAM, Storage Drive",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-06.json"
+    },
+    {
+      "id": "week-01-day-07",
+      "week": 1,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for A+ Core 1: hardware, boot process, and internal components",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-01-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-01-day-07.json"
+    },
+    {
+      "id": "week-02-day-01",
+      "week": 2,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Mobile Device, Laptop, and Docking Station in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-01.json"
+    },
+    {
+      "id": "week-02-day-02",
+      "week": 2,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Modem, Bluetooth, and IP Address in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-02.json"
+    },
+    {
+      "id": "week-02-day-03",
+      "week": 2,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Printer, Virtualization, and Hypervisor in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-03.json"
+    },
+    {
+      "id": "week-02-day-04",
+      "week": 2,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Mobile Hotspot and Cellular Network in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-04.json"
+    },
+    {
+      "id": "week-02-day-05",
+      "week": 2,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Network Protocol and Cloud Computing in context",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-05.json"
+    },
+    {
+      "id": "week-02-day-06",
+      "week": 2,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Mobile Device, Laptop, Docking Station",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-06.json"
+    },
+    {
+      "id": "week-02-day-07",
+      "week": 2,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for A+ Core 1: mobile devices, networking basics, wireless, and virtualization",
+      "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-02-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-02-day-07.json"
+    },
+    {
+      "id": "week-03-day-01",
+      "week": 3,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Operating System, Filesystem, and NTFS in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-01.json"
+    },
+    {
+      "id": "week-03-day-02",
+      "week": 3,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Partition and Boot Media in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-02.json"
+    },
+    {
+      "id": "week-03-day-03",
+      "week": 3,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Upgrade Path and Command Line in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-03.json"
+    },
+    {
+      "id": "week-03-day-04",
+      "week": 3,
+      "day": 4,
+      "session_type": "Study",
+      "title": "PowerShell and Service Management in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-04.json"
+    },
+    {
+      "id": "week-03-day-05",
+      "week": 3,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Permissions and Package Manager in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-05.json"
+    },
+    {
+      "id": "week-03-day-06",
+      "week": 3,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Operating System, Filesystem, NTFS",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-06.json"
+    },
+    {
+      "id": "week-03-day-07",
+      "week": 3,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for A+ Core 2: operating systems, installs, file systems, and admin basics",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-03-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-03-day-07.json"
+    },
+    {
+      "id": "week-04-day-01",
+      "week": 4,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Password Policy, Account Lockout, and Malware in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-01.json"
+    },
+    {
+      "id": "week-04-day-02",
+      "week": 4,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Patch Management and Security Awareness in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-02.json"
+    },
+    {
+      "id": "week-04-day-03",
+      "week": 4,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Ticketing and Documentation in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-03.json"
+    },
+    {
+      "id": "week-04-day-04",
+      "week": 4,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Change Management and Troubleshooting Methodology in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-04.json"
+    },
+    {
+      "id": "week-04-day-05",
+      "week": 4,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Knowledge Base and Backup Strategy in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-05.json"
+    },
+    {
+      "id": "week-04-day-06",
+      "week": 4,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Password Policy, Account Lockout, Malware",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-06.json"
+    },
+    {
+      "id": "week-04-day-07",
+      "week": 4,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for A+ Core 2: security, support professionalism, and troubleshooting method",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-04-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-04-day-07.json"
+    },
+    {
+      "id": "week-05-day-01",
+      "week": 5,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Linux Kernel, Shell, and Command Line in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-01.json"
+    },
+    {
+      "id": "week-05-day-02",
+      "week": 5,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Linux Permissions and sudo in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-02.json"
+    },
+    {
+      "id": "week-05-day-03",
+      "week": 5,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Package Manager and Process in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-03.json"
+    },
+    {
+      "id": "week-05-day-04",
+      "week": 5,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Users and Groups and Virtual Machine in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-04.json"
+    },
+    {
+      "id": "week-05-day-05",
+      "week": 5,
+      "day": 5,
+      "session_type": "Study",
+      "title": "VirtualBox and SSH in context",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-05.json"
+    },
+    {
+      "id": "week-05-day-06",
+      "week": 5,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Linux Kernel, Shell, Command Line",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-06.json"
+    },
+    {
+      "id": "week-05-day-07",
+      "week": 5,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Linux ramp-up and first VM build",
+      "primary_exam": "CompTIA A+ Core 2 (220-1202)",
+      "secondary_exam": "Bridge to CompTIA Network+ (N10-009) and CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-05-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-05-day-07.json"
+    },
+    {
+      "id": "week-06-day-01",
+      "week": 6,
+      "day": 1,
+      "session_type": "Study",
+      "title": "LAN and WAN in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-01.json"
+    },
+    {
+      "id": "week-06-day-02",
+      "week": 6,
+      "day": 2,
+      "session_type": "Study",
+      "title": "OSI Model and TCP/IP Model in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-02.json"
+    },
+    {
+      "id": "week-06-day-03",
+      "week": 6,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Network Media, Network Interface Card, and Copper Cabling in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-03.json"
+    },
+    {
+      "id": "week-06-day-04",
+      "week": 6,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Fiber Optic and Packet in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-04.json"
+    },
+    {
+      "id": "week-06-day-05",
+      "week": 6,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Protocol, Bridge, and Network Topology in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-05.json"
+    },
+    {
+      "id": "week-06-day-06",
+      "week": 6,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: LAN, WAN, OSI Model",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-06.json"
+    },
+    {
+      "id": "week-06-day-07",
+      "week": 6,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Networking foundations: models, media, devices, and topologies",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-06-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-06-day-07.json"
+    },
+    {
+      "id": "week-07-day-01",
+      "week": 7,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Ethernet Frame, MAC Address, and ARP in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-01.json"
+    },
+    {
+      "id": "week-07-day-02",
+      "week": 7,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Broadcast Domain and Switch in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-02.json"
+    },
+    {
+      "id": "week-07-day-03",
+      "week": 7,
+      "day": 3,
+      "session_type": "Study",
+      "title": "VLAN and Spanning Tree Protocol in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-03.json"
+    },
+    {
+      "id": "week-07-day-04",
+      "week": 7,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Router and Default Gateway in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-04.json"
+    },
+    {
+      "id": "week-07-day-05",
+      "week": 7,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Routing Table and Network CLI in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-05.json"
+    },
+    {
+      "id": "week-07-day-06",
+      "week": 7,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Ethernet Frame, MAC Address, ARP",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-06.json"
+    },
+    {
+      "id": "week-07-day-07",
+      "week": 7,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Ethernet, switching, routing, and gateways",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-07-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-07-day-07.json"
+    },
+    {
+      "id": "week-08-day-01",
+      "week": 8,
+      "day": 1,
+      "session_type": "Study",
+      "title": "IPv4, CIDR, and Subnet Mask in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-01.json"
+    },
+    {
+      "id": "week-08-day-02",
+      "week": 8,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Network ID and Host Range in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-02.json"
+    },
+    {
+      "id": "week-08-day-03",
+      "week": 8,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Broadcast Address and Private IP in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-03.json"
+    },
+    {
+      "id": "week-08-day-04",
+      "week": 8,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Public IP and Subnetting in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-04.json"
+    },
+    {
+      "id": "week-08-day-05",
+      "week": 8,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Address Plan in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-05.json"
+    },
+    {
+      "id": "week-08-day-06",
+      "week": 8,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: IPv4, CIDR, Subnet Mask",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-06.json"
+    },
+    {
+      "id": "week-08-day-07",
+      "week": 8,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for IPv4 addressing, subnetting, and address planning",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-08-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-08-day-07.json"
+    },
+    {
+      "id": "week-09-day-01",
+      "week": 9,
+      "day": 1,
+      "session_type": "Study",
+      "title": "TCP and UDP in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-01.json"
+    },
+    {
+      "id": "week-09-day-02",
+      "week": 9,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Port Number, DNS, and DNS Resolution in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-02.json"
+    },
+    {
+      "id": "week-09-day-03",
+      "week": 9,
+      "day": 3,
+      "session_type": "Study",
+      "title": "DHCP and NAT in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-03.json"
+    },
+    {
+      "id": "week-09-day-04",
+      "week": 9,
+      "day": 4,
+      "session_type": "Study",
+      "title": "NTP in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-04.json"
+    },
+    {
+      "id": "week-09-day-05",
+      "week": 9,
+      "day": 5,
+      "session_type": "Study",
+      "title": "TCP Three-Way Handshake in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-05.json"
+    },
+    {
+      "id": "week-09-day-06",
+      "week": 9,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: TCP, UDP, Port Number",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-06.json"
+    },
+    {
+      "id": "week-09-day-07",
+      "week": 9,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for TCP, UDP, ports, DNS, DHCP, NAT, and service flow",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-09-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-09-day-07.json"
+    },
+    {
+      "id": "week-10-day-01",
+      "week": 10,
+      "day": 1,
+      "session_type": "Study",
+      "title": "SSID, Wi-Fi Standard, and WPA3 in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-01.json"
+    },
+    {
+      "id": "week-10-day-02",
+      "week": 10,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Access Point and SOHO Router in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-02.json"
+    },
+    {
+      "id": "week-10-day-03",
+      "week": 10,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Firewall and Network Segmentation in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-03.json"
+    },
+    {
+      "id": "week-10-day-04",
+      "week": 10,
+      "day": 4,
+      "session_type": "Study",
+      "title": "VPN and Cloud Service Model in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-04.json"
+    },
+    {
+      "id": "week-10-day-05",
+      "week": 10,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Shared Responsibility in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-05.json"
+    },
+    {
+      "id": "week-10-day-06",
+      "week": 10,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: SSID, Wi-Fi Standard, WPA3",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-06.json"
+    },
+    {
+      "id": "week-10-day-07",
+      "week": 10,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Wireless, SOHO design, cloud, and network security basics",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-10-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-10-day-07.json"
+    },
+    {
+      "id": "week-11-day-01",
+      "week": 11,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Wireshark and Packet Capture in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-01.json"
+    },
+    {
+      "id": "week-11-day-02",
+      "week": 11,
+      "day": 2,
+      "session_type": "Study",
+      "title": "PCAP and Packet Filter in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-02.json"
+    },
+    {
+      "id": "week-11-day-03",
+      "week": 11,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Stream Follow and Conversation View in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-03.json"
+    },
+    {
+      "id": "week-11-day-04",
+      "week": 11,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Endpoint View and Traceroute in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-04.json"
+    },
+    {
+      "id": "week-11-day-05",
+      "week": 11,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Ping and Latency in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-05.json"
+    },
+    {
+      "id": "week-11-day-06",
+      "week": 11,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Wireshark, Packet Capture, PCAP",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-06.json"
+    },
+    {
+      "id": "week-11-day-07",
+      "week": 11,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Wireshark and troubleshooting with packet evidence",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-11-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-11-day-07.json"
+    },
+    {
+      "id": "week-12-day-01",
+      "week": 12,
+      "day": 1,
+      "session_type": "Study",
+      "title": "HTTP Request and DNS Resolution in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-01.json"
+    },
+    {
+      "id": "week-12-day-02",
+      "week": 12,
+      "day": 2,
+      "session_type": "Study",
+      "title": "TLS Handshake and Certificate in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-02.json"
+    },
+    {
+      "id": "week-12-day-03",
+      "week": 12,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Web Server and Reverse Proxy in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-03.json"
+    },
+    {
+      "id": "week-12-day-04",
+      "week": 12,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Session Token and Browser in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-04.json"
+    },
+    {
+      "id": "week-12-day-05",
+      "week": 12,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Page Rendering in context",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-05.json"
+    },
+    {
+      "id": "week-12-day-06",
+      "week": 12,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: HTTP Request, DNS Resolution, TLS Handshake",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-06.json"
+    },
+    {
+      "id": "week-12-day-07",
+      "week": 12,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for TryHackMe Pre Security and end-to-end web request capstone",
+      "primary_exam": "CompTIA Network+ (N10-009)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-12-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-12-day-07.json"
+    },
+    {
+      "id": "week-13-day-01",
+      "week": 13,
+      "day": 1,
+      "session_type": "Study",
+      "title": "CIA Triad and Risk in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-01.json"
+    },
+    {
+      "id": "week-13-day-02",
+      "week": 13,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Threat and Vulnerability in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-02.json"
+    },
+    {
+      "id": "week-13-day-03",
+      "week": 13,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Control and Security Framework in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-03.json"
+    },
+    {
+      "id": "week-13-day-04",
+      "week": 13,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Asset in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-04.json"
+    },
+    {
+      "id": "week-13-day-05",
+      "week": 13,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Attack Surface in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-05.json"
+    },
+    {
+      "id": "week-13-day-06",
+      "week": 13,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: CIA Triad, Risk, Threat",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-06.json"
+    },
+    {
+      "id": "week-13-day-07",
+      "week": 13,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 1: Foundations of Cybersecurity",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-13-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-13-day-07.json"
+    },
+    {
+      "id": "week-14-day-01",
+      "week": 14,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Risk Register and Likelihood in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-01.json"
+    },
+    {
+      "id": "week-14-day-02",
+      "week": 14,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Impact and Risk Treatment in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-02.json"
+    },
+    {
+      "id": "week-14-day-03",
+      "week": 14,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Qualitative Risk Analysis and Quantitative Risk Analysis in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-03.json"
+    },
+    {
+      "id": "week-14-day-04",
+      "week": 14,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Control Recommendation in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-04.json"
+    },
+    {
+      "id": "week-14-day-05",
+      "week": 14,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Capability Gap in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-05.json"
+    },
+    {
+      "id": "week-14-day-06",
+      "week": 14,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Risk Register, Likelihood, Impact",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-06.json"
+    },
+    {
+      "id": "week-14-day-07",
+      "week": 14,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 2: Play It Safe - Manage Security Risks",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-14-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-14-day-07.json"
+    },
+    {
+      "id": "week-15-day-01",
+      "week": 15,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Intrusion Detection and Intrusion Prevention in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-01.json"
+    },
+    {
+      "id": "week-15-day-02",
+      "week": 15,
+      "day": 2,
+      "session_type": "Study",
+      "title": "SIEM and Log Source in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-02.json"
+    },
+    {
+      "id": "week-15-day-03",
+      "week": 15,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Network Baseline and Hardening in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-03.json"
+    },
+    {
+      "id": "week-15-day-04",
+      "week": 15,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Firewall in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-04.json"
+    },
+    {
+      "id": "week-15-day-05",
+      "week": 15,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Network Segmentation in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-05.json"
+    },
+    {
+      "id": "week-15-day-06",
+      "week": 15,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Intrusion Detection, Intrusion Prevention, SIEM",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-06.json"
+    },
+    {
+      "id": "week-15-day-07",
+      "week": 15,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 3: Networks and Network Security",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-15-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-15-day-07.json"
+    },
+    {
+      "id": "week-16-day-01",
+      "week": 16,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Linux Permissions and chmod in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-01.json"
+    },
+    {
+      "id": "week-16-day-02",
+      "week": 16,
+      "day": 2,
+      "session_type": "Study",
+      "title": "chown and Process in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-02.json"
+    },
+    {
+      "id": "week-16-day-03",
+      "week": 16,
+      "day": 3,
+      "session_type": "Study",
+      "title": "systemctl and cron in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-03.json"
+    },
+    {
+      "id": "week-16-day-04",
+      "week": 16,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Shell in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-04.json"
+    },
+    {
+      "id": "week-16-day-05",
+      "week": 16,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Package Manager in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-05.json"
+    },
+    {
+      "id": "week-16-day-06",
+      "week": 16,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Linux Permissions, chmod, chown",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-06.json"
+    },
+    {
+      "id": "week-16-day-07",
+      "week": 16,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 4: Linux and SQL (part 1 - Linux)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-16-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-16-day-07.json"
+    },
+    {
+      "id": "week-17-day-01",
+      "week": 17,
+      "day": 1,
+      "session_type": "Study",
+      "title": "SQL Query and SELECT Statement in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-01.json"
+    },
+    {
+      "id": "week-17-day-02",
+      "week": 17,
+      "day": 2,
+      "session_type": "Study",
+      "title": "WHERE Clause in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-02.json"
+    },
+    {
+      "id": "week-17-day-03",
+      "week": 17,
+      "day": 3,
+      "session_type": "Study",
+      "title": "JOIN in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-03.json"
+    },
+    {
+      "id": "week-17-day-04",
+      "week": 17,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Input Validation in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-04.json"
+    },
+    {
+      "id": "week-17-day-05",
+      "week": 17,
+      "day": 5,
+      "session_type": "Study",
+      "title": "SQL Injection in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-05.json"
+    },
+    {
+      "id": "week-17-day-06",
+      "week": 17,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: SQL Query, SELECT Statement, WHERE Clause",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-06.json"
+    },
+    {
+      "id": "week-17-day-07",
+      "week": 17,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 4: Linux and SQL (part 2 - SQL)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-17-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-17-day-07.json"
+    },
+    {
+      "id": "week-18-day-01",
+      "week": 18,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Asset Inventory and Data Classification in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-01.json"
+    },
+    {
+      "id": "week-18-day-02",
+      "week": 18,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Threat Model and Attack Vector in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-02.json"
+    },
+    {
+      "id": "week-18-day-03",
+      "week": 18,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Vulnerability Scan in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-03.json"
+    },
+    {
+      "id": "week-18-day-04",
+      "week": 18,
+      "day": 4,
+      "session_type": "Study",
+      "title": "CVSS in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-04.json"
+    },
+    {
+      "id": "week-18-day-05",
+      "week": 18,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Exposure in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-05.json"
+    },
+    {
+      "id": "week-18-day-06",
+      "week": 18,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Asset Inventory, Data Classification, Threat Model",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-06.json"
+    },
+    {
+      "id": "week-18-day-07",
+      "week": 18,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 5: Assets, threats, and vulnerabilities (part 1)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-18-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-18-day-07.json"
+    },
+    {
+      "id": "week-19-day-01",
+      "week": 19,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Mitigation and Exploit in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-01.json"
+    },
+    {
+      "id": "week-19-day-02",
+      "week": 19,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Compensating Control in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-02.json"
+    },
+    {
+      "id": "week-19-day-03",
+      "week": 19,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Residual Risk in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-03.json"
+    },
+    {
+      "id": "week-19-day-04",
+      "week": 19,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Exposure in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-04.json"
+    },
+    {
+      "id": "week-19-day-05",
+      "week": 19,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Threat Intelligence in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-05.json"
+    },
+    {
+      "id": "week-19-day-06",
+      "week": 19,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Mitigation, Exploit, Compensating Control",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-06.json"
+    },
+    {
+      "id": "week-19-day-07",
+      "week": 19,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 5: Assets, threats, and vulnerabilities (part 2)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-19-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-19-day-07.json"
+    },
+    {
+      "id": "week-20-day-01",
+      "week": 20,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Alert Triage and False Positive in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-01.json"
+    },
+    {
+      "id": "week-20-day-02",
+      "week": 20,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Indicator of Compromise and Incident Severity in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-02.json"
+    },
+    {
+      "id": "week-20-day-03",
+      "week": 20,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Containment in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-03.json"
+    },
+    {
+      "id": "week-20-day-04",
+      "week": 20,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Eradication in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-04.json"
+    },
+    {
+      "id": "week-20-day-05",
+      "week": 20,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Detection Rule in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-05.json"
+    },
+    {
+      "id": "week-20-day-06",
+      "week": 20,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Alert Triage, False Positive, Indicator of Compromise",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-06.json"
+    },
+    {
+      "id": "week-20-day-07",
+      "week": 20,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 6: Detection and response (part 1)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-20-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-20-day-07.json"
+    },
+    {
+      "id": "week-21-day-01",
+      "week": 21,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Recovery and Playbook in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-01.json"
+    },
+    {
+      "id": "week-21-day-02",
+      "week": 21,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Escalation Path and Case Management in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-02.json"
+    },
+    {
+      "id": "week-21-day-03",
+      "week": 21,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Timeline Analysis and Post-Incident Review in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-03.json"
+    },
+    {
+      "id": "week-21-day-04",
+      "week": 21,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Communication Plan in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-04.json"
+    },
+    {
+      "id": "week-21-day-05",
+      "week": 21,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Evidence Handling in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-05.json"
+    },
+    {
+      "id": "week-21-day-06",
+      "week": 21,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Recovery, Playbook, Escalation Path",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-06.json"
+    },
+    {
+      "id": "week-21-day-07",
+      "week": 21,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 6: Detection and response (part 2)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-21-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-21-day-07.json"
+    },
+    {
+      "id": "week-22-day-01",
+      "week": 22,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Python Script and Variable in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-01.json"
+    },
+    {
+      "id": "week-22-day-02",
+      "week": 22,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Function in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-02.json"
+    },
+    {
+      "id": "week-22-day-03",
+      "week": 22,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Loop in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-03.json"
+    },
+    {
+      "id": "week-22-day-04",
+      "week": 22,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Conditional in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-04.json"
+    },
+    {
+      "id": "week-22-day-05",
+      "week": 22,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Error Handling in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-05.json"
+    },
+    {
+      "id": "week-22-day-06",
+      "week": 22,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Python Script, Variable, Function",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-06.json"
+    },
+    {
+      "id": "week-22-day-07",
+      "week": 22,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 7: Python automation (part 1)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-22-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-22-day-07.json"
+    },
+    {
+      "id": "week-23-day-01",
+      "week": 23,
+      "day": 1,
+      "session_type": "Study",
+      "title": "API and HTTP Method in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-01.json"
+    },
+    {
+      "id": "week-23-day-02",
+      "week": 23,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Automation Playbook and Regular Expression in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-02.json"
+    },
+    {
+      "id": "week-23-day-03",
+      "week": 23,
+      "day": 3,
+      "session_type": "Study",
+      "title": "File Parsing in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-03.json"
+    },
+    {
+      "id": "week-23-day-04",
+      "week": 23,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Version Control in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-04.json"
+    },
+    {
+      "id": "week-23-day-05",
+      "week": 23,
+      "day": 5,
+      "session_type": "Study",
+      "title": "JSON in context",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-05.json"
+    },
+    {
+      "id": "week-23-day-06",
+      "week": 23,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: API, HTTP Method, Automation Playbook",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-06.json"
+    },
+    {
+      "id": "week-23-day-07",
+      "week": 23,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Google Course 7: Python automation (part 2)",
+      "primary_exam": "Google Cybersecurity Professional Certificate",
+      "secondary_exam": "CompTIA Security+ (SY0-701)",
+      "markdown_path": "docs/notebooklm/daily-lectures/week-23-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-23-day-07.json"
+    },
+    {
+      "id": "week-26-day-01",
+      "week": 26,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Identity and Authentication in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-01.json"
+    },
+    {
+      "id": "week-26-day-02",
+      "week": 26,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Authorization and Accounting (AAA) in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-02.json"
+    },
+    {
+      "id": "week-26-day-03",
+      "week": 26,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Multi-Factor Authentication and Least Privilege in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-03.json"
+    },
+    {
+      "id": "week-26-day-04",
+      "week": 26,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Hashing and Encryption in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-04.json"
+    },
+    {
+      "id": "week-26-day-05",
+      "week": 26,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Social Engineering and Certificate in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-05.json"
+    },
+    {
+      "id": "week-26-day-06",
+      "week": 26,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Identity, Authentication, Authorization",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-06.json"
+    },
+    {
+      "id": "week-26-day-07",
+      "week": 26,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Security+ reinforcement: IAM, crypto, and social engineering",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-26-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-26-day-07.json"
+    },
+    {
+      "id": "week-27-day-01",
+      "week": 27,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Reconnaissance and Enumeration in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-01.json"
+    },
+    {
+      "id": "week-27-day-02",
+      "week": 27,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Privilege Escalation and Defense in Depth in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-02.json"
+    },
+    {
+      "id": "week-27-day-03",
+      "week": 27,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Incident Journal in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-03.json"
+    },
+    {
+      "id": "week-27-day-04",
+      "week": 27,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Control Recommendation in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-04.json"
+    },
+    {
+      "id": "week-27-day-05",
+      "week": 27,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Lateral Movement in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-05.json"
+    },
+    {
+      "id": "week-27-day-06",
+      "week": 27,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Reconnaissance, Enumeration, Privilege Escalation",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-06.json"
+    },
+    {
+      "id": "week-27-day-07",
+      "week": 27,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for TryHackMe Cyber Security 101 + breach journal capstone",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-27-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-27-day-07.json"
+    },
+    {
+      "id": "week-28-day-01",
+      "week": 28,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Incident Command and Playbook in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-01.json"
+    },
+    {
+      "id": "week-28-day-02",
+      "week": 28,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Maturity Model and Communication Plan in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-02.json"
+    },
+    {
+      "id": "week-28-day-03",
+      "week": 28,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Evidence Handling in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-03.json"
+    },
+    {
+      "id": "week-28-day-04",
+      "week": 28,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Tabletop Exercise in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-04.json"
+    },
+    {
+      "id": "week-28-day-05",
+      "week": 28,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Chain of Custody in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-05.json"
+    },
+    {
+      "id": "week-28-day-06",
+      "week": 28,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Incident Command, Playbook, Maturity Model",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-06.json"
+    },
+    {
+      "id": "week-28-day-07",
+      "week": 28,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for CISA incident response materials and playbook thinking",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-28-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-28-day-07.json"
+    },
+    {
+      "id": "week-29-day-01",
+      "week": 29,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Critical Infrastructure and Business Impact Analysis in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-01.json"
+    },
+    {
+      "id": "week-29-day-02",
+      "week": 29,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Governance and Compliance in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-02.json"
+    },
+    {
+      "id": "week-29-day-03",
+      "week": 29,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Risk Assessment in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-03.json"
+    },
+    {
+      "id": "week-29-day-04",
+      "week": 29,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Vendor Risk in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-04.json"
+    },
+    {
+      "id": "week-29-day-05",
+      "week": 29,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Risk Owner in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-05.json"
+    },
+    {
+      "id": "week-29-day-06",
+      "week": 29,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Critical Infrastructure, Business Impact Analysis, Governance",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-06.json"
+    },
+    {
+      "id": "week-29-day-07",
+      "week": 29,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Critical infrastructure, governance, risk, and assessment mindset",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-29-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-29-day-07.json"
+    },
+    {
+      "id": "week-30-day-01",
+      "week": 30,
+      "day": 1,
+      "session_type": "Study",
+      "title": "SOC Workflow and Forensic Imaging in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-01.json"
+    },
+    {
+      "id": "week-30-day-02",
+      "week": 30,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Chain of Custody and Log Correlation in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-02.json"
+    },
+    {
+      "id": "week-30-day-03",
+      "week": 30,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Detection Rule and Triage Queue in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-03.json"
+    },
+    {
+      "id": "week-30-day-04",
+      "week": 30,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Alert Triage in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-04.json"
+    },
+    {
+      "id": "week-30-day-05",
+      "week": 30,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Indicator of Compromise in context",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-05.json"
+    },
+    {
+      "id": "week-30-day-06",
+      "week": 30,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: SOC Workflow, Forensic Imaging, Chain of Custody",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-06.json"
+    },
+    {
+      "id": "week-30-day-07",
+      "week": 30,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for TryHackMe Defensive Security: SOC, forensics, IR, and logs",
+      "primary_exam": "CompTIA Security+ (SY0-701)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-30-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-30-day-07.json"
+    },
+    {
+      "id": "week-32-day-01",
+      "week": 32,
+      "day": 1,
+      "session_type": "Study",
+      "title": "Spaced Repetition and Retrieval Practice in context",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-01.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-01.json"
+    },
+    {
+      "id": "week-32-day-02",
+      "week": 32,
+      "day": 2,
+      "session_type": "Study",
+      "title": "Mock Exam in context",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-02.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-02.json"
+    },
+    {
+      "id": "week-32-day-03",
+      "week": 32,
+      "day": 3,
+      "session_type": "Study",
+      "title": "Error Log in context",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-03.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-03.json"
+    },
+    {
+      "id": "week-32-day-04",
+      "week": 32,
+      "day": 4,
+      "session_type": "Study",
+      "title": "Knowledge Gap in context",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-04.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-04.json"
+    },
+    {
+      "id": "week-32-day-05",
+      "week": 32,
+      "day": 5,
+      "session_type": "Study",
+      "title": "Study-System Reset in context",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-05.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-05.json"
+    },
+    {
+      "id": "week-32-day-06",
+      "week": 32,
+      "day": 6,
+      "session_type": "Review",
+      "title": "Weekly synthesis: Spaced Repetition, Retrieval Practice, Mock Exam",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-06.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-06.json"
+    },
+    {
+      "id": "week-32-day-07",
+      "week": 32,
+      "day": 7,
+      "session_type": "Rest",
+      "title": "Rest, consolidation, and preview for Catch-up, comprehensive review, and study-system reset",
+      "primary_exam": "Cross-certification review (A+ / Network+ / Security+)",
+      "secondary_exam": null,
+      "markdown_path": "docs/notebooklm/daily-lectures/week-32-day-07.md",
+      "json_path": "src/data/content/daily-lectures/week-32-day-07.json"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "week-01-day-06",
+  "week": 1,
+  "day": 6,
+  "slug": "week-01-day-06",
+  "title": "Weekly synthesis: CPU, RAM, Storage Drive",
+  "phase": "Foundation",
+  "session_type": "Review",
+  "primary_exam": "CompTIA A+ Core 1 (220-1201)",
+  "secondary_exam": null,
+  "objective": "Lock in the week's material, surface weak spots, and tidy your notes.",
+  "week_focus": "A+ Core 1: hardware, boot process, and internal components",
+  "deliverable": "Hardware glossary + power-on-to-login diagram",
+  "checkpoint": "Can explain what each main computer component does and how a system boots.",
+  "glossary_terms": [
+    "CPU",
+    "RAM",
+    "Storage Drive",
+    "Motherboard",
+    "Chipset",
+    "PSU (Power Supply Unit)",
+    "BIOS/UEFI Firmware",
+    "POST",
+    "PCIe / Expansion Bus",
+    "Cooling / Thermal Management",
+    "Bootloader",
+    "Boot Process",
+    "CPU Cache"
+  ],
+  "glossary_ids": [
+    "cpu",
+    "ram",
+    "storage-drive",
+    "motherboard",
+    "chipset",
+    "psu",
+    "bios",
+    "post",
+    "pcie",
+    "cooling",
+    "bootloader",
+    "boot-process",
+    "cpu-cache"
+  ],
+  "flashcard_ids": [
+    "cpu-definition",
+    "cpu-mechanism",
+    "cpu-scenario",
+    "ram-definition",
+    "ram-mechanism",
+    "ram-scenario",
+    "storage-drive-definition",
+    "storage-drive-mechanism",
+    "storage-drive-scenario",
+    "motherboard-definition",
+    "motherboard-mechanism",
+    "motherboard-scenario",
+    "chipset-definition",
+    "chipset-mechanism",
+    "chipset-scenario",
+    "psu-definition",
+    "psu-mechanism",
+    "psu-scenario",
+    "bios-definition",
+    "bios-mechanism",
+    "bios-scenario",
+    "post-definition",
+    "post-mechanism",
+    "post-scenario",
+    "pcie-definition",
+    "pcie-mechanism",
+    "pcie-scenario",
+    "cooling-definition",
+    "cooling-mechanism",
+    "cooling-scenario",
+    "bootloader-definition",
+    "bootloader-mechanism",
+    "bootloader-scenario",
+    "boot-process-definition",
+    "boot-process-mechanism",
+    "boot-process-scenario",
+    "cpu-cache-definition",
+    "cpu-cache-mechanism",
+    "cpu-cache-scenario"
+  ],
+  "resource_names": [
+    "Professor Messer A+ Core 1 (220-1201)",
+    "CompTIA A+ Core 1 V15 overview/objectives",
+    "Troubleshooting Hardware",
+    "Troubleshooting Storage Devices",
+    "Troubleshooting Display Issues"
+  ],
+  "estimated_read_minutes": 5,
+  "plain_language_intro": "Today is about turning this week's terms and tasks into one working mental picture so you can retrieve them under pressure instead of remembering isolated facts.",
+  "mini_lecture_markdown": "This is a synthesis day, which means the goal is retrieval, connection, and cleanup rather than adding a fresh topic. The week's focus was A+ Core 1: hardware, boot process, and internal components, and the real question now is whether the concepts from earlier study days fit together as one working model. You should be able to move from term names such as CPU, RAM, Storage Drive, Motherboard, Chipset, and PSU (Power Supply Unit) to the underlying system behavior without rereading every resource from scratch.\n\nStart by reconstructing the week from memory. Explain the week's deliverable, the checkpoint, and the sequence of ideas that led there. Then test whether you can connect mechanism to purpose: CPU: fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores RAM: holds active instructions and data in fast volatile cells that the CPU can read or update quickly Storage Drive: writes data into addressable sectors or cells, then retrieves it later through the controller and filesystem mapping Motherboard: connects CPU, memory, firmware, storage, and buses so components can exchange power, timing, and data signals If one term only makes sense in isolation, that is the weak spot to revisit. Review days are for rebuilding those bridges before they become exam traps.\n\nFor CompTIA A+ Core 1 (220-1201), weak understanding usually shows up in one of four ways: mixing up two similar concepts, picking the wrong layer, skipping the evidence trail, or remembering the name of a control without knowing why it fits. Use today's review to correct those failure modes explicitly. Say out loud what symptom belongs to which component or service, what data should move where, and what you would check first if the expected outcome did not happen.\n\nThis is also the right time to prune notes. Keep the explanations that help you reason, keep one or two clean examples, and discard repetition. The point of a good review deck is not maximum volume; it is fast retrieval under realistic pressure. When the terms, mechanisms, and examples line up, the week becomes easier to carry into the next block of study.\n\nA strong review also checks whether the week's ideas connect vertically across layers. For example, a hardware topic should still map to a user-visible symptom, a networking topic should still map to packet movement and service behavior, and a security topic should still map to control choice, evidence, and response. If you can move up and down that stack without getting lost, you are much less likely to freeze when a question compresses several layers into a short scenario.\n\nBefore you leave the week, make one final pass at the checkpoint in your own words. Do not repeat the checkpoint sentence exactly as written. Rewrite it as an explanation you could give to a teammate or instructor, then compare that explanation against the week's terms, resource examples, and deliverable. Any missing link you notice there is the right target for your next short review burst.",
+  "exam_relevance_markdown": "Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.",
+  "key_distinctions": [
+    "CPU vs RAM — CPU: Central Processing Unit, executes instructions and coordinates processing tasks. RAM: Volatile memory used for active processes and short-term data access.",
+    "RAM vs Storage Drive — RAM: Volatile memory used for active processes and short-term data access. Storage Drive: Persistent storage device such as HDD or SSD for operating system and files.",
+    "Storage Drive vs RAM — Storage Drive: Persistent storage device such as HDD or SSD for operating system and files. RAM: Volatile memory used for active processes and short-term data access.",
+    "Motherboard vs Chipset — Motherboard: Main circuit board that connects CPU, memory, storage, and expansion components. Chipset: Controller logic on the motherboard that coordinates communication between the processor, storage, USB, and expansion interfaces.",
+    "Chipset vs Motherboard — Chipset: Controller logic on the motherboard that coordinates communication between the processor, storage, USB, and expansion interfaces. Motherboard: Main circuit board that connects CPU, memory, storage, and expansion components."
+  ],
+  "mental_model_markdown": "Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. CPU: fetches instructions, decodes them, and executes operations while registers and caches keep data close to processing cores RAM: holds active instructions and data in fast volatile cells that the CPU can read or update quickly Storage Drive: writes data into addressable sectors or cells, then retrieves it later through the controller and filesystem mapping Motherboard: connects CPU, memory, firmware, storage, and buses so components can exchange power, timing, and data signals If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.",
+  "self_check_prompts": [
+    "Explain the difference between CPU and RAM without using the words \"better\" or \"faster\" as your whole answer.",
+    "Describe what CPU does, what input it works on, and what evidence would show that it is functioning correctly.",
+    "Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.",
+    "Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?",
+    "Rebuild the week from memory in under three minutes and note which transition between concepts is still weak."
+  ],
+  "quick_recap": "This review day turns CPU, RAM, and Storage Drive into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.",
+  "resource_anchors": [
+    {
+      "label": "Professor Messer A+ Core 1 (220-1201)",
+      "url": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/",
+      "type": "course"
+    },
+    {
+      "label": "CompTIA A+ Core 1 V15 overview/objectives",
+      "url": "https://www.comptia.org/certifications/a",
+      "type": "reference"
+    },
+    {
+      "label": "Troubleshooting Hardware",
+      "url": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-hardware-220-1201/",
+      "type": "course"
+    },
+    {
+      "label": "Troubleshooting Storage Devices",
+      "url": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-storage-devices-220-1201/",
+      "type": "course"
+    },
+    {
+      "label": "Troubleshooting Display Issues",
+      "url": "https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/troubleshooting-display-issues-220-1201/",
+      "type": "course"
+    }
+  ]
+}

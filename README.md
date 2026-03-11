@@ -1,6 +1,6 @@
 # Cybersecurity Study Companion
 
-Static Astro app for a 32-week cybersecurity roadmap with:
+Static Astro app for a 29-week cybersecurity roadmap with:
 
 - a public study companion and portfolio surface
 - a private local-first notes workspace
@@ -54,11 +54,11 @@ Local-only route:
 
 Current data totals:
 
-- 32 weeks
-- 224 day records
+- 29 weeks
+- 203 day records
 - 252 glossary entries
-- 756 unique flashcards
-- 32 review decks
+- 1008 flashcards
+- 29 review decks
 
 ## Canonical Data
 
@@ -165,3 +165,21 @@ Migration and validation:
 
 - `npm run migrate:glossary` upgrades `src/data/content/glossary.json` in place and creates a timestamped backup
 - `npm run validate:glossary` enforces required fields, banned boilerplate, bullets alignment, and mechanism-verb presence
+
+## Daily mini lectures
+
+The repo now includes a generated daily lecture pack grounded in the live canonical syllabus.
+
+- Markdown files for NotebookLM live in `docs/notebooklm/daily-lectures/`
+- Matching app-ingestable JSON files live in `src/data/content/daily-lectures/`
+- The lectures align by week range to A+ Core 1, A+ Core 2, Network+, the Google Cybersecurity Certificate, and Security+ where the current syllabus genuinely overlaps
+- The current lecture pack follows the live canonical data set, which is 29 active weeks rather than the older 32-week prompt assumption
+
+Generation and validation:
+
+- `npm run generate:lectures` rebuilds the lecture Markdown, JSON files, and manifest from canonical content
+- `npm run validate:lectures` checks coverage, metadata, content-length targets, banned filler phrases, canonical glossary/flashcard references, and manifest completeness
+
+NotebookLM workflow:
+
+- Ingest `docs/notebooklm/daily-lectures/` as a folder so NotebookLM can connect week overviews to individual day lectures through the stable naming scheme and metadata blocks

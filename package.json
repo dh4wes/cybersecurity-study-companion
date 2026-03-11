@@ -8,6 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "audit:flashcards": "node scripts/audit_flashcards.mjs",
+    "generate:lectures": "node tools/generate_daily_lectures.mjs",
+    "validate:lectures": "node scripts/validate_daily_lectures.mjs",
     "migrate:glossary": "node tools/upgrade-glossary-to-concept-model.mjs",
     "validate:glossary": "node scripts/validate_glossary_model.mjs",
     "check": "npm run validate:glossary && npm run build",

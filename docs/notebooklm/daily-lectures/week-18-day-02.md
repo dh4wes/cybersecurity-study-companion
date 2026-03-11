@@ -1,0 +1,63 @@
+---
+id: "week-18-day-02"
+week: 18
+day: 2
+slug: "week-18-day-02"
+phase: "Security"
+session_type: "Study"
+title: "Threat Model and Attack Vector in context"
+objective: "Deepen concepts and connect them to the bigger system."
+primary_exam: "Google Cybersecurity Professional Certificate"
+secondary_exam: "CompTIA Security+ (SY0-701)"
+resource_names: ["Google Course 5: Assets, Threats, and Vulnerabilities","Professor Messer Security+"]
+glossary_terms: ["Threat Model","Attack Vector"]
+glossary_ids: ["threat-model","attack-vector"]
+flashcard_ids: ["threat-model-definition","threat-model-mechanism","threat-model-scenario","attack-vector-definition","attack-vector-mechanism","attack-vector-scenario"]
+estimated_read_minutes: 6
+---
+
+# Threat Model and Attack Vector in context
+
+## 1. Today’s concept in plain language
+Today you are learning how Threat Model, Attack Vector fit into google course 5: assets, threats, and vulnerabilities (part 1), so the topic feels like a system instead of a vocabulary list.
+
+## 2. Mini lecture
+The week focus is Google Course 5: Assets, threats, and vulnerabilities (part 1), and today's objective is deepen concepts and connect them to the bigger system. That matters because entry-level certification questions rarely ask for a floating definition by itself; they usually ask whether you can place a concept inside a working system, support action, or troubleshooting sequence. The terms in scope today are Threat Model and Attack Vector, and the point is to understand what each one does, what problem it solves, and how it interacts with the rest of the platform. If you can explain those relationships cleanly, the week's deliverable becomes more than homework: it becomes evidence that you understand the system well enough to describe it under exam pressure or in an operations conversation.
+
+Threat Model means structured analysis of potential attackers, paths, and control gaps. Its practical job is that it identifies assets, attackers, attack paths, and control gaps before implementing or changing a system. Mechanically, it enumerates assets, trust boundaries, and attacker actions so defenses can be designed around likely abuse paths. Attack Vector means path or method used by an attacker to reach a target. Its practical job is that it describes the route used for initial access, such as phishing, exposed services, or vulnerable software. Mechanically, it traces the initial path into the target by following entry point, exposed weakness, and reachable asset sequence. Notice the pattern: the exam target here is not memorizing isolated labels, but recognizing which part of the system is responsible for speed, persistence, coordination, communication, or control. When two concepts seem similar, ask three questions: where does the data live, who acts on it, and what changes if this part fails. That framing turns vocabulary into diagnosis.
+
+The day's tasks push you past passive recognition. Cover data lifecycle, data handling, privacy expectations, and practical asset security ideas. That matters because a certification stem often hides the answer inside behavior: a machine starts slowly, a client cannot join a network, a log source becomes untrustworthy, or a user sees a symptom that points back to one specific layer. When you study today's terms, keep asking what evidence each one would leave behind and what change you would expect if it were configured correctly, misused, or failing.
+
+Use the resource path for signal, not volume. The attached anchors such as Google Course 5: Assets, Threats, and Vulnerabilities and Professor Messer Security+ give you concrete examples of the same ideas in action. As you work, translate each example into an operational sentence: what input comes in, what component or service processes it, what output comes out, and where a technician or analyst would verify that result. That habit is especially valuable for Google Cybersecurity Professional Certificate because exam reasoning usually turns on whether you can recognize the correct processing step, not whether you can repeat a slogan.
+
+Today's work should also point forward to the week's artifact. Asset inventory + data handling guide. A strong deliverable proves that the checkpoint is real, not aspirational. Can classify assets and explain why not all data deserves the same treatment. If you can explain why the system behaves the way it does, contrast the likely confusions, and connect the resource examples to the terms in the glossary, you are studying at the right depth for this stage of the roadmap.
+
+One useful habit for this day is to translate every concept into a failure story and a success story. In the success story, identify what correct behavior looks like: the device boots, the network path resolves, the control blocks the risky action, the log shows the expected event, or the command produces the right output. In the failure story, say what breaks first, what symptom appears to the user or analyst, and what evidence would narrow the problem to the correct layer. That is the kind of reasoning that keeps you from chasing noise on an exam or in a real support workflow.
+
+It also helps to connect today's lesson to the neighboring days in the same week. Day 1 usually builds vocabulary, the middle of the week forces mechanism and comparison, and Day 5 asks you to package the ideas into something you could explain to another person. So do not study today's material as if it ends tonight. Study it as a block in a larger sequence: what foundation did yesterday lay, what practice does today support, and what explanation will you need by the time you reach the review day. That sequencing is how a curated roadmap becomes cumulative instead of fragmented.
+
+## 3. How this shows up on the exam
+This material is most likely to appear as a short scenario where you must identify how Threat Model and Attack Vector affect the outcome. That can mean choosing the best answer for a symptom, distinguishing two similar terms, following a process step in the right order, or recognizing why one configuration works while another fails. The exam signal is applied reasoning: knowing what the concept does in context and what evidence points to it.
+
+## 4. Key distinctions and common confusions
+- Threat Model vs Attack Surface — Threat Model: Structured analysis of potential attackers, paths, and control gaps. Attack Surface: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
+- Attack Vector vs Attack Surface — Attack Vector: Path or method used by an attacker to reach a target. Attack Surface: Total collection of entry points, exposed services, identities, and paths an attacker could try to abuse.
+- Purpose vs mechanism — be able to separate what Threat Model is for from how it actually performs that job.
+- Recognition vs diagnosis — knowing the term name is not enough; know what evidence would make you pick it in a scenario.
+
+## 5. Concrete mental model
+Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Threat Model: enumerates assets, trust boundaries, and attacker actions so defenses can be designed around likely abuse paths Attack Vector: traces the initial path into the target by following entry point, exposed weakness, and reachable asset sequence If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.
+
+## 6. If you can explain this, you understand it
+- Explain the difference between Threat Model and Attack Vector without using the words "better" or "faster" as your whole answer.
+- Describe what Threat Model does, what input it works on, and what evidence would show that it is functioning correctly.
+- Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.
+- Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?
+- Give one realistic troubleshooting or security scenario where today's concepts would change the next decision you make.
+
+## 7. Quick recap
+Today was about understanding Threat Model and Attack Vector as part of a working system, then linking that understanding to exam reasoning and the week's artifact.
+
+## 8. Resource anchors
+- Google Course 5: Assets, Threats, and Vulnerabilities (course) - https://www.coursera.org/learn/assets-threats-and-vulnerabilities?specialization=google-cybersecurity
+- Professor Messer Security+ (course) - https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/

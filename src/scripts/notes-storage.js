@@ -262,7 +262,7 @@ export const exportNotesMarkdown = ({ weeks = [], dayMetaById = {} } = {}) => {
   lines.push(`Generated: ${new Date().toISOString().slice(0, 10)}`);
   lines.push('');
   lines.push('## Overview');
-  lines.push('- Program: 32-week cybersecurity roadmap');
+  lines.push('- Program: 29-week cybersecurity roadmap');
   lines.push('- Exported from: local notes tool');
   lines.push('');
 

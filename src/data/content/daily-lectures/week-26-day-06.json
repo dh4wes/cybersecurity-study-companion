@@ -1,0 +1,131 @@
+{
+  "id": "week-26-day-06",
+  "week": 26,
+  "day": 6,
+  "slug": "week-26-day-06",
+  "title": "Weekly synthesis: Identity, Authentication, Authorization",
+  "phase": "Security",
+  "session_type": "Review",
+  "primary_exam": "CompTIA Security+ (SY0-701)",
+  "secondary_exam": null,
+  "objective": "Lock in the week's material, surface weak spots, and tidy your notes.",
+  "week_focus": "Security+ reinforcement: IAM, crypto, and social engineering",
+  "deliverable": "IAM / crypto / social-engineering brief",
+  "checkpoint": "Can explain core defensive principles clearly and consistently.",
+  "glossary_terms": [
+    "Identity",
+    "Authentication",
+    "Authorization",
+    "Accounting (AAA)",
+    "Multi-Factor Authentication",
+    "Least Privilege",
+    "Hashing",
+    "Encryption",
+    "Social Engineering",
+    "Certificate"
+  ],
+  "glossary_ids": [
+    "identity",
+    "authentication",
+    "authorization",
+    "accounting",
+    "mfa",
+    "least-privilege",
+    "hashing",
+    "encryption",
+    "social-engineering",
+    "certificate"
+  ],
+  "flashcard_ids": [
+    "identity-definition",
+    "identity-mechanism",
+    "identity-scenario",
+    "authentication-definition",
+    "authentication-mechanism",
+    "authentication-scenario",
+    "authorization-definition",
+    "authorization-mechanism",
+    "authorization-scenario",
+    "accounting-definition",
+    "accounting-mechanism",
+    "accounting-scenario",
+    "mfa-definition",
+    "mfa-mechanism",
+    "mfa-scenario",
+    "least-privilege-definition",
+    "least-privilege-mechanism",
+    "least-privilege-scenario",
+    "hashing-definition",
+    "hashing-mechanism",
+    "hashing-scenario",
+    "encryption-definition",
+    "encryption-mechanism",
+    "encryption-scenario",
+    "social-engineering-definition",
+    "social-engineering-mechanism",
+    "social-engineering-scenario",
+    "certificate-definition",
+    "certificate-mechanism",
+    "certificate-scenario"
+  ],
+  "resource_names": [
+    "Professor Messer Security+ (SY0-701)",
+    "Google Cybersecurity Certificate",
+    "Multifactor Authentication",
+    "Certificates",
+    "Hashing and Digital Signatures",
+    "Security Awareness"
+  ],
+  "estimated_read_minutes": 5,
+  "plain_language_intro": "Today is about turning this week's terms and tasks into one working mental picture so you can retrieve them under pressure instead of remembering isolated facts.",
+  "mini_lecture_markdown": "This is a synthesis day, which means the goal is retrieval, connection, and cleanup rather than adding a fresh topic. The week's focus was Security+ reinforcement: IAM, crypto, and social engineering, and the real question now is whether the concepts from earlier study days fit together as one working model. You should be able to move from term names such as Identity, Authentication, Authorization, Accounting (AAA), Multi-Factor Authentication, and Least Privilege to the underlying system behavior without rereading every resource from scratch.\n\nStart by reconstructing the week from memory. Explain the week's deliverable, the checkpoint, and the sequence of ideas that led there. Then test whether you can connect mechanism to purpose: Identity: links usernames, attributes, and credentials in a record that other controls query when making authentication and authorization decisions Authentication: checks submitted credentials against a stored factor, then establishes identity context only when the proof matches expected values Authorization: compares the authenticated identity against policy rules, group membership, or ACL entries before permitting each requested action Accounting (AAA): captures login attempts, privilege changes, and session activity in logs so actions can be tied back to specific identities If one term only makes sense in isolation, that is the weak spot to revisit. Review days are for rebuilding those bridges before they become exam traps.\n\nFor CompTIA Security+ (SY0-701), weak understanding usually shows up in one of four ways: mixing up two similar concepts, picking the wrong layer, skipping the evidence trail, or remembering the name of a control without knowing why it fits. Use today's review to correct those failure modes explicitly. Say out loud what symptom belongs to which component or service, what data should move where, and what you would check first if the expected outcome did not happen.\n\nThis is also the right time to prune notes. Keep the explanations that help you reason, keep one or two clean examples, and discard repetition. The point of a good review deck is not maximum volume; it is fast retrieval under realistic pressure. When the terms, mechanisms, and examples line up, the week becomes easier to carry into the next block of study.\n\nA strong review also checks whether the week's ideas connect vertically across layers. For example, a hardware topic should still map to a user-visible symptom, a networking topic should still map to packet movement and service behavior, and a security topic should still map to control choice, evidence, and response. If you can move up and down that stack without getting lost, you are much less likely to freeze when a question compresses several layers into a short scenario.\n\nBefore you leave the week, make one final pass at the checkpoint in your own words. Do not repeat the checkpoint sentence exactly as written. Rewrite it as an explanation you could give to a teammate or instructor, then compare that explanation against the week's terms, resource examples, and deliverable. Any missing link you notice there is the right target for your next short review burst.",
+  "exam_relevance_markdown": "Expect this material to show up as scenario-style reasoning rather than raw recall. Typical tasks include distinguishing related concepts, choosing the right component or control, identifying the most likely cause from symptoms, and explaining why one workflow step belongs before another. If you can reconstruct the week without the notes open, you are closer to the level these exams reward.",
+  "key_distinctions": [
+    "Identity vs Authentication — Identity: Digital representation of a user, service, or device in an access system. Authentication: Process of verifying claimed identity within authentication and access control security workflows.",
+    "Authentication vs Authorization — Authentication: Process of verifying claimed identity within authentication and access control security workflows. Authorization: Process of granting permitted actions to an authenticated identity within authentication and access control security workflows.",
+    "Authorization vs Authentication — Authorization: Process of granting permitted actions to an authenticated identity within authentication and access control security workflows. Authentication: Process of verifying claimed identity within authentication and access control security workflows.",
+    "Accounting (AAA) vs Authentication — Accounting (AAA): Tracking and logging of identity actions for accountability within authentication and access control security workflows. Authentication: Process of verifying claimed identity within authentication and access control security workflows.",
+    "Multi-Factor Authentication vs Authentication — Multi-Factor Authentication: Authentication method requiring two or more independent proof factors within authentication and access control security workflows. Authentication: Process of verifying claimed identity within authentication and access control security workflows."
+  ],
+  "mental_model_markdown": "Use a pipeline model for this day: input arrives, a component or service processes it, state changes occur, and an output or symptom becomes visible to the user, administrator, or analyst. Identity: links usernames, attributes, and credentials in a record that other controls query when making authentication and authorization decisions Authentication: checks submitted credentials against a stored factor, then establishes identity context only when the proof matches expected values Authorization: compares the authenticated identity against policy rules, group membership, or ACL entries before permitting each requested action Accounting (AAA): captures login attempts, privilege changes, and session activity in logs so actions can be tied back to specific identities If you can narrate that path from start to finish without skipping the middle, the topic is becoming operational instead of abstract.",
+  "self_check_prompts": [
+    "Explain the difference between Identity and Authentication without using the words \"better\" or \"faster\" as your whole answer.",
+    "Describe what Identity does, what input it works on, and what evidence would show that it is functioning correctly.",
+    "Walk through today's objective in sequence and say which step would fail first if the system were misconfigured.",
+    "Connect today's glossary terms to this week's deliverable: what part of the artifact proves that you understand the mechanism and not just the label?",
+    "Rebuild the week from memory in under three minutes and note which transition between concepts is still weak."
+  ],
+  "quick_recap": "This review day turns Identity, Authentication, and Authorization into one coherent model so you can retrieve the week's logic, spot confusions quickly, and carry the right mental structure forward.",
+  "resource_anchors": [
+    {
+      "label": "Professor Messer Security+ (SY0-701)",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/",
+      "type": "course"
+    },
+    {
+      "label": "Google Cybersecurity Certificate",
+      "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+      "type": "course"
+    },
+    {
+      "label": "Multifactor Authentication",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/multifactor-authentication-sy0-701/",
+      "type": "course"
+    },
+    {
+      "label": "Certificates",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/certificates-sy0-701/",
+      "type": "course"
+    },
+    {
+      "label": "Hashing and Digital Signatures",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/hashing-and-digital-signatures-sy0-701/",
+      "type": "course"
+    },
+    {
+      "label": "Security Awareness",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/security-awareness-sy0-701/",
+      "type": "course"
+    }
+  ]
+}
